@@ -18,11 +18,11 @@ ul li {
 
 ul li a {
     display: block;
-    padding: 20px 25px;
+    padding: 10px 15px;
     color: #FFF;
     text-decoration: none;
     text-align: center;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 ul li ul.dropdown li {
