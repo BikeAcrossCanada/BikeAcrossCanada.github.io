@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bikepacking</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+
+<body>
+
+<script>
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+} 
+</script>
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">Home</a>
+ <div class="dropdown">
+    <button class="dropbtn">About 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="About.htm">About</a>
+      <a href="FAQs.htm">FAQs</a>
+      <a href="Contact.htm">Contact</a>
+    </div>
+  </div>
+  <a href="thebike.htm">the Bike</a>
+  <a href="AcrossCanada.htm">Across Canada</a>
+ <a href="Route.htm">Route</a>
+<div class="dropdown">
+    <button class="dropbtn">Network 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="ApprovedAccommodations.htm">Approved Accommodations</a>
+      <a href="ApprovedBikeShops.htm">Approved Bike Shops</a>
+      <a href="ApprovedEateries.htm">Approved Eateries</a>
+    </div>
+  </div>
+ <a href="Community.htm">Community</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<br>
+
 This is the Bikepacking page.
