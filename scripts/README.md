@@ -42,7 +42,11 @@ it by hand.
 - `scripts/convert.py` — the converter. It pulls each route layer out of the
   KML, thins the lines just enough to keep the page fast (about 2 MB instead
   of 17, with no visible difference), and keeps each point's name, description,
-  and Garmin symbol.
+  and Garmin symbol. It also works out which route(s) each point sits along
+  (within 10 km), which is how the map shows only the points near the routes
+  you've ticked — untick all the routes to see every point. The 10 km distance
+  is the `ROUTE_TAG_KM` setting at the top of the script if you ever want to
+  change it.
 - `.github/workflows/convert.yml` — the instructions that tell GitHub to run
   the converter whenever anything in `data/raw/` changes. This is free: GitHub
   doesn't charge for it on public repositories like this one.

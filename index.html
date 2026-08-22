@@ -128,59 +128,96 @@ function popupHtml(props, emoji) {
   return h;
 }
 
-// Registry of every layer for the GPX export: {kind:'route'|'poi', meta, cb, gj}
+// Registry of every layer: {kind:'route'|'poi', meta, cb, gj, layer, countEl, total}
 const layerRegistry = [];
+
+// Points follow the ticked routes: a point is shown when it sits within
+// ROUTE_TAG_KM (see scripts/convert.py) of a route layer that's ticked.
+// No routes ticked = no filter, every point of the ticked categories shows.
+function checkedRouteCodes() {
+  const s = new Set();
+  for (const e of layerRegistry)
+    if (e.kind === 'route' && e.cb && e.cb.checked) s.add(e.meta.code);
+  return s;
+}
+
+function buildPoiLayer(entry) {
+  const p = entry.meta;
+  const rs = checkedRouteCodes();
+  const layer = L.geoJSON(entry.gj, {
+    filter: f => !rs.size || (f.properties.routes || []).some(c => rs.has(c)),
+    pointToLayer: (f, latlng) => L.marker(latlng, {
+      icon: L.divIcon({ className: 'emoji-pin', html: p.emoji,
+                        iconSize: [20, 20], iconAnchor: [10, 10] })
+    }).bindTooltip(f.properties.name || '')
+      .bindPopup(popupHtml(f.properties, p.emoji))
+  });
+  const shown = layer.getLayers().length;
+  entry.countEl.textContent = shown === entry.total ? entry.total
+                                                    : shown + ' of ' + entry.total;
+  return layer;
+}
+
+// Rebuild every loaded point layer against the current route selection.
+function refreshPois() {
+  for (const e of layerRegistry) {
+    if (e.kind !== 'poi' || !e.gj) continue;
+    const wasOn = e.cb.checked && map.hasLayer(e.layer);
+    if (wasOn) map.removeLayer(e.layer);
+    e.layer = buildPoiLayer(e);
+    if (wasOn) e.layer.addTo(map);
+  }
+}
 
 // Create the row immediately (keeps sidebar in manifest order regardless of
 // fetch completion order); wire the layer in once its data arrives.
-function addCheckbox(container, labelHtml, count, checked, loadLayer) {
+function addCheckbox(container, entry, labelHtml, count, checked, load) {
   const lab = document.createElement('label');
   lab.innerHTML = labelHtml + '<span class="count">' + count + '</span>';
   const cb = document.createElement('input');
   cb.type = 'checkbox'; cb.checked = checked; cb.disabled = true;
   lab.prepend(cb);
   container.appendChild(lab);
-  loadLayer().then(layer => {
+  entry.cb = cb;
+  entry.countEl = lab.querySelector('.count');
+  entry.total = count;
+  load().then(() => {
     cb.disabled = false;
-    cb.addEventListener('change', () => cb.checked ? layer.addTo(map) : map.removeLayer(layer));
-    if (cb.checked) layer.addTo(map);
+    cb.addEventListener('change', () => {
+      cb.checked ? entry.layer.addTo(map) : map.removeLayer(entry.layer);
+      if (entry.kind === 'route') refreshPois();
+    });
+    if (cb.checked) entry.layer.addTo(map);
   });
-  return cb;
 }
 
 fetch('data/manifest.json').then(r => r.json()).then(manifest => {
   // routes: main lines on by default, CA access routes off (visual clutter at low zoom)
   manifest.routes.forEach(rt => {
-    const entry = { kind: 'route', meta: rt, gj: null, cb: null };
+    const entry = { kind: 'route', meta: rt, gj: null, cb: null, layer: null };
     layerRegistry.push(entry);
     const sw = '<span class="swatch' + (rt.dash ? ' dashed' : '') + '" style="--c:' +
                rt.color + ';background:' + (rt.dash ? 'none' : rt.color) + '"></span>';
-    entry.cb = addCheckbox(document.getElementById('route-boxes'),
+    addCheckbox(document.getElementById('route-boxes'), entry,
                 sw + esc(rt.title), rt.count, rt.code !== 'CA',
       () => fetch('data/routes_' + rt.code + '.geojson').then(r => r.json()).then(gj => {
         entry.gj = gj;
-        return L.geoJSON(gj, {
+        entry.layer = L.geoJSON(gj, {
           style: { color: rt.color, weight: rt.weight, opacity: 0.85,
                    dashArray: rt.dash || null },
           onEachFeature: (f, l) => l.bindPopup(popupHtml(f.properties))
         });
       }));
   });
-  // POIs: all off by default; rendered as emoji markers
+  // POIs: all off by default; rendered as emoji markers, filtered to ticked routes
   manifest.pois.forEach(p => {
-    const entry = { kind: 'poi', meta: p, gj: null, cb: null };
+    const entry = { kind: 'poi', meta: p, gj: null, cb: null, layer: null };
     layerRegistry.push(entry);
-    entry.cb = addCheckbox(document.getElementById('poi-boxes'),
+    addCheckbox(document.getElementById('poi-boxes'), entry,
                 p.emoji + ' ' + esc(p.title), p.count, false,
       () => fetch('data/poi_' + p.key + '.geojson').then(r => r.json()).then(gj => {
         entry.gj = gj;
-        return L.geoJSON(gj, {
-          pointToLayer: (f, latlng) => L.marker(latlng, {
-            icon: L.divIcon({ className: 'emoji-pin', html: p.emoji,
-                              iconSize: [20, 20], iconAnchor: [10, 10] })
-          }).bindTooltip(f.properties.name || '')
-            .bindPopup(popupHtml(f.properties, p.emoji))
-        });
+        entry.layer = buildPoiLayer(entry);
       }));
   });
   updateDlButton();
@@ -206,10 +243,12 @@ const plainDesc = s => (s || '')
 
 function buildGpx() {
   let wpts = '', trks = '';
+  const rs = checkedRouteCodes();  // same near-a-ticked-route rule as the map
   for (const e of layerRegistry) {
     if (!e.cb || !e.cb.checked || !e.gj) continue;
     if (e.kind === 'poi') {
       for (const f of e.gj.features) {
+        if (rs.size && !(f.properties.routes || []).some(c => rs.has(c))) continue;
         const [lon, lat] = f.geometry.coordinates;
         wpts += '  <wpt lat="' + lat + '" lon="' + lon + '">\n' +
                 '    <name>' + xmlEsc(e.meta.title + ': ' + (f.properties.name || '(unnamed)')) + '</name>\n';
