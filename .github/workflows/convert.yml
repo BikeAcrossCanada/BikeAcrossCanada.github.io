@@ -1,0 +1,38 @@
+# Rebuilds the map's data files whenever the source files in data/raw/ change.
+# Runs automatically on GitHub's computers — nothing to install, nothing to run at home.
+# Can also be started by hand: Actions tab -> "Rebuild map data" -> "Run workflow".
+name: Rebuild map data
+
+on:
+  push:
+    paths:
+      - 'data/raw/**'
+      - 'scripts/convert.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get a copy of this repository
+        uses: actions/checkout@v4
+
+      - name: Install the map-conversion tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq gdal-bin
+          pip install --quiet shapely
+
+      - name: Convert the source files to map data
+        run: python3 scripts/convert.py
+
+      - name: Save the updated map data back to the repository
+        run: |
+          git config user.name "map-data-updater"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/*.geojson data/manifest.json
+          git diff --cached --quiet || git commit -m "Rebuild map data from updated source files"
+          git push

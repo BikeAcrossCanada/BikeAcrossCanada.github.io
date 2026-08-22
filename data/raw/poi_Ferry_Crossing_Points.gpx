@@ -1,0 +1,552 @@
+﻿<?xml version="1.0" encoding="utf-8"?><gpx creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd http://www.garmin.com/xmlschemas/TripExtensions/v1 http://www.garmin.com/xmlschemas/TripExtensionsv1.xsd http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1 http://www.garmin.com/xmlschemas/TripMetaDataExtensionsv1.xsd http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1 http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensionsv1.xsd http://www.garmin.com/xmlschemas/CreationTimeExtension/v1 http://www.garmin.com/xmlschemas/CreationTimeExtensionsv1.xsd http://www.garmin.com/xmlschemas/AccelerationExtension/v1 http://www.garmin.com/xmlschemas/AccelerationExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.garmin.com/xmlschemas/VideoExtension/v1 http://www.garmin.com/xmlschemas/VideoExtensionv1.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1" xmlns:tmd="http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1" xmlns:vptm="http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1" xmlns:ctx="http://www.garmin.com/xmlschemas/CreationTimeExtension/v1" xmlns:gpxacc="http://www.garmin.com/xmlschemas/AccelerationExtension/v1" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:vidx1="http://www.garmin.com/xmlschemas/VideoExtension/v1">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2024-09-10T17:13:19Z</time>
+    <bounds maxlat="54.297672864049673" maxlon="-58.376061273738742" minlat="44.044543504714966" minlon="-130.35396781750023" />
+  </metadata>
+
+  <wpt lat="48.592413123697042" lon="-123.49640862084925">
+    <time>2021-09-21T04:10:28Z</time>
+    <name>Brentwood Bay - Mill Bay 25min ferry</name>
+    <cmt>Brentwood Bay - Mill Bay</cmt>
+    <desc>Brentwood Bay - Mill Bay</desc>
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2021-09-21T04:10:28Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.61402896232903" lon="-123.51799143478274">
+    <time>2022-04-14T05:57:40Z</time>
+    <name>Brentwood Bay - Mill Bay ferry 2</name>
+    <cmt>street</cmt>
+    <desc>street</desc>
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2022-04-14T05:57:40Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.577824840322137" lon="-123.46568265929818">
+    <time>2021-06-25T12:21:21Z</time>
+    <name>Brentwood Bay Ferry</name>
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2021-06-25T12:21:21Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.86485231295228" lon="-62.710367040708661">
+    <time>2021-09-21T04:04:53Z</time>
+    <name>Caribou-Wood Islands Ferry 1hr 15mins</name>
+    <cmt>Caribou-Wood Islands Ferry</cmt>
+    <desc>Caribou-Wood Islands Ferry</desc>
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2021-09-21T04:04:53Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.562835661694407" lon="-74.374934379011393">
+    <time>2021-09-21T03:37:00Z</time>
+    <name>Carillon-Pointe Fortune 5min Ferry</name>
+    <cmt>Carillon-Pointe Fortune Ferry</cmt>
+    <desc>Carillon-Pointe Fortune Ferry</desc>
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2021-09-21T03:37:00Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.274969771504402" lon="-123.60659183934331">
+    <time>2021-09-21T04:09:09Z</time>
+    <name>Departure Bay - Horseshoe Bay 1hr 40min Ferry</name>
+    <cmt>Departure Bay - Horseshoe Bay</cmt>
+    <desc>Departure Bay - Horseshoe Bay</desc>
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2021-09-21T04:09:09Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.662191867828369" lon="-65.757830059155822">
+    <time>2022-01-19T21:34:53Z</time>
+    <name>Digby Ferry Terminal</name>
+    <cmt>Digby Ferry Terminal</cmt>
+    <desc>Digby Ferry Terminal</desc>
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2022-01-19T21:34:53Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.97408022172749" lon="-65.910043241456151">
+    <time>2021-09-21T04:04:31Z</time>
+    <name>Digby-Saint John Ferry</name>
+    <cmt>Digby-Saint John Ferry</cmt>
+    <desc>Digby-Saint John Ferry</desc>
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2021-09-21T04:04:31Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.289307195693254" lon="-60.540936710312963">
+    <time>2021-09-21T04:05:18Z</time>
+    <name>Englishtown Ferry 8 mins</name>
+    <cmt>Englishtown Ferry</cmt>
+    <desc>Englishtown Ferry</desc>
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2021-09-21T04:05:18Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.044543504714966" lon="-77.054771315306425">
+    <time>2021-09-21T04:06:41Z</time>
+    <name>Glenora Ferry</name>
+    <cmt>Glenora Ferry</cmt>
+    <desc>Glenora Ferry</desc>
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2021-09-21T04:06:41Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.656787719577551" lon="-63.57120961882174">
+    <time>2022-07-16T18:11:29Z</time>
+    <name>Halifax - Dartmouth Ferry</name>
+    <cmt>Halifax - Dartmouth Ferry</cmt>
+    <desc>Halifax - Dartmouth Ferry</desc>
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2022-07-16T18:11:29Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.34987966530025" lon="-66.221669325605035">
+    <time>2021-09-21T04:12:19Z</time>
+    <name>Hardings Point-Westfield Ferry</name>
+    <cmt>Westfield</cmt>
+    <desc>Westfield</desc>
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2021-09-21T04:12:19Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.650663435459137" lon="-116.90849927254021">
+    <time>2021-09-21T04:08:50Z</time>
+    <name>Kootenay Lake Ferry (free) 35min</name>
+    <cmt>Kootenay Lake Ferry</cmt>
+    <desc>Kootenay Lake Ferry</desc>
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2021-09-21T04:08:50Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.230526382103562" lon="-69.291799440979958">
+    <time>2022-10-04T14:03:48Z</time>
+    <name>Les Escoumins - Trois Pistoles ferry</name>
+    <cmt>Les Escoumins - Trois Pistoles</cmt>
+    <desc>Les Escoumins - Trois Pistoles</desc>
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2022-10-04T14:03:48Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.041243299841881" lon="-120.24149316363037">
+    <time>2023-01-28T14:19:43Z</time>
+    <name>McLure Reaction Ferry</name>
+    <cmt>McLure Ferry</cmt>
+    <desc>McLure Ferry</desc>
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2023-01-28T14:19:43Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.759833125397563" lon="-59.788329480215907">
+    <time>2021-09-21T04:05:37Z</time>
+    <name>North Sydney - Port Aux Basques Ferry (North Atlantic Ocea)</name>
+    <cmt>North Sydney - Port Aux Basques Ferry</cmt>
+    <desc>North Sydney - Port Aux Basques Ferry</desc>
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2021-09-21T04:05:37Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.209165640175343" lon="-60.245386362075806">
+    <name>North Sydney Ferry</name>
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.315711783245206" lon="-58.376061273738742">
+    <time>2021-09-21T04:05:58Z</time>
+    <name>North Sydney-Argentia Ferry 16hrs</name>
+    <cmt>North Sydney-Argentia Ferry</cmt>
+    <desc>North Sydney-Argentia Ferry</desc>
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2021-09-21T04:05:58Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="54.297672864049673" lon="-130.35396781750023">
+    <time>2022-04-14T10:46:49Z</time>
+    <name>Prince Rupert - Port Hardy (Inside Passage) 1</name>
+    <cmt>Prince Rupert to Port Hardy</cmt>
+    <desc>Prince Rupert to Port Hardy</desc>
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2022-04-14T10:46:49Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="52.357951859012246" lon="-128.53225093334913">
+    <time>2021-09-21T04:10:12Z</time>
+    <name>Prince Rupert - Port Hardy (Inside Passage) 17hr 45min ferry</name>
+    <cmt>Prince Rupert - Port Hardy (Inside Passage)</cmt>
+    <desc>Prince Rupert - Port Hardy (Inside Passage)</desc>
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2021-09-21T04:10:12Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.810987377539277" lon="-71.193481022492051">
+    <time>2021-09-21T04:03:39Z</time>
+    <name>Quebec - Levis 10mins ferry</name>
+    <cmt>Quebec - Levis</cmt>
+    <desc>Quebec - Levis</desc>
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2021-09-21T04:03:39Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.513599272817373" lon="-76.225133473053575">
+    <time>2022-10-04T07:35:14Z</time>
+    <name>Quyon Ferry</name>
+    <cmt>Quyon Ferry</cmt>
+    <desc>Quyon Ferry</desc>
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2022-10-04T07:35:14Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.799479886889458" lon="-69.727700063958764">
+    <time>2022-10-04T14:03:14Z</time>
+    <name>Rivière-Du-Loup - Saint-Siméon Ferry</name>
+    <cmt>Rivière-Du-Loup - Saint-Siméon</cmt>
+    <desc>Rivière-Du-Loup - Saint-Siméon</desc>
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2022-10-04T14:03:14Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.055268868803978" lon="-73.116774084046483">
+    <time>2022-09-09T16:55:38Z</time>
+    <name>Sorel-Saint-Ignace-de-Loyola Ferry - 12 mins crossing</name>
+    <cmt>Sorel-Saint-Ignace-de-Loyola
+
+109 Rue du Traversier, Sorel-Tracy, QC J3P 4G1
+
+www.traversiers.com</cmt>
+    <desc>Sorel-Saint-Ignace-de-Loyola
+
+109 Rue du Traversier, Sorel-Tracy, QC J3P 4G1
+
+www.traversiers.com</desc>
+    <link href="https://www.traversiers.com/en/our-ferries/sorel-tracy-saint-ignace-de-loyola-ferry/schedule" />
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2022-09-09T16:55:38Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.410919282585382" lon="-81.845936235040426">
+    <time>2021-09-21T04:09:32Z</time>
+    <name>South Baymouth - Tobermory 2hr Ferry</name>
+    <cmt>South Baymouth - Tobermory Ferry</cmt>
+    <desc>South Baymouth - Tobermory Ferry</desc>
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2021-09-21T04:09:32Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.894816180691123" lon="-123.28724677674472">
+    <time>2021-09-21T04:08:19Z</time>
+    <name>Swartz Bay - Tsawwassen 1h35min ferry</name>
+    <cmt>Swartz Bay - Tsawwassen</cmt>
+    <desc>Swartz Bay - Tsawwassen</desc>
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2021-09-21T04:08:19Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.452030505985022" lon="-74.096582438796759">
+    <time>2021-09-21T04:02:47Z</time>
+    <name>Traverse Oka-Hudson</name>
+    <cmt>Traverse Oka-Hudson</cmt>
+    <desc>Traverse Oka-Hudson</desc>
+    <sym>Boat Ramp</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2021-09-21T04:02:47Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+</gpx>

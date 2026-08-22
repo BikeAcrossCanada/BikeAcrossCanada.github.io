@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Convert Sam Vekemans' Trans Canada Bike Route source files to web-ready GeoJSON.
 
-Inputs  (data/raw/):  tcbr.kml (route network, 6 layers) + poi_*.gpx (per-category POIs)
-Outputs (site/data/): routes_<code>.geojson + poi_<category>.geojson + manifest.json
+Inputs  (data/raw/): tcbr.kml (route network, 6 layers) + poi_*.gpx (per-category POIs)
+Outputs (data/):     routes_<code>.geojson + poi_<category>.geojson + manifest.json
 
 Requires: GDAL's ogr2ogr on PATH, shapely. Re-run any time the source files update.
 """
@@ -16,7 +16,7 @@ from shapely.geometry import LineString
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw"
-OUT = ROOT / "site" / "data"
+OUT = ROOT / "data"
 
 # Sam's own colour scheme, from the KML layer names / his readme.
 ROUTE_LAYERS = {
