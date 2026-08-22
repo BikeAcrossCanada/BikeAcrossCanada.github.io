@@ -22,9 +22,12 @@ The same works for the points: upload a new `poi_Campgrounds.gpx` (or any of
 the other `poi_` files) into `data/raw/` and the campground points update the
 same way.
 
-You can watch it happen, or start it by hand, on the repository's **Actions**
-tab: the job is called **Rebuild map data** and it has a **Run workflow**
-button.
+You can watch it happen, or start it by hand, on the repository's
+[Actions tab](https://github.com/BikeAcrossCanada/BikeAcrossCanada.github.io/actions).
+Each run in the list is named after the change that triggered it. The converter
+itself is called **Rebuild map data** in the list on the left side of that
+page: click it and you'll also find the **Run workflow** button for starting
+it by hand.
 
 ## What the pieces are
 
