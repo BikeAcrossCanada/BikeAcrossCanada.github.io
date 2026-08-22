@@ -1,0 +1,169 @@
+{
+ "routes": [
+  {
+   "code": "C1",
+   "color": "#4e0067",
+   "weight": 4,
+   "title": "C1 \u2014 Victoria BC to Cape Spear NL (~6,583 km)",
+   "count": 335
+  },
+  {
+   "code": "C2",
+   "color": "#674e00",
+   "weight": 4,
+   "title": "C2 \u2014 Tofino BC to Halifax NS (~6,771 km)",
+   "count": 236
+  },
+  {
+   "code": "C3",
+   "color": "#00674e",
+   "weight": 4,
+   "title": "C3 \u2014 Victoria BC to Newfoundland (~9,407 km)",
+   "count": 301
+  },
+  {
+   "code": "CN",
+   "color": "#670019",
+   "weight": 3,
+   "title": "CN \u2014 Connector routes (~2,850 km)",
+   "count": 372
+  },
+  {
+   "code": "CA",
+   "color": "#787878",
+   "weight": 2.5,
+   "title": "CA \u2014 Access routes",
+   "count": 324
+  },
+  {
+   "code": "CW",
+   "color": "#1a0067",
+   "weight": 3,
+   "title": "CW \u2014 Ferry crossings (dashed)",
+   "dash": "6 6",
+   "count": 27
+  }
+ ],
+ "pois": [
+  {
+   "key": "Campgrounds",
+   "emoji": "\u26fa",
+   "title": "Campgrounds",
+   "count": 743
+  },
+  {
+   "key": "IndoorAccommodations",
+   "emoji": "\ud83d\udecf\ufe0f",
+   "title": "Indoor accommodations",
+   "count": 730
+  },
+  {
+   "key": "Bicycle_Repair_Shops",
+   "emoji": "\ud83d\udd27",
+   "title": "Bike shops",
+   "count": 191
+  },
+  {
+   "key": "Bicycle_Repair_Stand",
+   "emoji": "\ud83d\udee0\ufe0f",
+   "title": "Bike repair stands",
+   "count": 19
+  },
+  {
+   "key": "Eatery",
+   "emoji": "\ud83c\udf7d\ufe0f",
+   "title": "Eateries",
+   "count": 178
+  },
+  {
+   "key": "Food_Stop_Grocer",
+   "emoji": "\ud83d\uded2",
+   "title": "Food stops & grocers",
+   "count": 238
+  },
+  {
+   "key": "Drinking_Water",
+   "emoji": "\ud83d\udca7",
+   "title": "Drinking water",
+   "count": 50
+  },
+  {
+   "key": "Toilets",
+   "emoji": "\ud83d\udebb",
+   "title": "Toilets",
+   "count": 467
+  },
+  {
+   "key": "Showers",
+   "emoji": "\ud83d\udebf",
+   "title": "Showers",
+   "count": 5
+  },
+  {
+   "key": "Laundromat",
+   "emoji": "\ud83e\uddfa",
+   "title": "Laundromats",
+   "count": 28
+  },
+  {
+   "key": "Tourist_office",
+   "emoji": "\u2139\ufe0f",
+   "title": "Visitor centres",
+   "count": 176
+  },
+  {
+   "key": "Library",
+   "emoji": "\ud83d\udcda",
+   "title": "Libraries",
+   "count": 79
+  },
+  {
+   "key": "Warning_Caution_Note",
+   "emoji": "\u26a0\ufe0f",
+   "title": "Warnings & cautions",
+   "count": 430
+  },
+  {
+   "key": "Camera_Stop",
+   "emoji": "\ud83d\udcf7",
+   "title": "Camera stops",
+   "count": 30
+  },
+  {
+   "key": "Ferry_Crossing_Points",
+   "emoji": "\u26f4\ufe0f",
+   "title": "Ferry crossing points",
+   "count": 27
+  },
+  {
+   "key": "Rail_Stops",
+   "emoji": "\ud83d\ude86",
+   "title": "Rail stops",
+   "count": 57
+  },
+  {
+   "key": "Bus_Coach_Transit_Shuttle",
+   "emoji": "\ud83d\ude8c",
+   "title": "Bus & shuttle",
+   "count": 6
+  },
+  {
+   "key": "Airports",
+   "emoji": "\u2708\ufe0f",
+   "title": "Airports",
+   "count": 7
+  },
+  {
+   "key": "HardwareNoBike",
+   "emoji": "\ud83e\ude9b",
+   "title": "Hardware stores (no bike parts)",
+   "count": 4
+  },
+  {
+   "key": "Kilometre_Distance_Markers",
+   "emoji": "\ud83d\udccd",
+   "title": "Km distance markers",
+   "count": 117
+  }
+ ]
+}
