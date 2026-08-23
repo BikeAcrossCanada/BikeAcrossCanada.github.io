@@ -67,6 +67,11 @@
   <select id="prov-select" style="width:100%;margin-top:8px;padding:5px;font-size:13px">
     <option value="">All of Canada</option>
   </select>
+  <select id="dir-select" style="width:100%;margin-top:6px;padding:5px;font-size:13px">
+    <option value="">Both directions</option>
+    <option value="E">West to East</option>
+    <option value="W">East to West</option>
+  </select>
   <h2>Routes</h2>
   <div id="route-boxes"></div>
   <h2>Along the way</h2>
@@ -151,20 +156,33 @@ function provOk(props) {
   return !provSelect.value || (props.provs || []).includes(provSelect.value);
 }
 
+// Direction dropdown: one-direction tracks carry dir:'E' or 'W' (from EB/WB in
+// their names, see convert.py); untagged tracks are two-way and always show.
+const dirSelect = document.getElementById('dir-select');
+function dirOk(props) {
+  return !dirSelect.value || !props.dir || props.dir === dirSelect.value;
+}
+
 function setCount(entry, shown) {
-  entry.countEl.textContent = shown === entry.total ? entry.total
-                                                    : shown + ' of ' + entry.total;
+  // Route rows show no counter: summed track km double-counts EB/WB overlaps
+  // (reads like a wrong route length), and piece counts mean nothing to riders.
+  // The ~km in each route title is the honest length; POI counts stay useful.
+  if (entry.kind === 'route') { entry.countEl.textContent = ''; return; }
+  // just the shown count — "x of y" read as a filter warning even when the
+  // only thing hiding points was the points-follow-ticked-routes rule
+  entry.countEl.textContent = shown;
 }
 
 function buildRouteLayer(entry) {
   const rt = entry.meta;
   const layer = L.geoJSON(entry.gj, {
-    filter: f => provOk(f.properties),
+    filter: f => provOk(f.properties) && dirOk(f.properties),
     style: { color: rt.color, weight: rt.weight, opacity: 0.85,
              dashArray: rt.dash || null },
     onEachFeature: (f, l) => l.bindPopup(popupHtml(f.properties))
   });
-  setCount(entry, layer.getLayers().length);
+  setCount(entry, layer.getLayers()
+                       .reduce((a, l) => a + (l.feature.properties.km || 0), 0));
   return layer;
 }
 
@@ -200,12 +218,13 @@ provSelect.addEventListener('change', () => {
   refreshLayers('route');
   refreshLayers('poi');
 });
+dirSelect.addEventListener('change', () => refreshLayers('route'));
 
 // Create the row immediately (keeps sidebar in manifest order regardless of
 // fetch completion order); wire the layer in once its data arrives.
 function addCheckbox(container, entry, labelHtml, count, checked, load) {
   const lab = document.createElement('label');
-  lab.innerHTML = labelHtml + '<span class="count">' + count + '</span>';
+  lab.innerHTML = labelHtml + '<span class="count"></span>';
   const cb = document.createElement('input');
   cb.type = 'checkbox'; cb.checked = checked; cb.disabled = true;
   lab.prepend(cb);
@@ -213,6 +232,7 @@ function addCheckbox(container, entry, labelHtml, count, checked, load) {
   entry.cb = cb;
   entry.countEl = lab.querySelector('.count');
   entry.total = count;
+  setCount(entry, count);
   load().then(() => {
     cb.disabled = false;
     cb.addEventListener('change', () => {
@@ -229,14 +249,14 @@ fetch('data/manifest.json').then(r => r.json()).then(manifest => {
     o.value = pv.code; o.textContent = pv.name;
     provSelect.appendChild(o);
   });
-  // routes: main lines on by default, CA access routes off (visual clutter at low zoom)
+  // routes: all layers on by default
   manifest.routes.forEach(rt => {
     const entry = { kind: 'route', meta: rt, gj: null, cb: null, layer: null };
     layerRegistry.push(entry);
     const sw = '<span class="swatch' + (rt.dash ? ' dashed' : '') + '" style="--c:' +
                rt.color + ';background:' + (rt.dash ? 'none' : rt.color) + '"></span>';
     addCheckbox(document.getElementById('route-boxes'), entry,
-                sw + esc(rt.title), rt.count, rt.code !== 'CA',
+                sw + esc(rt.title), rt.km, true,
       () => fetch('data/routes_' + rt.code + '.geojson').then(r => r.json()).then(gj => {
         entry.gj = gj;
         entry.layer = buildRouteLayer(entry);
@@ -293,7 +313,7 @@ function buildGpx() {
       }
     } else {
       for (const f of e.gj.features) {
-        if (!provOk(f.properties)) continue;
+        if (!provOk(f.properties) || !dirOk(f.properties)) continue;
         trks += '  <trk>\n    <name>' + xmlEsc(e.meta.code + ' ' + (f.properties.name || '')) +
                 '</name>\n    <type>' + xmlEsc(e.meta.code) + '</type>\n    <trkseg>\n' +
                 f.geometry.coordinates.map(c =>

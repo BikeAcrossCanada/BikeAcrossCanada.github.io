@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 """Convert Sam Vekemans' Trans Canada Bike Route source files to web-ready GeoJSON.
 
-Inputs  (data/raw/): tcbr.kml (route network, 6 layers) + poi_*.gpx (per-category POIs)
+Inputs  (data/raw/): one KML per route layer (C1.kml ... CW.kml) + poi_*.gpx (per-category POIs)
 Outputs (data/):     routes_<code>.geojson + poi_<category>.geojson + manifest.json
 
-Requires: GDAL's ogr2ogr on PATH, shapely. Re-run any time the source files update.
+Requires: shapely. Re-run any time the source files update.
 """
 import json
 import math
 import pathlib
 import re
-import subprocess
 import xml.etree.ElementTree as ET
 
 from shapely.geometry import LineString, Point, shape
@@ -28,6 +27,7 @@ ROUTE_LAYERS = {
     "C3": {"color": "#00674e", "weight": 4, "title": "C3 — Victoria BC to Newfoundland (~9,407 km)"},
     "CN": {"color": "#670019", "weight": 3, "title": "CN — Connector routes (~2,850 km)"},
     "CA": {"color": "#787878", "weight": 2.5, "title": "CA — Access routes"},
+    "CL": {"color": "#3d85c8", "weight": 3, "title": "CL — Local connectors"},
     "CW": {"color": "#1a0067", "weight": 3, "title": "CW — Ferry crossings (dashed)", "dash": "6 6"},
 }
 
@@ -68,10 +68,25 @@ def rounded(coords):
     return [[round(x, PRECISION), round(y, PRECISION)] for x, y, *_ in coords]
 
 
-def kml_layer_names():
-    out = subprocess.run(["ogrinfo", "-ro", "-q", str(RAW / "tcbr.kml")],
-                        capture_output=True, text=True, check=True).stdout
-    return [line.split(": ", 1)[1] for line in out.strip().split("\n")]
+KML_NS = {"k": "http://www.opengis.net/kml/2.2"}
+
+
+def kml_tracks(path):
+    """Yield (track_name, [(lon, lat), ...]) for every LineString in a layer KML.
+    Sam's per-layer exports nest each track in its own Folder alongside a
+    'Points' subfolder of trackpoint markers; only the lines matter here."""
+    root = ET.parse(path).getroot()
+    for pm in root.iter(f"{{{KML_NS['k']}}}Placemark"):
+        ls = pm.find(".//k:LineString/k:coordinates", KML_NS)
+        if ls is None or not (ls.text or "").strip():
+            continue
+        name = (pm.findtext("k:name", "", KML_NS) or "").strip()
+        coords = []
+        for triple in ls.text.split():
+            lon, lat, *_ = triple.split(",")
+            coords.append((float(lon), float(lat)))
+        if len(coords) >= 2:
+            yield name, coords
 
 
 # Distance work happens in a km-scaled space: lat degrees x 111.32, lon degrees
@@ -136,49 +151,95 @@ def prov_tags(geom_km, provinces):
     return codes
 
 
+def track_dir(name):
+    """'E' / 'W' for one-direction tracks (EB/WB/Eastbound/Westbound in the
+    track name), None for two-way ones. Powers the map's direction dropdown."""
+    if re.search(r"\bEB\b|\bEastbound\b", name, re.IGNORECASE):
+        return "E"
+    if re.search(r"\bWB\b|\bWestbound\b", name, re.IGNORECASE):
+        return "W"
+    return None
+
+
+# A directional (EB/WB) track only *hides* in the opposite-direction view when
+# the other direction actually has its own alternative for that stretch —
+# Sam describes routes eastbound, so most EB tracks ARE the route both ways,
+# with WB variants only where one-way streets etc. force a different line.
+PAIR_NEAR_KM = 0.3   # "runs alongside" distance for counterpart detection
+PAIR_COVER = 0.6     # fraction of a track that must run alongside a counterpart
+
+
+def has_counterpart(line_km, opposite_tree):
+    """True if most of this track runs close alongside some opposite-direction
+    track (sampled every ~1 km along the line)."""
+    if opposite_tree is None:
+        return False
+    pts = [Point(c) for c in line_km.segmentize(1.0).coords]
+    near = sum(1 for p in pts
+               if p.distance(opposite_tree.geometries[opposite_tree.nearest(p)])
+               <= PAIR_NEAR_KM)
+    return near / len(pts) >= PAIR_COVER
+
+
 def convert_routes(provinces):
     sizes = {}
     used_provs = set()  # provinces the network actually enters (for the dropdown)
     geoms = {}  # code -> list of simplified LineStrings in km space, for POI tagging
-    for name in kml_layer_names():
-        code = name.split(" ", 1)[0]
-        if code not in ROUTE_LAYERS:
+    for code in ROUTE_LAYERS:
+        src = RAW / f"{code}.kml"
+        if not src.exists():
+            print(f"WARNING: {src.name} missing, skipping layer {code}")
             continue
-        tmp = OUT / f"_tmp_{code}.geojson"
-        subprocess.run(["ogr2ogr", "-f", "GeoJSON", str(tmp), str(RAW / "tcbr.kml"), name],
-                      check=True)
-        src = json.loads(tmp.read_text())
-        tmp.unlink()
-        feats = []
-        for f in src["features"]:
-            g = f.get("geometry")
-            if not g or g["type"] != "LineString" or len(g["coordinates"]) < 2:
-                continue  # drop the stray placemark points in route layers
-            line = LineString([(c[0], c[1]) for c in g["coordinates"]])
+        # pass 1: read + simplify every track, note its labelled direction
+        tracks = []
+        for fname, coords in kml_tracks(src):
+            line = LineString(coords)
             simp = line.simplify(SIMPLIFY_TOLERANCE, preserve_topology=False)
             line_km = LineString(km_scaled(simp.coords))
             geoms.setdefault(code, []).append(line_km)
+            tracks.append((fname, track_dir(fname), simp, line_km))
+        # pass 2: a directional track keeps its tag (= hides in the opposite
+        # view) only if the opposite direction has a counterpart alongside
+        by_dir = {"E": [t[3] for t in tracks if t[1] == "E"],
+                  "W": [t[3] for t in tracks if t[1] == "W"]}
+        trees = {d: (STRtree(ls) if ls else None) for d, ls in by_dir.items()}
+        demoted = 0
+        feats = []
+        layer_km = 0.0
+        for fname, d, simp, line_km in tracks:
+            if d and not has_counterpart(line_km, trees["W" if d == "E" else "E"]):
+                d = None  # no alternative for the other direction: show both ways
+                demoted += 1
             provs = prov_tags(line_km, provinces)
             used_provs.update(provs)
-            fname = f["properties"].get("Name") or ""
+            def props(pv, km):
+                p = {"name": fname, "provs": pv, "km": round(km, 1)}
+                if d:
+                    p["dir"] = d
+                return p
             if len(provs) > 1:
                 for pc, coords in split_by_province(line_km, provs, provinces):
+                    piece_km = LineString(km_scaled(coords)).length
+                    layer_km += piece_km
                     feats.append({
                         "type": "Feature",
-                        "properties": {"name": fname, "provs": [pc]},
+                        "properties": props([pc], piece_km),
                         "geometry": {"type": "LineString", "coordinates": coords},
                     })
             else:
+                layer_km += line_km.length
                 feats.append({
                     "type": "Feature",
-                    "properties": {"name": fname, "provs": provs},
+                    "properties": props(provs, line_km.length),
                     "geometry": {"type": "LineString",
                                  "coordinates": rounded(simp.coords)},
                 })
         out_path = OUT / f"routes_{code}.geojson"
         out_path.write_text(json.dumps({"type": "FeatureCollection", "features": feats},
                                        separators=(",", ":")))
-        sizes[code] = (len(feats), out_path.stat().st_size)
+        if demoted:
+            print(f"  {code}: {demoted} EB/WB tracks have no counterpart -> shown both directions")
+        sizes[code] = (len(feats), out_path.stat().st_size, layer_km)
     return sizes, geoms, used_provs
 
 
@@ -252,7 +313,8 @@ def main():
     route_sizes, route_geoms, used_provs = convert_routes(provinces)
     poi_sizes = convert_pois(route_geoms, provinces)
     manifest = {
-        "routes": [{"code": c, **ROUTE_LAYERS[c], "count": route_sizes[c][0]}
+        "routes": [{"code": c, **ROUTE_LAYERS[c], "count": route_sizes[c][0],
+                    "km": round(route_sizes[c][2])}
                    for c in ROUTE_LAYERS if c in route_sizes],
         "pois": [{"key": k, "emoji": POI_LAYERS[k][0], "title": POI_LAYERS[k][1],
                   "count": poi_sizes[k][0]}
@@ -261,8 +323,8 @@ def main():
                       if pc in used_provs],
     }
     (OUT / "manifest.json").write_text(json.dumps(manifest, indent=1))
-    total = sum(s for _, s in route_sizes.values()) + sum(s for _, s in poi_sizes.values())
-    for c, (n, s) in route_sizes.items():
+    total = sum(s[1] for s in route_sizes.values()) + sum(s for _, s in poi_sizes.values())
+    for c, (n, s, _) in route_sizes.items():
         print(f"routes_{c}: {n} lines, {s/1e6:.2f} MB")
     for k, (n, s) in poi_sizes.items():
         print(f"poi_{k}: {n} points, {s/1e3:.0f} KB")
