@@ -229,14 +229,14 @@ fetch('data/manifest.json').then(r => r.json()).then(manifest => {
     o.value = pv.code; o.textContent = pv.name;
     provSelect.appendChild(o);
   });
-  // routes: main lines on by default, CA access routes off (visual clutter at low zoom)
+  // routes: all layers on by default
   manifest.routes.forEach(rt => {
     const entry = { kind: 'route', meta: rt, gj: null, cb: null, layer: null };
     layerRegistry.push(entry);
     const sw = '<span class="swatch' + (rt.dash ? ' dashed' : '') + '" style="--c:' +
                rt.color + ';background:' + (rt.dash ? 'none' : rt.color) + '"></span>';
     addCheckbox(document.getElementById('route-boxes'), entry,
-                sw + esc(rt.title), rt.count, rt.code !== 'CA',
+                sw + esc(rt.title), rt.count, true,
       () => fetch('data/routes_' + rt.code + '.geojson').then(r => r.json()).then(gj => {
         entry.gj = gj;
         entry.layer = buildRouteLayer(entry);
