@@ -9,6 +9,7 @@ Requires: shapely. Re-run any time the source files update.
 import json
 import math
 import pathlib
+import re
 import xml.etree.ElementTree as ET
 
 from shapely.geometry import LineString, Point, shape
@@ -150,6 +151,16 @@ def prov_tags(geom_km, provinces):
     return codes
 
 
+def track_dir(name):
+    """'E' / 'W' for one-direction tracks (EB/WB/Eastbound/Westbound in the
+    track name), None for two-way ones. Powers the map's direction dropdown."""
+    if re.search(r"\bEB\b|\bEastbound\b", name, re.IGNORECASE):
+        return "E"
+    if re.search(r"\bWB\b|\bWestbound\b", name, re.IGNORECASE):
+        return "W"
+    return None
+
+
 def convert_routes(provinces):
     sizes = {}
     used_provs = set()  # provinces the network actually enters (for the dropdown)
@@ -167,17 +178,23 @@ def convert_routes(provinces):
             geoms.setdefault(code, []).append(line_km)
             provs = prov_tags(line_km, provinces)
             used_provs.update(provs)
+            d = track_dir(fname)
+            def props(pv):
+                p = {"name": fname, "provs": pv}
+                if d:
+                    p["dir"] = d
+                return p
             if len(provs) > 1:
                 for pc, coords in split_by_province(line_km, provs, provinces):
                     feats.append({
                         "type": "Feature",
-                        "properties": {"name": fname, "provs": [pc]},
+                        "properties": props([pc]),
                         "geometry": {"type": "LineString", "coordinates": coords},
                     })
             else:
                 feats.append({
                     "type": "Feature",
-                    "properties": {"name": fname, "provs": provs},
+                    "properties": props(provs),
                     "geometry": {"type": "LineString",
                                  "coordinates": rounded(simp.coords)},
                 })

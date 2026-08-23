@@ -55,7 +55,11 @@ it by hand.
   which powers the province dropdown at the top of the map's sidebar: pick a
   province and the map (and the GPX download) covers just that province. The
   provincial boundaries come from `scripts/provinces_canada.geojson` (Natural
-  Earth data, public domain).
+  Earth data, public domain). It also labels one-direction tracks (EB/WB or
+  Eastbound/Westbound in the track name) with their direction, which powers
+  the "Both directions / West to East / East to West" dropdown — picking a
+  direction hides the opposite direction's tracks on the map and in the GPX
+  download, while two-way tracks always show.
 - `.github/workflows/convert.yml` — the instructions that tell GitHub to run
   the converter whenever anything in `data/raw/` changes. This is free: GitHub
   doesn't charge for it on public repositories like this one.
