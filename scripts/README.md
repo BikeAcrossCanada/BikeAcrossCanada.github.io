@@ -57,9 +57,11 @@ it by hand.
   provincial boundaries come from `scripts/provinces_canada.geojson` (Natural
   Earth data, public domain). It also labels one-direction tracks (EB/WB or
   Eastbound/Westbound in the track name) with their direction, which powers
-  the "Both directions / West to East / East to West" dropdown — picking a
-  direction hides the opposite direction's tracks on the map and in the GPX
-  download, while two-way tracks always show.
+  the "Both directions / West to East / East to West" dropdown. Since the
+  routes are described eastbound, an EB track is treated as riding both ways
+  unless a WB alternative runs alongside it (checked by geometry, within
+  ~300 m) — only then does it hide in the East-to-West view, and vice versa.
+  The GPX download follows the same rule. Two-way tracks always show.
 - `.github/workflows/convert.yml` — the instructions that tell GitHub to run
   the converter whenever anything in `data/raw/` changes. This is free: GitHub
   doesn't charge for it on public repositories like this one.

@@ -161,6 +161,26 @@ def track_dir(name):
     return None
 
 
+# A directional (EB/WB) track only *hides* in the opposite-direction view when
+# the other direction actually has its own alternative for that stretch —
+# Sam describes routes eastbound, so most EB tracks ARE the route both ways,
+# with WB variants only where one-way streets etc. force a different line.
+PAIR_NEAR_KM = 0.3   # "runs alongside" distance for counterpart detection
+PAIR_COVER = 0.6     # fraction of a track that must run alongside a counterpart
+
+
+def has_counterpart(line_km, opposite_tree):
+    """True if most of this track runs close alongside some opposite-direction
+    track (sampled every ~1 km along the line)."""
+    if opposite_tree is None:
+        return False
+    pts = [Point(c) for c in line_km.segmentize(1.0).coords]
+    near = sum(1 for p in pts
+               if p.distance(opposite_tree.geometries[opposite_tree.nearest(p)])
+               <= PAIR_NEAR_KM)
+    return near / len(pts) >= PAIR_COVER
+
+
 def convert_routes(provinces):
     sizes = {}
     used_provs = set()  # provinces the network actually enters (for the dropdown)
@@ -170,15 +190,27 @@ def convert_routes(provinces):
         if not src.exists():
             print(f"WARNING: {src.name} missing, skipping layer {code}")
             continue
-        feats = []
+        # pass 1: read + simplify every track, note its labelled direction
+        tracks = []
         for fname, coords in kml_tracks(src):
             line = LineString(coords)
             simp = line.simplify(SIMPLIFY_TOLERANCE, preserve_topology=False)
             line_km = LineString(km_scaled(simp.coords))
             geoms.setdefault(code, []).append(line_km)
+            tracks.append((fname, track_dir(fname), simp, line_km))
+        # pass 2: a directional track keeps its tag (= hides in the opposite
+        # view) only if the opposite direction has a counterpart alongside
+        by_dir = {"E": [t[3] for t in tracks if t[1] == "E"],
+                  "W": [t[3] for t in tracks if t[1] == "W"]}
+        trees = {d: (STRtree(ls) if ls else None) for d, ls in by_dir.items()}
+        demoted = 0
+        feats = []
+        for fname, d, simp, line_km in tracks:
+            if d and not has_counterpart(line_km, trees["W" if d == "E" else "E"]):
+                d = None  # no alternative for the other direction: show both ways
+                demoted += 1
             provs = prov_tags(line_km, provinces)
             used_provs.update(provs)
-            d = track_dir(fname)
             def props(pv):
                 p = {"name": fname, "provs": pv}
                 if d:
@@ -201,6 +233,8 @@ def convert_routes(provinces):
         out_path = OUT / f"routes_{code}.geojson"
         out_path.write_text(json.dumps({"type": "FeatureCollection", "features": feats},
                                        separators=(",", ":")))
+        if demoted:
+            print(f"  {code}: {demoted} EB/WB tracks have no counterpart -> shown both directions")
         sizes[code] = (len(feats), out_path.stat().st_size)
     return sizes, geoms, used_provs
 
