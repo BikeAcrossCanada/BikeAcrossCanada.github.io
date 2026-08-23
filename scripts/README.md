@@ -46,7 +46,11 @@ it by hand.
   (within 10 km), which is how the map shows only the points near the routes
   you've ticked — untick all the routes to see every point. The 10 km distance
   is the `ROUTE_TAG_KM` setting at the top of the script if you ever want to
-  change it.
+  change it. It also labels every route section and point with its province,
+  which powers the province dropdown at the top of the map's sidebar: pick a
+  province and the map (and the GPX download) covers just that province. The
+  provincial boundaries come from `scripts/provinces_canada.geojson` (Natural
+  Earth data, public domain).
 - `.github/workflows/convert.yml` — the instructions that tell GitHub to run
   the converter whenever anything in `data/raw/` changes. This is free: GitHub
   doesn't charge for it on public repositories like this one.

@@ -165,5 +165,47 @@
    "title": "Km distance markers",
    "count": 117
   }
+ ],
+ "provinces": [
+  {
+   "code": "BC",
+   "name": "British Columbia"
+  },
+  {
+   "code": "AB",
+   "name": "Alberta"
+  },
+  {
+   "code": "SK",
+   "name": "Saskatchewan"
+  },
+  {
+   "code": "MB",
+   "name": "Manitoba"
+  },
+  {
+   "code": "ON",
+   "name": "Ontario"
+  },
+  {
+   "code": "QC",
+   "name": "Qu\u00e9bec"
+  },
+  {
+   "code": "NB",
+   "name": "New Brunswick"
+  },
+  {
+   "code": "PE",
+   "name": "Prince Edward Island"
+  },
+  {
+   "code": "NS",
+   "name": "Nova Scotia"
+  },
+  {
+   "code": "NL",
+   "name": "Newfoundland and Labrador"
+  }
  ]
 }
