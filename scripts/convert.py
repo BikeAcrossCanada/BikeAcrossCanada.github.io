@@ -13,7 +13,8 @@ import re
 import subprocess
 import xml.etree.ElementTree as ET
 
-from shapely.geometry import LineString, Point
+from shapely.geometry import LineString, Point, shape
+from shapely.ops import transform
 from shapely.strtree import STRtree
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -57,6 +58,10 @@ SIMPLIFY_TOLERANCE = 0.0002  # degrees, ~20 m: invisible at national/regional zo
 PRECISION = 5  # coordinate decimals (~1 m)
 ROUTE_TAG_KM = 10  # a point "belongs to" every route layer within this distance;
                    # the map uses it to show only points near the routes you've ticked
+PROV_BUFFER_KM = 2  # boundary tolerance: anything this close to a provincial border
+                    # is tagged with both provinces rather than risk a wrong side
+PROV_ORDER = ["BC", "YT", "NT", "AB", "SK", "MB", "NU",
+              "ON", "QC", "NB", "PE", "NS", "NL"]  # west-to-east dropdown order
 
 
 def rounded(coords):
@@ -79,8 +84,32 @@ def km_scaled(coords):
             for x, y in coords]
 
 
-def convert_routes():
+def load_provinces():
+    """Provincial boundaries (Natural Earth, public domain), buffered in km space.
+    Returns [(code, name, buffered_polygon), ...] in west-to-east order."""
+    gj = json.loads((ROOT / "scripts" / "provinces_canada.geojson").read_text())
+    to_km = lambda x, y, z=None: (x * KM_PER_DEG * math.cos(math.radians(y)),
+                                  y * KM_PER_DEG)
+    by_code = {}
+    for f in gj["features"]:
+        poly = transform(to_km, shape(f["geometry"])).buffer(PROV_BUFFER_KM)
+        by_code[f["properties"]["code"]] = (f["properties"]["name"], poly)
+    return [(c, *by_code[c]) for c in PROV_ORDER if c in by_code]
+
+
+def prov_tags(geom_km, provinces):
+    """Province codes a geometry (in km space) touches; if the simplified
+    coastline misses it (Tofino, mid-water ferry points, Cape Spear...),
+    fall back to the nearest province so nothing is ever left unassigned."""
+    codes = [pc for pc, _, poly in provinces if geom_km.intersects(poly)]
+    if not codes:
+        codes = [min(provinces, key=lambda p: geom_km.distance(p[2]))[0]]
+    return codes
+
+
+def convert_routes(provinces):
     sizes = {}
+    used_provs = set()  # provinces the network actually enters (for the dropdown)
     geoms = {}  # code -> list of simplified LineStrings in km space, for POI tagging
     for name in kml_layer_names():
         code = name.split(" ", 1)[0]
@@ -98,17 +127,21 @@ def convert_routes():
                 continue  # drop the stray placemark points in route layers
             line = LineString([(c[0], c[1]) for c in g["coordinates"]])
             simp = line.simplify(SIMPLIFY_TOLERANCE, preserve_topology=False)
-            geoms.setdefault(code, []).append(LineString(km_scaled(simp.coords)))
+            line_km = LineString(km_scaled(simp.coords))
+            geoms.setdefault(code, []).append(line_km)
+            provs = prov_tags(line_km, provinces)
+            used_provs.update(provs)
             feats.append({
                 "type": "Feature",
-                "properties": {"name": f["properties"].get("Name") or ""},
+                "properties": {"name": f["properties"].get("Name") or "",
+                               "provs": provs},
                 "geometry": {"type": "LineString", "coordinates": rounded(simp.coords)},
             })
         out_path = OUT / f"routes_{code}.geojson"
         out_path.write_text(json.dumps({"type": "FeatureCollection", "features": feats},
                                        separators=(",", ":")))
         sizes[code] = (len(feats), out_path.stat().st_size)
-    return sizes, geoms
+    return sizes, geoms, used_provs
 
 
 GPX_NS = {"g": "http://www.topografix.com/GPX/1/1"}
@@ -131,7 +164,7 @@ def route_tagger(route_geoms):
     return tags
 
 
-def convert_pois(route_geoms):
+def convert_pois(route_geoms, provinces):
     tags_for = route_tagger(route_geoms)
     sizes = {}
     for stem in POI_LAYERS:
@@ -155,7 +188,10 @@ def convert_pois(route_geoms):
                 desc = desc[:600] + "…"
             lon = round(float(wpt.get("lon")), PRECISION)
             lat = round(float(wpt.get("lat")), PRECISION)
-            props = {"name": name, "routes": tags_for(lon, lat)}
+            p_km = Point(lon * KM_PER_DEG * math.cos(math.radians(lat)),
+                         lat * KM_PER_DEG)
+            props = {"name": name, "routes": tags_for(lon, lat),
+                     "provs": prov_tags(p_km, provinces)}
             if desc:
                 props["desc"] = desc
             if sym:
@@ -174,14 +210,17 @@ def convert_pois(route_geoms):
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    route_sizes, route_geoms = convert_routes()
-    poi_sizes = convert_pois(route_geoms)
+    provinces = load_provinces()
+    route_sizes, route_geoms, used_provs = convert_routes(provinces)
+    poi_sizes = convert_pois(route_geoms, provinces)
     manifest = {
         "routes": [{"code": c, **ROUTE_LAYERS[c], "count": route_sizes[c][0]}
                    for c in ROUTE_LAYERS if c in route_sizes],
         "pois": [{"key": k, "emoji": POI_LAYERS[k][0], "title": POI_LAYERS[k][1],
                   "count": poi_sizes[k][0]}
                  for k in POI_LAYERS],
+        "provinces": [{"code": pc, "name": pn} for pc, pn, _ in provinces
+                      if pc in used_provs],
     }
     (OUT / "manifest.json").write_text(json.dumps(manifest, indent=1))
     total = sum(s for _, s in route_sizes.values()) + sum(s for _, s in poi_sizes.values())
