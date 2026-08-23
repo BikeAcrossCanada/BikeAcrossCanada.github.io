@@ -92,9 +92,38 @@ def load_provinces():
                                   y * KM_PER_DEG)
     by_code = {}
     for f in gj["features"]:
-        poly = transform(to_km, shape(f["geometry"])).buffer(PROV_BUFFER_KM)
+        # segmentize first: the km-space transform bows long straight edges
+        # (e.g. the AB/SK border meridian) by tens of km if left sparse
+        poly = transform(to_km, shape(f["geometry"]).segmentize(0.1)).buffer(PROV_BUFFER_KM)
         by_code[f["properties"]["code"]] = (f["properties"]["name"], poly)
     return [(c, *by_code[c]) for c in PROV_ORDER if c in by_code]
+
+
+def km_to_deg(coords):
+    """Inverse of km_scaled, back to rounded [lon, lat] pairs."""
+    out = []
+    for x, y in coords:
+        lat = y / KM_PER_DEG
+        lon = x / (KM_PER_DEG * math.cos(math.radians(lat)))
+        out.append([round(lon, PRECISION), round(lat, PRECISION)])
+    return out
+
+
+def split_by_province(line_km, provs, provinces):
+    """Cut a line that crosses provincial borders into one piece per province,
+    so picking one province never draws the line's tail in the neighbour.
+    Returns [(prov_code, [lon, lat] coords), ...]. Pieces from adjacent
+    provinces overlap by ~PROV_BUFFER_KM at the border, so no visible gap."""
+    pieces = []
+    for pc, _, poly in provinces:
+        if pc not in provs:
+            continue
+        inter = line_km.intersection(poly)
+        parts = inter.geoms if hasattr(inter, "geoms") else [inter]
+        for part in parts:
+            if isinstance(part, LineString) and part.length >= 0.1:  # km
+                pieces.append((pc, km_to_deg(part.coords)))
+    return pieces
 
 
 def prov_tags(geom_km, provinces):
@@ -131,12 +160,21 @@ def convert_routes(provinces):
             geoms.setdefault(code, []).append(line_km)
             provs = prov_tags(line_km, provinces)
             used_provs.update(provs)
-            feats.append({
-                "type": "Feature",
-                "properties": {"name": f["properties"].get("Name") or "",
-                               "provs": provs},
-                "geometry": {"type": "LineString", "coordinates": rounded(simp.coords)},
-            })
+            fname = f["properties"].get("Name") or ""
+            if len(provs) > 1:
+                for pc, coords in split_by_province(line_km, provs, provinces):
+                    feats.append({
+                        "type": "Feature",
+                        "properties": {"name": fname, "provs": [pc]},
+                        "geometry": {"type": "LineString", "coordinates": coords},
+                    })
+            else:
+                feats.append({
+                    "type": "Feature",
+                    "properties": {"name": fname, "provs": provs},
+                    "geometry": {"type": "LineString",
+                                 "coordinates": rounded(simp.coords)},
+                })
         out_path = OUT / f"routes_{code}.geojson"
         out_path.write_text(json.dumps({"type": "FeatureCollection", "features": feats},
                                        separators=(",", ":")))
