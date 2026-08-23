@@ -7,12 +7,14 @@ files by hand, and you never need to run any programs on your own computer.
 
 ## How to update the map (no programming needed)
 
-Say the route changes and you have a new version of your KML file.
+Say a route changes and you have a new version of one of your layer KML files.
 
-1. Export the new file from Google Earth (or wherever you edit it) and name it
-   `tcbr.kml`.
+1. Export the layer from Google Earth (or wherever you edit it) and name it
+   after its route code: `C1.kml`, `C2.kml`, `C3.kml`, `CA.kml`, `CL.kml`,
+   `CN.kml`, or `CW.kml`. One layer per file — you only need to re-export the
+   layer that changed.
 2. On the GitHub website, open the `data/raw/` folder, click
-   **Add file → Upload files**, and upload the new `tcbr.kml` over the old one.
+   **Add file → Upload files**, and upload the new file over the old one.
    Commit the change.
 3. That's it. GitHub notices the upload, runs the converter on its own
    computers, and updates the map data. After a few minutes, reload the home
@@ -31,15 +33,18 @@ it by hand.
 
 ## What the pieces are
 
-- `data/raw/` — your master files. `tcbr.kml` holds the six route layers
-  (C1, C2, C3, CN, CA, CW). The twenty `poi_*.gpx` files hold the points,
-  one file per category (campgrounds, bike shops, and so on). **This folder is
-  the only one you ever touch.**
+- `data/raw/` — your master files. Seven route-layer KMLs (`C1.kml`, `C2.kml`,
+  `C3.kml`, `CA.kml`, `CL.kml`, `CN.kml`, `CW.kml`), and the twenty
+  `poi_*.gpx` files holding the points, one file per category (campgrounds,
+  bike shops, and so on). **This folder is the only one you ever touch.**
+- `data/old-unused/` — the old single-file master (`tcbr.kml` and its zip).
+  Kept for reference; nothing reads it. The seven layer files above are the
+  working copies now.
 - `data/` — the map-ready files the converter produces. One `routes_` file per
   route layer, one `poi_` file per point category, plus `manifest.json`, the
   list the page reads to build its sidebar (layer names, colours, emoji,
   counts).
-- `scripts/convert.py` — the converter. It pulls each route layer out of the
+- `scripts/convert.py` — the converter. It reads the tracks out of each layer
   KML, thins the lines just enough to keep the page fast (about 2 MB instead
   of 17, with no visible difference), and keeps each point's name, description,
   and Garmin symbol. It also works out which route(s) each point sits along
@@ -73,16 +78,20 @@ list in the same file, in the same copy-the-pattern style.
 ## For anyone comfortable with Python
 
 The converter also runs on a regular computer: install `shapely`
-(`pip install shapely`) and the GDAL tools (`ogr2ogr`; on a Mac
-`brew install gdal`, on Ubuntu or Debian `sudo apt install gdal-bin`), then run
-`python3 scripts/convert.py` from the repository root. It reads `data/raw/`,
-writes `data/`, and prints a summary of what it produced.
+(`pip install shapely`), then run `python3 scripts/convert.py` from the
+repository root. It reads `data/raw/`, writes `data/`, and prints a summary
+of what it produced.
 
 ## Notes and choices made along the way
 
-- **The route master file is `tcbr.kml`** (the Google Earth export dated
-  3 June 2024, also on the Archive.org item). The Google My Maps exports
-  turned out to contain the same information and aren't used.
+- **The route masters are the seven per-layer KML files** (August 2026).
+  They replaced the old single `tcbr.kml`, which grew too big to upload to
+  GitHub in one piece; it now sits in `data/old-unused/` and nothing reads it.
+  Track names inside the layer files don't need consistent prefixes — the
+  layer comes from the file name, so half-renamed tracks are fine.
+- Each track folder in the layer KMLs also carries a "Points" subfolder of
+  hundreds of trackpoint markers. The converter uses only the lines and
+  ignores those points.
 - **The background map is standard OpenStreetMap tiles.** The CoMaps style
   isn't available as a hosted tile service. Swapping in a different tile
   provider is a one-line change in `index.html`.

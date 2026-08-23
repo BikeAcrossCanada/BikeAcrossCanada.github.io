@@ -1,16 +1,14 @@
 #!/usr/bin/env python3
 """Convert Sam Vekemans' Trans Canada Bike Route source files to web-ready GeoJSON.
 
-Inputs  (data/raw/): tcbr.kml (route network, 6 layers) + poi_*.gpx (per-category POIs)
+Inputs  (data/raw/): one KML per route layer (C1.kml ... CW.kml) + poi_*.gpx (per-category POIs)
 Outputs (data/):     routes_<code>.geojson + poi_<category>.geojson + manifest.json
 
-Requires: GDAL's ogr2ogr on PATH, shapely. Re-run any time the source files update.
+Requires: shapely. Re-run any time the source files update.
 """
 import json
 import math
 import pathlib
-import re
-import subprocess
 import xml.etree.ElementTree as ET
 
 from shapely.geometry import LineString, Point, shape
@@ -28,6 +26,7 @@ ROUTE_LAYERS = {
     "C3": {"color": "#00674e", "weight": 4, "title": "C3 — Victoria BC to Newfoundland (~9,407 km)"},
     "CN": {"color": "#670019", "weight": 3, "title": "CN — Connector routes (~2,850 km)"},
     "CA": {"color": "#787878", "weight": 2.5, "title": "CA — Access routes"},
+    "CL": {"color": "#3d85c8", "weight": 3, "title": "CL — Local connectors"},
     "CW": {"color": "#1a0067", "weight": 3, "title": "CW — Ferry crossings (dashed)", "dash": "6 6"},
 }
 
@@ -68,10 +67,25 @@ def rounded(coords):
     return [[round(x, PRECISION), round(y, PRECISION)] for x, y, *_ in coords]
 
 
-def kml_layer_names():
-    out = subprocess.run(["ogrinfo", "-ro", "-q", str(RAW / "tcbr.kml")],
-                        capture_output=True, text=True, check=True).stdout
-    return [line.split(": ", 1)[1] for line in out.strip().split("\n")]
+KML_NS = {"k": "http://www.opengis.net/kml/2.2"}
+
+
+def kml_tracks(path):
+    """Yield (track_name, [(lon, lat), ...]) for every LineString in a layer KML.
+    Sam's per-layer exports nest each track in its own Folder alongside a
+    'Points' subfolder of trackpoint markers; only the lines matter here."""
+    root = ET.parse(path).getroot()
+    for pm in root.iter(f"{{{KML_NS['k']}}}Placemark"):
+        ls = pm.find(".//k:LineString/k:coordinates", KML_NS)
+        if ls is None or not (ls.text or "").strip():
+            continue
+        name = (pm.findtext("k:name", "", KML_NS) or "").strip()
+        coords = []
+        for triple in ls.text.split():
+            lon, lat, *_ = triple.split(",")
+            coords.append((float(lon), float(lat)))
+        if len(coords) >= 2:
+            yield name, coords
 
 
 # Distance work happens in a km-scaled space: lat degrees x 111.32, lon degrees
@@ -140,27 +154,19 @@ def convert_routes(provinces):
     sizes = {}
     used_provs = set()  # provinces the network actually enters (for the dropdown)
     geoms = {}  # code -> list of simplified LineStrings in km space, for POI tagging
-    for name in kml_layer_names():
-        code = name.split(" ", 1)[0]
-        if code not in ROUTE_LAYERS:
+    for code in ROUTE_LAYERS:
+        src = RAW / f"{code}.kml"
+        if not src.exists():
+            print(f"WARNING: {src.name} missing, skipping layer {code}")
             continue
-        tmp = OUT / f"_tmp_{code}.geojson"
-        subprocess.run(["ogr2ogr", "-f", "GeoJSON", str(tmp), str(RAW / "tcbr.kml"), name],
-                      check=True)
-        src = json.loads(tmp.read_text())
-        tmp.unlink()
         feats = []
-        for f in src["features"]:
-            g = f.get("geometry")
-            if not g or g["type"] != "LineString" or len(g["coordinates"]) < 2:
-                continue  # drop the stray placemark points in route layers
-            line = LineString([(c[0], c[1]) for c in g["coordinates"]])
+        for fname, coords in kml_tracks(src):
+            line = LineString(coords)
             simp = line.simplify(SIMPLIFY_TOLERANCE, preserve_topology=False)
             line_km = LineString(km_scaled(simp.coords))
             geoms.setdefault(code, []).append(line_km)
             provs = prov_tags(line_km, provinces)
             used_provs.update(provs)
-            fname = f["properties"].get("Name") or ""
             if len(provs) > 1:
                 for pc, coords in split_by_province(line_km, provs, provinces):
                     feats.append({
