@@ -168,8 +168,9 @@ function setCount(entry, shown) {
   // (reads like a wrong route length), and piece counts mean nothing to riders.
   // The ~km in each route title is the honest length; POI counts stay useful.
   if (entry.kind === 'route') { entry.countEl.textContent = ''; return; }
-  entry.countEl.textContent = shown === entry.total ? entry.total
-                                                    : shown + ' of ' + entry.total;
+  // just the shown count — "x of y" read as a filter warning even when the
+  // only thing hiding points was the points-follow-ticked-routes rule
+  entry.countEl.textContent = shown;
 }
 
 function buildRouteLayer(entry) {
