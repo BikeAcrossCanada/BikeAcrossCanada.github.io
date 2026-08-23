@@ -164,6 +164,10 @@ function dirOk(props) {
 }
 
 function setCount(entry, shown) {
+  // Route rows show no counter: summed track km double-counts EB/WB overlaps
+  // (reads like a wrong route length), and piece counts mean nothing to riders.
+  // The ~km in each route title is the honest length; POI counts stay useful.
+  if (entry.kind === 'route') { entry.countEl.textContent = ''; return; }
   entry.countEl.textContent = shown === entry.total ? entry.total
                                                     : shown + ' of ' + entry.total;
 }
@@ -176,7 +180,8 @@ function buildRouteLayer(entry) {
              dashArray: rt.dash || null },
     onEachFeature: (f, l) => l.bindPopup(popupHtml(f.properties))
   });
-  setCount(entry, layer.getLayers().length);
+  setCount(entry, layer.getLayers()
+                       .reduce((a, l) => a + (l.feature.properties.km || 0), 0));
   return layer;
 }
 
@@ -218,7 +223,7 @@ dirSelect.addEventListener('change', () => refreshLayers('route'));
 // fetch completion order); wire the layer in once its data arrives.
 function addCheckbox(container, entry, labelHtml, count, checked, load) {
   const lab = document.createElement('label');
-  lab.innerHTML = labelHtml + '<span class="count">' + count + '</span>';
+  lab.innerHTML = labelHtml + '<span class="count"></span>';
   const cb = document.createElement('input');
   cb.type = 'checkbox'; cb.checked = checked; cb.disabled = true;
   lab.prepend(cb);
@@ -226,6 +231,7 @@ function addCheckbox(container, entry, labelHtml, count, checked, load) {
   entry.cb = cb;
   entry.countEl = lab.querySelector('.count');
   entry.total = count;
+  setCount(entry, count);
   load().then(() => {
     cb.disabled = false;
     cb.addEventListener('change', () => {
@@ -249,7 +255,7 @@ fetch('data/manifest.json').then(r => r.json()).then(manifest => {
     const sw = '<span class="swatch' + (rt.dash ? ' dashed' : '') + '" style="--c:' +
                rt.color + ';background:' + (rt.dash ? 'none' : rt.color) + '"></span>';
     addCheckbox(document.getElementById('route-boxes'), entry,
-                sw + esc(rt.title), rt.count, true,
+                sw + esc(rt.title), rt.km, true,
       () => fetch('data/routes_' + rt.code + '.geojson').then(r => r.json()).then(gj => {
         entry.gj = gj;
         entry.layer = buildRouteLayer(entry);

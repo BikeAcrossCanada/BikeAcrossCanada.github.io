@@ -205,28 +205,32 @@ def convert_routes(provinces):
         trees = {d: (STRtree(ls) if ls else None) for d, ls in by_dir.items()}
         demoted = 0
         feats = []
+        layer_km = 0.0
         for fname, d, simp, line_km in tracks:
             if d and not has_counterpart(line_km, trees["W" if d == "E" else "E"]):
                 d = None  # no alternative for the other direction: show both ways
                 demoted += 1
             provs = prov_tags(line_km, provinces)
             used_provs.update(provs)
-            def props(pv):
-                p = {"name": fname, "provs": pv}
+            def props(pv, km):
+                p = {"name": fname, "provs": pv, "km": round(km, 1)}
                 if d:
                     p["dir"] = d
                 return p
             if len(provs) > 1:
                 for pc, coords in split_by_province(line_km, provs, provinces):
+                    piece_km = LineString(km_scaled(coords)).length
+                    layer_km += piece_km
                     feats.append({
                         "type": "Feature",
-                        "properties": props([pc]),
+                        "properties": props([pc], piece_km),
                         "geometry": {"type": "LineString", "coordinates": coords},
                     })
             else:
+                layer_km += line_km.length
                 feats.append({
                     "type": "Feature",
-                    "properties": props(provs),
+                    "properties": props(provs, line_km.length),
                     "geometry": {"type": "LineString",
                                  "coordinates": rounded(simp.coords)},
                 })
@@ -235,7 +239,7 @@ def convert_routes(provinces):
                                        separators=(",", ":")))
         if demoted:
             print(f"  {code}: {demoted} EB/WB tracks have no counterpart -> shown both directions")
-        sizes[code] = (len(feats), out_path.stat().st_size)
+        sizes[code] = (len(feats), out_path.stat().st_size, layer_km)
     return sizes, geoms, used_provs
 
 
@@ -309,7 +313,8 @@ def main():
     route_sizes, route_geoms, used_provs = convert_routes(provinces)
     poi_sizes = convert_pois(route_geoms, provinces)
     manifest = {
-        "routes": [{"code": c, **ROUTE_LAYERS[c], "count": route_sizes[c][0]}
+        "routes": [{"code": c, **ROUTE_LAYERS[c], "count": route_sizes[c][0],
+                    "km": round(route_sizes[c][2])}
                    for c in ROUTE_LAYERS if c in route_sizes],
         "pois": [{"key": k, "emoji": POI_LAYERS[k][0], "title": POI_LAYERS[k][1],
                   "count": poi_sizes[k][0]}
@@ -318,8 +323,8 @@ def main():
                       if pc in used_provs],
     }
     (OUT / "manifest.json").write_text(json.dumps(manifest, indent=1))
-    total = sum(s for _, s in route_sizes.values()) + sum(s for _, s in poi_sizes.values())
-    for c, (n, s) in route_sizes.items():
+    total = sum(s[1] for s in route_sizes.values()) + sum(s for _, s in poi_sizes.values())
+    for c, (n, s, _) in route_sizes.items():
         print(f"routes_{c}: {n} lines, {s/1e6:.2f} MB")
     for k, (n, s) in poi_sizes.items():
         print(f"poi_{k}: {n} points, {s/1e3:.0f} KB")
