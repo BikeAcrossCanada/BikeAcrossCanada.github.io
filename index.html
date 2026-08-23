@@ -19,11 +19,8 @@
   .topbar .sub { font-size:12px; color:#666; }
   .topbar a { color:#0a58a3; }
   #map { top:44px; }
-  .demo-note {
-    position:absolute; bottom:0; left:0; z-index:1000; background:#fffbe6;
-    border-top:1px solid #e6d98a; border-right:1px solid #e6d98a;
-    font-size:11px; color:#665c1e; padding:3px 8px; border-radius:0 6px 0 0;
-  }
+  .emoji-pin { background:none; border:none; font-size:18px; line-height:20px;
+    text-align:center; text-shadow:0 1px 2px rgba(255,255,255,.95), 0 0 3px #fff; }
   /* sidebar */
   #sidebar {
     position:absolute; top:44px; right:0; bottom:0; z-index:999; width:280px;
@@ -72,7 +69,12 @@
   <h2>Along the way</h2>
   <div id="poi-boxes"></div>
   <button id="dl-gpx" style="margin-top:16px;width:100%;padding:7px;font-size:13px;
-    background:#0a58a3;color:#fff;border:none;border-radius:5px;cursor:pointer">
+    background:#0a58a3;color:#fff;border:none;border-radius:5px;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;gap:7px">
+    <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"
+      fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7 1.5v7.5M3.5 6L7 9.5 10.5 6M1.5 12.5h11"/>
+    </svg>
     Download GPX of checked layers</button>
   <div style="font-size:11px;color:#888;margin-top:4px">Routes + "along the way" points
     you've ticked, ready for Garmin / Komoot / RideWithGPS. Full-resolution originals
@@ -94,10 +96,11 @@
        <a href="https://bikeacrosscanada.github.io/Downloads.htm">all downloads</a> ·
        <a href="https://www.facebook.com/BikeAcrossCanadaRouteNetwork">Facebook</a> ·
        <a href="https://bikeacrosscanada.github.io/Contact.htm">contact</a></p>
-    <p style="color:#888">Map data © OpenStreetMap contributors. Route network &amp; POI data © Sam Vekemans.</p>
+    <p style="color:#888">Map data © OpenStreetMap contributors. Route network &amp; POI data © Sam Vekemans.<br>
+       Interactive map &amp; conversion tooling by Heather Piwowar of the
+       <a href="https://bccycletourism.ca">BC Cycle Tourism Society</a>.</p>
   </details>
 </div>
-<div class="demo-note">DEMO built for Sam Vekemans' Bike Across Canada project — all route &amp; POI data is his.</div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
@@ -125,58 +128,96 @@ function popupHtml(props, emoji) {
   return h;
 }
 
-// Registry of every layer for the GPX export: {kind:'route'|'poi', meta, cb, gj}
+// Registry of every layer: {kind:'route'|'poi', meta, cb, gj, layer, countEl, total}
 const layerRegistry = [];
+
+// Points follow the ticked routes: a point is shown when it sits within
+// ROUTE_TAG_KM (see scripts/convert.py) of a route layer that's ticked.
+// No routes ticked = no filter, every point of the ticked categories shows.
+function checkedRouteCodes() {
+  const s = new Set();
+  for (const e of layerRegistry)
+    if (e.kind === 'route' && e.cb && e.cb.checked) s.add(e.meta.code);
+  return s;
+}
+
+function buildPoiLayer(entry) {
+  const p = entry.meta;
+  const rs = checkedRouteCodes();
+  const layer = L.geoJSON(entry.gj, {
+    filter: f => !rs.size || (f.properties.routes || []).some(c => rs.has(c)),
+    pointToLayer: (f, latlng) => L.marker(latlng, {
+      icon: L.divIcon({ className: 'emoji-pin', html: p.emoji,
+                        iconSize: [20, 20], iconAnchor: [10, 10] })
+    }).bindTooltip(f.properties.name || '')
+      .bindPopup(popupHtml(f.properties, p.emoji))
+  });
+  const shown = layer.getLayers().length;
+  entry.countEl.textContent = shown === entry.total ? entry.total
+                                                    : shown + ' of ' + entry.total;
+  return layer;
+}
+
+// Rebuild every loaded point layer against the current route selection.
+function refreshPois() {
+  for (const e of layerRegistry) {
+    if (e.kind !== 'poi' || !e.gj) continue;
+    const wasOn = e.cb.checked && map.hasLayer(e.layer);
+    if (wasOn) map.removeLayer(e.layer);
+    e.layer = buildPoiLayer(e);
+    if (wasOn) e.layer.addTo(map);
+  }
+}
 
 // Create the row immediately (keeps sidebar in manifest order regardless of
 // fetch completion order); wire the layer in once its data arrives.
-function addCheckbox(container, labelHtml, count, checked, loadLayer) {
+function addCheckbox(container, entry, labelHtml, count, checked, load) {
   const lab = document.createElement('label');
   lab.innerHTML = labelHtml + '<span class="count">' + count + '</span>';
   const cb = document.createElement('input');
   cb.type = 'checkbox'; cb.checked = checked; cb.disabled = true;
   lab.prepend(cb);
   container.appendChild(lab);
-  loadLayer().then(layer => {
+  entry.cb = cb;
+  entry.countEl = lab.querySelector('.count');
+  entry.total = count;
+  load().then(() => {
     cb.disabled = false;
-    cb.addEventListener('change', () => cb.checked ? layer.addTo(map) : map.removeLayer(layer));
-    if (cb.checked) layer.addTo(map);
+    cb.addEventListener('change', () => {
+      cb.checked ? entry.layer.addTo(map) : map.removeLayer(entry.layer);
+      if (entry.kind === 'route') refreshPois();
+    });
+    if (cb.checked) entry.layer.addTo(map);
   });
-  return cb;
 }
 
 fetch('data/manifest.json').then(r => r.json()).then(manifest => {
   // routes: main lines on by default, CA access routes off (visual clutter at low zoom)
   manifest.routes.forEach(rt => {
-    const entry = { kind: 'route', meta: rt, gj: null, cb: null };
+    const entry = { kind: 'route', meta: rt, gj: null, cb: null, layer: null };
     layerRegistry.push(entry);
     const sw = '<span class="swatch' + (rt.dash ? ' dashed' : '') + '" style="--c:' +
                rt.color + ';background:' + (rt.dash ? 'none' : rt.color) + '"></span>';
-    entry.cb = addCheckbox(document.getElementById('route-boxes'),
+    addCheckbox(document.getElementById('route-boxes'), entry,
                 sw + esc(rt.title), rt.count, rt.code !== 'CA',
       () => fetch('data/routes_' + rt.code + '.geojson').then(r => r.json()).then(gj => {
         entry.gj = gj;
-        return L.geoJSON(gj, {
+        entry.layer = L.geoJSON(gj, {
           style: { color: rt.color, weight: rt.weight, opacity: 0.85,
                    dashArray: rt.dash || null },
           onEachFeature: (f, l) => l.bindPopup(popupHtml(f.properties))
         });
       }));
   });
-  // POIs: all off by default; rendered as canvas circle markers
+  // POIs: all off by default; rendered as emoji markers, filtered to ticked routes
   manifest.pois.forEach(p => {
-    const entry = { kind: 'poi', meta: p, gj: null, cb: null };
+    const entry = { kind: 'poi', meta: p, gj: null, cb: null, layer: null };
     layerRegistry.push(entry);
-    entry.cb = addCheckbox(document.getElementById('poi-boxes'),
+    addCheckbox(document.getElementById('poi-boxes'), entry,
                 p.emoji + ' ' + esc(p.title), p.count, false,
       () => fetch('data/poi_' + p.key + '.geojson').then(r => r.json()).then(gj => {
         entry.gj = gj;
-        return L.geoJSON(gj, {
-          pointToLayer: (f, latlng) => L.circleMarker(latlng, {
-            radius: 5, weight: 1.5, color: '#333', fillColor: '#ffd23f', fillOpacity: 0.9
-          }).bindTooltip(p.emoji + ' ' + (f.properties.name || ''))
-            .bindPopup(popupHtml(f.properties, p.emoji))
-        });
+        entry.layer = buildPoiLayer(entry);
       }));
   });
   updateDlButton();
@@ -202,10 +243,12 @@ const plainDesc = s => (s || '')
 
 function buildGpx() {
   let wpts = '', trks = '';
+  const rs = checkedRouteCodes();  // same near-a-ticked-route rule as the map
   for (const e of layerRegistry) {
     if (!e.cb || !e.cb.checked || !e.gj) continue;
     if (e.kind === 'poi') {
       for (const f of e.gj.features) {
+        if (rs.size && !(f.properties.routes || []).some(c => rs.has(c))) continue;
         const [lon, lat] = f.geometry.coordinates;
         wpts += '  <wpt lat="' + lat + '" lon="' + lon + '">\n' +
                 '    <name>' + xmlEsc(e.meta.title + ': ' + (f.properties.name || '(unnamed)')) + '</name>\n';

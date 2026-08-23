@@ -1,22 +1,24 @@
 #!/usr/bin/env python3
 """Convert Sam Vekemans' Trans Canada Bike Route source files to web-ready GeoJSON.
 
-Inputs  (data/raw/):  tcbr.kml (route network, 6 layers) + poi_*.gpx (per-category POIs)
-Outputs (site/data/): routes_<code>.geojson + poi_<category>.geojson + manifest.json
+Inputs  (data/raw/): tcbr.kml (route network, 6 layers) + poi_*.gpx (per-category POIs)
+Outputs (data/):     routes_<code>.geojson + poi_<category>.geojson + manifest.json
 
 Requires: GDAL's ogr2ogr on PATH, shapely. Re-run any time the source files update.
 """
 import json
+import math
 import pathlib
 import re
 import subprocess
 import xml.etree.ElementTree as ET
 
-from shapely.geometry import LineString
+from shapely.geometry import LineString, Point
+from shapely.strtree import STRtree
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw"
-OUT = ROOT / "site" / "data"
+OUT = ROOT / "data"
 
 # Sam's own colour scheme, from the KML layer names / his readme.
 ROUTE_LAYERS = {
@@ -53,6 +55,8 @@ POI_LAYERS = {  # gpx stem -> (emoji, display name)
 
 SIMPLIFY_TOLERANCE = 0.0002  # degrees, ~20 m: invisible at national/regional zooms
 PRECISION = 5  # coordinate decimals (~1 m)
+ROUTE_TAG_KM = 10  # a point "belongs to" every route layer within this distance;
+                   # the map uses it to show only points near the routes you've ticked
 
 
 def rounded(coords):
@@ -65,8 +69,19 @@ def kml_layer_names():
     return [line.split(": ", 1)[1] for line in out.strip().split("\n")]
 
 
+# Distance work happens in a km-scaled space: lat degrees x 111.32, lon degrees
+# additionally squeezed by cos(lat), so plain euclidean distance ~ km.
+KM_PER_DEG = 111.32
+
+
+def km_scaled(coords):
+    return [(x * KM_PER_DEG * math.cos(math.radians(y)), y * KM_PER_DEG)
+            for x, y in coords]
+
+
 def convert_routes():
     sizes = {}
+    geoms = {}  # code -> list of simplified LineStrings in km space, for POI tagging
     for name in kml_layer_names():
         code = name.split(" ", 1)[0]
         if code not in ROUTE_LAYERS:
@@ -83,6 +98,7 @@ def convert_routes():
                 continue  # drop the stray placemark points in route layers
             line = LineString([(c[0], c[1]) for c in g["coordinates"]])
             simp = line.simplify(SIMPLIFY_TOLERANCE, preserve_topology=False)
+            geoms.setdefault(code, []).append(LineString(km_scaled(simp.coords)))
             feats.append({
                 "type": "Feature",
                 "properties": {"name": f["properties"].get("Name") or ""},
@@ -92,13 +108,31 @@ def convert_routes():
         out_path.write_text(json.dumps({"type": "FeatureCollection", "features": feats},
                                        separators=(",", ":")))
         sizes[code] = (len(feats), out_path.stat().st_size)
-    return sizes
+    return sizes, geoms
 
 
 GPX_NS = {"g": "http://www.topografix.com/GPX/1/1"}
 
 
-def convert_pois():
+def route_tagger(route_geoms):
+    """Return a function mapping (lon, lat) -> route codes within ROUTE_TAG_KM."""
+    trees = {code: (STRtree(lines), lines) for code, lines in route_geoms.items()}
+
+    def tags(lon, lat):
+        p = Point(lon * KM_PER_DEG * math.cos(math.radians(lat)), lat * KM_PER_DEG)
+        out = []
+        for code, (tree, lines) in trees.items():
+            near = tree.nearest(p)
+            seg = near if isinstance(near, LineString) else lines[near]
+            if seg is not None and seg.distance(p) <= ROUTE_TAG_KM:
+                out.append(code)
+        return out
+
+    return tags
+
+
+def convert_pois(route_geoms):
+    tags_for = route_tagger(route_geoms)
     sizes = {}
     for stem in POI_LAYERS:
         # Sam's POI files are CONCATENATIONS of many GPX documents in one file
@@ -119,7 +153,9 @@ def convert_pois():
             sym = wpt.findtext("g:sym", "", GPX_NS).strip()
             if len(desc) > 600:
                 desc = desc[:600] + "…"
-            props = {"name": name}
+            lon = round(float(wpt.get("lon")), PRECISION)
+            lat = round(float(wpt.get("lat")), PRECISION)
+            props = {"name": name, "routes": tags_for(lon, lat)}
             if desc:
                 props["desc"] = desc
             if sym:
@@ -127,9 +163,7 @@ def convert_pois():
             feats.append({
                 "type": "Feature",
                 "properties": props,
-                "geometry": {"type": "Point",
-                             "coordinates": [round(float(wpt.get("lon")), PRECISION),
-                                             round(float(wpt.get("lat")), PRECISION)]},
+                "geometry": {"type": "Point", "coordinates": [lon, lat]},
             })
         out_path = OUT / f"poi_{stem}.geojson"
         out_path.write_text(json.dumps({"type": "FeatureCollection", "features": feats},
@@ -140,8 +174,8 @@ def convert_pois():
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    route_sizes = convert_routes()
-    poi_sizes = convert_pois()
+    route_sizes, route_geoms = convert_routes()
+    poi_sizes = convert_pois(route_geoms)
     manifest = {
         "routes": [{"code": c, **ROUTE_LAYERS[c], "count": route_sizes[c][0]}
                    for c in ROUTE_LAYERS if c in route_sizes],

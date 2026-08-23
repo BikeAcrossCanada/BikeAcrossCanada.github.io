@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?><gpx creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd http://www.garmin.com/xmlschemas/TripExtensions/v1 http://www.garmin.com/xmlschemas/TripExtensionsv1.xsd http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1 http://www.garmin.com/xmlschemas/TripMetaDataExtensionsv1.xsd http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1 http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensionsv1.xsd http://www.garmin.com/xmlschemas/CreationTimeExtension/v1 http://www.garmin.com/xmlschemas/CreationTimeExtensionsv1.xsd http://www.garmin.com/xmlschemas/AccelerationExtension/v1 http://www.garmin.com/xmlschemas/AccelerationExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.garmin.com/xmlschemas/VideoExtension/v1 http://www.garmin.com/xmlschemas/VideoExtensionv1.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1" xmlns:tmd="http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1" xmlns:vptm="http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1" xmlns:ctx="http://www.garmin.com/xmlschemas/CreationTimeExtension/v1" xmlns:gpxacc="http://www.garmin.com/xmlschemas/AccelerationExtension/v1" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:vidx1="http://www.garmin.com/xmlschemas/VideoExtension/v1">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2024-09-11T18:46:17Z</time>
+    <bounds maxlat="51.269012046977878" maxlon="-74.643129883334041" minlat="44.510800028219819" minlon="-123.43019208870828" />
+  </metadata>
+
+  <wpt lat="48.534389063715935" lon="-123.37695736438036">
+    <time>2022-05-12T11:57:09Z</time>
+    <name>Bicycle repair stand</name>
+    <cmt>Lochside Park</cmt>
+    <desc>Lochside Park</desc>
+    <sym>Car Repair</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2022-05-12T11:57:09Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.269012046977878" lon="-115.9192383941263">
+    <time>2023-06-12T23:59:24Z</time>
+    <name>Bicycle Repair Stand (by phones)  - Castle Junction</name>
+    <sym>Car Repair</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2023-06-12T23:59:24Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.352340197190642" lon="-84.024138730019331">
+    <time>2023-08-10T20:13:45Z</time>
+    <name>Bicycle Repair Stand - rest area</name>
+    <sym>Car Repair</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2023-08-10T20:13:45Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.510800028219819" lon="-75.792835643514991">
+    <time>2023-06-12T23:47:46Z</time>
+    <name>Bicycle repair stand along Thousand Island Pkwy</name>
+    <sym>Car Repair</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2023-06-12T23:47:46Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.105179786682129" lon="-115.36715269088745">
+    <time>2022-05-18T13:58:56Z</time>
+    <name>Bicycle repair stand Canmore</name>
+    <cmt>Bicycle shop</cmt>
+    <desc>Bicycle shop</desc>
+    <sym>Car Repair</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2022-05-18T13:58:56Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.276903320103884" lon="-83.212767401710153">
+    <time>2023-06-13T00:00:29Z</time>
+    <name>Bike Maintenance Station - Iron Bridge ON</name>
+    <sym>Car Repair</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2023-06-13T00:00:29Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.894163170829415" lon="-119.49234791100025">
+    <time>2022-07-22T22:27:32Z</time>
+    <name>Bike Repair Stand - by Metro Liquor (location to be confirmed)</name>
+    <cmt>parking</cmt>
+    <desc>parking</desc>
+    <sym>Car Repair</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2022-07-22T22:27:32Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.475894359871745" lon="-123.35974127054214">
+    <time>2022-05-01T19:18:55Z</time>
+    <name>Bike repair station</name>
+    <cmt>area</cmt>
+    <desc>area</desc>
+    <sym>Car Repair</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2022-05-01T19:18:55Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.597528012469411" lon="-123.3948419149965">
+    <time>2022-05-01T19:21:02Z</time>
+    <name>Bike repair station - by Marigold Cafe</name>
+    <cmt>area</cmt>
+    <desc>area</desc>
+    <sym>Car Repair</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2022-05-01T19:21:02Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.0355613976717" lon="-74.643129883334041">
+    <time>2023-06-13T00:02:15Z</time>
+    <name>Bike Repair Station - Glen Walter ON</name>
+    <sym>Car Repair</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2023-06-13T00:02:15Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.640018980950117" lon="-123.43019208870828">
+    <time>2022-04-14T06:03:20Z</time>
+    <name>Bike Repair Station - YYJ Airport</name>
+    <cmt>Short Term Parking</cmt>
+    <desc>Short Term Parking</desc>
+    <sym>Car Repair</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2022-04-14T06:03:20Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.210236009210348" lon="-79.258241476491094">
+    <name>Outdoor Bike Fix Stand Big Moose Park</name>
+    <cmt>The outdoor stand is located at Big Moose Park.  59 Big Moose Rd, Corbeil, ON P0H 1K0 . Ideal picnic rest stop and public beach.</cmt>
+    <desc>The outdoor stand is located at Big Moose Park.  59 Big Moose Rd, Corbeil, ON P0H 1K0 . Ideal picnic rest stop and public beach.</desc>
+    <sym>Car Repair</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.226346278563142" lon="-79.367988919839263">
+    <name>Outdoor Bike Fix Stand Centennial Park</name>
+    <cmt>The bike fix stand includes a variety of tools needed for basic tune-ups on your bike.  Located in Centennial Park, in the heart of Callander on the shores of Lake Nipissing,  includes a splash pad, beach, play/exercise equipment and a shelter for picnics and public washrooms.</cmt>
+    <desc>The bike fix stand includes a variety of tools needed for basic tune-ups on your bike.  Located in Centennial Park, in the heart of Callander on the shores of Lake Nipissing,  includes a splash pad, beach, play/exercise equipment and a shelter for picnics and public washrooms.</desc>
+    <sym>Car Repair</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.231050286442041" lon="-79.148335279896855">
+    <name>Outdoor Bike Fix Stand Centennial Park Bonfield</name>
+    <cmt>Beach and picnic area off of Mark Street.</cmt>
+    <desc>Beach and picnic area off of Mark Street.</desc>
+    <sym>Car Repair</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.300251195207238" lon="-79.459896069020033">
+    <name>Outdoor Bike Fix Stand Lee Park Memorial Drive</name>
+    <cmt>Location: Lee Park, Memorial Drive&lt;br&gt;The outdoor stand has a variety of tools needed for minor tune-ups and an air pump.</cmt>
+    <desc>Location: Lee Park, Memorial Drive&lt;br&gt;The outdoor stand has a variety of tools needed for minor tune-ups and an air pump.</desc>
+    <sym>Car Repair</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.317908512428403" lon="-78.705804403871298">
+    <name>Outdoor Bike Fix Stand Tourist Information Centre</name>
+    <cmt>At the Information Centre. 401 Pine St, Mattawa, ON P0H 1V0</cmt>
+    <desc>At the Information Centre. 401 Pine St, Mattawa, ON P0H 1V0</desc>
+    <sym>Car Repair</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.250106124207377" lon="-78.896840885281563">
+    <name>Outdoor Bike Fix Stand, Calvin Municipal Office</name>
+    <cmt>1355 Peddlers Dr, Mattawa, ON P0H 1V0</cmt>
+    <desc>1355 Peddlers Dr, Mattawa, ON P0H 1V0</desc>
+    <sym>Car Repair</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.327553138136864" lon="-123.13938640058041">
+    <time>2022-07-22T22:19:52Z</time>
+    <name>Park Royal - Bike Repair Stand</name>
+    <cmt>Park Royal</cmt>
+    <desc>Park Royal</desc>
+    <sym>Car Repair</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2022-07-22T22:19:52Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.494558367878199" lon="-119.61262076161802">
+    <time>2022-07-22T22:24:13Z</time>
+    <name>Penticton Bike Repair Stand (close to Ramada Inn)</name>
+    <cmt>area</cmt>
+    <desc>area</desc>
+    <sym>Car Repair</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2022-07-22T22:24:13Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+</gpx>
