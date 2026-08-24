@@ -32,7 +32,7 @@ ROUTE_LAYERS = {
 }
 
 POI_LAYERS = {  # gpx stem -> (emoji, display name)
-    "Approved_Accommodations": ("https://publicdomainvectors.org/photos/rodentia-icons_help-about.png", "Approved Accommodations"),
+    "Approved_Accommodations": ("🌟", "Approved Accommodations"),
     "Campgrounds": ("⛺", "Campgrounds"),
     "IndoorAccommodations": ("\U0001f6cf️", "Indoor accommodations"),
     "Bicycle_Repair_Shops": ("\U0001f527", "Bike shops"),
