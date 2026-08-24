@@ -1,0 +1,788 @@
+﻿<?xml version="1.0" encoding="utf-8"?><gpx creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd http://www.garmin.com/xmlschemas/TripExtensions/v1 http://www.garmin.com/xmlschemas/TripExtensionsv1.xsd http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1 http://www.garmin.com/xmlschemas/TripMetaDataExtensionsv1.xsd http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1 http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensionsv1.xsd http://www.garmin.com/xmlschemas/CreationTimeExtension/v1 http://www.garmin.com/xmlschemas/CreationTimeExtensionsv1.xsd http://www.garmin.com/xmlschemas/AccelerationExtension/v1 http://www.garmin.com/xmlschemas/AccelerationExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.garmin.com/xmlschemas/VideoExtension/v1 http://www.garmin.com/xmlschemas/VideoExtensionv1.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1" xmlns:tmd="http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1" xmlns:vptm="http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1" xmlns:ctx="http://www.garmin.com/xmlschemas/CreationTimeExtension/v1" xmlns:gpxacc="http://www.garmin.com/xmlschemas/AccelerationExtension/v1" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:vidx1="http://www.garmin.com/xmlschemas/VideoExtension/v1">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2026-08-24T17:10:22Z</time>
+    <bounds maxlat="54.682660968974233" maxlon="-63.574258033186197" minlat="44.577627014368773" minlon="-127.02441897243261" />
+  </metadata>
+
+  <wpt lat="48.6711760237813" lon="-68.03577502258122">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>**Camping Annie</name>
+    <cmt>description: *A pump and basic tools for minor repairs, A sheltered location where you can eat during inclement weather, *A camping space, even without a reservation, if you are travelling exclusively by bicycle, Information about local bicycle networks and cycling services in the area, Privately Owned Campground&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</cmt>
+    <desc>description: *A pump and basic tools for minor repairs, A sheltered location where you can eat during inclement weather, *A camping space, even without a reservation, if you are travelling exclusively by bicycle, Information about local bicycle networks and cycling services in the area, Privately Owned Campground&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.217752002179623" lon="-70.26510201394558">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>**Camping Au Bonnet Rouge</name>
+    <cmt>description: This campground offers&lt;br&gt;71 sites&lt;br&gt;Cycling packages&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;Secure food storage area&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified campground, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;*A camping space, even without a reservation, if you are travelling exclusively by bicycle&lt;br&gt;A sheltered location where you can eat during inclement weather&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;&lt;br&gt;https://www.routeverte.com/en/hebergements/camping-bonnet-rouge-2/&lt;br&gt;Privately Owned Campground&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 133.0</cmt>
+    <desc>description: This campground offers&lt;br&gt;71 sites&lt;br&gt;Cycling packages&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;Secure food storage area&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified campground, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;*A camping space, even without a reservation, if you are travelling exclusively by bicycle&lt;br&gt;A sheltered location where you can eat during inclement weather&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;&lt;br&gt;https://www.routeverte.com/en/hebergements/camping-bonnet-rouge-2/&lt;br&gt;Privately Owned Campground&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 133.0</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.585466967895627" lon="-74.446609960868955">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>**Camping Brownsburg-Chatham</name>
+    <cmt>description: In addition, as a Bienvenue cyclistes!-certified campground, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;*A camping space, even without a reservation, if you are travelling exclusively by bicycle&lt;br&gt;A sheltered location where you can eat during inclement weather&lt;br&gt;Information about local bicycle networks and cycling services in the area, &lt;br&gt;This campground offers&lt;br&gt;256 sites&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;https://www.routeverte.com/en/hebergements/camping-municipal-brownsburg-chatham-2/&lt;br&gt;,Municipal Campground&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</cmt>
+    <desc>description: In addition, as a Bienvenue cyclistes!-certified campground, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;*A camping space, even without a reservation, if you are travelling exclusively by bicycle&lt;br&gt;A sheltered location where you can eat during inclement weather&lt;br&gt;Information about local bicycle networks and cycling services in the area, &lt;br&gt;This campground offers&lt;br&gt;256 sites&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;https://www.routeverte.com/en/hebergements/camping-municipal-brownsburg-chatham-2/&lt;br&gt;,Municipal Campground&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.280144961550832" lon="-70.214087991043925">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>**Camping des Aulnaies Inc</name>
+    <cmt>description: This campground offers&lt;br&gt;515 sites&lt;br&gt;Laundry room&lt;br&gt;Breakfast / Lunch / Dinner&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified campground, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;*A camping space, even without a reservation, if you are travelling exclusively by bicycle&lt;br&gt;A sheltered location where you can eat during inclement weather&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/camping-des-aulnaies-2/&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</cmt>
+    <desc>description: This campground offers&lt;br&gt;515 sites&lt;br&gt;Laundry room&lt;br&gt;Breakfast / Lunch / Dinner&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified campground, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;*A camping space, even without a reservation, if you are travelling exclusively by bicycle&lt;br&gt;A sheltered location where you can eat during inclement weather&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/camping-des-aulnaies-2/&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.245485037565231" lon="-70.232672011479735">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>**Camping et chalets de la Demi-Lieue</name>
+    <cmt>description: This campground offers&lt;br&gt;351 sites&lt;br&gt;Laundry room&lt;br&gt;Secure food storage area&lt;br&gt;Breakfast / Lunch / Dinner&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified campground, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;*A camping space, even without a reservation, if you are travelling exclusively by bicycle&lt;br&gt;A sheltered location where you can eat during inclement weather&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/camping-la-demi-lieue-2/&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</cmt>
+    <desc>description: This campground offers&lt;br&gt;351 sites&lt;br&gt;Laundry room&lt;br&gt;Secure food storage area&lt;br&gt;Breakfast / Lunch / Dinner&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified campground, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;*A camping space, even without a reservation, if you are travelling exclusively by bicycle&lt;br&gt;A sheltered location where you can eat during inclement weather&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/camping-la-demi-lieue-2/&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.12648399733007" lon="-69.189476016908884">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>**Camping Municipal De Trois Pistoles</name>
+    <cmt>description: This campground offers&lt;br&gt;181 sites&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified campground, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;*A camping space, even without a reservation, if you are travelling exclusively by bicycle&lt;br&gt;A sheltered location where you can eat during inclement weather&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/camping-municipal-de-trois-pistoles-2/ Municipal Campground&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</cmt>
+    <desc>description: This campground offers&lt;br&gt;181 sites&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified campground, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;*A camping space, even without a reservation, if you are travelling exclusively by bicycle&lt;br&gt;A sheltered location where you can eat during inclement weather&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/camping-municipal-de-trois-pistoles-2/ Municipal Campground&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.472859032452106" lon="-74.057911019772291">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>**Camping Oka1</name>
+    <cmt>description: In addition, as a Bienvenue cyclistes!-certified campground, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;*A camping space, even without a reservation, if you are travelling exclusively by bicycle&lt;br&gt;A sheltered location where you can eat during inclement weather&lt;br&gt;Information about local bicycle networks and cycling services in the area https://www.routeverte.com/en/hebergements/parc-national-doka-2/ Provincial Park Campground, This campground offers&lt;br&gt;896 sites&lt;br&gt;Laundry room&lt;br&gt;Lunch&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 344.0</cmt>
+    <desc>description: In addition, as a Bienvenue cyclistes!-certified campground, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;*A camping space, even without a reservation, if you are travelling exclusively by bicycle&lt;br&gt;A sheltered location where you can eat during inclement weather&lt;br&gt;Information about local bicycle networks and cycling services in the area https://www.routeverte.com/en/hebergements/parc-national-doka-2/ Provincial Park Campground, This campground offers&lt;br&gt;896 sites&lt;br&gt;Laundry room&lt;br&gt;Lunch&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 344.0</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.688506985083222" lon="-71.904398007318377">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>**CAMPING PANORAMIQUE – PARKBRIDGE (Panoramique | Camping VR et chalets Parkbridge)</name>
+    <cmt>description: This campground offers&lt;br&gt;479 sites&lt;br&gt;Laundry room&lt;br&gt;Breakfast / Lunch / Dinner&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified campground, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;*A camping space, even without a reservation, if you are travelling exclusively by bicycle&lt;br&gt;A sheltered location where you can eat during inclement weather&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/camping-panoramique-parkbridge-2/&lt;br&gt;Privately Owned Campground&lt;br&gt;Details from Google Maps&lt;br&gt;464 Rte François Gignac, Portneuf, QC G0A 2Y0&lt;br&gt;www.parkbridge.com&lt;br&gt;+1 418-286-3655&lt;br&gt;4.1&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 105.0</cmt>
+    <desc>description: This campground offers&lt;br&gt;479 sites&lt;br&gt;Laundry room&lt;br&gt;Breakfast / Lunch / Dinner&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified campground, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;*A camping space, even without a reservation, if you are travelling exclusively by bicycle&lt;br&gt;A sheltered location where you can eat during inclement weather&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/camping-panoramique-parkbridge-2/&lt;br&gt;Privately Owned Campground&lt;br&gt;Details from Google Maps&lt;br&gt;464 Rte François Gignac, Portneuf, QC G0A 2Y0&lt;br&gt;www.parkbridge.com&lt;br&gt;+1 418-286-3655&lt;br&gt;4.1&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 105.0</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.435029037296772" lon="-70.043640984222293">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>**Camping Riviere-Ouelle</name>
+    <cmt>description: This campground offers&lt;br&gt;250 sites&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;Secure food storage area&lt;br&gt;Breakfast&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified campground, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;*A camping space, even without a reservation, if you are travelling exclusively by bicycle&lt;br&gt;A sheltered location where you can eat during inclement weather&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/camping-riviere-ouelle-2/ Privately Owned Campground&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</cmt>
+    <desc>description: This campground offers&lt;br&gt;250 sites&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;Secure food storage area&lt;br&gt;Breakfast&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified campground, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;*A camping space, even without a reservation, if you are travelling exclusively by bicycle&lt;br&gt;A sheltered location where you can eat during inclement weather&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/camping-riviere-ouelle-2/ Privately Owned Campground&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.603909011930227" lon="-117.12707097642124">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>**Kokanee Provincial Park - Holt Cyclist Shelter Campground</name>
+    <cmt>description: Provincial Park Campground&lt;br&gt;*Dedicated cyclist campsite, *cooking shelter&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</cmt>
+    <desc>description: Provincial Park Campground&lt;br&gt;*Dedicated cyclist campsite, *cooking shelter&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="54.682660968974233" lon="-127.02441897243261">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>**Rainbow Trailer Park (campground) (might be closed 3july2024)</name>
+    <cmt>description: *Recommended by community, *(has dedicated cycling cabin and camping spot)&lt;br&gt;Details from Google Maps&lt;br&gt;12601 BC-16, Telkwa, BC V0J 2X1&lt;br&gt;+1 250-846-9663&lt;br&gt;Approved Accommodation (campground)&lt;br&gt;Has bicycle camping - use of cabin for free (big bicycle hanging from sign.&lt;br&gt;Type: Tenting unconfirmed&lt;br&gt;ID: 196.0</cmt>
+    <desc>description: *Recommended by community, *(has dedicated cycling cabin and camping spot)&lt;br&gt;Details from Google Maps&lt;br&gt;12601 BC-16, Telkwa, BC V0J 2X1&lt;br&gt;+1 250-846-9663&lt;br&gt;Approved Accommodation (campground)&lt;br&gt;Has bicycle camping - use of cabin for free (big bicycle hanging from sign.&lt;br&gt;Type: Tenting unconfirmed&lt;br&gt;ID: 196.0</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.577627014368773" lon="-75.701701976358891">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>**St. Lawrence Park</name>
+    <cmt>description: *Special rate for cyclists, *St. Lawrence Park welcomes cyclists and has an “always room” policy for self-supported cyclists.&lt;br&gt;Municipal Campground&lt;br&gt;Details from Google Maps&lt;br&gt;525 King St W, Brockville, ON K6V 3N4&lt;br&gt;www.brockville.com&lt;br&gt;+1 613-345-1341&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 114.0</cmt>
+    <desc>description: *Special rate for cyclists, *St. Lawrence Park welcomes cyclists and has an “always room” policy for self-supported cyclists.&lt;br&gt;Municipal Campground&lt;br&gt;Details from Google Maps&lt;br&gt;525 King St W, Brockville, ON K6V 3N4&lt;br&gt;www.brockville.com&lt;br&gt;+1 613-345-1341&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 114.0</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.753133961930871" lon="-94.479143964126706">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>*Anicinabe Park</name>
+    <cmt>description: 5+ trip report stays, Approved Accommodation #9, Privately Owned Campground&lt;br&gt;Details from Google Maps&lt;br&gt;Miikana Way and, Golf Course Rd, Kenora, ON P9N 4H5&lt;br&gt;www.anicinabepark.com&lt;br&gt;+1 807-407-1697&lt;br&gt;Booking&lt;br&gt;https://online.premiercampground.com/37fa9c6df0614aecaf1936e367ba942d&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 9.0</cmt>
+    <desc>description: 5+ trip report stays, Approved Accommodation #9, Privately Owned Campground&lt;br&gt;Details from Google Maps&lt;br&gt;Miikana Way and, Golf Course Rd, Kenora, ON P9N 4H5&lt;br&gt;www.anicinabepark.com&lt;br&gt;+1 807-407-1697&lt;br&gt;Booking&lt;br&gt;https://online.premiercampground.com/37fa9c6df0614aecaf1936e367ba942d&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 9.0</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.749928003177047" lon="-69.490139996632934">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>*Camping Chez Jean</name>
+    <cmt>description: *Special rate for cyclists http://www.campingchezjean.com/&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</cmt>
+    <desc>description: *Special rate for cyclists http://www.campingchezjean.com/&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.643021019175649" lon="-69.757604012265801">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>*Camping de la Batture SEBKA</name>
+    <cmt>description: This campground offers&lt;br&gt;95 sites&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;Secure food storage area&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified campground, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;*A camping space, even without a reservation, if you are travelling exclusively by bicycle&lt;br&gt;A sheltered location where you can eat during inclement weather&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/camping-de-la-batture-2/&lt;br&gt;Privately Owned Campground&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 347.0</cmt>
+    <desc>description: This campground offers&lt;br&gt;95 sites&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;Secure food storage area&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified campground, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;*A camping space, even without a reservation, if you are travelling exclusively by bicycle&lt;br&gt;A sheltered location where you can eat during inclement weather&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/camping-de-la-batture-2/&lt;br&gt;Privately Owned Campground&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 347.0</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.040783982723951" lon="-66.696255030110478">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>*Camping La Maison Verte du Parc Gaspésien1</name>
+    <cmt>description: This campground offers&lt;br&gt;119 sites&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified campground, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;A camping space, even without a reservation, if you are travelling exclusively by bicycle&lt;br&gt;A sheltered location where you can eat during inclement weather&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;&lt;br&gt;https://www.routeverte.com/en/hebergements/camping-la-maison-verte-du-parc-gaspesien-2/ Privately Owned Campground&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 135.0</cmt>
+    <desc>description: This campground offers&lt;br&gt;119 sites&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified campground, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;A camping space, even without a reservation, if you are travelling exclusively by bicycle&lt;br&gt;A sheltered location where you can eat during inclement weather&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;&lt;br&gt;https://www.routeverte.com/en/hebergements/camping-la-maison-verte-du-parc-gaspesien-2/ Privately Owned Campground&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 135.0</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.837404010817409" lon="-73.326956005766988">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>*Camping Le Marquis</name>
+    <cmt>description: This tourist accommodation offers&lt;br&gt;167 units&lt;br&gt;Cycling packages&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;Secure food storage area&lt;br&gt;Breakfast / Lunch / Dinner&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified tourist accommodation, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;A covered, locked location to store your bicycle at night&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/camping-le-marquis-2/ (Tenting unconfirmed)&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</cmt>
+    <desc>description: This tourist accommodation offers&lt;br&gt;167 units&lt;br&gt;Cycling packages&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;Secure food storage area&lt;br&gt;Breakfast / Lunch / Dinner&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified tourist accommodation, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;A covered, locked location to store your bicycle at night&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/camping-le-marquis-2/ (Tenting unconfirmed)&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.225201981142163" lon="-72.924977028742433">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>*Camping Marina Louiseville</name>
+    <cmt>description: *Cooking shelter, Privately Owned Campground&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</cmt>
+    <desc>description: *Cooking shelter, Privately Owned Campground&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.973588025197387" lon="-66.951209977269173">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>*Camping Parc Adams</name>
+    <cmt>description: This campground offers&lt;br&gt;21 sites&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified campground, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;A camping space, even without a reservation, if you are travelling exclusively by bicycle&lt;br&gt;A sheltered location where you can eat during inclement weather&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/camping-parc-adams-2/&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</cmt>
+    <desc>description: This campground offers&lt;br&gt;21 sites&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified campground, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;A camping space, even without a reservation, if you are travelling exclusively by bicycle&lt;br&gt;A sheltered location where you can eat during inclement weather&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/camping-parc-adams-2/&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.990595972165465" lon="-70.546278990805149">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>*Camping Pointe Aux Oies</name>
+    <cmt>description: CYCLOTOURIST&lt;br&gt;&lt;br&gt;$27/day&lt;br&gt;Taxes not included&lt;br&gt;https://www.campingpointeauxoies.com/en/rates-packages-promotions/&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</cmt>
+    <desc>description: CYCLOTOURIST&lt;br&gt;&lt;br&gt;$27/day&lt;br&gt;Taxes not included&lt;br&gt;https://www.campingpointeauxoies.com/en/rates-packages-promotions/&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.269307974725962" lon="-72.617407031357288">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>*Camping Port St-Francois1</name>
+    <cmt>description: Cyclist Special - Without Car&lt;br&gt;Friday to Friday	&lt;br&gt;1 cyclist 20 plus 10 plus additional	&lt;br&gt;No domestic animals &lt;br&gt;Privately Owned Campground&lt;br&gt;https://campingportst-francois.com/tarif-camping/#&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 345.0</cmt>
+    <desc>description: Cyclist Special - Without Car&lt;br&gt;Friday to Friday	&lt;br&gt;1 cyclist 20 plus 10 plus additional	&lt;br&gt;No domestic animals &lt;br&gt;Privately Owned Campground&lt;br&gt;https://campingportst-francois.com/tarif-camping/#&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 345.0</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.043910037726164" lon="-90.470469016581774">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>*CAN-OP/G &amp; G Service Upsala Campground1</name>
+    <cmt>description: *5+ trip report stays, Approved Accommodation #15, Privately Owned Campground&lt;br&gt;Details from Google Maps&lt;br&gt;4850 ON-17, Upsala, ON P0T 2Y0&lt;br&gt;+1 807-986-2312&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 15.0</cmt>
+    <desc>description: *5+ trip report stays, Approved Accommodation #15, Privately Owned Campground&lt;br&gt;Details from Google Maps&lt;br&gt;4850 ON-17, Upsala, ON P0T 2Y0&lt;br&gt;+1 807-986-2312&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 15.0</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.379213992506266" lon="-121.42545500770211">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>*Coquihalla Campground</name>
+    <cmt>description: *5+ trip report stays Privately Owned Campground, &lt;br&gt;Details from Google Maps&lt;br&gt;800 Kawkawa Lake Rd, Hope, BC V0X 1L4&lt;br&gt;www.coquihallacampground.ca&lt;br&gt;+1 604-860-5330&lt;br&gt;Approved Accommodation #8&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 8.0</cmt>
+    <desc>description: *5+ trip report stays Privately Owned Campground, &lt;br&gt;Details from Google Maps&lt;br&gt;800 Kawkawa Lake Rd, Hope, BC V0X 1L4&lt;br&gt;www.coquihallacampground.ca&lt;br&gt;+1 604-860-5330&lt;br&gt;Approved Accommodation #8&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 8.0</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.829984027892351" lon="-93.456235025078058">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>*Crystal Lake Campground1</name>
+    <cmt>description: *5+ trip report stays, Privately Owned Campground &lt;br&gt;Details from Google Maps&lt;br&gt;167 Hanslips Rd, Vermilion Bay, ON P0V 2V0&lt;br&gt;www.crystallakecampground.ca&lt;br&gt;+1 807-220-5467&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 62.0</cmt>
+    <desc>description: *5+ trip report stays, Privately Owned Campground &lt;br&gt;Details from Google Maps&lt;br&gt;167 Hanslips Rd, Vermilion Bay, ON P0V 2V0&lt;br&gt;www.crystallakecampground.ca&lt;br&gt;+1 807-220-5467&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 62.0</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.216874979436398" lon="-63.574258033186197">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>*Cumberland Cove Seaside Campground</name>
+    <cmt>description: Here at Cumberland Cove Seaside Campground we offer...&lt;br&gt;&lt;br&gt; Large grassy Tent and RV sites&lt;br&gt; Clean Washrooms - No extra charge for showers&lt;br&gt; Coin operated Washer and Dryer&lt;br&gt; Picnic Table and Fire pit&lt;br&gt; Dumping Station * ( Fee applicable if less than a 2 night stay)&lt;br&gt; 24 hour Supervision, Owner(s) on site&lt;br&gt; Treat for your pet &lt;br&gt;http://www.seasidecampingpei.ca/offer.html, Privately Owned Campground&lt;br&gt;*Recommended by someone on the fb page&lt;br&gt;Details from Google Maps&lt;br&gt;227 Cumberland Cove Rd, Borden-Carleton, PE C0B 1X0&lt;br&gt;www.seasidecampingpei.ca&lt;br&gt;+1 902-855-2961&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 258.0</cmt>
+    <desc>description: Here at Cumberland Cove Seaside Campground we offer...&lt;br&gt;&lt;br&gt; Large grassy Tent and RV sites&lt;br&gt; Clean Washrooms - No extra charge for showers&lt;br&gt; Coin operated Washer and Dryer&lt;br&gt; Picnic Table and Fire pit&lt;br&gt; Dumping Station * ( Fee applicable if less than a 2 night stay)&lt;br&gt; 24 hour Supervision, Owner(s) on site&lt;br&gt; Treat for your pet &lt;br&gt;http://www.seasidecampingpei.ca/offer.html, Privately Owned Campground&lt;br&gt;*Recommended by someone on the fb page&lt;br&gt;Details from Google Maps&lt;br&gt;227 Cumberland Cove Rd, Borden-Carleton, PE C0B 1X0&lt;br&gt;www.seasidecampingpei.ca&lt;br&gt;+1 902-855-2961&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 258.0</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.602011000737548" lon="-75.053321029990911">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>*Cédrière, Parc National de Plaisance</name>
+    <cmt>description: *Special rate for cyclists, &lt;br&gt;(Quebec National Park) &lt;br&gt;"Sépaq is proud to partner with Vélo Québec to establish a Welcome Cyclists campsite network. Enjoy campsites exclusively for touring cyclists. They’re easily accessible and available without advance booking.&lt;br&gt;Le Plateau campground&lt;br&gt;&lt;br&gt; 2 campsites&lt;br&gt; 2 fire pits&lt;br&gt; 2 tables&lt;br&gt; Bike racks&lt;br&gt; Water access point: 200 m&lt;br&gt; La Carapace Visitors Centre nearby (community room - shelter, washroom, store and convenience store)&lt;br&gt; Lockers for food&lt;br&gt; Possibility of access via a cycling path&lt;br&gt; Sunny campsites&lt;br&gt;&lt;br&gt;Information: 819 427-5350&lt;br&gt;&lt;br&gt;Period: from the end of April to mid-October"&lt;br&gt;https://www.sepaq.com/pq/pla/index.dot#Item198c7371-83d3-43ca-aa9c-62cc5314304d&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</cmt>
+    <desc>description: *Special rate for cyclists, &lt;br&gt;(Quebec National Park) &lt;br&gt;"Sépaq is proud to partner with Vélo Québec to establish a Welcome Cyclists campsite network. Enjoy campsites exclusively for touring cyclists. They’re easily accessible and available without advance booking.&lt;br&gt;Le Plateau campground&lt;br&gt;&lt;br&gt; 2 campsites&lt;br&gt; 2 fire pits&lt;br&gt; 2 tables&lt;br&gt; Bike racks&lt;br&gt; Water access point: 200 m&lt;br&gt; La Carapace Visitors Centre nearby (community room - shelter, washroom, store and convenience store)&lt;br&gt; Lockers for food&lt;br&gt; Possibility of access via a cycling path&lt;br&gt; Sunny campsites&lt;br&gt;&lt;br&gt;Information: 819 427-5350&lt;br&gt;&lt;br&gt;Period: from the end of April to mid-October"&lt;br&gt;https://www.sepaq.com/pq/pla/index.dot#Item198c7371-83d3-43ca-aa9c-62cc5314304d&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.410022012889385" lon="-91.652491958811879">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>*Davy Lake Campground and Resort</name>
+    <cmt>description: "Outdoor Sink for Tenters and Cyclists"&lt;br&gt;https://davylake.ca/pages/amenities&lt;br&gt;*5+ trip report stays, Approved Accommodation #14, Privately Owned Campground&lt;br&gt;Details from Google Maps&lt;br&gt;400 Davey Lake Rd, Ignace, ON P0T 1T0&lt;br&gt;www.davylake.ca&lt;br&gt;+1 807-934-0914&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 14.0</cmt>
+    <desc>description: "Outdoor Sink for Tenters and Cyclists"&lt;br&gt;https://davylake.ca/pages/amenities&lt;br&gt;*5+ trip report stays, Approved Accommodation #14, Privately Owned Campground&lt;br&gt;Details from Google Maps&lt;br&gt;400 Davey Lake Rd, Ignace, ON P0T 1T0&lt;br&gt;www.davylake.ca&lt;br&gt;+1 807-934-0914&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 14.0</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.975546002388" lon="-109.52685403637588">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>*Eagle Valley Park Campground</name>
+    <cmt>description: 5+ Trip Report Stays, Approved Accommodation #13, Privately Owned Campground, (Box 2108 SK-21 &amp;amp;, SK-1, Maple Creek, SK S0N 1N0)&lt;br&gt;https://eaglevalleypark.ca/&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 13.0</cmt>
+    <desc>description: 5+ Trip Report Stays, Approved Accommodation #13, Privately Owned Campground, (Box 2108 SK-21 &amp;amp;, SK-1, Maple Creek, SK S0N 1N0)&lt;br&gt;https://eaglevalleypark.ca/&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 13.0</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.038021020591259" lon="-110.72370297275484">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>*Gas City Campground</name>
+    <cmt>description: *5+ Trip report stays, Approved Accommodation #21, Municipal Campground&lt;br&gt;Details from Google Maps&lt;br&gt;402 11 Ave SW, Medicine Hat, AB T1A 7Z6&lt;br&gt;https://www.medicinehat.ca/en/parks-recreation-and-culture/camping.aspx#Amenities_1&lt;br&gt;+1 403-529-8158&lt;br&gt;Campground amenities include:&lt;br&gt; community campfire pit and kitchen&lt;br&gt; convenience store&lt;br&gt; dump station&lt;br&gt; firewood&lt;br&gt; laundry facilities&lt;br&gt; playground&lt;br&gt; showers&lt;br&gt; wireless internet&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 21.0</cmt>
+    <desc>description: *5+ Trip report stays, Approved Accommodation #21, Municipal Campground&lt;br&gt;Details from Google Maps&lt;br&gt;402 11 Ave SW, Medicine Hat, AB T1A 7Z6&lt;br&gt;https://www.medicinehat.ca/en/parks-recreation-and-culture/camping.aspx#Amenities_1&lt;br&gt;+1 403-529-8158&lt;br&gt;Campground amenities include:&lt;br&gt; community campfire pit and kitchen&lt;br&gt; convenience store&lt;br&gt; dump station&lt;br&gt; firewood&lt;br&gt; laundry facilities&lt;br&gt; playground&lt;br&gt; showers&lt;br&gt; wireless internet&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 21.0</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.749948969110847" lon="-75.45212703756988">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>*Grenville Park Camping &amp; Rv Park</name>
+    <cmt>description: *Has a designated cyclist camping area, and a special rate for cyclists&lt;br&gt;Grenville Park Camping &amp;amp; Rv Park&lt;br&gt;Details from Google Maps&lt;br&gt;2323 2, Johnstown, ON K0E 1T1&lt;br&gt;www.gocampgrenvillepark.com&lt;br&gt;+1 613-925-5055&lt;br&gt;https://www.gocampgrenvillepark.com/rates/&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</cmt>
+    <desc>description: *Has a designated cyclist camping area, and a special rate for cyclists&lt;br&gt;Grenville Park Camping &amp;amp; Rv Park&lt;br&gt;Details from Google Maps&lt;br&gt;2323 2, Johnstown, ON K0E 1T1&lt;br&gt;www.gocampgrenvillepark.com&lt;br&gt;+1 613-925-5055&lt;br&gt;https://www.gocampgrenvillepark.com/rates/&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.846765028312802" lon="-84.371860977262259">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>*Harmony Beach Lakeview Resort</name>
+    <cmt>description: May 15 to September 30&lt;br&gt;*Reported no tenting available (that was during closed season)&lt;br&gt;Approved Accommodation #10&lt;br&gt;Details from Google Maps&lt;br&gt;128 Harmony Beach Rd, Goulais River, ON P0S 1E0&lt;br&gt;https://www.facebook.com/harmonybeachresort&lt;br&gt;+1 705-649-3322&lt;br&gt;Type: Privately Owned Campground&lt;br&gt;ID: 10.0</cmt>
+    <desc>description: May 15 to September 30&lt;br&gt;*Reported no tenting available (that was during closed season)&lt;br&gt;Approved Accommodation #10&lt;br&gt;Details from Google Maps&lt;br&gt;128 Harmony Beach Rd, Goulais River, ON P0S 1E0&lt;br&gt;https://www.facebook.com/harmonybeachresort&lt;br&gt;+1 705-649-3322&lt;br&gt;Type: Privately Owned Campground&lt;br&gt;ID: 10.0</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="52.417390029877424" lon="-117.39647598937154">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>*Jonas Creek Campground</name>
+    <cmt>description: Open: June 5 to September 9, 2024&lt;br&gt;"Campsite #14 is designated for bike camping only."&lt;br&gt;https://parks.canada.ca/pn-np/ab/jasper/activ/passez-stay/camping#jonas&lt;br&gt;National Park Campground&lt;br&gt;"Reservable: All sites available on a First Come, First Served basis. No reservations possible."&lt;br&gt;"cooking shelter"&lt;br&gt;"A night at Jonas can be spent camping within earshot of the babbling creek. Hardy campers looking to get away from it all can also walk into hillside sites secluded in the forest. In addition, a bike camping area can be found near the cooking shelter, offering a great stop-over option for cyclists tackling the length of the Icefields Parkway.&lt;br&gt;&lt;br&gt;Campsite #14 is designated for bike camping only. This is a shared site for unsupported bike touring and can accommodate 10 tents.&lt;br&gt;&lt;br&gt;Best suited for tents as well as motorhomes and trailers under 25 feet"&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</cmt>
+    <desc>description: Open: June 5 to September 9, 2024&lt;br&gt;"Campsite #14 is designated for bike camping only."&lt;br&gt;https://parks.canada.ca/pn-np/ab/jasper/activ/passez-stay/camping#jonas&lt;br&gt;National Park Campground&lt;br&gt;"Reservable: All sites available on a First Come, First Served basis. No reservations possible."&lt;br&gt;"cooking shelter"&lt;br&gt;"A night at Jonas can be spent camping within earshot of the babbling creek. Hardy campers looking to get away from it all can also walk into hillside sites secluded in the forest. In addition, a bike camping area can be found near the cooking shelter, offering a great stop-over option for cyclists tackling the length of the Icefields Parkway.&lt;br&gt;&lt;br&gt;Campsite #14 is designated for bike camping only. This is a shared site for unsupported bike touring and can accommodate 10 tents.&lt;br&gt;&lt;br&gt;Best suited for tents as well as motorhomes and trailers under 25 feet"&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID:</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.074948966503143" lon="-64.705175003036857">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>*Plantation Campground1</name>
+    <cmt>description: *Recommended by someone in the facebook page, nice quiet grassy area&lt;br&gt;Privately Owned Campground&lt;br&gt;Details from Google Maps&lt;br&gt;210 W Steadman Rd, Berwick, NS B0P 1E0&lt;br&gt;www.plantationcampground.com&lt;br&gt;+1 902-538-8888&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 360.0</cmt>
+    <desc>description: *Recommended by someone in the facebook page, nice quiet grassy area&lt;br&gt;Privately Owned Campground&lt;br&gt;Details from Google Maps&lt;br&gt;210 W Steadman Rd, Berwick, NS B0P 1E0&lt;br&gt;www.plantationcampground.com&lt;br&gt;+1 902-538-8888&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 360.0</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.341942002996802" lon="-75.702477972954512">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>*Rideau Heights Campsite</name>
+    <cmt>description: unconfirmed if open for 2024 season.  (closed for 2023 season)&lt;br&gt;Type: Tenting unconfirmed&lt;br&gt;ID:</cmt>
+    <desc>description: unconfirmed if open for 2024 season.  (closed for 2023 season)&lt;br&gt;Type: Tenting unconfirmed&lt;br&gt;ID:</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.416358036920428" lon="-68.613176001235843">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>*Rimouski Camping &amp; Motel Anse (campground)1</name>
+    <cmt>description: This campground offers&lt;br&gt;121 sites&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;Secure food storage area&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified campground, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;A camping space, even without a reservation, if you are travelling exclusively by bicycle&lt;br&gt;A sheltered location where you can eat during inclement weather&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;&lt;br&gt;https://www.routeverte.com/en/hebergements/camping-rimouski-motel-de-lanse-2/ Privately Owned Campground&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 39.0</cmt>
+    <desc>description: This campground offers&lt;br&gt;121 sites&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;Secure food storage area&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified campground, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;A camping space, even without a reservation, if you are travelling exclusively by bicycle&lt;br&gt;A sheltered location where you can eat during inclement weather&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;&lt;br&gt;https://www.routeverte.com/en/hebergements/camping-rimouski-motel-de-lanse-2/ Privately Owned Campground&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 39.0</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.142639972269535" lon="-122.35464798286557">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>*Sun Valley RV Park (formerly Sun Valley Trout Park)</name>
+    <cmt>description: *has sign on website&lt;br&gt;*5+ Trip report stays, Privately Owned Campground, &lt;br&gt;Details from Google Maps&lt;br&gt;31395 Silverdale Ave, Mission, BC V4S 1J7&lt;br&gt;www.campingfishingbc.com&lt;br&gt;+1 604-826-6471&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 7.0</cmt>
+    <desc>description: *has sign on website&lt;br&gt;*5+ Trip report stays, Privately Owned Campground, &lt;br&gt;Details from Google Maps&lt;br&gt;31395 Silverdale Ave, Mission, BC V4S 1J7&lt;br&gt;www.campingfishingbc.com&lt;br&gt;+1 604-826-6471&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 7.0</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.537745980545878" lon="-111.81290103122592">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>*Tillebrook Provincial Park - Campground C</name>
+    <cmt>description: *5+ Trip report stays, Provincial Park Campground&lt;br&gt;Details from Google Maps&lt;br&gt;Newell County No. 4, AB T0J 3K0&lt;br&gt;www.albertaparks.ca&lt;br&gt;+1 877-537-2757&lt;br&gt;Approved Accommodation (campground)&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 173.0</cmt>
+    <desc>description: *5+ Trip report stays, Provincial Park Campground&lt;br&gt;Details from Google Maps&lt;br&gt;Newell County No. 4, AB T0J 3K0&lt;br&gt;www.albertaparks.ca&lt;br&gt;+1 877-537-2757&lt;br&gt;Approved Accommodation (campground)&lt;br&gt;Type: Approved Accommodation (campground)&lt;br&gt;ID: 173.0</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+</gpx>
