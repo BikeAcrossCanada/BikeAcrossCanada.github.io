@@ -60,6 +60,12 @@
  ],
  "pois": [
   {
+   "key": "Approved_Accommodations",
+   "emoji": "https://publicdomainvectors.org/photos/rodentia-icons_help-about.png",
+   "title": "Approved Accommodations",
+   "count": 37
+  },
+  {
    "key": "Campgrounds",
    "emoji": "\u26fa",
    "title": "Campgrounds",
