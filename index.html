@@ -77,6 +77,8 @@
   <h2>Routes</h2>
   <div id="route-boxes"></div>
   <h2>Along the way</h2>
+  <label style="font-weight:600;border-bottom:1px solid #eee;padding-bottom:4px;margin-bottom:2px">
+    <input type="checkbox" id="poi-all"> Check all / none</label>
   <div id="poi-boxes"></div>
   <button id="dl-gpx" style="margin-top:16px;width:100%;padding:7px;font-size:13px;
     background:#0a58a3;color:#fff;border:none;border-radius:5px;cursor:pointer;
@@ -279,6 +281,25 @@ fetch('data/manifest.json').then(r => r.json()).then(manifest => {
   });
   updateDlButton();
 });
+
+// ---- Check all / none for the POI list ----
+const poiAll = document.getElementById('poi-all');
+poiAll.addEventListener('change', () => {
+  for (const e of layerRegistry) {
+    if (e.kind !== 'poi' || !e.cb) continue;
+    e.cb.checked = poiAll.checked;
+    // loaded layers toggle now; still-loading ones honour the box on arrival
+    if (e.gj) poiAll.checked ? e.layer.addTo(map) : map.removeLayer(e.layer);
+  }
+  updateDlButton();
+});
+function syncPoiAll() {
+  const cbs = layerRegistry.filter(e => e.kind === 'poi' && e.cb);
+  const on = cbs.filter(e => e.cb.checked).length;
+  poiAll.checked = on > 0 && on === cbs.length;
+  poiAll.indeterminate = on > 0 && on < cbs.length;
+}
+document.getElementById('poi-boxes').addEventListener('change', syncPoiAll);
 
 // ---- GPX export of checked layers ----
 const dlBtn = document.getElementById('dl-gpx');
