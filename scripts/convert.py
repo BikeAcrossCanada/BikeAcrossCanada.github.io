@@ -29,6 +29,7 @@ ROUTE_LAYERS = {
     "CA": {"color": "#787878", "weight": 2.5, "title": "CA — Access routes"},
     "CL": {"color": "#3d85c8", "weight": 3, "title": "CL — Local connectors"},
     "CW": {"color": "#1a0067", "weight": 3, "title": "CW — Ferry crossings (dashed)", "dash": "6 6"},
+    "One-way_Direction_Arrows": {"color": "#1a0067", "weight": 3, "title": "One-way Direction Arrows", "arrow": "6 6"},
 }
 
 POI_LAYERS = {  # gpx stem -> (emoji, display name)
