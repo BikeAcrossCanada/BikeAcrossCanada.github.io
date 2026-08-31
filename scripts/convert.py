@@ -236,24 +236,48 @@ def convert_routes(provinces):
         demoted = 0
         feats = []
         layer_km = 0.0
+        chain = []  # (x, y, leftover) where processed tracks ended, for shield carry
         for fname, d, simp, line_m in tracks:
             if d and not has_counterpart(line_m, trees["W" if d == "E" else "E"]):
                 d = None  # no alternative for the other direction: show both ways
                 demoted += 1
             provs = prov_tags(line_m, provinces)
             used_provs.update(provs)
-            def props(pv, km):
+            # Repeating shield markers along the line, highway-sign style;
+            # index.html draws them, the GPX export never sees them. Placed
+            # over the whole track (so provincial splits don't reset the
+            # count); a track starting within 1 km of where an earlier one
+            # ended continues that chain's 25 km rhythm, while standalone
+            # short connectors restart and still get their own shield.
+            sx, sy = line_m.coords[0]
+            ex, ey = line_m.coords[-1]
+            carry = next((c for x, y, c in chain
+                          if (x - sx) ** 2 + (y - sy) ** 2 <= 1000 ** 2),
+                         SHIELD_EVERY_KM * 1000 / 2)
+            track_shields, leftover = shield_points(rounded(simp.coords), carry)
+            chain.append((ex, ey, leftover))
+            def props(pv, km, sh):
                 p = {"name": fname, "provs": pv, "km": round(km, 1)}
                 if d:
                     p["dir"] = d
+                if sh:
+                    p["shields"] = sh
                 return p
             if len(provs) > 1:
-                for pc, coords in split_by_province(line_m, provs, provinces):
+                pieces = split_by_province(line_m, provs, provinces)
+                piece_lines = [LineString(projected(coords)) for _, coords in pieces]
+                assigned = [[] for _ in pieces]
+                for lat, lon in track_shields:
+                    pt = Point(projected([[lon, lat]])[0])
+                    nearest = min(range(len(pieces)),
+                                  key=lambda i: piece_lines[i].distance(pt))
+                    assigned[nearest].append([lat, lon])
+                for (pc, coords), sh in zip(pieces, assigned):
                     piece_km = geod_km(coords)
                     layer_km += piece_km
                     feats.append({
                         "type": "Feature",
-                        "properties": props([pc], piece_km),
+                        "properties": props([pc], piece_km, sh),
                         "geometry": {"type": "LineString", "coordinates": coords},
                     })
             else:
@@ -261,7 +285,7 @@ def convert_routes(provinces):
                 layer_km += track_km
                 feats.append({
                     "type": "Feature",
-                    "properties": props(provs, track_km),
+                    "properties": props(provs, track_km, track_shields),
                     "geometry": {"type": "LineString",
                                  "coordinates": rounded(simp.coords)},
                 })
@@ -277,6 +301,7 @@ def convert_routes(provinces):
 ARROW_OPPOSITE = {"EB": "WB", "WB": "EB", "NB": "SB", "SB": "NB"}
 ARROW_PAIR_KM = 5  # a couplet's two one-way halves sit within this of each other
 ARROW_EVERY_KM = 3  # arrowhead spacing along long segments; short ones get one
+SHIELD_EVERY_KM = 25  # route-shield spacing; tracks shorter than half this get none
 
 
 def end_to_end_bearing(coords):
@@ -285,31 +310,61 @@ def end_to_end_bearing(coords):
     return az % 360
 
 
-def arrow_points(coords):
-    """Arrowhead positions + local bearings every ARROW_EVERY_KM along a
-    [lon, lat] line, centred so a lone arrow lands mid-segment. Precomputed
-    here so index.html just draws them — no geometry math in the browser.
-    Returns [[lat, lon, bearing], ...] (bearing in whole compass degrees)."""
+def measure_line(coords):
+    """Per-vertex bearings + cumulative metres along a [lon, lat] line."""
     lons = [c[0] for c in coords]
     lats = [c[1] for c in coords]
     az, _, dist = GEOD.inv(lons[:-1], lats[:-1], lons[1:], lats[1:])
     cum = [0.0]
     for d in dist:
         cum.append(cum[-1] + d)
-    total = cum[-1]
-    if not total:
-        return []
+    return lons, lats, az, cum
+
+
+def points_at(measured, targets):
+    """Positions + local bearings at the given distances (metres, ascending)
+    along a measured line. Precomputed here so index.html just draws them —
+    no geometry math in the browser.
+    Returns [[lat, lon, bearing], ...] (bearing in whole compass degrees)."""
+    lons, lats, az, cum = measured
     pts = []
-    n = max(1, int(total // (ARROW_EVERY_KM * 1000)))
-    for k in range(n):
-        target = total * (k + 0.5) / n
-        i = 1
+    i = 1
+    for target in targets:
         while i < len(cum) - 1 and cum[i] < target:
             i += 1
         lon, lat, _ = GEOD.fwd(lons[i - 1], lats[i - 1], az[i - 1], target - cum[i - 1])
         pts.append([round(lat, PRECISION), round(lon, PRECISION),
                     round(az[i - 1] % 360)])
     return pts
+
+
+def arrow_points(coords):
+    """Arrowheads every ARROW_EVERY_KM, centred so a lone arrow lands
+    mid-segment; every one-way segment gets at least one."""
+    m = measure_line(coords)
+    total = m[3][-1]
+    if not total:
+        return []
+    n = max(1, int(total // (ARROW_EVERY_KM * 1000)))
+    return points_at(m, [total * (k + 0.5) / n for k in range(n)])
+
+
+def shield_points(coords, carry):
+    """Route-shield positions: first one `carry` metres in, then strictly
+    every SHIELD_EVERY_KM. Returns (points, leftover) where leftover is the
+    distance past the line's end to the next shield, so a track that starts
+    where this one ended can continue the rhythm instead of restarting
+    (Sam's routes are chains of day-ride tracks; per-track restarts made
+    spacing wobble at every joint). No bearing kept — shields draw upright."""
+    m = measure_line(coords)
+    total = m[3][-1]
+    step = SHIELD_EVERY_KM * 1000
+    targets = []
+    d = carry
+    while d < total:
+        targets.append(d)
+        d += step
+    return ([[lat, lon] for lat, lon, _ in points_at(m, targets)], d - total)
 
 
 def arrow_pair_check(tracks):
