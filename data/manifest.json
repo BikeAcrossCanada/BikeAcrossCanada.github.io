@@ -56,15 +56,6 @@
    "dash": "6 6",
    "count": 30,
    "km": 1328
-  },
-  {
-   "code": "One-way_Direction_Arrows",
-   "color": "#1a0067",
-   "weight": 3,
-   "title": "One-way Direction Arrows",
-   "arrow": "6 6",
-   "count": 19,
-   "km": 115
   }
  ],
  "pois": [
@@ -236,5 +227,9 @@
    "code": "NL",
    "name": "Newfoundland and Labrador"
   }
- ]
+ ],
+ "arrows": {
+  "file": "routes_One-way_Direction_Arrows.geojson",
+  "count": 19
+ }
 }
