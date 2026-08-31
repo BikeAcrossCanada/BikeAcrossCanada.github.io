@@ -315,9 +315,13 @@ function shieldIcon(code, h) {
 function buildShieldLayer() {
   const group = L.layerGroup();
   const h = shieldSize();
-  const minGap = h * 1.2;  // only same-route shields nearly on top of each
-                           // other (junction coincidences, tight switchbacks)
-                           // collapse; honest 25 km neighbours stay
+  const minGap = h * 2.5;  // same-route shields closer than this on screen
+                           // collapse to one: Sam often drew parallel variant
+                           // tracks (a road route + a rail-trail alternate),
+                           // each with its own shields. 25 km neighbours sit
+                           // wider than this at every zoom, so the honest
+                           // rhythm is never thinned; zooming in separates
+                           // the variants and shows each one's badge again.
   // One shield set per stretch of road: where Sam drew separate EB and WB
   // tracks on the same highway, drawing both sets doubles the density with
   // wobbly phases. The default and eastbound views use EB + two-way tracks;
