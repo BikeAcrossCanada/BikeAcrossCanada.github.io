@@ -83,8 +83,8 @@ list in the same file, in the same copy-the-pattern style.
 
 ## For anyone comfortable with Python
 
-The converter also runs on a regular computer: install `shapely`
-(`pip install shapely`), then run `python3 scripts/convert.py` from the
+The converter also runs on a regular computer: install `shapely` and `pyproj`
+(`pip install shapely pyproj`), then run `python3 scripts/convert.py` from the
 repository root. It reads `data/raw/`, writes `data/`, and prints a summary
 of what it produced.
 

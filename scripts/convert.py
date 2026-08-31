@@ -4,14 +4,14 @@
 Inputs  (data/raw/): one KML per route layer (C1.kml ... CW.kml) + poi_*.gpx (per-category POIs)
 Outputs (data/):     routes_<code>.geojson + poi_<category>.geojson + manifest.json
 
-Requires: shapely. Re-run any time the source files update.
+Requires: shapely, pyproj. Re-run any time the source files update.
 """
 import json
-import math
 import pathlib
 import re
 import xml.etree.ElementTree as ET
 
+from pyproj import Geod, Transformer
 from shapely.geometry import LineString, Point, shape
 from shapely.ops import transform
 from shapely.strtree import STRtree
@@ -98,42 +98,51 @@ def kml_tracks(path):
             yield name, coords
 
 
-# Distance work happens in a km-scaled space: lat degrees x 111.32, lon degrees
-# additionally squeezed by cos(lat), so plain euclidean distance ~ km.
-KM_PER_DEG = 111.32
+# Two proper geodesy tools replace the old home-made "km space" (which sheared
+# north-south distances badly — see the git history for the gory details):
+#  - planar work (nearness tests, province clipping) happens in the Statistics
+#    Canada Lambert projection (EPSG:3347, metres), the standard for
+#    Canada-wide maps;
+#  - lengths and bearings come from pyproj's Geod, i.e. true distance over the
+#    Earth's surface, so the reported km match what a bike computer would say.
+GEOD = Geod(ellps="WGS84")
+TO_M = Transformer.from_crs("EPSG:4326", "EPSG:3347", always_xy=True)
+TO_DEG = Transformer.from_crs("EPSG:3347", "EPSG:4326", always_xy=True)
 
 
-def km_scaled(coords):
-    return [(x * KM_PER_DEG * math.cos(math.radians(y)), y * KM_PER_DEG)
-            for x, y in coords]
+def projected(coords):
+    """[(lon, lat), ...] -> [(x, y), ...] in metres (Lambert)."""
+    xs, ys = TO_M.transform([c[0] for c in coords], [c[1] for c in coords])
+    return list(zip(xs, ys))
+
+
+def to_deg(coords):
+    """Inverse of projected(), back to rounded [lon, lat] pairs."""
+    lons, lats = TO_DEG.transform([c[0] for c in coords], [c[1] for c in coords])
+    return [[round(x, PRECISION), round(y, PRECISION)] for x, y in zip(lons, lats)]
+
+
+def geod_km(coords):
+    """True length of a [lon, lat] line in km, measured on the ellipsoid."""
+    return GEOD.line_length([c[0] for c in coords], [c[1] for c in coords]) / 1000
 
 
 def load_provinces():
-    """Provincial boundaries (Natural Earth, public domain), buffered in km space.
-    Returns [(code, name, buffered_polygon), ...] in west-to-east order."""
+    """Provincial boundaries (Natural Earth, public domain), buffered in the
+    Lambert plane. Returns [(code, name, buffered_polygon), ...] west to east."""
     gj = json.loads((ROOT / "scripts" / "provinces_canada.geojson").read_text())
-    to_km = lambda x, y, z=None: (x * KM_PER_DEG * math.cos(math.radians(y)),
-                                  y * KM_PER_DEG)
     by_code = {}
     for f in gj["features"]:
-        # segmentize first: the km-space transform bows long straight edges
-        # (e.g. the AB/SK border meridian) by tens of km if left sparse
-        poly = transform(to_km, shape(f["geometry"]).segmentize(0.1)).buffer(PROV_BUFFER_KM)
+        # segmentize first: long straight edges along *parallels* (e.g. the
+        # 49th) still curve slightly when projected, so add vertices before
+        # transforming rather than let a sparse edge cut a corner
+        poly = transform(TO_M.transform,
+                         shape(f["geometry"]).segmentize(0.1)).buffer(PROV_BUFFER_KM * 1000)
         by_code[f["properties"]["code"]] = (f["properties"]["name"], poly)
     return [(c, *by_code[c]) for c in PROV_ORDER if c in by_code]
 
 
-def km_to_deg(coords):
-    """Inverse of km_scaled, back to rounded [lon, lat] pairs."""
-    out = []
-    for x, y in coords:
-        lat = y / KM_PER_DEG
-        lon = x / (KM_PER_DEG * math.cos(math.radians(lat)))
-        out.append([round(lon, PRECISION), round(lat, PRECISION)])
-    return out
-
-
-def split_by_province(line_km, provs, provinces):
+def split_by_province(line_m, provs, provinces):
     """Cut a line that crosses provincial borders into one piece per province,
     so picking one province never draws the line's tail in the neighbour.
     Returns [(prov_code, [lon, lat] coords), ...]. Pieces from adjacent
@@ -142,21 +151,21 @@ def split_by_province(line_km, provs, provinces):
     for pc, _, poly in provinces:
         if pc not in provs:
             continue
-        inter = line_km.intersection(poly)
+        inter = line_m.intersection(poly)
         parts = inter.geoms if hasattr(inter, "geoms") else [inter]
         for part in parts:
-            if isinstance(part, LineString) and part.length >= 0.1:  # km
-                pieces.append((pc, km_to_deg(part.coords)))
+            if isinstance(part, LineString) and part.length >= 100:  # metres
+                pieces.append((pc, to_deg(part.coords)))
     return pieces
 
 
-def prov_tags(geom_km, provinces):
-    """Province codes a geometry (in km space) touches; if the simplified
-    coastline misses it (Tofino, mid-water ferry points, Cape Spear...),
-    fall back to the nearest province so nothing is ever left unassigned."""
-    codes = [pc for pc, _, poly in provinces if geom_km.intersects(poly)]
+def prov_tags(geom_m, provinces):
+    """Province codes a geometry (in the Lambert plane) touches; if the
+    simplified coastline misses it (Tofino, mid-water ferry points, Cape
+    Spear...), fall back to the nearest province so nothing is unassigned."""
+    codes = [pc for pc, _, poly in provinces if geom_m.intersects(poly)]
     if not codes:
-        codes = [min(provinces, key=lambda p: geom_km.distance(p[2]))[0]]
+        codes = [min(provinces, key=lambda p: geom_m.distance(p[2]))[0]]
     return codes
 
 
@@ -178,15 +187,15 @@ PAIR_NEAR_KM = 0.3   # "runs alongside" distance for counterpart detection
 PAIR_COVER = 0.6     # fraction of a track that must run alongside a counterpart
 
 
-def has_counterpart(line_km, opposite_tree):
+def has_counterpart(line_m, opposite_tree):
     """True if most of this track runs close alongside some opposite-direction
     track (sampled every ~1 km along the line)."""
     if opposite_tree is None:
         return False
-    pts = [Point(c) for c in line_km.segmentize(1.0).coords]
+    pts = [Point(c) for c in line_m.segmentize(1000).coords]
     near = sum(1 for p in pts
                if p.distance(opposite_tree.geometries[opposite_tree.nearest(p)])
-               <= PAIR_NEAR_KM)
+               <= PAIR_NEAR_KM * 1000)
     return near / len(pts) >= PAIR_COVER
 
 
@@ -204,9 +213,9 @@ def convert_routes(provinces):
         for fname, coords in kml_tracks(src):
             line = LineString(coords)
             simp = line.simplify(SIMPLIFY_TOLERANCE, preserve_topology=False)
-            line_km = LineString(km_scaled(simp.coords))
-            geoms.setdefault(code, []).append(line_km)
-            tracks.append((fname, track_dir(fname), simp, line_km))
+            line_m = LineString(projected(simp.coords))
+            geoms.setdefault(code, []).append(line_m)
+            tracks.append((fname, track_dir(fname), simp, line_m))
         # pass 2: a directional track keeps its tag (= hides in the opposite
         # view) only if the opposite direction has a counterpart alongside
         by_dir = {"E": [t[3] for t in tracks if t[1] == "E"],
@@ -215,11 +224,11 @@ def convert_routes(provinces):
         demoted = 0
         feats = []
         layer_km = 0.0
-        for fname, d, simp, line_km in tracks:
-            if d and not has_counterpart(line_km, trees["W" if d == "E" else "E"]):
+        for fname, d, simp, line_m in tracks:
+            if d and not has_counterpart(line_m, trees["W" if d == "E" else "E"]):
                 d = None  # no alternative for the other direction: show both ways
                 demoted += 1
-            provs = prov_tags(line_km, provinces)
+            provs = prov_tags(line_m, provinces)
             used_provs.update(provs)
             def props(pv, km):
                 p = {"name": fname, "provs": pv, "km": round(km, 1)}
@@ -227,8 +236,8 @@ def convert_routes(provinces):
                     p["dir"] = d
                 return p
             if len(provs) > 1:
-                for pc, coords in split_by_province(line_km, provs, provinces):
-                    piece_km = LineString(km_scaled(coords)).length
+                for pc, coords in split_by_province(line_m, provs, provinces):
+                    piece_km = geod_km(coords)
                     layer_km += piece_km
                     feats.append({
                         "type": "Feature",
@@ -236,10 +245,11 @@ def convert_routes(provinces):
                         "geometry": {"type": "LineString", "coordinates": coords},
                     })
             else:
-                layer_km += line_km.length
+                track_km = geod_km(simp.coords)
+                layer_km += track_km
                 feats.append({
                     "type": "Feature",
-                    "properties": props(provs, line_km.length),
+                    "properties": props(provs, track_km),
                     "geometry": {"type": "LineString",
                                  "coordinates": rounded(simp.coords)},
                 })
@@ -254,6 +264,40 @@ def convert_routes(provinces):
 
 ARROW_OPPOSITE = {"EB": "WB", "WB": "EB", "NB": "SB", "SB": "NB"}
 ARROW_PAIR_KM = 5  # a couplet's two one-way halves sit within this of each other
+ARROW_EVERY_KM = 3  # arrowhead spacing along long segments; short ones get one
+
+
+def end_to_end_bearing(coords):
+    """Compass bearing from a [lon, lat] line's first point to its last."""
+    az, _, _ = GEOD.inv(coords[0][0], coords[0][1], coords[-1][0], coords[-1][1])
+    return az % 360
+
+
+def arrow_points(coords):
+    """Arrowhead positions + local bearings every ARROW_EVERY_KM along a
+    [lon, lat] line, centred so a lone arrow lands mid-segment. Precomputed
+    here so index.html just draws them — no geometry math in the browser.
+    Returns [[lat, lon, bearing], ...] (bearing in whole compass degrees)."""
+    lons = [c[0] for c in coords]
+    lats = [c[1] for c in coords]
+    az, _, dist = GEOD.inv(lons[:-1], lats[:-1], lons[1:], lats[1:])
+    cum = [0.0]
+    for d in dist:
+        cum.append(cum[-1] + d)
+    total = cum[-1]
+    if not total:
+        return []
+    pts = []
+    n = max(1, int(total // (ARROW_EVERY_KM * 1000)))
+    for k in range(n):
+        target = total * (k + 0.5) / n
+        i = 1
+        while i < len(cum) - 1 and cum[i] < target:
+            i += 1
+        lon, lat, _ = GEOD.fwd(lons[i - 1], lats[i - 1], az[i - 1], target - cum[i - 1])
+        pts.append([round(lat, PRECISION), round(lon, PRECISION),
+                    round(az[i - 1] % 360)])
+    return pts
 
 
 def arrow_pair_check(tracks):
@@ -264,19 +308,18 @@ def arrow_pair_check(tracks):
     opposite-tagged sibling on the same parent route; segments with no nearby
     counterpart are left alone (nothing to compare against)."""
     tagged = []
-    for fname, parent, line_km in tracks:
+    for fname, parent, line_m, simp in tracks:
         m = re.search(r"\b(EB|WB|NB|SB)\b", fname)
         if m:
-            (x0, y0), (x1, y1) = line_km.coords[0], line_km.coords[-1]
-            bearing = math.degrees(math.atan2(x1 - x0, y1 - y0)) % 360
-            tagged.append((fname, parent, m.group(1), line_km, bearing))
-    for fname, parent, tag, line_km, bearing in tagged:
+            tagged.append((fname, parent, m.group(1), line_m,
+                           end_to_end_bearing(list(simp.coords))))
+    for fname, parent, tag, line_m, bearing in tagged:
         partners = [t for t in tagged
                     if t[1] == parent and t[2] == ARROW_OPPOSITE[tag]
-                    and line_km.distance(t[3]) <= ARROW_PAIR_KM]
+                    and line_m.distance(t[3]) <= ARROW_PAIR_KM * 1000]
         if not partners:
             continue
-        other = min(partners, key=lambda t: line_km.distance(t[3]))
+        other = min(partners, key=lambda t: line_m.distance(t[3]))
         apart = abs((bearing - other[4] + 180) % 360 - 180)
         if apart < 90:  # pointing the same way instead of opposite
             print(f"  arrows: CHECK DIRECTION — {fname!r} and {other[0]!r} are an "
@@ -297,22 +340,23 @@ def convert_arrows(provinces):
     tracks = []
     for fname, coords in kml_tracks(src):
         simp = LineString(coords).simplify(SIMPLIFY_TOLERANCE, preserve_topology=False)
-        line_km = LineString(km_scaled(simp.coords))
+        line_m = LineString(projected(simp.coords))
         m = ARROW_PARENT_RE.match(fname)
         parent = m.group(1) if m else None
         if parent not in ROUTE_LAYERS:
             print(f"  arrows: no route code found in name, arrow will be grey: {fname!r}")
             parent = None
-        tracks.append((fname, parent, line_km, simp))
-    arrow_pair_check([(f, p, lk) for f, p, lk, _ in tracks])
+        tracks.append((fname, parent, line_m, simp))
+    arrow_pair_check(tracks)
     feats = []
-    for fname, parent, line_km, simp in tracks:
-        provs = prov_tags(line_km, provinces)
-        pieces = (split_by_province(line_km, provs, provinces) if len(provs) > 1
+    for fname, parent, line_m, simp in tracks:
+        provs = prov_tags(line_m, provinces)
+        pieces = (split_by_province(line_m, provs, provinces) if len(provs) > 1
                   else [(provs[0], rounded(simp.coords))])
         for pc, pcoords in pieces:
             props = {"name": fname, "provs": [pc],
-                     "km": round(LineString(km_scaled(pcoords)).length, 1)}
+                     "km": round(geod_km(pcoords), 1),
+                     "arrows": arrow_points(pcoords)}
             if parent:
                 props["route"] = parent
             feats.append({
@@ -335,12 +379,12 @@ def route_tagger(route_geoms):
     trees = {code: (STRtree(lines), lines) for code, lines in route_geoms.items()}
 
     def tags(lon, lat):
-        p = Point(lon * KM_PER_DEG * math.cos(math.radians(lat)), lat * KM_PER_DEG)
+        p = Point(*TO_M.transform(lon, lat))
         out = []
         for code, (tree, lines) in trees.items():
             near = tree.nearest(p)
             seg = near if isinstance(near, LineString) else lines[near]
-            if seg is not None and seg.distance(p) <= ROUTE_TAG_KM:
+            if seg is not None and seg.distance(p) <= ROUTE_TAG_KM * 1000:
                 out.append(code)
         return out
 
@@ -371,10 +415,9 @@ def convert_pois(route_geoms, provinces):
                 desc = desc[:600] + "…"
             lon = round(float(wpt.get("lon")), PRECISION)
             lat = round(float(wpt.get("lat")), PRECISION)
-            p_km = Point(lon * KM_PER_DEG * math.cos(math.radians(lat)),
-                         lat * KM_PER_DEG)
+            p_m = Point(*TO_M.transform(lon, lat))
             props = {"name": name, "routes": tags_for(lon, lat),
-                     "provs": prov_tags(p_km, provinces)}
+                     "provs": prov_tags(p_m, provinces)}
             if desc:
                 props["desc"] = desc
             if sym:

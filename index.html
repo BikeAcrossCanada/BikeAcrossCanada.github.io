@@ -223,7 +223,6 @@ function buildPoiLayer(entry) {
 // parent route is ticked. Not a route layer: no sidebar row, no GPX export.
 // The direction dropdown deliberately never hides these — "this bit is
 // one-way" is a warning you want in both viewing directions.
-const ARROW_EVERY_KM = 3;  // spacing along long segments; short ones get one at the midpoint
 const ARROW_MIN_ZOOM = 10; // below this the clusters read as specks, not direction cues
 const arrowState = { gj: null, layer: null, colors: {} };
 
@@ -245,37 +244,6 @@ function arrowSize() {
   return Math.round(9 + 13 * (z - ARROW_MIN_ZOOM) / (16 - ARROW_MIN_ZOOM));
 }
 
-// Positions + local bearings every ARROW_EVERY_KM along a [lon,lat] line,
-// centred so the arrows sit symmetrically (a lone arrow lands mid-segment).
-// Bearings scale the longitude DELTA by cos(lat) — scaling absolute
-// longitudes point-by-point shears the angle badly (lon is a big number).
-function arrowPoints(coords) {
-  const KM = 111.32, pts = [];
-  const seg = [];  // per-chord [dx km, dy km]
-  const cum = [0];
-  for (let i = 1; i < coords.length; i++) {
-    const midlat = (coords[i][1] + coords[i - 1][1]) / 2 * Math.PI / 180;
-    const dx = (coords[i][0] - coords[i - 1][0]) * KM * Math.cos(midlat);
-    const dy = (coords[i][1] - coords[i - 1][1]) * KM;
-    seg.push([dx, dy]);
-    cum.push(cum[i - 1] + Math.hypot(dx, dy));
-  }
-  const total = cum[cum.length - 1];
-  if (!total) return pts;
-  const n = Math.max(1, Math.floor(total / ARROW_EVERY_KM));
-  for (let k = 0; k < n; k++) {
-    const target = total * (k + 0.5) / n;
-    let i = 1;
-    while (i < cum.length - 1 && cum[i] < target) i++;
-    const f = (target - cum[i - 1]) / (cum[i] - cum[i - 1] || 1);
-    const lon = coords[i - 1][0] + f * (coords[i][0] - coords[i - 1][0]);
-    const lat = coords[i - 1][1] + f * (coords[i][1] - coords[i - 1][1]);
-    const bearing = Math.atan2(seg[i - 1][0], seg[i - 1][1]) * 180 / Math.PI;
-    pts.push({ lat, lon, bearing: (bearing + 360) % 360 });
-  }
-  return pts;
-}
-
 function buildArrowLayer() {
   const group = L.layerGroup();
   if (!arrowState.gj) return group;
@@ -287,8 +255,11 @@ function buildArrowLayer() {
     if (!provOk(p)) continue;
     if (p.route && !rs.has(p.route)) continue;  // arrows follow their parent route's tickbox
     const color = arrowState.colors[p.route] || '#666';
-    for (const a of arrowPoints(f.geometry.coordinates))
-      cand.push({ a, color, name: p.name, px: map.latLngToLayerPoint([a.lat, a.lon]) });
+    // positions + bearings are precomputed by convert.py ([lat, lon, bearing]
+    // every ~3 km, centred) so the browser does no geometry math of its own
+    for (const [lat, lon, bearing] of (p.arrows || []))
+      cand.push({ a: { lat, lon, bearing }, color, name: p.name,
+                  px: map.latLngToLayerPoint([lat, lon]) });
   }
   // A one-way couplet's two arrows tangle into a squiggle when the paired
   // streets sit closer on screen than the arrows are wide. Showing only one
