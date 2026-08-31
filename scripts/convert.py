@@ -13,7 +13,7 @@ import xml.etree.ElementTree as ET
 
 from pyproj import Geod, Transformer
 from shapely.geometry import LineString, Point, shape
-from shapely.ops import transform
+from shapely.ops import transform, unary_union
 from shapely.strtree import STRtree
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -146,16 +146,28 @@ def split_by_province(line_m, provs, provinces):
     """Cut a line that crosses provincial borders into one piece per province,
     so picking one province never draws the line's tail in the neighbour.
     Returns [(prov_code, [lon, lat] coords), ...]. Pieces from adjacent
-    provinces overlap by ~PROV_BUFFER_KM at the border, so no visible gap."""
+    provinces overlap by ~PROV_BUFFER_KM at the border, so no visible gap.
+
+    Any stretch that falls outside every provincial polygon is kept too and
+    assigned to the nearest province. The Natural Earth outlines are coarse,
+    so a shoreline path or an open-water ferry crossing can sit "in the sea"
+    by their reckoning — the old intersect-only version silently dropped
+    ~590 km of such geometry (the C2 lakeshore through Montréal's West
+    Island, most of the North Sydney-Argentia ferry line)."""
     pieces = []
-    for pc, _, poly in provinces:
-        if pc not in provs:
-            continue
+    keep = [(pc, poly) for pc, _, poly in provinces if pc in provs]
+    for pc, poly in keep:
         inter = line_m.intersection(poly)
         parts = inter.geoms if hasattr(inter, "geoms") else [inter]
         for part in parts:
             if isinstance(part, LineString) and part.length >= 100:  # metres
                 pieces.append((pc, to_deg(part.coords)))
+    leftover = line_m.difference(unary_union([poly for _, poly in keep]))
+    parts = leftover.geoms if hasattr(leftover, "geoms") else [leftover]
+    for part in parts:
+        if isinstance(part, LineString) and part.length >= 100:
+            pc = min(keep, key=lambda kp: part.distance(kp[1]))[0]
+            pieces.append((pc, to_deg(part.coords)))
     return pieces
 
 
