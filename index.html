@@ -22,6 +22,8 @@
   #map { top:44px; }
   .emoji-pin { background:none; border:none; font-size:18px; line-height:20px;
     text-align:center; text-shadow:0 1px 2px rgba(255,255,255,.95), 0 0 3px #fff; }
+  .arrow-pin { background:none; border:none; }
+  .arrow-pin svg { display:block; }
   /* sidebar */
   #sidebar {
     position:absolute; top:44px; right:0; bottom:0; z-index:999; width:280px;
@@ -213,6 +215,111 @@ function buildPoiLayer(entry) {
   return layer;
 }
 
+// ---- One-way direction arrows ----
+// Sam's One-way_Direction_Arrows layer in My Maps: segments drawn in the
+// direction of travel wherever the route is one-way and it isn't obvious.
+// Rendered as arrowheads only (the route line itself is already on the map
+// from the parent layer), in the parent route's colour, visible whenever the
+// parent route is ticked. Not a route layer: no sidebar row, no GPX export.
+// The direction dropdown deliberately never hides these — "this bit is
+// one-way" is a warning you want in both viewing directions.
+const ARROW_EVERY_KM = 3;  // spacing along long segments; short ones get one at the midpoint
+const ARROW_MIN_ZOOM = 10; // below this the clusters read as specks, not direction cues
+const arrowState = { gj: null, layer: null, colors: {} };
+
+function arrowIcon(bearing, color, size) {
+  // an inline chevron (>) sitting on the route line, white casing for contrast;
+  // size scales with zoom so mid-zoom arrows don't dwarf the route lines
+  return L.divIcon({ className: 'arrow-pin', iconSize: [size, size],
+    iconAnchor: [size / 2, size / 2],
+    html: '<svg width="' + size + '" height="' + size + '" viewBox="0 0 22 22" ' +
+          'style="transform:rotate(' + bearing.toFixed(0) +
+          'deg)" fill="none" stroke-linecap="round" stroke-linejoin="round">' +
+          '<path d="M5 15 L11 6 L17 15" stroke="#fff" stroke-width="7.5"/>' +
+          '<path d="M5 15 L11 6 L17 15" stroke="' + color + '" stroke-width="3.5"/></svg>' });
+}
+
+function arrowSize() {
+  // 9px at the min zoom, growing to 22px by zoom 16
+  const z = Math.max(ARROW_MIN_ZOOM, Math.min(16, map.getZoom()));
+  return Math.round(9 + 13 * (z - ARROW_MIN_ZOOM) / (16 - ARROW_MIN_ZOOM));
+}
+
+// Positions + local bearings every ARROW_EVERY_KM along a [lon,lat] line,
+// centred so the arrows sit symmetrically (a lone arrow lands mid-segment).
+// Bearings scale the longitude DELTA by cos(lat) — scaling absolute
+// longitudes point-by-point shears the angle badly (lon is a big number).
+function arrowPoints(coords) {
+  const KM = 111.32, pts = [];
+  const seg = [];  // per-chord [dx km, dy km]
+  const cum = [0];
+  for (let i = 1; i < coords.length; i++) {
+    const midlat = (coords[i][1] + coords[i - 1][1]) / 2 * Math.PI / 180;
+    const dx = (coords[i][0] - coords[i - 1][0]) * KM * Math.cos(midlat);
+    const dy = (coords[i][1] - coords[i - 1][1]) * KM;
+    seg.push([dx, dy]);
+    cum.push(cum[i - 1] + Math.hypot(dx, dy));
+  }
+  const total = cum[cum.length - 1];
+  if (!total) return pts;
+  const n = Math.max(1, Math.floor(total / ARROW_EVERY_KM));
+  for (let k = 0; k < n; k++) {
+    const target = total * (k + 0.5) / n;
+    let i = 1;
+    while (i < cum.length - 1 && cum[i] < target) i++;
+    const f = (target - cum[i - 1]) / (cum[i] - cum[i - 1] || 1);
+    const lon = coords[i - 1][0] + f * (coords[i][0] - coords[i - 1][0]);
+    const lat = coords[i - 1][1] + f * (coords[i][1] - coords[i - 1][1]);
+    const bearing = Math.atan2(seg[i - 1][0], seg[i - 1][1]) * 180 / Math.PI;
+    pts.push({ lat, lon, bearing: (bearing + 360) % 360 });
+  }
+  return pts;
+}
+
+function buildArrowLayer() {
+  const group = L.layerGroup();
+  if (!arrowState.gj) return group;
+  const rs = checkedRouteCodes();
+  const size = arrowSize();
+  const cand = [];
+  for (const f of arrowState.gj.features) {
+    const p = f.properties;
+    if (!provOk(p)) continue;
+    if (p.route && !rs.has(p.route)) continue;  // arrows follow their parent route's tickbox
+    const color = arrowState.colors[p.route] || '#666';
+    for (const a of arrowPoints(f.geometry.coordinates))
+      cand.push({ a, color, name: p.name, px: map.latLngToLayerPoint([a.lat, a.lon]) });
+  }
+  // A one-way couplet's two arrows tangle into a squiggle when the paired
+  // streets sit closer on screen than the arrows are wide. Showing only one
+  // of the pair would mislead, so hide both until the zoom separates them.
+  const hidden = new Set();
+  for (let i = 0; i < cand.length; i++)
+    for (let j = i + 1; j < cand.length; j++) {
+      if (Math.abs(cand[i].px.x - cand[j].px.x) > size * 1.3 ||
+          Math.abs(cand[i].px.y - cand[j].px.y) > size * 1.3) continue;
+      const apart = Math.abs((cand[i].a.bearing - cand[j].a.bearing + 180) % 360 - 180);
+      if (apart > 120) { hidden.add(i); hidden.add(j); }
+    }
+  cand.forEach((c, i) => {
+    if (hidden.has(i)) return;
+    L.marker([c.a.lat, c.a.lon], { icon: arrowIcon(c.a.bearing, c.color, size), interactive: true })
+      .bindTooltip(esc(c.name || 'One-way'), { direction: 'top' })
+      .addTo(group);
+  });
+  return group;
+}
+
+function refreshArrows() {
+  if (arrowState.layer) { map.removeLayer(arrowState.layer); arrowState.layer = null; }
+  if (map.getZoom() < ARROW_MIN_ZOOM) return;
+  arrowState.layer = buildArrowLayer().addTo(map);
+}
+map.on('zoomend', () => {
+  // rebuild every zoom step: visibility threshold + zoom-scaled arrow size
+  if (arrowState.gj) refreshArrows();
+});
+
 // Rebuild loaded layers of one kind against the current selections.
 function refreshLayers(kind) {
   for (const e of layerRegistry) {
@@ -228,6 +335,7 @@ function refreshPois() { refreshLayers('poi'); }
 provSelect.addEventListener('change', () => {
   refreshLayers('route');
   refreshLayers('poi');
+  refreshArrows();
 });
 dirSelect.addEventListener('change', () => refreshLayers('route'));
 
@@ -248,7 +356,7 @@ function addCheckbox(container, entry, labelHtml, count, checked, load) {
     cb.disabled = false;
     cb.addEventListener('change', () => {
       cb.checked ? entry.layer.addTo(map) : map.removeLayer(entry.layer);
-      if (entry.kind === 'route') refreshPois();
+      if (entry.kind === 'route') { refreshPois(); refreshArrows(); }
     });
     if (cb.checked) entry.layer.addTo(map);
   });
@@ -284,6 +392,14 @@ fetch('data/manifest.json').then(r => r.json()).then(manifest => {
         entry.layer = buildPoiLayer(entry);
       }));
   });
+  // one-way arrowheads, drawn on top of whichever parent routes are ticked
+  if (manifest.arrows) {
+    manifest.routes.forEach(rt => { arrowState.colors[rt.code] = rt.color; });
+    fetch('data/' + manifest.arrows.file).then(r => r.json()).then(gj => {
+      arrowState.gj = gj;
+      refreshArrows();
+    });
+  }
   updateDlButton();
 });
 

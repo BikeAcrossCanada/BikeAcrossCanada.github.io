@@ -29,8 +29,15 @@ ROUTE_LAYERS = {
     "CA": {"color": "#787878", "weight": 2.5, "title": "CA — Access routes"},
     "CL": {"color": "#3d85c8", "weight": 3, "title": "CL — Local connectors"},
     "CW": {"color": "#1a0067", "weight": 3, "title": "CW — Ferry crossings (dashed)", "dash": "6 6"},
-    "One-way_Direction_Arrows": {"color": "#1a0067", "weight": 3, "title": "One-way Direction Arrows", "arrow": "6 6"},
 }
+
+# Sam's one-way layer: segments (drawn in the direction of travel) that mark
+# stretches where the route is one-way and the direction isn't obvious.
+# Processed separately from ROUTE_LAYERS — the map renders these as arrowheads
+# on top of the parent route's own line, not as a route layer of their own,
+# so they get no sidebar row, no line style, and no GPX export.
+ARROW_LAYER = "One-way_Direction_Arrows"
+ARROW_PARENT_RE = re.compile(r"^\[(\w+)")  # "[C1 EB] One-way - ..." -> "C1"
 
 POI_LAYERS = {  # gpx stem -> (emoji, display name)
     "Approved_Accommodations": ("🌟", "Approved Accommodations"),
@@ -245,6 +252,81 @@ def convert_routes(provinces):
     return sizes, geoms, used_provs
 
 
+ARROW_OPPOSITE = {"EB": "WB", "WB": "EB", "NB": "SB", "SB": "NB"}
+ARROW_PAIR_KM = 5  # a couplet's two one-way halves sit within this of each other
+
+
+def arrow_pair_check(tracks):
+    """A one-way couplet (an EB and a WB variant of the same stretch) must be
+    drawn pointing roughly opposite ways — same-direction drawn bearings mean
+    one of the pair was traced against the direction of travel, which would
+    render a wrong arrow. Checks each tagged segment against the nearest
+    opposite-tagged sibling on the same parent route; segments with no nearby
+    counterpart are left alone (nothing to compare against)."""
+    tagged = []
+    for fname, parent, line_km in tracks:
+        m = re.search(r"\b(EB|WB|NB|SB)\b", fname)
+        if m:
+            (x0, y0), (x1, y1) = line_km.coords[0], line_km.coords[-1]
+            bearing = math.degrees(math.atan2(x1 - x0, y1 - y0)) % 360
+            tagged.append((fname, parent, m.group(1), line_km, bearing))
+    for fname, parent, tag, line_km, bearing in tagged:
+        partners = [t for t in tagged
+                    if t[1] == parent and t[2] == ARROW_OPPOSITE[tag]
+                    and line_km.distance(t[3]) <= ARROW_PAIR_KM]
+        if not partners:
+            continue
+        other = min(partners, key=lambda t: line_km.distance(t[3]))
+        apart = abs((bearing - other[4] + 180) % 360 - 180)
+        if apart < 90:  # pointing the same way instead of opposite
+            print(f"  arrows: CHECK DIRECTION — {fname!r} and {other[0]!r} are an "
+                  f"{tag}/{other[2]} pair but are drawn pointing the same way "
+                  f"({bearing:.0f}° / {other[4]:.0f}°); one may be traced backwards")
+
+
+def convert_arrows(provinces):
+    """One-way layer -> arrowhead segments tagged with their parent route.
+
+    Same province handling as the route layers, but no direction demotion
+    (every segment here is genuinely one-way — that's the layer's point) and
+    the geometry stays out of the POI route-tagging pool."""
+    src = RAW / f"{ARROW_LAYER}.kml"
+    if not src.exists():
+        print(f"WARNING: {src.name} missing, skipping arrows layer")
+        return None
+    tracks = []
+    for fname, coords in kml_tracks(src):
+        simp = LineString(coords).simplify(SIMPLIFY_TOLERANCE, preserve_topology=False)
+        line_km = LineString(km_scaled(simp.coords))
+        m = ARROW_PARENT_RE.match(fname)
+        parent = m.group(1) if m else None
+        if parent not in ROUTE_LAYERS:
+            print(f"  arrows: no route code found in name, arrow will be grey: {fname!r}")
+            parent = None
+        tracks.append((fname, parent, line_km, simp))
+    arrow_pair_check([(f, p, lk) for f, p, lk, _ in tracks])
+    feats = []
+    for fname, parent, line_km, simp in tracks:
+        provs = prov_tags(line_km, provinces)
+        pieces = (split_by_province(line_km, provs, provinces) if len(provs) > 1
+                  else [(provs[0], rounded(simp.coords))])
+        for pc, pcoords in pieces:
+            props = {"name": fname, "provs": [pc],
+                     "km": round(LineString(km_scaled(pcoords)).length, 1)}
+            if parent:
+                props["route"] = parent
+            feats.append({
+                "type": "Feature",
+                "properties": props,
+                "geometry": {"type": "LineString", "coordinates": pcoords},
+            })
+    out_path = OUT / f"routes_{ARROW_LAYER}.geojson"
+    out_path.write_text(json.dumps({"type": "FeatureCollection", "features": feats},
+                                   separators=(",", ":")))
+    print(f"routes_{ARROW_LAYER}: {len(feats)} one-way segments")
+    return {"file": f"routes_{ARROW_LAYER}.geojson", "count": len(feats)}
+
+
 GPX_NS = {"g": "http://www.topografix.com/GPX/1/1"}
 
 
@@ -313,6 +395,7 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     provinces = load_provinces()
     route_sizes, route_geoms, used_provs = convert_routes(provinces)
+    arrows = convert_arrows(provinces)
     poi_sizes = convert_pois(route_geoms, provinces)
     manifest = {
         "routes": [{"code": c, **ROUTE_LAYERS[c], "count": route_sizes[c][0],
@@ -324,6 +407,8 @@ def main():
         "provinces": [{"code": pc, "name": pn} for pc, pn, _ in provinces
                       if pc in used_provs],
     }
+    if arrows:
+        manifest["arrows"] = arrows
     (OUT / "manifest.json").write_text(json.dumps(manifest, indent=1))
     total = sum(s[1] for s in route_sizes.values()) + sum(s for _, s in poi_sizes.values())
     for c, (n, s, _) in route_sizes.items():
