@@ -166,7 +166,11 @@ def split_by_province(line_m, provs, provinces):
     parts = leftover.geoms if hasattr(leftover, "geoms") else [leftover]
     for part in parts:
         if isinstance(part, LineString) and part.length >= 100:
-            pc = min(keep, key=lambda kp: part.distance(kp[1]))[0]
+            # nearest province, with distances bucketed to 100 m and ties
+            # broken by the fixed west-to-east order — a mid-strait ferry
+            # piece can sit near-equidistant between two provinces, and an
+            # exact float comparison made local and CI rebuilds disagree
+            pc = min(keep, key=lambda kp: round(part.distance(kp[1]) / 100))[0]
             pieces.append((pc, to_deg(part.coords)))
     return pieces
 
@@ -236,26 +240,18 @@ def convert_routes(provinces):
         demoted = 0
         feats = []
         layer_km = 0.0
-        chain = []  # (x, y, leftover) where processed tracks ended, for shield carry
-        for fname, d, simp, line_m in tracks:
+        # Repeating shield markers along the line, highway-sign style;
+        # index.html draws them, the GPX export never sees them. Placed over
+        # whole tracks (so provincial splits don't reset the count), rhythm
+        # carried through tip-to-tail chains regardless of file order.
+        track_shields_all = chain_shields(tracks)
+        for ti, (fname, d, simp, line_m) in enumerate(tracks):
             if d and not has_counterpart(line_m, trees["W" if d == "E" else "E"]):
                 d = None  # no alternative for the other direction: show both ways
                 demoted += 1
             provs = prov_tags(line_m, provinces)
             used_provs.update(provs)
-            # Repeating shield markers along the line, highway-sign style;
-            # index.html draws them, the GPX export never sees them. Placed
-            # over the whole track (so provincial splits don't reset the
-            # count); a track starting within 1 km of where an earlier one
-            # ended continues that chain's 25 km rhythm, while standalone
-            # short connectors restart and still get their own shield.
-            sx, sy = line_m.coords[0]
-            ex, ey = line_m.coords[-1]
-            carry = next((c for x, y, c in chain
-                          if (x - sx) ** 2 + (y - sy) ** 2 <= 1000 ** 2),
-                         SHIELD_EVERY_KM * 1000 / 2)
-            track_shields, leftover = shield_points(rounded(simp.coords), carry)
-            chain.append((ex, ey, leftover))
+            track_shields = track_shields_all[ti]
             def props(pv, km, sh):
                 p = {"name": fname, "provs": pv, "km": round(km, 1)}
                 if d:
@@ -365,6 +361,45 @@ def shield_points(coords, carry):
         targets.append(d)
         d += step
     return ([[lat, lon] for lat, lon, _ in points_at(m, targets)], d - total)
+
+
+def chain_shields(tracks):
+    """Shield positions for every track of a layer, with the 25 km rhythm
+    carried through chains of tip-to-tail tracks. Sam's KML stores tracks
+    alphabetically, not in riding order, so the linking can't rely on file
+    order: first link each track's end to the track that starts within 1 km
+    of it (in the Lambert plane), then walk every chain from its head. A
+    track no chain reaches starts fresh, first shield half the spacing in.
+    tracks: [(fname, dir, simp, line_m), ...] -> list of shield lists."""
+    step = SHIELD_EVERY_KM * 1000
+    n = len(tracks)
+    starts = [t[3].coords[0] for t in tracks]
+    ends = [t[3].coords[-1] for t in tracks]
+    succ = {}
+    pred = {}
+    for i in range(n):
+        ex, ey = ends[i]
+        best, best_d2 = None, 1000.0 ** 2
+        for j in range(n):
+            if j == i or j in pred:
+                continue
+            d2 = (ex - starts[j][0]) ** 2 + (ey - starts[j][1]) ** 2
+            if d2 <= best_d2:
+                best, best_d2 = j, d2
+        if best is not None:
+            succ[i] = best
+            pred[best] = i
+    shields = [[] for _ in range(n)]
+    visited = set()
+    # chain heads first; the trailing full range catches any cycle members
+    for h in [i for i in range(n) if i not in pred] + list(range(n)):
+        carry = step / 2
+        i = h
+        while i is not None and i not in visited:
+            visited.add(i)
+            shields[i], carry = shield_points(rounded(tracks[i][2].coords), carry)
+            i = succ.get(i)
+    return shields
 
 
 def arrow_pair_check(tracks):
