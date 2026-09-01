@@ -24,6 +24,7 @@
     text-align:center; text-shadow:0 1px 2px rgba(255,255,255,.95), 0 0 3px #fff; }
   .arrow-pin { background:none; border:none; }
   .arrow-pin svg { display:block; }
+  .legend-shield { height:20px; width:auto; flex:none; }
   /* sidebar */
   #sidebar {
     position:absolute; top:44px; right:0; bottom:0; z-index:999; width:280px;
@@ -83,6 +84,8 @@
   </select>  
   <h2>Routes</h2>
   <div id="route-boxes"></div>
+  <label style="border-top:1px solid #eee;margin-top:4px;padding-top:5px">
+    <input type="checkbox" id="shield-toggle"> Route shields on the map</label>
   <h2>Along the way</h2>
   <label style="font-weight:600;border-bottom:1px solid #eee;padding-bottom:4px;margin-bottom:2px">
     <input type="checkbox" id="poi-all"> Check all / none</label>
@@ -286,9 +289,76 @@ function refreshArrows() {
   if (map.getZoom() < ARROW_MIN_ZOOM) return;
   arrowState.layer = buildArrowLayer().addTo(map);
 }
+
+// ---- Route shields ----
+// Sam's Trans Canada Bike Route shield logos (from his .odg master), repeated
+// along each route the way highway shields are, positions precomputed by
+// convert.py every ~25 km ("shields" in the route feature properties).
+// They follow the parent route's tickbox, the province and direction
+// dropdowns, and one master "Route shields" checkbox. Not in the GPX export.
+const SHIELD_MIN_ZOOM = 8;  // wider than this and a national route piles hundreds on screen
+const shieldToggle = document.getElementById('shield-toggle');
+const shieldState = { layer: null };
+
+function shieldSize() {
+  // height in px: 18 at the min zoom growing to 36 by zoom 14
+  const z = Math.max(SHIELD_MIN_ZOOM, Math.min(14, map.getZoom()));
+  return Math.round(18 + 18 * (z - SHIELD_MIN_ZOOM) / (14 - SHIELD_MIN_ZOOM));
+}
+
+function shieldIcon(code, h) {
+  const w = Math.round(h * 95 / 128);  // the PNGs are 95x128
+  return L.icon({ iconUrl: 'images/shields/shield_' + code + '.png',
+                  iconSize: [w, h], iconAnchor: [w / 2, h / 2] });
+}
+
+function buildShieldLayer() {
+  const group = L.layerGroup();
+  const h = shieldSize();
+  const minGap = h * 2.5;  // same-route shields closer than this on screen
+                           // collapse to one: Sam often drew parallel variant
+                           // tracks (a road route + a rail-trail alternate),
+                           // each with its own shields. 25 km neighbours sit
+                           // wider than this at every zoom, so the honest
+                           // rhythm is never thinned; zooming in separates
+                           // the variants and shows each one's badge again.
+  // One shield set per stretch of road: where Sam drew separate EB and WB
+  // tracks on the same highway, drawing both sets doubles the density with
+  // wobbly phases. The default and eastbound views use EB + two-way tracks;
+  // the westbound view uses WB + two-way.
+  const skipDir = dirSelect.value === 'W' ? 'E' : 'W';
+  for (const e of layerRegistry) {
+    if (e.kind !== 'route' || !e.gj || !e.cb || !e.cb.checked) continue;
+    const icon = shieldIcon(e.meta.code, h);
+    const kept = [];
+    for (const f of e.gj.features) {
+      const p = f.properties;
+      if (!provOk(p) || p.dir === skipDir) continue;
+      for (const [lat, lon] of (p.shields || [])) {
+        const px = map.latLngToLayerPoint([lat, lon]);
+        if (kept.some(k => Math.abs(k.x - px.x) < minGap &&
+                           Math.abs(k.y - px.y) < minGap)) continue;
+        kept.push(px);
+        L.marker([lat, lon], { icon })
+          .bindTooltip(esc(e.meta.title), { direction: 'top' })
+          .addTo(group);
+      }
+    }
+  }
+  return group;
+}
+
+function refreshShields() {
+  if (shieldState.layer) { map.removeLayer(shieldState.layer); shieldState.layer = null; }
+  if (!shieldToggle.checked || map.getZoom() < SHIELD_MIN_ZOOM) return;
+  shieldState.layer = buildShieldLayer().addTo(map);
+}
+shieldToggle.addEventListener('change', refreshShields);
+
 map.on('zoomend', () => {
-  // rebuild every zoom step: visibility threshold + zoom-scaled arrow size
+  // rebuild every zoom step: visibility threshold + zoom-scaled marker size
   if (arrowState.gj) refreshArrows();
+  refreshShields();
 });
 
 // Rebuild loaded layers of one kind against the current selections.
@@ -307,8 +377,9 @@ provSelect.addEventListener('change', () => {
   refreshLayers('route');
   refreshLayers('poi');
   refreshArrows();
+  refreshShields();
 });
-dirSelect.addEventListener('change', () => refreshLayers('route'));
+dirSelect.addEventListener('change', () => { refreshLayers('route'); refreshShields(); });
 
 // Create the row immediately (keeps sidebar in manifest order regardless of
 // fetch completion order); wire the layer in once its data arrives.
@@ -327,7 +398,7 @@ function addCheckbox(container, entry, labelHtml, count, checked, load) {
     cb.disabled = false;
     cb.addEventListener('change', () => {
       cb.checked ? entry.layer.addTo(map) : map.removeLayer(entry.layer);
-      if (entry.kind === 'route') { refreshPois(); refreshArrows(); }
+      if (entry.kind === 'route') { refreshPois(); refreshArrows(); refreshShields(); }
     });
     if (cb.checked) entry.layer.addTo(map);
   });
@@ -344,12 +415,15 @@ fetch('data/manifest.json').then(r => r.json()).then(manifest => {
     const entry = { kind: 'route', meta: rt, gj: null, cb: null, layer: null };
     layerRegistry.push(entry);
     const sw = '<span class="swatch' + (rt.dash ? ' dashed' : '') + '" style="--c:' +
-               rt.color + ';background:' + (rt.dash ? 'none' : rt.color) + '"></span>';
+               rt.color + (rt.dash ? '' : ';background:' + rt.color) + '"></span>' +
+               '<img class="legend-shield" src="images/shields/shield_' + rt.code +
+               '.png" alt="">';
     addCheckbox(document.getElementById('route-boxes'), entry,
                 sw + esc(rt.title), rt.km, true,
       () => fetch('data/routes_' + rt.code + '.geojson').then(r => r.json()).then(gj => {
         entry.gj = gj;
         entry.layer = buildRouteLayer(entry);
+        refreshShields();  // this route's shields can draw now its data is here
       }));
   });
   // POIs: all off by default; rendered as emoji markers, filtered to ticked routes
