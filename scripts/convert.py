@@ -21,11 +21,14 @@ RAW = ROOT / "data" / "raw"
 OUT = ROOT / "data"
 
 # Sam's own colour scheme, from the KML layer names / his readme.
+# Titles get the route length appended at build time (see route_title): the
+# west-to-east ride, rounded to the nearest 100 km, as agreed in issue #24.
+# "ride" routes say "West–East"; CN's connectors just get the km.
 ROUTE_LAYERS = {
-    "C1": {"color": "#4e0067", "weight": 4, "title": "C1 — Victoria BC to Cape Spear NL (~6,583 km)"},
-    "C2": {"color": "#674e00", "weight": 4, "title": "C2 — Tofino BC to Halifax NS (~6,771 km)"},
-    "C3": {"color": "#00674e", "weight": 4, "title": "C3 — Victoria BC to Newfoundland (~9,407 km)"},
-    "CN": {"color": "#670019", "weight": 3, "title": "CN — Connector routes (~2,850 km)"},
+    "C1": {"color": "#4e0067", "weight": 4, "title": "C1 — Victoria BC to Cape Spear NL", "ride": True},
+    "C2": {"color": "#674e00", "weight": 4, "title": "C2 — Tofino BC to Halifax NS", "ride": True},
+    "C3": {"color": "#00674e", "weight": 4, "title": "C3 — Victoria BC to Newfoundland", "ride": True},
+    "CN": {"color": "#670019", "weight": 3, "title": "CN — Connector routes", "ride": False},
     "CA": {"color": "#787878", "weight": 2.5, "title": "CA — Access routes"},
     "CL": {"color": "#3d85c8", "weight": 3, "title": "CL — Local connectors"},
     "CW": {"color": "#1a0067", "weight": 3, "title": "CW — Ferry crossings (dashed)", "dash": "6 6"},
@@ -226,7 +229,11 @@ def convert_routes(provinces):
             continue
         # pass 1: read + simplify every track, note its labelled direction
         tracks = []
+        we_km = 0.0  # the west-to-east ride: every track except WB-labelled ones,
+                     # measured on the raw geometry (matches Sam's Garmin tallies, #24)
         for fname, coords in kml_tracks(src):
+            if track_dir(fname) != "W":  # labelled direction, not the demoted one
+                we_km += geod_km(coords)
             line = LineString(coords)
             simp = line.simplify(SIMPLIFY_TOLERANCE, preserve_topology=False)
             line_m = LineString(projected(simp.coords))
@@ -239,7 +246,7 @@ def convert_routes(provinces):
         trees = {d: (STRtree(ls) if ls else None) for d, ls in by_dir.items()}
         demoted = 0
         feats = []
-        layer_km = 0.0
+        layer_km = 0.0   # every track, both directions (double-counts EB/WB couplets)
         # Repeating shield markers along the line, highway-sign style;
         # index.html draws them, the GPX export never sees them. Placed over
         # whole tracks (so provincial splits don't reset the count), rhythm
@@ -290,8 +297,21 @@ def convert_routes(provinces):
                                        separators=(",", ":")))
         if demoted:
             print(f"  {code}: {demoted} EB/WB tracks have no counterpart -> shown both directions")
-        sizes[code] = (len(feats), out_path.stat().st_size, layer_km)
+        sizes[code] = (len(feats), out_path.stat().st_size, layer_km, we_km)
     return sizes, geoms, used_provs
+
+
+def route_title(code, we_km):
+    """Sidebar title: base text plus the west-to-east length rounded to the
+    nearest 100 km, e.g. '(approx. 7,400 km West–East)'. Rounded because the
+    network changes every year (Sam, #24); exact figures would look authoritative
+    and go stale. Layers without a "ride" flag (CA/CL/CW) get no length."""
+    layer = ROUTE_LAYERS[code]
+    if "ride" not in layer:
+        return layer["title"]
+    km = int(round(we_km, -2))
+    tail = f"approx. {km:,} km" + (" West–East" if layer["ride"] else "")
+    return f"{layer['title']} ({tail})"
 
 
 ARROW_OPPOSITE = {"EB": "WB", "WB": "EB", "NB": "SB", "SB": "NB"}
@@ -543,8 +563,11 @@ def main():
     arrows = convert_arrows(provinces)
     poi_sizes = convert_pois(route_geoms, provinces)
     manifest = {
-        "routes": [{"code": c, **ROUTE_LAYERS[c], "count": route_sizes[c][0],
-                    "km": round(route_sizes[c][2])}
+        "routes": [{"code": c, **{k: v for k, v in ROUTE_LAYERS[c].items() if k != "ride"},
+                    "title": route_title(c, route_sizes[c][3]),
+                    "count": route_sizes[c][0],
+                    "km": round(route_sizes[c][2]),
+                    "km_west_east": int(round(route_sizes[c][3], -2))}
                    for c in ROUTE_LAYERS if c in route_sizes],
         "pois": [{"key": k, "emoji": POI_LAYERS[k][0], "title": POI_LAYERS[k][1],
                   "count": poi_sizes[k][0]}
@@ -556,7 +579,7 @@ def main():
         manifest["arrows"] = arrows
     (OUT / "manifest.json").write_text(json.dumps(manifest, indent=1))
     total = sum(s[1] for s in route_sizes.values()) + sum(s for _, s in poi_sizes.values())
-    for c, (n, s, _) in route_sizes.items():
+    for c, (n, s, *_) in route_sizes.items():
         print(f"routes_{c}: {n} lines, {s/1e6:.2f} MB")
     for k, (n, s) in poi_sizes.items():
         print(f"poi_{k}: {n} points, {s/1e3:.0f} KB")
