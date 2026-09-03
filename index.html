@@ -57,6 +57,8 @@
   }
   .leaflet-popup-content { font-size:13px; max-height:220px; overflow-y:auto; }
   .leaflet-popup-content b { font-size:13.5px; }
+    /* blend on the pane, not the tiles: each pane is its own stacking context */
+    .leaflet-hillshade-pane { mix-blend-mode: multiply; opacity: .7; }
 </style>
 </head>
 <body>
@@ -130,10 +132,65 @@
 <script>
 const map = L.map('map', { preferCanvas: true, zoomSnap: 0.5, zoomDelta: 0.5 });
 map.fitBounds([[46.5, -128.5], [52.5, -53]]);  // frame the network corridor
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+// Base maps (issue #20): OpenStreetMap plus two Natural Resources Canada
+// styles, all Open Government Licence - Canada, all read by Leaflet natively.
+//  - Toporama: the Atlas of Canada topo look (brown contours), one WMS drawing.
+//  - Canada Base Map (CBMT): NRCan's web-map background — geometry tiles with a
+//    transparent label layer on top, so labels stay crisp under the hillshade.
+// Plus a hillshade overlay (CBME) that works over any base map. NRCan only
+// pre-cuts those tiles in Lambert (EPSG:3978); the service's export endpoint
+// re-projects to Web Mercator on request, so we ask for one 512 px image per
+// tile. That is rendered on demand rather than cached, so be gentle: not below
+// zoom 9 (little relief to see), only over Canada, and 512 px tiles to halve
+// the request count.
+const NRCAN = 'https://maps-cartes.services.geo.ca/server2_serveur2/rest/services/BaseMaps/';
+const NRCAN_ATTR = '<a href="https://open.canada.ca/data/en/dataset/296de17c-001c-4435-8f9a-f5acab632e85" target="_blank" rel="noopener">Canada Base Map</a> &copy; Natural Resources Canada';
+const baseMaps = {
+  'OpenStreetMap': L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }),
+  'Atlas of Canada (topo)': L.tileLayer.wms('https://maps.geogratis.gc.ca/wms/toporama_en', {
+    layers: 'WMS-Toporama', format: 'image/png', version: '1.3.0',
+    maxZoom: 19,  // same ceiling as OSM so switching never clamps the zoom
+    attribution: '<a href="https://natural-resources.canada.ca/maps-tools-publications/maps/atlas-canada" target="_blank" rel="noopener">Toporama</a> &copy; Natural Resources Canada'
+  }),
+  'Canada Base Map (CBMT)': L.layerGroup([
+    L.tileLayer(NRCAN + 'CBMT_CBCT_GEOM_3857/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19, attribution: NRCAN_ATTR }),
+    L.tileLayer(NRCAN + 'CBMT_TXT_3857/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19, attribution: NRCAN_ATTR })
+  ])
+};
+// Hillshade: a tile layer whose URLs are ArcGIS export requests for each
+// tile's Web Mercator bounding box. Sits in its own pane between the base
+// tiles and the routes, blended with CSS multiply so it shades the base map
+// without hiding it (see .leaflet-hillshade-pane in <style>).
+map.createPane('hillshade').style.zIndex = 250;
+const MERC = 20037508.342789244;
+const HillshadeLayer = L.TileLayer.extend({
+  getTileUrl(coords) {
+    const z = this._getZoomForUrl(), w = 2 * MERC / Math.pow(2, z);
+    const x0 = -MERC + coords.x * w, y1 = MERC - coords.y * w;
+    return NRCAN + 'CBME_CBCE_HS_RO_3978/MapServer/export?f=image&format=jpg&bboxSR=3857&imageSR=3857' +
+      '&size=512,512&bbox=' + [x0, y1 - w, x0 + w, y1].map(v => v.toFixed(2)).join(',');
+  }
+});
+const hillshade = new HillshadeLayer('', {
+  pane: 'hillshade', tileSize: 512, zoomOffset: -1, minZoom: 9, maxZoom: 19, maxNativeZoom: 16,
+  bounds: [[41, -141.1], [84, -52]], attribution: NRCAN_ATTR
+});
+// Remember the rider's picks (plain display preferences, like a language
+// choice — no personal data). Default OSM, no hillshade; storage may be unavailable.
+const BASE_KEY = 'tcbr-basemap', HILL_KEY = 'tcbr-hillshade';
+let savedBase = null, savedHill = null;
+try { savedBase = localStorage.getItem(BASE_KEY); savedHill = localStorage.getItem(HILL_KEY); } catch (e) {}
+(baseMaps[savedBase] || baseMaps['OpenStreetMap']).addTo(map);
+if (savedHill === 'on') hillshade.addTo(map);
+L.control.layers(baseMaps, { 'Hillshade': hillshade }, { position: 'topleft' }).addTo(map);
+map.on('baselayerchange', e => { try { localStorage.setItem(BASE_KEY, e.name); } catch (err) {} });
+map.on('overlayadd overlayremove', e => {
+  if (e.layer !== hillshade) return;
+  try { localStorage.setItem(HILL_KEY, e.type === 'overlayadd' ? 'on' : 'off'); } catch (err) {}
+});
 
 const esc = s => (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;');
 // linkify bare URLs in descriptions
