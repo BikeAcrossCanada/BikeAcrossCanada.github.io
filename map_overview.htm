@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaflet Webmap with Overview Map</title>
+    <!-- 1. Include Leaflet CSS and JS -->
+    <link rel="stylesheet" href="https://unpkg.com" />
+    <script src="https://unpkg.com"></script>
+
+    <!-- 2. Include Leaflet MiniMap Plugin CSS and JS -->
+    <link rel="stylesheet" href="https://cloudflare.com" />
+    <script src="https://cloudflare.com"></script>
+
+    <style>
+        #map { height: 100vh; width: 100%; }
+    </style>
+</head>
+<body>
+
+    <div id="map"></div>
+
+    <script>
+        // 3. Initialize the main map
+        var map = L.map('map').setView([45.5, -73.6], 5);
+
+        // 4. Add a basemap layer to the main map
+        var mainTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // 5. Create a separate tile layer for the Overview Map
+        var overviewTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+
+        // 6. Initialize and add the MiniMap control
+        var miniMap = new L.Control.MiniMap(overviewTiles, {
+            toggleDisplay: true, // Allows user to minimize it
+            aimingRectOptions: {color: "#ff7800", weight: 1}, // Styling for the bounds rectangle
+            zoomLevelOffset: -4  // Keeps overview map zoomed out relative to main map
+        }).addTo(map);
+    </script>
+</body>
+</html>
