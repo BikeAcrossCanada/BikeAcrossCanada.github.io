@@ -193,22 +193,29 @@ try { savedBase = localStorage.getItem(BASE_KEY); savedHill = localStorage.getIt
 if (savedHill === 'on') hillshade.addTo(map);
 L.control.layers(baseMaps, { 'Hillshade': hillshade }, { position: 'topleft' }).addTo(map);
 map.on('baselayerchange', e => { try { localStorage.setItem(BASE_KEY, e.name); } catch (err) {} });
-// Overview minimap (issue #37): a small map in the bottom-left corner, five
-// zoom levels out, showing where the current view sits on the network. Always
-// OpenStreetMap (the NRCan tiles are hard to read at country scale) plus the
-// route lines, thinned, added as each route file loads. Starts collapsed on
-// phones so it doesn't crowd the screen; the corner button reopens it.
+// Overview minimap (issue #37): a fixed frame of the whole network in the
+// bottom-left corner, with a red rectangle marking the current view (drag it
+// to pan). Always OpenStreetMap (the NRCan tiles are hard to read at country
+// scale) plus the route lines, thinned, added as each route file loads. Hidden
+// whenever the main map already shows the whole network; the corner button
+// collapses it for anyone who never wants it.
+const NETWORK_BOUNDS = L.latLngBounds([[43.6, -130.4], [55.3, -52.6]]);
 const miniRoutes = L.layerGroup();
 const miniMap = new L.Control.MiniMap(
   L.layerGroup([
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }),
     miniRoutes
   ]),
-  { position: 'bottomleft', width: 160, height: 160, zoomLevelOffset: -5,
-    minimized: window.innerWidth <= 700, toggleDisplay: true,
+  { position: 'bottomleft', width: 260, height: 100,
+    zoomLevelFixed: 2, centerFixed: NETWORK_BOUNDS.getCenter(), toggleDisplay: true,
     aimingRectOptions: { color: '#d33', weight: 2, fillOpacity: 0.08 },
-    mapOptions: { preferCanvas: true, minZoom: 2 } }
+    mapOptions: { preferCanvas: true } }
 ).addTo(map);
+function syncMiniMap() {
+  miniMap.getContainer().hidden = map.getBounds().contains(NETWORK_BOUNDS);
+}
+map.on('moveend zoomend', syncMiniMap);
+syncMiniMap();
 function addMiniRoute(gj, color) {
   const lines = [];
   (function walk(c) {
