@@ -8,6 +8,8 @@
 <meta name="robots" content="noindex">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="https://unpkg.com/leaflet-minimap@3.6.1/dist/Control.MiniMap.min.css"
+      integrity="sha256-p0ab5p0FrFs9Tz4OZgifAvIP+Rd0VFUEbNYjVXVeh9w=" crossorigin="">
 <style>
   html, body { margin:0; height:100%; font-family: system-ui, sans-serif; }
   #map { position:absolute; inset:0; }
@@ -59,6 +61,9 @@
   .leaflet-popup-content b { font-size:13.5px; }
     /* blend on the pane, not the tiles: each pane is its own stacking context */
     .leaflet-hillshade-pane { mix-blend-mode: multiply; opacity: .7; }
+    /* overview minimap (issue #37): thin border, keep clear of the attribution */
+    .leaflet-control-minimap { border: 1px solid rgba(0,0,0,.35); border-radius: 3px; }
+    .leaflet-control-minimap .leaflet-container:focus { outline: none; }  /* no blue ring after a click-to-jump */
 </style>
 </head>
 <body>
@@ -129,6 +134,8 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet-minimap@3.6.1/dist/Control.MiniMap.min.js"
+        integrity="sha256-Hb/f1FMaLV+Qn6KSYbc92GxB2bcKp7/efxNeiduEo3g=" crossorigin=""></script>
 <script>
 const map = L.map('map', { preferCanvas: true, zoomSnap: 0.5, zoomDelta: 0.5 });
 map.fitBounds([[46.5, -128.5], [52.5, -53]]);  // frame the network corridor
@@ -187,6 +194,39 @@ try { savedBase = localStorage.getItem(BASE_KEY); savedHill = localStorage.getIt
 if (savedHill === 'on') hillshade.addTo(map);
 L.control.layers(baseMaps, { 'Hillshade': hillshade }, { position: 'topleft' }).addTo(map);
 map.on('baselayerchange', e => { try { localStorage.setItem(BASE_KEY, e.name); } catch (err) {} });
+// Overview minimap (issue #37): a fixed frame of the whole network in the
+// bottom-left corner, with a red rectangle marking the current view (click
+// the box to jump there). Always OpenStreetMap (the NRCan tiles are hard to read at country
+// scale) plus the route lines, thinned, added as each route file loads. Hidden
+// whenever the main map already shows the whole network; the corner button
+// collapses it for anyone who never wants it.
+const NETWORK_BOUNDS = L.latLngBounds([[43.6, -130.4], [55.3, -52.6]]);
+const miniRoutes = L.layerGroup();
+const miniMap = new L.Control.MiniMap(
+  L.layerGroup([
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }),
+    miniRoutes
+  ]),
+  { position: 'bottomleft', width: 260, height: 100,
+    zoomLevelFixed: 2, centerFixed: NETWORK_BOUNDS.getCenter(), toggleDisplay: true,
+    aimingRectOptions: { color: '#d33', weight: 2, fillOpacity: 0.08 },
+    mapOptions: { preferCanvas: true } }
+).addTo(map);
+function syncMiniMap() {
+  miniMap.getContainer().hidden = map.getBounds().contains(NETWORK_BOUNDS);
+}
+map.on('moveend zoomend', syncMiniMap);
+syncMiniMap();
+// Click a spot in the box to jump the main map there (same zoom).
+miniMap._miniMap.on('click', e => map.panTo(e.latlng));
+function addMiniRoute(gj, color) {
+  const lines = [];
+  (function walk(c) {
+    if (typeof c[0][0] === 'number') lines.push(c.filter((p, i) => i % 10 === 0 || i === c.length - 1).map(p => [p[1], p[0]]));
+    else c.forEach(walk);
+  })(gj.features.map(f => f.geometry.coordinates));
+  L.polyline(lines, { color, weight: 1.5, opacity: 0.9, interactive: false }).addTo(miniRoutes);
+}
 map.on('overlayadd overlayremove', e => {
   if (e.layer !== hillshade) return;
   try { localStorage.setItem(HILL_KEY, e.type === 'overlayadd' ? 'on' : 'off'); } catch (err) {}
@@ -479,6 +519,7 @@ fetch('data/manifest.json').then(r => r.json()).then(manifest => {
       () => fetch('data/routes_' + rt.code + '.geojson').then(r => r.json()).then(gj => {
         entry.gj = gj;
         entry.layer = buildRouteLayer(entry);
+        addMiniRoute(gj, rt.color);
         refreshShields();  // this route's shields can draw now its data is here
       }));
   });
