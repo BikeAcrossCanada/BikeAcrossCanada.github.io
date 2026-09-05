@@ -64,6 +64,9 @@
     /* overview minimap (issue #37): thin border, keep clear of the attribution */
     .leaflet-control-minimap { border: 1px solid rgba(0,0,0,.35); border-radius: 3px; }
     .leaflet-control-minimap .leaflet-container:focus { outline: none; }  /* no blue ring after a click-to-jump */
+    /* Leaflet disables an overlay's checkbox outside its zoom range but leaves
+       the label black; grey it too. */
+    .leaflet-control-layers input:disabled + span { color: #999; }
 </style>
 </head>
 <body>
@@ -137,7 +140,10 @@
 <script src="https://unpkg.com/leaflet-minimap@3.6.1/dist/Control.MiniMap.min.js"
         integrity="sha256-Hb/f1FMaLV+Qn6KSYbc92GxB2bcKp7/efxNeiduEo3g=" crossorigin=""></script>
 <script>
-const map = L.map('map', { preferCanvas: true, zoomSnap: 0.5, zoomDelta: 0.5 });
+// minZoom/maxZoom set explicitly: otherwise Leaflet derives them from whatever
+// layers are present, and while a base map is being swapped the hillshade
+// (minZoom 9) is briefly the only bounded layer, so the map snapped to zoom 9.
+const map = L.map('map', { preferCanvas: true, zoomSnap: 0.5, zoomDelta: 0.5, minZoom: 2, maxZoom: 19 });
 map.fitBounds([[46.5, -128.5], [52.5, -53]]);  // frame the network corridor
 // Base maps (issue #20): OpenStreetMap plus two Natural Resources Canada
 // styles, all Open Government Licence - Canada, all read by Leaflet natively.
