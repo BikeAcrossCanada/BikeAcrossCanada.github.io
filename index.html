@@ -63,6 +63,7 @@
     .leaflet-hillshade-pane { mix-blend-mode: multiply; opacity: .7; }
     /* overview minimap (issue #37): thin border, keep clear of the attribution */
     .leaflet-control-minimap { border: 1px solid rgba(0,0,0,.35); border-radius: 3px; }
+    .leaflet-control-minimap .leaflet-container:focus { outline: none; }  /* no blue ring after a click-to-jump */
 </style>
 </head>
 <body>
@@ -194,8 +195,8 @@ if (savedHill === 'on') hillshade.addTo(map);
 L.control.layers(baseMaps, { 'Hillshade': hillshade }, { position: 'topleft' }).addTo(map);
 map.on('baselayerchange', e => { try { localStorage.setItem(BASE_KEY, e.name); } catch (err) {} });
 // Overview minimap (issue #37): a fixed frame of the whole network in the
-// bottom-left corner, with a red rectangle marking the current view (drag it
-// to pan). Always OpenStreetMap (the NRCan tiles are hard to read at country
+// bottom-left corner, with a red rectangle marking the current view (click
+// the box to jump there). Always OpenStreetMap (the NRCan tiles are hard to read at country
 // scale) plus the route lines, thinned, added as each route file loads. Hidden
 // whenever the main map already shows the whole network; the corner button
 // collapses it for anyone who never wants it.
@@ -216,6 +217,8 @@ function syncMiniMap() {
 }
 map.on('moveend zoomend', syncMiniMap);
 syncMiniMap();
+// Click a spot in the box to jump the main map there (same zoom).
+miniMap._miniMap.on('click', e => map.panTo(e.latlng));
 function addMiniRoute(gj, color) {
   const lines = [];
   (function walk(c) {
