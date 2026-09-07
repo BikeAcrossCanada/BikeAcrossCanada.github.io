@@ -4,9 +4,81 @@
     <link href="http://www.garmin.com">
       <text>Garmin International</text>
     </link>
-    <time>2026-09-07T15:28:34Z</time>
-    <bounds maxlat="49.458908792585135" maxlon="-119.85970258712769" minlat="48.428544569760561" minlon="-123.91951560974121" />
+    <time>2026-09-07T17:22:16Z</time>
+    <bounds maxlat="51.425843238830566" maxlon="-113.40036392211914" minlat="48.428544569760561" minlon="-123.91951560974121" />
   </metadata>
+
+  <wpt lat="50.263781547546387" lon="-119.27073240280151">
+    <time>2026-09-07T17:02:02Z</time>
+    <name>30 Ave and 30 St (Vernon Hostel 427m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-07T17:02:02Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.178414821624756" lon="-115.5706787109375">
+    <time>2026-09-07T17:13:20Z</time>
+    <name>Banff Ave and Wolf St (Tunnel Mountain Village II Campground 2.5km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-07T17:13:20Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.425843238830566" lon="-116.17499113082886">
+    <time>2026-09-07T17:07:39Z</time>
+    <name>Bow Valley Pkwy and Lake Louise Dr (Lake Louise Campground 1.5km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-07T17:07:39Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.495987985283136" lon="-119.61718655191362">
+    <time>2026-09-07T15:58:10Z</time>
+    <name>Channel Pathway (Hi Penticton 2.5km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-07T15:58:10Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
 
   <wpt lat="49.205038547515869" lon="-119.85970258712769">
     <time>2026-09-07T15:16:39Z</time>
@@ -134,6 +206,42 @@
     </extensions>
   </wpt>
 
+  <wpt lat="51.306281089782715" lon="-116.97152137756348">
+    <time>2026-09-07T17:06:21Z</time>
+    <name>Kootenay-Columbia Highway and 10th Ave N (Golden Municipal Campground 2.2km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-07T17:06:21Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.880697727203369" lon="-119.50329065322876">
+    <time>2026-09-07T16:58:06Z</time>
+    <name>Lake Path and Waterfront Promenade (Hi Kelowna Hostel 553m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-07T16:58:06Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="49.139635562896729" lon="-122.36010074615479">
     <time>2026-09-06T18:39:56Z</time>
     <name>Lougheed Highway and Nelson St (Sun Valley Trout Park 833m)</name>
@@ -188,6 +296,24 @@
     </extensions>
   </wpt>
 
+  <wpt lat="51.083743572235107" lon="-114.35053110122681">
+    <time>2026-09-07T17:15:11Z</time>
+    <name>Range Road 33 and Ramp (Calaway Park Campground 258m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-07T17:15:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="49.128026962280273" lon="-123.91951560974121">
     <time>2026-09-07T13:18:15Z</time>
     <name>Trans-Canada Highway and Cranberry Ave (Living Forest Oceanside Campground and RV Park 1.1km)</name>
@@ -220,6 +346,60 @@
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-07T13:11:06Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.139791011810303" lon="-117.8552770614624">
+    <time>2026-09-07T17:05:06Z</time>
+    <name>Trans-Canada Highway and Waverley Trl (Canyon Hot Springs Resort 266m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-07T17:05:06Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.03773832321167" lon="-113.40036392211914">
+    <time>2026-09-07T17:21:21Z</time>
+    <name>Trans-Canada Highway and Wheatland Trl (Strathmore AG Campground 3.1km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-07T17:21:21Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.837194919586182" lon="-118.97747039794922">
+    <time>2026-09-07T17:03:32Z</time>
+    <name>Vernon-Sicamous Highway and  97a and Roundabout and Road (Paradise Motel 405m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-07T17:03:32Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
