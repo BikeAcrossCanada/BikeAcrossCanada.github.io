@@ -4,9 +4,45 @@
     <link href="http://www.garmin.com">
       <text>Garmin International</text>
     </link>
-    <time>2026-09-07T13:22:37Z</time>
-    <bounds maxlat="49.378695487976074" maxlon="-121.42870903015137" minlat="48.616197109222412" minlon="-123.91951560974121" />
+    <time>2026-09-07T15:28:34Z</time>
+    <bounds maxlat="49.458908792585135" maxlon="-119.85970258712769" minlat="48.428544569760561" minlon="-123.91951560974121" />
   </metadata>
+
+  <wpt lat="49.205038547515869" lon="-119.85970258712769">
+    <time>2026-09-07T15:16:39Z</time>
+    <name>Crowsnest Highway and 10th Ave (Eagle RV Park and Campground 151m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-07T15:16:39Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.09041166305542" lon="-120.68232536315918">
+    <time>2026-09-07T15:09:41Z</time>
+    <name>Crowsnest Highway and E.C. Manning Provincial Park (Mule Deer Campground 67m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-07T15:09:41Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
 
   <wpt lat="49.27992582321167" lon="-123.11056137084961">
     <time>2026-09-06T18:42:40Z</time>
@@ -80,6 +116,24 @@
     </extensions>
   </wpt>
 
+  <wpt lat="49.458908792585135" lon="-120.50467679277062">
+    <time>2026-09-07T15:12:19Z</time>
+    <name>Kettle Valley Rail Trl and Crowsnest Highway (Rivers Edge RV Park 1.7km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-07T15:12:19Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="49.139635562896729" lon="-122.36010074615479">
     <time>2026-09-06T18:39:56Z</time>
     <name>Lougheed Highway and Nelson St (Sun Valley Trout Park 833m)</name>
@@ -94,6 +148,42 @@
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-06T18:39:56Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.082107543945313" lon="-122.06495046615601">
+    <time>2026-09-07T13:26:37Z</time>
+    <name>No. 3 Rd and Yarrow Central Rd (Vedder River Campground 5.3km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-07T13:26:37Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.428544569760561" lon="-123.36975135840476">
+    <time>2026-09-07T13:31:36Z</time>
+    <name>Pandora Ave and Wharf St and Store St (Ocean Island Backpackers Inn 622m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-07T13:31:36Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
