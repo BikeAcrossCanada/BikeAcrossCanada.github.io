@@ -16,6 +16,8 @@ from shapely.geometry import LineString, Point, shape
 from shapely.ops import transform, unary_union
 from shapely.strtree import STRtree
 
+import elevation
+
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw"
 OUT = ROOT / "data"
@@ -293,6 +295,13 @@ def convert_routes(provinces):
                     "geometry": {"type": "LineString",
                                  "coordinates": rounded(simp.coords)},
                 })
+        # Elevation bake (issue #38): climb totals onto each track's properties
+        # + the profile sidecar the chart reads. CW is the ferry layer — the
+        # crossings are water, a profile would be noise.
+        if code != "CW":
+            n_new, sidecar_b = elevation.bake(code, feats, GEOD)
+            print(f"  {code}: elevation computed for {n_new} tracks "
+                  f"(rest cached); profiles_{code}.json {sidecar_b/1e3:.0f} kB")
         out_path = OUT / f"routes_{code}.geojson"
         out_path.write_text(json.dumps({"type": "FeatureCollection", "features": feats},
                                        separators=(",", ":")))
