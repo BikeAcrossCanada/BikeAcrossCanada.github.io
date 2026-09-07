@@ -67,6 +67,9 @@
     .leaflet-otm-pane { filter: saturate(var(--otm-sat, 55%)); }
     .otm-sat-control { background:#fff; padding:5px 8px 4px; border-radius:4px;
       box-shadow:0 1px 5px rgba(0,0,0,.4); font-size:11px; color:#333; }
+    .otm-sat-control label { display:block; }
+    .otm-sat-control label + label { margin-top:4px; }
+    .otm-sat-control output { float:right; color:#666; font-variant-numeric:tabular-nums; }
     .otm-sat-control input { width:120px; display:block; margin:3px 0 0; }
     /* overview minimap (issue #37): thin border, keep clear of the attribution */
     .leaflet-control-minimap { border: 1px solid rgba(0,0,0,.35); border-radius: 3px; }
@@ -215,33 +218,51 @@ try { savedBase = localStorage.getItem(BASE_KEY); savedHill = localStorage.getIt
 if (savedHill === 'on') hillshade.addTo(map);
 L.control.layers(baseMaps, { 'Hillshade': hillshade }, { position: 'topleft' }).addTo(map);
 map.on('baselayerchange', e => { try { localStorage.setItem(BASE_KEY, e.name); } catch (err) {} });
-// OpenTopoMap colour-intensity slider (issue #46): the OTM palette is loud
-// enough to camouflage the route lines, so the pane starts at 55% saturation
-// (CSS above) and this slider lets the rider tune it, 0% (grey) to 100% (the
-// original tiles). Only shown while OpenTopoMap is the active base map;
-// remembered like the base-map choice.
-const OTM_SAT_KEY = 'tcbr-otm-sat';
-let otmSat = 55;
+// OpenTopoMap tuning panel (issue #46): the OTM palette is loud, and its
+// urban grey is dark, so plain desaturation goes muddy. Two remembered
+// sliders with numeric readouts, shown only while OpenTopoMap is active:
+//  - Colour: saturation on the pane (the CSS filter above), 0% grey to 100%
+//    the original tiles.
+//  - Lighten: fades the tiles over a white map background — a white wash
+//    that lifts the dark fill without losing the topo linework.
+const OTM_SAT_KEY = 'tcbr-otm-sat', OTM_WASH_KEY = 'tcbr-otm-wash';
+const otmPrefs = { sat: 55, wash: 25 };
 try {
   const s = parseInt(localStorage.getItem(OTM_SAT_KEY), 10);
-  if (s >= 0 && s <= 100) otmSat = s;
+  const w = parseInt(localStorage.getItem(OTM_WASH_KEY), 10);
+  if (s >= 0 && s <= 100) otmPrefs.sat = s;
+  if (w >= 0 && w <= 70) otmPrefs.wash = w;
 } catch (e) {}
-map.getPane('otm').style.setProperty('--otm-sat', otmSat + '%');
+const applyOtmPrefs = () => {
+  map.getPane('otm').style.setProperty('--otm-sat', otmPrefs.sat + '%');
+  baseMaps['OpenTopoMap'].setOpacity(1 - otmPrefs.wash / 100);
+};
+applyOtmPrefs();
 const otmSatControl = L.control({ position: 'topleft' });
 otmSatControl.onAdd = () => {
   const div = L.DomUtil.create('div', 'otm-sat-control');
-  div.innerHTML = '<label>Map colour intensity' +
-    '<input type="range" min="0" max="100" step="5" value="' + otmSat + '"></label>';
-  div.querySelector('input').addEventListener('input', ev => {
-    map.getPane('otm').style.setProperty('--otm-sat', ev.target.value + '%');
-    try { localStorage.setItem(OTM_SAT_KEY, ev.target.value); } catch (e) {}
-  });
+  div.innerHTML =
+    '<label>Colour <output>' + otmPrefs.sat + '%</output>' +
+    '<input data-pref="sat" type="range" min="0" max="100" step="5" value="' + otmPrefs.sat + '"></label>' +
+    '<label>Lighten <output>' + otmPrefs.wash + '%</output>' +
+    '<input data-pref="wash" type="range" min="0" max="70" step="5" value="' + otmPrefs.wash + '"></label>';
+  div.querySelectorAll('input').forEach(input => input.addEventListener('input', () => {
+    otmPrefs[input.dataset.pref] = +input.value;
+    input.previousElementSibling.textContent = input.value + '%';
+    applyOtmPrefs();
+    try {
+      localStorage.setItem(OTM_SAT_KEY, otmPrefs.sat);
+      localStorage.setItem(OTM_WASH_KEY, otmPrefs.wash);
+    } catch (e) {}
+  }));
   L.DomEvent.disableClickPropagation(div);
   return div;
 };
 const syncOtmSlider = name => {
-  if (name === 'OpenTopoMap') otmSatControl.addTo(map);
-  else otmSatControl.remove();
+  const active = name === 'OpenTopoMap';
+  if (active) otmSatControl.addTo(map); else otmSatControl.remove();
+  // white shows through the faded tiles; other base maps keep the default
+  map.getContainer().style.background = active ? '#fff' : '';
 };
 syncOtmSlider(baseMaps[savedBase] ? savedBase : 'OpenStreetMap');
 map.on('baselayerchange', e => syncOtmSlider(e.name));
