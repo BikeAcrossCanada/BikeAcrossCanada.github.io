@@ -191,6 +191,12 @@
    "emoji": "\ud83d\udccd",
    "title": "Km distance markers",
    "count": 117
+  },
+  {
+   "key": "End_of_Day_Segments",
+   "emoji": "\ud83d\udd3b",
+   "title": "End of Day Segments",
+   "count": 7
   }
  ],
  "provinces": [
