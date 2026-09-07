@@ -64,7 +64,7 @@ POI_LAYERS = {  # gpx stem -> (emoji, display name)
     "Airports": ("✈️", "Airports"),
     "HardwareNoBike": ("\U0001fa9b", "Hardware stores (no bike parts)"),
     "Kilometre_Distance_Markers": ("\U0001f4cd", "Km distance markers"),
-    "End_of_Day_Segments": ("🔻", "End of Day Segments"),
+    "End_of_Day_Segments": ("✅️", "End of Day Segments"),
 }
 
 SIMPLIFY_TOLERANCE = 0.0002  # degrees, ~20 m: invisible at national/regional zooms
