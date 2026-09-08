@@ -165,6 +165,32 @@
 // mouse events for layers below it — that broke track hover while an
 // elevation chart was open.
 const routeRenderer = L.canvas({ tolerance: 12 });
+// Clicks go to the longest track in reach, not the topmost. Short one-way
+// variants (divided highways, one-way streets) sit exactly on top of the day
+// rides, and zoomed out the 12 px tolerance spans many km of ground — so with
+// Leaflet's default topmost-wins they swallow every click near a town. POI
+// dots (features without a km property) still win over lines as usual.
+routeRenderer._onClick = function (e) {
+  const point = this._map.mouseEventToLayerPoint(e);
+  let top = null;
+  const trackHits = [];
+  for (let order = this._drawFirst; order; order = order.next) {
+    const layer = order.layer;
+    if (layer.options.interactive && layer._containsPoint(point) &&
+        !((e.type === 'click' || e.type === 'preclick') && this._map._draggableMoved(layer))) {
+      top = layer;
+      if (layer.feature && layer.feature.properties && layer.feature.properties.km != null) {
+        trackHits.push(layer);
+      }
+    }
+  }
+  let chosen = top;
+  if (chosen && trackHits.length > 1 && trackHits.includes(chosen)) {
+    chosen = trackHits.reduce((a, b) =>
+      (b.feature.properties.km > a.feature.properties.km ? b : a));
+  }
+  this._fireEvent(chosen ? [chosen] : false, e);
+};
 const map = L.map('map', { preferCanvas: true, renderer: routeRenderer,
                            zoomSnap: 0.5, zoomDelta: 0.5, minZoom: 2, maxZoom: 19 });
 map.fitBounds([[46.5, -128.5], [52.5, -53]]);  // frame the network corridor
