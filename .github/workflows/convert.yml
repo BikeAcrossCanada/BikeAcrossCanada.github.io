@@ -8,6 +8,7 @@ on:
     paths:
       - 'data/raw/**'
       - 'scripts/convert.py'
+      - 'scripts/elevation.py'
   workflow_dispatch:
 
 permissions:

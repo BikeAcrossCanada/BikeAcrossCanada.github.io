@@ -7,8 +7,10 @@ routes actually touch are downloaded (~207 of them, ~2 GB), kept in a local
 cache dir that CI restores via actions/cache.
 
 Each track is resampled every SPACING_M metres along its line and elevation is
-read from the tiles with bilinear interpolation. Raw terrain-model climb sums
-are noisy/inflated, so ascent/descent use a hysteresis deadband: a rise or
+read from the tiles with bilinear interpolation, then despiked with a
+median-of-three (see _despike: sideslope noise on mountain roads). Raw
+terrain-model climb sums are noisy/inflated, so ascent/descent use a
+hysteresis deadband: a rise or
 fall only counts once it moves more than DEADBAND_M from the last committed
 elevation. The 5 m value comes from BC Cycle Tourism's Bespoke route planner,
 where it was calibrated against a barometric ride recording (computed 732 m
@@ -136,14 +138,35 @@ def _climb(elevs):
     return ascent, descent
 
 
+def _despike(elevs):
+    """Median-of-three: each sample becomes the middle value of itself and its
+    two neighbours. On a mountainside road the terrain model reads alternating
+    bits of slope above/below the pavement (a ~30 m ground grid can't see a
+    graded road cut), producing single-sample zigzag that a road's grade can't
+    physically do; the median removes exactly that while leaving any steady
+    climb or descent untouched. Verified against a rider's 2007 barometric
+    recording of Hope-Manning-Princeton (issue #38): totals went from ~25%
+    high to within the recording's own error band."""
+    if len(elevs) < 3:
+        return elevs
+    out = list(elevs)
+    for i in range(1, len(elevs) - 1):
+        a, b, c = elevs[i - 1], elevs[i], elevs[i + 1]
+        if a is not None and b is not None and c is not None:
+            out[i] = sorted((a, b, c))[1]
+    return out
+
+
 def track_key(coords):
-    return hashlib.md5(json.dumps(coords).encode()).hexdigest()[:12]
+    # "v2|": recompute everything when the profile method changes (despike)
+    return hashlib.md5(("v2|" + json.dumps(coords)).encode()).hexdigest()[:12]
 
 
 def profile(coords, geod):
     """Full result for one track's [[lon, lat], ...]: sampled elevations
     (rounded ints, SPACING_M apart, data voids as None) + deadband climb."""
-    elevs = [elevation_at(lon, lat) for lon, lat in _resample(coords, geod)]
+    elevs = _despike([elevation_at(lon, lat)
+                      for lon, lat in _resample(coords, geod)])
     ascent, descent = _climb(elevs)
     return {"ascent_m": int(round(ascent)), "descent_m": int(round(descent)),
             "elev": [None if e is None else int(round(e)) for e in elevs]}
