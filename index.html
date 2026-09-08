@@ -193,7 +193,31 @@ routeRenderer._onClick = function (e) {
 };
 const map = L.map('map', { preferCanvas: true, renderer: routeRenderer,
                            zoomSnap: 0.5, zoomDelta: 0.5, minZoom: 2, maxZoom: 19 });
-map.fitBounds([[46.5, -128.5], [52.5, -53]]);  // frame the network corridor
+// Shareable view URLs (issue #48): the current view lives in the URL fragment,
+// openstreetmap.org-style — #map=zoom/lat/lng&base=Name&hillshade=1 — rewritten
+// as you pan, zoom, or switch layers, so copying the address bar at any moment
+// gives a link to exactly this view. When a link carries a fragment, the whole
+// fragment is authoritative for that visit: it overrides the visitor's
+// remembered base map and hillshade (absent parts mean the defaults), without
+// writing anything to their remembered preferences.
+function parseViewHash() {
+  const out = {};
+  for (const part of location.hash.replace(/^#/, '').split('&')) {
+    const [k, v] = part.split('=');
+    if (k === 'map') {
+      const m = (v || '').split('/').map(Number);
+      if (m.length === 3 && m.every(isFinite)) out.view = m;
+    } else if (k === 'base') {
+      out.base = decodeURIComponent(v || '');
+    } else if (k === 'hillshade') {
+      out.hillshade = v === '1';
+    }
+  }
+  return out.view ? out : {};   // no map= part, no override
+}
+const linkView = parseViewHash();
+if (linkView.view) map.setView([linkView.view[1], linkView.view[2]], linkView.view[0]);
+else map.fitBounds([[46.5, -128.5], [52.5, -53]]);  // frame the network corridor
 // Base maps (issues #20, #46): OpenStreetMap plus two Natural Resources Canada
 // styles, all Open Government Licence - Canada, all read by Leaflet natively.
 //  - Toporama: the Atlas of Canada topo look (brown contours), one WMS drawing.
@@ -253,8 +277,12 @@ const hillshade = new HillshadeLayer('', {
 const BASE_KEY = 'tcbr-basemap', HILL_KEY = 'tcbr-hillshade';
 let savedBase = null, savedHill = null;
 try { savedBase = localStorage.getItem(BASE_KEY); savedHill = localStorage.getItem(HILL_KEY); } catch (e) {}
-(baseMaps[savedBase] || baseMaps['OpenStreetMap']).addTo(map);
-if (savedHill === 'on') hillshade.addTo(map);
+const startBase = linkView.view
+  ? (baseMaps[linkView.base] ? linkView.base : 'OpenStreetMap')
+  : (baseMaps[savedBase] ? savedBase : 'OpenStreetMap');
+let currentBase = startBase;   // for the URL fragment; Leaflet doesn't expose it
+baseMaps[startBase].addTo(map);
+if (linkView.view ? linkView.hillshade : savedHill === 'on') hillshade.addTo(map);
 L.control.layers(baseMaps, { 'Hillshade': hillshade }, { position: 'topleft' }).addTo(map);
 map.on('baselayerchange', e => { try { localStorage.setItem(BASE_KEY, e.name); } catch (err) {} });
 // OpenTopoMap tuning panel (issue #46): the OTM palette is loud, and its
@@ -303,8 +331,21 @@ const syncOtmSlider = name => {
   // white shows through the faded tiles; other base maps keep the default
   map.getContainer().style.background = active ? '#fff' : '';
 };
-syncOtmSlider(baseMaps[savedBase] ? savedBase : 'OpenStreetMap');
+syncOtmSlider(startBase);
 map.on('baselayerchange', e => syncOtmSlider(e.name));
+// Keep the fragment current. replaceState (not location.hash=) so panning
+// doesn't pile history entries onto the back button.
+function updateViewHash() {
+  const c = map.getCenter(), parts = [
+    'map=' + map.getZoom() + '/' + c.lat.toFixed(4) + '/' + c.lng.toFixed(4)];
+  if (currentBase !== 'OpenStreetMap') parts.push('base=' + encodeURIComponent(currentBase));
+  if (map.hasLayer(hillshade)) parts.push('hillshade=1');
+  history.replaceState(null, '', '#' + parts.join('&'));
+}
+map.on('moveend zoomend', updateViewHash);
+map.on('baselayerchange', e => { currentBase = e.name; updateViewHash(); });
+map.on('overlayadd overlayremove', e => { if (e.layer === hillshade) updateViewHash(); });
+updateViewHash();
 // Overview minimap (issue #37): a fixed frame of the whole network in the
 // bottom-left corner, with a red rectangle marking the current view (click
 // the box to jump there). Always OpenStreetMap (the NRCan tiles are hard to read at country
