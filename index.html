@@ -61,6 +61,16 @@
   .leaflet-popup-content b { font-size:13.5px; }
     /* blend on the pane, not the tiles: each pane is its own stacking context */
     .leaflet-hillshade-pane { mix-blend-mode: multiply; opacity: .7; }
+    /* OpenTopoMap arrives fully saturated and camouflages the route colours,
+       so its pane is toned down; the slider below the layers control sets
+       --otm-sat on the pane. */
+    .leaflet-otm-pane { filter: saturate(var(--otm-sat, 55%)); }
+    .otm-sat-control { background:#fff; padding:5px 8px 4px; border-radius:4px;
+      box-shadow:0 1px 5px rgba(0,0,0,.4); font-size:11px; color:#333; }
+    .otm-sat-control label { display:block; }
+    .otm-sat-control label + label { margin-top:4px; }
+    .otm-sat-control output { float:right; color:#666; font-variant-numeric:tabular-nums; }
+    .otm-sat-control input { width:120px; display:block; margin:3px 0 0; }
     /* overview minimap (issue #37): thin border, keep clear of the attribution */
     .leaflet-control-minimap { border: 1px solid rgba(0,0,0,.35); border-radius: 3px; }
     .leaflet-control-minimap .leaflet-container:focus { outline: none; }  /* no blue ring after a click-to-jump */
@@ -145,11 +155,13 @@
 // (minZoom 9) is briefly the only bounded layer, so the map snapped to zoom 9.
 const map = L.map('map', { preferCanvas: true, zoomSnap: 0.5, zoomDelta: 0.5, minZoom: 2, maxZoom: 19 });
 map.fitBounds([[46.5, -128.5], [52.5, -53]]);  // frame the network corridor
-// Base maps (issue #20): OpenStreetMap plus two Natural Resources Canada
+// Base maps (issues #20, #46): OpenStreetMap plus two Natural Resources Canada
 // styles, all Open Government Licence - Canada, all read by Leaflet natively.
 //  - Toporama: the Atlas of Canada topo look (brown contours), one WMS drawing.
 //  - Canada Base Map (CBMT): NRCan's web-map background — geometry tiles with a
 //    transparent label layer on top, so labels stay crisp under the hillshade.
+//  - OpenTopoMap: community topo rendering of OSM data with SRTM contours and
+//    relief; shows park boundaries too. Volunteer-run server, sharpest at z17.
 // Plus a hillshade overlay (CBME) that works over any base map. NRCan only
 // pre-cuts those tiles in Lambert (EPSG:3978); the service's export endpoint
 // re-projects to Web Mercator on request, so we ask for one 512 px image per
@@ -158,6 +170,7 @@ map.fitBounds([[46.5, -128.5], [52.5, -53]]);  // frame the network corridor
 // the request count.
 const NRCAN = 'https://maps-cartes.services.geo.ca/server2_serveur2/rest/services/BaseMaps/';
 const NRCAN_ATTR = '<a href="https://open.canada.ca/data/en/dataset/296de17c-001c-4435-8f9a-f5acab632e85" target="_blank" rel="noopener">Canada Base Map</a> &copy; Natural Resources Canada';
+map.createPane('otm').style.zIndex = 200;  // same level as the normal tile pane; exists so CSS can desaturate just this base map
 const baseMaps = {
   'OpenStreetMap': L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -171,7 +184,12 @@ const baseMaps = {
   'Canada Base Map (CBMT)': L.layerGroup([
     L.tileLayer(NRCAN + 'CBMT_CBCT_GEOM_3857/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19, attribution: NRCAN_ATTR }),
     L.tileLayer(NRCAN + 'CBMT_TXT_3857/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19, attribution: NRCAN_ATTR })
-  ])
+  ]),
+  'OpenTopoMap': L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+    pane: 'otm',
+    maxNativeZoom: 17, maxZoom: 19,  // OpenTopoMap stops at z17; stretch tiles beyond so switching never clamps
+    attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, SRTM | Map style: &copy; <a href="https://opentopomap.org" target="_blank" rel="noopener">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC-BY-SA</a>)'
+  })
 };
 // Hillshade: a tile layer whose URLs are ArcGIS export requests for each
 // tile's Web Mercator bounding box. Sits in its own pane between the base
@@ -200,6 +218,54 @@ try { savedBase = localStorage.getItem(BASE_KEY); savedHill = localStorage.getIt
 if (savedHill === 'on') hillshade.addTo(map);
 L.control.layers(baseMaps, { 'Hillshade': hillshade }, { position: 'topleft' }).addTo(map);
 map.on('baselayerchange', e => { try { localStorage.setItem(BASE_KEY, e.name); } catch (err) {} });
+// OpenTopoMap tuning panel (issue #46): the OTM palette is loud, and its
+// urban grey is dark, so plain desaturation goes muddy. Two remembered
+// sliders with numeric readouts, shown only while OpenTopoMap is active:
+//  - Colour: saturation on the pane (the CSS filter above), 0% grey to 100%
+//    the original tiles.
+//  - Lighten: fades the tiles over a white map background — a white wash
+//    that lifts the dark fill without losing the topo linework.
+const OTM_SAT_KEY = 'tcbr-otm-sat', OTM_WASH_KEY = 'tcbr-otm-wash';
+const otmPrefs = { sat: 55, wash: 25 };
+try {
+  const s = parseInt(localStorage.getItem(OTM_SAT_KEY), 10);
+  const w = parseInt(localStorage.getItem(OTM_WASH_KEY), 10);
+  if (s >= 0 && s <= 100) otmPrefs.sat = s;
+  if (w >= 0 && w <= 70) otmPrefs.wash = w;
+} catch (e) {}
+const applyOtmPrefs = () => {
+  map.getPane('otm').style.setProperty('--otm-sat', otmPrefs.sat + '%');
+  baseMaps['OpenTopoMap'].setOpacity(1 - otmPrefs.wash / 100);
+};
+applyOtmPrefs();
+const otmSatControl = L.control({ position: 'topleft' });
+otmSatControl.onAdd = () => {
+  const div = L.DomUtil.create('div', 'otm-sat-control');
+  div.innerHTML =
+    '<label>Colour <output>' + otmPrefs.sat + '%</output>' +
+    '<input data-pref="sat" type="range" min="0" max="100" step="5" value="' + otmPrefs.sat + '"></label>' +
+    '<label>Lighten <output>' + otmPrefs.wash + '%</output>' +
+    '<input data-pref="wash" type="range" min="0" max="70" step="5" value="' + otmPrefs.wash + '"></label>';
+  div.querySelectorAll('input').forEach(input => input.addEventListener('input', () => {
+    otmPrefs[input.dataset.pref] = +input.value;
+    input.previousElementSibling.textContent = input.value + '%';
+    applyOtmPrefs();
+    try {
+      localStorage.setItem(OTM_SAT_KEY, otmPrefs.sat);
+      localStorage.setItem(OTM_WASH_KEY, otmPrefs.wash);
+    } catch (e) {}
+  }));
+  L.DomEvent.disableClickPropagation(div);
+  return div;
+};
+const syncOtmSlider = name => {
+  const active = name === 'OpenTopoMap';
+  if (active) otmSatControl.addTo(map); else otmSatControl.remove();
+  // white shows through the faded tiles; other base maps keep the default
+  map.getContainer().style.background = active ? '#fff' : '';
+};
+syncOtmSlider(baseMaps[savedBase] ? savedBase : 'OpenStreetMap');
+map.on('baselayerchange', e => syncOtmSlider(e.name));
 // Overview minimap (issue #37): a fixed frame of the whole network in the
 // bottom-left corner, with a red rectangle marking the current view (click
 // the box to jump there). Always OpenStreetMap (the NRCan tiles are hard to read at country
