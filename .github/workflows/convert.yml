@@ -21,7 +21,22 @@ jobs:
         uses: actions/checkout@v5
 
       - name: Install the map-conversion tools
-        run: pip install --quiet shapely pyproj
+        run: pip install --quiet shapely pyproj numpy
+
+      # Elevation terrain files (~2 GB, one per 1-degree square the routes
+      # touch), kept between runs. On a cache miss they re-download from the
+      # public Terrain Tiles dataset — slower (a few extra minutes), not a
+      # failure. Most runs download nothing: tracks whose geometry didn't
+      # change reuse their stored results from data/profiles_*.json.
+      - name: Keep the elevation terrain files between runs
+        uses: actions/cache@v4
+        with:
+          path: .elevation_tiles
+          # keyed on the current profile results: when a rebuild changes them,
+          # any newly needed terrain files get saved into a fresh cache; the
+          # restore-key still restores the previous set first
+          key: terrain-tiles-${{ hashFiles('data/profiles_*.json') }}
+          restore-keys: terrain-tiles-
 
       - name: Convert the source files to map data
         run: python3 scripts/convert.py

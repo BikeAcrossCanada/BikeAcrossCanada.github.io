@@ -10,8 +10,11 @@
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 <link rel="stylesheet" href="https://unpkg.com/leaflet-minimap@3.6.1/dist/Control.MiniMap.min.css"
       integrity="sha256-p0ab5p0FrFs9Tz4OZgifAvIP+Rd0VFUEbNYjVXVeh9w=" crossorigin="">
+<link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation@2.6.0/dist/leaflet-elevation.min.css"
+      integrity="sha256-Cw03qt3zMjRIGpKLc1iqjUVAvLauJYvyxTBTiISfCmQ=" crossorigin="">
 <style>
   html, body { margin:0; height:100%; font-family: system-ui, sans-serif; }
+  .elev-summary { padding:6px 12px 0; font-size:12.5px; line-height:1.5; }
   #map { position:absolute; inset:0; }
   .topbar {
     position:absolute; top:0; left:0; right:0; z-index:1000;
@@ -149,11 +152,47 @@
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/leaflet-minimap@3.6.1/dist/Control.MiniMap.min.js"
         integrity="sha256-Hb/f1FMaLV+Qn6KSYbc92GxB2bcKp7/efxNeiduEo3g=" crossorigin=""></script>
+<script src="https://unpkg.com/@raruto/leaflet-elevation@2.6.0/dist/leaflet-elevation.min.js"
+        integrity="sha256-dG7l+bdLIhFML5QvOivn1GNMsrmjxrh76vgb+4bkCxk=" crossorigin=""></script>
 <script>
 // minZoom/maxZoom set explicitly: otherwise Leaflet derives them from whatever
 // layers are present, and while a base map is being swapped the hillshade
 // (minZoom 9) is briefly the only bounded layer, so the map snapped to zoom 9.
-const map = L.map('map', { preferCanvas: true, zoomSnap: 0.5, zoomDelta: 0.5, minZoom: 2, maxZoom: 19 });
+// One shared canvas renderer for every vector layer, with a forgiving hit
+// tolerance (default is pixel-perfect, which made tracks fiddly to click).
+// Shared matters: a second canvas renderer (e.g. from a plugin adding its own
+// layer under preferCanvas) stacks above this one and silently swallows all
+// mouse events for layers below it — that broke track hover while an
+// elevation chart was open.
+const routeRenderer = L.canvas({ tolerance: 12 });
+// Clicks go to the longest track in reach, not the topmost. Short one-way
+// variants (divided highways, one-way streets) sit exactly on top of the day
+// rides, and zoomed out the 12 px tolerance spans many km of ground — so with
+// Leaflet's default topmost-wins they swallow every click near a town. POI
+// dots (features without a km property) still win over lines as usual.
+routeRenderer._onClick = function (e) {
+  const point = this._map.mouseEventToLayerPoint(e);
+  let top = null;
+  const trackHits = [];
+  for (let order = this._drawFirst; order; order = order.next) {
+    const layer = order.layer;
+    if (layer.options.interactive && layer._containsPoint(point) &&
+        !((e.type === 'click' || e.type === 'preclick') && this._map._draggableMoved(layer))) {
+      top = layer;
+      if (layer.feature && layer.feature.properties && layer.feature.properties.km != null) {
+        trackHits.push(layer);
+      }
+    }
+  }
+  let chosen = top;
+  if (chosen && trackHits.length > 1 && trackHits.includes(chosen)) {
+    chosen = trackHits.reduce((a, b) =>
+      (b.feature.properties.km > a.feature.properties.km ? b : a));
+  }
+  this._fireEvent(chosen ? [chosen] : false, e);
+};
+const map = L.map('map', { preferCanvas: true, renderer: routeRenderer,
+                           zoomSnap: 0.5, zoomDelta: 0.5, minZoom: 2, maxZoom: 19 });
 map.fitBounds([[46.5, -128.5], [52.5, -53]]);  // frame the network corridor
 // Base maps (issues #20, #46): OpenStreetMap plus two Natural Resources Canada
 // styles, all Open Government Licence - Canada, all read by Leaflet natively.
@@ -314,9 +353,18 @@ const linkify = s => esc(s)
   .replace(/\n/g, '<br>')
   .replace(/(?:<br>\s*)*ID:\s*$/i, '');   // drop trailing empty "ID:" line
 
-function popupHtml(props, emoji) {
+function popupHtml(props, emoji, routeCode) {
   let h = '<b>' + (emoji ? emoji + ' ' : '') + esc(props.name || '(unnamed)') + '</b>';
   if (props.desc) h += '<br>' + linkify(props.desc);
+  // Climb totals + profile link (issue #38), baked in by scripts/elevation.py.
+  // Totals are for the drawn direction; two-way tracks get the swap hint.
+  if (routeCode && props.ascent_m != null) {
+    const hint = props.dir ? '' :
+      ' title="For the direction drawn (eastbound unless noted). Riding the other way, swap the two."';
+    h += '<br><span' + hint + '>↑ ' + props.ascent_m + ' m ↓ ' +
+         props.descent_m + ' m</span> &middot; <a href="#" class="elev-link" data-code="' +
+         routeCode + '" data-eid="' + props.eid + '">elevation profile</a>';
+  }
   return h;
 }
 
@@ -363,7 +411,7 @@ function buildRouteLayer(entry) {
     filter: f => provOk(f.properties) && dirOk(f.properties),
     style: { color: rt.color, weight: rt.weight, opacity: 0.85,
              dashArray: rt.dash || null },
-    onEachFeature: (f, l) => l.bindPopup(popupHtml(f.properties))
+    onEachFeature: (f, l) => l.bindPopup(popupHtml(f.properties, null, rt.code))
   });
   setCount(entry, layer.getLayers()
                        .reduce((a, l) => a + (l.feature.properties.km || 0), 0));
@@ -385,6 +433,103 @@ function buildPoiLayer(entry) {
   setCount(entry, layer.getLayers().length);
   return layer;
 }
+
+// ---- Elevation profiles (issue #38) ----
+// Climb totals live in the track properties; the full profiles sit in
+// data/profiles_<code>.json (one elevation reading per 100 m along each
+// track, keyed by the track's geometry hash "eid"), fetched only when
+// someone opens a profile. The chart is leaflet-elevation; it wants a
+// track with per-point altitudes, so the line is resampled here at the
+// same spacing the bake used and zipped with the stored elevations.
+const profileCache = {};      // code -> parsed profiles_<code>.json (or promise)
+let elevCtl = null, elevHeader = null;
+
+function fetchProfiles(code) {
+  profileCache[code] = profileCache[code] ||
+    fetch('data/profiles_' + code + '.json').then(r => r.json());
+  return profileCache[code];
+}
+
+function resampleTrack(coords, spacing, n) {
+  // mirror of scripts/elevation.py _resample(): a point every `spacing`
+  // metres plus the endpoints; capped at n (the stored elevation count)
+  // so tiny distance-model differences can't misalign the zip
+  const pts = [[coords[0][1], coords[0][0]]];
+  let carry = 0;
+  for (let i = 0; i < coords.length - 1 && pts.length < n; i++) {
+    const a = L.latLng(coords[i][1], coords[i][0]);
+    const b = L.latLng(coords[i + 1][1], coords[i + 1][0]);
+    const d = a.distanceTo(b);
+    if (d <= 0) continue;
+    for (let pos = spacing - carry; pos < d && pts.length < n; pos += spacing) {
+      const t = pos / d;
+      pts.push([a.lat + (b.lat - a.lat) * t, a.lng + (b.lng - a.lng) * t]);
+    }
+    carry = (carry + d) % spacing;
+  }
+  if (pts.length < n) pts.push([coords.at(-1)[1], coords.at(-1)[0]]);
+  return pts;
+}
+
+function showProfile(code, eid) {
+  const entry = layerRegistry.find(e => e.kind === 'route' && e.meta.code === code);
+  const feat = entry && entry.gj.features.find(f => f.properties.eid === eid);
+  if (!feat) return;
+  fetchProfiles(code).then(p => {
+    const tr = p.tracks[eid];
+    if (!tr) return;
+    let last = tr.elev.find(e => e != null) || 0;   // patch rare data voids
+    const elevs = tr.elev.map(e => (e == null ? last : (last = e)));
+    // same orientation rule as scripts/elevation.py bake(): two-way tracks
+    // chart west->east; EB/WB tracks keep their travel direction
+    let coords = feat.geometry.coordinates;
+    if (!feat.properties.dir && coords.at(-1)[0] < coords[0][0])
+      coords = coords.slice().reverse();
+    const pts = resampleTrack(coords, p.spacing_m, elevs.length);
+    const track = { type: 'Feature', properties: { name: feat.properties.name },
+                    geometry: { type: 'LineString',
+                                coordinates: pts.map(([la, ln], i) => [ln, la, elevs[i]]) } };
+    if (!elevCtl) {
+      // the plugin's own summary (min/avg/max elevation) answers the wrong
+      // question, so it's off; the header below shows the deadband-corrected
+      // climb totals from the bake instead (the plugin's raw sum would be
+      // inflated by terrain-model noise — see scripts/elevation.py)
+      elevCtl = L.control.elevation({
+        theme: 'lightblue-theme', position: 'bottomleft',
+        collapsed: false, detached: false, followMarker: false,
+        autofitBounds: false, legend: false, downloadLink: false,
+        summary: false, imperial: false, time: false, speed: false,
+        // the default 'elevation-line' marker draws line+text on the shared
+        // canvas and leaves "undefined m" residue after out-of-range hovers;
+        // the plain dot marker is clean (chart tooltip still shows the values)
+        marker: 'position-marker',
+        // edgeScale paints distance scales onto the map's top/left edges via
+        // its lazy-loaded leaflet-edgescale module — with "undefined m"
+        // labels here, and the site has no use for it anyway
+        edgeScale: false,
+        // almostOver installs a map-wide mousemove handler for the charted
+        // line that stomps the pointer cursor over every OTHER track; off.
+        // (Chart-side hover still moves the marker along the map.)
+        almostOver: false,
+      }).addTo(map);
+      elevHeader = L.DomUtil.create('div', 'elev-summary');
+      elevCtl._container.prepend(elevHeader);
+    }
+    const pr = feat.properties;
+    elevHeader.innerHTML = '<b>' + esc(pr.name) + '</b><br>↑ ' + pr.ascent_m +
+      ' m &nbsp;↓ ' + pr.descent_m + ' m &nbsp;·&nbsp; ' + pr.km + ' km';
+    elevCtl.clear();
+    elevCtl.load(JSON.stringify(track));
+    map.closePopup();
+  }).catch(err => console.error('profile load failed', err));
+}
+
+document.addEventListener('click', e => {
+  const a = e.target.closest('.elev-link');
+  if (!a) return;
+  e.preventDefault();
+  showProfile(a.dataset.code, a.dataset.eid);
+});
 
 // ---- One-way direction arrows ----
 // Sam's One-way_Direction_Arrows layer in My Maps: segments drawn in the
