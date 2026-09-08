@@ -4,9 +4,27 @@
     <link href="http://www.garmin.com">
       <text>Garmin International</text>
     </link>
-    <time>2026-09-07T17:22:16Z</time>
-    <bounds maxlat="51.425843238830566" maxlon="-113.40036392211914" minlat="48.428544569760561" minlon="-123.91951560974121" />
+    <time>2026-09-08T15:28:37Z</time>
+    <bounds maxlat="51.425843238830566" maxlon="-102.27341621182859" minlat="48.428544569760561" minlon="-123.91951560974121" />
   </metadata>
+
+  <wpt lat="50.784473419189453" lon="-112.45099067687988">
+    <time>2026-09-08T13:41:00Z</time>
+    <name>2 Ave and Township Road 212a and Old Trans-Canada Highway (Bassano Homecoming Campground 1km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-08T13:41:00Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
 
   <wpt lat="50.263781547546387" lon="-119.27073240280151">
     <time>2026-09-07T17:02:02Z</time>
@@ -26,6 +44,24 @@
     </extensions>
   </wpt>
 
+  <wpt lat="50.032768249511719" lon="-110.70779085159302">
+    <time>2026-09-08T13:44:36Z</time>
+    <name>7 St SW and Redcliff Dr SW (Gas City Campground 1.5km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-08T13:44:36Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="51.178414821624756" lon="-115.5706787109375">
     <time>2026-09-07T17:13:20Z</time>
     <name>Banff Ave and Wolf St (Tunnel Mountain Village II Campground 2.5km)</name>
@@ -40,6 +76,24 @@
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-07T17:13:20Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.103448756039143" lon="-115.36476259119809">
+    <time>2026-09-08T13:34:59Z</time>
+    <name>Banff Legacy Trl (parallel Bow Valley Trl) and Ray McBride St (Wapiti Campground 124m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-08T13:34:59Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -130,6 +184,24 @@
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-06T18:42:40Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.448145866394043" lon="-104.50916290283203">
+    <time>2026-09-08T14:10:45Z</time>
+    <name>Eastgate Dr and Alley (King's Acres Campground 76m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-08T14:10:45Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -332,6 +404,60 @@
     </extensions>
   </wpt>
 
+  <wpt lat="50.101497173309326" lon="-108.48387479782104">
+    <time>2026-09-08T13:48:52Z</time>
+    <name>Trans-Canada Highway and Highway 37 (Gull Lake Campground 919m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-08T13:48:52Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.408127307891846" lon="-102.94622898101807">
+    <time>2026-09-08T14:18:57Z</time>
+    <name>Trans-Canada Highway and Highway 616 (Grenfell Recreational Park Campground 1.2km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-08T14:18:57Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.525479316711426" lon="-103.65576982498169">
+    <time>2026-09-08T14:14:11Z</time>
+    <name>Trans-Canada Highway and Highway 619 and Experimental Farm Rd (Indian Head Campground 557m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-08T14:14:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="49.364818576723337" lon="-121.52582234703004">
     <time>2026-09-07T13:11:06Z</time>
     <name>Trans-Canada Highway and ramp at Chawuthen Creek (Wild Rose Camping and Rv Park 1.2km)</name>
@@ -346,6 +472,96 @@
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-07T13:11:06Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.455913543701172" lon="-106.65756940841675">
+    <time>2026-09-08T13:52:47Z</time>
+    <name>Trans-Canada Highway and Road (Chaplin Village Campground 748m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-08T13:52:47Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.976527690887451" lon="-109.53161001205444">
+    <time>2026-09-08T13:46:17Z</time>
+    <name>Trans-Canada Highway and Road (Eagle Valley Park Campground 197m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-08T13:46:17Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.309336185455322" lon="-107.7643346786499">
+    <time>2026-09-08T13:50:18Z</time>
+    <name>Trans-Canada Highway and Road (Ponderosa Campground 352m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-08T13:50:18Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.412418842315674" lon="-105.50651550292969">
+    <time>2026-09-08T13:54:36Z</time>
+    <name>Trans-Canada Highway and Thatcher Dr (Prairie Oasis Tourist Complex 524m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-08T13:54:36Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.540564060211182" lon="-111.80391311645508">
+    <time>2026-09-08T13:43:16Z</time>
+    <name>Trans-Canada Highway and Township Road 183d (Tillebrook Provincial Park Campground C 564m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-08T13:43:16Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -382,6 +598,24 @@
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-07T17:21:21Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.337936161085963" lon="-102.27341621182859">
+    <time>2026-09-08T14:22:33Z</time>
+    <name>Trans-Canada Highway1 and Ramp (Whitewood Campground 822m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-08T14:22:33Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
