@@ -4,8 +4,8 @@
     <link href="http://www.garmin.com">
       <text>Garmin International</text>
     </link>
-    <time>2026-09-08T15:28:37Z</time>
-    <bounds maxlat="51.425843238830566" maxlon="-102.27341621182859" minlat="48.428544569760561" minlon="-123.91951560974121" />
+    <time>2026-09-10T14:39:43Z</time>
+    <bounds maxlat="51.425843238830566" maxlon="-83.576087951660156" minlat="46.269071102142334" minlon="-123.91951560974121" />
   </metadata>
 
   <wpt lat="50.784473419189453" lon="-112.45099067687988">
@@ -58,6 +58,24 @@
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-08T13:44:36Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.889152050018311" lon="-97.50516414642334">
+    <time>2026-09-10T13:15:16Z</time>
+    <name>Assiniboine Trl and Road (Winnipeg West KOA Journey 641m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T13:15:16Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -119,6 +137,8 @@
   <wpt lat="49.495987985283136" lon="-119.61718655191362">
     <time>2026-09-07T15:58:10Z</time>
     <name>Channel Pathway (Hi Penticton 2.5km)</name>
+    <cmt>Penticton says Hi</cmt>
+    <desc>Penticton says Hi</desc>
     <sym>Triangle, Green</sym>
     <type>user</type>
     <extensions>
@@ -166,6 +186,24 @@
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-07T15:09:41Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.410088062286377" lon="-91.654279232025146">
+    <time>2026-09-10T13:23:17Z</time>
+    <name>Davey Lake Rd and Alley (Davy Lake Campground and Resort 253m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T13:23:17Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -242,6 +280,276 @@
     </extensions>
   </wpt>
 
+  <wpt lat="49.786133766174316" lon="-92.819538116455078">
+    <time>2026-09-10T13:22:15Z</time>
+    <name>Government St and Alley (Northwestern Tent and Trailer Park 100m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T13:22:15Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.020438194274902" lon="-88.283514976501465">
+    <time>2026-09-10T13:36:05Z</time>
+    <name>Highway 11/17 and Ramp  (Nipigon Marina Campground 3.1km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T13:36:05Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.593301773071289" lon="-89.888570308685303">
+    <time>2026-09-10T13:25:41Z</time>
+    <name>Highway 11/17 and Shabaqua Rd (Timberland Motel &amp; Restaurant 53m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T13:25:41Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.62655739299953" lon="-88.755720388144255">
+    <time>2026-09-10T13:34:22Z</time>
+    <name>Highway 11/17 and W Loon Rd (Mirror Lake Resort Campground 338m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T13:34:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.269071102142334" lon="-83.576087951660156">
+    <time>2026-09-10T14:09:36Z</time>
+    <name>Highway 17 and 17b (Thessalon Lakeside Park Campground 1.2km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T14:09:36Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.335367202758789" lon="-84.615669250488281">
+    <time>2026-09-10T13:50:49Z</time>
+    <name>Highway 17 and Alley (Agawa Bay Campground 85m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T13:50:49Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.984354496002197" lon="-84.801621437072754">
+    <time>2026-09-10T13:47:23Z</time>
+    <name>Highway 17 and Alley (Wawa RV Resort &amp; Campground 222m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T13:47:23Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.83898401260376" lon="-93.460049629211426">
+    <time>2026-09-10T13:20:35Z</time>
+    <name>Highway 17 and Hanslips Rd (Crystal Lake Campground 1.1km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T13:20:35Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.85492992401123" lon="-84.373047351837158">
+    <time>2026-09-10T14:05:55Z</time>
+    <name>Highway 17 and Harmony Beach Rd (Harmony Beach Resort 1.1km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T14:05:55Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.592636585235596" lon="-85.273346900939941">
+    <time>2026-09-10T13:45:07Z</time>
+    <name>Highway 17 and Highway 631 and Elgin St (Continental Motel 510m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T13:45:07Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.759869575500488" lon="-94.470963478088379">
+    <time>2026-09-10T13:19:41Z</time>
+    <name>Highway 17 and Mikana Way (Anicinabe RV Park and Campground 1.0km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T13:19:41Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.748011589050293" lon="-86.338720321655273">
+    <time>2026-09-10T13:38:35Z</time>
+    <name>Highway 17 and Peninsual Rd (Penn Lake Park And Campground 5.7km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T13:38:35Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.781635761260986" lon="-87.102034091949463">
+    <time>2026-09-10T13:36:55Z</time>
+    <name>Highway 17 and Simcoe St (Norwood Motel 122m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T13:36:55Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.044191837310791" lon="-90.469322204589844">
+    <time>2026-09-10T13:24:33Z</time>
+    <name>Highway 17 and Unpaved Road (CAN-OP/G and G Service Upsala Campground 118m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T13:24:33Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.544973850250244" lon="-84.22119140625">
+    <time>2026-09-10T14:07:54Z</time>
+    <name>Highway 17b and Alley (Bell's Point Beach Campground 460m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T14:07:54Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="49.378695487976074" lon="-121.42870903015137">
     <time>2026-09-06T18:47:45Z</time>
     <name>Kawkawa Lake Rd and 7th Ave (Coquihalla Campground 223m)</name>
@@ -274,6 +582,24 @@
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-07T15:12:19Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.85245943069458" lon="-100.93337059020996">
+    <time>2026-09-09T18:04:34Z</time>
+    <name>King St W and 7 Ave S and 7 Ave N (Virden Lions Park Campground 1.3km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-09T18:04:34Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -368,6 +694,42 @@
     </extensions>
   </wpt>
 
+  <wpt lat="49.886791706085205" lon="-99.962046146392822">
+    <time>2026-09-10T12:56:45Z</time>
+    <name>Pth 10 and Trans-Canada Highway and 18th St N (Meadowlark Campground 611m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T12:56:45Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.972987174987793" lon="-98.28993558883667">
+    <time>2026-09-10T13:04:28Z</time>
+    <name>Pth 1a;Pr 240 and Royal Rd S (Portage Industrial Exhibition Campground 1.1km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T13:04:28Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="51.083743572235107" lon="-114.35053110122681">
     <time>2026-09-07T17:15:11Z</time>
     <name>Range Road 33 and Ramp (Calaway Park Campground 258m)</name>
@@ -382,6 +744,24 @@
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-07T17:15:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.690704960376024" lon="-95.331725757569075">
+    <time>2026-09-10T13:17:39Z</time>
+    <name>Trans-Canada Highway (Falcon Lake Beach Campground 1.2km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T13:17:39Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -458,6 +838,42 @@
     </extensions>
   </wpt>
 
+  <wpt lat="49.662923812866211" lon="-96.456806659698486">
+    <time>2026-09-10T13:16:20Z</time>
+    <name>Trans-Canada Highway and Pr 302;44e (Wild Oaks Campground 1.8km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T13:16:20Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.983887672424316" lon="-101.24038696289062">
+    <time>2026-09-09T17:59:28Z</time>
+    <name>Trans-Canada Highway and Provincial Road 256 (Elkhorn Campground 531m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-09T17:59:28Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="49.364818576723337" lon="-121.52582234703004">
     <time>2026-09-07T13:11:06Z</time>
     <name>Trans-Canada Highway and ramp at Chawuthen Creek (Wild Rose Camping and Rv Park 1.2km)</name>
@@ -526,6 +942,24 @@
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-08T13:50:18Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.901490211486816" lon="-99.064300060272217">
+    <time>2026-09-10T12:59:38Z</time>
+    <name>Trans-Canada Highway and Road 70 W (Keeshkeemaquah Campground &amp; RV Park 365m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T12:59:38Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
