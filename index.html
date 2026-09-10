@@ -567,6 +567,14 @@ function showProfile(code, eid) {
         // (Chart-side hover still moves the marker along the map.)
         almostOver: false,
       }).addTo(map);
+      // The chart draws its own copy of the charted track on the shared
+      // canvas, topmost and interactive — it would swallow clicks meant for
+      // the real track underneath (routeRenderer._onClick picks it as `top`,
+      // and with no km property it never yields to a track), so the charted
+      // track's popup couldn't be reopened. The position dot is driven from
+      // the chart side and doesn't need mouse events on this copy.
+      elevCtl.on('eledata_loaded', e =>
+        e.layer.eachLayer(l => { l.options.interactive = false; }));
       elevHeader = L.DomUtil.create('div', 'elev-summary');
       elevCtl._container.prepend(elevHeader);
     }
