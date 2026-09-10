@@ -57,11 +57,20 @@
   @media (min-width:701px) {
     #map { right:280px; }  /* keep OSM attribution visible beside the sidebar */
   }
+  /* Mobile close ✕ for the layers panel (issue #53): sticky so it stays in
+     reach while the panel scrolls; hidden on desktop where the panel is
+     permanent. */
+  #close-sidebar { display:none; }
   @media (max-width:700px) {
     #sidebar { display:none; width:min(280px, 85vw); }
     #sidebar.open { display:block; }
     #toggle-sidebar { display:block; }
-    #toggle-sidebar.shifted { right:calc(min(280px, 85vw) + 8px); }
+    #toggle-sidebar[hidden] { display:none; }
+    #close-sidebar {
+      display:block; position:sticky; top:0; margin-left:auto; z-index:1;
+      background:#fff; border:1px solid #bbb; border-radius:4px;
+      font-size:18px; line-height:1; padding:4px 9px; cursor:pointer; color:#444;
+    }
   }
   .leaflet-popup-content { font-size:13px; max-height:220px; overflow-y:auto; }
   .leaflet-popup-content b { font-size:13.5px; }
@@ -111,6 +120,7 @@
 <div id="map"></div>
 <button id="toggle-sidebar">Layers ☰</button>
 <div id="sidebar">
+<button id="close-sidebar" aria-label="Close layers panel">&times;</button>
 <br>
       <details open>
     <summary>Trans Canada Bike Route Network</summary> 
@@ -942,9 +952,19 @@ dlBtn.addEventListener('click', () => {
   URL.revokeObjectURL(a.href);
 });
 
+// Mobile layers panel (issue #53): the Layers button opens it and then hides
+// (beside an 85vw panel it ended up squeezed off-screen); closing is the ✕ in
+// the panel's corner or a tap anywhere on the map. Desktop is unaffected —
+// the panel is permanent there and all three controls stay hidden.
 const sb = document.getElementById('sidebar'), tg = document.getElementById('toggle-sidebar');
-tg.addEventListener('click', () => {
-  sb.classList.toggle('open'); tg.classList.toggle('shifted');
+const setSidebar = open => {
+  sb.classList.toggle('open', open);
+  tg.hidden = open;
+};
+tg.addEventListener('click', () => setSidebar(true));
+document.getElementById('close-sidebar').addEventListener('click', () => setSidebar(false));
+map.getContainer().addEventListener('click', () => {
+  if (sb.classList.contains('open')) setSidebar(false);
 });
 </script>
 </body>
