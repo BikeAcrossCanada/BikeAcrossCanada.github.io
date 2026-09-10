@@ -15,6 +15,11 @@
 <style>
   html, body { margin:0; height:100%; font-family: system-ui, sans-serif; }
   .elev-summary { padding:6px 12px 0; font-size:12.5px; line-height:1.5; }
+  /* Chart panel at 75% opacity so the map stays visible behind it (issue #54).
+     The panel background moves from the plugin's .background div to the whole
+     control so the summary header above the chart shares it. */
+  .elevation-control { background:rgba(255,255,255,.75); border-radius:6px; }
+  .elevation-control .background { background-color:transparent; }
   #map { position:absolute; inset:0; }
   .topbar {
     position:absolute; top:0; left:0; right:0; z-index:1000;
@@ -517,10 +522,12 @@ function resampleTrack(coords, spacing, n) {
 function showProfile(code, eid) {
   const entry = layerRegistry.find(e => e.kind === 'route' && e.meta.code === code);
   const feat = entry && entry.gj.features.find(f => f.properties.eid === eid);
-  if (!feat) return;
+  if (!feat) { console.error('elevation profile: no feature with eid', eid, 'in', code); return; }
   fetchProfiles(code).then(p => {
     const tr = p.tracks[eid];
-    if (!tr) return;
+    // A missing entry means profiles_<code>.json is out of step with the
+    // geojson (each CI rebuild must commit both) — fail loudly, not silently.
+    if (!tr) { console.error('elevation profile: eid', eid, 'missing from profiles_' + code + '.json'); return; }
     let last = tr.elev.find(e => e != null) || 0;   // patch rare data voids
     const elevs = tr.elev.map(e => (e == null ? last : (last = e)));
     // same orientation rule as scripts/elevation.py bake(): two-way tracks
