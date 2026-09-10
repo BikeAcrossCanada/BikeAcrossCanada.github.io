@@ -74,6 +74,12 @@
     .otm-sat-control label + label { margin-top:4px; }
     .otm-sat-control output { float:right; color:#666; font-variant-numeric:tabular-nums; }
     .otm-sat-control input { width:120px; display:block; margin:3px 0 0; }
+    .otm-sat-close { float:right; border:none; background:none; font-size:15px;
+      line-height:1; color:#888; cursor:pointer; padding:0 0 2px 6px; }
+    .otm-sat-close:hover { color:#333; }
+    /* Attribution wraps instead of spanning the whole bottom edge, so it
+       never covers the minimap or its open/close button on phones (issue #53). */
+    .leaflet-control-attribution { max-width:55vw; white-space:normal; text-align:right; }
     /* overview minimap (issue #37): thin border, keep clear of the attribution */
     .leaflet-control-minimap { border: 1px solid rgba(0,0,0,.35); border-radius: 3px; }
     .leaflet-control-minimap .leaflet-container:focus { outline: none; }  /* no blue ring after a click-to-jump */
@@ -307,10 +313,14 @@ const applyOtmPrefs = () => {
   baseMaps['OpenTopoMap'].setOpacity(1 - otmPrefs.wash / 100);
 };
 applyOtmPrefs();
+// The ✕ hides the panel until the next page load, for small screens where it
+// crowds the map (issue #53); the setting sliders stay live underneath.
+let otmSatClosed = false;
 const otmSatControl = L.control({ position: 'topleft' });
 otmSatControl.onAdd = () => {
   const div = L.DomUtil.create('div', 'otm-sat-control');
   div.innerHTML =
+    '<button type="button" class="otm-sat-close" title="Hide (reload to bring back)" aria-label="Hide colour panel">&times;</button>' +
     '<label>Colour <output>' + otmPrefs.sat + '%</output>' +
     '<input data-pref="sat" type="range" min="0" max="100" step="5" value="' + otmPrefs.sat + '"></label>' +
     '<label>Lighten <output>' + otmPrefs.wash + '%</output>' +
@@ -324,12 +334,16 @@ otmSatControl.onAdd = () => {
       localStorage.setItem(OTM_WASH_KEY, otmPrefs.wash);
     } catch (e) {}
   }));
+  div.querySelector('.otm-sat-close').addEventListener('click', () => {
+    otmSatClosed = true;
+    otmSatControl.remove();
+  });
   L.DomEvent.disableClickPropagation(div);
   return div;
 };
 const syncOtmSlider = name => {
   const active = name === 'OpenTopoMap';
-  if (active) otmSatControl.addTo(map); else otmSatControl.remove();
+  if (active && !otmSatClosed) otmSatControl.addTo(map); else otmSatControl.remove();
   // white shows through the faded tiles; other base maps keep the default
   map.getContainer().style.background = active ? '#fff' : '';
 };
