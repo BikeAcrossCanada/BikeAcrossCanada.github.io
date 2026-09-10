@@ -4,8 +4,8 @@
     <link href="http://www.garmin.com">
       <text>Garmin International</text>
     </link>
-    <time>2026-09-10T14:39:43Z</time>
-    <bounds maxlat="51.425843238830566" maxlon="-83.576087951660156" minlat="46.269071102142334" minlon="-123.91951560974121" />
+    <time>2026-09-10T18:05:30Z</time>
+    <bounds maxlat="51.425843238830566" maxlon="-67.240126132965088" minlat="45.431063175201416" minlon="-123.91951560974121" />
   </metadata>
 
   <wpt lat="50.784473419189453" lon="-112.45099067687988">
@@ -26,6 +26,24 @@
     </extensions>
   </wpt>
 
+  <wpt lat="46.68391227722168" lon="-71.897621154785156">
+    <time>2026-09-10T17:49:35Z</time>
+    <name>2e Ave and Route François-Gignac (Panoramique Camping VR et chalets Parkbridge 513m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T17:49:35Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="50.263781547546387" lon="-119.27073240280151">
     <time>2026-09-07T17:02:02Z</time>
     <name>30 Ave and 30 St (Vernon Hostel 427m)</name>
@@ -40,6 +58,42 @@
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-07T17:02:02Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.016342639923096" lon="-73.185446262359619">
+    <time>2026-09-10T17:42:46Z</time>
+    <name>651 Grande Côte E Rte 138 (Motel Villa D'Autray 36m)</name>
+    <cmt>651 Grande Côte E
+Lanoraie, Québec, J0K1E0, CAN</cmt>
+    <desc>651 Grande Côte E
+Lanoraie, Québec, J0K1E0, CAN</desc>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Address>
+          <gpxx:StreetAddress>651 Grande Côte E</gpxx:StreetAddress>
+          <gpxx:City>Lanoraie</gpxx:City>
+          <gpxx:State>Québec</gpxx:State>
+          <gpxx:Country>CAN</gpxx:Country>
+          <gpxx:PostalCode>J0K1E0</gpxx:PostalCode>
+        </gpxx:Address>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Address>
+          <wptx1:StreetAddress>651 Grande Côte E</wptx1:StreetAddress>
+          <wptx1:City>Lanoraie</wptx1:City>
+          <wptx1:State>Québec</wptx1:State>
+          <wptx1:Country>CAN</wptx1:Country>
+          <wptx1:PostalCode>J0K1E0</wptx1:PostalCode>
+        </wptx1:Address>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T17:42:46Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -80,6 +134,24 @@
     </extensions>
   </wpt>
 
+  <wpt lat="47.217929363250732" lon="-70.265164375305176">
+    <time>2026-09-10T17:53:52Z</time>
+    <name>Avenue de Gaspé E and Chemin de la Grève (Camping Au Bonnet Rouge 108m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T17:53:52Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="51.178414821624756" lon="-115.5706787109375">
     <time>2026-09-07T17:13:20Z</time>
     <name>Banff Ave and Wolf St (Tunnel Mountain Village II Campground 2.5km)</name>
@@ -116,6 +188,42 @@
     </extensions>
   </wpt>
 
+  <wpt lat="45.515220165252686" lon="-73.561105728149414">
+    <time>2026-09-10T17:39:20Z</time>
+    <name>Boulevard de Maisonneuve E and Rue Berri (Auberge Saintlo Montréal 3.3km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T17:39:20Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.417563438415527" lon="-68.612666130065918">
+    <time>2026-09-10T17:56:29Z</time>
+    <name>Boulevard Saint-Germain and Côte de L'Anse-Aux-Sables (Rimouski Camping &amp; Motel Anse 200m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T17:56:29Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="51.425843238830566" lon="-116.17499113082886">
     <time>2026-09-07T17:07:39Z</time>
     <name>Bow Valley Pkwy and Lake Louise Dr (Lake Louise Campground 1.5km)</name>
@@ -130,6 +238,24 @@
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-07T17:07:39Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.264779567718506" lon="-81.770167350769043">
+    <time>2026-09-10T17:03:46Z</time>
+    <name>Centre St and Barber St (Pinewood Motor Inn 970m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T17:03:46Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -150,6 +276,24 @@
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-07T15:58:10Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.475072860717773" lon="-74.060146808624268">
+    <time>2026-09-10T17:38:09Z</time>
+    <name>Chemin Du Camping and Chemin Des Collines (Camping Oka 323m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T17:38:09Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -208,6 +352,24 @@
     </extensions>
   </wpt>
 
+  <wpt lat="46.25394344329834" lon="-79.39619779586792">
+    <time>2026-09-10T17:08:45Z</time>
+    <name>Decaire Rd and Kate Pace Way (Fairview Park Camping &amp; Marina 1.0km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T17:08:45Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="49.27992582321167" lon="-123.11056137084961">
     <time>2026-09-06T18:42:40Z</time>
     <name>Dunsmuir St and Beatty St (Hotel Willo formerly YWCA Hotel / Residence 228m)</name>
@@ -258,6 +420,24 @@
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-07T13:16:27Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.826163291931152" lon="-77.13676929473877">
+    <time>2026-09-10T17:13:15Z</time>
+    <name>Forced Rd and Algonquin Trl (Riverside Park Campground 614m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T17:13:15Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -366,6 +546,24 @@
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-10T14:09:36Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.185686588287354" lon="-82.815263271331787">
+    <time>2026-09-10T14:50:16Z</time>
+    <name>Highway 17 and 538 Highway and Boundary Rd (Lake Lauzon Resort and Marine 876m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T14:50:16Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -532,6 +730,24 @@
     </extensions>
   </wpt>
 
+  <wpt lat="46.377947330474854" lon="-79.97323751449585">
+    <time>2026-09-10T17:07:27Z</time>
+    <name>Highway 17/64 and Levac Rd and Drive In Rd (Cache Bay Trailer Park 2.3km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T17:07:27Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="46.544973850250244" lon="-84.22119140625">
     <time>2026-09-10T14:07:54Z</time>
     <name>Highway 17b and Alley (Bell's Point Beach Campground 460m)</name>
@@ -640,6 +856,24 @@
     </extensions>
   </wpt>
 
+  <wpt lat="45.475308895111084" lon="-76.691286563873291">
+    <time>2026-09-10T17:14:33Z</time>
+    <name>Lochiel St N and Algonquin Trl (Renfrew Ottawa West KOA 9.5km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T17:14:33Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="49.139635562896729" lon="-122.36010074615479">
     <time>2026-09-06T18:39:56Z</time>
     <name>Lougheed Highway and Nelson St (Sun Valley Trout Park 833m)</name>
@@ -654,6 +888,42 @@
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-06T18:39:56Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.169075835496187" lon="-77.818248700350523">
+    <time>2026-09-10T17:11:36Z</time>
+    <name>Mackey Creek Rd and Algonquin Trl (Lakeview Trailer Park 2.2km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T17:11:36Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.431063175201416" lon="-75.70777416229248">
+    <time>2026-09-10T17:15:52Z</time>
+    <name>near Pont Alexandra Bridge and Sentier Des Voyageurs (Ottawa Jail Hostel 2.5km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T17:15:52Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -676,6 +946,24 @@
     </extensions>
   </wpt>
 
+  <wpt lat="46.389491558074951" lon="-81.280782222747803">
+    <time>2026-09-10T17:04:40Z</time>
+    <name>Old Highway 17 and Graham Rd (Centennial Park 333m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T17:04:40Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="48.428544569760561" lon="-123.36975135840476">
     <time>2026-09-07T13:31:36Z</time>
     <name>Pandora Ave and Wharf St and Store St (Ocean Island Backpackers Inn 622m)</name>
@@ -690,6 +978,24 @@
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-07T13:31:36Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.811193823814392" lon="-71.203020298853517">
+    <time>2026-09-10T17:52:26Z</time>
+    <name>Promenade Samuel-de Champlain (Auberge internationale de Québec 1.4km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T17:52:26Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -744,6 +1050,114 @@
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-07T17:15:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.372137546539307" lon="-67.240126132965088">
+    <time>2026-09-10T18:04:42Z</time>
+    <name>Route 132 o and Alley (Camping Causapscal chez Moose 233m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T18:04:42Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.563089370727539" lon="-67.755646705627441">
+    <time>2026-09-10T17:58:43Z</time>
+    <name>Route 132 o and Route Smith (Auberge Camping du Lac Malcom 3.5km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T17:58:43Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.58551549911499" lon="-74.444582462310791">
+    <time>2026-09-10T17:21:13Z</time>
+    <name>Route Des Outaouais and Alley (Camping Brownsburg-Chatham 215m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T17:21:13Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.340782642364502" lon="-72.539634704589844">
+    <time>2026-09-10T17:48:25Z</time>
+    <name>Rue Du Fleuve and Rue Saint-Antoine (Auberge Internationale de Trois-Rivieres 850m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T17:48:25Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.835867404937744" lon="-69.537169933319092">
+    <time>2026-09-10T17:55:08Z</time>
+    <name>Rue Lafontaine and Rue de L'Hôtel-de-Ville  (Auberge internationale de Rivière-du-loup 158m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T17:55:08Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.606307983398438" lon="-75.112903118133545">
+    <time>2026-09-10T17:19:52Z</time>
+    <name>Rue Principale and Rue Papineau (Cédrière, Parc National de Plaisance 4.3km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T17:19:52Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -1050,6 +1464,24 @@
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-08T14:22:33Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.315576918423176" lon="-78.690672386437654">
+    <time>2026-09-10T17:10:22Z</time>
+    <name>Valois Dr Hwy 17 (Valois' Motel &amp; Resturant 122m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-10T17:10:22Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
