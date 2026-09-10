@@ -24,7 +24,10 @@
   .topbar h1 { font-size:17px; margin:0; }
   .topbar .sub { font-size:12px; color:#666; }
   .topbar a { color:#0a58a3; }
-  #map { top:44px; }
+  /* --topbar-h is measured from the real header height (script below): the
+     title wraps to several lines on phones, so a fixed 44px buried the zoom
+     buttons under it (issue #53). */
+  #map { top:var(--topbar-h, 44px); }
   .emoji-pin { background:none; border:none; font-size:18px; line-height:20px;
     text-align:center; text-shadow:0 1px 2px rgba(255,255,255,.95), 0 0 3px #fff; }
   .arrow-pin { background:none; border:none; }
@@ -32,7 +35,7 @@
   .legend-shield { height:20px; width:auto; flex:none; }
   /* sidebar */
   #sidebar {
-    position:absolute; top:44px; right:0; bottom:0; z-index:999; width:280px;
+    position:absolute; top:var(--topbar-h, 44px); right:0; bottom:0; z-index:999; width:280px;
     background:#fff; border-left:1px solid #ddd; overflow-y:auto;
     padding:10px 14px 40px; box-sizing:border-box; font-size:13px;
   }
@@ -47,7 +50,7 @@
   #sidebar details summary { cursor:pointer; font-weight:600; }
   #sidebar details p, #sidebar details li { font-size:12.5px; color:#333; }
   #toggle-sidebar {
-    position:absolute; top:52px; right:8px; z-index:1001; display:none;
+    position:absolute; top:calc(var(--topbar-h, 44px) + 8px); right:8px; z-index:1001; display:none;
     background:#fff; border:1px solid #bbb; border-radius:4px; padding:4px 8px;
     font-size:13px; cursor:pointer;
   }
@@ -210,8 +213,16 @@ routeRenderer._onClick = function (e) {
   }
   this._fireEvent(chosen ? [chosen] : false, e);
 };
+// Lay the map out below the header's real height: the title wraps on narrow
+// screens, and a fixed 44px left the zoom buttons hidden behind it (issue #53).
+// Re-measured whenever the header reflows (resize, rotation, font load).
+const topbarEl = document.querySelector('.topbar');
+const sizeBelowTopbar = () =>
+  document.documentElement.style.setProperty('--topbar-h', topbarEl.offsetHeight + 'px');
+sizeBelowTopbar();
 const map = L.map('map', { preferCanvas: true, renderer: routeRenderer,
                            zoomSnap: 0.5, zoomDelta: 0.5, minZoom: 2, maxZoom: 19 });
+new ResizeObserver(() => { sizeBelowTopbar(); map.invalidateSize(); }).observe(topbarEl);
 // Shareable view URLs (issue #48): the current view lives in the URL fragment,
 // openstreetmap.org-style — #map=zoom/lat/lng&base=Name&hillshade=1 — rewritten
 // as you pan, zoom, or switch layers, so copying the address bar at any moment
