@@ -18,8 +18,13 @@
   /* Chart panel at 75% opacity so the map stays visible behind it (issue #54).
      The panel background moves from the plugin's .background div to the whole
      control so the summary header above the chart shares it. */
-  .elevation-control { background:rgba(255,255,255,.75); border-radius:6px; }
+  .elevation-control:not(.elevation-collapsed) { background:rgba(255,255,255,.75); border-radius:6px; }
   .elevation-control .background { background-color:transparent; }
+  /* Collapsed state: restyle the plugin's toggle icon to match Leaflet's own
+     controls (zoom, minimap) — their border instead of a floating drop
+     shadow, and no offset so it lines up with the control column. */
+  .elevation-toggle-icon { box-shadow:none; border:2px solid rgba(0,0,0,.2);
+    background-clip:padding-box; right:0; top:0; }
   #map { position:absolute; inset:0; }
   .topbar {
     position:absolute; top:0; left:0; right:0; z-index:1000;
@@ -565,6 +570,10 @@ function showProfile(code, eid) {
       elevHeader = L.DomUtil.create('div', 'elev-summary');
       elevCtl._container.prepend(elevHeader);
     }
+    // The ✖ button collapses the control rather than removing it, and the
+    // collapsed state would otherwise stick for the next profile opened.
+    // Clicking an "elevation profile" link is a clear ask to see the chart.
+    elevCtl._expand();
     const pr = feat.properties;
     elevHeader.innerHTML = '<b>' + esc(pr.name) + '</b><br>↑ ' + pr.ascent_m +
       ' m &nbsp;↓ ' + pr.descent_m + ' m &nbsp;·&nbsp; ' + pr.km + ' km';
