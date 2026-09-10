@@ -80,6 +80,17 @@
     /* Attribution wraps instead of spanning the whole bottom edge, so it
        never covers the minimap or its open/close button on phones (issue #53). */
     .leaflet-control-attribution { max-width:55vw; white-space:normal; text-align:right; }
+    /* On phones the credits start tucked into a small (i) button; tapping
+       toggles the full text (wired up in the script below). */
+    .leaflet-control-attribution.attrib-collapsed {
+      width:24px; height:24px; padding:0; margin:0 5px 5px 0; border-radius:50%;
+      font-size:0; cursor:pointer; overflow:hidden; position:relative;
+      box-shadow:0 1px 4px rgba(0,0,0,.3);
+    }
+    .leaflet-control-attribution.attrib-collapsed::before {
+      content:"i"; position:absolute; inset:0; display:flex; align-items:center;
+      justify-content:center; font:italic bold 14px Georgia, serif; color:#555;
+    }
     /* overview minimap (issue #37): thin border, keep clear of the attribution */
     .leaflet-control-minimap { border: 1px solid rgba(0,0,0,.35); border-radius: 3px; }
     .leaflet-control-minimap .leaflet-container:focus { outline: none; }  /* no blue ring after a click-to-jump */
@@ -292,6 +303,24 @@ let currentBase = startBase;   // for the URL fragment; Leaflet doesn't expose i
 baseMaps[startBase].addTo(map);
 if (linkView.view ? linkView.hillshade : savedHill === 'on') hillshade.addTo(map);
 L.control.layers(baseMaps, { 'Hillshade': hillshade }, { position: 'topleft' }).addTo(map);
+// On phones the map credits collapse to a small (i) button (issue #53) —
+// tap to read them, tap the box (anywhere but a link) to tuck them away.
+// Desktop keeps them always visible. Rotating / resizing re-applies the
+// default for the new width. The class survives Leaflet's innerHTML
+// rewrites of the control on base-layer changes.
+const attribEl = document.querySelector('.leaflet-control-attribution');
+const attribMq = matchMedia('(max-width: 700px)');
+const syncAttrib = () => attribEl.classList.toggle('attrib-collapsed', attribMq.matches);
+syncAttrib();
+attribMq.addEventListener('change', syncAttrib);
+attribEl.addEventListener('click', e => {
+  if (!attribMq.matches) return;                    // desktop: plain links
+  const collapsed = attribEl.classList.contains('attrib-collapsed');
+  if (!collapsed && e.target.closest('a')) return;  // expanded: links work
+  e.preventDefault();
+  attribEl.classList.toggle('attrib-collapsed');
+});
+L.DomEvent.disableClickPropagation(attribEl);
 map.on('baselayerchange', e => { try { localStorage.setItem(BASE_KEY, e.name); } catch (err) {} });
 // OpenTopoMap tuning panel (issue #46): the OTM palette is loud, and its
 // urban grey is dark, so plain desaturation goes muddy. Two remembered
