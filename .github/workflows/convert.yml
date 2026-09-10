@@ -46,6 +46,6 @@ jobs:
         run: |
           git config user.name "map-data-updater"
           git config user.email "actions@users.noreply.github.com"
-          git add data/*.geojson data/manifest.json
+          git add data/*.geojson data/profiles_*.json data/manifest.json
           git diff --cached --quiet || git commit -m "Rebuild map data from updated source files"
           git push
