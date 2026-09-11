@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- viewport-fit=cover + the env(safe-area-inset-*) paddings below keep the
+     corner controls clear of the notch and home indicator on iPhones (issue #57) -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Trans Canada Bike Route Network</title>
       <link rel="icon" type="image/png" href="Trans Canada Bike Route Logo Emoji.png">
 <meta name="robots" content="noindex">
@@ -124,6 +126,16 @@
     /* Leaflet disables an overlay's checkbox outside its zoom range but leaves
        the label black; grey it too. */
     .leaflet-control-layers input:disabled + span { color: #999; }
+    /* Safe areas on notched iPhones (issue #57): nudge the map's corner
+       controls, the header, and the panels in from the notch (landscape) and
+       the home indicator; zero everywhere else. */
+    .leaflet-bottom { bottom: env(safe-area-inset-bottom, 0px); }
+    .leaflet-left { left: env(safe-area-inset-left, 0px); }
+    .leaflet-right { right: env(safe-area-inset-right, 0px); }
+    .topbar { padding-left: calc(14px + env(safe-area-inset-left, 0px));
+      padding-right: calc(14px + env(safe-area-inset-right, 0px)); }
+    #sidebar { padding-right: calc(14px + env(safe-area-inset-right, 0px)); }
+    #toggle-sidebar { right: calc(8px + env(safe-area-inset-right, 0px)); }
 </style>
 </head>
 <body>
@@ -999,9 +1011,12 @@ const setSidebar = open => {
 };
 tg.addEventListener('click', () => setSidebar(true));
 document.getElementById('close-sidebar').addEventListener('click', () => setSidebar(false));
-map.getContainer().addEventListener('click', () => {
-  if (sb.classList.contains('open')) setSidebar(false);
-});
+// Capture phase + stopPropagation: the tap that closes the panel must not
+// also reach Leaflet's own handlers, which would open a route popup under
+// the same tap (issue #57).
+map.getContainer().addEventListener('click', e => {
+  if (sb.classList.contains('open')) { setSidebar(false); e.stopPropagation(); }
+}, true);
 </script>
 </body>
 </html>
