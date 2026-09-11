@@ -447,6 +447,13 @@ map.on('moveend zoomend', syncMiniMap);
 syncMiniMap();
 // Click a spot in the box to jump the main map there (same zoom).
 miniMap._miniMap.on('click', e => map.panTo(e.latlng));
+// The plugin pans the MAIN map whenever the mini map moves on its own,
+// assuming the user dragged the aiming rectangle — but with centerFixed +
+// zoomLevelFixed dragging is disabled, so the only "own" moves are artifacts:
+// hiding the container above collapses it to 0×0, Leaflet's ResizeObserver
+// recentres the mini map, and the plugin answered by panning the main map to
+// the network centre ~2s after any fully-zoomed-out load (issue #58).
+miniMap._miniMap.off('moveend', miniMap._onMiniMapMoved, miniMap);
 function addMiniRoute(gj, color) {
   const lines = [];
   (function walk(c) {
