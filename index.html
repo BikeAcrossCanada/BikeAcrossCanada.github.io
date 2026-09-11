@@ -64,14 +64,14 @@
     background:#fff; border:1px solid #bbb; border-radius:4px; padding:4px 8px;
     font-size:13px; cursor:pointer;
   }
-  @media (min-width:701px) {
+  @media (min-width:901px) {
     #map { right:280px; }  /* keep OSM attribution visible beside the sidebar */
   }
   /* Mobile close ✕ for the layers panel (issue #53): sticky so it stays in
      reach while the panel scrolls; hidden on desktop where the panel is
      permanent. */
   #close-sidebar { display:none; }
-  @media (max-width:700px) {
+  @media (max-width:900px) {
     #sidebar { display:none; width:min(280px, 85vw); }
     #sidebar.open { display:block; }
     #toggle-sidebar { display:block; }
@@ -137,10 +137,12 @@
       <center>
       <img src="Trans Canada Bike Route Logo.png" alt="Trans Canada Bike Route Logo.png" width="180" height="auto">
       </center>
-  <select id="prov-select" style="width:100%;margin-top:8px;padding:5px;font-size:13px">
+  <!-- 16px, not smaller: iOS Safari auto-zooms the page (and stays zoomed) on
+       focusing any form control with text under 16px (issue #57) -->
+  <select id="prov-select" style="width:100%;margin-top:8px;padding:5px;font-size:16px">
     <option value="">All of Canada</option>
   </select>
-  <select id="dir-select" style="width:100%;margin-top:6px;padding:5px;font-size:13px">
+  <select id="dir-select" style="width:100%;margin-top:6px;padding:5px;font-size:16px">
     <option value="">Both directions</option>
     <option value="E">West to East</option>
     <option value="W">East to West</option>
@@ -340,7 +342,7 @@ L.control.layers(baseMaps, { 'Hillshade': hillshade }, { position: 'topleft' }).
 // default for the new width. The class survives Leaflet's innerHTML
 // rewrites of the control on base-layer changes.
 const attribEl = document.querySelector('.leaflet-control-attribution');
-const attribMq = matchMedia('(max-width: 700px)');
+const attribMq = matchMedia('(max-width: 900px)');
 const syncAttrib = () => attribEl.classList.toggle('attrib-collapsed', attribMq.matches);
 syncAttrib();
 attribMq.addEventListener('change', syncAttrib);
