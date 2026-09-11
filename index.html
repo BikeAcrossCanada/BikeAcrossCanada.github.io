@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- viewport-fit=cover + the env(safe-area-inset-*) paddings below keep the
+     corner controls clear of the notch and home indicator on iPhones (issue #57) -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Trans Canada Bike Route Network</title>
       <link rel="icon" type="image/png" href="Trans Canada Bike Route Logo Emoji.png">
 <meta name="robots" content="noindex">
@@ -64,14 +66,14 @@
     background:#fff; border:1px solid #bbb; border-radius:4px; padding:4px 8px;
     font-size:13px; cursor:pointer;
   }
-  @media (min-width:701px) {
+  @media (min-width:901px) {
     #map { right:280px; }  /* keep OSM attribution visible beside the sidebar */
   }
   /* Mobile close ✕ for the layers panel (issue #53): sticky so it stays in
      reach while the panel scrolls; hidden on desktop where the panel is
      permanent. */
   #close-sidebar { display:none; }
-  @media (max-width:700px) {
+  @media (max-width:900px) {
     #sidebar { display:none; width:min(280px, 85vw); }
     #sidebar.open { display:block; }
     #toggle-sidebar { display:block; }
@@ -81,6 +83,11 @@
       background:#fff; border:1px solid #bbb; border-radius:4px;
       font-size:18px; line-height:1; padding:4px 9px; cursor:pointer; color:#444;
     }
+    /* The chart spans the screen here, which put the plugin's ✕ flush against
+       the right edge (half a tap target) with the track title running under
+       it (issue #57). */
+    .elevation-toggle-icon { right:6px; top:6px; }
+    .elev-summary { padding-right:48px; }
   }
   .leaflet-popup-content { font-size:13px; max-height:220px; overflow-y:auto; }
   .leaflet-popup-content b { font-size:13.5px; }
@@ -119,6 +126,16 @@
     /* Leaflet disables an overlay's checkbox outside its zoom range but leaves
        the label black; grey it too. */
     .leaflet-control-layers input:disabled + span { color: #999; }
+    /* Safe areas on notched iPhones (issue #57): nudge the map's corner
+       controls, the header, and the panels in from the notch (landscape) and
+       the home indicator; zero everywhere else. */
+    .leaflet-bottom { bottom: env(safe-area-inset-bottom, 0px); }
+    .leaflet-left { left: env(safe-area-inset-left, 0px); }
+    .leaflet-right { right: env(safe-area-inset-right, 0px); }
+    .topbar { padding-left: calc(14px + env(safe-area-inset-left, 0px));
+      padding-right: calc(14px + env(safe-area-inset-right, 0px)); }
+    #sidebar { padding-right: calc(14px + env(safe-area-inset-right, 0px)); }
+    #toggle-sidebar { right: calc(8px + env(safe-area-inset-right, 0px)); }
 </style>
 </head>
 <body>
@@ -137,10 +154,12 @@
       <center>
       <img src="Trans Canada Bike Route Logo.png" alt="Trans Canada Bike Route Logo.png" width="180" height="auto">
       </center>
-  <select id="prov-select" style="width:100%;margin-top:8px;padding:5px;font-size:13px">
+  <!-- 16px, not smaller: iOS Safari auto-zooms the page (and stays zoomed) on
+       focusing any form control with text under 16px (issue #57) -->
+  <select id="prov-select" style="width:100%;margin-top:8px;padding:5px;font-size:16px">
     <option value="">All of Canada</option>
   </select>
-  <select id="dir-select" style="width:100%;margin-top:6px;padding:5px;font-size:13px">
+  <select id="dir-select" style="width:100%;margin-top:6px;padding:5px;font-size:16px">
     <option value="">Both directions</option>
     <option value="E">West to East</option>
     <option value="W">East to West</option>
@@ -340,7 +359,7 @@ L.control.layers(baseMaps, { 'Hillshade': hillshade }, { position: 'topleft' }).
 // default for the new width. The class survives Leaflet's innerHTML
 // rewrites of the control on base-layer changes.
 const attribEl = document.querySelector('.leaflet-control-attribution');
-const attribMq = matchMedia('(max-width: 700px)');
+const attribMq = matchMedia('(max-width: 900px)');
 const syncAttrib = () => attribEl.classList.toggle('attrib-collapsed', attribMq.matches);
 syncAttrib();
 attribMq.addEventListener('change', syncAttrib);
@@ -435,7 +454,9 @@ const miniMap = new L.Control.MiniMap(
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }),
     miniRoutes
   ]),
-  { position: 'bottomleft', width: 260, height: 100,
+  // 60% of the viewport at most: the fixed 260px was 70% of a phone's
+  // bottom edge (issue #57)
+  { position: 'bottomleft', width: Math.min(260, Math.round(window.innerWidth * 0.6)), height: 100,
     zoomLevelFixed: 2, centerFixed: NETWORK_BOUNDS.getCenter(), toggleDisplay: true,
     aimingRectOptions: { color: '#d33', weight: 2, fillOpacity: 0.08 },
     mapOptions: { preferCanvas: true } }
@@ -640,6 +661,9 @@ function showProfile(code, eid) {
         // the plugin's default is 60% of the screen — on wide monitors that
         // hides most of the map, including the charted track (issue #58)
         width: Math.min(0.6 * screen.width, 800),
+        // phones: the default 30%-of-screen-height chart plus its header
+        // covered about half the visible map (issue #57)
+        ...(window.innerWidth <= 900 ? { height: 150 } : {}),
       }).addTo(map);
       // The chart draws its own copy of the charted track on the shared
       // canvas, topmost and interactive — it would swallow clicks meant for
@@ -997,9 +1021,12 @@ const setSidebar = open => {
 };
 tg.addEventListener('click', () => setSidebar(true));
 document.getElementById('close-sidebar').addEventListener('click', () => setSidebar(false));
-map.getContainer().addEventListener('click', () => {
-  if (sb.classList.contains('open')) setSidebar(false);
-});
+// Capture phase + stopPropagation: the tap that closes the panel must not
+// also reach Leaflet's own handlers, which would open a route popup under
+// the same tap (issue #57).
+map.getContainer().addEventListener('click', e => {
+  if (sb.classList.contains('open')) { setSidebar(false); e.stopPropagation(); }
+}, true);
 </script>
 </body>
 </html>
