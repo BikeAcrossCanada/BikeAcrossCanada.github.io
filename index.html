@@ -637,6 +637,9 @@ function showProfile(code, eid) {
         // line that stomps the pointer cursor over every OTHER track; off.
         // (Chart-side hover still moves the marker along the map.)
         almostOver: false,
+        // the plugin's default is 60% of the screen — on wide monitors that
+        // hides most of the map, including the charted track (issue #58)
+        width: Math.min(0.6 * screen.width, 800),
       }).addTo(map);
       // The chart draws its own copy of the charted track on the shared
       // canvas, topmost and interactive — it would swallow clicks meant for
