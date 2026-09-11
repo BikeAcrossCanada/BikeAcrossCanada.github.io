@@ -49,6 +49,56 @@
     </li>
   </ul>
 </details>
+
+<hr>
+
+<details>
+  <summary>
+    <input type="checkbox" id="parent" onclick="toggleChildren(this)">
+    <label for="parent">Parent Category</label>
+  </summary>
+  
+  <div style="margin-left: 20px;">
+    <details>
+      <summary>
+        <input type="checkbox" class="child" onclick="checkParent()">
+        Subcategory 1
+      </summary>
+    </details>
+
+    <details>
+      <summary>
+        <input type="checkbox" class="child" onclick="checkParent()">
+        Subcategory 2
+      </summary>
+    </details>
+  </div>
+</details>
+
+<script>
+  // When parent is checked/unchecked, update all children
+  function toggleChildren(parentCheckbox) {
+    const children = document.querySelectorAll('.child');
+    children.forEach(child => {
+      child.checked = parentCheckbox.checked;
+    });
+  }
+
+  // When a child is changed, update the parent's state
+  function checkParent() {
+    const parent = document.getElementById('parent');
+    const children = Array.from(document.querySelectorAll('.child'));
+    
+    const allChecked = children.every(child => child.checked);
+    const someChecked = children.some(child => child.checked);
+
+    parent.checked = allChecked;
+    // Optional: Visual 'indeterminate' state if only some are checked
+    parent.indeterminate = someChecked && !allChecked;
+  }
+</script>
+
+<hr>
         <mapml-viewer zoom="3" lat="66.9413186" lon="-83.9229196" width="800" height="auto" projection="CBMTILE" controls> <layer- src="https://geogratis.gc.ca/mapml/en/cbmtile/cbmt" label="Canada Base map" checked ></layer->
         </mapml-viewer>
 
