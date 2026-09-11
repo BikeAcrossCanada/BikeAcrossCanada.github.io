@@ -81,6 +81,11 @@
       background:#fff; border:1px solid #bbb; border-radius:4px;
       font-size:18px; line-height:1; padding:4px 9px; cursor:pointer; color:#444;
     }
+    /* The chart spans the screen here, which put the plugin's ✕ flush against
+       the right edge (half a tap target) with the track title running under
+       it (issue #57). */
+    .elevation-toggle-icon { right:6px; top:6px; }
+    .elev-summary { padding-right:48px; }
   }
   .leaflet-popup-content { font-size:13px; max-height:220px; overflow-y:auto; }
   .leaflet-popup-content b { font-size:13.5px; }
@@ -437,7 +442,9 @@ const miniMap = new L.Control.MiniMap(
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }),
     miniRoutes
   ]),
-  { position: 'bottomleft', width: 260, height: 100,
+  // 60% of the viewport at most: the fixed 260px was 70% of a phone's
+  // bottom edge (issue #57)
+  { position: 'bottomleft', width: Math.min(260, Math.round(window.innerWidth * 0.6)), height: 100,
     zoomLevelFixed: 2, centerFixed: NETWORK_BOUNDS.getCenter(), toggleDisplay: true,
     aimingRectOptions: { color: '#d33', weight: 2, fillOpacity: 0.08 },
     mapOptions: { preferCanvas: true } }
@@ -632,6 +639,9 @@ function showProfile(code, eid) {
         // line that stomps the pointer cursor over every OTHER track; off.
         // (Chart-side hover still moves the marker along the map.)
         almostOver: false,
+        // phones: the default 30%-of-screen-height chart plus its header
+        // covered about half the visible map (issue #57)
+        ...(window.innerWidth <= 900 ? { height: 150 } : {}),
       }).addTo(map);
       // The chart draws its own copy of the charted track on the shared
       // canvas, topmost and interactive — it would swallow clicks meant for
