@@ -34,7 +34,10 @@
   .topbar h1 { font-size:17px; margin:0; }
   .topbar .sub { font-size:12px; color:#666; }
   .topbar a { color:#0a58a3; }
-  #map { top:44px; }
+  /* --topbar-h is measured from the real header height (script below): the
+     title wraps to several lines on phones, so a fixed 44px buried the zoom
+     buttons under it (issue #53). */
+  #map { top:var(--topbar-h, 44px); }
   .emoji-pin { background:none; border:none; font-size:18px; line-height:20px;
     text-align:center; text-shadow:0 1px 2px rgba(255,255,255,.95), 0 0 3px #fff; }
   .arrow-pin { background:none; border:none; }
@@ -42,7 +45,7 @@
   .legend-shield { height:20px; width:auto; flex:none; }
   /* sidebar */
   #sidebar {
-    position:absolute; top:44px; right:0; bottom:0; z-index:999; width:280px;
+    position:absolute; top:var(--topbar-h, 44px); right:0; bottom:0; z-index:999; width:280px;
     background:#fff; border-left:1px solid #ddd; overflow-y:auto;
     padding:10px 14px 40px; box-sizing:border-box; font-size:13px;
   }
@@ -57,18 +60,27 @@
   #sidebar details summary { cursor:pointer; font-weight:600; }
   #sidebar details p, #sidebar details li { font-size:12.5px; color:#333; }
   #toggle-sidebar {
-    position:absolute; top:52px; right:8px; z-index:1001; display:none;
+    position:absolute; top:calc(var(--topbar-h, 44px) + 8px); right:8px; z-index:1001; display:none;
     background:#fff; border:1px solid #bbb; border-radius:4px; padding:4px 8px;
     font-size:13px; cursor:pointer;
   }
   @media (min-width:701px) {
     #map { right:280px; }  /* keep OSM attribution visible beside the sidebar */
   }
+  /* Mobile close ✕ for the layers panel (issue #53): sticky so it stays in
+     reach while the panel scrolls; hidden on desktop where the panel is
+     permanent. */
+  #close-sidebar { display:none; }
   @media (max-width:700px) {
     #sidebar { display:none; width:min(280px, 85vw); }
     #sidebar.open { display:block; }
     #toggle-sidebar { display:block; }
-    #toggle-sidebar.shifted { right:calc(min(280px, 85vw) + 8px); }
+    #toggle-sidebar[hidden] { display:none; }
+    #close-sidebar {
+      display:block; position:sticky; top:0; margin-left:auto; z-index:1;
+      background:#fff; border:1px solid #bbb; border-radius:4px;
+      font-size:18px; line-height:1; padding:4px 9px; cursor:pointer; color:#444;
+    }
   }
   .leaflet-popup-content { font-size:13px; max-height:220px; overflow-y:auto; }
   .leaflet-popup-content b { font-size:13.5px; }
@@ -84,6 +96,23 @@
     .otm-sat-control label + label { margin-top:4px; }
     .otm-sat-control output { float:right; color:#666; font-variant-numeric:tabular-nums; }
     .otm-sat-control input { width:120px; display:block; margin:3px 0 0; }
+    .otm-sat-close { float:right; border:none; background:none; font-size:15px;
+      line-height:1; color:#888; cursor:pointer; padding:0 0 2px 6px; }
+    .otm-sat-close:hover { color:#333; }
+    /* Attribution wraps instead of spanning the whole bottom edge, so it
+       never covers the minimap or its open/close button on phones (issue #53). */
+    .leaflet-control-attribution { max-width:55vw; white-space:normal; text-align:right; }
+    /* On phones the credits start tucked into a small (i) button; tapping
+       toggles the full text (wired up in the script below). */
+    .leaflet-control-attribution.attrib-collapsed {
+      width:24px; height:24px; padding:0; margin:0 5px 5px 0; border-radius:50%;
+      font-size:0; cursor:pointer; overflow:hidden; position:relative;
+      box-shadow:0 1px 4px rgba(0,0,0,.3);
+    }
+    .leaflet-control-attribution.attrib-collapsed::before {
+      content:"i"; position:absolute; inset:0; display:flex; align-items:center;
+      justify-content:center; font:italic bold 14px Georgia, serif; color:#555;
+    }
     /* overview minimap (issue #37): thin border, keep clear of the attribution */
     .leaflet-control-minimap { border: 1px solid rgba(0,0,0,.35); border-radius: 3px; }
     .leaflet-control-minimap .leaflet-container:focus { outline: none; }  /* no blue ring after a click-to-jump */
@@ -101,6 +130,7 @@
 <div id="map"></div>
 <button id="toggle-sidebar">Layers ☰</button>
 <div id="sidebar">
+<button id="close-sidebar" aria-label="Close layers panel">&times;</button>
 <br>
       <details open>
     <summary>Trans Canada Bike Route Network</summary> 
@@ -203,8 +233,16 @@ routeRenderer._onClick = function (e) {
   }
   this._fireEvent(chosen ? [chosen] : false, e);
 };
+// Lay the map out below the header's real height: the title wraps on narrow
+// screens, and a fixed 44px left the zoom buttons hidden behind it (issue #53).
+// Re-measured whenever the header reflows (resize, rotation, font load).
+const topbarEl = document.querySelector('.topbar');
+const sizeBelowTopbar = () =>
+  document.documentElement.style.setProperty('--topbar-h', topbarEl.offsetHeight + 'px');
+sizeBelowTopbar();
 const map = L.map('map', { preferCanvas: true, renderer: routeRenderer,
                            zoomSnap: 0.5, zoomDelta: 0.5, minZoom: 2, maxZoom: 19 });
+new ResizeObserver(() => { sizeBelowTopbar(); map.invalidateSize(); }).observe(topbarEl);
 // Shareable view URLs (issue #48): the current view lives in the URL fragment,
 // openstreetmap.org-style — #map=zoom/lat/lng&base=Name&hillshade=1 — rewritten
 // as you pan, zoom, or switch layers, so copying the address bar at any moment
@@ -296,6 +334,24 @@ let currentBase = startBase;   // for the URL fragment; Leaflet doesn't expose i
 baseMaps[startBase].addTo(map);
 if (linkView.view ? linkView.hillshade : savedHill === 'on') hillshade.addTo(map);
 L.control.layers(baseMaps, { 'Hillshade': hillshade }, { position: 'topleft' }).addTo(map);
+// On phones the map credits collapse to a small (i) button (issue #53) —
+// tap to read them, tap the box (anywhere but a link) to tuck them away.
+// Desktop keeps them always visible. Rotating / resizing re-applies the
+// default for the new width. The class survives Leaflet's innerHTML
+// rewrites of the control on base-layer changes.
+const attribEl = document.querySelector('.leaflet-control-attribution');
+const attribMq = matchMedia('(max-width: 700px)');
+const syncAttrib = () => attribEl.classList.toggle('attrib-collapsed', attribMq.matches);
+syncAttrib();
+attribMq.addEventListener('change', syncAttrib);
+attribEl.addEventListener('click', e => {
+  if (!attribMq.matches) return;                    // desktop: plain links
+  const collapsed = attribEl.classList.contains('attrib-collapsed');
+  if (!collapsed && e.target.closest('a')) return;  // expanded: links work
+  e.preventDefault();
+  attribEl.classList.toggle('attrib-collapsed');
+});
+L.DomEvent.disableClickPropagation(attribEl);
 map.on('baselayerchange', e => { try { localStorage.setItem(BASE_KEY, e.name); } catch (err) {} });
 // OpenTopoMap tuning panel (issue #46): the OTM palette is loud, and its
 // urban grey is dark, so plain desaturation goes muddy. Two remembered
@@ -317,10 +373,14 @@ const applyOtmPrefs = () => {
   baseMaps['OpenTopoMap'].setOpacity(1 - otmPrefs.wash / 100);
 };
 applyOtmPrefs();
+// The ✕ hides the panel until the next page load, for small screens where it
+// crowds the map (issue #53); the setting sliders stay live underneath.
+let otmSatClosed = false;
 const otmSatControl = L.control({ position: 'topleft' });
 otmSatControl.onAdd = () => {
   const div = L.DomUtil.create('div', 'otm-sat-control');
   div.innerHTML =
+    '<button type="button" class="otm-sat-close" title="Hide (reload to bring back)" aria-label="Hide colour panel">&times;</button>' +
     '<label>Colour <output>' + otmPrefs.sat + '%</output>' +
     '<input data-pref="sat" type="range" min="0" max="100" step="5" value="' + otmPrefs.sat + '"></label>' +
     '<label>Lighten <output>' + otmPrefs.wash + '%</output>' +
@@ -334,12 +394,16 @@ otmSatControl.onAdd = () => {
       localStorage.setItem(OTM_WASH_KEY, otmPrefs.wash);
     } catch (e) {}
   }));
+  div.querySelector('.otm-sat-close').addEventListener('click', () => {
+    otmSatClosed = true;
+    otmSatControl.remove();
+  });
   L.DomEvent.disableClickPropagation(div);
   return div;
 };
 const syncOtmSlider = name => {
   const active = name === 'OpenTopoMap';
-  if (active) otmSatControl.addTo(map); else otmSatControl.remove();
+  if (active && !otmSatClosed) otmSatControl.addTo(map); else otmSatControl.remove();
   // white shows through the faded tiles; other base maps keep the default
   map.getContainer().style.background = active ? '#fff' : '';
 };
@@ -912,9 +976,19 @@ dlBtn.addEventListener('click', () => {
   URL.revokeObjectURL(a.href);
 });
 
+// Mobile layers panel (issue #53): the Layers button opens it and then hides
+// (beside an 85vw panel it ended up squeezed off-screen); closing is the ✕ in
+// the panel's corner or a tap anywhere on the map. Desktop is unaffected —
+// the panel is permanent there and all three controls stay hidden.
 const sb = document.getElementById('sidebar'), tg = document.getElementById('toggle-sidebar');
-tg.addEventListener('click', () => {
-  sb.classList.toggle('open'); tg.classList.toggle('shifted');
+const setSidebar = open => {
+  sb.classList.toggle('open', open);
+  tg.hidden = open;
+};
+tg.addEventListener('click', () => setSidebar(true));
+document.getElementById('close-sidebar').addEventListener('click', () => setSidebar(false));
+map.getContainer().addEventListener('click', () => {
+  if (sb.classList.contains('open')) setSidebar(false);
 });
 </script>
 </body>
