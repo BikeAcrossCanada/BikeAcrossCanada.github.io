@@ -4,8 +4,8 @@
     <link href="http://www.garmin.com">
       <text>Garmin International</text>
     </link>
-    <time>2026-09-10T18:05:30Z</time>
-    <bounds maxlat="51.425843238830566" maxlon="-67.240126132965088" minlat="45.431063175201416" minlon="-123.91951560974121" />
+    <time>2026-09-12T16:48:01Z</time>
+    <bounds maxlat="51.425843238830566" maxlon="-52.697403430938721" minlat="45.431063175201416" minlon="-125.90960741043091" />
   </metadata>
 
   <wpt lat="50.784473419189453" lon="-112.45099067687988">
@@ -202,6 +202,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-10T17:39:20Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.033342361450195" lon="-66.70447826385498">
+    <time>2026-09-12T16:01:47Z</time>
+    <name>Boulevard Perron o and Boulevard Perron E and Boulevard Inter-Provincial (Camping Green Park house Gaspésien 1.1km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-12T16:01:47Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -406,6 +424,26 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="45.61049222946167" lon="-62.004733085632324">
+    <time>2026-09-12T16:22:14Z</time>
+    <name>Exit 32 and NS 104 TCH (Whidden Park Campground and Cottages 2.1km)</name>
+    <cmt>Exit 32</cmt>
+    <desc>Exit 32</desc>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-12T16:22:14Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="48.616197109222412" lon="-123.52154016494751">
     <time>2026-09-07T13:16:27Z</time>
     <name>Ferry Rd and Mill Bay Rd (Bamberton Provincial Park Campground 2.4km)</name>
@@ -420,6 +458,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-07T13:16:27Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.154055118560791" lon="-125.90960741043091">
+    <time>2026-09-12T16:46:35Z</time>
+    <name>First St (Hi-Tofino - Whalers on the Point Guesthouse 165m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-12T16:46:35Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -474,6 +530,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-10T13:22:15Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.237335205078125" lon="-63.123493194580078">
+    <time>2026-09-12T16:09:25Z</time>
+    <name>Grafton St and Hillsborough St (HI Charlottetown Backpackers Inn 175m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-12T16:09:25Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -946,6 +1020,42 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="46.240382194519043" lon="-60.4962158203125">
+    <time>2026-09-12T16:24:48Z</time>
+    <name>Ns 105;Tch and New Harris Rd (North Sydney / Cabot Trail KOA 348m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-12T16:24:48Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.968084335327148" lon="-61.109926700592041">
+    <time>2026-09-12T16:23:49Z</time>
+    <name>Ns 105;Tch and Provincial Park Rd (Whycocomagh Provincial Park 725m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-12T16:23:49Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="46.389491558074951" lon="-81.280782222747803">
     <time>2026-09-10T17:04:40Z</time>
     <name>Old Highway 17 and Graham Rd (Centennial Park 333m)</name>
@@ -967,6 +1077,10 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
   <wpt lat="48.428544569760561" lon="-123.36975135840476">
     <time>2026-09-07T13:31:36Z</time>
     <name>Pandora Ave and Wharf St and Store St (Ocean Island Backpackers Inn 622m)</name>
+    <cmt>&lt;img src="https://BikeAcrossCanada.github.io/images/shields/shield_C3.png"&gt;</cmt>
+    <desc>&lt;img src="https://BikeAcrossCanada.github.io/images/shields/shield_C3.png"&gt;</desc>
+    <link href="E:/Trans%20Canada%20Bike%20Route%20Network/2026%20Trans%20Canada%20Bike%20Route%20Network/Sandbox.kml" />
+    <link href="https://bikeacrosscanada.github.io/images/shields/shield_C3.png" />
     <sym>Triangle, Green</sym>
     <type>user</type>
     <extensions>
@@ -1050,6 +1164,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-07T17:15:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.968955993652344" lon="-65.329470634460449">
+    <time>2026-09-12T16:03:53Z</time>
+    <name>Route 11 and N Black River Rd (Miramichi Treehouse &amp; Camping Adventures 1.3km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-12T16:03:53Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -1144,6 +1276,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="46.222958564758301" lon="-64.519658088684082">
+    <time>2026-09-12T16:04:56Z</time>
+    <name>Rue Main and South Cove Rd (South Cove Camping and Golf 156m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-12T16:04:56Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="45.606307983398438" lon="-75.112903118133545">
     <time>2026-09-10T17:19:52Z</time>
     <name>Rue Principale and Rue Papineau (Cédrière, Parc National de Plaisance 4.3km)</name>
@@ -1158,6 +1308,114 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-10T17:19:52Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.650215625762939" lon="-65.678608417510986">
+    <time>2026-09-12T16:02:52Z</time>
+    <name>Saint Peter Ave and Youghall Dr (Bathurst Marina Campground 4.8km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-12T16:02:52Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.209075450897217" lon="-60.245633125305176">
+    <time>2026-09-12T16:26:00Z</time>
+    <name>TCH and Marine Atlantic - North Sydney Terminal (North Sydney-Argentia NL Ferry 16hrs)</name>
+    <cmt>Marine Atlantic - North Sydney Terminal
+149 Prince St
+North Sydney, Nova Scotia, CAN</cmt>
+    <desc>Marine Atlantic - North Sydney Terminal
+149 Prince St
+North Sydney, Nova Scotia, CAN</desc>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Address>
+          <gpxx:StreetAddress>149 Prince St</gpxx:StreetAddress>
+          <gpxx:City>North Sydney</gpxx:City>
+          <gpxx:State>Nova Scotia</gpxx:State>
+          <gpxx:Country>CAN</gpxx:Country>
+        </gpxx:Address>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Address>
+          <wptx1:StreetAddress>149 Prince St</wptx1:StreetAddress>
+          <wptx1:City>North Sydney</wptx1:City>
+          <wptx1:State>Nova Scotia</wptx1:State>
+          <wptx1:Country>CAN</wptx1:Country>
+        </wptx1:Address>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-12T16:26:00Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.254117367789149" lon="-63.673136662691832">
+    <time>2026-09-12T16:07:54Z</time>
+    <name>Trans Canada Highway (Borden / Summerside KOA Journey 170m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-12T16:07:54Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.408361006528139" lon="-53.305560378357768">
+    <time>2026-09-12T16:28:19Z</time>
+    <name>Trans Canada Highway and Exit 32 Brigus Junction Gushue's Pond (Gushue's Pond Park 1.8km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-12T16:28:19Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.964972972869873" lon="-62.748820781707764">
+    <time>2026-09-12T16:15:17Z</time>
+    <name>Trans Canada Highway and Shore Rd (Northumberland Provincial Park 4.7km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-12T16:15:17Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -1500,6 +1758,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-07T17:03:32Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.570886611938477" lon="-52.697403430938721">
+    <time>2026-09-12T16:30:10Z</time>
+    <name>Water St and Temperance St (HI-St.John's City Hostel 506m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-12T16:30:10Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
