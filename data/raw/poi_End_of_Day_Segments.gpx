@@ -4,7 +4,7 @@
     <link href="http://www.garmin.com">
       <text>Garmin International</text>
     </link>
-    <time>2026-09-12T16:48:01Z</time>
+    <time>2026-09-12T17:58:04Z</time>
     <bounds maxlat="51.425843238830566" maxlon="-52.697403430938721" minlat="45.431063175201416" minlon="-125.90960741043091" />
   </metadata>
 
@@ -348,6 +348,42 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-07T15:09:41Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.010610580444336" lon="-118.77615451812744">
+    <time>2026-09-12T17:44:37Z</time>
+    <name>Crowsnest Highway and Florence St (Frank Carpenter Memorial Campground 775m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-12T17:44:37Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.039707183837891" lon="-118.20857763290405">
+    <time>2026-09-12T17:45:58Z</time>
+    <name>Crowsnest Highway and W Lake Dr (Christina Pines Campground 654m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-12T17:45:58Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -840,6 +876,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="49.672386646270752" lon="-116.82472944259644">
+    <time>2026-09-12T17:52:38Z</time>
+    <name>Highway 3a and Peters Rd (Kokanee Chalets, RV Park and Campground 181m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-12T17:52:38Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="49.378695487976074" lon="-121.42870903015137">
     <time>2026-09-06T18:47:45Z</time>
     <name>Kawkawa Lake Rd and 7th Ave (Coquihalla Campground 223m)</name>
@@ -984,6 +1038,60 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="49.027926921844482" lon="-119.43681478500366">
+    <time>2026-09-12T17:43:10Z</time>
+    <name>Main St and 45th St (Nk'mip Campgrounds 1.4km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-12T17:43:10Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.206154346466064" lon="-124.0350866317749">
+    <time>2026-09-12T17:36:25Z</time>
+    <name>Mostar Rd and Parkway Trl (Jingle Pot RV Park and Campground 425m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-12T17:36:25Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.056744575500488" lon="-125.71865558624268">
+    <time>2026-09-12T17:31:58Z</time>
+    <name>Multi-Use Pathway (Green Point Campground 230m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-12T17:31:58Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="45.431063175201416" lon="-75.70777416229248">
     <time>2026-09-10T17:15:52Z</time>
     <name>near Pont Alexandra Bridge and Sentier Des Voyageurs (Ottawa Jail Hostel 2.5km)</name>
@@ -1074,13 +1182,33 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="49.295096397399902" lon="-124.93324041366577">
+    <time>2026-09-12T17:34:46Z</time>
+    <name>Pacific Rim Highway and Lakeshore Rd (Sproat Lake Provincial Park Campground 720m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-12T17:34:46Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="48.428544569760561" lon="-123.36975135840476">
     <time>2026-09-07T13:31:36Z</time>
     <name>Pandora Ave and Wharf St and Store St (Ocean Island Backpackers Inn 622m)</name>
-    <cmt>&lt;img src="https://BikeAcrossCanada.github.io/images/shields/shield_C3.png"&gt;</cmt>
-    <desc>&lt;img src="https://BikeAcrossCanada.github.io/images/shields/shield_C3.png"&gt;</desc>
-    <link href="E:/Trans%20Canada%20Bike%20Route%20Network/2026%20Trans%20Canada%20Bike%20Route%20Network/Sandbox.kml" />
-    <link href="https://bikeacrosscanada.github.io/images/shields/shield_C3.png" />
+    <cmt>&lt;img src="https://BikeAcrossCanada.github.io/images/shields/shield_C3.png"&gt;
+&lt;img src="https://BikeAcrossCanada.github.io/images/shields/shield_C3.png" alt="BikeAcrossCanada.github.io/images/shields/shield_C3.png"&gt;
+&lt;img src="images/shields/shield_C3.png" alt="images/shields/shield_C3.png"&gt;</cmt>
+    <desc>&lt;img src="https://BikeAcrossCanada.github.io/images/shields/shield_C3.png"&gt;
+&lt;img src="https://BikeAcrossCanada.github.io/images/shields/shield_C3.png" alt="BikeAcrossCanada.github.io/images/shields/shield_C3.png"&gt;
+&lt;img src="images/shields/shield_C3.png" alt="images/shields/shield_C3.png"&gt;</desc>
     <sym>Triangle, Green</sym>
     <type>user</type>
     <extensions>
@@ -1164,6 +1292,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-07T17:15:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.333870410919189" lon="-117.66114950180054">
+    <time>2026-09-12T17:47:11Z</time>
+    <name>Robson Rd and Broadwater Rd (Pass Creek Regional Park Campground 696m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-12T17:47:11Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
