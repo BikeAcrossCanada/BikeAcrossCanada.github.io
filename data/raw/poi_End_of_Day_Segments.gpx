@@ -4,9 +4,63 @@
     <link href="http://www.garmin.com">
       <text>Garmin International</text>
     </link>
-    <time>2026-09-12T17:58:04Z</time>
+    <time>2026-09-13T18:27:04Z</time>
     <bounds maxlat="51.425843238830566" maxlon="-52.697403430938721" minlat="45.431063175201416" minlon="-125.90960741043091" />
   </metadata>
+
+  <wpt lat="49.633591175079346" lon="-105.99184513092041">
+    <time>2026-09-13T17:27:30Z</time>
+    <name>1 Ave W and Centre St and 1st Ave E (Assiniboia Regional Park Campground 936m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-13T17:27:30Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.111289475113153" lon="-116.52350664138794">
+    <time>2026-09-13T13:06:30Z</time>
+    <name>1310 Northwest Blvd (Pair-a-Dice RV Park &amp; Campground 93m)</name>
+    <cmt>1310 Northwest Blvd
+Creston, British Columbia, V0B1G6, CAN</cmt>
+    <desc>1310 Northwest Blvd
+Creston, British Columbia, V0B1G6, CAN</desc>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Address>
+          <gpxx:StreetAddress>1310 Northwest Blvd</gpxx:StreetAddress>
+          <gpxx:City>Creston</gpxx:City>
+          <gpxx:State>British Columbia</gpxx:State>
+          <gpxx:Country>CAN</gpxx:Country>
+          <gpxx:PostalCode>V0B1G6</gpxx:PostalCode>
+        </gpxx:Address>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Address>
+          <wptx1:StreetAddress>1310 Northwest Blvd</wptx1:StreetAddress>
+          <wptx1:City>Creston</wptx1:City>
+          <wptx1:State>British Columbia</wptx1:State>
+          <wptx1:Country>CAN</wptx1:Country>
+          <wptx1:PostalCode>V0B1G6</wptx1:PostalCode>
+        </wptx1:Address>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-13T13:06:30Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
 
   <wpt lat="50.784473419189453" lon="-112.45099067687988">
     <time>2026-09-08T13:41:00Z</time>
@@ -22,6 +76,24 @@
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-08T13:41:00Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.621708150953054" lon="-114.46432951837778">
+    <time>2026-09-13T13:14:01Z</time>
+    <name>20 Ave (Lost Lemon Campground 1.4km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-13T13:14:01Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -94,6 +166,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-10T17:42:46Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.867372512817383" lon="-111.37941598892212">
+    <time>2026-09-13T17:20:14Z</time>
+    <name>7 Ave E and 7 Ave W and Centre St (Bow Island Centennial Park &amp; Campground 599m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-13T17:20:14Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -316,6 +406,42 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="49.710370833054185" lon="-112.8736094199121">
+    <time>2026-09-13T17:18:37Z</time>
+    <name>Crowsnest Highway (Bridgeview RV Resort 1.6km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-13T17:18:37Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.522168859839439" lon="-113.95086460746825">
+    <time>2026-09-13T17:17:03Z</time>
+    <name>Crowsnest Highway (Sleepy Hollow Campground 4.2km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-13T17:17:03Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="49.205038547515869" lon="-119.85970258712769">
     <time>2026-09-07T15:16:39Z</time>
     <name>Crowsnest Highway and 10th Ave (Eagle RV Park and Campground 151m)</name>
@@ -330,6 +456,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-07T15:16:39Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.508686065673828" lon="-115.06380558013916">
+    <time>2026-09-13T13:11:48Z</time>
+    <name>Crowsnest Highway and 9th St (The Raging Elk Hostel 171m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-13T13:11:48Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -460,6 +604,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="49.727532863616943" lon="-107.73656845092773">
+    <time>2026-09-13T17:26:01Z</time>
+    <name>Essex Ave and Red Coat Trl and De Dion St (Cadillac Campground 370m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-13T17:26:01Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="45.61049222946167" lon="-62.004733085632324">
     <time>2026-09-12T16:22:14Z</time>
     <name>Exit 32 and NS 104 TCH (Whidden Park Campground and Cottages 2.1km)</name>
@@ -548,6 +710,42 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-06T18:53:00Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.025558471679688" lon="-110.71150302886963">
+    <time>2026-09-13T17:21:46Z</time>
+    <name>Gershaw Dr SW (Gas City Campground 2.2km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-13T17:21:46Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.668309688568115" lon="-103.85818004608154">
+    <time>2026-09-13T17:47:23Z</time>
+    <name>Government Rd and 1st Ave NW and King St (River Park Campground 1.6km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-13T17:47:23Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -1296,6 +1494,78 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="49.51439380645752" lon="-108.82554531097412">
+    <time>2026-09-13T17:23:49Z</time>
+    <name>Red Coat Dr and Tamarack Ave (Town Of Eastend Campground 567m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-13T17:23:49Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.646337032318115" lon="-108.42162609100342">
+    <time>2026-09-13T17:24:55Z</time>
+    <name>Red Coat Trl and 5 Ave W (Town Of Eastend Campground 567m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-13T17:24:55Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.668266773223877" lon="-103.02253246307373">
+    <time>2026-09-13T17:48:20Z</time>
+    <name>Red Coat Trl and Highway 47 (The Stoughton Campground 1.9km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-13T17:48:20Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.639170169830322" lon="-104.66378688812256">
+    <time>2026-09-13T17:45:43Z</time>
+    <name>Red Coat Trl and Mergens St (Pangman Campground and RV Park 615m)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-13T17:45:43Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="49.333870410919189" lon="-117.66114950180054">
     <time>2026-09-12T17:47:11Z</time>
     <name>Robson Rd and Broadwater Rd (Pass Creek Regional Park Campground 696m)</name>
@@ -1886,6 +2156,24 @@ North Sydney, Nova Scotia, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-10T17:10:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.508557319641113" lon="-115.77712297439575">
+    <time>2026-09-13T13:08:17Z</time>
+    <name>Van Horne St S and 2nd St S (Mount Baker Rv Park 1.2km)</name>
+    <sym>Triangle, Green</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-13T13:08:17Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
