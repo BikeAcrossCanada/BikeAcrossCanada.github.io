@@ -172,6 +172,22 @@ def profile(coords, geod):
             "elev": [None if e is None else int(round(e)) for e in elevs]}
 
 
+def multi_profile(parts, geod):
+    """profile() for a track whose visible stretches are disjoint (a
+    MultiLineString from the direction splitting, issue #61): each part is
+    sampled on its own and the elevations concatenated — the chart shows a
+    step at each seam where a hidden stretch is skipped — and the climb
+    totals are summed per part, so the seam jump is never counted as climb."""
+    ps = [profile(p, geod) for p in parts]
+    return {"ascent_m": sum(p["ascent_m"] for p in ps),
+            "descent_m": sum(p["descent_m"] for p in ps),
+            # per-part sample counts, so the chart's own resampler can pin
+            # each seam exactly (its spherical distances drift a point or
+            # two per part from the geodesic ones used here)
+            "parts": [len(p["elev"]) for p in ps],
+            "elev": [e for p in ps for e in p["elev"]]}
+
+
 def bake(code, feats, geod):
     """Fill ascent_m/descent_m/eid on each feature and (re)write
     data/profiles_<code>.json, reusing cached entries whose geometry hash is
@@ -192,15 +208,19 @@ def bake(code, feats, geod):
         # of untagged tracks are drawn east->west and get reversed here.
         # Direction-tagged (EB/WB) tracks keep their travel direction.
         # index.html's showProfile() mirrors this rule; keep them in sync.
-        coords = f["geometry"]["coordinates"]
-        if "dir" not in f["properties"] and coords[-1][0] < coords[0][0]:
-            coords = coords[::-1]
-        key = track_key(coords)
+        geom = f["geometry"]
+        parts = (geom["coordinates"] if geom["type"] == "MultiLineString"
+                 else [geom["coordinates"]])
+        if "dir" not in f["properties"] and parts[-1][-1][0] < parts[0][0][0]:
+            parts = [p[::-1] for p in parts[::-1]]
+        key = track_key(parts[0] if len(parts) == 1 else parts)
         if key not in tracks:
-            if key in old:
+            # a multi-part entry cached before "parts" existed must recompute
+            if key in old and not (len(parts) > 1 and "parts" not in old[key]):
                 tracks[key] = old[key]
             else:
-                tracks[key] = profile(coords, geod)
+                tracks[key] = (profile(parts[0], geod) if len(parts) == 1
+                               else multi_profile(parts, geod))
                 computed += 1
         f["properties"]["ascent_m"] = tracks[key]["ascent_m"]
         f["properties"]["descent_m"] = tracks[key]["descent_m"]

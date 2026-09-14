@@ -595,24 +595,44 @@ function fetchProfiles(code) {
   return profileCache[code];
 }
 
-function resampleTrack(coords, spacing, n) {
-  // mirror of scripts/elevation.py _resample(): a point every `spacing`
-  // metres plus the endpoints; capped at n (the stored elevation count)
-  // so tiny distance-model differences can't misalign the zip
-  const pts = [[coords[0][1], coords[0][0]]];
-  let carry = 0;
-  for (let i = 0; i < coords.length - 1 && pts.length < n; i++) {
-    const a = L.latLng(coords[i][1], coords[i][0]);
-    const b = L.latLng(coords[i + 1][1], coords[i + 1][0]);
-    const d = a.distanceTo(b);
-    if (d <= 0) continue;
-    for (let pos = spacing - carry; pos < d && pts.length < n; pos += spacing) {
-      const t = pos / d;
-      pts.push([a.lat + (b.lat - a.lat) * t, a.lng + (b.lng - a.lng) * t]);
+// A track whose visible stretches are disjoint (direction splitting,
+// issue #61) arrives as a MultiLineString; everything downstream works on
+// its list of parts, a plain LineString being the one-part case.
+function trackParts(feat) {
+  return feat.geometry.type === 'MultiLineString' ?
+    feat.geometry.coordinates : [feat.geometry.coordinates];
+}
+
+function resampleTrack(parts, spacing, n, partCounts) {
+  // mirror of scripts/elevation.py _resample() run per part: a point every
+  // `spacing` metres plus each part's endpoints, concatenated; capped at n
+  // (the stored elevation count) so tiny distance-model differences can't
+  // misalign the zip. For a multi-part track the sidecar stores each part's
+  // exact sample count ("parts"): pinning every part to it keeps the zip
+  // aligned at every seam, not just overall (spherical distances here vs
+  // geodesic in the bake drift a point or two per part).
+  const pts = [];
+  for (const [j, coords] of parts.entries()) {
+    const cap = Math.min(n, pts.length + (partCounts ? partCounts[j] : n));
+    if (pts.length >= cap) continue;
+    pts.push([coords[0][1], coords[0][0]]);
+    let carry = 0;
+    for (let i = 0; i < coords.length - 1 && pts.length < cap; i++) {
+      const a = L.latLng(coords[i][1], coords[i][0]);
+      const b = L.latLng(coords[i + 1][1], coords[i + 1][0]);
+      const d = a.distanceTo(b);
+      if (d <= 0) continue;
+      for (let pos = spacing - carry; pos < d && pts.length < cap; pos += spacing) {
+        const t = pos / d;
+        pts.push([a.lat + (b.lat - a.lat) * t, a.lng + (b.lng - a.lng) * t]);
+      }
+      carry = (carry + d) % spacing;
     }
-    carry = (carry + d) % spacing;
+    if (pts.length < cap) pts.push([coords.at(-1)[1], coords.at(-1)[0]]);
+    // pinned parts pad to their exact count so the next seam stays aligned
+    while (partCounts && pts.length < cap)
+      pts.push([coords.at(-1)[1], coords.at(-1)[0]]);
   }
-  if (pts.length < n) pts.push([coords.at(-1)[1], coords.at(-1)[0]]);
   return pts;
 }
 
@@ -629,10 +649,15 @@ function showProfile(code, eid) {
     const elevs = tr.elev.map(e => (e == null ? last : (last = e)));
     // same orientation rule as scripts/elevation.py bake(): two-way tracks
     // chart west->east; EB/WB tracks keep their travel direction
-    let coords = feat.geometry.coordinates;
-    if (!feat.properties.dir && coords.at(-1)[0] < coords[0][0])
-      coords = coords.slice().reverse();
-    const pts = resampleTrack(coords, p.spacing_m, elevs.length);
+    let parts = trackParts(feat);
+    if (!feat.properties.dir && parts.at(-1).at(-1)[0] < parts[0][0][0])
+      parts = parts.slice().reverse().map(c => c.slice().reverse());
+    // (a multi-part track charts as one line; the chart's map copy draws a
+    // straight connector across each hidden stretch, which is fine to orient by)
+    // tr.parts (multi-part tracks only): per-part sample counts, stored in
+    // charted orientation — the bake applies the same reversal rule first,
+    // so after the flip above the orders always match
+    const pts = resampleTrack(parts, p.spacing_m, elevs.length, tr.parts);
     const track = { type: 'Feature', properties: { name: feat.properties.name },
                     geometry: { type: 'LineString',
                                 coordinates: pts.map(([la, ln], i) => [ln, la, elevs[i]]) } };
@@ -982,13 +1007,30 @@ function buildGpx() {
                 '    <type>' + xmlEsc(e.meta.title) + '</type>\n  </wpt>\n';
       }
     } else {
+      // One <trk> per source track name: direction and province splitting
+      // emit several features sharing a name, and a MultiLineString feature
+      // carries disjoint stretches — GPX's own model is one track holding
+      // many <trkseg>, so group it all back (issue #61) rather than hand
+      // apps a track list with the same day ride listed twenty times.
+      const byName = new Map();
       for (const f of e.gj.features) {
         if (!provOk(f.properties) || !dirOk(f.properties)) continue;
-        trks += '  <trk>\n    <name>' + xmlEsc(e.meta.code + ' ' + (f.properties.name || '')) +
-                '</name>\n    <type>' + xmlEsc(e.meta.code) + '</type>\n    <trkseg>\n' +
-                f.geometry.coordinates.map(c =>
-                  '      <trkpt lat="' + c[1] + '" lon="' + c[0] + '"/>').join('\n') +
-                '\n    </trkseg>\n  </trk>\n';
+        const key = f.properties.name || '';
+        if (!byName.has(key)) byName.set(key, []);
+        // seq = each part's start offset along the source track (metres,
+        // from convert.py): the untagged and one-way features' stretches
+        // interleave along the ride, so file order would zig-zag the <trk>
+        const seq = f.properties.seq || [];
+        trackParts(f).forEach((part, i) =>
+          byName.get(key).push({ off: seq[i] || 0, part }));
+      }
+      for (const [name, segs] of byName) {
+        segs.sort((a, b) => a.off - b.off);
+        trks += '  <trk>\n    <name>' + xmlEsc(e.meta.code + ' ' + name) +
+                '</name>\n    <type>' + xmlEsc(e.meta.code) + '</type>\n' +
+                segs.map(s => '    <trkseg>\n' +
+                  s.part.map(c => '      <trkpt lat="' + c[1] + '" lon="' + c[0] + '"/>').join('\n') +
+                  '\n    </trkseg>').join('\n') + '\n  </trk>\n';
       }
     }
   }

@@ -215,6 +215,42 @@ def track_dir(name):
 PAIR_NEAR_KM = 0.3      # "runs alongside" distance for counterpart detection
 PAIR_MIN_TWIN_KM = 0.2  # projections shorter than this are crossings/noise, not couplets
 PAIR_SAMPLE_M = 100     # counterpart sampling step for the alongside test
+PAIR_GAP_STEPS = 5      # samples allowed to stray past NEAR before a run ends —
+                        # a couplet half weaving across the radius keeps its run.
+                        # Runs never span counterpart tracks, so this cannot
+                        # chain separate stubs (the False Creek bug, issue #61)
+PAIR_MERGE_M = 200      # hidden stretches closer than this along the track merge
+PAIR_JUMP_M = 1200      # a projection jump bigger than this within one run means
+                        # the main line doubles back there, not that the
+                        # counterpart moved on (legit in-run spacing is <= 600 m;
+                        # real hairpins/loops jump by kilometres)
+
+
+def has_opposite_alongside(line_m, opposite_lines):
+    """True when some opposite-direction line runs within PAIR_NEAR_KM of most
+    of THIS track. This is the demotion test for WB variants, and it samples
+    the variant itself — a 40 m one-way stub can find its EB twin here, where
+    counterpart_intervals (which samples the counterpart and projects onto the
+    variant) never can: its minimum projected span is longer than the stub."""
+    if not opposite_lines:
+        return False
+    tree = STRtree(opposite_lines)
+    near_m = PAIR_NEAR_KM * 1000
+    pts = [Point(c) for c in line_m.segmentize(PAIR_SAMPLE_M).coords]
+    near = sum(1 for p in pts
+               if p.distance(opposite_lines[tree.nearest(p)]) <= near_m)
+    return near / len(pts) > 0.5
+
+
+def _merge_spans(spans, tol):
+    """Merge sorted (start, end) spans whose along-track gap is <= tol."""
+    merged = []
+    for a, b in spans:
+        if merged and a <= merged[-1][1] + tol:
+            merged[-1][1] = max(merged[-1][1], b)
+        else:
+            merged.append([a, b])
+    return merged
 
 
 def counterpart_intervals(line_m, opposite_lines):
@@ -236,25 +272,47 @@ def counterpart_intervals(line_m, opposite_lines):
         # a 30 m stub is real for its own tag, yet hiding a 30 m sliver of the
         # main line would just litter the data with degenerate pieces
         min_twin = max(100, min(PAIR_MIN_TWIN_KM * 1000, 0.5 * opp.length))
-        run = []
-        for c in list(opp.segmentize(PAIR_SAMPLE_M).coords) + [None]:
+        # near-runs of the counterpart, tolerant of a brief stray past the
+        # radius: a couplet half weaving across the 300 m line used to end
+        # the run at every crossing, fragmenting it into spans too short
+        # to clear min_twin — so nothing hid where everything should
+        runs, run, miss, opp_spans = [], [], 0, []
+        for c in list(opp.segmentize(PAIR_SAMPLE_M).coords) \
+                 + [None] * (PAIR_GAP_STEPS + 1):
             if c is not None and Point(c).distance(line_m) <= near_m:
                 run.append(c)
-                continue
-            if run:
-                a = line_m.project(Point(run[0]))
-                b = line_m.project(Point(run[-1]))
-                if abs(b - a) >= min_twin:
-                    ivals.append([min(a, b), max(a, b)])
-                run = []
-    ivals.sort()
-    merged = []
-    for iv in ivals:
-        if merged and iv[0] <= merged[-1][1] + 50:
-            merged[-1][1] = max(merged[-1][1], iv[1])
-        else:
-            merged.append(iv)
-    return merged
+                miss = 0
+            elif run:
+                miss += 1
+                if miss > PAIR_GAP_STEPS:
+                    runs.append(run)
+                    run, miss = [], 0
+        for run in runs:
+            # project every sample and split the run wherever the projection
+            # jumps: project() is not monotone where this line doubles back
+            # or closes a loop, and a first-to-last [min, max] span could
+            # hide half a hairpin track off a single crossing stub
+            spans, s0, s1, prev = [], None, None, None
+            for c in run:
+                s = line_m.project(Point(c))
+                if prev is not None and abs(s - prev) > PAIR_JUMP_M:
+                    spans.append((s0, s1))
+                    s0 = s1 = None
+                if s0 is None:
+                    s0 = s1 = s
+                else:
+                    s0, s1 = min(s0, s), max(s1, s)
+                prev = s
+            spans.append((s0, s1))
+            opp_spans.extend((a, b) for a, b in spans if a is not None)
+        # merge this counterpart's spans BEFORE the min_twin test: a weaving
+        # couplet half fragments into sub-min_twin spans a few metres apart,
+        # which individually would all be discarded. Hairpin/loop artifact
+        # spans sit km apart along the line, far beyond the merge reach.
+        for a, b in _merge_spans(sorted(opp_spans), PAIR_MERGE_M):
+            if b - a >= min_twin:
+                ivals.append([a, b])
+    return _merge_spans(sorted(ivals), PAIR_MERGE_M)
 
 
 def split_by_direction(simp, line_m, d, ivals):
@@ -318,6 +376,7 @@ def convert_routes(provinces):
         # carried through tip-to-tail chains regardless of file order.
         track_shields_all = chain_shields(tracks)
         part_split = 0
+        full_hidden = 0
         for ti, (fname, tdir, tsimp, tline_m) in enumerate(tracks):
             if tdir == "E":
                 # Sam draws the route eastbound, so an EB track without a WB
@@ -327,7 +386,11 @@ def convert_routes(provinces):
                 dir_pieces = split_by_direction(tsimp, tline_m, tdir, ivals)
                 if len(dir_pieces) == 1 and dir_pieces[0][0] is None:
                     demoted += 1
-                elif len(dir_pieces) > 1:
+                elif len(dir_pieces) == 1:
+                    # counted separately because "hidden in full" is also what
+                    # a projection bug would produce — it must never be silent
+                    full_hidden += 1
+                else:
                     part_split += 1
             elif tdir == "W":
                 # A WB track is always a deliberate one-way routing, never the
@@ -336,60 +399,64 @@ def convert_routes(provinces):
                 # fragment in the eastbound view. Demote only a WB track with
                 # no EB alongside at all (mislabel / isolated loop): hiding
                 # that one could leave eastbound with nothing there.
-                if counterpart_intervals(tline_m, by_dir["E"]):
+                if has_opposite_alongside(tline_m, by_dir["E"]):
                     dir_pieces = [("W", tsimp, tline_m)]
                 else:
                     dir_pieces = [(None, tsimp, tline_m)]
                     demoted += 1
             else:
                 dir_pieces = [(None, tsimp, tline_m)]
-            # a split track's shields go to whichever piece each sits on
-            all_shields = track_shields_all[ti]
-            if len(dir_pieces) == 1:
-                piece_shields = [all_shields]
-            else:
-                piece_shields = [[] for _ in dir_pieces]
-                for lat, lon in all_shields:
-                    pt = Point(projected([[lon, lat]])[0])
-                    k = min(range(len(dir_pieces)),
-                            key=lambda i: dir_pieces[i][2].distance(pt))
-                    piece_shields[k].append([lat, lon])
-            for (d, simp, line_m), track_shields in zip(dir_pieces, piece_shields):
-                provs = prov_tags(line_m, provinces)
-                used_provs.update(provs)
-                def props(pv, km, sh):
-                    p = {"name": fname, "provs": pv, "km": round(km, 1)}
+            # Merge the direction pieces back into at most one feature per
+            # (direction, province): Sam's files are day rides, and the map,
+            # popups, charts and GPX all treat one feature as one object —
+            # twenty fragments of one ride broke that (issue #61). A feature
+            # whose stretches are disjoint carries them as a MultiLineString.
+            groups = {}
+            for d, simp, line_m in dir_pieces:
+                groups.setdefault(d, []).append((simp, line_m))
+            emitted = []  # [props, [part coords...], [part LineString_m...]]
+            for d, parts in groups.items():
+                prov_parts = {}  # province -> [part coords...], in track order
+                for simp, line_m in parts:
+                    provs = prov_tags(line_m, provinces)
+                    used_provs.update(provs)
+                    if len(provs) > 1:
+                        for pc, coords in split_by_province(line_m, provs, provinces):
+                            prov_parts.setdefault(pc, []).append(coords)
+                    else:
+                        prov_parts.setdefault(provs[0], []).append(rounded(simp.coords))
+                for pc, coord_lists in prov_parts.items():
+                    km = sum(geod_km(c) for c in coord_lists)
+                    layer_km += km
+                    p = {"name": fname, "provs": [pc], "km": round(km, 1)}
                     if d:
                         p["dir"] = d
-                    if sh:
-                        p["shields"] = sh
-                    return p
-                if len(provs) > 1:
-                    pieces = split_by_province(line_m, provs, provinces)
-                    piece_lines = [LineString(projected(coords)) for _, coords in pieces]
-                    assigned = [[] for _ in pieces]
-                    for lat, lon in track_shields:
-                        pt = Point(projected([[lon, lat]])[0])
-                        nearest = min(range(len(pieces)),
-                                      key=lambda i: piece_lines[i].distance(pt))
-                        assigned[nearest].append([lat, lon])
-                    for (pc, coords), sh in zip(pieces, assigned):
-                        piece_km = geod_km(coords)
-                        layer_km += piece_km
-                        feats.append({
-                            "type": "Feature",
-                            "properties": props([pc], piece_km, sh),
-                            "geometry": {"type": "LineString", "coordinates": coords},
-                        })
-                else:
-                    track_km = geod_km(simp.coords)
-                    layer_km += track_km
-                    feats.append({
-                        "type": "Feature",
-                        "properties": props(provs, track_km, track_shields),
-                        "geometry": {"type": "LineString",
-                                     "coordinates": rounded(simp.coords)},
-                    })
+                    part_lines = [LineString(projected(c)) for c in coord_lists]
+                    # each part's start offset (m) along the source track.
+                    # Parts are stored in ride order — split_by_province
+                    # returns pieces in polygon order, which scrambles a
+                    # border-weaving track — and "seq" ships the offsets so
+                    # the GPX export can re-sort same-named features' parts
+                    # back into ride order across features (issue #61)
+                    offs = [int(tline_m.project(Point(pl.coords[0])))
+                            for pl in part_lines]
+                    order = sorted(range(len(offs)), key=lambda i: offs[i])
+                    coord_lists = [coord_lists[i] for i in order]
+                    part_lines = [part_lines[i] for i in order]
+                    if len(dir_pieces) > 1 or len(prov_parts) > 1:
+                        p["seq"] = sorted(offs)
+                    emitted.append([p, coord_lists, part_lines])
+            # the track's shields go to whichever of its features each sits on
+            for lat, lon in track_shields_all[ti]:
+                pt = Point(projected([[lon, lat]])[0])
+                k = min(range(len(emitted)),
+                        key=lambda i: min(lm.distance(pt) for lm in emitted[i][2]))
+                emitted[k][0].setdefault("shields", []).append([lat, lon])
+            for p, coord_lists, _ in emitted:
+                geom = ({"type": "LineString", "coordinates": coord_lists[0]}
+                        if len(coord_lists) == 1 else
+                        {"type": "MultiLineString", "coordinates": coord_lists})
+                feats.append({"type": "Feature", "properties": p, "geometry": geom})
         # Elevation bake (issue #38): climb totals onto each track's properties
         # + the profile sidecar the chart reads. CW is the ferry layer — the
         # crossings are water, a profile would be noise.
@@ -403,7 +470,10 @@ def convert_routes(provinces):
         if demoted:
             print(f"  {code}: {demoted} EB/WB tracks have no counterpart -> shown both directions")
         if part_split:
-            print(f"  {code}: {part_split} EB/WB tracks split — counterpart alongside only part of the track")
+            print(f"  {code}: {part_split} EB tracks partly hidden — counterpart alongside part of the track")
+        if full_hidden:
+            print(f"  {code}: {full_hidden} EB tracks hidden IN FULL in the westbound view — "
+                  f"verify each really has a WB twin end to end")
         sizes[code] = (len(feats), out_path.stat().st_size, layer_km, we_km)
     return sizes, geoms, used_provs
 
