@@ -161,6 +161,54 @@ New constants (this branch, not part of the calibrated set; values to be
 confirmed against the real-data distributions during the build and recorded
 here): `ANCHOR_WARN_M` 300, `ANCHOR_MAX_M` 1000, span/claim ratio [1/3, 3].
 
+## 4a. Step-1 build findings (2026-09-14)
+
+Gate distributions on Sam's files (n=1044 anchors / 522 splice candidates):
+anchor distance median 5 m, p99 284 m, max 299 m — the 300 m warn and 1 km
+refuse tiers never fired; span/claim ratio median 1.00, p99 2.02, max 3.20 —
+one refusal (Port Hardy Bear Cove 150 m stub, ratio 3.20). Values stand as
+approved.
+
+Decisions made during the build, each with a named log line:
+
+1. **Nested spans** (new failure class): two accepted variants whose replaced
+   spans fully overlap on one spine are duplicate westbound cover (Calgary
+   3.55 km inside the 71.2 km track; 6 cases). The inner splice is refused;
+   that variant stays a standalone westbound track. Data question for Sam.
+2. **Loop test is relative**: refused when claim ends are within
+   min(100 m, half the claim length) of each other — a 40 m stub's ends are
+   naturally close without being a loop.
+3. **Assembly order**: spans walk by descending east edge (b), which equals
+   a-order for partial overlaps and is the only length-conserving order for
+   nested spans.
+4. **Sliver floor scope**: the 10 m floor applies to split pieces only; a
+   whole track under 10 m (census-real one-way stubs, e.g. Sainte-Flavie
+   9.9 m) keeps its feature. Zero-length tracks (a POI drawn as a line,
+   1 case) are kept, logged, invisible.
+
+Watch-items for the later steps and the adversarial review (Heather,
+2026-09-14):
+
+- **"Elevation cache hit 100%" is true of eastbound/drawn profiles only.**
+  The westbound-assembly profiles (`eid_w`) are new geometry and MUST
+  recompute when step 3 bakes them — roughly one per spliced ride, hundreds
+  of new sidecar entries. Expected, not a regression.
+- **Refused-splice and nested-inner variants are UNSPLICED** and must export
+  in the westbound GPX flavour as their own tracks (the W-flavour rule skips
+  *spliced* variants only) — otherwise westbound riders lose real routing
+  and the name-parity checks fail. Step 2 must honour this; the review
+  should verify it.
+
+Data questions for Sam, gathered from the step-1 build log:
+
+- 6 nested westbound duplicates (inner splice refused): Calgary TCH 3.55 km,
+  Hope BC Westbound 277 m, the Swartz Bay / North Saanich ferry-terminal
+  trio, CN Trans-Canada Highway 004 WB 002 (Kamloops).
+- '[C3 WB] Port Hardy, BC (Bear Cove Hwy) 001': 150 m stub whose replaced
+  span projects to 0.47 km (ratio 3.20) — splice refused, standalone.
+- '[C3] Big Bay General Store 001': zero-length line (a POI drawn as a
+  track?) — kept for census parity, invisible.
+
 ## 5. Ported / deleted
 
 **Ported verbatim from `direction-splitting`:** `has_opposite_alongside`,
