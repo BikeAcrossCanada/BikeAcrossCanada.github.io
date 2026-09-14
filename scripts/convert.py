@@ -224,6 +224,17 @@ PAIR_JUMP_M = 1200      # a projection jump bigger than this within one run mean
                         # the main line doubles back there, not that the
                         # counterpart moved on (legit in-run spacing is <= 600 m;
                         # real hairpins/loops jump by kilometres)
+REMNANT_NEAR_M = 1000   # scoped second pass (issue #61 round 3): a couplet's
+                        # halves can sit 240-800 m apart on rural highways —
+                        # past the 300 m pairing radius but plainly the same
+                        # corridor. A remnant left between two hidden stretches
+                        # still hides when it hugs, within this distance, the
+                        # same counterpart(s) that produced its neighbours.
+                        # Scoped to those counterparts on purpose: a global
+                        # 1 km radius would false-pair parallel two-way
+                        # streets in cities.
+REMNANT_COVER = 0.9     # fraction of a remnant's samples that must sit within
+                        # REMNANT_NEAR_M for the hiding to extend across it
 
 
 def has_opposite_alongside(line_m, opposite_lines):
@@ -254,13 +265,15 @@ def _merge_spans(spans, tol):
 
 
 def counterpart_intervals(line_m, opposite_lines):
-    """Stretches of this track (as (start_m, end_m) along it) that have a
-    specific opposite-direction track running alongside. For each opposite
-    track, its portions within PAIR_NEAR_KM of this line are projected onto
-    this line; a projection spanning at least PAIR_MIN_TWIN_KM (less for a
-    sub-400 m variant stub — its whole twin is shorter than that) marks a
-    stretch where the counterpart replaces this track in the opposite view.
-    Overlapping or touching stretches from different counterparts merge."""
+    """Stretches of this track (as [start_m, end_m, counterpart_indices] along
+    it) that have a specific opposite-direction track running alongside. For
+    each opposite track, its portions within PAIR_NEAR_KM of this line are
+    projected onto this line; a projection spanning at least PAIR_MIN_TWIN_KM
+    (less for a sub-400 m variant stub — its whole twin is shorter than that)
+    marks a stretch where the counterpart replaces this track in the opposite
+    view. Overlapping or touching stretches from different counterparts merge;
+    the third element keeps WHICH opposite_lines back each merged stretch,
+    which absorb_remnants() needs."""
     if not opposite_lines:
         return []
     tree = STRtree(opposite_lines)
@@ -311,8 +324,66 @@ def counterpart_intervals(line_m, opposite_lines):
         # spans sit km apart along the line, far beyond the merge reach.
         for a, b in _merge_spans(sorted(opp_spans), PAIR_MERGE_M):
             if b - a >= min_twin:
-                ivals.append([a, b])
-    return _merge_spans(sorted(ivals), PAIR_MERGE_M)
+                ivals.append([a, b, {int(k)}])
+    # merge across counterparts, unioning the provenance sets
+    merged = []
+    for a, b, ks in sorted(ivals, key=lambda iv: iv[:2]):
+        if merged and a <= merged[-1][1] + PAIR_MERGE_M:
+            merged[-1][1] = max(merged[-1][1], b)
+            merged[-1][2] |= ks
+        else:
+            merged.append([a, b, set(ks)])
+    return merged
+
+
+def absorb_remnants(line_m, ivals, opposite_lines, fname):
+    """Second, scoped pass over an EB track's hidden intervals (issue #61
+    round 3): split_by_direction leaves the stretches BETWEEN two hidden
+    intervals untagged, and where a couplet's halves sit 240-800 m apart that
+    remnant draws in the East-to-West view as an island with a dead end at
+    each seam — on a road the view never drew before the splitting. So: a
+    remnant between two hidden intervals that share a COMMON backing
+    counterpart, itself running within REMNANT_NEAR_M of that shared
+    counterpart for >= REMNANT_COVER of its samples, is absorbed into the
+    hiding — the counterpart demonstrably continues alongside, just past the
+    300 m pairing radius, so the opposite view stays connected through it.
+    The common-counterpart requirement is load-bearing: absorbing a remnant
+    whose neighbours come from two DIFFERENT variants hides road where
+    neither variant runs the corridor, and fragments the view it means to
+    heal (measured, not hypothetical — a looser union-of-neighbours rule
+    took C1 BC from 6 to 21 disconnected pieces). Track-end remnants are
+    left alone for the same reason. Any remnant that keeps a hidden interval
+    on each side is named in the build log, so future source data can't
+    reintroduce stranded fragments silently."""
+    changed = len(ivals) > 1
+    while changed:
+        changed = False
+        for i in range(len(ivals) - 1):
+            a, b = ivals[i][1], ivals[i + 1][0]
+            common = ivals[i][2] & ivals[i + 1][2]
+            if not common:
+                continue
+            geoms = [opposite_lines[k] for k in common]
+            pts = list(substring(line_m, a, b).segmentize(PAIR_SAMPLE_M).coords)
+            near = sum(1 for c in pts
+                       if min(g.distance(Point(c)) for g in geoms) <= REMNANT_NEAR_M)
+            if near / len(pts) < REMNANT_COVER:
+                continue
+            ivals[i][1] = ivals[i + 1][1]
+            ivals[i][2] |= ivals[i + 1][2]
+            del ivals[i + 1]
+            changed = True
+            break  # interval list shifted — rebuild the gap list and rescan
+    for i in range(len(ivals) - 1):
+        a, b = ivals[i][1], ivals[i + 1][0]
+        if not (ivals[i][2] & ivals[i + 1][2]):
+            continue  # different variants left and right: a normal two-way
+                      # stretch between two distinct couplets, not a fragment
+        lon, lat = TO_DEG.transform(*line_m.interpolate((a + b) / 2).coords[0])
+        print(f"  stranded remnant: {fname!r} {(b - a) / 1000:.2f} km "
+              f"at {lat:.5f},{lon:.5f} — untagged piece between two hidden "
+              f"stretches of the same counterpart")
+    return ivals
 
 
 def split_by_direction(simp, line_m, d, ivals):
@@ -326,7 +397,7 @@ def split_by_direction(simp, line_m, d, ivals):
         return [(d, simp, line_m)]
     bounds = []
     prev = 0.0
-    for s0, s1 in ivals:
+    for s0, s1, *_ in ivals:
         if s0 > prev:
             bounds.append((prev, s0, None))
         bounds.append((s0, min(s1, total), d))
@@ -364,9 +435,16 @@ def convert_routes(provinces):
             geoms.setdefault(code, []).append(line_m)
             tracks.append((fname, track_dir(fname), simp, line_m))
         # pass 2: a directional track keeps its tag (= hides in the opposite
-        # view) only if the opposite direction has a counterpart alongside
-        by_dir = {"E": [t[3] for t in tracks if t[1] == "E"],
-                  "W": [t[3] for t in tracks if t[1] == "W"]}
+        # view) only if the opposite direction has a counterpart alongside.
+        # Every WB track's demotion verdict is decided FIRST, and the
+        # counterpart pool for the EB splitting loop holds only the survivors
+        # (issue #61 round 3): a demoted WB variant is drawn in both views,
+        # so it must not carve hidden stretches out of the EB line either.
+        eb_lines = [t[3] for t in tracks if t[1] == "E"]
+        wb_keep = {ti: has_opposite_alongside(t[3], eb_lines)
+                   for ti, t in enumerate(tracks) if t[1] == "W"}
+        by_dir = {"E": eb_lines,
+                  "W": [tracks[ti][3] for ti, keep in sorted(wb_keep.items()) if keep]}
         demoted = 0
         feats = []
         layer_km = 0.0   # every track, both directions (double-counts EB/WB couplets)
@@ -377,12 +455,14 @@ def convert_routes(provinces):
         track_shields_all = chain_shields(tracks)
         part_split = 0
         full_hidden = 0
+        source_tracks = {}  # eid -> whole oriented track, for the elevation bake
         for ti, (fname, tdir, tsimp, tline_m) in enumerate(tracks):
             if tdir == "E":
                 # Sam draws the route eastbound, so an EB track without a WB
                 # variant is the route both ways: split it and hide only the
                 # stretches a WB counterpart replaces.
                 ivals = counterpart_intervals(tline_m, by_dir["W"])
+                ivals = absorb_remnants(tline_m, ivals, by_dir["W"], fname)
                 dir_pieces = split_by_direction(tsimp, tline_m, tdir, ivals)
                 if len(dir_pieces) == 1 and dir_pieces[0][0] is None:
                     demoted += 1
@@ -399,13 +479,28 @@ def convert_routes(provinces):
                 # fragment in the eastbound view. Demote only a WB track with
                 # no EB alongside at all (mislabel / isolated loop): hiding
                 # that one could leave eastbound with nothing there.
-                if has_opposite_alongside(tline_m, by_dir["E"]):
+                # (Verdicts precomputed above, before the EB splitting loop.)
+                if wb_keep[ti]:
                     dir_pieces = [("W", tsimp, tline_m)]
                 else:
                     dir_pieces = [(None, tsimp, tline_m)]
                     demoted += 1
             else:
                 dir_pieces = [(None, tsimp, tline_m)]
+            # One elevation identity per SOURCE track (issue #61 round 3):
+            # every feature this track emits — untagged, dir-tagged, either
+            # side of a border — shares the eid, and the elevation chart
+            # shows the whole day ride whatever view emitted the click.
+            # Orientation matches the charting rule in scripts/elevation.py:
+            # two-way rides chart west->east, EB/WB rides keep their travel
+            # direction. CW is the ferry layer — no profiles, no eid.
+            if code != "CW":
+                ocoords = rounded(tsimp.coords)
+                if tdir is None and ocoords[-1][0] < ocoords[0][0]:
+                    ocoords = ocoords[::-1]
+                eid = elevation.track_key(ocoords)
+            else:
+                eid = None
             # Merge the direction pieces back into at most one feature per
             # (direction, province): Sam's files are day rides, and the map,
             # popups, charts and GPX all treat one feature as one object —
@@ -429,6 +524,8 @@ def convert_routes(provinces):
                     km = sum(geod_km(c) for c in coord_lists)
                     layer_km += km
                     p = {"name": fname, "provs": [pc], "km": round(km, 1)}
+                    if eid:
+                        p["eid"] = eid
                     if d:
                         p["dir"] = d
                     part_lines = [LineString(projected(c)) for c in coord_lists]
@@ -445,7 +542,21 @@ def convert_routes(provinces):
                     part_lines = [part_lines[i] for i in order]
                     if len(dir_pieces) > 1 or len(prov_parts) > 1:
                         p["seq"] = sorted(offs)
+                        # each part's END offset too: the GPX export trims
+                        # border-duplicated overlap between same-named
+                        # features, and measuring a part's span end from its
+                        # drawn length is off by up to ~1% vs these
+                        # projections — real hundreds of metres, enough to
+                        # trim genuine riding or keep a genuine duplicate
+                        p["seq_end"] = [int(tline_m.project(Point(pl.coords[-1])))
+                                        for pl in part_lines]
                     emitted.append([p, coord_lists, part_lines])
+            # profile only for tracks that actually emitted features — a
+            # sub-100 m border stub can lose all its pieces to the province
+            # split's length floor, and a profile nothing references would
+            # sit orphaned in the sidecar
+            if eid and emitted:
+                source_tracks[eid] = ocoords
             # the track's shields go to whichever of its features each sits on
             for lat, lon in track_shields_all[ti]:
                 pt = Point(projected([[lon, lat]])[0])
@@ -461,7 +572,7 @@ def convert_routes(provinces):
         # + the profile sidecar the chart reads. CW is the ferry layer — the
         # crossings are water, a profile would be noise.
         if code != "CW":
-            n_new, sidecar_b = elevation.bake(code, feats, GEOD)
+            n_new, sidecar_b = elevation.bake(code, feats, GEOD, source_tracks)
             print(f"  {code}: elevation computed for {n_new} tracks "
                   f"(rest cached); profiles_{code}.json {sidecar_b/1e3:.0f} kB")
         out_path = OUT / f"routes_{code}.geojson"

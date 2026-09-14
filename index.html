@@ -596,43 +596,53 @@ function fetchProfiles(code) {
 }
 
 // A track whose visible stretches are disjoint (direction splitting,
-// issue #61) arrives as a MultiLineString; everything downstream works on
-// its list of parts, a plain LineString being the one-part case.
+// issue #61) arrives as a MultiLineString; the GPX export works on its
+// list of parts, a plain LineString being the one-part case.
 function trackParts(feat) {
   return feat.geometry.type === 'MultiLineString' ?
     feat.geometry.coordinates : [feat.geometry.coordinates];
 }
 
-function resampleTrack(parts, spacing, n, partCounts) {
-  // mirror of scripts/elevation.py _resample() run per part: a point every
-  // `spacing` metres plus each part's endpoints, concatenated; capped at n
-  // (the stored elevation count) so tiny distance-model differences can't
-  // misalign the zip. For a multi-part track the sidecar stores each part's
-  // exact sample count ("parts"): pinning every part to it keeps the zip
-  // aligned at every seam, not just overall (spherical distances here vs
-  // geodesic in the bake drift a point or two per part).
-  const pts = [];
-  for (const [j, coords] of parts.entries()) {
-    const cap = Math.min(n, pts.length + (partCounts ? partCounts[j] : n));
-    if (pts.length >= cap) continue;
-    pts.push([coords[0][1], coords[0][0]]);
-    let carry = 0;
-    for (let i = 0; i < coords.length - 1 && pts.length < cap; i++) {
-      const a = L.latLng(coords[i][1], coords[i][0]);
-      const b = L.latLng(coords[i + 1][1], coords[i + 1][0]);
-      const d = a.distanceTo(b);
-      if (d <= 0) continue;
-      for (let pos = spacing - carry; pos < d && pts.length < cap; pos += spacing) {
-        const t = pos / d;
-        pts.push([a.lat + (b.lat - a.lat) * t, a.lng + (b.lng - a.lng) * t]);
-      }
-      carry = (carry + d) % spacing;
-    }
-    if (pts.length < cap) pts.push([coords.at(-1)[1], coords.at(-1)[0]]);
-    // pinned parts pad to their exact count so the next seam stays aligned
-    while (partCounts && pts.length < cap)
-      pts.push([coords.at(-1)[1], coords.at(-1)[0]]);
+function chartTrack(coords, elevs) {
+  // [lon, lat] line + whole-ride elevation samples -> [[lat, lng, ele], ...]
+  // for the chart. Every vertex of the line is emitted (so the chart's
+  // accumulated distance IS the line's length — resampling to a fixed step
+  // and summing the chords used to under-measure twisty roads by several
+  // percent, and the axis disagreed with the header km), plus a point every
+  // ~100 m on long straight legs so the profile keeps its detail there.
+  // Altitude at any point interpolates the elevation array by the point's
+  // along-line fraction: the bake sampled uniformly, so fraction of length
+  // maps to fraction of the array (a sample or so of drift at worst —
+  // spherical distances here, geodesic in the bake).
+  const STEP = 100;
+  const legs = [];
+  let total = 0;
+  for (let i = 0; i < coords.length - 1; i++) {
+    const a = L.latLng(coords[i][1], coords[i][0]);
+    const b = L.latLng(coords[i + 1][1], coords[i + 1][0]);
+    const d = a.distanceTo(b);
+    legs.push([a, b, d]);
+    total += d;
   }
+  const eAt = s => {
+    if (elevs.length < 2 || !total) return elevs[0] || 0;
+    const x = Math.min(elevs.length - 1, s / total * (elevs.length - 1));
+    const i = Math.min(elevs.length - 2, Math.floor(x));
+    return elevs[i] + (elevs[i + 1] - elevs[i]) * (x - i);
+  };
+  const pts = [];
+  let s = 0;
+  for (const [a, b, d] of legs) {
+    pts.push([a.lat, a.lng, eAt(s)]);
+    for (let pos = STEP; pos < d; pos += STEP) {
+      const t = pos / d;
+      pts.push([a.lat + (b.lat - a.lat) * t, a.lng + (b.lng - a.lng) * t,
+                eAt(s + pos)]);
+    }
+    s += d;
+  }
+  const last = coords.at(-1);
+  pts.push([last[1], last[0], eAt(total)]);
   return pts;
 }
 
@@ -645,22 +655,21 @@ function showProfile(code, eid) {
     // A missing entry means profiles_<code>.json is out of step with the
     // geojson (each CI rebuild must commit both) — fail loudly, not silently.
     if (!tr) { console.error('elevation profile: eid', eid, 'missing from profiles_' + code + '.json'); return; }
+    if (!tr.line) { console.error('elevation profile: entry', eid, 'has no line — stale profiles_' + code + '.json'); return; }
     let last = tr.elev.find(e => e != null) || 0;   // patch rare data voids
     const elevs = tr.elev.map(e => (e == null ? last : (last = e)));
-    // same orientation rule as scripts/elevation.py bake(): two-way tracks
-    // chart west->east; EB/WB tracks keep their travel direction
-    let parts = trackParts(feat);
-    if (!feat.properties.dir && parts.at(-1).at(-1)[0] < parts[0][0][0])
-      parts = parts.slice().reverse().map(c => c.slice().reverse());
-    // (a multi-part track charts as one line; the chart's map copy draws a
-    // straight connector across each hidden stretch, which is fine to orient by)
-    // tr.parts (multi-part tracks only): per-part sample counts, stored in
-    // charted orientation — the bake applies the same reversal rule first,
-    // so after the flip above the orders always match
-    const pts = resampleTrack(parts, p.spacing_m, elevs.length, tr.parts);
+    // The profile is the WHOLE day ride (issue #61): baked by
+    // scripts/elevation.py from the source track before any direction or
+    // province splitting, already in charted orientation (two-way rides
+    // west->east, EB/WB rides their travel direction), carrying its own
+    // line and km. So the chart never depends on which view or province
+    // filter emitted the clicked feature — a ride's elevation doesn't
+    // change because you flipped the direction dropdown — and the header
+    // km always matches the distance axis.
+    const pts = chartTrack(tr.line, elevs);
     const track = { type: 'Feature', properties: { name: feat.properties.name },
                     geometry: { type: 'LineString',
-                                coordinates: pts.map(([la, ln], i) => [ln, la, elevs[i]]) } };
+                                coordinates: pts.map(([la, ln, e]) => [ln, la, e]) } };
     if (!elevCtl) {
       // the plugin's own summary (min/avg/max elevation) answers the wrong
       // question, so it's off; the header below shows the deadband-corrected
@@ -707,7 +716,7 @@ function showProfile(code, eid) {
     elevCtl._expand();
     const pr = feat.properties;
     elevHeader.innerHTML = '<b>' + esc(pr.name) + '</b><br>↑ ' + pr.ascent_m +
-      ' m &nbsp;↓ ' + pr.descent_m + ' m &nbsp;·&nbsp; ' + pr.km + ' km';
+      ' m &nbsp;↓ ' + pr.descent_m + ' m &nbsp;·&nbsp; ' + tr.km + ' km';
     elevCtl.clear();
     elevCtl.load(JSON.stringify(track));
     map.closePopup();
@@ -981,6 +990,40 @@ function updateDlButton() {
 }
 document.getElementById('sidebar').addEventListener('change', updateDlButton);
 
+// Metres between two [lon, lat] points, and along a coordinate list —
+// spherical, which is plenty for the ≥90%-overlap dedup in buildGpx below.
+// Deliberately Leaflet-free: scripts/qa_gpx.mjs slices these functions and
+// buildGpx verbatim out of this file and runs them under node.
+function llDistM(a, b) {
+  const R = 6371000, r = Math.PI / 180;
+  const s = Math.sin((b[1] - a[1]) * r / 2) ** 2 +
+            Math.cos(a[1] * r) * Math.cos(b[1] * r) *
+            Math.sin((b[0] - a[0]) * r / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(s));
+}
+function lineLenM(coords) {
+  let L = 0;
+  for (let i = 1; i < coords.length; i++) L += llDistM(coords[i - 1], coords[i]);
+  return L;
+}
+function segDistM(p, a, b) {
+  // metres from point p to segment a-b, all [lon, lat] (local planar approx,
+  // plenty at the 25 m scale buildGpx tests at)
+  const r = Math.PI / 180, kx = Math.cos(p[1] * r) * 6371000 * r, ky = 6371000 * r;
+  const ax = (a[0] - p[0]) * kx, ay = (a[1] - p[1]) * ky;
+  const dx = (b[0] - p[0]) * kx - ax, dy = (b[1] - p[1]) * ky - ay;
+  const l2 = dx * dx + dy * dy;
+  let t = l2 ? -(ax * dx + ay * dy) / l2 : 0;
+  t = Math.max(0, Math.min(1, t));
+  return Math.hypot(ax + t * dx, ay + t * dy);
+}
+function nearLines(p, lines, tol) {
+  for (const line of lines)
+    for (let i = 1; i < line.length; i++)
+      if (segDistM(p, line[i - 1], line[i]) <= tol) return true;
+  return false;
+}
+
 const xmlEsc = s => (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 // popup descs carry his literal <br> markup; GPX wants plain text
 const plainDesc = s => (s || '')
@@ -1020,15 +1063,66 @@ function buildGpx() {
         // seq = each part's start offset along the source track (metres,
         // from convert.py): the untagged and one-way features' stretches
         // interleave along the ride, so file order would zig-zag the <trk>
-        const seq = f.properties.seq || [];
+        const seq = f.properties.seq || [], seqEnd = f.properties.seq_end || [];
         trackParts(f).forEach((part, i) =>
-          byName.get(key).push({ off: seq[i] || 0, part }));
+          byName.get(key).push({ off: seq[i] || 0, end: seqEnd[i], part }));
       }
       for (const [name, segs] of byName) {
-        segs.sort((a, b) => a.off - b.off);
+        // Sort by along-track offset (longer part first on ties), then cut
+        // away riding an earlier part already covered. The province split
+        // duplicates border-buffer geometry into both provinces on purpose
+        // (the map's province filter needs it), so a name-group's parts
+        // overlap by kilometres at each border — and a wholly-duplicated
+        // border sliver shares its offset with the original — so merged
+        // naively the <trk> rode to the border, jumped back, and re-rode
+        // it (issue #61 round 3). The trim is geometric, not span
+        // arithmetic: walk a part's leading vertices while they lie within
+        // 25 m of riding already emitted, drop a part with nothing new,
+        // and cut inside the boundary chord so the seam lands where the
+        // duplicate actually ends (offset-vs-measured-length bookkeeping
+        // over-trimmed by up to 1.3% — real kilometres on long parts).
+        // Single-part groups pass through untouched.
+        for (const s of segs) s.len = lineLenM(s.part);
+        segs.sort((a, b) => a.off - b.off || b.len - a.len);
+        const use = [], emitted = [];
+        let covered = -Infinity;   // span end of riding emitted so far
+        for (const s of segs) {
+          let part = s.part;
+          // span-overlap gate: only a part whose along-track span re-enters
+          // already-emitted span is a duplication candidate — a route that
+          // genuinely rides the same road twice (Mission to Hope loops
+          // through Hope) has disjoint spans and must NOT be trimmed. Span
+          // ends come from seq_end (exact, from the converter's own
+          // projection) with the drawn length as a fallback.
+          if (emitted.length && covered - s.off > 50) {
+            let j = 0;
+            while (j < part.length && nearLines(part[j], emitted, 25)) j++;
+            if (j >= part.length) continue;          // nothing new: a
+                                                     // border-buffer duplicate
+            if (j > 0) {
+              const a = part[j - 1], b = part[j];
+              let lo = 0, hi = 1;
+              for (let k = 0; k < 8; k++) {          // cut inside the chord
+                const t = (lo + hi) / 2;
+                const p = [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t];
+                if (nearLines(p, emitted, 25)) lo = t; else hi = t;
+              }
+              // a tiny shared lip on the first chord (parts tile at an exact
+              // cut point) is not worth a trim — an interpolated start would
+              // only shift the seam; any longer covered run always trims
+              if (j > 1 || lo * llDistM(a, b) > 30)
+                part = [[+(a[0] + (b[0] - a[0]) * lo).toFixed(5),
+                         +(a[1] + (b[1] - a[1]) * lo).toFixed(5)],
+                        ...part.slice(j)];
+            }
+          }
+          covered = Math.max(covered, s.end != null ? s.end : s.off + s.len);
+          emitted.push(part);
+          use.push({ off: s.off, part });
+        }
         trks += '  <trk>\n    <name>' + xmlEsc(e.meta.code + ' ' + name) +
                 '</name>\n    <type>' + xmlEsc(e.meta.code) + '</type>\n' +
-                segs.map(s => '    <trkseg>\n' +
+                use.map(s => '    <trkseg>\n' +
                   s.part.map(c => '      <trkpt lat="' + c[1] + '" lon="' + c[0] + '"/>').join('\n') +
                   '\n    </trkseg>').join('\n') + '\n  </trk>\n';
       }

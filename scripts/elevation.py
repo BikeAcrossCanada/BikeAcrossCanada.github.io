@@ -16,9 +16,11 @@ elevation. The 5 m value comes from BC Cycle Tourism's Bespoke route planner,
 where it was calibrated against a barometric ride recording (computed 732 m
 vs 722 m recorded on a 30 m-sampled profile).
 
-Results land in data/profiles_<code>.json, keyed by a hash of the track
-geometry — that file doubles as the resume cache, so a rebuild only computes
-tracks whose geometry actually changed (and typically downloads no tiles).
+Results land in data/profiles_<code>.json, one entry per SOURCE track keyed
+by a hash of its whole simplified geometry (the "eid" every feature emitted
+from the track carries) — that file doubles as the resume cache, so a rebuild
+only computes tracks whose geometry actually changed (and typically downloads
+no tiles).
 """
 import gzip
 import hashlib
@@ -172,26 +174,21 @@ def profile(coords, geod):
             "elev": [None if e is None else int(round(e)) for e in elevs]}
 
 
-def multi_profile(parts, geod):
-    """profile() for a track whose visible stretches are disjoint (a
-    MultiLineString from the direction splitting, issue #61): each part is
-    sampled on its own and the elevations concatenated — the chart shows a
-    step at each seam where a hidden stretch is skipped — and the climb
-    totals are summed per part, so the seam jump is never counted as climb."""
-    ps = [profile(p, geod) for p in parts]
-    return {"ascent_m": sum(p["ascent_m"] for p in ps),
-            "descent_m": sum(p["descent_m"] for p in ps),
-            # per-part sample counts, so the chart's own resampler can pin
-            # each seam exactly (its spherical distances drift a point or
-            # two per part from the geodesic ones used here)
-            "parts": [len(p["elev"]) for p in ps],
-            "elev": [e for p in ps for e in p["elev"]]}
+def bake(code, feats, geod, source_tracks):
+    """One profile per SOURCE track (issue #61 round 3): source_tracks maps
+    the eid convert.py stamps on every feature a track emits to the WHOLE
+    simplified track — before any direction or province splitting — already
+    in charted orientation (two-way rides west->east, EB/WB rides their
+    travel direction; convert.py applies the rule when it builds the map).
+    Each sidecar entry carries the whole-ride line and km alongside the
+    elevations, so the chart (index.html showProfile) never depends on which
+    view or province filter emitted the clicked feature, and its header km
+    matches its distance axis by construction.
 
-
-def bake(code, feats, geod):
-    """Fill ascent_m/descent_m/eid on each feature and (re)write
-    data/profiles_<code>.json, reusing cached entries whose geometry hash is
-    unchanged. Returns (n_computed, sidecar_bytes)."""
+    Climb totals written onto the features are whole-ride totals too.
+    Cached elevations are reused when the eid (a geometry hash) is unchanged;
+    a track that was split into features used to be keyed per feature, so
+    those recompute once. Returns (n_computed, sidecar_bytes)."""
     out = ROOT / "data" / f"profiles_{code}.json"
     old = {}
     if out.exists():
@@ -202,29 +199,25 @@ def bake(code, feats, geod):
         except json.JSONDecodeError:
             pass
     tracks, computed = {}, 0
+    for eid, coords in source_tracks.items():
+        prev = old.get(eid)
+        # "parts" marks a pre-whole-ride entry for split geometry: recompute
+        if prev is None or "parts" in prev:
+            prev = profile(coords, geod)
+            computed += 1
+        km = geod.line_length([c[0] for c in coords],
+                              [c[1] for c in coords]) / 1000
+        tracks[eid] = {"ascent_m": prev["ascent_m"],
+                       "descent_m": prev["descent_m"],
+                       "km": round(km, 1), "line": coords,
+                       "elev": prev["elev"]}
     for f in feats:
-        # Elevation runs west->east on two-way tracks (site convention, and
-        # what the popup's "eastbound unless marked" hint promises) — ~13%
-        # of untagged tracks are drawn east->west and get reversed here.
-        # Direction-tagged (EB/WB) tracks keep their travel direction.
-        # index.html's showProfile() mirrors this rule; keep them in sync.
-        geom = f["geometry"]
-        parts = (geom["coordinates"] if geom["type"] == "MultiLineString"
-                 else [geom["coordinates"]])
-        if "dir" not in f["properties"] and parts[-1][-1][0] < parts[0][0][0]:
-            parts = [p[::-1] for p in parts[::-1]]
-        key = track_key(parts[0] if len(parts) == 1 else parts)
-        if key not in tracks:
-            # a multi-part entry cached before "parts" existed must recompute
-            if key in old and not (len(parts) > 1 and "parts" not in old[key]):
-                tracks[key] = old[key]
-            else:
-                tracks[key] = (profile(parts[0], geod) if len(parts) == 1
-                               else multi_profile(parts, geod))
-                computed += 1
-        f["properties"]["ascent_m"] = tracks[key]["ascent_m"]
-        f["properties"]["descent_m"] = tracks[key]["descent_m"]
-        f["properties"]["eid"] = key
+        tr = tracks.get(f["properties"].get("eid"))
+        if tr is None:
+            raise RuntimeError(f"{code}: feature {f['properties'].get('name')!r} "
+                               f"has no source-track profile")
+        f["properties"]["ascent_m"] = tr["ascent_m"]
+        f["properties"]["descent_m"] = tr["descent_m"]
     out.write_text(json.dumps({"spacing_m": SPACING_M, "tracks": tracks},
                               separators=(",", ":")))
     return computed, out.stat().st_size
