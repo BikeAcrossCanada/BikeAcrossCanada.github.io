@@ -9,8 +9,15 @@ Run it after every data rebuild (scripts/convert.py), before committing:
     python3 scripts/qa_directions.py [--repo PATH] [--base-rev main]
                                      [--out REPORT.txt] [--checks 0,1,2,...]
                                      [--no-dedup-exclude]
-A regression shows up as a FAIL row naming the check and the locations;
-compare against the last committed report or main before shipping.
+                                     [--baseline scripts/qa_baseline.json]
+                                     [--write-baseline]
+A regression shows up as a FAIL row naming the check and the locations.
+
+Baseline: --base-rev main becomes a self-comparison the moment the branch
+merges, so the gates that matter compare against scripts/qa_baseline.json —
+a committed snapshot of the metrics (checks 7, 12, 13 read it). Refresh it
+deliberately, in its own commit, with --write-baseline when the data
+legitimately changes; never as a side effect of making a red check green.
 
 Everything is derived from the data files themselves; no trust is placed in
 scripts/convert.py's own claims.
@@ -34,10 +41,18 @@ Checks
     4   hidden-with-no-alternative (the user-facing gap class)
     5   split-piece integrity / fragmentation
     6   length conservation
-    7   per-feature sanity, eid uniqueness, profile cross-reference, elev length
+    7   per-feature sanity, profile cross-reference (whole-ride profile
+        schema: line + km + elev per source-track eid), short-stub allowlist
     8   shield conservation
     9   province x view dead-end audit
     10  MultiLineString sanity (part ordering + per-(name,province) length)
+    11  seq/seq_end offsets re-derived from the source KMLs
+    12  per-view structure of ALL visible geometry (untagged included):
+        connected components per (layer, province, view) and the 200 m
+        dead-end rule, vs baseline (else vs main)
+    13  pinned baseline metrics: per-layer length, name census, E2W orphan rate
+    14  GPX export invariants (node scripts/qa_gpx.mjs — the buildGpx path)
+    15  elevation chart distance/header agreement (node scripts/qa_elev.mjs)
 """
 from __future__ import annotations
 
@@ -85,10 +100,11 @@ DEDUP_EXCLUDE = True
 
 class Feat:
     __slots__ = ("layer", "name", "provs", "km", "dir", "shields", "eid", "seq",
-                 "parts_deg", "parts", "geom", "idx")
+                 "seq_end", "parts_deg", "parts", "geom", "idx", "digest")
 
     def __init__(self, layer, props, parts_deg, idx):
         self.seq = props.get("seq")
+        self.seq_end = props.get("seq_end")
         self.layer = layer
         self.idx = idx
         self.name = props.get("name")
@@ -98,6 +114,11 @@ class Feat:
         self.shields = props.get("shields") or []
         self.eid = props.get("eid")
         self.parts_deg = [p for p in parts_deg if len(p) >= 2]
+        # geometry identity for twin exclusion in the dead-end checks: eid
+        # used to be a per-feature geometry hash, but is a per-SOURCE-TRACK
+        # id since the whole-ride profiles, so byte-identical twins (Sam
+        # draws one road into C1 and C3) are matched on the geometry itself
+        self.digest = hash(tuple(tuple(map(tuple, p)) for p in self.parts_deg))
         self.parts = [LineString(proj(p)) for p in self.parts_deg]
         if not self.parts:
             self.geom = None
@@ -417,18 +438,17 @@ def dead_ends(feats, thresholds):
     """Part endpoints farther than each threshold from every OTHER part.
 
     Excluded: the endpoint's own part, and (when DEDUP_EXCLUDE) the part with
-    the SAME index in every OTHER feature carrying the same eid. eid is a
-    geometry hash, so those are byte-identical twins (Sam draws one road into
-    C1 and C3) and a dangling line drawn twice is still dangling. The
-    feature's own other parts stay in the index on purpose — they are what the
-    route continues into across a hidden stretch.
+    the SAME index in every OTHER feature with byte-identical geometry (Sam
+    draws one road into C1 and C3) — a dangling line drawn twice is still
+    dangling. The feature's own other parts stay in the index on purpose —
+    they are what the route continues into across a hidden stretch.
 
-    Returns {threshold: {grid_key: (latlon, name, dist_m)}}."""
+    Returns {threshold: {grid_key: (latlon, name, dist_m, endpoint_xy)}}."""
     idx = PartIndex(feats)
-    by_eid = collections.defaultdict(list)
+    by_twin = collections.defaultdict(list)
     for f in feats:
         if f.geom is not None:
-            by_eid[f.eid].append(f)
+            by_twin[f.digest].append(f)
     out = {t: {} for t in thresholds}
     for f in feats:
         if f.geom is None:
@@ -436,7 +456,7 @@ def dead_ends(feats, thresholds):
         for i, part in enumerate(f.parts):
             excl = {(f.key, i)}
             if DEDUP_EXCLUDE:
-                excl |= {(g.key, i) for g in by_eid.get(f.eid, ())
+                excl |= {(g.key, i) for g in by_twin.get(f.digest, ())
                          if g is not f and i < g.n_parts}
             for ep in (part.coords[0], part.coords[-1]):
                 d, _ = idx.nearest_excluding(Point(ep), excl)
@@ -445,7 +465,7 @@ def dead_ends(feats, thresholds):
                         k = grid_key(ep)
                         prev = out[t].get(k)
                         if prev is None or d > prev[2]:
-                            out[t][k] = (latlon_str(ep), f.name, d)
+                            out[t][k] = (latlon_str(ep), f.name, d, tuple(ep))
     return out
 
 
@@ -508,11 +528,17 @@ def check2_view_continuity(rep, br, mn, prov=None, quiet=False):
     return findings
 
 
-def check9_prov_view(rep, br, mn):
+def check9_prov_view(rep, br, mn, baseline=None, base_out=None):
+    """New-vs-main diffs become self-comparison after the merge, so known
+    offenders (a deeper-hidden EB line can leave its WB variant dangling in
+    ONE province's filtered view while the connecting geometry sits in the
+    neighbour province) are recorded in the baseline and exempted within
+    100 m; the check stays red only for offenders the baseline doesn't
+    know."""
     rep.h("CHECK 9 — province x view dead-end audit, all provinces")
     provs = sorted({p for f in all_feats(br) for p in f.provs} |
                    {p for f in all_feats(mn) for p in f.provs})
-    bad = []
+    bad, locs = [], collections.defaultdict(list)
     for prov in provs:
         f = check2_view_continuity(rep, br, mn, prov=prov, quiet=True)
         for view in VIEWS:
@@ -520,29 +546,44 @@ def check9_prov_view(rep, br, mn):
             rep.p(f"  {prov:<3} view {view}  >500 m: main {mc:>3} branch {bc:>3}  "
                   f"new {len(new):>2}")
             for k, v in sorted(new.items(), key=lambda kv: -kv[1][2]):
-                bad.append((prov, view, v))
+                locs[f"{prov}|{view}"].append(v[0])
+                ref = (baseline or {}).get("prov_view_dead_ends", {}) \
+                                      .get(f"{prov}|{view}", [])
+                ref_pts = [tuple(TO_M.transform(float(ll.split(",")[1]),
+                                                float(ll.split(",")[0])))
+                           for ll in ref]
+                if not ref_pts or min(math.dist(v[3], q) for q in ref_pts) > 100:
+                    bad.append((prov, view, v))
+    if base_out is not None:
+        base_out["prov_view_dead_ends"] = {k: sorted(v) for k, v in locs.items()}
     if bad:
         rep.p()
-        rep.p("NEW (province, view) dead ends > 500 m:")
+        rep.p("NEW (province, view) dead ends > 500 m (not in the baseline):")
         for prov, view, v in sorted(bad, key=lambda x: -x[2][2]):
             rep.p(f"   {prov} view {view}  {v[0]}  {v[2]:8.1f} m  {v[1][:70]}")
     rep.verdict("check 9 (province x view)", "PASS" if not bad else "FAIL",
-                f"{len(bad)} new (province,view) dead ends >500 m")
+                f"{len(bad)} new (province,view) dead ends >500 m beyond the "
+                f"baseline's {sum(len(v) for v in locs.values())} recorded")
     return bad
 
 
 # ---------------------------------------------------------------- check 3
 
-def _coverage(parts, opp_index, step=COVER_STEP_M):
-    """(fraction of sampled points within COUPLET_NEAR_M of the opposite
-    direction, n_samples, worst-uncovered point)."""
+ABSORB_NEAR_M = 1000   # convert.py REMNANT_NEAR_M: hiding may deliberately
+                       # reach this far from the counterpart where it absorbs
+                       # a stranded remnant of the same couplet corridor
+
+
+def _coverage(parts, opp_index, step=COVER_STEP_M, near_m=COUPLET_NEAR_M):
+    """(fraction of sampled points within near_m of the opposite direction,
+    n_samples, worst-uncovered point)."""
     near = tot = 0
     worst = None
     for p in parts:
         for pt in sample_line(p, step):
             tot += 1
-            d, _ = opp_index.nearest_excluding(pt, set(), max_m=COUPLET_NEAR_M * 3)
-            if d <= COUPLET_NEAR_M:
+            d, _ = opp_index.nearest_excluding(pt, set(), max_m=near_m * 3)
+            if d <= near_m:
                 near += 1
             elif worst is None:
                 worst = pt
@@ -563,13 +604,24 @@ def check3_couplet(rep, data, tag="branch"):
             frac, n, worst = _coverage(f.parts, opp)
             fracs.append(frac)
             if frac < COUPLET_MIN_FRAC:
-                offenders[d].append((frac, f.geo_km,
-                                     latlon_str(worst.coords[0] if worst else
-                                                f.parts[0].coords[0]),
-                                     f.layer, f.name))
+                # a dir=E stretch may sit up to ABSORB_NEAR_M from its
+                # counterpart where the converter absorbed a stranded
+                # remnant of the same corridor — re-test at that radius
+                # before calling it an offender; the 300 m stats above stay
+                # for the record
+                f1000, _, w1000 = (_coverage(f.parts, opp, near_m=ABSORB_NEAR_M)
+                                   if d == "E" else (frac, n, worst))
+                if f1000 < COUPLET_MIN_FRAC:
+                    offenders[d].append((f1000, f.geo_km,
+                                         latlon_str((w1000 or worst).coords[0]
+                                                    if (w1000 or worst) else
+                                                    f.parts[0].coords[0]),
+                                         f.layer, f.name))
             # per-part, the granularity the splitter actually produced
             for pi, part in enumerate(f.parts):
                 pf, _, pw = _coverage([part], opp)
+                if pf < COUPLET_MIN_FRAC and d == "E":
+                    pf, _, pw = _coverage([part], opp, near_m=ABSORB_NEAR_M)
                 if pf < COUPLET_MIN_FRAC:
                     part_bad[d].append((pf, part.length, latlon_str(
                         pw.coords[0] if pw else part.coords[0]), f.layer, f.name, pi))
@@ -614,6 +666,9 @@ def check3_couplet(rep, data, tag="branch"):
                          if x.dir == ("W" if d == "E" else "E")]) if d in "EW" else None
             frac, n, worst = _coverage([p for f in fs for p in f.parts], opp) \
                 if opp else (1.0, 0, None)
+            if d == "E" and frac < COUPLET_MIN_FRAC:
+                frac, n, worst = _coverage([p for f in fs for p in f.parts],
+                                           opp, near_m=ABSORB_NEAR_M)
             full.append((d, frac, sum(f.geo_km for f in fs), code, name,
                          latlon_str(worst.coords[0] if worst else fs[0].parts[0].coords[0])))
     eb = [x for x in full if x[0] == "E"]
@@ -777,11 +832,18 @@ def check6_length(rep, br, mn):
 
 # ---------------------------------------------------------------- check 7
 
-def check7_sanity(rep, data, profiles, tag):
+def stub_key(code, ll):
+    """Allowlist key for a short dir-tagged stub: layer + ~100 m location
+    cell, stable across rebuilds that move a vertex a few metres."""
+    lat, lon = (float(x) for x in ll.split(","))
+    return f"{code}|{lat:.3f},{lon:.3f}"
+
+
+def check7_sanity(rep, data, profiles, tag, baseline=None, base_out=None):
     rep.h(f"CHECK 7 — per-feature sanity + profile cross-reference ({tag})")
-    short, degenerate, missing_eid, dup_eid, short_parts = [], [], [], [], []
+    short, degenerate, missing_eid, short_parts = [], [], [], []
+    eid_names = collections.defaultdict(set)
     for code in LAYERS:
-        seen = collections.Counter()
         for f in data[code]:
             if f.dir and f.geom is not None and f.length_m < MIN_DIR_LEN_M:
                 short.append((code, f.length_m, f.dir,
@@ -796,27 +858,37 @@ def check7_sanity(rep, data, profiles, tag):
             if not f.eid:
                 missing_eid.append((code, f.name))
             else:
-                seen[f.eid] += 1
-        for e, c in seen.items():
-            if c > 1:
-                dup_eid.append((code, e, c))
-    rep.p(f"dir-tagged FEATURES shorter than {MIN_DIR_LEN_M} m: {len(short)}")
-    for code, L, d, ll, name in sorted(short)[:15]:
-        rep.p(f"   {code} {L:7.1f} m dir={d} {ll}  {name[:65]}")
-    rep.p(f"dir-tagged PARTS shorter than {MIN_DIR_LEN_M} m: {len(short_parts)}")
-    for code, L, d, ll, pi, name in sorted(short_parts)[:15]:
-        rep.p(f"   {code} {L:7.1f} m dir={d} {ll} part{pi}  {name[:60]}")
+                eid_names[(code, f.eid)].add(f.name)
+
+    # sub-MIN_DIR_LEN_M stubs are a pre-existing source-data population (they
+    # exist on main too, which is why this check used to be permanently red):
+    # the recorded allowlist in the baseline keeps the check red ONLY for new
+    # offenders. A permanently red check is worse than no check.
+    allow = set((baseline or {}).get("short_stubs", []))
+    new_short = [s for s in short if stub_key(s[0], s[3]) not in allow]
+    if base_out is not None:
+        base_out["short_stubs"] = sorted({stub_key(s[0], s[3]) for s in short})
+    rep.p(f"dir-tagged FEATURES shorter than {MIN_DIR_LEN_M} m: {len(short)} "
+          f"({len(short) - len(new_short)} allowlisted in the baseline, "
+          f"{len(new_short)} NEW)")
+    for code, L, d, ll, name in sorted(new_short)[:15]:
+        rep.p(f"   NEW {code} {L:7.1f} m dir={d} {ll}  {name[:60]}")
+    rep.p(f"dir-tagged PARTS shorter than {MIN_DIR_LEN_M} m: {len(short_parts)} "
+          f"(informational)")
     rep.p(f"zero/1-point geometries: {len(degenerate)}  {degenerate[:5]}")
     rep.p(f"features missing eid: {len(missing_eid)}")
-    rep.p(f"eids duplicated WITHIN a layer: {len(dup_eid)}")
-    for code, e, c in dup_eid[:20]:
-        names = [f.name for f in data[code] if f.eid == e]
-        same = len({tuple(tuple(map(tuple, p)) for p in f.parts_deg)
-                    for f in data[code] if f.eid == e}) == 1
-        rep.p(f"   {code} eid={e} x{c} identical_geom={same}  {names[0][:55]}")
+    # since the whole-ride profiles, eid identifies the SOURCE track: the
+    # untagged + dir features a split track emits SHARE it by design. An eid
+    # shared across different names = two byte-identical source tracks.
+    shared = [(c, e, sorted(ns)) for (c, e), ns in eid_names.items()
+              if len(ns) > 1]
+    rep.p(f"eids shared across different track names (identical-geometry "
+          f"twins, informational): {len(shared)}")
+    for c, e, ns in shared[:10]:
+        rep.p(f"   {c} eid={e}  {ns[0][:60]}")
 
     rep.p()
-    prof_issues, elev_bad = [], []
+    prof_issues, elev_bad, line_bad = [], [], []
     for code in LAYERS:
         pr = profiles.get(code)
         if pr is None:
@@ -836,67 +908,28 @@ def check7_sanity(rep, data, profiles, tag):
                       f"{[f.name for f in data[code] if f.eid == e][0][:65]}")
         if extra:
             prof_issues.append((code, "orphan profile tracks", len(extra)))
-        # elev array length: each part contributes ceil(len/spacing)+1 samples,
-        # so expect ~ km*1000/spacing + n_parts, within a couple of samples/part
-        for f in data[code]:
-            tr = tracks.get(f.eid)
-            if not tr:
+        # whole-ride schema: every entry needs line + km + elev; the elev
+        # array samples the whole ride every spacing_m (+ endpoint), and the
+        # stored line must measure the stored km
+        for e, tr in tracks.items():
+            if "line" not in tr or "km" not in tr:
+                prof_issues.append((code, f"entry {e} missing line/km", 1))
                 continue
-            exp = (f.km or 0) * 1000 / spacing + f.n_parts
-            got = len(tr["elev"])
-            if abs(got - exp) > 2 * f.n_parts + 3:
-                elev_bad.append((code, f.eid, got, exp, f.n_parts, f.km, f.name))
-    rep.p(f"features whose profile elev length is off by more than "
-          f"(2*parts+3) samples: {len(elev_bad)}")
-    for code, e, got, exp, np_, km, name in elev_bad[:15]:
-        rep.p(f"   {code} {e} elev {got} vs expected ~{exp:.0f} "
-              f"(km {km}, parts {np_})  {name[:55]}")
-
-    # index.html consumes two sidecar fields that only multi-part features
-    # need, and silently degrades when they are absent:
-    #   properties.seq   -> buildGpx() sorts a track's <trkseg> back into ride
-    #                       order; missing, `seq[i] || 0` makes every offset 0
-    #                       and the segments stay in file order.
-    #   profiles.parts[] -> resampleTrack() pins each part's sample count so
-    #                       the elevation zip stays aligned at every seam;
-    #                       missing, partCounts is undefined and the seams drift.
-    rep.p()
-    seq_bad, parts_bad = [], []
-    for code in LAYERS:
-        tracks = (profiles.get(code) or {}).get("tracks", {})
-        for f in data[code]:
-            if f.n_parts < 2:
-                continue
-            ll = latlon_str(f.parts[0].coords[0])
-            if not f.seq:
-                seq_bad.append((code, "missing", f.n_parts, ll, f.name))
-            elif len(f.seq) != f.n_parts:
-                seq_bad.append((code, f"len {len(f.seq)} != {f.n_parts} parts",
-                                f.n_parts, ll, f.name))
-            elif list(f.seq) != sorted(f.seq):
-                seq_bad.append((code, f"not increasing {f.seq}", f.n_parts, ll, f.name))
-            tr = tracks.get(f.eid)
-            if tr is None:
-                continue
-            pc = tr.get("parts")
-            if pc is None:
-                parts_bad.append((code, "missing", f.n_parts, ll, f.name))
-            elif len(pc) != f.n_parts:
-                parts_bad.append((code, f"len {len(pc)} != {f.n_parts} parts",
-                                  f.n_parts, ll, f.name))
-            elif sum(pc) != len(tr["elev"]):
-                parts_bad.append((code, f"sum {sum(pc)} != elev {len(tr['elev'])}",
-                                  f.n_parts, ll, f.name))
-    nmulti = sum(1 for code in LAYERS for f in data[code] if f.n_parts > 1)
-    rep.p(f"multi-part features: {nmulti}")
-    rep.p(f"   missing/!bad properties.seq (GPX segment order): {len(seq_bad)}")
-    for code, why, n, ll, name in seq_bad[:15]:
-        rep.p(f"     {code} {why:<28} parts={n} {ll}  {name[:50]}")
-    rep.p(f"   missing/bad profiles.parts[] (elevation seam alignment): {len(parts_bad)}")
-    for code, why, n, ll, name in parts_bad[:15]:
-        rep.p(f"     {code} {why:<28} parts={n} {ll}  {name[:50]}")
-    return (short, short_parts, degenerate, missing_eid, dup_eid, prof_issues,
-            elev_bad, seq_bad, parts_bad)
+            exp = tr["km"] * 1000 / spacing + 1
+            if abs(len(tr["elev"]) - exp) > 3:
+                elev_bad.append((code, e, len(tr["elev"]), exp, tr["km"]))
+            gk = geod_km(tr["line"])
+            if abs(gk - tr["km"]) > max(0.06, 0.005 * tr["km"]):
+                line_bad.append((code, e, tr["km"], gk))
+    rep.p(f"profile entries whose elev length disagrees with their km "
+          f"(>3 samples): {len(elev_bad)}")
+    for code, e, got, exp, km in elev_bad[:15]:
+        rep.p(f"   {code} {e} elev {got} vs expected ~{exp:.0f} (km {km})")
+    rep.p(f"profile entries whose line does not measure their km: {len(line_bad)}")
+    for code, e, km, gk in line_bad[:15]:
+        rep.p(f"   {code} {e} km={km} measured={gk:.2f}")
+    return (new_short, short, short_parts, degenerate, missing_eid,
+            prof_issues, elev_bad, line_bad)
 
 
 # ---------------------------------------------------------------- check 8
@@ -1098,6 +1131,281 @@ def check10_multiline(rep, br, mn):
     return misordered, unchained, kmbad, recon, over
 
 
+# ---------------------------------------------------------------- check 11
+
+SIMPLIFY_TOLERANCE = 0.0002   # must match scripts/convert.py
+KML_NS = {"k": "http://www.opengis.net/kml/2.2"}
+
+
+def kml_source_lines(path):
+    """name -> the source track re-simplified and projected exactly the way
+    convert.py builds the line it measures seq against. Names appearing more
+    than once are dropped (ambiguous) and returned separately."""
+    import xml.etree.ElementTree as ET
+    out, dup = {}, set()
+    root = ET.parse(path).getroot()
+    for pm in root.iter(f"{{{KML_NS['k']}}}Placemark"):
+        ls = pm.find(".//k:LineString/k:coordinates", KML_NS)
+        if ls is None or not (ls.text or "").strip():
+            continue
+        name = (pm.findtext("k:name", "", KML_NS) or "").strip()
+        coords = []
+        for triple in ls.text.split():
+            lon, lat, *_ = triple.split(",")
+            coords.append((float(lon), float(lat)))
+        if len(coords) < 2:
+            continue
+        if name in out:
+            dup.add(name)
+        line = LineString(coords).simplify(SIMPLIFY_TOLERANCE,
+                                           preserve_topology=False)
+        out[name] = LineString(proj(line.coords))
+    for n in dup:
+        out.pop(n, None)
+    return out, dup
+
+
+def check11_seq_source(rep, br, repo):
+    """The old seq assertions (present, length matches, sorted) were true by
+    construction of convert.py and could never fail. This re-derives each
+    part's offset from the raw KML instead: re-project the part's first (and
+    last, for seq_end) vertex onto the source track and require the shipped
+    value within 50 m, with shipped part order strictly increasing."""
+    rep.h("CHECK 11 — seq/seq_end offsets re-derived from the source KMLs "
+          "(50 m tolerance)")
+    bad, structural, no_src = [], [], []
+    checked = skipped_dup = 0
+    for code in LAYERS:
+        kml = repo / "data" / "raw" / f"{code}.kml"
+        if not kml.exists():
+            rep.p(f"   {code}: source KML missing, skipped")
+            continue
+        src, dups = kml_source_lines(kml)
+        for f in br[code]:
+            if f.n_parts > 1 and not f.seq:
+                structural.append((code, "multi-part feature without seq", f.name))
+                continue
+            if not f.seq:
+                continue
+            if len(f.seq) != f.n_parts or \
+                    (f.seq_end and len(f.seq_end) != f.n_parts):
+                structural.append((code, "seq/seq_end length mismatch", f.name))
+                continue
+            line = src.get(f.name)
+            if line is None:
+                if f.name in dups:
+                    skipped_dup += 1
+                else:
+                    no_src.append((code, f.name))
+                continue
+            prev = None
+            for i, part in enumerate(f.parts):
+                checked += 1
+                off = line.project(Point(part.coords[0]))
+                if abs(off - f.seq[i]) > 50:
+                    bad.append((code, f.name, i, f.seq[i], off, "seq mismatch"))
+                if f.seq_end:
+                    end = line.project(Point(part.coords[-1]))
+                    if abs(end - f.seq_end[i]) > 50:
+                        bad.append((code, f.name, i, f.seq_end[i], end,
+                                    "seq_end mismatch"))
+                if prev is not None and off <= prev:
+                    bad.append((code, f.name, i, f.seq[i], off, "not increasing"))
+                prev = off
+    rep.p(f"parts checked against source KML: {checked} "
+          f"(skipped {skipped_dup} with ambiguous duplicate source names)")
+    rep.p(f"features whose source track was not found: {len(no_src)}")
+    for code, name in no_src[:10]:
+        rep.p(f"   {code}  {name[:70]}")
+    rep.p(f"structural seq problems: {len(structural)}")
+    for code, why, name in structural[:10]:
+        rep.p(f"   {code} {why}  {name[:60]}")
+    rep.p(f"offset mismatches / order violations: {len(bad)}")
+    for code, name, i, shipped, measured, why in bad[:15]:
+        rep.p(f"   {code} part{i} {why}: shipped {shipped} vs measured "
+              f"{measured:.0f}  {name[:55]}")
+    ok = not bad and not structural and not no_src
+    rep.verdict("check 11 (seq vs source KML)", "PASS" if ok else "FAIL",
+                f"{checked} parts checked; {len(bad)} offset/order violations, "
+                f"{len(structural)} structural, {len(no_src)} unmatched sources")
+
+
+# ---------------------------------------------------------------- check 12
+
+def component_count(feats):
+    """Connected components of the given features' parts, joined where a
+    part endpoint lies within 50 m of another part's geometry."""
+    parts = [p for f in feats for p in f.parts]
+    if not parts:
+        return 0
+    tree = STRtree(parts)
+    parent = list(range(len(parts)))
+
+    def find(a):
+        while parent[a] != a:
+            parent[a] = parent[parent[a]]
+            a = parent[a]
+        return a
+
+    for i, p in enumerate(parts):
+        for ep in (p.coords[0], p.coords[-1]):
+            pt = Point(ep)
+            for k in tree.query(pt.buffer(50)):
+                k = int(k)
+                if k != i and parts[k].distance(pt) <= 50:
+                    ra, rb = find(i), find(k)
+                    if ra != rb:
+                        parent[ra] = rb
+    return len({find(i) for i in range(len(parts))})
+
+
+def check12_view_structure(rep, br, mn, baseline, base_out):
+    """Checks 3/4 only audit dir-TAGGED geometry; the stranded-fragment class
+    (fix 3) was invisible to them because its fragments are untagged. This
+    audits everything each view draws: component counts per (layer, province,
+    view), and part endpoints >200 m from all other visible geometry of their
+    layer — each gated against the baseline (else against main)."""
+    rep.h("CHECK 12 — direction-view structure of ALL visible geometry "
+          "(components per layer x province x view; 200 m dead-end rule)")
+    ref_name = "baseline" if baseline else "main"
+    rep.p(f"reference: {ref_name}")
+    comps, bad_comp = {}, []
+    for view in VIEWS:
+        for code in LAYERS:
+            provs = sorted({p for f in br[code] for p in f.provs} |
+                           {p for f in mn[code] for p in f.provs})
+            for prov in provs:
+                key = f"{code}|{prov}|{view}"
+                c = component_count(visible(br[code], view, prov))
+                comps[key] = c
+                if baseline:
+                    ref = baseline.get("components", {}).get(key)
+                else:
+                    ref = component_count(visible(mn[code], view, prov))
+                if ref is not None and c > ref:
+                    bad_comp.append((key, ref, c))
+    rep.p(f"(layer, province, view) cells: {len(comps)}; "
+          f"cells with MORE components than {ref_name}: {len(bad_comp)}")
+    for key, ref, c in sorted(bad_comp, key=lambda x: x[1] - x[2]):
+        rep.p(f"   {key}: {ref_name} {ref} -> branch {c}")
+
+    de_locs = {v: {} for v in VIEWS}
+    bad_de = []
+    for view in VIEWS:
+        for code in LAYERS:
+            d = dead_ends(visible(br[code], view), [200])[200]
+            if baseline:
+                ref_pts = [tuple(TO_M.transform(float(ll.split(",")[1]),
+                                                float(ll.split(",")[0])))
+                           for ll in baseline.get("dead_end_locs", {})
+                                             .get(view, {}).get(code, [])]
+            else:
+                dm = dead_ends(visible(mn[code], view), [200])[200]
+                ref_pts = [v[3] for v in dm.values()]
+            for v in d.values():
+                if not ref_pts or \
+                        min(math.dist(v[3], q) for q in ref_pts) > 100:
+                    bad_de.append((view, code, v))
+            de_locs[view][code] = sorted(v[0] for v in d.values())
+    n_de = sum(len(de_locs[v][c]) for v in VIEWS for c in LAYERS)
+    rep.p(f"part endpoints >200 m from everything visible in their layer: "
+          f"{n_de}; NEW vs {ref_name} (no {ref_name} dead end within 100 m): "
+          f"{len(bad_de)}")
+    for view, code, v in sorted(bad_de, key=lambda x: -x[2][2])[:20]:
+        rep.p(f"   {code} view {view}  {v[0]}  {v[2]:7.1f} m  {v[1][:60]}")
+    base_out["components"] = comps
+    base_out["dead_end_locs"] = de_locs
+    rep.verdict("check 12 (view structure)",
+                "PASS" if not bad_comp and not bad_de else "FAIL",
+                f"{len(bad_comp)} cells exceed {ref_name} components; "
+                f"{len(bad_de)} new >200 m dead ends")
+    return bad_comp, bad_de
+
+
+# ---------------------------------------------------------------- check 13
+
+def orphan_stats(data):
+    """The branch's core win: geometry HIDDEN in the East-to-West view
+    (dir=E), sampled every 300 m, measured to the nearest visible same-layer
+    line. Main stranded 8.1% of such samples beyond 400 m."""
+    n = far = 0
+    for code in LAYERS:
+        vis = Index(visible(data[code], "W"))
+        for f in data[code]:
+            if f.dir != "E" or f.geom is None:
+                continue
+            for p in f.sample(300):
+                n += 1
+                d, _ = vis.nearest_excluding(p, set(), max_m=1000)
+                if math.isinf(d) or d > 400:
+                    far += 1
+    return n, far
+
+
+def check13_baseline_metrics(rep, br, baseline, base_out):
+    rep.h("CHECK 13 — pinned baseline metrics (scripts/qa_baseline.json)")
+    layer_km = {code: round(sum(f.geo_km for f in br[code]), 4)
+                for code in LAYERS}
+    groups = sorted({f"{code}|{f.name}|{','.join(f.provs)}"
+                     for code in LAYERS for f in br[code]})
+    n, far = orphan_stats(br)
+    for code, km in layer_km.items():
+        rep.p(f"   {code}: {km:10.4f} km")
+    rep.p(f"   name-groups (layer|name|provs): {len(groups)}")
+    rep.p(f"   E2W orphan samples >400 m from visible: {far} of {n} "
+          f"({far / n:.2%})" if n else "   no hidden dir=E geometry")
+    base_out["layer_geo_km"] = layer_km
+    base_out["name_groups"] = groups
+    base_out["orphan"] = {"samples": n, "far400": far}
+    if not baseline:
+        rep.verdict("check 13 (baseline metrics)", "PASS",
+                    "no baseline file — metrics recorded only "
+                    "(write one with --write-baseline)")
+        return
+    probs = []
+    for code, km in layer_km.items():
+        bkm = baseline.get("layer_geo_km", {}).get(code)
+        if bkm is None or abs(km - bkm) > 0.01:   # 10 m per layer
+            probs.append(f"{code} length {bkm} -> {km} km")
+    lost = set(baseline.get("name_groups", [])) - set(groups)
+    new = set(groups) - set(baseline.get("name_groups", []))
+    if lost:
+        probs.append(f"{len(lost)} name-groups lost")
+        for g in sorted(lost)[:8]:
+            rep.p(f"   LOST: {g[:90]}")
+    if new:
+        probs.append(f"{len(new)} name-groups invented")
+        for g in sorted(new)[:8]:
+            rep.p(f"   NEW: {g[:90]}")
+    bfar = baseline.get("orphan", {}).get("far400")
+    if bfar is not None and far > bfar:
+        probs.append(f"orphan samples {bfar} -> {far}")
+    rep.verdict("check 13 (baseline metrics)", "PASS" if not probs else "FAIL",
+                "; ".join(probs) if probs else
+                f"lengths within 10 m, {len(groups)} name-groups intact, "
+                f"orphans {far}/{n}")
+
+
+# ---------------------------------------------------------------- node checks
+
+def run_node_check(rep, num, script, repo):
+    rep.h(f"CHECK {num} — node harness scripts/{script}")
+    try:
+        r = subprocess.run(["node", str(repo / "scripts" / script), str(repo)],
+                           capture_output=True, text=True, timeout=900)
+    except FileNotFoundError:
+        rep.verdict(f"check {num} ({script})", "FAIL", "node is not installed")
+        return
+    out = [l for l in r.stdout.strip().splitlines() if l.strip()]
+    for line in out:
+        rep.p("   " + line)
+    if r.returncode and r.stderr.strip():
+        for line in r.stderr.strip().splitlines()[:10]:
+            rep.p("   ! " + line)
+    rep.verdict(f"check {num} ({script})", "PASS" if r.returncode == 0 else "FAIL",
+                out[-1] if out else f"exit code {r.returncode}")
+
+
 # ---------------------------------------------------------------- main
 
 def main():
@@ -1106,12 +1414,19 @@ def main():
                     default=str(pathlib.Path(__file__).resolve().parent.parent))
     ap.add_argument("--base-rev", default="main")
     ap.add_argument("--out", default=None)
-    ap.add_argument("--checks", default="0,1,2,3,4,5,6,7,8,9,10")
+    ap.add_argument("--checks", default="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15")
     ap.add_argument("--no-dedup-exclude", action="store_true",
                     help="in the dead-end checks exclude only the endpoint's own "
                          "feature, not its byte-identical twins in other layers")
+    ap.add_argument("--baseline", default=None,
+                    help="baseline metrics JSON (default scripts/qa_baseline.json)")
+    ap.add_argument("--write-baseline", action="store_true",
+                    help="write the current tree's metrics to the baseline file "
+                         "(deliberately, in its own commit)")
     args = ap.parse_args()
     want = set(args.checks.split(","))
+    if args.write_baseline:
+        want |= {"7", "9", "12", "13"}   # the checks that produce baseline fields
     global DEDUP_EXCLUDE
     if args.no_dedup_exclude:
         DEDUP_EXCLUDE = False
@@ -1139,6 +1454,18 @@ def main():
     rep.p("working-tree digests (sha256[:12]): "
           + ", ".join(f"{k.split('/')[-1]}={v}" for k, v in digests_before.items()))
 
+    base_path = pathlib.Path(args.baseline) if args.baseline else \
+        repo / "scripts" / "qa_baseline.json"
+    baseline = None
+    if base_path.exists() and not args.write_baseline:
+        baseline = json.loads(base_path.read_text())
+        rep.p(f"baseline: {base_path.name} (written {baseline.get('date')}, "
+              f"HEAD {baseline.get('head')})")
+    else:
+        rep.p(f"baseline: {'REWRITING' if args.write_baseline else 'none'} "
+              f"({base_path.name})")
+    base_out = {}
+
     if "0" in want:
         check0_dir_census(rep, br, mn)
     if "1" in want:
@@ -1148,13 +1475,17 @@ def main():
     if "3" in want:
         sb, ob, pb, fullb = check3_couplet(rep, br, "branch")
         sm, om, pm, fullm = check3_couplet(rep, mn, "main")
-        bad_full = [x for x in fullb if x[1] < COUPLET_MIN_FRAC]
+        # gate the E side only (a WB track hides whole on a >50% majority
+        # rule, so partial W coverage is the shipped design, not a defect),
+        # and at the absorption radius where the 300 m test flagged it
+        bad_full = [x for x in fullb if x[0] == "E" and x[1] < COUPLET_MIN_FRAC]
         rep.verdict("check 3 (couplet coverage)",
                     "PASS" if not ob["E"] and not pb["E"] and not bad_full else "FAIL",
                     f"branch: {len(ob['E'])}/{len(sb['E'])} E-features and "
-                    f"{len(pb['E'])} E-parts below {COUPLET_MIN_FRAC:.0%}; "
+                    f"{len(pb['E'])} E-parts below {COUPLET_MIN_FRAC:.0%} at "
+                    f"{ABSORB_NEAR_M} m; "
                     f"{len(ob['W'])}/{len(sb['W'])} W-features below (W partial by design); "
-                    f"{len(fullb)} fully-hidden tracks, {len(bad_full)} of them below 90%; "
+                    f"{len(fullb)} fully-hidden tracks, {len(bad_full)} E ones below 90%; "
                     f"main had {len(om['E'])}/{len(sm['E'])} E, {len(om['W'])}/{len(sm['W'])} W")
     if "4" in want:
         db = check4_hidden_no_alt(rep, br, "branch")
@@ -1174,25 +1505,39 @@ def main():
     if "6" in want:
         check6_length(rep, br, mn)
     if "7" in want:
-        sb, spb, degb, meb, deb, pib, elb, sqb, ptb = check7_sanity(
-            rep, br, prof_br, "branch")
-        sm, spm, degm, mem, dem, pim, elm, sqm, ptm = check7_sanity(
-            rep, mn, load_profiles(repo, args.base_rev), "main")
-        ok = (not sb and not meb and not pib and not elb and not sqb and not ptb
-              and len(degb) <= len(degm) and len(deb) <= len(dem))
+        newsb, sb, spb, degb, meb, pib, elb, lnb = check7_sanity(
+            rep, br, prof_br, "branch", baseline, base_out)
+        ok = (not newsb and not degb and not meb and not pib
+              and not elb and not lnb)
         rep.verdict("check 7 (per-feature sanity + profiles)", "PASS" if ok else "FAIL",
-                    f"branch: {len(sb)} dir-tagged features <{MIN_DIR_LEN_M} m (main {len(sm)}), "
-                    f"{len(spb)} dir-tagged parts <{MIN_DIR_LEN_M} m, {len(degb)} degenerate "
-                    f"(main {len(degm)}), {len(meb)} missing eid, {len(deb)} intra-layer "
-                    f"dup eids (main {len(dem)}), {len(pib)} profile cross-ref issues "
-                    f"(main {len(pim)}), {len(elb)} bad elev lengths, {len(sqb)} bad seq[], "
-                    f"{len(ptb)} bad profiles.parts[]")
+                    f"{len(newsb)} NEW dir-tagged features <{MIN_DIR_LEN_M} m "
+                    f"({len(sb)} total, rest allowlisted), {len(spb)} short parts "
+                    f"(informational), {len(degb)} degenerate, {len(meb)} missing "
+                    f"eid, {len(pib)} profile cross-ref issues, {len(elb)} bad "
+                    f"elev lengths, {len(lnb)} line/km mismatches")
     if "8" in want:
         check8_shields(rep, br, mn)
     if "9" in want:
-        check9_prov_view(rep, br, mn)
+        check9_prov_view(rep, br, mn, baseline, base_out)
     if "10" in want:
         check10_multiline(rep, br, mn)
+    if "11" in want:
+        check11_seq_source(rep, br, repo)
+    if "12" in want:
+        check12_view_structure(rep, br, mn, baseline, base_out)
+    if "13" in want:
+        check13_baseline_metrics(rep, br, baseline, base_out)
+    if "14" in want:
+        run_node_check(rep, 14, "qa_gpx.mjs", repo)
+    if "15" in want:
+        run_node_check(rep, 15, "qa_elev.mjs", repo)
+
+    if args.write_baseline:
+        base_out["date"] = __import__("datetime").date.today().isoformat()
+        base_out["head"] = head
+        base_path.write_text(json.dumps(base_out, indent=1, sort_keys=True))
+        print(f"\nbaseline written to {base_path} "
+              f"({base_path.stat().st_size / 1e3:.0f} kB)")
 
     print("\n" + "=" * 78)
     for c, v, h in rep.results:
