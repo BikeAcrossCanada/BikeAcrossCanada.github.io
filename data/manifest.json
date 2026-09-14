@@ -6,7 +6,7 @@
    "weight": 4,
    "title": "C1 \u2014 Victoria BC to Cape Spear NL (approx. 6,700 km West\u2013East)",
    "count": 399,
-   "km": 8651,
+   "km": 8652,
    "km_west_east": 6700
   },
   {
@@ -23,8 +23,8 @@
    "color": "#00674e",
    "weight": 4,
    "title": "C3 \u2014 Victoria BC to Newfoundland (approx. 9,700 km West\u2013East)",
-   "count": 477,
-   "km": 10175,
+   "count": 478,
+   "km": 10174,
    "km_west_east": 9700
   },
   {
@@ -41,7 +41,7 @@
    "color": "#787878",
    "weight": 2.5,
    "title": "CA \u2014 Access routes",
-   "count": 336,
+   "count": 340,
    "km": 354,
    "km_west_east": 300
   },
@@ -51,7 +51,7 @@
    "weight": 3,
    "title": "CL \u2014 Local connectors",
    "count": 113,
-   "km": 763,
+   "km": 762,
    "km_west_east": 700
   },
   {
