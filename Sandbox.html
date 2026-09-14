@@ -1,39 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Simple Web Map with Scale Bar</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    
-    <style>
-        /* Make the map fill the entire browser window */
-        html, body, #map {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-    </style>
+  <meta charset="utf-8">
+  <title>Simple MapML Web Map with Scale Bar</title>
+  <!-- Load the MapML Viewer polyfill/script -->
+  <script type="module" src="https://geogratis.gc.ca" crossorigin></script>
+  <style>
+    /* Give the map container a defined size */
+    mapml-viewer {
+      width: 100%;
+      height: 500px;
+      display: block;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- The container div where the map will be rendered -->
-    <div id="map"></div>
+  <!-- The "controls" attribute automatically renders the scale bar -->
+  <mapml-viewer zoom="3" lat="45.0" lon="-90.0" controls>
+    <layer- label="OpenStreetMap" src="https://geogratis.gc.ca" checked></layer->
+  </mapml-viewer>
 
-    <!-- Leaflet JavaScript -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    
-    <script>
-        // 1. Initialize the map and set its center and zoom level
-        var map = L.map('map').setView([51.505, -0.09], 13);
-
-        // 3. Add the scale bar control to the map
-        L.control.scale({
-            metric: true,    // Show kilometers/meters
-            imperial: true   // Show miles/feet
-        }).addTo(map);
-    </script>
 </body>
 </html>
