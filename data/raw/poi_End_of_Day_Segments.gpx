@@ -4,7 +4,7 @@
     <link href="http://www.garmin.com">
       <text>Garmin International</text>
     </link>
-    <time>2026-09-14T17:17:11Z</time>
+    <time>2026-09-15T17:20:51Z</time>
     <bounds maxlat="51.425843238830566" maxlon="-52.697403430938721" minlat="43.749854564666748" minlon="-125.90960741043091" />
   </metadata>
 
@@ -58,6 +58,42 @@ Creston, British Columbia, V0B1G6, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-13T13:06:30Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.954059459269047" lon="-65.04298665560782">
+    <time>2026-09-15T16:59:21Z</time>
+    <name>13758 Highway 1 (Jeff's Hideaway Camp 53m)</name>
+    <cmt>13758 Highway 1
+Wilmot, Nova Scotia, B0S 1W0, CAN</cmt>
+    <desc>13758 Highway 1
+Wilmot, Nova Scotia, B0S 1W0, CAN</desc>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Address>
+          <gpxx:StreetAddress>13758 Highway 1</gpxx:StreetAddress>
+          <gpxx:City>Wilmot</gpxx:City>
+          <gpxx:State>Nova Scotia</gpxx:State>
+          <gpxx:Country>CAN</gpxx:Country>
+          <gpxx:PostalCode>B0S 1W0</gpxx:PostalCode>
+        </gpxx:Address>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Address>
+          <wptx1:StreetAddress>13758 Highway 1</wptx1:StreetAddress>
+          <wptx1:City>Wilmot</wptx1:City>
+          <wptx1:State>Nova Scotia</wptx1:State>
+          <wptx1:Country>CAN</wptx1:Country>
+          <wptx1:PostalCode>B0S 1W0</wptx1:PostalCode>
+        </wptx1:Address>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-15T16:59:21Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -346,6 +382,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-14T16:46:37Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.049143314361572" lon="-67.737922668457031">
+    <time>2026-09-15T16:45:14Z</time>
+    <name>Boulevard Broadway and Rue Victoria (Camping Chutes and Gorge 563m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-15T16:45:14Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -872,6 +926,42 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-12T16:09:25Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.759523868560791" lon="-65.508556365966797">
+    <time>2026-09-15T16:58:32Z</time>
+    <name>Highway 1 (Dunromin Campground 50m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-15T16:58:32Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.993777275085449" lon="-64.148075580596924">
+    <time>2026-09-15T17:00:08Z</time>
+    <name>Highway 1 and Alley (Avon River Motel 92m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-15T17:00:08Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -1542,6 +1632,42 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="46.16405725479126" lon="-67.574844360351563">
+    <time>2026-09-15T16:48:51Z</time>
+    <name>Main St and Kirkpatrick St (Connell Park Campground 917m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-15T16:48:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.641013145446777" lon="-63.567259311676025">
+    <time>2026-09-15T17:01:15Z</time>
+    <name>Marginal Rd (Halifax International Hostel 527m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-15T17:01:15Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="49.206154346466064" lon="-124.0350866317749">
     <time>2026-09-12T17:36:25Z</time>
     <name>Mostar Rd and Parkway Trl (Jingle Pot RV Park and Campground 425m)</name>
@@ -1592,6 +1718,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-10T17:15:52Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.346863269805908" lon="-66.225156784057617">
+    <time>2026-09-15T16:53:13Z</time>
+    <name>Nerepis Rd and Ferry Rd (Hardings Point Campground 246m+free 5min Westfield Ferry+108m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-15T16:53:13Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -1706,6 +1850,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-07T13:31:36Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.440123558044434" lon="-68.395793437957764">
+    <time>2026-09-15T16:43:34Z</time>
+    <name>Parc Linéaire Interprovincial Petit-Témis (Camping de la republique 48m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-15T16:43:34Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -2052,6 +2214,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="45.872898101806641" lon="-66.913626194000244">
+    <time>2026-09-15T16:51:15Z</time>
+    <name>Route 102 and Ramp (Woolastook Park 616m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-15T16:51:15Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="46.968955993652344" lon="-65.329470634460449">
     <time>2026-09-12T16:03:53Z</time>
     <name>Route 11 and N Black River Rd (Miramichi Treehouse &amp; Camping Adventures 1.3km)</name>
@@ -2066,6 +2246,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-12T16:03:53Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.572203636169434" lon="-67.72172212600708">
+    <time>2026-09-15T16:46:25Z</time>
+    <name>Route 130 and Lahue Rd (River Country Campground 517m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-15T16:46:25Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -2120,6 +2318,60 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-10T17:21:13Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.571727627888322" lon="-71.995586408302188">
+    <time>2026-09-15T13:10:00Z</time>
+    <name>Route Marie-Victorin (Camping municipal Parc de l'ïle de Leclercville 102m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-15T13:10:00Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.069149971008301" lon="-72.81437873840332">
+    <time>2026-09-15T13:06:43Z</time>
+    <name>Route Marie-Victorin and W8banaki 8wdi (Camping Île du fort 5.4km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-15T13:06:43Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.684719562530518" lon="-68.886873722076416">
+    <time>2026-09-15T13:14:31Z</time>
+    <name>Rue Caldwell and Parc Linéaire Interprovincial Petit-Témis (Témilac 975m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-15T13:14:31Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
