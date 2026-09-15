@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-// GPX-path QA for the direction-splitting branch (issue #61 round 3).
+// GPX-path QA for the ride-assembly branch (DESIGN_ride_assembly.md §8).
 //
-// Nothing else exercises buildGpx — the most invasive front-end change — so
-// this slices trackParts / llDistM / lineLenM / buildGpx VERBATIM out of
-// index.html, feeds them the real data/routes_*.geojson, builds the
-// full-network, West-to-East, and East-to-West GPX flavours, and asserts,
-// for every multi-segment <trk>:
+// Nothing else exercises buildGpx — so this slices materializeStore /
+// splicedVariantIds / rangeClip / buildGpx VERBATIM out of index.html, feeds
+// them the real data/rides_<code>.json stores, builds the full-network,
+// West-to-East, and East-to-West GPX flavours, and asserts, for every
+// multi-segment <trk>:
 //   1. no backtracking: walking segments in emitted order, cumulative
 //      along-track progress (each segment's start projected onto the
 //      concatenation so far) never decreases by >100 m;
@@ -16,7 +16,12 @@
 //      < 100 m;
 //   4. per name-group, the largest inter-segment chain gap is <= main's for
 //      the same group (main's data run through main's own buildGpx, both
-//      read via `git show`).
+//      read via `git show`) — full flavour only;
+//   5. riding conservation: each flavour's total emitted length equals the
+//      total computed independently from the store per the flavour rules
+//      (both = every track as drawn; W-to-E = minus surviving WB variants;
+//      E-to-W = rides' westbound assemblies + two-way + demoted + unspliced
+//      variants as drawn).
 // Plus the GPX regression numbers: no duplicate/blank <trk> names, no
 // NaN coordinates, no empty <trkseg>, and name parity with main.
 //
@@ -42,36 +47,48 @@ function extractFn(html, name) {
   return html.slice(start, i + 1);
 }
 
-function makeBuildGpx(html, label) {
+// Branch buildGpx reads the ride stores and the two <select>s; main's older
+// buildGpx reads per-feature GeoJSON through provOk/dirOk. Both are sliced
+// verbatim and driven through the same (registry, dir) call shape.
+function makeBranchBuild(html) {
   let src = '';
-  for (const name of ['buildGpx']) {
+  for (const name of ['materializeStore', 'splicedVariantIds', 'rangeClip', 'buildGpx']) {
     const s = extractFn(html, name);
-    if (!s) throw new Error(`${label}: function ${name} not found in index.html`);
+    if (!s) throw new Error(`branch: function ${name} not found in index.html`);
     src += s + '\n';
   }
-  // absent on main's older buildGpx — optional
-  for (const name of ['trackParts', 'llDistM', 'lineLenM', 'segDistM', 'nearLines']) {
-    const s = extractFn(html, name);
-    if (s) src += s + '\n';
-  }
-  // buildGpx's other references, stubbed: xmlEsc/plainDesc only shape text
-  // (the assertions below are geometric), checkedRouteCodes gates POIs only.
-  const f = new Function('layerRegistry', 'checkedRouteCodes', 'provOk', 'dirOk',
-                         'xmlEsc', 'plainDesc', src + '\nreturn buildGpx();');
-  return (layerRegistry, dirOk) =>
-    f(layerRegistry, () => new Set(), () => true, dirOk,
-      s => s || '', s => s || '');
+  const f = new Function('layerRegistry', 'checkedRouteCodes', 'provSelect',
+                         'dirSelect', 'xmlEsc', 'plainDesc',
+                         src + '\nreturn { buildGpx, materializeStore, splicedVariantIds };');
+  const sel = { prov: { value: '' }, dir: { value: '' } };
+  const api = f([], () => new Set(), sel.prov, sel.dir,
+                s => (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'),
+                s => s || '');
+  return { sel, ...api,
+    // rebind: the Function closed over the [] registry; rebuild with data
+    withRegistry(reg) {
+      const g = f(reg, () => new Set(), sel.prov, sel.dir,
+                  s => (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'),
+                  s => s || '');
+      return (dir) => { sel.dir.value = dir; sel.prov.value = ''; return g.buildGpx(); };
+    } };
 }
 
-function loadRegistry(read) {
-  const reg = [];
-  for (const code of LAYERS) {
-    const text = read(`data/routes_${code}.geojson`);
-    if (text == null) continue;
-    reg.push({ kind: 'route', cb: { checked: true }, gj: JSON.parse(text),
-               meta: { code, title: code } });
+function makeMainBuild(html) {
+  let src = '';
+  const s = extractFn(html, 'buildGpx');
+  if (!s) throw new Error('main: buildGpx not found');
+  src += s + '\n';
+  for (const name of ['trackParts', 'llDistM', 'lineLenM', 'segDistM', 'nearLines']) {
+    const t = extractFn(html, name);
+    if (t) src += t + '\n';
   }
-  return reg;
+  const f = new Function('layerRegistry', 'checkedRouteCodes', 'provOk', 'dirOk',
+                         'xmlEsc', 'plainDesc', src + '\nreturn buildGpx();');
+  return (reg, dirOk) =>
+    f(reg, () => new Set(), () => true, dirOk,
+      x => (x || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'),
+      x => x || '');
 }
 
 const readTree = rel => {
@@ -103,10 +120,23 @@ function pointSegDist(p, a, b) {
   return dist(p, [a[0] + t * (b[0] - a[0]), a[1] + t * (b[1] - a[1])]);
 }
 
+// spherical length of a [lon,lat] list, for the conservation totals
+function sphLen(coords) {
+  const r = Math.PI / 180, R = 6371000;
+  let L = 0;
+  for (let i = 1; i < coords.length; i++) {
+    const [x0, y0] = coords[i - 1], [x1, y1] = coords[i];
+    const s = Math.sin((y1 - y0) * r / 2) ** 2 +
+      Math.cos(y0 * r) * Math.cos(y1 * r) * Math.sin((x1 - x0) * r / 2) ** 2;
+    L += 2 * R * Math.asin(Math.sqrt(s));
+  }
+  return L;
+}
+
 // projection of p onto a polyline: {chainage, dist}. Where the line rides
 // the same road twice (a source track's own loop — Mission to Hope does
 // this through Hope), several chainages fit equally well; credit the LATEST
-// one, so a route's own revisit doesn't read as the merge jumping backwards
+// one, so a route's own revisit doesn't read as the walk jumping backwards
 // while a genuine jump-back (whose start matches only earlier riding) still
 // does.
 function projectOnto(line, cum, p) {
@@ -176,9 +206,9 @@ function auditFlavor(parsed) {
     let off = 0;
     const psegs = segs.map(s => { const q = flat.slice(off, off + s.length); off += s.length; return q; });
     // 1. backtracking — gated on the segment start actually re-entering
-    // ridden road (within 250 m): across a ferry hop or a direction-filtered
-    // hole the start is far from everything ridden and its projection
-    // chainage is meaningless, not a backtrack
+    // ridden road (within 250 m): across a ferry hop or an assembly seam the
+    // start is far from everything ridden and its projection chainage is
+    // meaningless, not a backtrack
     let concat = [], cum = [0];
     for (let i = 0; i < psegs.length; i++) {
       const s = psegs[i];
@@ -226,7 +256,7 @@ function chainGaps(parsed) {
   // Largest end->start gap per NAME, with all same-named <trk>s' segments
   // taken together in emitted order: main emits one single-segment <trk>
   // per feature (same name repeated per province/direction), the branch one
-  // multi-segment <trk> — grouping by name measures both the same way.
+  // <trk> per source track — grouping by name measures both the same way.
   const byName = new Map();
   for (const { name, segs } of parsed.trks) {
     if (!byName.has(name)) byName.set(name, []);
@@ -248,19 +278,90 @@ function chainGaps(parsed) {
   return out;
 }
 
+// riding conservation (assertion 5): what each flavour SHOULD measure,
+// derived from the store by the flavour rules — independently of buildGpx's
+// walk (same ranges, separate arithmetic).
+function expectedMetres(stores, spliced, dir) {
+  let total = 0;
+  for (const code of Object.keys(stores)) {
+    for (const t of stores[code].tracks) {
+      const whole = () => sphLen(t.coords);
+      if (dir === '') { total += whole(); continue; }
+      if (t.role === 'variant' && !t.demoted) {
+        if (dir === 'E' || spliced[code].has(t.id)) continue;
+        total += whole(); continue;
+      }
+      if (dir === 'W' && t.role === 'ride' && t.west) {
+        for (const [tid, i, j] of t.west)
+          total += sphLen(stores[code].tracks[tid].coords.slice(i, j + 1));
+        continue;
+      }
+      total += whole();
+    }
+  }
+  return total;
+}
+
+function emittedMetres(parsed) {
+  let total = 0;
+  for (const { segs } of parsed.trks)
+    for (const s of segs) total += sphLen(s);
+  return total;
+}
+
 // ---------------------------------------------------------------- run
 
-const FLAVORS = {
-  full: () => true,
-  'W-to-E view': p => !p.dir || p.dir === 'E',
-  'E-to-W view': p => !p.dir || p.dir === 'W',
-};
+const brApi = makeBranchBuild(readTree('index.html'));
+const stores = {}, splicedByLayer = {}, brReg = [];
+for (const code of LAYERS) {
+  const text = readTree(`data/rides_${code}.json`);
+  if (text == null) continue;
+  const store = JSON.parse(text);
+  stores[code] = store;
+  splicedByLayer[code] = brApi.splicedVariantIds(store);
+  brReg.push({ kind: 'route', cb: { checked: true }, meta: { code, title: code },
+               store, spliced: splicedByLayer[code],
+               gj: brApi.materializeStore(store) });
+}
+const brBuild = brApi.withRegistry(brReg);
 
-const brBuild = makeBuildGpx(readTree('index.html'), 'branch');
 const mnHtml = readMain('index.html');
-const mnBuild = mnHtml && makeBuildGpx(mnHtml, 'main');
-const brReg = loadRegistry(readTree);
-const mnReg = loadRegistry(readMain);
+let mnParsedFull = null;
+if (mnHtml) {
+  const mnReg = [];
+  for (const code of LAYERS) {
+    const text = readMain(`data/routes_${code}.geojson`);
+    if (text == null) continue;
+    mnReg.push({ kind: 'route', cb: { checked: true }, gj: JSON.parse(text),
+                 meta: { code, title: code } });
+  }
+  if (mnReg.length)
+    mnParsedFull = parseTracks(makeMainBuild(mnHtml)(mnReg, () => true), 'main full');
+}
+
+// Investigated one-off populations (step-4 build, 2026-09-14). Anything NOT
+// on these lists still fails — they are named cases, not tolerances.
+//
+// Tracks in the store's census that main's GPX never had: all three sit on
+// the Ottawa River provincial border, where main's province splitter
+// silently dropped them (the issue-21 bug class). The branch keeps every
+// source track by construction, so these are resurrections, not additions.
+const BRANCH_ONLY_OK = new Set([
+  'C3 [C3 WB] Gatineau, QC (Route Verte 1) 001',
+  'CA Accommodation Connector Route - Grenville-sur-la-Rouge, QC (Halte-Camping Chute des Sept-Soeurs) 100m 001',
+  'CA CA Track 001 Ottawa Jail WB',
+]);
+// Westbound assemblies where Sam drew overlapping westbound cover and the
+// design splices it back-to-back (DESIGN §4.5 overlapping spans / §4a
+// ferry-terminal loops): the rider genuinely re-passes 200-330 m of
+// parallel street. Logged by the converter as overlapping-variant seams /
+// nested-variant data questions for Sam; honest data, not a merge defect.
+const BACKTRACK_OK = new Set([
+  'C1 [C1 EB] North Saanich BC Swartz Bay Ferry Terminal Cycling access 878m',
+  'C1 [C1 EB] Victoria (Ocean Island Backpackers Inn 622m) to Swartz Bay, BC pt1of2',
+  'CN CN Rivers Trail Kelowna EB 002',
+  "CN [CN EB] Kamloops [CN] (Rivers Trail at River St) to Salmon Arm, BC (Pierre's Point Campground 460m) 002",
+]);
 
 let fails = 0;
 const bad = (n, what, list, fmt) => {
@@ -270,39 +371,57 @@ const bad = (n, what, list, fmt) => {
   for (const x of list.slice(0, 8)) console.log(`     ${fmt(x)}`);
 };
 
-for (const [flavor, dirOk] of Object.entries(FLAVORS)) {
+const FLAVORS = { full: '', 'W-to-E view': 'E', 'E-to-W view': 'W' };
+
+for (const [flavor, dir] of Object.entries(FLAVORS)) {
   console.log(`\n=== ${flavor} ===`);
-  const parsed = parseTracks(brBuild(brReg, dirOk), flavor);
+  const parsed = parseTracks(brBuild(dir), flavor);
   console.log(`  ${parsed.trks.length} tracks`);
   bad(1, 'duplicate <trk> names', parsed.dup, ([n, c]) => `${c}x ${n}`);
   bad(1, 'blank names', Array(parsed.blank).fill(0), () => '');
   bad(1, 'NaN coordinates', Array(parsed.nan).fill(0), () => '');
   bad(1, 'empty <trkseg>', Array(parsed.empty).fill(0), () => '');
   const a = auditFlavor(parsed);
-  bad(1, 'backtracking >100 m', a.back,
+  const backKnown = a.back.filter(x => BACKTRACK_OK.has(x.name));
+  for (const x of backKnown)
+    console.log(`  known overlapping-cover backtrack (allowlisted): ` +
+                `${x.m.toFixed(0)} m  ${x.name}`);
+  bad(1, 'backtracking >100 m (new)', a.back.filter(x => !BACKTRACK_OK.has(x.name)),
       x => `${x.m.toFixed(0)} m (start ${x.near.toFixed(0)} m off line)  ${x.name}`);
   bad(2, 'duplicated riding >200 m', a.dupRide, x => `${x.m.toFixed(0)} m  ${x.name}`);
   bad(3, 'misordered seams', a.misorder,
       x => `gap ${x.gap.toFixed(0)} m, alt pairing ${x.alt.toFixed(0)} m  ${x.name}`);
-  // 4. chain gaps + name parity vs main — full build only: a direction-
-  // filtered flavor legitimately differs from main's (main dropped whole
-  // one-direction tracks that per-portion splitting keeps partly visible,
-  // and its holes where stretches hide are the design, with the WB variant
-  // filling them as its own <trk>). 100 m slack: main's per-feature export
-  // has gap 0 by construction, and a merged track's border seams land
-  // within a couple of dozen metres, not zero.
-  if (flavor === 'full' && mnBuild && mnReg.length) {
-    const mg = chainGaps(parseTracks(mnBuild(mnReg, dirOk), 'main ' + flavor));
+  // 5. riding conservation vs the store
+  const exp = expectedMetres(stores, splicedByLayer, dir);
+  const got = emittedMetres(parsed);
+  const dm = Math.abs(exp - got);
+  if (dm > 10) {
+    fails++;
+    console.log(`  FAIL riding conservation: emitted ${(got / 1000).toFixed(3)} km vs ` +
+                `store ${(exp / 1000).toFixed(3)} km (Δ ${dm.toFixed(1)} m)`);
+  } else {
+    console.log(`  PASS riding conservation: ${(got / 1000).toFixed(1)} km emitted ` +
+                `= store total (Δ ${dm.toFixed(2)} m)`);
+  }
+  // 4. chain gaps + name parity vs main — full build only: the direction
+  // flavours are finished assemblies by design and have no main counterpart.
+  if (flavor === 'full' && mnParsedFull) {
+    const mg = chainGaps(mnParsedFull);
     const bg = chainGaps(parsed);
     const worse = [], onlyBr = [], onlyMn = [];
     for (const [name, g] of bg) {
-      if (!mg.has(name)) { onlyBr.push(name); continue; }
+      if (!mg.has(name)) {
+        if (BRANCH_ONLY_OK.has(name))
+          console.log(`  resurrected border track (allowlisted): ${name}`);
+        else onlyBr.push(name);
+        continue;
+      }
       if (g > mg.get(name) + 100) worse.push({ name, main: mg.get(name), br: g });
     }
     for (const name of mg.keys()) if (!bg.has(name)) onlyMn.push(name);
     bad(4, 'chain gap worse than main', worse.sort((x, y) => (y.br - y.main) - (x.br - x.main)),
         x => `${(x.main / 1000).toFixed(1)} -> ${(x.br / 1000).toFixed(1)} km  ${x.name}`);
-    bad(4, 'names only in branch', onlyBr, x => x);
+    bad(4, 'names only in branch (new)', onlyBr, x => x);
     bad(4, 'names only in main', onlyMn, x => x);
   } else if (flavor === 'full') {
     console.log('  (main comparison skipped — main revision unavailable)');

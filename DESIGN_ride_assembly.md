@@ -243,6 +243,54 @@ westbound-assembly profile after the day ride being charted plus
 "(westbound)", not the little variant piece that was clicked — the one
 front-end addition of this step. Drawn-profile cache hit rate stayed 100%.
 
+## 4d. Step-4 build notes (2026-09-14)
+
+Harness ported and run in full. `qa_directions.py` materializes the working
+tree's ride stores through the same adapter logic as index.html (a git
+revision still reads `routes_<code>.geojson`); check 11 is a retirement stub
+(the seq machinery it policed is deleted); `qa_gpx.mjs` was rewritten for
+the assembly model and gained assertion 5, riding conservation per flavour
+against the store (Δ 0.00 m all three flavours); `qa_elev.mjs` reads chart
+keys from the stores (1,368 profiles, 0 disagreements).
+
+**The port caught a real converter defect.** `province_ranges`' vertex scans
+could not see a stretch whose interior lies outside every buffered province
+polygon when no vertex falls inside it — a wide water border crossed in one
+segment. 195 m of `[C2 EB] Morrisburg to Lancaster` mid-St-Lawrence sat in
+no province range and vanished from the map and every GPX (main's geometric
+splitter had kept it — the exact silent-drop class this design exists to
+kill). Fixed with a coverage-gap pass: every uncovered stretch is assigned
+to the nearest province (sub-floor gaps extend the neighbouring span), each
+fill printed as a named log line. The pass found exactly two cases
+network-wide: Lancaster 199 m → ON, and 67 m of a CA connector at Québec.
+Second fix: a variant shared by two rides keys its features to one ride's
+`eid_w`, so the other ride's westbound profile was baked bytes nothing
+could reach — 16 orphans network-wide; the bake now skips unreferenced
+keys.
+
+Investigated one-off populations, allowlisted by name (anything new still
+fails): three tracks on the Ottawa River border that main's splitter
+silently dropped and the branch resurrects (`BRANCH_ONLY_OK` in qa_gpx.mjs,
+`RESURRECTED` in qa_directions.py); four westbound assemblies where Sam
+drew overlapping westbound cover and §4.5 splices it back-to-back, so the
+rider re-passes 200–330 m of parallel street (`BACKTRACK_OK`: the Swartz
+Bay ferry-terminal pair, the Kamloops TCH/Valleyview pair — all already
+§4a data questions); one +51 m group where main's own sub-100 m floor had
+dropped a mid-water sliver the branch keeps (`LENGTH_DIFF_OK`). Check 10
+additionally reports a border stretch attributed to the other province
+than main chose as informational when the name's total is conserved.
+
+**Baseline refresh (its own commit, per the harness's rule):** three
+justified deltas vs the frozen branch's numbers — C2 +51.4 m and C3
++35.0 m layer length (the kept sliver; the resurrected Gatineau track),
+2 new name-groups (Gatineau × ON/QC), and one moved visible endpoint at
+Port Hardy (the §4a refused splice keeps 470 m of spine visible, so the
+line now ends at the terminal). Every other number matched or beat the
+baseline, measured the same way: full-network loose ends 38=38, view
+dead ends >500 m E 24→12 / W 51→11, E2W orphan samples 143/10218
+(identical), shields identical, length conservation Δ +0.08 km of
+29,370 km explained above, name census +1 resurrection.
+
 ## 5. Ported / deleted
 
 **Ported verbatim from `direction-splitting`:** `has_opposite_alongside`,

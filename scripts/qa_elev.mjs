@@ -44,12 +44,15 @@ const chart = new Function('L', src + '\nreturn chartTrack;')(L);
 
 let checked = 0, ratioFails = 0, badAlt = 0, missing = 0;
 for (const code of LAYERS) {
-  let prof, gj;
+  let prof, store;
   try {
     prof = JSON.parse(readFileSync(join(repo, `data/profiles_${code}.json`), 'utf8'));
-    gj = JSON.parse(readFileSync(join(repo, `data/routes_${code}.geojson`), 'utf8'));
+    store = JSON.parse(readFileSync(join(repo, `data/rides_${code}.json`), 'utf8'));
   } catch { console.log(`  ${code}: data files unreadable, skipped`); continue; }
-  const eids = new Set(gj.features.map(f => f.properties.eid).filter(Boolean));
+  // every chart key a feature can carry: drawn-track eids and the rides'
+  // westbound-assembly eid_w keys (spliced-variant features chart those)
+  const eids = new Set(store.tracks.flatMap(t =>
+    t.features.map(f => f.eid).filter(Boolean)));
   for (const eid of eids) {
     const tr = prof.tracks[eid];
     if (!tr || !tr.line || tr.km == null) {

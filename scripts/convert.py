@@ -477,7 +477,7 @@ def _boundary_crossing(coords, cum, k, poly, inside_vertex):
     return cum[k] + math.hypot(px - coords[k][0], py - coords[k][1])
 
 
-def province_ranges(line_m, cum, provinces):
+def province_ranges(line_m, cum, provinces, log=None):
     """Display ranges per province as {code: [(start_m, end_m), ...]} offsets
     along the track. Reproduces split_by_province's look — the buffered
     polygons ARE the ~2 km courtesy tails, so adjacent provinces' ranges
@@ -542,7 +542,60 @@ def province_ranges(line_m, cum, provinces):
         piece = (LineString(coords[k0:k1 + 1]) if k1 > k0 else Point(coords[k0]))
         pc = min(touching, key=lambda kp: round(piece.distance(kp[1]) / 100))[0]
         spans.setdefault(pc, []).append((s0, s1))
-    return {pc: sorted(sp) for pc, sp in spans.items()}
+    # Coverage-gap pass: the two vertex scans above cannot see a stretch
+    # whose interior lies outside every buffered polygon when no VERTEX
+    # falls inside it — a wide water border crossed in a single segment
+    # (found by the ported harness: 195 m of the Morrisburg-Lancaster track
+    # mid-St-Lawrence landed in no province and vanished from the map and
+    # every GPX; main's geometric splitter had kept it). Walk the union of
+    # all spans and give every uncovered stretch a home, so every metre of
+    # every track sits in >= 1 province range: a gap under the floor extends
+    # its neighbouring span, a bigger one becomes the nearest province's own
+    # span. Each fill is logged by the caller (design §7).
+    spans = {pc: [list(s) for s in sorted(sp)] for pc, sp in spans.items()}
+    merged = []
+    for s0, s1 in sorted(s for sp in spans.values() for s in sp):
+        if merged and s0 <= merged[-1][1] + SNAP_M:
+            merged[-1][1] = max(merged[-1][1], s1)
+        else:
+            merged.append([s0, s1])
+    gaps = [(a[1], b[0]) for a, b in zip(merged, merged[1:])]
+    if merged:
+        if merged[0][0] > SNAP_M:
+            gaps.append((0.0, merged[0][0]))
+        if total - merged[-1][1] > SNAP_M:
+            gaps.append((merged[-1][1], total))
+    for g0, g1 in sorted(gaps):
+        if g1 - g0 <= SNAP_M:
+            continue
+        if g1 - g0 < PROV_PIECE_MIN_M:
+            # extend the span that ends at the gap (or starts at its far
+            # side, for a gap at the track head) rather than mint a sliver
+            ext = None
+            for pc, sp in spans.items():
+                for s in sp:
+                    if abs(s[1] - g0) <= SNAP_M and (ext is None or s[1] > ext[1][1]):
+                        ext = (pc, s, "end")
+                    if ext is None and abs(s[0] - g1) <= SNAP_M:
+                        ext = (pc, s, "start")
+            if ext is None:
+                continue   # nothing adjacent (cannot happen with gaps from the union)
+            pc = ext[0]
+            if ext[2] == "end":
+                ext[1][1] = g1
+            else:
+                ext[1][0] = g0
+        else:
+            piece = substring(line_m, g0, g1)
+            pc = min(touching, key=lambda kp: round(piece.distance(kp[1]) / 100))[0]
+            spans.setdefault(pc, []).append([g0, g1])
+        mid = line_m.interpolate((g0 + g1) / 2)
+        lon, lat = TO_DEG.transform(mid.x, mid.y)
+        if log is not None:
+            log(f"{g1 - g0:.0f} m at {lat:.5f},{lon:.5f} (km {g0 / 1000:.2f}-"
+                f"{g1 / 1000:.2f}) lay outside every buffered province polygon "
+                f"— assigned to {pc}")
+    return {pc: sorted(tuple(s) for s in sp) for pc, sp in spans.items()}
 
 
 def insert_cut_vertices(deg_coords, line_m, cum, offsets):
@@ -860,7 +913,10 @@ def build_layer(code, tracks, provinces):
         west_plan[ti] = pieces
 
     # --- cut offsets per track: everything a range boundary lands on ---
-    provr = [province_ranges(tracks[ti][3], cums[ti], provinces)
+    provr = [province_ranges(
+                 tracks[ti][3], cums[ti], provinces,
+                 log=lambda msg, _n=tracks[ti][0]: note(
+                     "province gap filled", f"{_n!r}: {msg}"))
              for ti in range(n_tracks)]
     cut_sets = [set() for _ in range(n_tracks)]
     for ti in range(n_tracks):
@@ -1137,12 +1193,18 @@ def convert_routes(provinces):
         if code != "CW":
             source_tracks = {}
             shim = []
+            # a chart key is only worth a profile if some feature carries it:
+            # a variant shared by two rides keys its features to ONE ride's
+            # eid_w, so the other ride's westbound profile would be baked
+            # bytes nothing can ever reach (16 such orphans network-wide)
+            referenced = {f.get("eid")
+                          for rec in store_tracks for f in rec["features"]}
             for rec, ex in zip(store_tracks, extras):
                 own = [f for f in rec["features"] if f.get("eid") == ex["eid"]]
                 if ex["eid"] and own:
                     source_tracks[ex["eid"]] = ex["ocoords"]
                     shim += [{"properties": f} for f in own]
-                if "eid_w" in rec:
+                if "eid_w" in rec and rec["eid_w"] in referenced:
                     source_tracks[rec["eid_w"]] = ex["wcoords"]
             eidws = {rec["eid_w"] for rec in store_tracks if "eid_w" in rec}
             for rec in store_tracks:

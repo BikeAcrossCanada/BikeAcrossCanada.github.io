@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
-"""Independent data-level QA harness for the Bike Across Canada direction-splitting change.
+"""Independent data-level QA harness for the Bike Across Canada direction views.
 
-Compares the working-tree route GeoJSON ("branch") against another git revision
-("main") and re-derives, from scratch, the invariants that the direction views
-of the map depend on.
+Compares the working tree ("branch") against another git revision ("main")
+and re-derives, from scratch, the invariants that the direction views of the
+map depend on. The working tree is the ride store (data/rides_<code>.json,
+DESIGN_ride_assembly.md §3): its display features are materialized here into
+the same per-feature form the old routes_<code>.geojson had — the identical
+adapter logic to index.html's materializeStore — while a git revision is read
+as routes_<code>.geojson (what main still ships).
 
 Run it after every data rebuild (scripts/convert.py), before committing:
     python3 scripts/qa_directions.py [--repo PATH] [--base-rev main]
@@ -46,7 +50,8 @@ Checks
     8   shield conservation
     9   province x view dead-end audit
     10  MultiLineString sanity (part ordering + per-(name,province) length)
-    11  seq/seq_end offsets re-derived from the source KMLs
+    11  RETIRED (seq/seq_end re-derivation — those properties do not exist
+        on the ride-assembly branch; DESIGN_ride_assembly.md §5)
     12  per-view structure of ALL visible geometry (untagged included):
         connected components per (layer, province, view) and the 200 m
         dead-end rule, vs baseline (else vs main)
@@ -95,16 +100,30 @@ MIN_DIR_LEN_M = 100        # check 7
 # split into two identical stubs can look like a new loose end.
 DEDUP_EXCLUDE = True
 
+# Tracks main's split_by_province silently dropped (Ottawa River border, the
+# issue-21 bug class) that the ride store keeps by construction — the branch
+# resurrects them, so branch-vs-main comparisons see them as brand new.
+# Checks 5/6/7/10 report them as informational rather than regressions.
+# Verified against main's data 2026-09-14 (step-4 build).
+RESURRECTED = {
+    "[C3 WB] Gatineau, QC (Route Verte 1) 001",
+}
+# Name-groups whose geodesic length legitimately differs from main by more
+# than 5 m, each with the investigated cause. +51 m: main's splitter dropped
+# a sub-100 m mid-water sliver of this track (its own PROV_PIECE_MIN_M
+# floor); the branch's coverage-gap pass keeps every metre of the source.
+LENGTH_DIFF_OK = {
+    "[C2 EB] Lancaster ON to Montréal QC (Auberge Saintlo Montréal 1.7km) 001",
+}
+
 
 # ---------------------------------------------------------------- data model
 
 class Feat:
-    __slots__ = ("layer", "name", "provs", "km", "dir", "shields", "eid", "seq",
-                 "seq_end", "parts_deg", "parts", "geom", "idx", "digest")
+    __slots__ = ("layer", "name", "provs", "km", "dir", "shields", "eid",
+                 "parts_deg", "parts", "geom", "idx", "digest")
 
     def __init__(self, layer, props, parts_deg, idx):
-        self.seq = props.get("seq")
-        self.seq_end = props.get("seq_end")
         self.layer = layer
         self.idx = idx
         self.name = props.get("name")
@@ -207,26 +226,55 @@ def file_digests(repo: pathlib.Path):
     import hashlib
     out = {}
     for code in LAYERS:
-        for rel in (f"data/routes_{code}.geojson", f"data/profiles_{code}.json"):
+        for rel in (f"data/rides_{code}.json", f"data/profiles_{code}.json"):
             p = repo / rel
             out[rel] = hashlib.sha256(p.read_bytes()).hexdigest()[:12] if p.exists() else None
     out["index.html"] = hashlib.sha256((repo / "index.html").read_bytes()).hexdigest()[:12]
     return out
 
 
+def materialize_store(code, text):
+    """Ride store -> [Feat]: the same materialization index.html performs at
+    page load (materializeStore), so the harness audits exactly what the map
+    renders. Every coordinate lives once in the track; each display feature
+    slices it by vertex-index ranges."""
+    store = json.loads(text)
+    feats = []
+    i = 0
+    for t in store["tracks"]:
+        for f in t["features"]:
+            props = {"name": t["name"], "provs": [f["prov"]], "km": f["km"]}
+            if f.get("dir"):
+                props["dir"] = f["dir"]
+            if f.get("eid"):
+                props["eid"] = f["eid"]
+            if "ascent_m" in f:
+                props["ascent_m"] = f["ascent_m"]
+                props["descent_m"] = f["descent_m"]
+            if f.get("shields"):
+                props["shields"] = f["shields"]
+            parts = [t["coords"][a:b + 1] for a, b in f["ranges"]]
+            feats.append(Feat(code, props, parts, i))
+            i += 1
+    return feats
+
+
 def load_version(repo: pathlib.Path, rev: str | None):
-    """rev=None -> working tree. Returns {layer: [Feat,...]}."""
+    """rev=None -> working tree (the ride store, materialized). A git
+    revision is read as routes_<code>.geojson — the per-feature files main
+    ships. Returns {layer: [Feat,...]}."""
     out = {}
     for code in LAYERS:
-        rel = f"data/routes_{code}.geojson"
         if rev is None:
-            text = (repo / rel).read_text()
+            out[code] = materialize_store(
+                code, (repo / f"data/rides_{code}.json").read_text())
         else:
-            text = subprocess.run(["git", "-C", str(repo), "show", f"{rev}:{rel}"],
-                                  capture_output=True, text=True, check=True).stdout
-        gj = json.loads(text)
-        out[code] = [Feat(code, f["properties"], geom_parts(f["geometry"]), i)
-                     for i, f in enumerate(gj["features"])]
+            text = subprocess.run(
+                ["git", "-C", str(repo), "show", f"{rev}:data/routes_{code}.geojson"],
+                capture_output=True, text=True, check=True).stdout
+            gj = json.loads(text)
+            out[code] = [Feat(code, f["properties"], geom_parts(f["geometry"]), i)
+                         for i, f in enumerate(gj["features"])]
     return out
 
 
@@ -773,6 +821,9 @@ def check5_fragmentation(rep, br, mn):
             tot_b += cb
             tot_m += cm
             if cb > cm:
+                if name in RESURRECTED and cm == 0:
+                    rep.p(f"   (resurrected track, informational) {code} {name[:60]}")
+                    continue
                 fs = gb.get(name, [])
                 worse.append((code, name, cm, cb,
                               latlon_str(fs[0].parts[0].coords[0]) if fs else "?"))
@@ -818,6 +869,10 @@ def check6_length(rep, br, mn):
         for name in set(gb) | set(gm):
             d = gb.get(name, 0) - gm.get(name, 0)
             if abs(d) > 0.005:
+                if name in RESURRECTED or name in LENGTH_DIFF_OK:
+                    tag = "resurrected" if name in RESURRECTED else "investigated"
+                    rep.p(f"   ({tag}, informational) {code} {d*1000:+9.1f} m  {name[:60]}")
+                    continue
                 ndiff += 1
                 if ndiff <= 20:
                     rep.p(f"   {code} {d*1000:+9.1f} m  {name[:75]}")
@@ -865,7 +920,8 @@ def check7_sanity(rep, data, profiles, tag, baseline=None, base_out=None):
     # the recorded allowlist in the baseline keeps the check red ONLY for new
     # offenders. A permanently red check is worse than no check.
     allow = set((baseline or {}).get("short_stubs", []))
-    new_short = [s for s in short if stub_key(s[0], s[3]) not in allow]
+    new_short = [s for s in short
+                 if stub_key(s[0], s[3]) not in allow and s[4] not in RESURRECTED]
     if base_out is not None:
         base_out["short_stubs"] = sorted({stub_key(s[0], s[3]) for s in short})
     rep.p(f"dir-tagged FEATURES shorter than {MIN_DIR_LEN_M} m: {len(short)} "
@@ -1093,9 +1149,25 @@ def check10_multiline(rep, br, mn):
         for f in mn[code]:
             for p in f.provs:
                 gm[(f.name, p)] += f.geo_km
+        # totals per name across provinces: a border stretch attributed to
+        # the other province than main chose shifts a (name, prov) pair
+        # without losing a metre — informational, not a regression
+        tb, tm = collections.defaultdict(float), collections.defaultdict(float)
+        for (nm, _p), v in gb.items():
+            tb[nm] += v
+        for (nm, _p), v in gm.items():
+            tm[nm] += v
         for k in set(gb) | set(gm):
             d = gb.get(k, 0) - gm.get(k, 0)
             if abs(d) > 0.005:
+                if k[0] in RESURRECTED or k[0] in LENGTH_DIFF_OK:
+                    rep.p(f"   (known, informational) {code} {k[1]} "
+                          f"{d * 1000:+.1f} m  {k[0][:55]}")
+                    continue
+                if abs(tb[k[0]] - tm[k[0]]) <= 0.005:
+                    rep.p(f"   (province attribution shift, total conserved) "
+                          f"{code} {k[1]} {d * 1000:+.1f} m  {k[0][:55]}")
+                    continue
                 recon.append((code, k[0], k[1], gm.get(k, 0), gb.get(k, 0), d))
     rep.p()
     rep.p(f"c) (name, province) groups whose total length differs from main by "
@@ -1133,104 +1205,13 @@ def check10_multiline(rep, br, mn):
 
 # ---------------------------------------------------------------- check 11
 
-SIMPLIFY_TOLERANCE = 0.0002   # must match scripts/convert.py
-KML_NS = {"k": "http://www.opengis.net/kml/2.2"}
 
+def check11_retired(rep):
+    rep.h("CHECK 11 — RETIRED on the ride-assembly branch")
+    rep.p("   seq/seq_end do not exist in the ride store; the mechanism they")
+    rep.p("   policed (buildGpx merge-back ordering) was deleted per design §5.")
+    rep.verdict("check 11 (retired)", "PASS", "seq machinery deleted; nothing to police")
 
-def kml_source_lines(path):
-    """name -> the source track re-simplified and projected exactly the way
-    convert.py builds the line it measures seq against. Names appearing more
-    than once are dropped (ambiguous) and returned separately."""
-    import xml.etree.ElementTree as ET
-    out, dup = {}, set()
-    root = ET.parse(path).getroot()
-    for pm in root.iter(f"{{{KML_NS['k']}}}Placemark"):
-        ls = pm.find(".//k:LineString/k:coordinates", KML_NS)
-        if ls is None or not (ls.text or "").strip():
-            continue
-        name = (pm.findtext("k:name", "", KML_NS) or "").strip()
-        coords = []
-        for triple in ls.text.split():
-            lon, lat, *_ = triple.split(",")
-            coords.append((float(lon), float(lat)))
-        if len(coords) < 2:
-            continue
-        if name in out:
-            dup.add(name)
-        line = LineString(coords).simplify(SIMPLIFY_TOLERANCE,
-                                           preserve_topology=False)
-        out[name] = LineString(proj(line.coords))
-    for n in dup:
-        out.pop(n, None)
-    return out, dup
-
-
-def check11_seq_source(rep, br, repo):
-    """The old seq assertions (present, length matches, sorted) were true by
-    construction of convert.py and could never fail. This re-derives each
-    part's offset from the raw KML instead: re-project the part's first (and
-    last, for seq_end) vertex onto the source track and require the shipped
-    value within 50 m, with shipped part order strictly increasing."""
-    rep.h("CHECK 11 — seq/seq_end offsets re-derived from the source KMLs "
-          "(50 m tolerance)")
-    bad, structural, no_src = [], [], []
-    checked = skipped_dup = 0
-    for code in LAYERS:
-        kml = repo / "data" / "raw" / f"{code}.kml"
-        if not kml.exists():
-            rep.p(f"   {code}: source KML missing, skipped")
-            continue
-        src, dups = kml_source_lines(kml)
-        for f in br[code]:
-            if f.n_parts > 1 and not f.seq:
-                structural.append((code, "multi-part feature without seq", f.name))
-                continue
-            if not f.seq:
-                continue
-            if len(f.seq) != f.n_parts or \
-                    (f.seq_end and len(f.seq_end) != f.n_parts):
-                structural.append((code, "seq/seq_end length mismatch", f.name))
-                continue
-            line = src.get(f.name)
-            if line is None:
-                if f.name in dups:
-                    skipped_dup += 1
-                else:
-                    no_src.append((code, f.name))
-                continue
-            prev = None
-            for i, part in enumerate(f.parts):
-                checked += 1
-                off = line.project(Point(part.coords[0]))
-                if abs(off - f.seq[i]) > 50:
-                    bad.append((code, f.name, i, f.seq[i], off, "seq mismatch"))
-                if f.seq_end:
-                    end = line.project(Point(part.coords[-1]))
-                    if abs(end - f.seq_end[i]) > 50:
-                        bad.append((code, f.name, i, f.seq_end[i], end,
-                                    "seq_end mismatch"))
-                if prev is not None and off <= prev:
-                    bad.append((code, f.name, i, f.seq[i], off, "not increasing"))
-                prev = off
-    rep.p(f"parts checked against source KML: {checked} "
-          f"(skipped {skipped_dup} with ambiguous duplicate source names)")
-    rep.p(f"features whose source track was not found: {len(no_src)}")
-    for code, name in no_src[:10]:
-        rep.p(f"   {code}  {name[:70]}")
-    rep.p(f"structural seq problems: {len(structural)}")
-    for code, why, name in structural[:10]:
-        rep.p(f"   {code} {why}  {name[:60]}")
-    rep.p(f"offset mismatches / order violations: {len(bad)}")
-    for code, name, i, shipped, measured, why in bad[:15]:
-        rep.p(f"   {code} part{i} {why}: shipped {shipped} vs measured "
-              f"{measured:.0f}  {name[:55]}")
-    ok = not bad and not structural and not no_src
-    rep.verdict("check 11 (seq vs source KML)", "PASS" if ok else "FAIL",
-                f"{checked} parts checked; {len(bad)} offset/order violations, "
-                f"{len(structural)} structural, {len(no_src)} unmatched sources")
-
-
-# ---------------------------------------------------------------- check 12
 
 def component_count(feats):
     """Connected components of the given features' parts, joined where a
@@ -1522,7 +1503,7 @@ def main():
     if "10" in want:
         check10_multiline(rep, br, mn)
     if "11" in want:
-        check11_seq_source(rep, br, repo)
+        check11_retired(rep)
     if "12" in want:
         check12_view_structure(rep, br, mn, baseline, base_out)
     if "13" in want:
