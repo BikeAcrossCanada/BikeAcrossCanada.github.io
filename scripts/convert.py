@@ -2,7 +2,7 @@
 """Convert Sam Vekemans' Trans Canada Bike Route source files to web-ready GeoJSON.
 
 Inputs  (data/raw/): one KML per route layer (C1.kml ... CW.kml) + poi_*.gpx (per-category POIs)
-Outputs (data/):     routes_<code>.geojson + poi_<category>.geojson + manifest.json
+Outputs (data/):     rides_<code>.json (ride store) + poi_<category>.geojson + manifest.json
 
 Requires: shapely, pyproj. Re-run any time the source files update.
 """

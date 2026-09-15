@@ -595,14 +595,6 @@ function fetchProfiles(code) {
   return profileCache[code];
 }
 
-// A track whose visible stretches are disjoint (direction splitting,
-// issue #61) arrives as a MultiLineString; the GPX export works on its
-// list of parts, a plain LineString being the one-part case.
-function trackParts(feat) {
-  return feat.geometry.type === 'MultiLineString' ?
-    feat.geometry.coordinates : [feat.geometry.coordinates];
-}
-
 function chartTrack(coords, elevs) {
   // [lon, lat] line + whole-ride elevation samples -> [[lat, lng, ele], ...]
   // for the chart. Every vertex of the line is emitted (so the chart's
@@ -916,6 +908,42 @@ function addCheckbox(container, entry, labelHtml, count, checked, load) {
   });
 }
 
+// ---- Ride store loader ----
+// Each route layer arrives as data/rides_<code>.json (the ride store, see
+// DESIGN_ride_assembly.md §3): every coordinate stored exactly once per
+// track, with precomputed display features as vertex-index ranges into it.
+// Materialized here into GeoJSON of exactly the shape the old per-feature
+// files had, so everything downstream — filters, popups, click-longest,
+// shields, minimap, charts — is unchanged.
+function materializeStore(store) {
+  const features = [];
+  for (const t of store.tracks) {
+    for (const f of t.features) {
+      const parts = f.ranges.map(([i, j]) => t.coords.slice(i, j + 1));
+      const props = { name: t.name, provs: [f.prov], km: f.km };
+      if (f.dir) props.dir = f.dir;
+      if (f.eid) props.eid = f.eid;
+      if (f.ascent_m != null) { props.ascent_m = f.ascent_m; props.descent_m = f.descent_m; }
+      if (f.shields) props.shields = f.shields;
+      features.push({ type: 'Feature', properties: props,
+        geometry: parts.length === 1
+          ? { type: 'LineString', coordinates: parts[0] }
+          : { type: 'MultiLineString', coordinates: parts } });
+    }
+  }
+  return { type: 'FeatureCollection', features };
+}
+
+// A variant is spliced when some ride's westbound assembly walks through it —
+// read from the west lists themselves, so there is no second flag to drift.
+function splicedVariantIds(store) {
+  const s = new Set();
+  for (const t of store.tracks)
+    for (const [tid] of (t.west || []))
+      if (tid !== t.id) s.add(tid);
+  return s;
+}
+
 fetch('data/manifest.json').then(r => r.json()).then(manifest => {
   (manifest.provinces || []).forEach(pv => {
     const o = document.createElement('option');
@@ -932,10 +960,12 @@ fetch('data/manifest.json').then(r => r.json()).then(manifest => {
                '.png" alt="">';
     addCheckbox(document.getElementById('route-boxes'), entry,
                 sw + esc(rt.title), rt.km, true,
-      () => fetch('data/routes_' + rt.code + '.geojson').then(r => r.json()).then(gj => {
-        entry.gj = gj;
+      () => fetch('data/rides_' + rt.code + '.json').then(r => r.json()).then(store => {
+        entry.store = store;
+        entry.spliced = splicedVariantIds(store);
+        entry.gj = materializeStore(store);
         entry.layer = buildRouteLayer(entry);
-        addMiniRoute(gj, rt.color);
+        addMiniRoute(entry.gj, rt.color);
         refreshShields();  // this route's shields can draw now its data is here
       }));
   });
@@ -990,38 +1020,22 @@ function updateDlButton() {
 }
 document.getElementById('sidebar').addEventListener('change', updateDlButton);
 
-// Metres between two [lon, lat] points, and along a coordinate list —
-// spherical, which is plenty for the ≥90%-overlap dedup in buildGpx below.
-// Deliberately Leaflet-free: scripts/qa_gpx.mjs slices these functions and
-// buildGpx verbatim out of this file and runs them under node.
-function llDistM(a, b) {
-  const R = 6371000, r = Math.PI / 180;
-  const s = Math.sin((b[1] - a[1]) * r / 2) ** 2 +
-            Math.cos(a[1] * r) * Math.cos(b[1] * r) *
-            Math.sin((b[0] - a[0]) * r / 2) ** 2;
-  return 2 * R * Math.asin(Math.sqrt(s));
-}
-function lineLenM(coords) {
-  let L = 0;
-  for (let i = 1; i < coords.length; i++) L += llDistM(coords[i - 1], coords[i]);
-  return L;
-}
-function segDistM(p, a, b) {
-  // metres from point p to segment a-b, all [lon, lat] (local planar approx,
-  // plenty at the 25 m scale buildGpx tests at)
-  const r = Math.PI / 180, kx = Math.cos(p[1] * r) * 6371000 * r, ky = 6371000 * r;
-  const ax = (a[0] - p[0]) * kx, ay = (a[1] - p[1]) * ky;
-  const dx = (b[0] - p[0]) * kx - ax, dy = (b[1] - p[1]) * ky - ay;
-  const l2 = dx * dx + dy * dy;
-  let t = l2 ? -(ax * dx + ay * dy) / l2 : 0;
-  t = Math.max(0, Math.min(1, t));
-  return Math.hypot(ax + t * dx, ay + t * dy);
-}
-function nearLines(p, lines, tol) {
-  for (const line of lines)
-    for (let i = 1; i < line.length; i++)
-      if (segDistM(p, line[i - 1], line[i]) <= tol) return true;
-  return false;
+// Clip vertex range [i, j] to a track's province ranges. The store keeps a
+// province's ranges tiled at cut vertices ([0,6],[6,146] share vertex 6), so
+// touching pieces coalesce here — otherwise a continuous province stretch
+// would export as several trksegs with doubled boundary points. A surviving
+// piece needs two vertices to be a line. Deliberately Leaflet-free:
+// scripts/qa_gpx.mjs slices this and buildGpx verbatim out of this file
+// and runs them under node.
+function rangeClip(i, j, ranges) {
+  const out = [];
+  for (const [a, b] of [...ranges].sort((x, y) => x[0] - y[0])) {
+    const lo = Math.max(i, a), hi = Math.min(j, b);
+    if (lo >= hi) continue;
+    if (out.length && lo <= out.at(-1)[1]) out.at(-1)[1] = Math.max(out.at(-1)[1], hi);
+    else out.push([lo, hi]);
+  }
+  return out;
 }
 
 const xmlEsc = s => (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -1050,80 +1064,50 @@ function buildGpx() {
                 '    <type>' + xmlEsc(e.meta.title) + '</type>\n  </wpt>\n';
       }
     } else {
-      // One <trk> per source track name: direction and province splitting
-      // emit several features sharing a name, and a MultiLineString feature
-      // carries disjoint stretches — GPX's own model is one track holding
-      // many <trkseg>, so group it all back (issue #61) rather than hand
-      // apps a track list with the same day ride listed twenty times.
-      const byName = new Map();
-      for (const f of e.gj.features) {
-        if (!provOk(f.properties) || !dirOk(f.properties)) continue;
-        const key = f.properties.name || '';
-        if (!byName.has(key)) byName.set(key, []);
-        // seq = each part's start offset along the source track (metres,
-        // from convert.py): the untagged and one-way features' stretches
-        // interleave along the ride, so file order would zig-zag the <trk>
-        const seq = f.properties.seq || [], seqEnd = f.properties.seq_end || [];
-        trackParts(f).forEach((part, i) =>
-          byName.get(key).push({ off: seq[i] || 0, end: seqEnd[i], part }));
-      }
-      for (const [name, segs] of byName) {
-        // Sort by along-track offset (longer part first on ties), then cut
-        // away riding an earlier part already covered. The province split
-        // duplicates border-buffer geometry into both provinces on purpose
-        // (the map's province filter needs it), so a name-group's parts
-        // overlap by kilometres at each border — and a wholly-duplicated
-        // border sliver shares its offset with the original — so merged
-        // naively the <trk> rode to the border, jumped back, and re-rode
-        // it (issue #61 round 3). The trim is geometric, not span
-        // arithmetic: walk a part's leading vertices while they lie within
-        // 25 m of riding already emitted, drop a part with nothing new,
-        // and cut inside the boundary chord so the seam lands where the
-        // duplicate actually ends (offset-vs-measured-length bookkeeping
-        // over-trimmed by up to 1.3% — real kilometres on long parts).
-        // Single-part groups pass through untouched.
-        for (const s of segs) s.len = lineLenM(s.part);
-        segs.sort((a, b) => a.off - b.off || b.len - a.len);
-        const use = [], emitted = [];
-        let covered = -Infinity;   // span end of riding emitted so far
-        for (const s of segs) {
-          let part = s.part;
-          // span-overlap gate: only a part whose along-track span re-enters
-          // already-emitted span is a duplication candidate — a route that
-          // genuinely rides the same road twice (Mission to Hope loops
-          // through Hope) has disjoint spans and must NOT be trimmed. Span
-          // ends come from seq_end (exact, from the converter's own
-          // projection) with the drawn length as a fallback.
-          if (emitted.length && covered - s.off > 50) {
-            let j = 0;
-            while (j < part.length && nearLines(part[j], emitted, 25)) j++;
-            if (j >= part.length) continue;          // nothing new: a
-                                                     // border-buffer duplicate
-            if (j > 0) {
-              const a = part[j - 1], b = part[j];
-              let lo = 0, hi = 1;
-              for (let k = 0; k < 8; k++) {          // cut inside the chord
-                const t = (lo + hi) / 2;
-                const p = [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t];
-                if (nearLines(p, emitted, 25)) lo = t; else hi = t;
-              }
-              // a tiny shared lip on the first chord (parts tile at an exact
-              // cut point) is not worth a trim — an interpolated start would
-              // only shift the seam; any longer covered run always trims
-              if (j > 1 || lo * llDistM(a, b) > 30)
-                part = [[+(a[0] + (b[0] - a[0]) * lo).toFixed(5),
-                         +(a[1] + (b[1] - a[1]) * lo).toFixed(5)],
-                        ...part.slice(j)];
-            }
-          }
-          covered = Math.max(covered, s.end != null ? s.end : s.off + s.len);
-          emitted.push(part);
-          use.push({ off: s.off, part });
+      // Ride-assembly model (DESIGN_ride_assembly.md §3): the GPX flavours
+      // read the store's finished products — nothing here sorts, trims, or
+      // deduplicates. One <trk> per emitted track:
+      //  - Both directions: every source track exactly as drawn.
+      //  - West to East: as drawn, minus surviving westbound variants
+      //    (spliced or standalone — they point the wrong way for this
+      //    flavour); demoted variants are two-way and stay.
+      //  - East to West: each day ride emits its westbound assembly — the
+      //    spine reversed with its variants spliced in, one <trkseg> per
+      //    piece (seams are honest gaps, never invented geometry); a ride
+      //    with no splices is simply its line reversed. Spliced variants
+      //    are already inside their rides and are skipped; two-way tracks,
+      //    demoted variants, and UNSPLICED westbound variants (refused or
+      //    nested splices — still real routing) export as drawn.
+      // A province choice intersects each emitted piece's vertex range with
+      // the piece's own track's ranges for that province — integer index
+      // arithmetic only, no geometry math.
+      const dir = dirSelect.value, prov = provSelect.value, st = e.store;
+      for (const t of st.tracks) {
+        if (dir && t.role === 'variant' && !t.demoted &&
+            (dir === 'E' || e.spliced.has(t.id))) continue;
+        let pieces;   // [source track, first vertex, last vertex, reversed]
+        if (dir === 'W' && t.role === 'ride') {
+          pieces = t.west
+            ? t.west.map(([tid, i, j, rev]) => [st.tracks[tid], i, j, rev])
+            : [[t, 0, t.coords.length - 1, 1]];
+        } else {
+          pieces = [[t, 0, t.coords.length - 1, 0]];
         }
-        trks += '  <trk>\n    <name>' + xmlEsc(e.meta.code + ' ' + name) +
+        const segs = [];
+        for (const [src, i, j, rev] of pieces) {
+          let ranges = prov ? rangeClip(i, j, src.provs[prov] || []) : [[i, j]];
+          // a reversed piece rides its province stretches last-to-first
+          if (rev) ranges = ranges.slice().reverse();
+          for (const [a, b] of ranges) {
+            const line = src.coords.slice(a, b + 1);
+            segs.push(rev ? line.reverse() : line);
+          }
+        }
+        if (!segs.length) continue;
+        trks += '  <trk>\n    <name>' + xmlEsc(e.meta.code + ' ' + t.name) +
                 '</name>\n    <type>' + xmlEsc(e.meta.code) + '</type>\n' +
-                use.map(s => '    <trkseg>\n' +
-                  s.part.map(c => '      <trkpt lat="' + c[1] + '" lon="' + c[0] + '"/>').join('\n') +
+                segs.map(seg => '    <trkseg>\n' +
+                  seg.map(c => '      <trkpt lat="' + c[1] + '" lon="' + c[0] + '"/>').join('\n') +
                   '\n    </trkseg>').join('\n') + '\n  </trk>\n';
       }
     }

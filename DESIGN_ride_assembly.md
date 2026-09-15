@@ -105,7 +105,7 @@ POI and arrow files unchanged):
 |---|---|
 | Map layer build, dir/prov filters, click-longest, popups, shields, arrows, minimap | untouched (operate on materialized features identical in shape to today's) |
 | GPX "both" | one `<trk>` per source track, as drawn (`main`'s loop, essentially) |
-| GPX "west to east" (E) | every track except spliced variants, as drawn |
+| GPX "west to east" (E) | every track except *surviving* westbound variants — spliced or standalone, they point the wrong way for this flavour; demoted variants are two-way and stay (rule pinned at step-2 review, 2026-09-14 — the original "except spliced variants" read literally would have exported unspliced WB variants pointing westbound) |
 | GPX "east to west" (W) | rides → walk `west` refs, one `<trkseg>` per piece; two-way + demoted variants as drawn; spliced variants skipped (inside their rides) |
 | GPX + province filter | trksegs intersected with that province's ranges (integer index intersection) |
 | Elevation chart | whole-ride profile: `eid` for spine/two-way features (frozen mechanism ported), `eid_w` for spliced-variant features (the whole westbound ride) |
@@ -208,6 +208,27 @@ Data questions for Sam, gathered from the step-1 build log:
   span projects to 0.47 km (ratio 3.20) — splice refused, standalone.
 - '[C3] Big Bay General Store 001': zero-length line (a POI drawn as a
   track?) — kept for census parity, invisible.
+
+## 4b. Step-2 build notes (2026-09-14)
+
+Front end swapped to the ride store (loader materializes features client-side;
+`buildGpx` walks the assemblies; chart keys unchanged). Decisions and known
+temporary states, named here per §7's no-silent-failures rule:
+
+1. **E-flavour rule pinned** (see the amended consumer table in §3): the
+   eastbound GPX excludes all surviving westbound variants, spliced or
+   standalone; demoted variants stay.
+2. **"Spliced" is derived, not stored:** the front end reads which variants
+   are spliced from the `west` lists themselves (any track id referenced by
+   another track's assembly) — no second flag to drift.
+3. **`scripts/qa_gpx.mjs` is knowingly broken** from the step-2 commit until
+   step 4 ports the harness: it slices functions out of index.html that the
+   trim machinery's deletion removed. Expected mid-branch state.
+4. **Spliced-variant popups temporarily show no climb totals or elevation
+   link** until step 3 bakes the `eid_w` profiles: their features carry the
+   ride's `eid_w` as chart key but no ascent/descent yet, so `popupHtml`
+   renders no link (and `showProfile`'s missing-entry path console-errors
+   rather than crashes if a stale link is followed). Expected until step 3.
 
 ## 5. Ported / deleted
 
