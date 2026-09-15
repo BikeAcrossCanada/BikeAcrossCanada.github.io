@@ -706,9 +706,14 @@ function showProfile(code, eid) {
     // collapsed state would otherwise stick for the next profile opened.
     // Clicking an "elevation profile" link is a clear ask to see the chart.
     elevCtl._expand();
+    // A spliced-variant feature charts the whole westbound ride it is part
+    // of (its chart key is that ride's eid_w) — title the chart after the
+    // ride being charted, not the little variant piece that was clicked.
+    const wt = entry.store.tracks.find(t => t.eid_w === eid);
     const pr = feat.properties;
-    elevHeader.innerHTML = '<b>' + esc(pr.name) + '</b><br>↑ ' + pr.ascent_m +
-      ' m &nbsp;↓ ' + pr.descent_m + ' m &nbsp;·&nbsp; ' + tr.km + ' km';
+    elevHeader.innerHTML = '<b>' + esc(wt ? wt.name + ' (westbound)' : pr.name) +
+      '</b><br>↑ ' + tr.ascent_m + ' m &nbsp;↓ ' + tr.descent_m +
+      ' m &nbsp;·&nbsp; ' + tr.km + ' km';
     elevCtl.clear();
     elevCtl.load(JSON.stringify(track));
     map.closePopup();

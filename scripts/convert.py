@@ -979,6 +979,9 @@ def build_layer(code, tracks, provinces):
         store_tracks[ti]["west"] = west
         if code != "CW":
             store_tracks[ti]["eid_w"] = elevation.track_key(ride_coords)
+            # the assembled line rides on to the elevation bake (step 3):
+            # it is new geometry, profiled under eid_w
+            extras[ti]["wcoords"] = ride_coords
 
     # --- display features: same census structure as the frozen branch ---
     for ti, (fname, tdir, tsimp, tline) in enumerate(tracks):
@@ -1124,10 +1127,13 @@ def convert_routes(provinces):
         gate_ratio += gates["ratio"]
         # Elevation bake (issue #38): whole-ride climb totals onto each
         # feature + the profile sidecar the chart reads, ported unchanged.
-        # Only features charting their own drawn-orientation profile take
-        # part — a spliced variant charts the whole westbound ride instead
-        # (eid_w), and that bake is build-order step 3. CW is the ferry
-        # layer — the crossings are water, a profile would be noise.
+        # Two profile populations: each track's drawn-orientation line under
+        # its eid (cache hits across rebuilds), and each spliced ride's
+        # westbound assembly under its eid_w — new geometry, recomputed once
+        # when first seen (design §4a). Spliced-variant features carry the
+        # ride's eid_w as their chart key and get that westbound ride's climb
+        # totals stamped on. CW is the ferry layer — the crossings are water,
+        # a profile would be noise.
         if code != "CW":
             source_tracks = {}
             shim = []
@@ -1136,6 +1142,12 @@ def convert_routes(provinces):
                 if ex["eid"] and own:
                     source_tracks[ex["eid"]] = ex["ocoords"]
                     shim += [{"properties": f} for f in own]
+                if "eid_w" in rec:
+                    source_tracks[rec["eid_w"]] = ex["wcoords"]
+            eidws = {rec["eid_w"] for rec in store_tracks if "eid_w" in rec}
+            for rec in store_tracks:
+                shim += [{"properties": f} for f in rec["features"]
+                         if f.get("eid") in eidws]
             n_new, sidecar_b = elevation.bake(code, shim, GEOD, source_tracks)
             print(f"  {code}: elevation computed for {n_new} tracks "
                   f"(rest cached); profiles_{code}.json {sidecar_b/1e3:.0f} kB")

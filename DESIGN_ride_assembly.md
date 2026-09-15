@@ -230,6 +230,19 @@ temporary states, named here per §7's no-silent-failures rule:
    renders no link (and `showProfile`'s missing-entry path console-errors
    rather than crashes if a stale link is followed). Expected until step 3.
 
+## 4c. Step-3 build notes (2026-09-14)
+
+`eid_w` profiles baked: 208 westbound-assembly profiles across the five
+spliced layers (C1 73, C2 48, C3 71, CL 9, CN 7); 205 computed fresh, 3 were
+exact-geometry cache hits — rides whose spine is fully replaced by one
+variant, so the assembly is vertex-identical to that variant's drawn line
+and shares its hash (e.g. the Québec Route Verte 5 stub). Spliced-variant
+features now carry the westbound ride's climb totals, so their popups show
+↑/↓ and the elevation link (§4b item 4 is resolved). The chart titles a
+westbound-assembly profile after the day ride being charted plus
+"(westbound)", not the little variant piece that was clicked — the one
+front-end addition of this step. Drawn-profile cache hit rate stayed 100%.
+
 ## 5. Ported / deleted
 
 **Ported verbatim from `direction-splitting`:** `has_opposite_alongside`,
