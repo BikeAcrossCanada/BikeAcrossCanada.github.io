@@ -30,7 +30,7 @@ accept + allowlist Russell and Kamloops; F2; docs) are Heather's,
 | What | Command | Expect |
 |---|---|---|
 | Synthetic suite | `python3 scripts/test_assembly.py` | 16 tests OK |
-| Full rebuild (deterministic) | `python3 scripts/convert.py` | green; 24 cut / 12 shared multi-spine resolutions; 4 "nested claim" + 4 "nested claim kept" lines; 2 province gap fills; empty `git status` after |
+| Full rebuild (deterministic) | `python3 scripts/convert.py` | green; 24 cut / 11 shared multi-spine kind-entries (12 ride-pairs counted pairwise); 4 "nested claim" + 4 "nested claim kept" lines; 2 province gap fills; empty `git status` after |
 | Harness | `python3 scripts/qa_directions.py --out r.txt` | 16/16 PASS |
 | GPX alone | `node scripts/qa_gpx.mjs` | PASS; inherited pairs 64/56/56; 9 allowlisted E-to-W pairs; 3 partially-inherited pairs listed in full/W-to-E |
 | Charts alone | `node scripts/qa_elev.mjs` | 0 disagreements |
@@ -85,8 +85,9 @@ accept + allowlist Russell and Kamloops; F2; docs) are Heather's,
 
 ## Known-accepted (not defects)
 
-- 12.1 km of cross-ride variant riding remains in E-to-W by decision:
-  ~11.6 km parity + Russell 502 m + Kamloops 697 m (CROSS_TRK_OK).
+- 12.10 km of cross-ride variant riding remains in E-to-W by decision:
+  8.89 km parity + Kamloops complex 2.71 km + Russell 502 m
+  (CROSS_TRK_OK; exact split in design §4e).
 - 4 rides still have no reachable westbound chart (§4a list).
 - ~160 km of same-layer identical geometry in the full/both flavours is
   inherited from Sam's files, identical in main's GPX.

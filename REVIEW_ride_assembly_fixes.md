@@ -169,3 +169,8 @@ record), and the docs' numbers — after F-c's nits — match the data.
 `direction-splitting` at 5635647 remains the fallback until the PR lands,
 per standing instruction. Suggested pre-PR touch-ups, none blocking: F-c's
 three prose corrections, and F-b's cluster note in §4e.
+
+*Post-verdict (same session, Heather's go-ahead): F-b's cluster note and
+F-c's three corrections applied to §4e and the fixcheck handoff in the
+follow-up commit. F-a (flavour-scoping CROSS_TRK_OK) is a code change and
+stays open. F-d needs no action.*

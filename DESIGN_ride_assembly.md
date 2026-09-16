@@ -331,7 +331,7 @@ multi-spine resolutions shipped "shared" and the E-to-W GPX duplicated
 25.5 km across 38 ride pairs (~13 km with no eastbound counterpart).
 Now claims overlapping by less than CLAIM_SHARE_FRAC (half) of the
 smaller claim cut at the overlap midpoint — 24 resolutions cut on real
-data, all the ~460-580 m tip-to-tail boundary overlaps. Fixture:
+data, all tip-to-tail boundary overlaps of 397-584 m. Fixture:
 `TestBoundaryOverlappingClaims` (400 m overlap, asserts the cut).
 
 **Nested claims (F1 follow-up, decided mid-session).** A claim lying
@@ -358,14 +358,28 @@ is byte-identical, only the log path changed). Parity rescues logged
 0.77/0.64). Fixtures: `TestNestedClaims`, `TestParallelCoverClaims`.
 
 **Result:** cross-ride duplicated variant riding 38 pairs / 25.5 km →
-10 pairs / 12.1 km, of which ~11.6 km is parity with Sam's eastbound
-drawing and the rest is the two decided named exceptions: Russell MB
-(502 m; a true boundary crossing whose claims overlap by 50.3% of the
-smaller claim — 3/1000 over the cut line; accepted rather than tuning
-the threshold to one data point) and the Kamloops equal-claims complex
-(697 m). E-to-W flavour total 28,084.9 → 28,072.9 km. Rides with no
+10 pairs / 12.10 km: 8.89 km parity with Sam's eastbound drawing
+(Golden Ears 3.28, Stratford 2.51, Lake Louise 2.33, Québec 0.38 ×2)
+plus the two decided named exceptions — Russell MB (502 m; a true
+boundary crossing whose claims overlap by 50.3% of the smaller claim —
+3/1000 over the cut line; accepted rather than tuning the threshold to
+one data point) and the Kamloops equal-claims complex (2.71 km
+pairwise across its three ride pairs, ~2.0 km extra riding, mirroring
+the three eastbound tracks Sam drew over one corridor; the 697 m
+figure quoted earlier is one pair's overlap, not the complex).
+E-to-W flavour total 28,084.9 → 28,072.9 km. Rides with no
 reachable westbound chart 16 → 4 (cut variants' display pieces now
 chart their own ride; the four are listed in §4a's data questions).
+
+The 0.5 cut line sits inside a real cluster, not just Russell
+(re-check finding F-b, `REVIEW_ride_assembly_fixes.md`): five pre-fix
+pairs fall in the 0.35-0.65 overlap band — Grand Falls-Windsor 0.384,
+Portage la Prairie ×2 0.438, Lanigan ≈0.500 (all cut) and Russell
+0.503 (shared). Lanigan and Russell are near-twins (~500 m overlap on
+~1 km claims) landing on opposite sides of the line by a few parts per
+thousand. A future geometry edit flipping a pair fails safe: a flip to
+shared trips qa_gpx check 6 loudly (unlisted pair beyond 200 m); a
+flip to cut merely leaves that pair's CROSS_TRK_OK entry inert.
 
 **qa_gpx.mjs check 6 (the assertion F1 said was missing):** per
 flavour, no two same-layer <trk>s may share identical emitted geometry
