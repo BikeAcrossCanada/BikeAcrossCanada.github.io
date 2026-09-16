@@ -91,6 +91,7 @@
   }
   .leaflet-popup-content { font-size:13px; max-height:220px; overflow-y:auto; }
   .leaflet-popup-content b { font-size:13.5px; }
+  .leaflet-popup-content img.popup-img { max-width:100%; height:auto; display:block; margin:4px 0; }
     /* blend on the pane, not the tiles: each pane is its own stacking context */
     .leaflet-hillshade-pane { mix-blend-mode: multiply; opacity: .7; }
     /* OpenTopoMap arrives fully saturated and camouflages the route colours,
@@ -489,14 +490,39 @@ map.on('overlayadd overlayremove', e => {
 });
 
 const esc = s => (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;');
-// linkify bare URLs in descriptions
-const linkify = s => esc(s)
-  .replace(/&lt;br\s*\/?\s*(?:&gt;|>)/gi, '<br>')  // his descs embed literal <br> tags
-  .replace(/^description:\s*/i, '')
-  .replace(/(https?:\/\/[^\s<]+?)([.,;)]?(?:<|$|\s))/g,
-           '<a href="$1" target="_blank" rel="noopener">$1<\/a>$2')
-  .replace(/\n/g, '<br>')
-  .replace(/(?:<br>\s*)*ID:\s*$/i, '');   // drop trailing empty "ID:" line
+// linkify bare URLs in descriptions; images (issue #63) render inline.
+// Built <img> tags are held out in `imgs` while the URL pass runs, so it
+// can't linkify the src attribute of a tag this function just created.
+const IMG_EXT = 'png|jpe?g|gif|webp|svg';
+const imgTag = (src, alt) => '<img class="popup-img" src="' +
+  src.replace(/"/g, '%22') + '" alt="' + (alt || '') + '" loading="lazy">';
+const linkify = s => {
+  const imgs = [];
+  const hold = html => '\x00' + (imgs.push(html) - 1) + '\x00';
+  return esc(s)
+    // his descs embed literal <img> tags: keep src (https or site-relative
+    // only, so no javascript:/data: schemes) + alt, drop every other attribute
+    .replace(/&lt;img\b([^>]*?)\/?\s*(?:&gt;|>)/gi, (m, at) => {
+      const src = (at.match(/\bsrc\s*=\s*"([^"]*)"/i) || [])[1];
+      const alt = (at.match(/\balt\s*=\s*"([^"]*)"/i) || [])[1];
+      return src && /^(?:https:\/\/|(?!\/\/|[a-z][\w+.-]*:))/i.test(src) ?
+        hold(imgTag(src, alt)) : m;
+    })
+    .replace(/&lt;br\s*\/?\s*(?:&gt;|>)/gi, '<br>')  // his descs embed literal <br> tags
+    .replace(/^description:\s*/i, '')
+    // a bare site-relative image path (images/shields/shield_C3.png) embeds too
+    .replace(new RegExp('(^|\\s|>)((?:[\\w-]+/)*[\\w.-]+\\.(?:' + IMG_EXT + '))(?=\\s|$|<)', 'gi'),
+             (m, pre, path) => pre + hold(imgTag(path, path)))
+    .replace(/(https?:\/\/[^\s<]+?)([.,;)]?(?:<|$|\s))/g,
+             '<a href="$1" target="_blank" rel="noopener">$1<\/a>$2')
+    // a bare image URL becomes the picture, still tappable to open full size
+    // (URLs with a query string stay plain links)
+    .replace(new RegExp('<a ([^>]*)>(https?://[^<]*\\.(?:' + IMG_EXT + '))</a>', 'gi'),
+             (m, at, url) => hold('<a ' + at + '>' + imgTag(url, url) + '</a>'))
+    .replace(/\n/g, '<br>')
+    .replace(/(?:<br>\s*)*ID:\s*$/i, '')   // drop trailing empty "ID:" line
+    .replace(/\x00(\d+)\x00/g, (m, i) => imgs[i]);
+};
 
 function popupHtml(props, emoji, routeCode) {
   let h = '<b>' + (emoji ? emoji + ' ' : '') + esc(props.name || '(unnamed)') + '</b>';
@@ -1044,8 +1070,10 @@ function rangeClip(i, j, ranges) {
 }
 
 const xmlEsc = s => (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-// popup descs carry his literal <br> markup; GPX wants plain text
+// popup descs carry his literal <br>/<img> markup; GPX wants plain text
 const plainDesc = s => (s || '')
+  .replace(/<img\b[^>]*?\bsrc\s*=\s*"([^"]*)"[^>]*>/gi, '$1')  // keep the image URL
+  .replace(/<img\b[^>]*>/gi, '')
   .replace(/<br\s*\/?\s*>/gi, '\n')
   .replace(/^description:\s*/i, '')
   .replace(/\s*ID:\s*$/i, '')
