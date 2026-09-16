@@ -255,6 +255,18 @@ CLAIM_SHARE_FRAC = 0.5  # two rides' claims on one variant overlapping by less
                         # than this fraction of the smaller claim are a
                         # boundary crossing (cut at the overlap midpoint);
                         # heavier overlap = genuine parallel alternates, shared
+NESTED_EXCESS_M = 50    # a claim contained in another ride's claim counts as
+                        # NESTED only when the outer extends beyond it by more
+                        # than this at some end: near-equal claims are two
+                        # rides claiming the same stretch whole (parallel
+                        # cover, e.g. Golden Ears, Kamloops) and always share
+PARITY_NEAR_M = 25      # two rides' spines projected within this of each
+                        # other count as the same drawn road (the review's
+                        # parity measurement)
+NESTED_PARITY_FRAC = 0.5  # a nested claim is refused only when the two
+                        # spines share the road for LESS than this fraction
+                        # of the claimed stretch — genuine overlapping
+                        # eastbound cover (Stratford PE) stays shared
 SNAP_M = 1.0            # cut offsets this close to an existing vertex reuse it
                         # instead of inserting a near-duplicate
 PIECE_MIN_M = 10        # float-noise sliver floor for feature range pieces (the
@@ -716,6 +728,25 @@ def build_layer(code, tracks, provinces):
         hidden_by_spine[ti] = ivals
         pairs_by_spine[ti] = {survivors[k]: v for k, v in pairs.items()}
 
+    def spine_parity(vti_, lo, hi, ti_a, ti_b):
+        """Fraction of the variant stretch [lo, hi] (metres along the
+        variant) where the two rides' spines run the same drawn road (their
+        projections within PARITY_NEAR_M of each other) — the review's
+        parity measurement. High = Sam drew overlapping eastbound cover
+        (parallel alternates); low = the smaller claim is pairing-radius
+        spillover past the day-ride boundary."""
+        seg = substring(tracks[vti_][3], lo, hi)
+        la, lb = tracks[ti_a][3], tracks[ti_b][3]
+        n = max(4, int(seg.length / 50))
+        hits = 0
+        for k in range(n + 1):
+            p = seg.interpolate(seg.length * k / n)
+            a = la.interpolate(la.project(p))
+            b = lb.interpolate(lb.project(p))
+            if a.distance(b) <= PARITY_NEAR_M:
+                hits += 1
+        return hits / (n + 1)
+
     # --- claims (§4.1), with multi-spine resolution ---
     claims = {}
     for ti in sorted(pairs_by_spine):
@@ -725,6 +756,50 @@ def build_layer(code, tracks, provinces):
                  "spans": pr["spans"]})
     for vti in sorted(claims):
         cl = claims[vti]
+        if len(cl) < 2:
+            continue
+        # nested claims (claim-level analogue of the nested-span rule
+        # below): a ride's claim lying STRICTLY inside another ride's claim
+        # — the outer extending past it by more than NESTED_EXCESS_M — on a
+        # stretch where the two spines do NOT share the road is boundary
+        # spillover: the variant riding belongs to the ride with the
+        # containing claim, and the inner ride keeps its own spine there.
+        # The midpoint cut cannot help (there is no gap between the claims
+        # to cut through; it would invert the inner claim), so the inner
+        # claim is refused, logged. Two rescues keep genuine parallel
+        # alternates shared: near-equal claims (both rides claiming the
+        # stretch whole — Golden Ears, Kamloops) are not "nested", and a
+        # strictly-nested claim whose spines run the same drawn road for
+        # >= NESTED_PARITY_FRAC of it (Stratford PE: Sam drew overlapping
+        # eastbound cover) is kept, logged.
+        cl.sort(key=lambda c: c["lo"] - c["hi"])   # largest claim first
+        kept_cl = []
+        for c in cl:
+            refused = None
+            for o in kept_cl:
+                if not (o["lo"] <= c["lo"] + SNAP_M
+                        and c["hi"] <= o["hi"] + SNAP_M):
+                    continue   # not contained
+                excess = max(c["lo"] - o["lo"], o["hi"] - c["hi"])
+                if excess <= NESTED_EXCESS_M:
+                    continue   # near-equal claims: parallel cover, share
+                parity = spine_parity(vti, c["lo"], c["hi"], c["ti"], o["ti"])
+                where = (f"{tracks[c['ti']][0]!r}'s claim "
+                         f"[{c['lo'] / 1000:.2f}, {c['hi'] / 1000:.2f}] km "
+                         f"inside {tracks[o['ti']][0]!r}'s "
+                         f"[{o['lo'] / 1000:.2f}, {o['hi'] / 1000:.2f}] km "
+                         f"(spine parity {parity:.2f})")
+                if parity < NESTED_PARITY_FRAC:
+                    refused = (o, parity)
+                    note("nested claim", f"{tracks[vti][0]!r}: {where} — "
+                         f"boundary spillover, splice refused; that ride "
+                         f"keeps its own spine there")
+                    break
+                note("nested claim kept", f"{tracks[vti][0]!r}: {where} — "
+                     f"overlapping eastbound cover, stays shared")
+            if refused is None:
+                kept_cl.append(c)
+        claims[vti] = cl = kept_cl
         if len(cl) < 2:
             continue
         cl.sort(key=lambda c: c["lo"])

@@ -366,6 +366,69 @@ class TestBoundaryOverlappingClaims(unittest.TestCase):
         self.assertNotIn("refused splice", kinds(notes))
 
 
+class TestNestedClaims(unittest.TestCase):
+    def test(self):
+        # the variant starts AT the day boundary and runs back along ride
+        # one only (real case: Nanaimo Cedar Rd, Lake Louise TCH) — ride
+        # one claims it whole, ride two's tip claims just its first couple
+        # hundred metres, entirely inside ride one's claim. The midpoint
+        # cut cannot fire on a nested claim (it would invert it); the
+        # inner claim must be REFUSED so nothing rides twice, and ride two
+        # keeps its own spine at that end.
+        # ride two leaves the joint on a short parallel street beside the
+        # variant's first stretch (the real shape at Nanaimo) before
+        # heading east, so its claim has a real spine-side span
+        day2 = ([(4000, 0), (3800, 240), (3600, 240), (3600, 480)]
+                + line_pts(3600, 8000, 480, 400))
+        store, extras, notes, gates = build([
+            ("[T1 EB] Day one", line_pts(0, 4000, 0, 400)),
+            ("[T1 EB] Day two", day2),
+            ("[T1 WB] Nested variant", line_pts(4000, 1000, 120, 250)),
+        ])
+        s1, s2, v = store
+        # spliced whole into ride one only
+        v1 = [p for p in s1.get("west", []) if p[0] == v["id"]]
+        v2 = [p for p in s2.get("west", []) if p[0] == v["id"]]
+        self.assertEqual(len(v1), 1)
+        self.assertEqual(v2, [])
+        (_, i, j, _) = v1[0]
+        self.assertEqual((i, j), (0, len(v["coords"]) - 1))
+        self.assertIn("nested claim", kinds(notes))
+        # not a multi-spine resolution any more, and nothing refused as a
+        # whole-variant splice
+        self.assertEqual([m for k, m in notes if k == "multi-spine variant"], [])
+        self.assertNotIn("refused splice", kinds(notes))
+        # the variant's one display piece charts ride one's westbound
+        w_feats = [f for f in v["features"] if f.get("dir") == "W"]
+        self.assertEqual([f["eid"] for f in w_feats], [s1["eid_w"]])
+        self.assertNotIn("eid_w", s2)
+
+
+class TestParallelCoverClaims(unittest.TestCase):
+    def test(self):
+        # the Stratford PE shape: a second eastbound track drawn ON the
+        # same road as the main ride's last stretch, so its claim on the
+        # variant is strictly nested inside the main ride's claim — but the
+        # spines share the drawn road, so this is genuine overlapping
+        # eastbound cover and BOTH splices must survive (shared), with the
+        # "nested claim kept" log line instead of a refusal.
+        store, extras, notes, gates = build([
+            ("[T1 EB] Main ride", line_pts(0, 4000, 0, 400)),
+            ("[T1 EB] Path on same road", line_pts(2500, 4000, 0, 250)),
+            ("[T1 WB] Cover variant", line_pts(4000, 1500, 120, 250)),
+        ])
+        s1, s2, v = store
+        v1 = [p for p in s1.get("west", []) if p[0] == v["id"]]
+        v2 = [p for p in s2.get("west", []) if p[0] == v["id"]]
+        self.assertEqual(len(v1), 1)
+        self.assertEqual(len(v2), 1)
+        self.assertIn("nested claim kept", kinds(notes))
+        self.assertNotIn("nested claim", kinds(notes))
+        multi = [m for k, m in notes if k == "multi-spine variant"]
+        self.assertEqual(len(multi), 1)
+        self.assertIn("shared", multi[0])
+
+
 class TestTwoWayOnly(unittest.TestCase):
     def test(self):
         store, extras, notes, gates = build(
