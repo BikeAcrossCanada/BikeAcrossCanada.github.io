@@ -113,7 +113,8 @@ RESURRECTED = {
 # a sub-100 m mid-water sliver of this track (its own PROV_PIECE_MIN_M
 # floor); the branch's coverage-gap pass keeps every metre of the source.
 LENGTH_DIFF_OK = {
-    "[C2 EB] Lancaster ON to Montréal QC (Auberge Saintlo Montréal 1.7km) 001",
+    # " 001" suffix dropped in Sam's 2026-09 renaming pass upstream
+    "[C2 EB] Lancaster ON to Montréal QC (Auberge Saintlo Montréal 1.7km)",
 }
 
 

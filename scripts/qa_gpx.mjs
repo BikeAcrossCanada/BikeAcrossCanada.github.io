@@ -407,7 +407,7 @@ const BRANCH_ONLY_OK = new Set([
 // not back-to-back variants.
 const BACKTRACK_OK = new Set([
   'C1 [C1 EB] North Saanich BC Swartz Bay Ferry Terminal Cycling access 878m',
-  'C1 [C1 EB] Victoria (Ocean Island Backpackers Inn 622m) to Swartz Bay, BC pt1of2',
+  'C1 [C1 EB] Victoria (Ocean Island Backpackers Inn 622m) to Swartz Bay, BC pt1of2 114km',
   'CN CN Rivers Trail Kelowna EB 002',
   "CN [CN EB] Kamloops [CN] (Rivers Trail at River St) to Salmon Arm, BC (Pierre's Point Campground 460m) 002",
 ]);
@@ -426,12 +426,12 @@ const BACKTRACK_OK = new Set([
 const CROSS_TRK_OK = new Map([
   // Golden Ears Bridge alternate: serves the Swartz Bay->Mission ride and
   // the Langley<>Maple Ridge couplet; spines share the road (parity)
-  ["C1 [C1 EB] (Swartz Bay-Tsawwassen ferry 1h 35mins) to Mission, BC (Sun Valley Trout Park 833m) pt2of2 || C1 [C1 EB] Langley Twp, BC (Golden Ears Bridge Northbound) &lt;&gt; Maple Ridge, BC", 2350],
+  ["C1 [C1 EB] (Swartz Bay-Tsawwassen ferry 1h 35mins) to Mission, BC (Sun Valley Trout Park 833m) pt2of2 114km || C1 [C1 EB] Langley Twp, BC (Golden Ears Bridge Northbound) &lt;&gt; Maple Ridge, BC", 2350],
   // Stratford PE: overlapping eastbound cover, parity 0.90
   ["C1 [C1 EB] Charlottetown to Wood Islands, PE (Northumberland Provincial Park 4.7km) || C1 [C1 EB] Stratford PE TCH Path Eastbound 2.3km", 580],
   // Quebec City bike path: variant serves the Route Verte 5 stub and the
   // day ride equally (equal claims, parity by drawing)
-  ["C2 [C1 C2 and C3 EB] Quebec, QC (Route Verte 5) || C2 [C2 EB] Leclercville to Quebec City, QC (Auberge internationale de Québec 1.4km) 001", 380],
+  ["C2 [C2 EB] Leclercville to Quebec City, QC (Auberge internationale de Québec 1.4km) || C2 [C2 EB] Quebec, QC (Route Verte 5)", 380],
   ["C3 [C1 C2 and C3 EB] Quebec QC Route Verte 5 378m 002 || C3 [C3 EB] Portneuf to Québec, QC (Auberge internationale de Québec 1.4km) 002", 380],
   // Lake Louise TCH: the short EB cover track and the Banff NP day ride,
   // parity 0.62-0.90 (the third, boundary-spillover claim is refused)
@@ -439,6 +439,16 @@ const CROSS_TRK_OK = new Map([
   // Russell MB: true boundary crossing at 50.3% claim overlap — 3/1000
   // over the cut line; accepted as a named one-off (data question)
   ["C3 [C3 EB] Russell to Shoal Lake, MB (Lakeview Park Campground 1.8km) 002 || C3 [C3 EB] Yorkton, SK to Russell, MB (The Russell Inn 188m) 002", 500],
+  // Swartz Bay ferry terminal (2026-09-15, after Sam's Victoria-Swartz Bay
+  // redraw upstream): the corridor is triple-drawn in the source — the
+  // 1,018 m EB terminal stub lies entirely on the redrawn day ride, and
+  // the 879 m North Saanich access track likewise (measured against the
+  // raw KML at 5 m). Our westbound exports mirror strictly less overlap
+  // than the eastbound drawing. The stub's name starts with a
+  // non-breaking space, hence  . Part of the §4a Swartz Bay trio
+  // data question.
+  ["C1 [C1 EB] Victoria (Ocean Island Backpackers Inn 622m) to Swartz Bay, BC pt1of2 114km || C1 [C1 EB] Swartz Bay, BC (Victoria (Swartz Bay) Ferry Terminal) 1.0km", 400],
+  ["C1 [C1 EB] North Saanich BC Swartz Bay Ferry Terminal Cycling access 878m || C1 [C1 EB] Swartz Bay, BC (Victoria (Swartz Bay) Ferry Terminal) 1.0km", 270],
   // Kamloops complex: three EB tracks over one corridor (a §4a data
   // question); equal claims stay shared by design
   ["CN CN Battle Street 004 EB 002 || CN CN Rivers Trail Kelowna EB 002", 700],
