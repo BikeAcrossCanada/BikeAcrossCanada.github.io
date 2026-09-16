@@ -371,6 +371,10 @@ attribEl.addEventListener('click', e => {
   attribEl.classList.toggle('attrib-collapsed');
 });
 L.DomEvent.disableClickPropagation(attribEl);
+// Scale bar (issue #64): metres + feet, bottom-right. Added after the map's
+// built-in attribution control so Leaflet stacks it above the credits box —
+// bottom-left already holds the minimap and the elevation chart.
+L.control.scale({ position: 'bottomright', metric: true, imperial: true }).addTo(map);
 map.on('baselayerchange', e => { try { localStorage.setItem(BASE_KEY, e.name); } catch (err) {} });
 // OpenTopoMap tuning panel (issue #46): the OTM palette is loud, and its
 // urban grey is dark, so plain desaturation goes muddy. Two remembered
