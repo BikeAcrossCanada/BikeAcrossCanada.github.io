@@ -372,7 +372,7 @@ reachable westbound chart 16 → 4 (cut variants' display pieces now
 chart their own ride; the four are listed in §4a's data questions).
 
 The 0.5 cut line sits inside a real cluster, not just Russell
-(re-check finding F-b, `REVIEW_ride_assembly_fixes.md`): five pre-fix
+(re-check finding F-b, `docs/REVIEW_ride_assembly_fixes.md`): five pre-fix
 pairs fall in the 0.35-0.65 overlap band — Grand Falls-Windsor 0.384,
 Portage la Prairie ×2 0.438, Lanigan ≈0.500 (all cut) and Russell
 0.503 (shared). Lanigan and Russell are near-twins (~500 m overlap on
