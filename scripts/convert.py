@@ -546,6 +546,20 @@ def province_ranges(line_m, cum, provinces, log=None):
         piece = (LineString(coords[k0:k1 + 1]) if k1 > k0 else Point(coords[k0]))
         pc = min(touching, key=lambda kp: round(piece.distance(kp[1]) / 100))[0]
         spans.setdefault(pc, []).append((s0, s1))
+    # No span survived at all (a track under ~200 m crossing a buffered
+    # border: every split piece is under the floor and none is whole-track).
+    # Fall back to nearest-province whole-track, exactly like the
+    # not-touching path — returning {} here would erase the track from the
+    # map and every GPX, the silent-drop class this design exists to kill.
+    # Zero real instances in current data (network-wide probe, 2026-09-15);
+    # this guards the future short stub.
+    if not spans:
+        pc = min(touching, key=lambda kp: round(line_m.distance(kp[1]) / 100))[0]
+        if log is not None:
+            log(f"no province piece survived the {PROV_PIECE_MIN_M} m floor "
+                f"({total:.0f} m track crossing a border) — whole track "
+                f"assigned to nearest province {pc}")
+        return {pc: [(0.0, total)]}
     # Coverage-gap pass: the two vertex scans above cannot see a stretch
     # whose interior lies outside every buffered polygon when no VERTEX
     # falls inside it — a wide water border crossed in a single segment
@@ -928,6 +942,19 @@ def build_layer(code, tracks, provinces):
                  log=lambda msg, _n=tracks[ti][0]: note(
                      "province gap filled", f"{_n!r}: {msg}"))
              for ti in range(n_tracks)]
+    # every metre of every track must sit in >= 1 province range — the
+    # coverage-gap pass and the empty-spans fallback guarantee it; assert it
+    # so the silent-drop class can never come back unseen
+    for ti in range(n_tracks):
+        total_t = cums[ti][-1]
+        merged_t = _merge_windows(
+            [w for sp in provr[ti].values() for w in sp], tol=SNAP_M)
+        if (not merged_t or len(merged_t) > 1 or merged_t[0][0] > SNAP_M
+                or merged_t[-1][1] < total_t - SNAP_M):
+            raise AssertionError(
+                f"{code} {tracks[ti][0]!r}: province ranges do not cover the "
+                f"track ({[(round(a), round(b)) for a, b in merged_t]} vs "
+                f"[0, {total_t:.0f}] m)")
     cut_sets = [set() for _ in range(n_tracks)]
     for ti in range(n_tracks):
         cut_sets[ti] |= {0.0, cums[ti][-1]}
