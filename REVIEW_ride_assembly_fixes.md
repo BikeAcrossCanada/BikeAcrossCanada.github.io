@@ -172,5 +172,7 @@ three prose corrections, and F-b's cluster note in §4e.
 
 *Post-verdict (same session, Heather's go-ahead): F-b's cluster note and
 F-c's three corrections applied to §4e and the fixcheck handoff in the
-follow-up commit. F-a (flavour-scoping CROSS_TRK_OK) is a code change and
-stays open. F-d needs no action.*
+follow-up commit; F-a's tightening applied too — CROSS_TRK_OK now counts
+only in the E-to-W flavour, cutting the worst full/W-to-E hiding headroom
+from 2.55 km to the ordinary 200 m slack (qa_gpx and the 16-check harness
+re-run green, no allowlist edits needed). F-d needs no action.*

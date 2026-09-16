@@ -418,8 +418,11 @@ const BACKTRACK_OK = new Set([
 // (each measured against Sam's eastbound drawing — spine-parity numbers
 // in DESIGN §4e), plus the two decided named exceptions (Russell's 50.3%
 // borderline claim overlap; the Kamloops equal-claims complex). Values =
-// metres beyond the main baseline; a pair exceeding baseline + entry +
-// 200 m slack, or any unlisted pair beyond baseline + 200 m, fails.
+// metres beyond the main baseline, measured in — and applied ONLY to —
+// the E-to-W flavour (re-check finding F-a: applying them everywhere
+// left up to 2.55 km of hiding headroom in flavours where that sharing
+// doesn't exist). A pair exceeding baseline + entry + 200 m slack, or
+// any unlisted pair beyond baseline + 200 m, fails.
 const CROSS_TRK_OK = new Map([
   // Golden Ears Bridge alternate: serves the Swartz Bay->Mission ride and
   // the Langley<>Maple Ridge couplet; spines share the road (parity)
@@ -479,9 +482,11 @@ for (const [flavor, dir] of Object.entries(FLAVORS)) {
     console.log(`  inherited as-drawn shared riding (= main): ` +
                 `${inherited.length} pairs, ` +
                 `${(inherited.reduce((s, d) => s + d.m, 0) / 1000).toFixed(1)} km`);
-  const dupAllowed = d => (mnDup.get(d.pair) || 0) + (CROSS_TRK_OK.get(d.pair) || 0);
+  // CROSS_TRK_OK is E-to-W-only (dir 'W'): its values were measured there
+  const okAllow = d => (dir === 'W' ? CROSS_TRK_OK.get(d.pair) || 0 : 0);
+  const dupAllowed = d => (mnDup.get(d.pair) || 0) + okAllow(d);
   for (const d of dups)
-    if (CROSS_TRK_OK.has(d.pair) && d.m <= dupAllowed(d) + 200)
+    if (okAllow(d) && d.m <= dupAllowed(d) + 200)
       console.log(`  known cross-trk shared riding (allowlisted): ` +
                   `${d.m.toFixed(0)} m  ${d.pair}`);
   bad(6, 'cross-trk duplicated riding (new or beyond allowance)',
