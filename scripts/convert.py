@@ -251,6 +251,10 @@ LOOP_ENDS_M = 100       # claim ends this close to EACH OTHER = loop variant, no
                         # geometric way to orient it: refused. Applied as
                         # min(LOOP_ENDS_M, half the claim length) so a sub-100 m
                         # stub, whose ends are naturally close, is not a "loop"
+CLAIM_SHARE_FRAC = 0.5  # two rides' claims on one variant overlapping by less
+                        # than this fraction of the smaller claim are a
+                        # boundary crossing (cut at the overlap midpoint);
+                        # heavier overlap = genuine parallel alternates, shared
 SNAP_M = 1.0            # cut offsets this close to an existing vertex reuse it
                         # instead of inserting a near-duplicate
 PIECE_MIN_M = 10        # float-noise sliver floor for feature range pieces (the
@@ -712,15 +716,21 @@ def build_layer(code, tracks, provinces):
         cl.sort(key=lambda c: c["lo"])
         kinds = []
         for c0, c1 in zip(cl, cl[1:]):
-            if c1["lo"] > c0["hi"]:
+            overlap = c0["hi"] - c1["lo"]
+            smaller = min(c0["hi"] - c0["lo"], c1["hi"] - c1["lo"])
+            if overlap < CLAIM_SHARE_FRAC * smaller:
                 # a variant crossing a day-ride boundary serves both rides:
-                # cut at the unclaimed gap's midpoint
+                # cut at the midpoint of the unclaimed gap (disjoint claims)
+                # or of the slight overlap the 300 m pairing radius always
+                # produces past each spine tip — either way the claims end
+                # up touching at one point, so nothing is emitted twice
                 mid = (c0["hi"] + c1["lo"]) / 2
                 c0["hi"] = mid
                 c1["lo"] = mid
-                kinds.append("cut")
+                kinds.append(f"cut ({max(overlap, 0):.0f} m overlap)")
             else:
-                kinds.append("shared")  # parallel alternates share a variant
+                # parallel alternates share a variant
+                kinds.append(f"shared ({overlap:.0f} m overlap)")
         ride_names = "; ".join(repr(tracks[c["ti"]][0]) for c in cl)
         note("multi-spine variant", f"{tracks[vti][0]!r} pairs with "
              f"{len(cl)} rides ({', '.join(kinds)}): {ride_names}")

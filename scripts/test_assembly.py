@@ -330,6 +330,42 @@ class TestBoundarySpanningVariant(unittest.TestCase):
         self.assertNotIn("refused splice", kinds(notes))
 
 
+class TestBoundaryOverlappingClaims(unittest.TestCase):
+    def test(self):
+        # variant crosses a day-ride boundary running parallel alongside BOTH
+        # spines straight through the joint (no wide swing) — the 300 m
+        # pairing radius extends each ride's claim a few hundred metres past
+        # its spine tip, so the claims OVERLAP slightly. This is what every
+        # real boundary crossing looks like (review F1): the overlap is far
+        # under half the smaller claim, so the cut must fire at the overlap
+        # midpoint and nothing may be spliced into both rides.
+        store, extras, notes, gates = build([
+            ("[T1 EB] Day one", line_pts(0, 4000, 0, 400)),
+            ("[T1 EB] Day two", line_pts(4000, 8000, 0, 400)),
+            ("[T1 WB] Boundary variant", line_pts(6000, 2000, 120, 250)),
+        ])
+        s1, s2, v = store
+        self.assertIn("west", s1)
+        self.assertIn("west", s2)
+        v1 = [p for p in s1["west"] if p[0] == v["id"]]
+        v2 = [p for p in s2["west"] if p[0] == v["id"]]
+        self.assertEqual(len(v1), 1)
+        self.assertEqual(len(v2), 1)
+        # the two rides' ranges on the variant touch at the cut vertex at
+        # most — zero riding emitted twice
+        (_, i1, j1, _), (_, i2, j2, _) = v1[0], v2[0]
+        self.assertLessEqual(min(j1, j2) - max(i1, i2), 0)
+        # each display piece charts its own ride
+        w_feats = [f for f in v["features"] if f.get("dir") == "W"]
+        self.assertEqual(sorted(f["eid"] for f in w_feats),
+                         sorted([s1["eid_w"], s2["eid_w"]]))
+        multi = [m for k, m in notes if k == "multi-spine variant"]
+        self.assertEqual(len(multi), 1)
+        self.assertIn("cut", multi[0])
+        self.assertNotIn("shared", multi[0])
+        self.assertNotIn("refused splice", kinds(notes))
+
+
 class TestTwoWayOnly(unittest.TestCase):
     def test(self):
         store, extras, notes, gates = build(
