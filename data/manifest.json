@@ -5,8 +5,8 @@
    "color": "#4e0067",
    "weight": 4,
    "title": "C1 \u2014 Victoria BC to Cape Spear NL (approx. 6,700 km West\u2013East)",
-   "count": 399,
-   "km": 8652,
+   "count": 416,
+   "km": 8651,
    "km_west_east": 6700
   },
   {
@@ -14,7 +14,7 @@
    "color": "#674e00",
    "weight": 4,
    "title": "C2 \u2014 Tofino BC to Halifax NS (approx. 6,800 km West\u2013East)",
-   "count": 313,
+   "count": 316,
    "km": 7364,
    "km_west_east": 6800
   },
@@ -23,7 +23,7 @@
    "color": "#00674e",
    "weight": 4,
    "title": "C3 \u2014 Victoria BC to Newfoundland (approx. 9,700 km West\u2013East)",
-   "count": 478,
+   "count": 482,
    "km": 10174,
    "km_west_east": 9700
   },
