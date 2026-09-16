@@ -94,7 +94,10 @@ These are named, investigated one-off populations; anything new still fails.
 - Baseline refresh `518c458`: `git diff da214dd 518c458 --
   scripts/qa_baseline.json` — every changed line should trace to §4d's
   three deltas (lengths +51.4/+35.0 m, 2 name-groups, Port Hardy endpoint,
-  sample count 10198→10218, 10 westbound component cells improved).
+  sample count 10198→10218, 8 westbound component cells improved).
+  [Corrected per review F3, 2026-09-15: this doc originally said 10
+  improved cells; the diff contains 8. The Port Hardy dead end is an
+  ADDITION to dead_end_locs/E/C3, not a move.]
 
 ## Soft spots worth attacking
 

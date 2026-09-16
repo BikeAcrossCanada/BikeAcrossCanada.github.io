@@ -209,6 +209,29 @@ Data questions for Sam, gathered from the step-1 build log:
 - '[C3] Big Bay General Store 001': zero-length line (a POI drawn as a
   track?) — kept for census parity, invisible.
 
+Added by the fix session (2026-09-15, review F4/F5 + §4e):
+
+- 'CN Rivers Trail Kelowna EB 002' is in Kamloops (50.67,-120.29) — a
+  misnamed track (review F5).
+- Westbound variant files that run past a day-ride changeover point:
+  the builder now cuts these at the boundary automatically (24 clear
+  cases), but four spots are ambiguous enough that Sam trimming or
+  splitting the westbound file at the changeover would be cleaner than
+  software guessing: Lake Louise TCH (the C1 and C3 WB files),
+  Nanaimo Cedar Rd, Russell MB Yellowhead Hwy. Optional tidiness, fully
+  handled on our side either way (§4e).
+- 4 rides have no reachable westbound chart (was 16 before the F1 cut;
+  review F4): partner rides of still-shared parallel-alternate variants,
+  whose `eid_w` is referenced by no feature (the bake skips it, per the
+  step-4 defect-2 fix), so clicking their spine in the East-to-West view
+  charts the drawn eastbound profile (the popup's "riding the other way,
+  swap the two" hint covers it). The four: '[C1 EB] Langley Twp, BC (Golden Ears
+  Bridge Northbound) <> Maple Ridge, BC', '[C1 EB] Stratford PE TCH
+  Path Eastbound 2.3km', '[C3 EB] Russell to Shoal Lake, MB (Lakeview
+  Park Campground 1.8km) 002', 'CN Rivers Trail Kelowna EB 002'.
+  Acceptable for v1; if fixed later, bake a ride-level westbound entry
+  rather than re-keying shared variants.
+
 ## 4b. Step-2 build notes (2026-09-14)
 
 Front end swapped to the ride store (loader materializes features client-side;
@@ -283,13 +306,98 @@ than main chose as informational when the name's total is conserved.
 **Baseline refresh (its own commit, per the harness's rule):** three
 justified deltas vs the frozen branch's numbers — C2 +51.4 m and C3
 +35.0 m layer length (the kept sliver; the resurrected Gatineau track),
-2 new name-groups (Gatineau × ON/QC), and one moved visible endpoint at
+2 new name-groups (Gatineau × ON/QC), and one ADDED visible endpoint at
 Port Hardy (the §4a refused splice keeps 470 m of spine visible, so the
-line now ends at the terminal). Every other number matched or beat the
-baseline, measured the same way: full-network loose ends 38=38, view
-dead ends >500 m E 24→12 / W 51→11, E2W orphan samples 143/10218
-(identical), shields identical, length conservation Δ +0.08 km of
-29,370 km explained above, name census +1 resurrection.
+line now ends at the terminal; a new entry in dead_end_locs/E/C3, no
+removal — this doc originally said "moved", corrected per review F3).
+Every other number matched or beat the baseline, measured the same way:
+full-network loose ends 38=38, view dead ends >500 m E 24→12 / W 51→11,
+E2W orphan samples 143/10218 (identical), shields identical, length
+conservation Δ +0.08 km of 29,370 km explained above, name census +1
+resurrection, and 8 westbound component cells improved (C1|BC|W 6→4,
+C1|ON|W 9→5, C1|PE|W 2→1, C1|QC|W 8→7, C2|BC|W 4→3, C2|ON|W 6→4,
+C3|NS|W 3→2, C3|ON|W 4→3 — the refresh commit's message says 10; the
+diff contains 8, corrected per review F3).
+
+## 4e. Fix-session record (2026-09-15, review F1-F5)
+
+Heather's decisions: fix F1 (cut, don't accept), F2, F3, F5 wording;
+no code for F4 (list it). Every number below is measured, not carried.
+
+**F1 — the boundary cut now fires.** §4.1's cut only handled DISJOINT
+claims, and real claims always overlap slightly (the 300 m pairing
+radius extends each ride's claim past its spine tip), so all 28
+multi-spine resolutions shipped "shared" and the E-to-W GPX duplicated
+25.5 km across 38 ride pairs (~13 km with no eastbound counterpart).
+Now claims overlapping by less than CLAIM_SHARE_FRAC (half) of the
+smaller claim cut at the overlap midpoint — 24 resolutions cut on real
+data, all the ~460-580 m tip-to-tail boundary overlaps. Fixture:
+`TestBoundaryOverlappingClaims` (400 m overlap, asserts the cut).
+
+**Nested claims (F1 follow-up, decided mid-session).** A claim lying
+entirely inside another ride's claim cannot be cut (no gap to cut
+through — the midpoint would invert it). First attempt was a literal
+mirror of the §4a nested-span rule (containment within SNAP_M): it
+over-fired on ALL parity pairs, because Sam's parallel-cover tracks
+produce near-EQUAL claims that are mutually "contained" (Golden Ears,
+Stratford, Québec, the Kamloops complex all got refused — measured,
+then replaced). Final rule, two gates: strictly nested (outer extends
+> NESTED_EXCESS_M past the inner; equal claims always share) AND spine
+parity < NESTED_PARITY_FRAC (the rides' spines share the drawn road,
+projections within PARITY_NEAR_M, for less than half the claimed
+stretch — Stratford's inner claim is genuinely 480 m smaller but its
+spines share 2.3 km of road, parity 0.90, and must stay shared; claim
+shape alone cannot separate Stratford from Nanaimo). Refusals on real
+data: Lake Louise C1 + C3 (parity 0.00) and Nanaimo Cedar Rd (parity
+0.00) — the three targeted — plus one un-targeted uniform-rule verdict:
+Kamloops 'CN Battle Street 004 EB 002' on 'CN Trans-Canada Highway 004
+WB 002' (parity 0.36), which has ZERO net store effect (the span-level
+nested rule was already refusing that splice downstream; rides_CN.json
+is byte-identical, only the log path changed). Parity rescues logged
+"nested claim kept" (Stratford 0.90, Lake Louise-vs-TCH 0.62, Kamloops
+0.77/0.64). Fixtures: `TestNestedClaims`, `TestParallelCoverClaims`.
+
+**Result:** cross-ride duplicated variant riding 38 pairs / 25.5 km →
+10 pairs / 12.1 km, of which ~11.6 km is parity with Sam's eastbound
+drawing and the rest is the two decided named exceptions: Russell MB
+(502 m; a true boundary crossing whose claims overlap by 50.3% of the
+smaller claim — 3/1000 over the cut line; accepted rather than tuning
+the threshold to one data point) and the Kamloops equal-claims complex
+(697 m). E-to-W flavour total 28,084.9 → 28,072.9 km. Rides with no
+reachable westbound chart 16 → 4 (cut variants' display pieces now
+chart their own ride; the four are listed in §4a's data questions).
+
+**qa_gpx.mjs check 6 (the assertion F1 said was missing):** per
+flavour, no two same-layer <trk>s may share identical emitted geometry
+beyond main's own full-GPX baseline for that pair (Sam copy-pastes
+stretches between same-layer files — 56-64 inherited pairs, ~160 km,
+incl. a 31 km Millennium Trail twin, all present in main) plus the
+named CROSS_TRK_OK allowance (the 9 surviving E-to-W pairs above) plus
+200 m slack. Exact edge matching: shared store ranges emit
+byte-identical runs. Full and W-to-E flavours: zero beyond baseline.
+
+**Check 10d refined:** "at most one feature per (name, province,
+direction)" became "...per (name, province, direction, chart key)" — a
+cut variant legitimately shows two W pieces in one province, each
+charting its OWN ride (17 such groups); a genuine incomplete merge
+duplicates the same chart key and still fails.
+
+**F2 — province_ranges can no longer return empty.** With every split
+piece under the 100 m floor and none whole-track (fabricated 90 m
+border-straddling track; zero real instances network-wide), it
+returned {} and the track vanished from map and GPX. Now: nearest-
+province whole-track fallback (the not-touching path's behaviour) with
+a named log line, plus a build assertion that every track's province
+ranges cover its full length within SNAP_M.
+
+**F3/F5** — prose corrected in §4d and the review handoff (8 improved
+cells, not 10; Port Hardy is an addition, not a move); BACKTRACK_OK
+comment now distinguishes the two mechanisms; Kelowna-in-Kamloops
+misname + the 4 chartless-westbound rides added to §4a data questions.
+
+**Elevation:** affected westbound assemblies recomputed under new
+eid_w hashes (11 tracks in the final rebuild); drawn-profile cache
+hits stayed 100%; qa_elev 0 disagreements.
 
 ## 5. Ported / deleted
 
