@@ -13,6 +13,7 @@ on:
 
 permissions:
   contents: write
+  issues: write   # lets the failure step at the bottom open an issue
 
 jobs:
   convert:
@@ -23,6 +24,12 @@ jobs:
 
       - name: Install the map-conversion tools
         run: pip install --quiet shapely pyproj numpy
+
+      # Fast logic tests (scripts/test_assembly.py): miniature made-up routes
+      # exercising every tricky one-way shape the converter must handle. No
+      # data files needed; if these fail, the converter itself is broken.
+      - name: Check the converter's logic before running it
+        run: python3 scripts/test_assembly.py
 
       # Elevation terrain files (~2 GB, one per 1-degree square the routes
       # touch), kept between runs. On a cache miss they re-download from the
@@ -42,6 +49,12 @@ jobs:
       - name: Convert the source files to map data
         run: python3 scripts/convert.py
 
+      # Cross-checks every elevation chart against the freshly built map data
+      # (scripts/qa_elev.mjs). If this fails, the new data never gets saved,
+      # so the live map keeps showing the previous routes.
+      - name: Check the built elevation profiles
+        run: node scripts/qa_elev.mjs
+
       - name: Save the updated map data back to the repository
         run: |
           git config user.name "map-data-updater"
@@ -49,3 +62,37 @@ jobs:
           git add data/*.geojson data/rides_*.json data/profiles_*.json data/manifest.json
           git diff --cached --quiet || git commit -m "Rebuild map data from updated source files"
           git push
+
+      # If any step above failed, the live map is untouched (nothing was
+      # saved) — but nobody would know without checking the Actions tab. This
+      # opens one plain-language issue (or comments on it if it's already
+      # open) so the failure lands where people actually look.
+      - name: If anything failed, open an issue so a person finds out
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = 'Map data rebuild failed';
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const body = [
+              'The automatic rebuild of the map data did not finish, so the live map',
+              'is still showing the routes from before the latest upload. Nothing on',
+              'the live site is broken — the update just did not go through.',
+              '',
+              `The technical log is here: ${runUrl}`,
+              '',
+              '@hpiwowar — tagging Heather so she gets an email and can take a look.',
+            ].join('\n');
+            const open = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo,
+              state: 'open', creator: 'github-actions[bot]' });
+            const existing = open.data.find(i => i.title === title);
+            if (existing)
+              await github.rest.issues.createComment({
+                owner: context.repo.owner, repo: context.repo.repo,
+                issue_number: existing.number,
+                body: `It happened again on a newer upload: ${runUrl}` });
+            else
+              await github.rest.issues.create({
+                owner: context.repo.owner, repo: context.repo.repo,
+                title, body });
