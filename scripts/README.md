@@ -40,8 +40,10 @@ it by hand.
 - `data/old-unused/` — the old single-file master (`tcbr.kml` and its zip).
   Kept for reference; nothing reads it. The seven layer files above are the
   working copies now.
-- `data/` — the map-ready files the converter produces. One `routes_` file per
-  route layer, one `poi_` file per point category, plus `manifest.json`, the
+- `data/` — the map-ready files the converter produces. One `rides_` ride
+  store per route layer (every coordinate stored once, with the finished
+  eastbound and westbound assemblies — see `DESIGN_ride_assembly.md`), one
+  `poi_` file per point category, plus `manifest.json`, the
   list the page reads to build its sidebar (layer names, colours, emoji,
   counts).
 - `scripts/convert.py` — the converter. It reads the tracks out of each layer

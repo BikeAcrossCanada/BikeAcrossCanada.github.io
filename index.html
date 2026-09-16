@@ -595,24 +595,46 @@ function fetchProfiles(code) {
   return profileCache[code];
 }
 
-function resampleTrack(coords, spacing, n) {
-  // mirror of scripts/elevation.py _resample(): a point every `spacing`
-  // metres plus the endpoints; capped at n (the stored elevation count)
-  // so tiny distance-model differences can't misalign the zip
-  const pts = [[coords[0][1], coords[0][0]]];
-  let carry = 0;
-  for (let i = 0; i < coords.length - 1 && pts.length < n; i++) {
+function chartTrack(coords, elevs) {
+  // [lon, lat] line + whole-ride elevation samples -> [[lat, lng, ele], ...]
+  // for the chart. Every vertex of the line is emitted (so the chart's
+  // accumulated distance IS the line's length — resampling to a fixed step
+  // and summing the chords used to under-measure twisty roads by several
+  // percent, and the axis disagreed with the header km), plus a point every
+  // ~100 m on long straight legs so the profile keeps its detail there.
+  // Altitude at any point interpolates the elevation array by the point's
+  // along-line fraction: the bake sampled uniformly, so fraction of length
+  // maps to fraction of the array (a sample or so of drift at worst —
+  // spherical distances here, geodesic in the bake).
+  const STEP = 100;
+  const legs = [];
+  let total = 0;
+  for (let i = 0; i < coords.length - 1; i++) {
     const a = L.latLng(coords[i][1], coords[i][0]);
     const b = L.latLng(coords[i + 1][1], coords[i + 1][0]);
     const d = a.distanceTo(b);
-    if (d <= 0) continue;
-    for (let pos = spacing - carry; pos < d && pts.length < n; pos += spacing) {
-      const t = pos / d;
-      pts.push([a.lat + (b.lat - a.lat) * t, a.lng + (b.lng - a.lng) * t]);
-    }
-    carry = (carry + d) % spacing;
+    legs.push([a, b, d]);
+    total += d;
   }
-  if (pts.length < n) pts.push([coords.at(-1)[1], coords.at(-1)[0]]);
+  const eAt = s => {
+    if (elevs.length < 2 || !total) return elevs[0] || 0;
+    const x = Math.min(elevs.length - 1, s / total * (elevs.length - 1));
+    const i = Math.min(elevs.length - 2, Math.floor(x));
+    return elevs[i] + (elevs[i + 1] - elevs[i]) * (x - i);
+  };
+  const pts = [];
+  let s = 0;
+  for (const [a, b, d] of legs) {
+    pts.push([a.lat, a.lng, eAt(s)]);
+    for (let pos = STEP; pos < d; pos += STEP) {
+      const t = pos / d;
+      pts.push([a.lat + (b.lat - a.lat) * t, a.lng + (b.lng - a.lng) * t,
+                eAt(s + pos)]);
+    }
+    s += d;
+  }
+  const last = coords.at(-1);
+  pts.push([last[1], last[0], eAt(total)]);
   return pts;
 }
 
@@ -625,17 +647,21 @@ function showProfile(code, eid) {
     // A missing entry means profiles_<code>.json is out of step with the
     // geojson (each CI rebuild must commit both) — fail loudly, not silently.
     if (!tr) { console.error('elevation profile: eid', eid, 'missing from profiles_' + code + '.json'); return; }
+    if (!tr.line) { console.error('elevation profile: entry', eid, 'has no line — stale profiles_' + code + '.json'); return; }
     let last = tr.elev.find(e => e != null) || 0;   // patch rare data voids
     const elevs = tr.elev.map(e => (e == null ? last : (last = e)));
-    // same orientation rule as scripts/elevation.py bake(): two-way tracks
-    // chart west->east; EB/WB tracks keep their travel direction
-    let coords = feat.geometry.coordinates;
-    if (!feat.properties.dir && coords.at(-1)[0] < coords[0][0])
-      coords = coords.slice().reverse();
-    const pts = resampleTrack(coords, p.spacing_m, elevs.length);
+    // The profile is the WHOLE day ride (issue #61): baked by
+    // scripts/elevation.py from the source track before any direction or
+    // province splitting, already in charted orientation (two-way rides
+    // west->east, EB/WB rides their travel direction), carrying its own
+    // line and km. So the chart never depends on which view or province
+    // filter emitted the clicked feature — a ride's elevation doesn't
+    // change because you flipped the direction dropdown — and the header
+    // km always matches the distance axis.
+    const pts = chartTrack(tr.line, elevs);
     const track = { type: 'Feature', properties: { name: feat.properties.name },
                     geometry: { type: 'LineString',
-                                coordinates: pts.map(([la, ln], i) => [ln, la, elevs[i]]) } };
+                                coordinates: pts.map(([la, ln, e]) => [ln, la, e]) } };
     if (!elevCtl) {
       // the plugin's own summary (min/avg/max elevation) answers the wrong
       // question, so it's off; the header below shows the deadband-corrected
@@ -680,9 +706,14 @@ function showProfile(code, eid) {
     // collapsed state would otherwise stick for the next profile opened.
     // Clicking an "elevation profile" link is a clear ask to see the chart.
     elevCtl._expand();
+    // A spliced-variant feature charts the whole westbound ride it is part
+    // of (its chart key is that ride's eid_w) — title the chart after the
+    // ride being charted, not the little variant piece that was clicked.
+    const wt = entry.store.tracks.find(t => t.eid_w === eid);
     const pr = feat.properties;
-    elevHeader.innerHTML = '<b>' + esc(pr.name) + '</b><br>↑ ' + pr.ascent_m +
-      ' m &nbsp;↓ ' + pr.descent_m + ' m &nbsp;·&nbsp; ' + pr.km + ' km';
+    elevHeader.innerHTML = '<b>' + esc(wt ? wt.name + ' (westbound)' : pr.name) +
+      '</b><br>↑ ' + tr.ascent_m + ' m &nbsp;↓ ' + tr.descent_m +
+      ' m &nbsp;·&nbsp; ' + tr.km + ' km';
     elevCtl.clear();
     elevCtl.load(JSON.stringify(track));
     map.closePopup();
@@ -882,6 +913,42 @@ function addCheckbox(container, entry, labelHtml, count, checked, load) {
   });
 }
 
+// ---- Ride store loader ----
+// Each route layer arrives as data/rides_<code>.json (the ride store, see
+// DESIGN_ride_assembly.md §3): every coordinate stored exactly once per
+// track, with precomputed display features as vertex-index ranges into it.
+// Materialized here into GeoJSON of exactly the shape the old per-feature
+// files had, so everything downstream — filters, popups, click-longest,
+// shields, minimap, charts — is unchanged.
+function materializeStore(store) {
+  const features = [];
+  for (const t of store.tracks) {
+    for (const f of t.features) {
+      const parts = f.ranges.map(([i, j]) => t.coords.slice(i, j + 1));
+      const props = { name: t.name, provs: [f.prov], km: f.km };
+      if (f.dir) props.dir = f.dir;
+      if (f.eid) props.eid = f.eid;
+      if (f.ascent_m != null) { props.ascent_m = f.ascent_m; props.descent_m = f.descent_m; }
+      if (f.shields) props.shields = f.shields;
+      features.push({ type: 'Feature', properties: props,
+        geometry: parts.length === 1
+          ? { type: 'LineString', coordinates: parts[0] }
+          : { type: 'MultiLineString', coordinates: parts } });
+    }
+  }
+  return { type: 'FeatureCollection', features };
+}
+
+// A variant is spliced when some ride's westbound assembly walks through it —
+// read from the west lists themselves, so there is no second flag to drift.
+function splicedVariantIds(store) {
+  const s = new Set();
+  for (const t of store.tracks)
+    for (const [tid] of (t.west || []))
+      if (tid !== t.id) s.add(tid);
+  return s;
+}
+
 fetch('data/manifest.json').then(r => r.json()).then(manifest => {
   (manifest.provinces || []).forEach(pv => {
     const o = document.createElement('option');
@@ -898,10 +965,12 @@ fetch('data/manifest.json').then(r => r.json()).then(manifest => {
                '.png" alt="">';
     addCheckbox(document.getElementById('route-boxes'), entry,
                 sw + esc(rt.title), rt.km, true,
-      () => fetch('data/routes_' + rt.code + '.geojson').then(r => r.json()).then(gj => {
-        entry.gj = gj;
+      () => fetch('data/rides_' + rt.code + '.json').then(r => r.json()).then(store => {
+        entry.store = store;
+        entry.spliced = splicedVariantIds(store);
+        entry.gj = materializeStore(store);
         entry.layer = buildRouteLayer(entry);
-        addMiniRoute(gj, rt.color);
+        addMiniRoute(entry.gj, rt.color);
         refreshShields();  // this route's shields can draw now its data is here
       }));
   });
@@ -956,6 +1025,24 @@ function updateDlButton() {
 }
 document.getElementById('sidebar').addEventListener('change', updateDlButton);
 
+// Clip vertex range [i, j] to a track's province ranges. The store keeps a
+// province's ranges tiled at cut vertices ([0,6],[6,146] share vertex 6), so
+// touching pieces coalesce here — otherwise a continuous province stretch
+// would export as several trksegs with doubled boundary points. A surviving
+// piece needs two vertices to be a line. Deliberately Leaflet-free:
+// scripts/qa_gpx.mjs slices this and buildGpx verbatim out of this file
+// and runs them under node.
+function rangeClip(i, j, ranges) {
+  const out = [];
+  for (const [a, b] of [...ranges].sort((x, y) => x[0] - y[0])) {
+    const lo = Math.max(i, a), hi = Math.min(j, b);
+    if (lo >= hi) continue;
+    if (out.length && lo <= out.at(-1)[1]) out.at(-1)[1] = Math.max(out.at(-1)[1], hi);
+    else out.push([lo, hi]);
+  }
+  return out;
+}
+
 const xmlEsc = s => (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 // popup descs carry his literal <br> markup; GPX wants plain text
 const plainDesc = s => (s || '')
@@ -982,13 +1069,51 @@ function buildGpx() {
                 '    <type>' + xmlEsc(e.meta.title) + '</type>\n  </wpt>\n';
       }
     } else {
-      for (const f of e.gj.features) {
-        if (!provOk(f.properties) || !dirOk(f.properties)) continue;
-        trks += '  <trk>\n    <name>' + xmlEsc(e.meta.code + ' ' + (f.properties.name || '')) +
-                '</name>\n    <type>' + xmlEsc(e.meta.code) + '</type>\n    <trkseg>\n' +
-                f.geometry.coordinates.map(c =>
-                  '      <trkpt lat="' + c[1] + '" lon="' + c[0] + '"/>').join('\n') +
-                '\n    </trkseg>\n  </trk>\n';
+      // Ride-assembly model (DESIGN_ride_assembly.md §3): the GPX flavours
+      // read the store's finished products — nothing here sorts, trims, or
+      // deduplicates. One <trk> per emitted track:
+      //  - Both directions: every source track exactly as drawn.
+      //  - West to East: as drawn, minus surviving westbound variants
+      //    (spliced or standalone — they point the wrong way for this
+      //    flavour); demoted variants are two-way and stay.
+      //  - East to West: each day ride emits its westbound assembly — the
+      //    spine reversed with its variants spliced in, one <trkseg> per
+      //    piece (seams are honest gaps, never invented geometry); a ride
+      //    with no splices is simply its line reversed. Spliced variants
+      //    are already inside their rides and are skipped; two-way tracks,
+      //    demoted variants, and UNSPLICED westbound variants (refused or
+      //    nested splices — still real routing) export as drawn.
+      // A province choice intersects each emitted piece's vertex range with
+      // the piece's own track's ranges for that province — integer index
+      // arithmetic only, no geometry math.
+      const dir = dirSelect.value, prov = provSelect.value, st = e.store;
+      for (const t of st.tracks) {
+        if (dir && t.role === 'variant' && !t.demoted &&
+            (dir === 'E' || e.spliced.has(t.id))) continue;
+        let pieces;   // [source track, first vertex, last vertex, reversed]
+        if (dir === 'W' && t.role === 'ride') {
+          pieces = t.west
+            ? t.west.map(([tid, i, j, rev]) => [st.tracks[tid], i, j, rev])
+            : [[t, 0, t.coords.length - 1, 1]];
+        } else {
+          pieces = [[t, 0, t.coords.length - 1, 0]];
+        }
+        const segs = [];
+        for (const [src, i, j, rev] of pieces) {
+          let ranges = prov ? rangeClip(i, j, src.provs[prov] || []) : [[i, j]];
+          // a reversed piece rides its province stretches last-to-first
+          if (rev) ranges = ranges.slice().reverse();
+          for (const [a, b] of ranges) {
+            const line = src.coords.slice(a, b + 1);
+            segs.push(rev ? line.reverse() : line);
+          }
+        }
+        if (!segs.length) continue;
+        trks += '  <trk>\n    <name>' + xmlEsc(e.meta.code + ' ' + t.name) +
+                '</name>\n    <type>' + xmlEsc(e.meta.code) + '</type>\n' +
+                segs.map(seg => '    <trkseg>\n' +
+                  seg.map(c => '      <trkpt lat="' + c[1] + '" lon="' + c[0] + '"/>').join('\n') +
+                  '\n    </trkseg>').join('\n') + '\n  </trk>\n';
       }
     }
   }
