@@ -1176,8 +1176,11 @@ def check10_multiline(rep, br, mn):
         rep.p(f"   {code} {prov} main {a:9.3f} km -> branch {b:9.3f} km "
               f"({d*1000:+.1f} m)  {name[:55]}")
 
-    # d) the structural promise: at most one untagged + one dir feature per
-    #    (name, province)
+    # d) the structural promise: at most one feature per (name, province,
+    #    direction, chart key). A boundary-cut variant (F1 fix, 2026-09-15)
+    #    legitimately shows two W pieces in one province — each charting its
+    #    OWN ride's westbound profile, so their eids differ; a genuinely
+    #    incomplete merge duplicates the same chart key and still fails.
     over = []
     for code in LAYERS:
         g = collections.defaultdict(list)
@@ -1185,12 +1188,13 @@ def check10_multiline(rep, br, mn):
             for p in f.provs:
                 g[(f.name, p)].append(f)
         for k, fs in g.items():
-            c = collections.Counter(f.dir for f in fs)
+            c = collections.Counter((f.dir, f.eid) for f in fs)
             if any(v > 1 for v in c.values()):
-                over.append((code, k[0], k[1], dict(c)))
+                over.append((code, k[0], k[1],
+                             {d: v for (d, _e), v in c.items() if v > 1}))
     rep.p()
     rep.p(f"d) (name, province) groups with more than one feature of the same "
-          f"direction (merge incomplete): {len(over)}")
+          f"direction and chart key (merge incomplete): {len(over)}")
     for code, name, prov, c in over[:15]:
         rep.p(f"   {code} {prov} {c}  {name[:60]}")
 

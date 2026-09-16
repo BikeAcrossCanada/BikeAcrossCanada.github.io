@@ -21,7 +21,20 @@
 //      total computed independently from the store per the flavour rules
 //      (both = every track as drawn; W-to-E = minus surviving WB variants;
 //      E-to-W = rides' westbound assemblies + two-way + demoted + unspliced
-//      variants as drawn).
+//      variants as drawn);
+//   6. cross-<trk> duplicated riding (review F1): no two same-layer <trk>s
+//      share identical emitted geometry beyond (a) what main's own full
+//      GPX already shares for that pair — Sam copy-pastes stretches
+//      between same-layer files, ~50 inherited pairs incl. a 31 km
+//      Millennium Trail twin, all pre-existing — plus (b) the named
+//      CROSS_TRK_OK allowance for assembly-shared variants, plus 200 m
+//      slack. Shared store ranges emit byte-identical coordinate runs, so
+//      exact edge matching catches the class however it arises.
+//      Same-geometry tracks in DIFFERENT layers are by design (shared
+//      corridors between the C1/C2/C3 files), so the check is per layer.
+//      This is the check the review found missing: 1-2 were per-<trk> and
+//      5's expectation derives from the same west lists, so cross-track
+//      duplication was invisible to all of them.
 // Plus the GPX regression numbers: no duplicate/blank <trk> names, no
 // NaN coordinates, no empty <trkseg>, and name parity with main.
 //
@@ -252,6 +265,37 @@ function auditFlavor(parsed) {
   return { back, dupRide, misorder };
 }
 
+// 6. cross-<trk> duplicated riding: identical geometry emitted under two
+// different <trk> names of the same layer. Shared store ranges slice the
+// same coords array, so duplicated riding is byte-identical coordinate
+// runs — exact edge matching catches it however it arises. Per layer:
+// same-geometry tracks in different layers are Sam's shared corridors,
+// by design. Edge keys are endpoint-order-normalized so overlap ridden
+// in opposite orientations still matches.
+function crossTrkDup(parsed) {
+  const layerOf = name => name.split(' ')[0];
+  const owner = new Map();   // layer + edge -> first trk name
+  const pairs = new Map();   // 'nameA || nameB' -> shared metres
+  for (const { name, segs } of parsed.trks) {
+    const lay = layerOf(name);
+    for (const s of segs) {
+      for (let i = 1; i < s.length; i++) {
+        const [ax, ay] = s[i - 1], [bx, by] = s[i];
+        if (ax === bx && ay === by) continue;
+        const k = (ax < bx || (ax === bx && ay < by))
+          ? `${lay} ${ax},${ay}|${bx},${by}` : `${lay} ${bx},${by}|${ax},${ay}`;
+        const o = owner.get(k);
+        if (o === undefined) owner.set(k, name);
+        else if (o !== name) {
+          const pk = o < name ? `${o} || ${name}` : `${name} || ${o}`;
+          pairs.set(pk, (pairs.get(pk) || 0) + sphLen([[ax, ay], [bx, by]]));
+        }
+      }
+    }
+  }
+  return [...pairs].map(([pk, m]) => ({ pair: pk, m }));
+}
+
 function chainGaps(parsed) {
   // Largest end->start gap per NAME, with all same-named <trk>s' segments
   // taken together in emitted order: main emits one single-segment <trk>
@@ -338,6 +382,9 @@ if (mnHtml) {
   if (mnReg.length)
     mnParsedFull = parseTracks(makeMainBuild(mnHtml)(mnReg, () => true), 'main full');
 }
+// per-pair baseline for check 6: what main's own full GPX already shares
+const mnDup = mnParsedFull
+  ? new Map(crossTrkDup(mnParsedFull).map(d => [d.pair, d.m])) : new Map();
 
 // Investigated one-off populations (step-4 build, 2026-09-14). Anything NOT
 // on these lists still fails — they are named cases, not tolerances.
@@ -351,16 +398,49 @@ const BRANCH_ONLY_OK = new Set([
   'CA Accommodation Connector Route - Grenville-sur-la-Rouge, QC (Halte-Camping Chute des Sept-Soeurs) 100m 001',
   'CA CA Track 001 Ottawa Jail WB',
 ]);
-// Westbound assemblies where Sam drew overlapping westbound cover and the
-// design splices it back-to-back (DESIGN §4.5 overlapping spans / §4a
-// ferry-terminal loops): the rider genuinely re-passes 200-330 m of
-// parallel street. Logged by the converter as overlapping-variant seams /
-// nested-variant data questions for Sam; honest data, not a merge defect.
+// Westbound assemblies where the rider genuinely re-passes 200-330 m of
+// parallel street, two mechanisms (both honest data, not merge defects,
+// all §4a data questions for Sam): the CN Kamloops pair is overlapping
+// westbound cover spliced back-to-back (DESIGN §4.5 overlapping spans);
+// the two C1 Swartz Bay entries are a ferry-terminal loop variant
+// overlapping ~200-240 m of RETAINED spine (the §4a nested-variant trio),
+// not back-to-back variants.
 const BACKTRACK_OK = new Set([
   'C1 [C1 EB] North Saanich BC Swartz Bay Ferry Terminal Cycling access 878m',
   'C1 [C1 EB] Victoria (Ocean Island Backpackers Inn 622m) to Swartz Bay, BC pt1of2',
   'CN CN Rivers Trail Kelowna EB 002',
   "CN [CN EB] Kamloops [CN] (Rivers Trail at River St) to Salmon Arm, BC (Pierre's Point Campground 460m) 002",
+]);
+
+// Cross-<trk> riding the westbound assemblies legitimately ADD beyond
+// main's as-drawn baseline (E-to-W flavour; 2026-09-15 fix session):
+// parallel-alternate variants whose claims genuinely serve two rides
+// (each measured against Sam's eastbound drawing — spine-parity numbers
+// in DESIGN §4e), plus the two decided named exceptions (Russell's 50.3%
+// borderline claim overlap; the Kamloops equal-claims complex). Values =
+// metres beyond the main baseline; a pair exceeding baseline + entry +
+// 200 m slack, or any unlisted pair beyond baseline + 200 m, fails.
+const CROSS_TRK_OK = new Map([
+  // Golden Ears Bridge alternate: serves the Swartz Bay->Mission ride and
+  // the Langley<>Maple Ridge couplet; spines share the road (parity)
+  ["C1 [C1 EB] (Swartz Bay-Tsawwassen ferry 1h 35mins) to Mission, BC (Sun Valley Trout Park 833m) pt2of2 || C1 [C1 EB] Langley Twp, BC (Golden Ears Bridge Northbound) &lt;&gt; Maple Ridge, BC", 2350],
+  // Stratford PE: overlapping eastbound cover, parity 0.90
+  ["C1 [C1 EB] Charlottetown to Wood Islands, PE (Northumberland Provincial Park 4.7km) || C1 [C1 EB] Stratford PE TCH Path Eastbound 2.3km", 580],
+  // Quebec City bike path: variant serves the Route Verte 5 stub and the
+  // day ride equally (equal claims, parity by drawing)
+  ["C2 [C1 C2 and C3 EB] Quebec, QC (Route Verte 5) || C2 [C2 EB] Leclercville to Quebec City, QC (Auberge internationale de Québec 1.4km) 001", 380],
+  ["C3 [C1 C2 and C3 EB] Quebec QC Route Verte 5 378m 002 || C3 [C3 EB] Portneuf to Québec, QC (Auberge internationale de Québec 1.4km) 002", 380],
+  // Lake Louise TCH: the short EB cover track and the Banff NP day ride,
+  // parity 0.62-0.90 (the third, boundary-spillover claim is refused)
+  ["C3 [C1 and C3 EB] Lake Louise AB TCH 2.5km Eastbound 002 || C3 [C3 EB] Banff NP to Lake Louise, AB (Lake Louise Campground 1.5km) 002", 750],
+  // Russell MB: true boundary crossing at 50.3% claim overlap — 3/1000
+  // over the cut line; accepted as a named one-off (data question)
+  ["C3 [C3 EB] Russell to Shoal Lake, MB (Lakeview Park Campground 1.8km) 002 || C3 [C3 EB] Yorkton, SK to Russell, MB (The Russell Inn 188m) 002", 500],
+  // Kamloops complex: three EB tracks over one corridor (a §4a data
+  // question); equal claims stay shared by design
+  ["CN CN Battle Street 004 EB 002 || CN CN Rivers Trail Kelowna EB 002", 700],
+  ["CN CN Battle Street 004 EB 002 || CN [CN EB] Kamloops [CN] (Rivers Trail at River St) to Salmon Arm, BC (Pierre's Point Campground 460m) 002", 700],
+  ["CN CN Rivers Trail Kelowna EB 002 || CN [CN EB] Kamloops [CN] (Rivers Trail at River St) to Salmon Arm, BC (Pierre's Point Campground 460m) 002", 620],
 ]);
 
 let fails = 0;
@@ -391,6 +471,22 @@ for (const [flavor, dir] of Object.entries(FLAVORS)) {
   bad(2, 'duplicated riding >200 m', a.dupRide, x => `${x.m.toFixed(0)} m  ${x.name}`);
   bad(3, 'misordered seams', a.misorder,
       x => `gap ${x.gap.toFixed(0)} m, alt pairing ${x.alt.toFixed(0)} m  ${x.name}`);
+  // 6. cross-<trk> duplicated riding (review F1's missing check)
+  const dups = crossTrkDup(parsed);
+  const inherited = dups.filter(d => mnDup.has(d.pair) &&
+                                     d.m <= mnDup.get(d.pair) + 200);
+  if (inherited.length)
+    console.log(`  inherited as-drawn shared riding (= main): ` +
+                `${inherited.length} pairs, ` +
+                `${(inherited.reduce((s, d) => s + d.m, 0) / 1000).toFixed(1)} km`);
+  const dupAllowed = d => (mnDup.get(d.pair) || 0) + (CROSS_TRK_OK.get(d.pair) || 0);
+  for (const d of dups)
+    if (CROSS_TRK_OK.has(d.pair) && d.m <= dupAllowed(d) + 200)
+      console.log(`  known cross-trk shared riding (allowlisted): ` +
+                  `${d.m.toFixed(0)} m  ${d.pair}`);
+  bad(6, 'cross-trk duplicated riding (new or beyond allowance)',
+      dups.filter(d => d.m > dupAllowed(d) + 200),
+      d => `${d.m.toFixed(0)} m (allowance ${dupAllowed(d).toFixed(0)} m)  ${d.pair}`);
   // 5. riding conservation vs the store
   const exp = expectedMetres(stores, splicedByLayer, dir);
   const got = emittedMetres(parsed);
