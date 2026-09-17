@@ -421,7 +421,11 @@ const BRANCH_ONLY_OK = new Set([
 // overlapping ~200-240 m of RETAINED spine (the §4a nested-variant trio),
 // not back-to-back variants.
 const BACKTRACK_OK = new Set([
-  'C1 [C1 EB] North Saanich BC Swartz Bay Ferry Terminal Cycling access 878m',
+  // renamed by Sam 2026-09-16 (was "North Saanich BC Swartz Bay Ferry
+  // Terminal Cycling access 878m"); re-verified against the raw KML:
+  // 0 m self-retrace in the drawing, so the backtrack is the same
+  // overlapping-cover composition effect as before the rename
+  'C1 [C1 EB] Swartz Bay, BC (Ferry Terminal Cycling access) 878m',
   'C1 [C1 EB] Victoria (Ocean Island Backpackers Inn 622m) to Swartz Bay, BC pt1of2 114km',
   'CN CN Rivers Trail Kelowna EB 002',
   "CN [CN EB] Kamloops [CN] (Rivers Trail at River St) to Salmon Arm, BC (Pierre's Point Campground 460m) 002",
@@ -454,16 +458,20 @@ const CROSS_TRK_OK = new Map([
   // Russell MB: true boundary crossing at 50.3% claim overlap — 3/1000
   // over the cut line; accepted as a named one-off (data question)
   ["C3 [C3 EB] Russell to Shoal Lake, MB (Lakeview Park Campground 1.8km) 002 || C3 [C3 EB] Yorkton, SK to Russell, MB (The Russell Inn 188m) 002", 500],
-  // Swartz Bay ferry terminal (2026-09-15, after Sam's Victoria-Swartz Bay
-  // redraw upstream): the corridor is triple-drawn in the source — the
-  // 1,018 m EB terminal stub lies entirely on the redrawn day ride, and
-  // the 879 m North Saanich access track likewise (measured against the
-  // raw KML at 5 m). Our westbound exports mirror strictly less overlap
-  // than the eastbound drawing. The stub's name starts with a
-  // non-breaking space, hence  . Part of the §4a Swartz Bay trio
-  // data question.
-  ["C1 [C1 EB] Victoria (Ocean Island Backpackers Inn 622m) to Swartz Bay, BC pt1of2 114km || C1 [C1 EB] Swartz Bay, BC (Victoria (Swartz Bay) Ferry Terminal) 1.0km", 400],
-  ["C1 [C1 EB] North Saanich BC Swartz Bay Ferry Terminal Cycling access 878m || C1 [C1 EB] Swartz Bay, BC (Victoria (Swartz Bay) Ferry Terminal) 1.0km", 270],
+  // Swartz Bay ferry terminal (2026-09-17, after Sam's second Victoria-
+  // Swartz Bay redraw upstream renamed the access track and made the
+  // terminal stub westbound): the corridor stays triple-drawn in the
+  // source — re-verified against the raw KML at 5 m, all 877 m of the
+  // renamed access track lie on the redrawn day ride. The WB-terminal
+  // pair shares no raw-identical edges at all; that pairing is an
+  // emission-side attribution of the same triple-drawn corridor (main's
+  // per-feature emission attributes shared edges differently than the
+  // per-track build, hence the day-ride pair's small entry on top of the
+  // main baseline). The stub's name starts with a non-breaking space,
+  // hence  . Part of the §4a Swartz Bay trio data question. The
+  // 2026-09-15 entries keyed the retired names and are replaced.
+  ["C1 [C1 EB] Swartz Bay, BC (Ferry Terminal Cycling access) 878m || C1 [C1 EB] Victoria (Ocean Island Backpackers Inn 622m) to Swartz Bay, BC pt1of2 114km", 250],
+  ["C1 [C1 EB] Swartz Bay, BC (Ferry Terminal Cycling access) 878m || C1 [C1 WB] Swartz Bay, BC (Victoria (Swartz Bay) Ferry Terminal) 1.0km", 850],
   // Kamloops complex: three EB tracks over one corridor (a §4a data
   // question); equal claims stay shared by design
   ["CN CN Battle Street 004 EB 002 || CN CN Rivers Trail Kelowna EB 002", 700],
