@@ -371,7 +371,22 @@ const brBuild = brApi.withRegistry(brReg);
 
 const mnHtml = readMain('index.html');
 let mnParsedFull = null;
-if (mnHtml) {
+if (mnHtml && readMain('data/rides_C1.json') != null) {
+  // main ships ride stores now: drive main's own store-era build code
+  const mnApi = makeBranchBuild(mnHtml);
+  const mnReg = [];
+  for (const code of LAYERS) {
+    const text = readMain(`data/rides_${code}.json`);
+    if (text == null) continue;
+    const store = JSON.parse(text);
+    mnReg.push({ kind: 'route', cb: { checked: true }, meta: { code, title: code },
+                 store, spliced: mnApi.splicedVariantIds(store),
+                 gj: mnApi.materializeStore(store) });
+  }
+  if (mnReg.length)
+    mnParsedFull = parseTracks(mnApi.withRegistry(mnReg)(''), 'main full');
+} else if (mnHtml) {
+  // pre-merge main: per-feature GeoJSON through the older buildGpx
   const mnReg = [];
   for (const code of LAYERS) {
     const text = readMain(`data/routes_${code}.geojson`);
