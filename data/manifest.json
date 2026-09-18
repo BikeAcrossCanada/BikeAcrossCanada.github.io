@@ -67,6 +67,12 @@
  ],
  "pois": [
   {
+   "key": "End_of_Day_Segments",
+   "emoji": "\ud83d\udd3b",
+   "title": "End of Day Segments",
+   "count": 161
+  },
+  {
    "key": "Approved_Accommodations",
    "emoji": "\ud83c\udf1f",
    "title": "Approved Accommodations",
@@ -77,6 +83,12 @@
    "emoji": "\u26fa",
    "title": "Campgrounds",
    "count": 766
+  },
+  {
+   "key": "Approved_Accommodation_(campground)",
+   "emoji": "\ud83c\udf1f\u26fa",
+   "title": "Approved Accommodation (campground)",
+   "count": 40
   },
   {
    "key": "IndoorAccommodations",
@@ -191,12 +203,6 @@
    "emoji": "\ud83d\udccd",
    "title": "Km distance markers",
    "count": 117
-  },
-  {
-   "key": "End_of_Day_Segments",
-   "emoji": "\ud83d\udd3b",
-   "title": "End of Day Segments",
-   "count": 161
   }
  ],
  "provinces": [
