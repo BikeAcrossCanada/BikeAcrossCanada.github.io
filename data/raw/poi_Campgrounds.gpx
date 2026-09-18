@@ -4,7 +4,7 @@
     <link href="http://www.garmin.com">
       <text>Garmin International</text>
     </link>
-    <time>2026-09-18T16:24:20Z</time>
+    <time>2026-09-18T16:37:33Z</time>
     <bounds maxlat="55.249392036348581" maxlon="-52.732287989929318" minlat="43.736470006406307" minlon="-130.34313102252781" />
   </metadata>
 
@@ -4649,27 +4649,6 @@
     </extensions>
   </wpt>
 
-  <wpt lat="46.650080988183618" lon="-60.954146012663841">
-    <ele>0</ele>
-    <time>2026-08-24T14:43:26Z</time>
-    <name>Chéticamp Campground - National Park</name>
-    <cmt>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
-    <desc>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
-    <sym>Campground</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
   <wpt lat="53.908467991277575" lon="-123.58681599609554">
     <ele>0</ele>
     <time>2026-08-24T14:43:26Z</time>
@@ -4897,27 +4876,6 @@
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="46.726095965132117" lon="-60.92567696236074">
-    <ele>0</ele>
-    <time>2026-08-24T14:43:26Z</time>
-    <name>Corney Brook Campground</name>
-    <cmt>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
-    <desc>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
-    <sym>Campground</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -10655,27 +10613,6 @@
     </extensions>
   </wpt>
 
-  <wpt lat="48.810666985809803" lon="-64.259412987157702">
-    <ele>0</ele>
-    <time>2026-08-24T14:43:26Z</time>
-    <name>Petit-Gaspé Campground</name>
-    <cmt>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
-    <desc>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
-    <sym>Campground</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
   <wpt lat="49.37447302043438" lon="-120.14584098011255">
     <ele>0</ele>
     <time>2026-08-24T14:43:26Z</time>
@@ -11354,27 +11291,6 @@
     <name>Rainbow Falls Provincial Park - Rossport Campground</name>
     <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
     <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
-    <sym>Campground</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="52.038830006495118" lon="-116.86640895903111">
-    <ele>0</ele>
-    <time>2026-08-24T14:43:26Z</time>
-    <name>Rampart Creek Campground</name>
-    <cmt>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
-    <desc>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
     <sym>Campground</sym>
     <type>user</type>
     <extensions>
@@ -12906,8 +12822,7 @@
     <ele>0</ele>
     <time>2026-06-27T16:35:11Z</time>
     <name>SMONEĆTEN Campground, Gulf Islands National Park Reserve, Parks Canada (open May 15 to Sept 30)</name>
-    <cmt>description: Details from Google Maps&lt;br&gt;10740 McDonald Park Rd, North Saanich, BC V8L 5S5&lt;br&gt;https://www.pc.gc.ca/en/pn-np/bc/gulf/activ/camping/campinglavantpays-frontcountrycamping#McDonald&lt;br&gt;+1 866-944-1744&lt;br&gt;Type: National Park Campground&lt;br&gt;ID: 254.0
-
+    <cmt>https://cartes.app/?allez=Smonećten (McDonald) Campground|w156900831|-123.42652|48.67372#15.54/48.673959/-123.426379 
 &lt;iframe
      src="https://cartes.app/?allez=Smonećten (McDonald) Campground|w156900831|-123.42686|48.67401#15.38/48.673959/-123.426379"
      style="
@@ -12919,14 +12834,13 @@
      display: block;
      box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
       rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-
       background: linear-gradient(white, white) padding-box, linear-gradient(to right, #2988e6, #57bff5) border-box;
   border: 0.2rem solid transparent;
-  border-radius: 0.5rem;
-"
-    &gt;&lt;/iframe&gt;</cmt>
-    <desc>description: Details from Google Maps&lt;br&gt;10740 McDonald Park Rd, North Saanich, BC V8L 5S5&lt;br&gt;https://www.pc.gc.ca/en/pn-np/bc/gulf/activ/camping/campinglavantpays-frontcountrycamping#McDonald&lt;br&gt;+1 866-944-1744&lt;br&gt;Type: National Park Campground&lt;br&gt;ID: 254.0
+  border-radius: 0.5rem;"&gt;&lt;/iframe&gt;
 
+description: Details from Google Maps&lt;br&gt;10740 McDonald Park Rd, North Saanich, BC V8L 5S5&lt;br&gt;https://www.pc.gc.ca/en/pn-np/bc/gulf/activ/camping/campinglavantpays-frontcountrycamping#McDonald&lt;br&gt;+1 866-944-1744&lt;br&gt;Type: National Park Campground&lt;br&gt;ID: 254.0
+</cmt>
+    <desc>https://cartes.app/?allez=Smonećten (McDonald) Campground|w156900831|-123.42652|48.67372#15.54/48.673959/-123.426379 
 &lt;iframe
      src="https://cartes.app/?allez=Smonećten (McDonald) Campground|w156900831|-123.42686|48.67401#15.38/48.673959/-123.426379"
      style="
@@ -12938,12 +12852,13 @@
      display: block;
      box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
       rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-
       background: linear-gradient(white, white) padding-box, linear-gradient(to right, #2988e6, #57bff5) border-box;
   border: 0.2rem solid transparent;
-  border-radius: 0.5rem;
-"
-    &gt;&lt;/iframe&gt;</desc>
+  border-radius: 0.5rem;"&gt;&lt;/iframe&gt;
+
+description: Details from Google Maps&lt;br&gt;10740 McDonald Park Rd, North Saanich, BC V8L 5S5&lt;br&gt;https://www.pc.gc.ca/en/pn-np/bc/gulf/activ/camping/campinglavantpays-frontcountrycamping#McDonald&lt;br&gt;+1 866-944-1744&lt;br&gt;Type: National Park Campground&lt;br&gt;ID: 254.0
+</desc>
+    <link href="https://cartes.app/?allez%3DSmone%C4%87ten%20%28McDonald%29%20Campground%7Cw156900831%7C-123.42652%7C48.67372#15.54/48.673959/-123.426379" />
     <sym>Campground</sym>
     <type>user</type>
     <extensions>
@@ -13799,27 +13714,6 @@
     </extensions>
   </wpt>
 
-  <wpt lat="45.228049959987402" lon="-81.528968028724194">
-    <ele>0</ele>
-    <time>2026-08-24T14:43:26Z</time>
-    <name>Tamarack Campsites</name>
-    <cmt>description: https://parks.canada.ca/pn-np/on/bruce/activ/camping/cyprus&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
-    <desc>description: https://parks.canada.ca/pn-np/on/bruce/activ/camping/cyprus&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
-    <sym>Campground</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
   <wpt lat="49.382415041327477" lon="-121.44821397028863">
     <ele>0</ele>
     <time>2026-08-24T14:43:26Z</time>
@@ -14341,48 +14235,6 @@
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="44.590140022337437" lon="-78.990030968561769">
-    <ele>0</ele>
-    <time>2026-08-24T14:43:26Z</time>
-    <name>Trent Severn Waterway, Lock 36 - Kirkfield Lift Lock</name>
-    <cmt>description: GPS: 44° 35' 22" N ~ 78° 59' 23" W&lt;br&gt;Mile # 169.4 (272.6 km)&lt;br&gt;Average Lift: 49 ft (14.9 m)&lt;br&gt;Phone # (705) 438-3126&lt;br&gt;&lt;br&gt;Lockstations with camping:&lt;br&gt;&lt;br&gt;Tent camping is allowed at most lockstations on the Trent-Severn Waterway at the discretion of the lockmaster on duty. Sites are typically located in grassy areas around the lockstation and adjacent the waterway's mooring walls and/or paddle docks.&lt;br&gt;https://parks.canada.ca/lhn-nhs/on/trentsevern/activ/camping/tente-tent&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
-    <desc>description: GPS: 44° 35' 22" N ~ 78° 59' 23" W&lt;br&gt;Mile # 169.4 (272.6 km)&lt;br&gt;Average Lift: 49 ft (14.9 m)&lt;br&gt;Phone # (705) 438-3126&lt;br&gt;&lt;br&gt;Lockstations with camping:&lt;br&gt;&lt;br&gt;Tent camping is allowed at most lockstations on the Trent-Severn Waterway at the discretion of the lockmaster on duty. Sites are typically located in grassy areas around the lockstation and adjacent the waterway's mooring walls and/or paddle docks.&lt;br&gt;https://parks.canada.ca/lhn-nhs/on/trentsevern/activ/camping/tente-tent&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
-    <sym>Campground</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="44.357040971517563" lon="-78.735033022239804">
-    <ele>0</ele>
-    <time>2026-08-24T14:43:26Z</time>
-    <name>Trent-Severn Waterway, Lock 33 - Lindsay</name>
-    <cmt>description: GPS: 44 21' 25" N ~ 78 44' 17" W&lt;br&gt;Mile # 156.4 (251.6 km)&lt;br&gt;Dimensions: 120' (36.6m) Long, 32' (9.7m) Wide&lt;br&gt;Average Lift: 7 ft (2.1 m)&lt;br&gt;Phone # (705) 324-2393&lt;br&gt;&lt;br&gt;Lockstations with camping:&lt;br&gt;&lt;br&gt;Tent camping is allowed at most lockstations on the Trent-Severn Waterway at the discretion of the lockmaster on duty. Sites are typically located in grassy areas around the lockstation and adjacent the waterway's mooring walls and/or paddle docks.&lt;br&gt;https://parks.canada.ca/lhn-nhs/on/trentsevern/activ/camping/tente-tent&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
-    <desc>description: GPS: 44 21' 25" N ~ 78 44' 17" W&lt;br&gt;Mile # 156.4 (251.6 km)&lt;br&gt;Dimensions: 120' (36.6m) Long, 32' (9.7m) Wide&lt;br&gt;Average Lift: 7 ft (2.1 m)&lt;br&gt;Phone # (705) 324-2393&lt;br&gt;&lt;br&gt;Lockstations with camping:&lt;br&gt;&lt;br&gt;Tent camping is allowed at most lockstations on the Trent-Severn Waterway at the discretion of the lockmaster on duty. Sites are typically located in grassy areas around the lockstation and adjacent the waterway's mooring walls and/or paddle docks.&lt;br&gt;https://parks.canada.ca/lhn-nhs/on/trentsevern/activ/camping/tente-tent&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
-    <sym>Campground</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
