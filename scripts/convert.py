@@ -48,8 +48,10 @@ ARROW_LAYER = "One-way_Direction_Arrows"
 ARROW_PARENT_RE = re.compile(r"^\[(\w+)")  # "[C1 EB] One-way - ..." -> "C1"
 
 POI_LAYERS = {  # gpx stem -> (emoji, display name)
+    "End_of_Day_Segments": ("🔻", "End of Day Segments"),
     "Approved_Accommodations": ("🌟", "Approved Accommodations"),
     "Campgrounds": ("⛺", "Campgrounds"),
+    "Approved_Accommodation_(campground)": ("🌟⛺", "Approved Accommodation (campground)"),
     "IndoorAccommodations": ("\U0001f6cf️", "Indoor accommodations"),
     "Bicycle_Repair_Shops": ("\U0001f527", "Bike shops"),
     "Bicycle_Repair_Stand": ("\U0001f6e0️", "Bike repair stands"),
@@ -69,7 +71,6 @@ POI_LAYERS = {  # gpx stem -> (emoji, display name)
     "Airports": ("✈️", "Airports"),
     "HardwareNoBike": ("\U0001fa9b", "Hardware stores (no bike parts)"),
     "Kilometre_Distance_Markers": ("\U0001f4cd", "Km distance markers"),
-    "End_of_Day_Segments": ("🔻", "End of Day Segments"),
 }
 
 SIMPLIFY_TOLERANCE = 0.00005  # degrees, ~5 m: follows the path even at street-level zooms
