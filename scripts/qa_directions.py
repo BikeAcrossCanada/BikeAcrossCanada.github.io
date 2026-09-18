@@ -262,14 +262,21 @@ def materialize_store(code, text):
 
 def load_version(repo: pathlib.Path, rev: str | None):
     """rev=None -> working tree (the ride store, materialized). A git
-    revision is read as routes_<code>.geojson — the per-feature files main
-    ships. Returns {layer: [Feat,...]}."""
+    revision is read as rides_<code>.json (what main ships since the
+    ride-assembly merge), falling back to routes_<code>.geojson for
+    older revisions. Returns {layer: [Feat,...]}."""
     out = {}
     for code in LAYERS:
         if rev is None:
             out[code] = materialize_store(
                 code, (repo / f"data/rides_{code}.json").read_text())
         else:
+            r = subprocess.run(
+                ["git", "-C", str(repo), "show", f"{rev}:data/rides_{code}.json"],
+                capture_output=True, text=True)
+            if r.returncode == 0:
+                out[code] = materialize_store(code, r.stdout)
+                continue
             text = subprocess.run(
                 ["git", "-C", str(repo), "show", f"{rev}:data/routes_{code}.geojson"],
                 capture_output=True, text=True, check=True).stdout

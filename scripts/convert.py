@@ -72,7 +72,7 @@ POI_LAYERS = {  # gpx stem -> (emoji, display name)
     "End_of_Day_Segments": ("🔻", "End of Day Segments"),
 }
 
-SIMPLIFY_TOLERANCE = 0.0002  # degrees, ~20 m: invisible at national/regional zooms
+SIMPLIFY_TOLERANCE = 0.00005  # degrees, ~5 m: follows the path even at street-level zooms
 PRECISION = 5  # coordinate decimals (~1 m)
 ROUTE_TAG_KM = 10  # a point "belongs to" every route layer within this distance;
                    # the map uses it to show only points near the routes you've ticked

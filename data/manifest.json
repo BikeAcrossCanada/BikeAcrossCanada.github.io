@@ -5,8 +5,8 @@
    "color": "#4e0067",
    "weight": 4,
    "title": "C1 \u2014 Victoria BC to Cape Spear NL (approx. 6,700 km West\u2013East)",
-   "count": 404,
-   "km": 8634,
+   "count": 403,
+   "km": 8647,
    "km_west_east": 6700
   },
   {
@@ -15,7 +15,7 @@
    "weight": 4,
    "title": "C2 \u2014 Tofino BC to Halifax NS (approx. 6,700 km West\u2013East)",
    "count": 304,
-   "km": 7281,
+   "km": 7294,
    "km_west_east": 6700
   },
   {
@@ -23,8 +23,8 @@
    "color": "#00674e",
    "weight": 4,
    "title": "C3 \u2014 Victoria BC to Newfoundland (approx. 9,700 km West\u2013East)",
-   "count": 482,
-   "km": 10174,
+   "count": 484,
+   "km": 10190,
    "km_west_east": 9700
   },
   {
@@ -33,7 +33,7 @@
    "weight": 3,
    "title": "CN \u2014 Connector routes (approx. 2,400 km)",
    "count": 267,
-   "km": 2418,
+   "km": 2424,
    "km_west_east": 2400
   },
   {
@@ -42,7 +42,7 @@
    "weight": 2.5,
    "title": "CA \u2014 Access routes",
    "count": 340,
-   "km": 354,
+   "km": 357,
    "km_west_east": 300
   },
   {
@@ -51,7 +51,7 @@
    "weight": 3,
    "title": "CL \u2014 Local connectors",
    "count": 113,
-   "km": 762,
+   "km": 766,
    "km_west_east": 700
   },
   {
