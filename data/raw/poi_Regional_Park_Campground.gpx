@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?><gpx creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd http://www.garmin.com/xmlschemas/TripExtensions/v1 http://www.garmin.com/xmlschemas/TripExtensionsv1.xsd http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1 http://www.garmin.com/xmlschemas/TripMetaDataExtensionsv1.xsd http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1 http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensionsv1.xsd http://www.garmin.com/xmlschemas/CreationTimeExtension/v1 http://www.garmin.com/xmlschemas/CreationTimeExtensionsv1.xsd http://www.garmin.com/xmlschemas/AccelerationExtension/v1 http://www.garmin.com/xmlschemas/AccelerationExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.garmin.com/xmlschemas/VideoExtension/v1 http://www.garmin.com/xmlschemas/VideoExtensionv1.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1" xmlns:tmd="http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1" xmlns:vptm="http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1" xmlns:ctx="http://www.garmin.com/xmlschemas/CreationTimeExtension/v1" xmlns:gpxacc="http://www.garmin.com/xmlschemas/AccelerationExtension/v1" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:vidx1="http://www.garmin.com/xmlschemas/VideoExtension/v1">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2026-09-18T16:45:40Z</time>
+    <bounds maxlat="51.032113982364535" maxlon="-74.462978979572654" minlat="43.736470006406307" minlon="-102.15260800905526" />
+  </metadata>
+
+  <wpt lat="46.391485026106238" lon="-81.283460995182395">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Centennial Park (Whitefish)</name>
+    <cmt>description: 2024 Season - May 17, 2024 to September 15, 2024. &lt;br&gt;Details from Google Maps&lt;br&gt;400 Graham Rd, Whitefish, ON P0M 3E0&lt;br&gt;https://www.greatersudbury.ca/play/campgrounds-and-trailer-parks/centennial-park/&lt;br&gt;+1 705-866-0338&lt;br&gt;Type: Regional Park Campground&lt;br&gt;ID: 97.0</cmt>
+    <desc>description: 2024 Season - May 17, 2024 to September 15, 2024. &lt;br&gt;Details from Google Maps&lt;br&gt;400 Graham Rd, Whitefish, ON P0M 3E0&lt;br&gt;https://www.greatersudbury.ca/play/campgrounds-and-trailer-parks/centennial-park/&lt;br&gt;+1 705-866-0338&lt;br&gt;Type: Regional Park Campground&lt;br&gt;ID: 97.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.087838992476463" lon="-74.525993959978223">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Charlottenburgh Park</name>
+    <cmt>description: &lt;br&gt;Type: Regional Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Regional Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.938212968409061" lon="-75.091537982225418">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Crysler Park Marina</name>
+    <cmt>description: &lt;br&gt;Type: Regional Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Regional Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.152366990223527" lon="-74.462978979572654">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Glengarry Campground</name>
+    <cmt>description: &lt;br&gt;Type: Regional Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Regional Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="43.736470006406307" lon="-79.636636963114142">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Indian Line Campground1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;7625 Finch Ave W, Brampton, ON L6T 0B2&lt;br&gt;trca.ca&lt;br&gt;+1 855-811-0111&lt;br&gt;Type: Regional Park Campground&lt;br&gt;ID: 134.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;7625 Finch Ave W, Brampton, ON L6T 0B2&lt;br&gt;trca.ca&lt;br&gt;+1 855-811-0111&lt;br&gt;Type: Regional Park Campground&lt;br&gt;ID: 134.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.369127005338669" lon="-75.984456008300185">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Ivy Lea Campground</name>
+    <cmt>description: &lt;br&gt;Type: Regional Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Regional Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.075718965381384" lon="-101.70756901614368">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Moosomin &amp; District Regional Park1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;801 Main St, Moosomin, SK S0G 3N0&lt;br&gt;moosominregionalpark.com&lt;br&gt;+1 306-435-3531&lt;br&gt;Type: Regional Park Campground&lt;br&gt;ID: 198.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;801 Main St, Moosomin, SK S0G 3N0&lt;br&gt;moosominregionalpark.com&lt;br&gt;+1 306-435-3531&lt;br&gt;Type: Regional Park Campground&lt;br&gt;ID: 198.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.933779025450349" lon="-75.120535008609295">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Riverside-Cedar Campground</name>
+    <cmt>description: &lt;br&gt;Type: Regional Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Regional Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.032113982364535" lon="-102.15260800905526">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Saltcoats &amp; District Regional Park</name>
+    <cmt>description: &lt;br&gt;Type: Regional Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Regional Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.961813976988196" lon="-75.019392007961869">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Upper Canada Migratory Bird Sanctuary Campground</name>
+    <cmt>description: &lt;br&gt;Type: Regional Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Regional Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.99471596442163" lon="-74.951078994199634">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Woodlands Campground</name>
+    <cmt>description: &lt;br&gt;Type: Regional Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Regional Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+</gpx>
