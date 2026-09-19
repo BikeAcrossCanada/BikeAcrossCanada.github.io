@@ -4,8 +4,8 @@
     <link href="http://www.garmin.com">
       <text>Garmin International</text>
     </link>
-    <time>2026-09-15T17:20:51Z</time>
-    <bounds maxlat="51.425843238830566" maxlon="-52.697403430938721" minlat="43.749854564666748" minlon="-125.90960741043091" />
+    <time>2026-09-19T18:37:42Z</time>
+    <bounds maxlat="55.246832370758057" maxlon="-52.697403430938721" minlat="43.749854564666748" minlon="-130.340895652771" />
   </metadata>
 
   <wpt lat="49.633591175079346" lon="-105.99184513092041">
@@ -22,6 +22,24 @@
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-13T17:27:30Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="55.246832370758057" lon="-127.59283304214478">
+    <time>2026-09-19T16:22:03Z</time>
+    <name>10th Ave and Churchill St ('Ksan Campground 7.5km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:22:03Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -98,6 +116,24 @@ Wilmot, Nova Scotia, B0S 1W0, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="49.123520851135254" lon="-66.510436534881592">
+    <time>2026-09-19T17:41:58Z</time>
+    <name>1ere Ave o and Rue Simard (Camping Ancre Jaune 86m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T17:41:58Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="50.784473419189453" lon="-112.45099067687988">
     <time>2026-09-08T13:41:00Z</time>
     <name>2 Ave and Township Road 212a and Old Trans-Canada Highway (Bassano Homecoming Campground 1km)</name>
@@ -148,6 +184,24 @@ Wilmot, Nova Scotia, B0S 1W0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-10T17:49:35Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.323082447052002" lon="-113.60588550567627">
+    <time>2026-09-19T16:50:50Z</time>
+    <name>2nd Ave and 1st St (Irricana Campground 161m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:50:50Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -314,6 +368,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="48.814358711242676" lon="-67.618618011474609">
+    <time>2026-09-19T17:41:12Z</time>
+    <name>Avenue Du Phare o and Rue Matane-Sur-Mer (Auberge Camping du Lac Malcom 9.1km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T17:41:12Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="51.178414821624756" lon="-115.5706787109375">
     <time>2026-09-07T17:13:20Z</time>
     <name>Banff Ave and Wolf St (Tunnel Mountain Village II Campground 2.5km)</name>
@@ -346,6 +418,42 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-08T13:34:59Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.287047386169434" lon="-76.467719078063965">
+    <time>2026-09-19T17:33:41Z</time>
+    <name>Battersea Rd and Kingston Mills Rd (Rideau Canal, Locks 46-49 Kingston Mills 2.2km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T17:33:41Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.468128681182861" lon="-80.11204719543457">
+    <time>2026-09-19T17:15:21Z</time>
+    <name>Beachwood Rd and Cedar Grove Pkwy (Jell-e-Bean Campground and Trailer Park 131m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T17:15:21Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -476,6 +584,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="51.469788551330566" lon="-112.71281719207764">
+    <time>2026-09-19T16:51:58Z</time>
+    <name>Bridge St and Road and Grove Pl (River Grove Campground and Cabins 406m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:51:58Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="46.264779567718506" lon="-81.770167350769043">
     <time>2026-09-10T17:03:46Z</time>
     <name>Centre St and Barber St (Pinewood Motor Inn 970m)</name>
@@ -528,6 +654,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-10T17:38:09Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.550389289855957" lon="-74.452242851257324">
+    <time>2026-09-19T17:37:57Z</time>
+    <name>County Road 14 / Chemin de Comté 14 and Chemin Concession 1 Rd (Champlain Campground 3.1km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T17:37:57Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -672,6 +816,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-12T17:45:58Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.684456825256348" lon="-73.710858821868896">
+    <time>2026-09-19T17:38:58Z</time>
+    <name>Côte de Terrebonne and Alley (Camping Au Plateau 5 Étoiles Inc 280m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T17:38:58Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -930,6 +1092,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="49.703607559204102" lon="-124.99512434005737">
+    <time>2026-09-15T17:33:15Z</time>
+    <name>Headquarters Rd (Maple Pool Campground and RV Park 68m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-15T17:33:15Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="44.759523868560791" lon="-65.508556365966797">
     <time>2026-09-15T16:58:32Z</time>
     <name>Highway 1 (Dunromin Campground 50m)</name>
@@ -1088,6 +1268,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-10T13:34:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.603376388549805" lon="-79.365792274475098">
+    <time>2026-09-19T17:17:04Z</time>
+    <name>Highway 12 and Queen St (Hammock Harbour 2.3km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T17:17:04Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -1326,6 +1524,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="51.219913959503174" lon="-114.71668481826782">
+    <time>2026-09-19T16:48:59Z</time>
+    <name>Highway 1a and Road (Ghost Reservoir Provincial Recreation Area 250m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:48:59Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="44.315006732940674" lon="-76.256790161132813">
     <time>2026-09-14T17:11:31Z</time>
     <name>Highway 2 and Resort Rd (Pinecrest Resort 803m)</name>
@@ -1398,6 +1614,42 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="44.329364262521267" lon="-78.723135162144899">
+    <time>2026-09-19T17:31:58Z</time>
+    <name>Highway 7 and 35 (Riverwood Park Campground 1.4km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T17:31:58Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.474916934967041" lon="-109.14477109909058">
+    <time>2026-09-19T16:54:23Z</time>
+    <name>Highway 7 and Ditson Dr and C St (Kindersly Regional Park Campground 1.7km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:54:23Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="49.069039821624756" lon="-93.904051780700684">
     <time>2026-09-14T15:43:12Z</time>
     <name>Highway 71 and Caliper Lake Park Rd (Caliper Lake Provincial Park 1.6km)</name>
@@ -1430,6 +1682,186 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-14T15:40:43Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.38704776763916" lon="-110.4795241355896">
+    <time>2026-09-19T16:53:29Z</time>
+    <name>Highway 9 and Alley (Saokii Campground) 527m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:53:29Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.634218692779541" lon="-111.94207906723022">
+    <time>2026-09-19T16:52:45Z</time>
+    <name>Highway 9 and Palliser Trl (Fox Lake Park and Playground 4.5km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:52:45Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="52.343846289440989" lon="-117.33858344145119">
+    <time>2026-09-19T16:46:24Z</time>
+    <name>Icefields Pkwy (Hi-Beauty Creek Wilderness Hostel 49m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:46:24Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="52.841105461120605" lon="-118.06976795196533">
+    <time>2026-09-19T16:43:58Z</time>
+    <name>Icefields Pkwy and Wapiti Campground (Whistlers Camgground 221m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:43:58Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.843838691711426" lon="-116.62010908126831">
+    <time>2026-09-19T16:47:10Z</time>
+    <name>Icefields Pkwy and Waterfowl Lakes Campground (Waterfowl Lakes Campground 109m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:47:10Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.571506023406982" lon="-127.06819295883179">
+    <time>2026-09-17T16:56:17Z</time>
+    <name>Island Highway and Campbell Way (Broughton Strait Campsite 3.2km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-17T16:56:17Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.215952396392822" lon="-126.5950083732605">
+    <time>2026-09-17T16:55:02Z</time>
+    <name>Island Highway and Englewood Dr (Woss Lake Recreation Site 4.9km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-17T16:55:02Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.69242000579834" lon="-127.46666193008423">
+    <time>2026-09-17T16:57:53Z</time>
+    <name>Island Highway and Ramp to Ferries (Port Hardy RV Resort and Log Cabins 1.1km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-17T16:57:53Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.311825275421143" lon="-125.91907024383545">
+    <time>2026-09-17T16:54:06Z</time>
+    <name>Island Highway and Sayward Rd (Sayward Fisherboy RV Park Motel and Resort 588m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-17T16:54:06Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.033111572265625" lon="-125.27304410934448">
+    <time>2026-09-15T17:47:28Z</time>
+    <name>Island Highway and Tamarac St (Elk Falls Provincial Park - Quinsam Campground 1.8km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-15T17:47:28Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -1650,6 +2082,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="54.780750274658203" lon="-127.14674949645996">
+    <time>2026-09-19T16:24:39Z</time>
+    <name>Main St and Victoria Dr and 19th Ave (Riverside Municipal Campground 454m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:24:39Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="44.641013145446777" lon="-63.567259311676025">
     <time>2026-09-15T17:01:15Z</time>
     <name>Marginal Rd (Halifax International Hostel 527m)</name>
@@ -1664,6 +2114,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-15T17:01:15Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="52.111133225262165" lon="-106.68349321000278">
+    <time>2026-09-19T16:56:03Z</time>
+    <name>Meewasin Trl (Gordon Howe Campground 1.2km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:56:03Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -1700,6 +2168,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-12T17:31:58Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.765660762786865" lon="-76.287131309509277">
+    <time>2026-09-19T17:34:27Z</time>
+    <name>Narrows Lock Rd and Lally Rd and Star Hill Rd (Murphys Point Provincial Park - Hogg Bay Campground 6.6km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T17:34:27Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -1872,6 +2358,42 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="54.29943323135376" lon="-130.340895652771">
+    <time>2026-09-19T16:16:15Z</time>
+    <name>Park Ave and YH16 (Prince Rupert RV Campground 390m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:16:15Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.224527359008789" lon="-102.48267889022827">
+    <time>2026-09-19T17:00:06Z</time>
+    <name>Park Rd (Yorkton City Campground 78m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T17:00:06Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="45.485823154449463" lon="-73.565933704376221">
     <time>2026-09-14T17:15:24Z</time>
     <name>Piste Multifonctionnelle (Auberge Saintlo Montréal 1.7km)</name>
@@ -1886,6 +2408,38 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-14T17:15:24Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.725550651550293" lon="-127.45685577392578">
+    <time>2026-09-19T16:14:37Z</time>
+    <name>Port Hardy (Bear Cove) (Port Hardy - Prince Rupert 17hr 45min ferry)</name>
+    <cmt>Port Hardy (Bear Cove)
+Port Hardy, British Columbia, CAN</cmt>
+    <desc>Port Hardy (Bear Cove)
+Port Hardy, British Columbia, CAN</desc>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Address>
+          <gpxx:City>Port Hardy</gpxx:City>
+          <gpxx:State>British Columbia</gpxx:State>
+          <gpxx:Country>CAN</gpxx:Country>
+        </gpxx:Address>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Address>
+          <wptx1:City>Port Hardy</wptx1:City>
+          <wptx1:State>British Columbia</wptx1:State>
+          <wptx1:Country>CAN</wptx1:Country>
+        </wptx1:Address>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:14:37Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -1926,6 +2480,42 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="50.22625207901001" lon="-99.466567039489746">
+    <time>2026-09-19T17:03:36Z</time>
+    <name>Pth 16;Pth 5 and Mountain Ave (Lions Riverbend Campground 1.1km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T17:03:36Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.772950649261475" lon="-101.28731489181519">
+    <time>2026-09-19T17:01:06Z</time>
+    <name>Pth 16;Pth 83 and Main St S (The Russell Inn 188m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T17:01:06Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="49.972987174987793" lon="-98.28993558883667">
     <time>2026-09-10T13:04:28Z</time>
     <name>Pth 1a;Pr 240 and Royal Rd S (Portage Industrial Exhibition Campground 1.1km)</name>
@@ -1958,6 +2548,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-14T16:38:45Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.845297813415527" lon="-105.0338888168335">
+    <time>2026-09-19T16:58:09Z</time>
+    <name>Railway Ave and Main St (Lanigan Campground 1.6km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:58:09Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -2174,6 +2782,60 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-14T14:38:58Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.425183773040771" lon="-75.693869590759277">
+    <time>2026-09-19T17:37:10Z</time>
+    <name>Rideau St and Mackenzie Ave (Ottawa Jail Hostel 646m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T17:37:10Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.048853397369385" lon="-114.05113220214844">
+    <time>2026-09-19T16:49:45Z</time>
+    <name>Riverwalk Cycle Lanes (Hi-Calgary City Centre 492m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:49:45Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.562099456787109" lon="-107.98182964324951">
+    <time>2026-09-19T16:55:12Z</time>
+    <name>Road and Unpaved Road (Prairie View Park Mobile Home and Campground 54m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:55:12Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -2970,6 +3632,42 @@ North Sydney, Nova Scotia, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="54.013895988464355" lon="-124.0091872215271">
+    <time>2026-09-19T16:28:07Z</time>
+    <name>W 1st St and E 1st St and Burrard Ave (Riverside Campground 1.2km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:28:07Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.362087249755859" lon="-124.48342323303223">
+    <time>2026-09-15T17:32:14Z</time>
+    <name>W Island Highway and Riverbend Rd (Cedar Grove RV Park and Campground 73m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-15T17:32:14Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="47.570886611938477" lon="-52.697403430938721">
     <time>2026-09-12T16:30:10Z</time>
     <name>Water St and Temperance St (HI-St.John's City Hostel 506m)</name>
@@ -2984,6 +3682,240 @@ North Sydney, Nova Scotia, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-12T16:30:10Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="54.313251972198486" lon="-129.35109615325928">
+    <time>2026-09-19T16:17:59Z</time>
+    <name>Yellowhead Highway (Kasiks Wilderness Resort 188m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:17:59Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="53.905856609344482" lon="-121.90858840942383">
+    <time>2026-09-19T16:39:34Z</time>
+    <name>Yellowhead Highway (Purden Lake Resort 19m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:39:34Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="53.525176048278809" lon="-120.67578077316284">
+    <time>2026-09-19T16:40:31Z</time>
+    <name>Yellowhead Highway and Alley (Lasalle Lakes (West) Recreation Site 518m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:40:31Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="55.095877647399902" lon="-128.07661771774292">
+    <time>2026-09-19T16:20:58Z</time>
+    <name>Yellowhead Highway and Cassiar Highway (Cassiar Mountain Rv Park 4.7km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:20:58Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="54.413824081420898" lon="-126.63734436035156">
+    <time>2026-09-19T16:25:27Z</time>
+    <name>Yellowhead Highway and Drive In Rd (Shady Rest RV Park 243m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:25:27Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="53.034031391143799" lon="-119.23125028610229">
+    <time>2026-09-19T16:42:17Z</time>
+    <name>Yellowhead Highway and Hargreaves Rd and Kinney Lake Rd (Robson Meadows Campground 412m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:42:17Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="53.858306407928467" lon="-122.81599044799805">
+    <time>2026-09-19T16:38:30Z</time>
+    <name>Yellowhead Highway and Kimball Rd (Blue Cedars RV Park and Campground 422m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:38:30Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="53.30190896987915" lon="-120.12624979019165">
+    <time>2026-09-19T16:41:22Z</time>
+    <name>Yellowhead Highway and Mountainview Rd (Beaverview RV Park and Campground 124m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="54.224867820739746" lon="-125.7541036605835">
+    <time>2026-09-19T16:26:09Z</time>
+    <name>Yellowhead Highway and N Francois Highway (Burns Lake Municipal Campground 764m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:26:09Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="54.062197208404541" lon="-124.64654445648193">
+    <time>2026-09-19T16:27:13Z</time>
+    <name>Yellowhead Highway and Piper's Glen Driveway (Piper's Glen Resort 83m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:27:13Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.442159175872803" lon="-100.58197975158691">
+    <time>2026-09-19T17:02:27Z</time>
+    <name>Yellowhead Highway and Provincial Trunk Highway 21 (Lakeview Park Campground 1.8km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T17:02:27Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="54.511928558349609" lon="-128.57048749923706">
+    <time>2026-09-19T16:19:53Z</time>
+    <name>Yellowhead Highway and Recreation Rd (Ferry Island Campground 404m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:19:53Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.637544631958008" lon="-103.53938341140747">
+    <time>2026-09-19T16:59:18Z</time>
+    <name>Yellowhead Route and Highway 310 (Foam Lake Campground 174m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-19T16:59:18Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
