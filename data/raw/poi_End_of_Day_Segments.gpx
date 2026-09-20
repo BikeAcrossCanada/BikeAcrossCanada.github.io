@@ -4,7 +4,7 @@
     <link href="http://www.garmin.com">
       <text>Garmin International</text>
     </link>
-    <time>2026-09-19T18:37:42Z</time>
+    <time>2026-09-20T17:39:00Z</time>
     <bounds maxlat="55.246832370758057" maxlon="-52.697403430938721" minlat="43.749854564666748" minlon="-130.340895652771" />
   </metadata>
 
@@ -224,6 +224,40 @@ Wilmot, Nova Scotia, B0S 1W0, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="45.564229907467961" lon="-62.786001982167363">
+    <time>2026-09-20T13:24:03Z</time>
+    <name>4538 Highway 4 (The Twisted Tent 105m)</name>
+    <cmt>4538 Highway 4
+Greenhill, Nova Scotia, CAN</cmt>
+    <desc>4538 Highway 4
+Greenhill, Nova Scotia, CAN</desc>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Address>
+          <gpxx:StreetAddress>4538 Highway 4</gpxx:StreetAddress>
+          <gpxx:City>Greenhill</gpxx:City>
+          <gpxx:State>Nova Scotia</gpxx:State>
+          <gpxx:Country>CAN</gpxx:Country>
+        </gpxx:Address>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Address>
+          <wptx1:StreetAddress>4538 Highway 4</wptx1:StreetAddress>
+          <wptx1:City>Greenhill</wptx1:City>
+          <wptx1:State>Nova Scotia</wptx1:State>
+          <wptx1:Country>CAN</wptx1:Country>
+        </wptx1:Address>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T13:24:03Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="46.016342639923096" lon="-73.185446262359619">
     <time>2026-09-10T17:42:46Z</time>
     <name>651 Grande Côte E Rte 138 (Motel Villa D'Autray 36m)</name>
@@ -310,6 +344,42 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-08T13:44:36Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.248426463454962" lon="-65.348939532414079">
+    <time>2026-09-20T13:02:53Z</time>
+    <name>93 Route Principale (Camping Chalets Mer et Montagne 133m)</name>
+    <cmt>93 Route Principale
+Sainte-Madeleine-de-la-Rivière-Madeleine, Québec, G0E1P0, CAN</cmt>
+    <desc>93 Route Principale
+Sainte-Madeleine-de-la-Rivière-Madeleine, Québec, G0E1P0, CAN</desc>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Address>
+          <gpxx:StreetAddress>93 Route Principale</gpxx:StreetAddress>
+          <gpxx:City>Sainte-Madeleine-de-la-Rivière-Madeleine</gpxx:City>
+          <gpxx:State>Québec</gpxx:State>
+          <gpxx:Country>CAN</gpxx:Country>
+          <gpxx:PostalCode>G0E1P0</gpxx:PostalCode>
+        </gpxx:Address>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Address>
+          <wptx1:StreetAddress>93 Route Principale</wptx1:StreetAddress>
+          <wptx1:City>Sainte-Madeleine-de-la-Rivière-Madeleine</wptx1:City>
+          <wptx1:State>Québec</wptx1:State>
+          <wptx1:Country>CAN</wptx1:Country>
+          <wptx1:PostalCode>G0E1P0</wptx1:PostalCode>
+        </wptx1:Address>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T13:02:53Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -512,6 +582,42 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="48.828370571136475" lon="-64.309630393981934">
+    <time>2026-09-20T13:09:21Z</time>
+    <name>Boulevard de Grande-Grève and Rue Cassivi (Cap Aventure 129m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T13:09:21Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.073824882507324" lon="-64.542038440704346">
+    <time>2026-09-20T13:04:23Z</time>
+    <name>Boulevard de L'Anse-À-Valleau (Motel Camping des Ancêtres 30m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T13:04:23Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="45.515220165252686" lon="-73.561105728149414">
     <time>2026-09-10T17:39:20Z</time>
     <name>Boulevard de Maisonneuve E and Rue Berri (Auberge Saintlo Montréal 3.3km)</name>
@@ -526,6 +632,42 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-10T17:39:20Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.36155891418457" lon="-64.60883617401123">
+    <time>2026-09-20T13:14:14Z</time>
+    <name>Boulevard Pabos and Route de L'Église (Camping la Seigneurie 1.3km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T13:14:14Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.037548065185547" lon="-66.697719097137451">
+    <time>2026-09-20T13:16:40Z</time>
+    <name>Boulevard Perron E and Chemin de la Petite-Rivière-Du-Loup and Rue Gaspésienne E (Camping Green Park house Gaspésien 422m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T13:16:40Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -598,6 +740,60 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-19T16:51:58Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.654515266418457" lon="-60.400943756103516">
+    <time>2026-09-20T16:28:08Z</time>
+    <name>Cabot Trl and Alley (Ingonish Beach Campground 66m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T16:28:08Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.812765598297119" lon="-60.768213272094727">
+    <time>2026-09-20T13:29:34Z</time>
+    <name>Cabot Trl and Alley (MacIntosh Brook Campground 132m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T13:29:34Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.239609718322754" lon="-61.299419403076172">
+    <time>2026-09-20T13:28:34Z</time>
+    <name>Central Ave and Inverness Beach Village Rd (Inverness Beach Village 439m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T13:28:34Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -1092,6 +1288,60 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="45.656304359436035" lon="-60.865910053253174">
+    <time>2026-09-20T17:17:36Z</time>
+    <name>Grenville St and Alley (Battery Provincial Park 2.5km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T17:17:36Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.217250823974609" lon="-64.564998149871826">
+    <time>2026-09-20T13:19:47Z</time>
+    <name>Hanington Rd and Rue Main and Cornwall Rd (South Cove Camping and Golf 4km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T13:19:47Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.62222957611084" lon="-61.994991302490234">
+    <time>2026-09-20T13:25:01Z</time>
+    <name>Hawthorne St and Oak Ln (Whidden Park Campground and Cottages 193m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T13:25:01Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="49.703607559204102" lon="-124.99512434005737">
     <time>2026-09-15T17:33:15Z</time>
     <name>Headquarters Rd (Maple Pool Campground and RV Park 68m)</name>
@@ -1524,6 +1774,42 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="45.995100969448686" lon="-61.529317321255803">
+    <time>2026-09-20T13:25:59Z</time>
+    <name>Highway 19 and Inverness Rail Trl (Sunset Sands RV Park 3km)</name>
+    <cmt>8485 Highway 19
+Port Hood, Nova Scotia, B0E 2W0, CAN</cmt>
+    <desc>8485 Highway 19
+Port Hood, Nova Scotia, B0E 2W0, CAN</desc>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Address>
+          <gpxx:StreetAddress>8485 Highway 19</gpxx:StreetAddress>
+          <gpxx:City>Port Hood</gpxx:City>
+          <gpxx:State>Nova Scotia</gpxx:State>
+          <gpxx:Country>CAN</gpxx:Country>
+          <gpxx:PostalCode>B0E 2W0</gpxx:PostalCode>
+        </gpxx:Address>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Address>
+          <wptx1:StreetAddress>8485 Highway 19</wptx1:StreetAddress>
+          <wptx1:City>Port Hood</wptx1:City>
+          <wptx1:State>Nova Scotia</wptx1:State>
+          <wptx1:Country>CAN</wptx1:Country>
+          <wptx1:PostalCode>B0E 2W0</wptx1:PostalCode>
+        </wptx1:Address>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T13:25:59Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="51.219913959503174" lon="-114.71668481826782">
     <time>2026-09-19T16:48:59Z</time>
     <name>Highway 1a and Road (Ghost Reservoir Provincial Recreation Area 250m)</name>
@@ -1560,6 +1846,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="45.815348625183105" lon="-64.17564868927002">
+    <time>2026-09-20T13:20:58Z</time>
+    <name>Highway 204 and Macdonald Rd (Lochlomond Tenting and Trailer Park 3.1km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T13:20:58Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="44.063715934753418" lon="-77.006628513336182">
     <time>2026-09-14T17:07:41Z</time>
     <name>Highway 33 and Adolphustown Park Rd (U.E.L Heritage Center &amp; Park 249m)</name>
@@ -1592,6 +1896,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-12T17:52:38Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.395293235778809" lon="-63.51020336151123">
+    <time>2026-09-20T13:23:08Z</time>
+    <name>Highway 4 and Debert Beach Rd and Elm River Pkwy (Tidal Bore KOA Holiday 406m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T13:23:08Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -1718,6 +2040,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-19T16:52:45Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.12309455871582" lon="-64.923148155212402">
+    <time>2026-09-20T17:10:43Z</time>
+    <name>Homestead Rd and Alley (Stonehurst Campground &amp; Golf Course 578m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T17:10:43Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -2132,6 +2472,24 @@ Lanoraie, Québec, J0K1E0, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-19T16:56:03Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.057699680328369" lon="-77.859871387481689">
+    <time>2026-09-20T17:15:58Z</time>
+    <name>Monck St and Sherbourne St N and Station St (River Bend Cabins Tent Trailer Park 3.9km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T17:15:58Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -2804,6 +3162,24 @@ Port Hardy, British Columbia, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="48.952953815460205" lon="-57.889022827148438">
+    <time>2026-09-20T16:33:55Z</time>
+    <name>Riverside Dr and Admiral Palliser's Trl (Kinsmen Prince Edward Campground and RV Park 1.7km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T16:33:55Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="51.048853397369385" lon="-114.05113220214844">
     <time>2026-09-19T16:49:45Z</time>
     <name>Riverwalk Cycle Lanes (Hi-Calgary City Centre 492m)</name>
@@ -2912,6 +3288,24 @@ Port Hardy, British Columbia, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="45.958514213562012" lon="-65.74568510055542">
+    <time>2026-09-20T17:07:49Z</time>
+    <name>Route 112 and Alley (River Run Campground 78m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T17:07:49Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="46.572203636169434" lon="-67.72172212600708">
     <time>2026-09-15T16:46:25Z</time>
     <name>Route 130 and Lahue Rd (River Country Campground 517m)</name>
@@ -2926,6 +3320,24 @@ Port Hardy, British Columbia, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-15T16:46:25Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.634157180786133" lon="-64.180347919464111">
+    <time>2026-09-20T13:12:45Z</time>
+    <name>Route 132 E and Unpaved Road (Camping Indian Head 96m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T13:12:45Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -2948,6 +3360,24 @@ Port Hardy, British Columbia, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="48.208651542663574" lon="-65.899279117584229">
+    <time>2026-09-20T13:15:21Z</time>
+    <name>Route 132 o and Alley (Camping New-Richmond 41m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T13:15:21Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="48.563089370727539" lon="-67.755646705627441">
     <time>2026-09-10T17:58:43Z</time>
     <name>Route 132 o and Route Smith (Auberge Camping du Lac Malcom 3.5km)</name>
@@ -2962,6 +3392,24 @@ Port Hardy, British Columbia, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-10T17:58:43Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.189862944185734" lon="-57.426084950566292">
+    <time>2026-09-20T16:35:41Z</time>
+    <name>Route 430 (Gateway to the North RV Park 1.6km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T16:35:41Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -3236,6 +3684,78 @@ North Sydney, Nova Scotia, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="47.628889214247465" lon="-59.234594972804189">
+    <time>2026-09-20T16:31:00Z</time>
+    <name>Trans Canada Highway (J.T. Cheeseman Provincial Park 2.4km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T16:31:00Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.243734836578369" lon="-58.70943546295166">
+    <time>2026-09-20T16:32:26Z</time>
+    <name>Trans Canada Highway and 4-1-17 (Mid-Way Motel 164m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T16:32:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.757246494293213" lon="-53.937485218048096">
+    <time>2026-09-20T16:47:28Z</time>
+    <name>Trans Canada Highway and Alley (Jack's Pond Park 644m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T16:47:28Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.274891376495361" lon="-54.134809970855713">
+    <time>2026-09-20T16:46:05Z</time>
+    <name>Trans Canada Highway and Alley (The Lakeside at Thorburn 115m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T16:46:05Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="47.408361006528139" lon="-53.305560378357768">
     <time>2026-09-12T16:28:19Z</time>
     <name>Trans Canada Highway and Exit 32 Brigus Junction Gushue's Pond (Gushue's Pond Park 1.8km)</name>
@@ -3250,6 +3770,42 @@ North Sydney, Nova Scotia, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-12T16:28:19Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.959434032440186" lon="-54.633572101593018">
+    <time>2026-09-20T16:43:17Z</time>
+    <name>Trans Canada Highway and Magee Rd (Country Inn Motel and RV Park 3.7km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T16:43:17Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.551416397094727" lon="-53.979263305664063">
+    <time>2026-09-20T16:44:52Z</time>
+    <name>Trans Canada Highway and Road (Newman Sound Campground 2.3km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T16:44:52Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -3272,6 +3828,42 @@ North Sydney, Nova Scotia, CAN</desc>
     </extensions>
   </wpt>
 
+  <wpt lat="48.944880533963442" lon="-55.689588049426675">
+    <time>2026-09-20T16:39:39Z</time>
+    <name>Trans Canada Highway1 (Beothuck Family Park 3.0km)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T16:39:39Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.446179112419486" lon="-56.457947809249163">
+    <time>2026-09-20T16:37:18Z</time>
+    <name>Trans Canada Highway1 (Junction inn 225m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T16:37:18Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="49.690704960376024" lon="-95.331725757569075">
     <time>2026-09-10T13:17:39Z</time>
     <name>Trans-Canada Highway (Falcon Lake Beach Campground 1.2km)</name>
@@ -3286,6 +3878,24 @@ North Sydney, Nova Scotia, CAN</desc>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-09-10T13:17:39Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.737009048461914" lon="-119.32014942169189">
+    <time>2026-09-20T17:12:50Z</time>
+    <name>Trans-Canada Highway and 50 Ave NW and Pierres Point Rd (Pierre's Point Campground 460m)</name>
+    <sym>Triangle, Red</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-09-20T17:12:50Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
