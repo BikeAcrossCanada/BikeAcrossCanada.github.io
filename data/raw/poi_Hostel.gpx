@@ -1,0 +1,914 @@
+﻿<?xml version="1.0" encoding="utf-8"?><gpx creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd http://www.garmin.com/xmlschemas/TripExtensions/v1 http://www.garmin.com/xmlschemas/TripExtensionsv1.xsd http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1 http://www.garmin.com/xmlschemas/TripMetaDataExtensionsv1.xsd http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1 http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensionsv1.xsd http://www.garmin.com/xmlschemas/CreationTimeExtension/v1 http://www.garmin.com/xmlschemas/CreationTimeExtensionsv1.xsd http://www.garmin.com/xmlschemas/AccelerationExtension/v1 http://www.garmin.com/xmlschemas/AccelerationExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.garmin.com/xmlschemas/VideoExtension/v1 http://www.garmin.com/xmlschemas/VideoExtensionv1.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1" xmlns:tmd="http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1" xmlns:vptm="http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1" xmlns:ctx="http://www.garmin.com/xmlschemas/CreationTimeExtension/v1" xmlns:gpxacc="http://www.garmin.com/xmlschemas/AccelerationExtension/v1" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:vidx1="http://www.garmin.com/xmlschemas/VideoExtension/v1">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2026-09-23T18:38:06Z</time>
+    <bounds maxlat="54.316188991069794" maxlon="-52.702458975836635" minlat="44.641094030812383" minlon="-130.31965398229659" />
+  </metadata>
+
+  <wpt lat="48.901062961667776" lon="-67.340675024315715">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Auberge de Jeunesse du Manoir des Sapins (# établissement: 153742)1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;180 Bd Perron, Sainte-Félicité, QC G0J 2K0&lt;br&gt;www.manoirdessapins.com&lt;br&gt;+1 418-733-8182&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;180 Bd Perron, Sainte-Félicité, QC G0J 2K0&lt;br&gt;www.manoirdessapins.com&lt;br&gt;+1 418-733-8182&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.807184005156159" lon="-71.178522007539868">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Auberge de la Visitation</name>
+    <cmt>description: In addition, as a Bienvenue cyclistes!-certified tourist accommodation, it offers&lt;br&gt;A pump and basic tools for minor repairs&lt;br&gt;A covered, locked location to store your bicycle at night&lt;br&gt;Information about local bicycle networks and cycling services in the area,&lt;br&gt;This tourist accommodation offers&lt;br&gt;8 units&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;https://www.routeverte.com/en/hebergements/auberge-de-la-visitation-2/&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: In addition, as a Bienvenue cyclistes!-certified tourist accommodation, it offers&lt;br&gt;A pump and basic tools for minor repairs&lt;br&gt;A covered, locked location to store your bicycle at night&lt;br&gt;Information about local bicycle networks and cycling services in the area,&lt;br&gt;This tourist accommodation offers&lt;br&gt;8 units&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;https://www.routeverte.com/en/hebergements/auberge-de-la-visitation-2/&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.812390005216002" lon="-71.211343025788665">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Auberge Internationale de Quebec1</name>
+    <cmt>description: &lt;br&gt;Type: Hostel</cmt>
+    <desc>description: &lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.837232984602451" lon="-69.535540994256735">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Auberge Internationale de Rivière-du-Loup1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;46 Rue de l'Hôtel de Ville, Rivière-du-Loup, QC G5R 1L5&lt;br&gt;aubergeriviere-du-loup.qc.ca&lt;br&gt;+1 418-862-7566&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;46 Rue de l'Hôtel de Ville, Rivière-du-Loup, QC G5R 1L5&lt;br&gt;aubergeriviere-du-loup.qc.ca&lt;br&gt;+1 418-862-7566&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.158637983724475" lon="-69.117133989930153">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Auberge Le Bocage des Trois-Pistoles</name>
+    <cmt>description: This tourist accommodation offers&lt;br&gt;1 unit&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;Breakfast&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified tourist accommodation, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;A covered, locked location to store your bicycle at night&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;&lt;br&gt;https://www.routeverte.com/en/hebergements/auberge-le-bocage-des-trois-pistoles-2/ (in a house)&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: This tourist accommodation offers&lt;br&gt;1 unit&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;Breakfast&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified tourist accommodation, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;A covered, locked location to store your bicycle at night&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;&lt;br&gt;https://www.routeverte.com/en/hebergements/auberge-le-bocage-des-trois-pistoles-2/ (in a house)&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.493962988257408" lon="-73.572951033711433">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Auberge Saintlo Montréal</name>
+    <cmt>description: (formerly Hi-Montréal Youth Hostel)&lt;br&gt;Approved Accommodation #34&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: (formerly Hi-Montréal Youth Hostel)&lt;br&gt;Approved Accommodation #34&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.212343998253345" lon="-70.271241003647447">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Aubergélit inc.</name>
+    <cmt>description: This tourist accommodation offers&lt;br&gt;5 units&lt;br&gt;Bike washing station&lt;br&gt;Breakfast&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified tourist accommodation, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;A covered, locked location to store your bicycle at night&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/aubergelit-2/ Inn&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: This tourist accommodation offers&lt;br&gt;5 units&lt;br&gt;Bike washing station&lt;br&gt;Breakfast&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified tourist accommodation, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;A covered, locked location to store your bicycle at night&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/aubergelit-2/ Inn&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.182927973568439" lon="-115.56463301181793">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Banff International Hostel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;449 Banff Ave, Banff, AB T1L 1A6&lt;br&gt;www.banffinternationalhostel.com&lt;br&gt;+1 403-985-7744&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;449 Banff Ave, Banff, AB T1L 1A6&lt;br&gt;www.banffinternationalhostel.com&lt;br&gt;+1 403-985-7744&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.974759012460709" lon="-61.054434981197119">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Bear on the Lake Guesthouse</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;Inverness County, NS B0E 3M0, Canada&lt;br&gt;bearonthelake.com&lt;br&gt;+1 866-718-5253&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;Inverness County, NS B0E 3M0, Canada&lt;br&gt;bearonthelake.com&lt;br&gt;+1 866-718-5253&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.946765037253499" lon="-125.56392196565866">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>C&amp;N Backpackers</name>
+    <cmt>description: &lt;br&gt;Type: Hostel</cmt>
+    <desc>description: &lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.570790974423289" lon="-52.702458975836635">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>City Hostel-- HI-ST.JOHN'S</name>
+    <cmt>description: &lt;br&gt;Type: Hostel</cmt>
+    <desc>description: &lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.301393015310168" lon="-116.96718198247254">
+    <ele>0</ele>
+    <time>2026-08-26T09:02:31Z</time>
+    <name>Dreamcatcher Hostel Ltd</name>
+    <cmt>description: Approved Accommodation #23&lt;br&gt;Details from Google Maps&lt;br&gt;528 9 Ave N, Golden, BC V0A 1H0&lt;br&gt;dreamcatcherhostel.com&lt;br&gt;+1 250-439-1090&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: Approved Accommodation #23&lt;br&gt;Details from Google Maps&lt;br&gt;528 9 Ave N, Golden, BC V0A 1H0&lt;br&gt;dreamcatcherhostel.com&lt;br&gt;+1 250-439-1090&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-26T09:02:31Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.34353400208056" lon="-72.545038014650345">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>HI / Auberge Internationale de Trois-Rivieres</name>
+    <cmt>description: &lt;br&gt;Type: Hostel</cmt>
+    <desc>description: &lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.18507700972259" lon="-115.54834797978401">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>HI Banff Alpine Centre</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;801 Hidden Ridge Way, Banff, AB T1L 1B3&lt;br&gt;hihostels.ca&lt;br&gt;+1 403-762-4123&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;801 Hidden Ridge Way, Banff, AB T1L 1B3&lt;br&gt;hihostels.ca&lt;br&gt;+1 403-762-4123&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.046358020976186" lon="-114.05208497308195">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>HI Calgary City Centre</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;520 7 Ave SE, Calgary, AB T2G 0J6&lt;br&gt;hihostels.ca&lt;br&gt;+1 403-269-8239&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;520 7 Ave SE, Calgary, AB T2G 0J6&lt;br&gt;hihostels.ca&lt;br&gt;+1 403-269-8239&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.267742021009326" lon="-115.91724299825728">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>HI Castle Mountain Wilderness Hostel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;Highway 1A &amp;amp; Hwy 93 South, Castle Junction, AB T0L&lt;br&gt;hihostels.ca&lt;br&gt;+1 866-762-4122&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;Highway 1A &amp;amp; Hwy 93 South, Castle Junction, AB T0L&lt;br&gt;hihostels.ca&lt;br&gt;+1 866-762-4122&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.236222004517913" lon="-63.121734000742435">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>HI Charlottetown Backpackers Inn1</name>
+    <cmt>description: &lt;br&gt;Type: Hostel</cmt>
+    <desc>description: &lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.641094030812383" lon="-63.570746015757322">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>HI Halifax Heritage House / Halifax International Hostel</name>
+    <cmt>description: &lt;br&gt;Type: Hostel</cmt>
+    <desc>description: &lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="52.870743032544851" lon="-118.08279896155">
+    <ele>0</ele>
+    <time>2026-08-26T09:02:31Z</time>
+    <name>HI Jasper</name>
+    <cmt>description: (wifi, bicycle storage)&lt;br&gt;Details from Google Maps&lt;br&gt;708 Sleepy Hollow Rd, Jasper, AB T0E 1E0&lt;br&gt;hihostels.ca&lt;br&gt;+1 587-870-2395&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: (wifi, bicycle storage)&lt;br&gt;Details from Google Maps&lt;br&gt;708 Sleepy Hollow Rd, Jasper, AB T0E 1E0&lt;br&gt;hihostels.ca&lt;br&gt;+1 587-870-2395&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-26T09:02:31Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.42764400690794" lon="-116.18270801380277">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>HI Lake Louise Alpine Centre (Hostel)1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;203 Village Rd, Lake Louise, AB T0L 1E0&lt;br&gt;hihostels.ca&lt;br&gt;+1 403-522-2200&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;203 Village Rd, Lake Louise, AB T0L 1E0&lt;br&gt;hihostels.ca&lt;br&gt;+1 403-522-2200&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.166391016915441" lon="-123.9371320232749">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>HI Nanaimo - Painted Turtle Guesthouse1</name>
+    <cmt>description: &lt;br&gt;Type: Hostel</cmt>
+    <desc>description: &lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.496434992179275" lon="-119.5898010302335">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>HI Penticton Hostel</name>
+    <cmt>description: Approved Accommodation #26&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: Approved Accommodation #26&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="54.316188991069794" lon="-130.31965398229659">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>HI Prince Rupert, Pioneer Backpackers Inn</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;167 3 Ave E, Prince Rupert, BC V8J 1K4&lt;br&gt;+1 888-794-9998&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;167 3 Ave E, Prince Rupert, BC V8J 1K4&lt;br&gt;+1 888-794-9998&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.279773021116853" lon="-123.13287399709225">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>HI Vancouver Downtown</name>
+    <cmt>description: &lt;br&gt;Type: Hostel</cmt>
+    <desc>description: &lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.884019989520311" lon="-60.503368014469743">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Highlands Hostel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;29295 Cabot Trail, Cape North, NS B0C 1G0&lt;br&gt;www.highlandshostel.ca&lt;br&gt;+1 902-383-2371&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;29295 Cabot Trail, Cape North, NS B0C 1G0&lt;br&gt;www.highlandshostel.ca&lt;br&gt;+1 902-383-2371&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.427607975900173" lon="-123.36197999306023">
+    <ele>0</ele>
+    <time>2026-08-26T09:02:31Z</time>
+    <name>Ocean Island Inn Backpackers Suites</name>
+    <cmt>description: *has secture bicycle storage in basement&lt;br&gt;Details from Google Maps&lt;br&gt;791 Pandora Ave, Victoria, BC V8W 1N9&lt;br&gt;www.oceanisland.com&lt;br&gt;+1 250-385-1789&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: *has secture bicycle storage in basement&lt;br&gt;Details from Google Maps&lt;br&gt;791 Pandora Ave, Victoria, BC V8W 1N9&lt;br&gt;www.oceanisland.com&lt;br&gt;+1 250-385-1789&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-26T09:02:31Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.430404022336006" lon="-75.688279028981924">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Ottawa Backpackers Inn1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;203 York St, Ottawa, ON K1N 5T7&lt;br&gt;www.ottawahostel.com&lt;br&gt;+1 613-241-3402&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;203 York St, Ottawa, ON K1N 5T7&lt;br&gt;www.ottawahostel.com&lt;br&gt;+1 613-241-3402&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.264926994219422" lon="-123.25867999345064">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Pacific Spirit Hostel1</name>
+    <cmt>description: &lt;br&gt;Type: Hostel</cmt>
+    <desc>description: &lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.507863968610764" lon="-115.06273898296058">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Raging Elk Adventure Lodging (HI Fernie / The Raging Elk Hostel)</name>
+    <cmt>description: The Raging Elk Hostel (laundry, wifi, bike wash station)&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: The Raging Elk Hostel (laundry, wifi, bike wash station)&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.425029965117574" lon="-75.688592009246349">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Saintlo Ottawa Jail Hostel (formerly Hi Ottawa Jail Hostel)</name>
+    <cmt>description: (laundry)&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: (laundry)&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.182525977492332" lon="-115.56615499779582">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Samesun Banff (Hostel)</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;433 Banff Ave, Banff, AB T1L 1B4&lt;br&gt;samesun.com&lt;br&gt;+1 403-762-4499&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;433 Banff Ave, Banff, AB T1L 1B4&lt;br&gt;samesun.com&lt;br&gt;+1 403-762-4499&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.883381025865674" lon="-119.49829797260463">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Samesun Kelowna (Samesun Kelowna Backpakers Hostel)</name>
+    <cmt>description: &lt;br&gt;Type: Hostel</cmt>
+    <desc>description: &lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.278946984559298" lon="-123.12324302271008">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Samesun Vancouver</name>
+    <cmt>description: &lt;br&gt;Type: Hostel</cmt>
+    <desc>description: &lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.429112024605274" lon="-89.230280024930835">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Sleeping Giant Guesthouse</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;139 Machar Ave, Thunder Bay, ON P7B 2Y7&lt;br&gt;+1 807-629-3995&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;139 Machar Ave, Thunder Bay, ON P7B 2Y7&lt;br&gt;+1 807-629-3995&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.089376965537667" lon="-115.36059502512217">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>The Canmore Hotel Hostel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;738 8 St, Canmore, AB T1W 2B6&lt;br&gt;https://www.thecanmorehotel.com/&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;738 8 St, Canmore, AB T1W 2B6&lt;br&gt;https://www.thecanmorehotel.com/&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.433011034503579" lon="-89.223208967596292">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>The Haven Hostel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;226 Ambrose St, Thunder Bay, ON P7B 1L4&lt;br&gt;thehavenhostel.ca&lt;br&gt;+1 807-285-1142&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;226 Ambrose St, Thunder Bay, ON P7B 1L4&lt;br&gt;thehavenhostel.ca&lt;br&gt;+1 807-285-1142&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.265841986984015" lon="-119.27650996483862">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>The Laughing Llama International Hostel</name>
+    <cmt>description: &lt;br&gt;Type: Hostel</cmt>
+    <desc>description: &lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.013944014906883" lon="-65.448985006660223">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>The Officers Quarters</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;15 Cole Crescent, Miramichi, NB E1N 6K2&lt;br&gt;+1 506-352-0252&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;15 Cole Crescent, Miramichi, NB E1N 6K2&lt;br&gt;+1 506-352-0252&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.153061024844646" lon="-125.91167002916336">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Tofino Hostel / HI Whalers On The Point Guesthouse</name>
+    <cmt>description: Tofino Hostel / HI Whalers On The Point Guesthouse&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: Tofino Hostel / HI Whalers On The Point Guesthouse&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.428311971947551" lon="-123.35919401608407">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Turtle Hostel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1608 Quadra St, Victoria, BC V8W 2L4&lt;br&gt;www.turtlehostel.ca&lt;br&gt;+1 250-381-3210&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1608 Quadra St, Victoria, BC V8W 2L4&lt;br&gt;www.turtlehostel.ca&lt;br&gt;+1 250-381-3210&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.890067018568516" lon="-97.156503964215517">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>UWinnipeg Downtown Hostel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;370 Langside St, Winnipeg, MB R3B 2T4&lt;br&gt;uwhostel.com&lt;br&gt;+1 204-789-1486&lt;br&gt;Type: Hostel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;370 Langside St, Winnipeg, MB R3B 2T4&lt;br&gt;uwhostel.com&lt;br&gt;+1 204-789-1486&lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.107978036627173" lon="-121.95924997329712">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Vedder River Inn1</name>
+    <cmt>description: &lt;br&gt;Type: Hostel</cmt>
+    <desc>description: &lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.263996962457895" lon="-119.27649596706033">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Vernon Hostel</name>
+    <cmt>description: &lt;br&gt;Type: Hostel</cmt>
+    <desc>description: &lt;br&gt;Type: Hostel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+</gpx>
