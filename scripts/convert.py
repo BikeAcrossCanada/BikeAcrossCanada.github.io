@@ -54,6 +54,7 @@ POI_LAYERS = {  # gpx stem -> (emoji, display name)
     "Approved_Accommodation_(campground)": ("🌟⛺", "Approved Accommodation (campground)"),
     "Regional_Park_Campground": ("⛺", "Regional Park Campground"),
     "IndoorAccommodations": ("\U0001f6cf️", "Indoor accommodations"),
+    "Hostel": ("\U0001f6cf️", "Hostels"),
     "Bicycle_Repair_Shops": ("\U0001f527", "Bike shops"),
     "Bicycle_Repair_Stand": ("\U0001f6e0️", "Bike repair stands"),
     "Eatery": ("\U0001f37d️", "Eateries"),
