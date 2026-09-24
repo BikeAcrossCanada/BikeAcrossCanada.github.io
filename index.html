@@ -548,6 +548,14 @@ const linkify = s => {
     .replace(/\x00(\d+)\x00/g, (m, i) => imgs[i]);
 };
 
+// Per-track download links (issue #62); files are built on click, see
+// downloadTrack below.
+const dlLinks = (code, tid, eid) => ['gpx', 'kml'].map(fmt =>
+  '<a href="#" class="trk-dl" data-fmt="' + fmt + '" data-code="' + code +
+  '" data-tid="' + tid + '"' + (eid ? ' data-eid="' + eid + '"' : '') +
+  ' title="Download this track as ' + fmt.toUpperCase() +
+  ', for the direction you\'re viewing">' + fmt.toUpperCase() + '</a>').join(' &middot; ');
+
 function popupHtml(props, emoji, routeCode) {
   let h = '<b>' + (emoji ? emoji + ' ' : '') + esc(props.name || '(unnamed)') + '</b>';
   if (props.desc) h += '<br>' + linkify(props.desc);
@@ -558,8 +566,12 @@ function popupHtml(props, emoji, routeCode) {
       ' title="For the direction drawn (eastbound unless noted). Riding the other way, swap the two."';
     h += '<br><span' + hint + '>↑ ' + props.ascent_m + ' m ↓ ' +
          props.descent_m + ' m</span> &middot; <a href="#" class="elev-link" data-code="' +
-         routeCode + '" data-eid="' + props.eid + '">elevation profile</a>';
+         routeCode + '" data-eid="' + props.eid + '" data-tid="' + props.tid +
+         '">elevation profile</a>';
   }
+  if (routeCode && props.tid != null)
+    h += (props.ascent_m != null ? ' &middot; ' : '<br>Download: ') +
+         dlLinks(routeCode, props.tid, props.eid);
   return h;
 }
 
@@ -691,7 +703,7 @@ function chartTrack(coords, elevs) {
   return pts;
 }
 
-function showProfile(code, eid) {
+function showProfile(code, eid, tid) {
   const entry = layerRegistry.find(e => e.kind === 'route' && e.meta.code === code);
   const feat = entry && entry.gj.features.find(f => f.properties.eid === eid);
   if (!feat) { console.error('elevation profile: no feature with eid', eid, 'in', code); return; }
@@ -766,7 +778,7 @@ function showProfile(code, eid) {
     const pr = feat.properties;
     elevHeader.innerHTML = '<b>' + esc(wt ? wt.name + ' (westbound)' : pr.name) +
       '</b><br>↑ ' + tr.ascent_m + ' m &nbsp;↓ ' + tr.descent_m +
-      ' m &nbsp;·&nbsp; ' + tr.km + ' km';
+      ' m &nbsp;·&nbsp; ' + tr.km + ' km &nbsp;·&nbsp; ' + dlLinks(code, tid, eid);
     elevCtl.clear();
     elevCtl.load(JSON.stringify(track));
     map.closePopup();
@@ -777,7 +789,7 @@ document.addEventListener('click', e => {
   const a = e.target.closest('.elev-link');
   if (!a) return;
   e.preventDefault();
-  showProfile(a.dataset.code, a.dataset.eid);
+  showProfile(a.dataset.code, a.dataset.eid, a.dataset.tid);
 });
 
 // ---- One-way direction arrows ----
@@ -978,7 +990,7 @@ function materializeStore(store) {
   for (const t of store.tracks) {
     for (const f of t.features) {
       const parts = f.ranges.map(([i, j]) => t.coords.slice(i, j + 1));
-      const props = { name: t.name, provs: [f.prov], km: f.km };
+      const props = { name: t.name, provs: [f.prov], km: f.km, tid: t.id };
       if (f.dir) props.dir = f.dir;
       if (f.eid) props.eid = f.eid;
       if (f.ascent_m != null) { props.ascent_m = f.ascent_m; props.descent_m = f.descent_m; }
@@ -1106,6 +1118,18 @@ const plainDesc = s => (s || '')
   .replace(/\s*ID:\s*$/i, '')
   .trim();
 
+// A track's pieces for one direction view, as [source track, first vertex,
+// last vertex, reversed]: westbound, a ride is its westbound assembly (or
+// just its line reversed when nothing is spliced in); everything else is
+// as drawn. Shared by buildGpx and the per-track download.
+function trackPieces(st, t, dir) {
+  if (dir === 'W' && t.role === 'ride')
+    return t.west
+      ? t.west.map(([tid, i, j, rev]) => [st.tracks[tid], i, j, rev])
+      : [[t, 0, t.coords.length - 1, 1]];
+  return [[t, 0, t.coords.length - 1, 0]];
+}
+
 function buildGpx() {
   let wpts = '', trks = '';
   const rs = checkedRouteCodes();  // same near-a-ticked-route rule as the map
@@ -1145,16 +1169,8 @@ function buildGpx() {
       for (const t of st.tracks) {
         if (dir && t.role === 'variant' && !t.demoted &&
             (dir === 'E' || e.spliced.has(t.id))) continue;
-        let pieces;   // [source track, first vertex, last vertex, reversed]
-        if (dir === 'W' && t.role === 'ride') {
-          pieces = t.west
-            ? t.west.map(([tid, i, j, rev]) => [st.tracks[tid], i, j, rev])
-            : [[t, 0, t.coords.length - 1, 1]];
-        } else {
-          pieces = [[t, 0, t.coords.length - 1, 0]];
-        }
         const segs = [];
-        for (const [src, i, j, rev] of pieces) {
+        for (const [src, i, j, rev] of trackPieces(st, t, dir)) {
           let ranges = prov ? rangeClip(i, j, src.provs[prov] || []) : [[i, j]];
           // a reversed piece rides its province stretches last-to-first
           if (rev) ranges = ranges.slice().reverse();
@@ -1181,13 +1197,79 @@ function buildGpx() {
     'https://bikeacrosscanada.github.io/</desc>\n  </metadata>\n' + wpts + trks + '</gpx>\n';
 }
 
-dlBtn.addEventListener('click', () => {
-  const blob = new Blob([buildGpx()], { type: 'application/gpx+xml' });
+function saveFile(text, type, filename) {
   const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'trans-canada-bike-route-selection.gpx';
+  a.href = URL.createObjectURL(new Blob([text], { type }));
+  a.download = filename;
   a.click();
   URL.revokeObjectURL(a.href);
+}
+
+dlBtn.addEventListener('click', () =>
+  saveFile(buildGpx(), 'application/gpx+xml', 'trans-canada-bike-route-selection.gpx'));
+
+// ---- Per-track download (issue #62) ----
+// The GPX / KML links in a track's popup and the elevation panel build one
+// file from the ride store on click, like the sidebar export, so they stay
+// in step with his KMLs with nothing extra hosted. The file is the whole
+// source track, not just the piece the province filter shows, in the
+// direction view's orientation (trackPieces). A spliced westbound variant
+// hands over the whole westbound ride it belongs to, as its elevation
+// profile does (its eid is that ride's eid_w).
+function downloadTrack(fmt, code, tid, eid) {
+  const e = layerRegistry.find(x => x.kind === 'route' && x.meta.code === code);
+  const st = e.store;
+  const ride = eid && st.tracks.find(t => t.eid_w === eid);
+  const t = ride || st.tracks[tid];
+  const dir = ride ? 'W' : dirSelect.value;
+  const west = dir === 'W' && t.role === 'ride';
+  const segs = trackPieces(st, t, dir).map(([src, i, j, rev]) => {
+    const line = src.coords.slice(i, j + 1);
+    return rev ? line.reverse() : line;
+  });
+  const name = code + ' ' + t.name + (west ? ' (westbound)' : '');
+  // file name: the track name as a slug, cut at a word break past 140 chars
+  let file = (code + ' ' + t.name.replace(/^\[[^\]]*\]\s*/, ''))
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/[^\w]+/g, '-').replace(/^-+|-+$/g, '');
+  if (file.length > 140) file = file.slice(0, 141).replace(/-[^-]*$/, '');
+  file += west ? '-westbound' : '';
+  const note = 'Display-simplified geometry; full-resolution originals at ' +
+               'https://bikeacrosscanada.github.io/';
+  if (fmt === 'gpx') {
+    saveFile('<?xml version="1.0" encoding="UTF-8"?>\n' +
+      '<gpx version="1.1" creator="Trans Canada Bike Route Network map" ' +
+      'xmlns="http://www.topografix.com/GPX/1/1">\n' +
+      '  <metadata>\n    <name>' + xmlEsc(name) + '</name>\n' +
+      '    <author><name>Sam Vekemans</name></author>\n' +
+      '    <desc>' + note + '</desc>\n  </metadata>\n' +
+      '  <trk>\n    <name>' + xmlEsc(name) + '</name>\n    <type>' + code + '</type>\n' +
+      segs.map(seg => '    <trkseg>\n' +
+        seg.map(c => '      <trkpt lat="' + c[1] + '" lon="' + c[0] + '"/>').join('\n') +
+        '\n    </trkseg>').join('\n') + '\n  </trk>\n</gpx>\n',
+      'application/gpx+xml', file + '.gpx');
+  } else {
+    // KML colours are aabbggrr; the line keeps the route's map colour
+    const c = e.meta.color.replace('#', '');
+    const lines = segs.map(seg => '<LineString><tessellate>1</tessellate><coordinates>' +
+      seg.map(p => p[0] + ',' + p[1]).join(' ') + '</coordinates></LineString>');
+    saveFile('<?xml version="1.0" encoding="UTF-8"?>\n' +
+      '<kml xmlns="http://www.opengis.net/kml/2.2">\n<Document>\n' +
+      '  <name>' + xmlEsc(name) + '</name>\n  <description>' + note + '</description>\n' +
+      '  <Style id="route"><LineStyle><color>ff' + c.slice(4, 6) + c.slice(2, 4) +
+      c.slice(0, 2) + '</color><width>4</width></LineStyle></Style>\n' +
+      '  <Placemark>\n    <name>' + xmlEsc(name) + '</name>\n    <styleUrl>#route</styleUrl>\n    ' +
+      (lines.length > 1 ? '<MultiGeometry>' + lines.join('') + '</MultiGeometry>' : lines[0]) +
+      '\n  </Placemark>\n</Document>\n</kml>\n',
+      'application/vnd.google-earth.kml+xml', file + '.kml');
+  }
+}
+
+document.addEventListener('click', e => {
+  const a = e.target.closest('.trk-dl');
+  if (!a) return;
+  e.preventDefault();
+  downloadTrack(a.dataset.fmt, a.dataset.code, +a.dataset.tid, a.dataset.eid);
 });
 
 // Mobile layers panel (issue #53): the Layers button opens it and then hides

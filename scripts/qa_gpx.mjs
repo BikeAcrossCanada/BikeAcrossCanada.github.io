@@ -2,8 +2,9 @@
 // GPX-path QA for the ride-assembly branch (DESIGN_ride_assembly.md §8).
 //
 // Nothing else exercises buildGpx — so this slices materializeStore /
-// splicedVariantIds / rangeClip / buildGpx VERBATIM out of index.html, feeds
-// them the real data/rides_<code>.json stores, builds the full-network,
+// splicedVariantIds / rangeClip / trackPieces / buildGpx VERBATIM out of
+// index.html, feeds them the real data/rides_<code>.json stores, builds the
+// full-network,
 // West-to-East, and East-to-West GPX flavours, and asserts, for every
 // multi-segment <trk>:
 //   1. no backtracking: walking segments in emitted order, cumulative
@@ -65,8 +66,11 @@ function extractFn(html, name) {
 // verbatim and driven through the same (registry, dir) call shape.
 function makeBranchBuild(html) {
   let src = '';
-  for (const name of ['materializeStore', 'splicedVariantIds', 'rangeClip', 'buildGpx']) {
+  for (const name of ['materializeStore', 'splicedVariantIds', 'rangeClip', 'trackPieces', 'buildGpx']) {
     const s = extractFn(html, name);
+    // trackPieces was split out of buildGpx for issue #62; older revisions
+    // (a main before that) still have it inline, so it may be missing
+    if (!s && name === 'trackPieces') continue;
     if (!s) throw new Error(`branch: function ${name} not found in index.html`);
     src += s + '\n';
   }
