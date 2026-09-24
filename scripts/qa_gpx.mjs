@@ -66,11 +66,12 @@ function extractFn(html, name) {
 // verbatim and driven through the same (registry, dir) call shape.
 function makeBranchBuild(html) {
   let src = '';
-  for (const name of ['materializeStore', 'splicedVariantIds', 'rangeClip', 'trackPieces', 'buildGpx']) {
+  for (const name of ['materializeStore', 'splicedVariantIds', 'rangeClip', 'trackPieces',
+                      'poiWpt', 'buildGpx']) {
     const s = extractFn(html, name);
-    // trackPieces was split out of buildGpx for issue #62; older revisions
-    // (a main before that) still have it inline, so it may be missing
-    if (!s && name === 'trackPieces') continue;
+    // trackPieces and poiWpt were split out of buildGpx for issue #62; older
+    // revisions (a main before that) still have them inline, so may lack them
+    if (!s && (name === 'trackPieces' || name === 'poiWpt')) continue;
     if (!s) throw new Error(`branch: function ${name} not found in index.html`);
     src += s + '\n';
   }
