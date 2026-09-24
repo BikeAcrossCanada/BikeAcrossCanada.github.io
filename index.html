@@ -511,6 +511,9 @@ map.on('overlayadd overlayremove', e => {
 });
 
 const esc = s => (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;');
+// Touch screens have no hover, and Leaflet opens a hover tooltip on tap,
+// so a POI would show its name tag and its popup together (issue #70).
+const canHover = window.matchMedia('(hover: hover)').matches;
 // linkify bare URLs in descriptions; images (issue #63) render inline.
 // Built <img> tags are held out in `imgs` while the URL pass runs, so it
 // can't linkify the src attribute of a tag this function just created.
@@ -616,11 +619,14 @@ function buildPoiLayer(entry) {
   const layer = L.geoJSON(entry.gj, {
     filter: f => provOk(f.properties) &&
                  (!rs.size || (f.properties.routes || []).some(c => rs.has(c))),
-    pointToLayer: (f, latlng) => L.marker(latlng, {
-      icon: L.divIcon({ className: 'emoji-pin', html: p.emoji,
-                        iconSize: [20, 20], iconAnchor: [10, 10] })
-    }).bindTooltip(f.properties.name || '')
-      .bindPopup(popupHtml(f.properties, p.emoji))
+    pointToLayer: (f, latlng) => {
+      const m = L.marker(latlng, {
+        icon: L.divIcon({ className: 'emoji-pin', html: p.emoji,
+                          iconSize: [20, 20], iconAnchor: [10, 10] })
+      }).bindPopup(popupHtml(f.properties, p.emoji));
+      if (canHover) m.bindTooltip(esc(f.properties.name));
+      return m;
+    }
   });
   setCount(entry, layer.getLayers().length);
   return layer;
