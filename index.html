@@ -570,7 +570,7 @@ function popupHtml(props, emoji, routeCode) {
          '">elevation profile</a>';
   }
   if (routeCode && props.tid != null)
-    h += (props.ascent_m != null ? ' &middot; ' : '<br>Download: ') +
+    h += (props.ascent_m != null ? ' &middot; download ' : '<br>Download ') +
          dlLinks(routeCode, props.tid, props.eid);
   return h;
 }
@@ -778,7 +778,7 @@ function showProfile(code, eid, tid) {
     const pr = feat.properties;
     elevHeader.innerHTML = '<b>' + esc(wt ? wt.name + ' (westbound)' : pr.name) +
       '</b><br>↑ ' + tr.ascent_m + ' m &nbsp;↓ ' + tr.descent_m +
-      ' m &nbsp;·&nbsp; ' + tr.km + ' km &nbsp;·&nbsp; ' + dlLinks(code, tid, eid);
+      ' m &nbsp;·&nbsp; ' + tr.km + ' km &nbsp;·&nbsp; download ' + dlLinks(code, tid, eid);
     elevCtl.clear();
     elevCtl.load(JSON.stringify(track));
     map.closePopup();
