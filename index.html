@@ -107,6 +107,9 @@
     .otm-sat-close { float:right; border:none; background:none; font-size:15px;
       line-height:1; color:#888; cursor:pointer; padding:0 0 2px 6px; }
     .otm-sat-close:hover { color:#333; }
+    .compass-control a { display:flex; align-items:center; justify-content:center; cursor:grab; touch-action:none; }
+    .compass-control svg { transition: transform .1s; }
+    .compass-control.north-up { opacity:.6; }
     /* Attribution wraps instead of spanning the whole bottom edge, so it
        never covers the minimap or its open/close button on phones (issue #53). */
     .leaflet-control-attribution { max-width:55vw; white-space:normal; text-align:right; }
@@ -229,6 +232,8 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet-rotate@0.2.8/dist/leaflet-rotate.js"
+        integrity="sha256-Ta4E5oRGbcJDRqmfp6qbzK7uDvaQyR0yDOGP6Bi1Ng8=" crossorigin=""></script>
 <script src="https://unpkg.com/leaflet-minimap@3.6.1/dist/Control.MiniMap.min.js"
         integrity="sha256-Hb/f1FMaLV+Qn6KSYbc92GxB2bcKp7/efxNeiduEo3g=" crossorigin=""></script>
 <script src="https://unpkg.com/@raruto/leaflet-elevation@2.6.0/dist/leaflet-elevation.min.js"
@@ -277,8 +282,15 @@ const topbarEl = document.querySelector('.topbar');
 const sizeBelowTopbar = () =>
   document.documentElement.style.setProperty('--topbar-h', topbarEl.offsetHeight + 'px');
 sizeBelowTopbar();
+// Map rotation (issue #77) comes from the leaflet-rotate plugin: two-finger
+// twist on phones; on desktop, Shift + scroll or drag the compass button
+// (below). The plugin's own compass button and Shift-scroll handler are
+// switched off in favour of ours. Its rotateControl default is also switched
+// off for every map, so the minimap doesn't get a hidden one.
+L.Map.mergeOptions({ rotateControl: false });
 const map = L.map('map', { preferCanvas: true, renderer: routeRenderer,
-                           zoomSnap: 0.5, zoomDelta: 0.5, minZoom: 2, maxZoom: 19 });
+                           zoomSnap: 0.5, zoomDelta: 0.5, minZoom: 2, maxZoom: 19,
+                           rotate: true, touchRotate: true, shiftKeyRotate: false });
 new ResizeObserver(() => { sizeBelowTopbar(); map.invalidateSize(); }).observe(topbarEl);
 // Shareable view URLs (issue #48): the current view lives in the URL fragment,
 // openstreetmap.org-style — #map=zoom/lat/lng&base=Name&hillshade=1 — rewritten
@@ -320,7 +332,10 @@ else map.fitBounds([[46.5, -128.5], [52.5, -53]]);  // frame the network corrido
 // the request count.
 const NRCAN = 'https://maps-cartes.services.geo.ca/server2_serveur2/rest/services/BaseMaps/';
 const NRCAN_ATTR = '<a href="https://open.canada.ca/data/en/dataset/296de17c-001c-4435-8f9a-f5acab632e85" target="_blank" rel="noopener">Canada Base Map</a> &copy; Natural Resources Canada';
-map.createPane('otm').style.zIndex = 200;  // same level as the normal tile pane; exists so CSS can desaturate just this base map
+// Custom panes go inside the plugin's rotating pane, or their tiles would stay
+// north-up while the rest of the map turns.
+const rotatingPane = map.getPane('rotatePane') || map.getPane('mapPane');
+map.createPane('otm', rotatingPane).style.zIndex = 200;  // same level as the normal tile pane; exists so CSS can desaturate just this base map
 const baseMaps = {
   'OpenStreetMap': L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -345,7 +360,7 @@ const baseMaps = {
 // tile's Web Mercator bounding box. Sits in its own pane between the base
 // tiles and the routes, blended with CSS multiply so it shades the base map
 // without hiding it (see .leaflet-hillshade-pane in <style>).
-map.createPane('hillshade').style.zIndex = 250;
+map.createPane('hillshade', rotatingPane).style.zIndex = 250;
 const MERC = 20037508.342789244;
 const HillshadeLayer = L.TileLayer.extend({
   getTileUrl(coords) {
@@ -393,6 +408,57 @@ L.DomEvent.disableClickPropagation(attribEl);
 // built-in attribution control so Leaflet stacks it above the credits box —
 // bottom-left already holds the minimap and the elevation chart.
 L.control.scale({ position: 'bottomright', metric: true, imperial: true }).addTo(map);
+// Compass button (issue #77): the needle points north. Click to turn the map
+// back to north-up; drag it sideways to rotate (desktop). Faded while the map
+// is already north-up. Shift + scroll also rotates: the plugin's own version
+// read only vertical scrolling, but macOS turns Shift + scroll sideways.
+const compassControl = L.control({ position: 'topleft' });
+compassControl.onAdd = () => {
+  const bar = L.DomUtil.create('div', 'leaflet-bar compass-control');
+  const btn = L.DomUtil.create('a', '', bar);
+  btn.href = '#';
+  btn.setAttribute('role', 'button');
+  btn.title = 'Rotate the map: two-finger twist, Shift + scroll, or drag this button. Click to turn north back up.';
+  btn.setAttribute('aria-label', 'Reset map to north up');
+  btn.draggable = false;   // else the browser starts dragging the link and cancels the rotate
+  btn.innerHTML = '<svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 3 L16 12 L8 12 Z" fill="#d33"/>' +
+                  '<path d="M12 21 L16 12 L8 12 Z" fill="#999"/></svg>';
+  L.DomEvent.disableClickPropagation(bar);
+  let drag = null;
+  btn.addEventListener('pointerdown', e => {
+    drag = { x: e.clientX, bearing: map.getBearing(), moved: false };
+    btn.setPointerCapture(e.pointerId);
+  });
+  btn.addEventListener('pointermove', e => {
+    if (!drag) return;
+    const dx = e.clientX - drag.x;
+    if (Math.abs(dx) > 3) drag.moved = true;
+    if (drag.moved) map.setBearing(drag.bearing + dx);
+  });
+  const endDrag = () => { setTimeout(() => { drag = null; }, 0); };
+  btn.addEventListener('pointerup', endDrag);
+  btn.addEventListener('pointercancel', endDrag);
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    if (!drag || !drag.moved) map.setBearing(0);
+  });
+  const sync = () => {
+    const b = map.getBearing();
+    btn.firstChild.style.transform = 'rotate(' + (-b) + 'deg)';
+    bar.classList.toggle('north-up', Math.round(b) % 360 === 0);
+  };
+  map.on('rotate', sync);
+  sync();
+  return bar;
+};
+compassControl.addTo(map);
+map.getContainer().addEventListener('wheel', e => {
+  if (!e.shiftKey) return;
+  e.preventDefault();
+  e.stopPropagation();   // keep Leaflet's scroll-zoom out of it
+  const d = e.deltaY || e.deltaX;
+  if (d) map.setBearing(map.getBearing() + Math.sign(d) * 5);
+}, { capture: true, passive: false });
 map.on('baselayerchange', e => { try { localStorage.setItem(BASE_KEY, e.name); } catch (err) {} });
 // OpenTopoMap tuning panel (issue #46): the OTM palette is loud, and its
 // urban grey is dark, so plain desaturation goes muddy. Two remembered
@@ -853,7 +919,9 @@ function buildArrowLayer() {
     }
   cand.forEach((c, i) => {
     if (hidden.has(i)) return;
-    L.marker([c.a.lat, c.a.lon], { icon: arrowIcon(c.a.bearing, c.color, size), interactive: true })
+    // rotateWithView: the chevron's angle is from north, so it turns with the map
+    L.marker([c.a.lat, c.a.lon], { icon: arrowIcon(c.a.bearing, c.color, size), interactive: true,
+                                   rotateWithView: true })
       .bindTooltip(esc(c.name || 'One-way'), { direction: 'top' })
       .addTo(group);
   });
