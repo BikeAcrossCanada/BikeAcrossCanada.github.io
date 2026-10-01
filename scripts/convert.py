@@ -12,6 +12,7 @@ import math
 import pathlib
 import re
 import xml.etree.ElementTree as ET
+from collections import Counter
 
 import shapely
 from pyproj import Geod, Transformer
@@ -78,6 +79,25 @@ POI_LAYERS = {  # gpx stem -> (emoji, display name)
     "HardwareNoBike": ("\U0001fa9b", "Hardware stores (no bike parts)"),
     "Kilometre_Distance_Markers": ("\U0001f4cd", "Km distance markers"),
 }
+
+# Campgrounds arrive as ONE file, poi_Campgrounds.gpx, each point labelled
+# "Type: ..." in its description (the Type field from Sam's My Maps). The build
+# splits that file into the type layers below, so only the one file needs
+# exporting. "Campgrounds" itself becomes the sidebar group heading (tick it
+# for all types or none), not a layer of its own. Types listed in
+# CAMPGROUND_SKIP are left off the map; any other unlisted or missing Type is
+# printed in the build log so it can be fixed at the source.
+CAMPGROUND_GROUP = "Campgrounds"
+CAMPGROUND_TYPES = {  # POI_LAYERS stem -> Type label in the description
+    "Approved_Accommodation_(campground)": "Approved Accommodation (campground)",
+    "Municipal_Campground": "Municipal Campground",
+    "Regional_Park_Campground": "Regional Park Campground",
+    "Provincial_Park_Campground": "Provincial Park Campground",
+    "National_Park_Campground": "National Park Campground",
+    "Privately_Owned_Campground": "Privately Owned Campground",
+}
+CAMPGROUND_SKIP = {"Tenting unconfirmed", "Unofficial Campground", "Closed for renovations"}
+TYPE_RE = re.compile(r"Type:\s*([^<\n]+)")
 
 SIMPLIFY_TOLERANCE = 0.00005  # degrees, ~5 m: follows the path even at street-level zooms
 PRECISION = 5  # coordinate decimals (~1 m)
@@ -1565,21 +1585,52 @@ def route_tagger(route_geoms):
     return tags
 
 
+def read_wpts(stem):
+    # Sam's POI files are CONCATENATIONS of many GPX documents in one file
+    # (Garmin export quirk) — split on the XML declaration and parse each.
+    text = (RAW / f"poi_{stem}.gpx").read_text(encoding="utf-8", errors="replace")
+    docs = ["<?xml" + chunk for chunk in text.split("<?xml") if chunk.strip()]
+    wpts = []
+    for doc in docs:
+        try:
+            wpts.extend(ET.fromstring(doc.replace("﻿", "").encode())
+                        .findall("g:wpt", GPX_NS))
+        except ET.ParseError:
+            continue
+    return wpts
+
+
+def split_campgrounds():
+    """poi_Campgrounds.gpx -> {type layer stem: [wpt]}, by each point's Type."""
+    stem_for = {label: stem for stem, label in CAMPGROUND_TYPES.items()}
+    out = {stem: [] for stem in CAMPGROUND_TYPES}
+    skipped, unknown = Counter(), []
+    for wpt in read_wpts(CAMPGROUND_GROUP):
+        m = TYPE_RE.search(wpt.findtext("g:desc", "", GPX_NS))
+        label = m.group(1).strip() if m else ""
+        if label in stem_for:
+            out[stem_for[label]].append(wpt)
+        elif label in CAMPGROUND_SKIP:
+            skipped[label] += 1
+        else:
+            name = wpt.findtext("g:name", "", GPX_NS).strip()
+            unknown.append(f"{name!r} (Type: {label or 'missing'})")
+    for label, n in sorted(skipped.items()):
+        print(f"  Campgrounds: left off the map by design: {n} x {label!r}")
+    for u in unknown:
+        print(f"  Campgrounds [unknown Type] {u} — not on the map; fix its Type, "
+              f"or add the Type to CAMPGROUND_TYPES / CAMPGROUND_SKIP in convert.py")
+    return out
+
+
 def convert_pois(route_geoms, provinces):
     tags_for = route_tagger(route_geoms)
+    camp = split_campgrounds()
     sizes = {}
     for stem in POI_LAYERS:
-        # Sam's POI files are CONCATENATIONS of many GPX documents in one file
-        # (Garmin export quirk) — split on the XML declaration and parse each.
-        text = (RAW / f"poi_{stem}.gpx").read_text(encoding="utf-8", errors="replace")
-        docs = ["<?xml" + chunk for chunk in text.split("<?xml") if chunk.strip()]
-        wpts = []
-        for doc in docs:
-            try:
-                wpts.extend(ET.fromstring(doc.replace("﻿", "").encode())
-                            .findall("g:wpt", GPX_NS))
-            except ET.ParseError:
-                continue
+        if stem == CAMPGROUND_GROUP:
+            continue  # sidebar group heading only; its points go to the type layers
+        wpts = camp[stem] if stem in camp else read_wpts(stem)
         feats = []
         for wpt in wpts:
             name = wpt.findtext("g:name", "", GPX_NS).strip()
@@ -1608,6 +1659,20 @@ def convert_pois(route_geoms, provinces):
     return sizes
 
 
+def poi_entry(k, poi_sizes):
+    """One manifest row. The campground heading is a group with no file of its
+    own; its type layers name it as their parent so the sidebar nests them."""
+    e = {"key": k, "emoji": POI_LAYERS[k][0], "title": POI_LAYERS[k][1]}
+    if k == CAMPGROUND_GROUP:
+        e["group"] = True
+        e["count"] = sum(poi_sizes[s][0] for s in CAMPGROUND_TYPES)
+    else:
+        e["count"] = poi_sizes[k][0]
+        if k in CAMPGROUND_TYPES:
+            e["parent"] = CAMPGROUND_GROUP
+    return e
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     provinces = load_provinces()
@@ -1621,9 +1686,7 @@ def main():
                     "km": round(route_sizes[c][2]),
                     "km_west_east": int(round(route_sizes[c][3], -2))}
                    for c in ROUTE_LAYERS if c in route_sizes],
-        "pois": [{"key": k, "emoji": POI_LAYERS[k][0], "title": POI_LAYERS[k][1],
-                  "count": poi_sizes[k][0]}
-                 for k in POI_LAYERS],
+        "pois": [poi_entry(k, poi_sizes) for k in POI_LAYERS],
         "provinces": [{"code": pc, "name": pn} for pc, pn, _ in provinces
                       if pc in used_provs],
     }

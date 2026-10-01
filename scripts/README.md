@@ -80,6 +80,28 @@ it by hand.
 3. Commit the change. The map rebuilds itself and the new category appears in
    the sidebar, checkbox and all.
 
+## Campground types
+
+Campgrounds come from the one file, `poi_Campgrounds.gpx`. The converter sorts
+its points into the sidebar's campground types (Municipal, Provincial Park and
+so on) using the "Type: ..." line in each point's description, the Type field
+from the My Maps map. In the sidebar, ticking "Campgrounds" ticks all the types
+under it, or none.
+
+- **A point's type changed, or a campground was added:** fix it in your master
+  copy and upload a fresh `poi_Campgrounds.gpx`. No separate per-type files
+  are needed.
+- **Adding a new type:** add a line to `CAMPGROUND_TYPES` in
+  `scripts/convert.py` (the layer name and the Type exactly as written in the
+  description), and a matching line under "Campgrounds" in `POI_LAYERS` (emoji
+  and sidebar label).
+- **Types left off the map:** the ones listed in `CAMPGROUND_SKIP` (Tenting
+  unconfirmed, Unofficial Campground, Closed for renovations). Move a type
+  between the two lists to change that.
+- **Missing or misspelled Type:** the point is left off the map, and the
+  rebuild log on the Actions tab lists it by name ("Campgrounds [unknown
+  Type]") so you can fix it.
+
 Route colours, line thicknesses, and route titles live in the `ROUTE_LAYERS`
 list in the same file, in the same copy-the-pattern style.
 

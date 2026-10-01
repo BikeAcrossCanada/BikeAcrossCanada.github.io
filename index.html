@@ -58,6 +58,7 @@
   .swatch { display:inline-block; width:22px; height:4px; border-radius:2px; flex:none; }
   .swatch.dashed { background:repeating-linear-gradient(90deg,var(--c) 0 5px,transparent 5px 9px); }
   .count { color:#999; font-size:11px; margin-left:auto; }
+  .poi-group { padding-left:20px; }  /* a POI group's rows, under its heading */
   #sidebar details { margin-top:16px; border-top:1px solid #eee; padding-top:8px; }
   #sidebar details summary { cursor:pointer; font-weight:600; }
   #sidebar details p, #sidebar details li { font-size:12.5px; color:#333; }
@@ -679,6 +680,8 @@ function setCount(entry, shown) {
   // just the shown count — "x of y" read as a filter warning even when the
   // only thing hiding points was the points-follow-ticked-routes rule
   entry.countEl.textContent = shown;
+  entry.shown = shown;
+  if (entry.meta.parent) syncGroupCount(entry.meta.parent);
 }
 
 function buildRouteLayer(entry) {
@@ -1110,11 +1113,16 @@ fetch('data/manifest.json').then(r => r.json()).then(manifest => {
         refreshShields();  // this route's shields can draw now its data is here
       }));
   });
-  // POIs: all off by default; rendered as emoji markers, filtered to ticked routes
+  // POIs: all off by default; rendered as emoji markers, filtered to ticked routes.
+  // A group row (Campgrounds) has no file of its own: its box ticks all of its
+  // type rows or none, and those rows sit indented beneath it.
+  const poiBoxes = document.getElementById('poi-boxes');
+  const groupBoxes = {};
   manifest.pois.forEach(p => {
+    if (p.group) { groupBoxes[p.key] = addPoiGroup(poiBoxes, p); return; }
     const entry = { kind: 'poi', meta: p, gj: null, cb: null, layer: null };
     layerRegistry.push(entry);
-    addCheckbox(document.getElementById('poi-boxes'), entry,
+    addCheckbox(groupBoxes[p.parent] || poiBoxes, entry,
                 p.emoji + ' ' + esc(p.title), p.count, false,
       () => fetch('data/poi_' + p.key + '.geojson').then(r => r.json()).then(gj => {
         entry.gj = gj;
@@ -1132,22 +1140,55 @@ fetch('data/manifest.json').then(r => r.json()).then(manifest => {
   updateDlButton();
 });
 
-// ---- Check all / none for the POI list ----
+// ---- Check all / none for the POI list, and for each POI group ----
 const poiAll = document.getElementById('poi-all');
-poiAll.addEventListener('change', () => {
-  for (const e of layerRegistry) {
-    if (e.kind !== 'poi' || !e.cb) continue;
-    e.cb.checked = poiAll.checked;
+function setPoiBoxes(entries, on) {
+  for (const e of entries) {
+    e.cb.checked = on;
     // loaded layers toggle now; still-loading ones honour the box on arrival
-    if (e.gj) poiAll.checked ? e.layer.addTo(map) : map.removeLayer(e.layer);
+    if (e.gj) on ? e.layer.addTo(map) : map.removeLayer(e.layer);
   }
+}
+const poiEntries = parent => layerRegistry.filter(e => e.kind === 'poi' && e.cb &&
+                                                  (!parent || e.meta.parent === parent));
+poiAll.addEventListener('change', () => {
+  setPoiBoxes(poiEntries(), poiAll.checked);
+  syncPoiAll();
   updateDlButton();
 });
-function syncPoiAll() {
-  const cbs = layerRegistry.filter(e => e.kind === 'poi' && e.cb);
+
+// Group heading row (from the manifest's group entry): its box ticks every
+// row of the group or none; returns the indented container for those rows.
+const poiGroups = [];
+function addPoiGroup(container, p) {
+  const lab = document.createElement('label');
+  lab.innerHTML = p.emoji + ' ' + esc(p.title) + '<span class="count"></span>';
+  const cb = document.createElement('input');
+  cb.type = 'checkbox';
+  lab.prepend(cb);
+  const kids = document.createElement('div');
+  kids.className = 'poi-group';
+  container.append(lab, kids);
+  const g = { key: p.key, cb, countEl: lab.querySelector('.count') };
+  g.countEl.textContent = p.count;
+  poiGroups.push(g);
+  cb.addEventListener('change', () => setPoiBoxes(poiEntries(p.key), cb.checked));
+  return kids;
+}
+// A group's count is the sum of its rows' shown counts.
+function syncGroupCount(key) {
+  const g = poiGroups.find(g => g.key === key);
+  if (g) g.countEl.textContent = poiEntries(key).reduce((a, e) => a + (e.shown || 0), 0);
+}
+
+function syncBox(box, cbs) {
   const on = cbs.filter(e => e.cb.checked).length;
-  poiAll.checked = on > 0 && on === cbs.length;
-  poiAll.indeterminate = on > 0 && on < cbs.length;
+  box.checked = on > 0 && on === cbs.length;
+  box.indeterminate = on > 0 && on < cbs.length;
+}
+function syncPoiAll() {
+  syncBox(poiAll, poiEntries());
+  for (const g of poiGroups) syncBox(g.cb, poiEntries(g.key));
 }
 document.getElementById('poi-boxes').addEventListener('change', syncPoiAll);
 
