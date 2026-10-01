@@ -51,10 +51,16 @@ POI_LAYERS = {  # gpx stem -> (emoji, display name)
     "End_of_Day_Segments": ("🔻", "End of Day Segments"),
     "Approved_Accommodations": ("🌟", "Approved Accommodations"),
     "Campgrounds": ("⛺", "Campgrounds"),
-    "Approved_Accommodation_(campground)": ("🌟⛺", "Approved Accommodation (campground)"),
-    "Regional_Park_Campground": ("⛺", "Regional Park Campground"),
+# This could be indented with the nested checkboxes to shorten the list, these are the 'Types' from the Google MyMaps map
+        "Approved_Accommodation_(campground)": ("🌟⛺", "Approved Accommodations (campgrounds)"),
+        "Municipal_Campground": ("⛺", "Municipal Campgrounds"),
+        "Regional_Park_Campground": ("⛺", "Regional Park Campgrounds"),
+        "Provincial_Park_Campground": ("⛺", "Provincial Park Campgrounds"), 
+        "National_Park_Campground": ("⛺", "National Park Campgrounds"),
+        "Privately_Owned_Campground": ("⛺", "Privately Owned Campgrounds"),    
     "IndoorAccommodations": ("\U0001f6cf️", "Indoor accommodations"),
-    "Hostel": ("\U0001f6cf️", "Hostels"),
+# This could also be indented with the nested checkboxes
+        "Hostel": ("\U0001f6cf️", "Hostels"),
     "Bicycle_Repair_Shops": ("\U0001f527", "Bike shops"),
     "Bicycle_Repair_Stand": ("\U0001f6e0️", "Bike repair stands"),
     "Eatery": ("\U0001f37d️", "Eateries"),
@@ -63,6 +69,8 @@ POI_LAYERS = {  # gpx stem -> (emoji, display name)
     "Toilets": ("\U0001f6bb", "Toilets"),
     "Showers": ("\U0001f6bf", "Showers"),
     "Laundromat": ("\U0001f9fa", "Laundromats"),
+# Visitors centres can be a mix of Provincially Run, Chamber of Commerce, Local Volunteers, Privatly Run. On OpenStreetMap it's not always clear, 
+# therefore the curated collection might be better.    
     "Tourist_office": ("ℹ️", "Visitor centres"),
     "Library": ("\U0001f4da", "Libraries"),
     "Warning_Caution_Note": ("⚠️", "Warnings & cautions"),
