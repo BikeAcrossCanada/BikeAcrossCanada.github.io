@@ -87,14 +87,38 @@
   {
    "key": "Approved_Accommodation_(campground)",
    "emoji": "\ud83c\udf1f\u26fa",
-   "title": "Approved Accommodation (campground)",
+   "title": "Approved Accommodations (campgrounds)",
    "count": 40
+  },
+  {
+   "key": "Municipal_Campground",
+   "emoji": "\u26fa",
+   "title": "Municipal Campgrounds",
+   "count": 97
   },
   {
    "key": "Regional_Park_Campground",
    "emoji": "\u26fa",
-   "title": "Regional Park Campground",
+   "title": "Regional Park Campgrounds",
    "count": 11
+  },
+  {
+   "key": "Provincial_Park_Campground",
+   "emoji": "\u26fa",
+   "title": "Provincial Park Campgrounds",
+   "count": 6
+  },
+  {
+   "key": "National_Park_Campground",
+   "emoji": "\u26fa",
+   "title": "National Park Campgrounds",
+   "count": 51
+  },
+  {
+   "key": "Privately_Owned_Campground",
+   "emoji": "\u26fa",
+   "title": "Privately Owned Campgrounds",
+   "count": 3
   },
   {
    "key": "IndoorAccommodations",
