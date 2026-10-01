@@ -1,0 +1,2048 @@
+﻿<?xml version="1.0" encoding="utf-8"?><gpx creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd http://www.garmin.com/xmlschemas/TripExtensions/v1 http://www.garmin.com/xmlschemas/TripExtensionsv1.xsd http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1 http://www.garmin.com/xmlschemas/TripMetaDataExtensionsv1.xsd http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1 http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensionsv1.xsd http://www.garmin.com/xmlschemas/CreationTimeExtension/v1 http://www.garmin.com/xmlschemas/CreationTimeExtensionsv1.xsd http://www.garmin.com/xmlschemas/AccelerationExtension/v1 http://www.garmin.com/xmlschemas/AccelerationExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.garmin.com/xmlschemas/VideoExtension/v1 http://www.garmin.com/xmlschemas/VideoExtensionv1.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1" xmlns:tmd="http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1" xmlns:vptm="http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1" xmlns:ctx="http://www.garmin.com/xmlschemas/CreationTimeExtension/v1" xmlns:gpxacc="http://www.garmin.com/xmlschemas/AccelerationExtension/v1" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:vidx1="http://www.garmin.com/xmlschemas/VideoExtension/v1">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2026-10-01T16:12:56Z</time>
+    <bounds maxlat="55.113294990733266" maxlon="-54.219326041638851" minlat="43.957842020317912" minlon="-128.57087801210582" />
+  </metadata>
+
+  <wpt lat="49.626100016757846" lon="-105.99089303053916">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Assiniboia Regional Park Campground</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;SK-2, Assiniboia, SK S0H 0B0&lt;br&gt;https://www.assiniboia.net/visit_us/accommodation_camping.html&lt;br&gt;+1 306-642-3382&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 221.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;SK-2, Assiniboia, SK S0H 0B0&lt;br&gt;https://www.assiniboia.net/visit_us/accommodation_camping.html&lt;br&gt;+1 306-642-3382&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 221.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.786208976060152" lon="-112.4639790225774">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Bassano Homecoming Campground</name>
+    <cmt>description: Approved Accommodation #11&lt;br&gt;Details from Google Maps&lt;br&gt;601-605 2 Ave, Bassano, AB T0J 0B0&lt;br&gt;https://bassano.ca/campground-accommodations/&lt;br&gt;+1 403-641-3788&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 11.0</cmt>
+    <desc>description: Approved Accommodation #11&lt;br&gt;Details from Google Maps&lt;br&gt;601-605 2 Ave, Bassano, AB T0J 0B0&lt;br&gt;https://bassano.ca/campground-accommodations/&lt;br&gt;+1 403-641-3788&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 11.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.386434966698289" lon="-113.52737599052489">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Beiseker Municipal Campground</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.743869993835688" lon="-81.136554982513189">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Bluewater Park Campground1</name>
+    <cmt>description: "Bluewater Park Campground is a municipally-owned campground located in Bluewater Park on Colpoy's Bay along the Niagara Escarpment. This cozy campground offers 40 seasonal sites, 54 serviced sites and non-serviced tent camping sites."&lt;br&gt;https://www.southbrucepeninsula.com/en/explore-and-play/bluewater-park-campground.aspx&lt;br&gt;Details from Google Maps&lt;br&gt;400 William St, Wiarton, ON N0H 2T0&lt;br&gt;www.southbrucepeninsula.com&lt;br&gt;+1 519-534-1400 ext. 316&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 311.0</cmt>
+    <desc>description: "Bluewater Park Campground is a municipally-owned campground located in Bluewater Park on Colpoy's Bay along the Niagara Escarpment. This cozy campground offers 40 seasonal sites, 54 serviced sites and non-serviced tent camping sites."&lt;br&gt;https://www.southbrucepeninsula.com/en/explore-and-play/bluewater-park-campground.aspx&lt;br&gt;Details from Google Maps&lt;br&gt;400 William St, Wiarton, ON N0H 2T0&lt;br&gt;www.southbrucepeninsula.com&lt;br&gt;+1 519-534-1400 ext. 316&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 311.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.862238010391593" lon="-111.37974397279322">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Bow Island Centennial Park &amp; Campground</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1121 Centre St, Bow Island, AB T0K 0G0&lt;br&gt;www.bowisland.com&lt;br&gt;+1 403-545-2522&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 40.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1121 Centre St, Bow Island, AB T0K 0G0&lt;br&gt;www.bowisland.com&lt;br&gt;+1 403-545-2522&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 40.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.585686024278402" lon="-127.09128501825035">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Broughton Strait Campground1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;Broughton Blvd, Port McNeill, BC V0N 2R0&lt;br&gt;https://portmcneill.ca/residents/broughton-straight-campground/&lt;br&gt;+1 250-230-1526&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 153.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;Broughton Blvd, Port McNeill, BC V0N 2R0&lt;br&gt;https://portmcneill.ca/residents/broughton-straight-campground/&lt;br&gt;+1 250-230-1526&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 153.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.300454959273338" lon="-83.783203018829226">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Bruce Mines Campground</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.756221998482943" lon="-91.587417041882873">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Bunnell Park Campground</name>
+    <cmt>description: Approved Accommodation #19&lt;br&gt;Details from Google Maps&lt;br&gt;ON-622, Atikokan, ON P0T 1C0&lt;br&gt;https://visitatikokan.com/experiences/bunnell-park-campground/&lt;br&gt;+1 807-597-1234&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 19.0</cmt>
+    <desc>description: Approved Accommodation #19&lt;br&gt;Details from Google Maps&lt;br&gt;ON-622, Atikokan, ON P0T 1C0&lt;br&gt;https://visitatikokan.com/experiences/bunnell-park-campground/&lt;br&gt;+1 807-597-1234&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 19.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="54.22263303771615" lon="-125.76278002001345">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Burns Lake Village Campground</name>
+    <cmt>description: (free, no showers) Approved Accommodation #27&lt;br&gt;Details from Google Maps&lt;br&gt;# South, BC-35, Burns Lake, BC V0J 1E0&lt;br&gt;visitburnslake.ca&lt;br&gt;+1 250-692-7587&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: (free, no showers) Approved Accommodation #27&lt;br&gt;Details from Google Maps&lt;br&gt;# South, BC-35, Burns Lake, BC V0J 1E0&lt;br&gt;visitburnslake.ca&lt;br&gt;+1 250-692-7587&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.725815998390317" lon="-107.73596503771842">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Cadillac Campground1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;Dedion, Cadillac, SK S0N 0K0&lt;br&gt;https://thecadillac.ca/cadillac-campground&lt;br&gt;+1 306-785-2100&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 220.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;Dedion, Cadillac, SK S0N 0K0&lt;br&gt;https://thecadillac.ca/cadillac-campground&lt;br&gt;+1 306-785-2100&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 220.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.860322026535869" lon="-69.551282040774822">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Camping municipal de la Pointe</name>
+    <cmt>description: Affiliated with 'Véloroute Le Saint-Laurent à vélo' / The St. Lawrence by bike&lt;br&gt;https://campingmunicipaldelapointe.ca/en/&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: Affiliated with 'Véloroute Le Saint-Laurent à vélo' / The St. Lawrence by bike&lt;br&gt;https://campingmunicipaldelapointe.ca/en/&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.572376973927021" lon="-71.995744993910193">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Camping municipal Parc de l'ïle de Leclercville</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;8000 Rte Marie-Victorin, Leclercville, QC G0S 2K0&lt;br&gt;www.munleclercville.qc.ca&lt;br&gt;+1 819-292-2331&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 346.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;8000 Rte Marie-Victorin, Leclercville, QC G0S 2K0&lt;br&gt;www.munleclercville.qc.ca&lt;br&gt;+1 819-292-2331&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 346.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.132934015244246" lon="-70.369682013988495">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Camping Municipal Rocher Panet</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.039356041699648" lon="-65.484915962442756">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Camping Plage Beaubassin</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.417124969884753" lon="-110.80442799255252">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Cereal Campground</name>
+    <cmt>description: It indicated tenting here&lt;br&gt;https://www.travelalberta.com/listings/cereal-board-of-trade-campground-12774&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: It indicated tenting here&lt;br&gt;https://www.travelalberta.com/listings/cereal-board-of-trade-campground-12774&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.45784498564899" lon="-106.66171601973474">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Chaplin Village Campground</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;150 1st Ave, Chaplin, SK S0H 0V0&lt;br&gt;+1 306-395-2221&lt;br&gt;https://www.tourismsaskatchewan.com/listings/124/chaplin-campground&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 54.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;150 1st Ave, Chaplin, SK S0H 0V0&lt;br&gt;+1 306-395-2221&lt;br&gt;https://www.tourismsaskatchewan.com/listings/124/chaplin-campground&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 54.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.893417038023472" lon="-101.89530797302723">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Churchbridge CampgroundA</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.749786984175444" lon="-112.94037002138793">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Coalhurst Miners Memorial Campground1</name>
+    <cmt>description: "Overnight camping is available at a charge of $25.00 per night (self registration at the campground). The campground contains a wide range of amenities including, pay showers, picnic shelter, sani station and flush toilets. There are 14 camping stalls, available on a first come, first serve basis.'&lt;br&gt;http://coalhurst.ca/services/facilities-parks/&lt;br&gt;Details from Google Maps&lt;br&gt;Lethbridge County, AB T0L 0V0&lt;br&gt;coalhurst.ca&lt;br&gt;+1 403-381-3033&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 297.0</cmt>
+    <desc>description: "Overnight camping is available at a charge of $25.00 per night (self registration at the campground). The campground contains a wide range of amenities including, pay showers, picnic shelter, sani station and flush toilets. There are 14 camping stalls, available on a first come, first serve basis.'&lt;br&gt;http://coalhurst.ca/services/facilities-parks/&lt;br&gt;Details from Google Maps&lt;br&gt;Lethbridge County, AB T0L 0V0&lt;br&gt;coalhurst.ca&lt;br&gt;+1 403-381-3033&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 297.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.625662984326482" lon="-98.702483978122473">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Cottonwood Campground</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.804333033040166" lon="-54.219326041638851">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>David Smallwood Municipal Park campground</name>
+    <cmt>description: David Smallwood Municipal Park campground&lt;br&gt;For reservations please call 674-0122.&lt;br&gt;&lt;br&gt;Indicates tenting available&lt;br&gt;https://www.campendium.com/david-smallwood-rv-park&lt;br&gt;&lt;br&gt;Details from Google Maps&lt;br&gt;344 NL-320, Gambo, NL A0G 1T0&lt;br&gt;+1 709-674-0122&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 299.0</cmt>
+    <desc>description: David Smallwood Municipal Park campground&lt;br&gt;For reservations please call 674-0122.&lt;br&gt;&lt;br&gt;Indicates tenting available&lt;br&gt;https://www.campendium.com/david-smallwood-rv-park&lt;br&gt;&lt;br&gt;Details from Google Maps&lt;br&gt;344 NL-320, Gambo, NL A0G 1T0&lt;br&gt;+1 709-674-0122&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 299.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.18074301443994" lon="-57.450949028134346">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Deer Lake RV Park &amp; Campgrounds</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.581404021009803" lon="-100.56801097467542">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Deleau - Sifton Centennial Park</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;209 1 Ave, Deleau, MB R0M 0L0&lt;br&gt;https://www.facebook.com/profile.php?id=100080637593647&lt;br&gt;+1 204-761-0168&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 230.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;209 1 Ave, Deleau, MB R0M 0L0&lt;br&gt;https://www.facebook.com/profile.php?id=100080637593647&lt;br&gt;+1 204-761-0168&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 230.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.63226998411119" lon="-112.37043597735465">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Delia Diamond Anniversary Campground</name>
+    <cmt>description: Tenting yes&lt;br&gt;https://delia.ca/&lt;br&gt;(click on camping, links to&lt;br&gt;https://www.campreservations.ca/campground/delia-diamond-anniversary-campgorund-201)&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: Tenting yes&lt;br&gt;https://delia.ca/&lt;br&gt;(click on camping, links to&lt;br&gt;https://www.campreservations.ca/campground/delia-diamond-anniversary-campgorund-201)&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.57878596894443" lon="-68.632755037397146">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Dégelis Camping - Municipal Beach</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.979849020019174" lon="-101.24241597019136">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Elkhorn Campground</name>
+    <cmt>description: Open from May 1st to September 30th&lt;br&gt;Details from Google Maps&lt;br&gt;202 Cavendish St, Elkhorn, MB R0M 0N0&lt;br&gt;www.elkhorn.mb.ca&lt;br&gt;+1 204-845-2161&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 229.0</cmt>
+    <desc>description: Open from May 1st to September 30th&lt;br&gt;Details from Google Maps&lt;br&gt;202 Cavendish St, Elkhorn, MB R0M 0N0&lt;br&gt;www.elkhorn.mb.ca&lt;br&gt;+1 204-845-2161&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 229.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.045088987797499" lon="-67.732766959816217">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Falls and Gorge Camping Chutes and Gorge</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;120 Manse Rd, Grand Falls, NB E3Z 2X4&lt;br&gt;www.grandfallsnb.com&lt;br&gt;+1 877-475-7769&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 43.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;120 Manse Rd, Grand Falls, NB E3Z 2X4&lt;br&gt;www.grandfallsnb.com&lt;br&gt;+1 877-475-7769&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 43.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.017345020547509" lon="-55.475013004615903">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Fallsview Municipal Park1</name>
+    <cmt>description: Fallsview Municipal Park campground (showers, washrooms)&lt;br&gt;Details from Google Maps&lt;br&gt;20 E Trailer Ct, Bishop's Falls, NL A0H 1C0https://www.bishopsfalls.ca/visitors/camping_attractions&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 308.0</cmt>
+    <desc>description: Fallsview Municipal Park campground (showers, washrooms)&lt;br&gt;Details from Google Maps&lt;br&gt;20 E Trailer Ct, Bishop's Falls, NL A0H 1C0https://www.bishopsfalls.ca/visitors/camping_attractions&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 308.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="54.51148297637701" lon="-128.57087801210582">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Ferry Island Municipal Campground</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;4301 BC-16, Terrace, BC V8G 1J7&lt;br&gt;www.terrace.ca&lt;br&gt;+1 250-615-9657&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 100.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;4301 BC-16, Terrace, BC V8G 1J7&lt;br&gt;www.terrace.ca&lt;br&gt;+1 250-615-9657&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 100.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.636828985065222" lon="-103.53725298307836">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Foam Lake Campground</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;529 SK-16, Foam Lake, SK S0A 1A0&lt;br&gt;https://foamlake.com/discover-foam-lake/foam-lake-tourism/foam-lake-campground/&lt;br&gt;+1 306-272-3714&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 115.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;529 SK-16, Foam Lake, SK S0A 1A0&lt;br&gt;https://foamlake.com/discover-foam-lake/foam-lake-tourism/foam-lake-campground/&lt;br&gt;+1 306-272-3714&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 115.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.656331997364759" lon="-111.97579099796712">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Fox Lake Campground</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;31267 Range Road 145A 3 km west of, Hanna, AB T0J 1P0&lt;br&gt;hanna.ca&lt;br&gt;+1 403-854-4433&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 185.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;31267 Range Road 145A 3 km west of, Hanna, AB T0J 1P0&lt;br&gt;hanna.ca&lt;br&gt;+1 403-854-4433&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 185.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.005621001124382" lon="-118.77709798514843">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Frank Carpenter Memorial Campground</name>
+    <cmt>description: (flush toilets, $showers)&lt;br&gt;Cyclist shelter&lt;br&gt;Details from Google Maps&lt;br&gt;Fifth Ave, Midway, BC V0H 1M0&lt;br&gt;midwaybc.ca&lt;br&gt;+1 250-449-2467&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 160.0</cmt>
+    <desc>description: (flush toilets, $showers)&lt;br&gt;Cyclist shelter&lt;br&gt;Details from Google Maps&lt;br&gt;Fifth Ave, Midway, BC V0H 1M0&lt;br&gt;midwaybc.ca&lt;br&gt;+1 250-449-2467&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 160.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.511682009324431" lon="-56.109876958653331">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>George Huxter Memorial Park</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.868391022086143" lon="-113.05247202515602">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Gleichen Campground</name>
+    <cmt>description: no official information online about it https://www.campendium.com/gleichen-campground https://www.ioverlander.com/places/179951-gleichen-campground&lt;br&gt;from email "The Beaupre Memorial Campground in Gleichen is seasonal and is opened from mid May-Sept. There is a pit toilet, fire pits, picnic tables, RV dump and water. The campsite is free and no booking are required, first come. There are 7 campsites. No power."&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 322.0</cmt>
+    <desc>description: no official information online about it https://www.campendium.com/gleichen-campground https://www.ioverlander.com/places/179951-gleichen-campground&lt;br&gt;from email "The Beaupre Memorial Campground in Gleichen is seasonal and is opened from mid May-Sept. There is a pit toilet, fire pits, picnic tables, RV dump and water. The campsite is free and no booking are required, first come. There are 7 campsites. No power."&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 322.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.297400966286659" lon="-116.95176699198782">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Golden Municipal Campground &amp; RV Park</name>
+    <cmt>description: (water, store, showers, wifi, laundry)&lt;br&gt;Details from Google Maps&lt;br&gt;1411 9 St S, Golden, BC V0A 1H0&lt;br&gt;www.goldenmunicipalcampground.com&lt;br&gt;+1 250-344-5412&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 53.0</cmt>
+    <desc>description: (water, store, showers, wifi, laundry)&lt;br&gt;Details from Google Maps&lt;br&gt;1411 9 St S, Golden, BC V0A 1H0&lt;br&gt;www.goldenmunicipalcampground.com&lt;br&gt;+1 250-344-5412&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 53.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="52.110022036358714" lon="-106.69725101441145">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Gordon Howe Campground</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1640 Avenue P S, Saskatoon, SK S7M 2X8&lt;br&gt;https://www.saskatoon.ca/parks-recreation-attractions/recreational-facilities-sport-fields/gordon-howe-campground&lt;br&gt;+1 306-975-3328&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 61.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1640 Avenue P S, Saskatoon, SK S7M 2X8&lt;br&gt;https://www.saskatoon.ca/parks-recreation-attractions/recreational-facilities-sport-fields/gordon-howe-campground&lt;br&gt;+1 306-975-3328&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 61.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.029670022428036" lon="-118.44125398434699">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Grand Forks Municipal Campground</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.873621976003051" lon="-100.08376303128898">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Grand Valley Campground</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.822394968941808" lon="-111.70407199300826">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Grassy Lake Municipal Campground</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.091380024328828" lon="-118.67808499373496">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Greenwood City Campground</name>
+    <cmt>description: (no washroom facilities)&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: (no washroom facilities)&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.413659028708935" lon="-102.93856096453965">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Grenfell Recreational Park Campground</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;Lake St, Grenfell, SK S0G 2B0&lt;br&gt;https://letscamp.ca/camps/grenfell-recreational-park&lt;br&gt;+1 306-697-2815&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 168.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;Lake St, Grenfell, SK S0G 2B0&lt;br&gt;https://letscamp.ca/camps/grenfell-recreational-park&lt;br&gt;+1 306-697-2815&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 168.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.097361039370298" lon="-108.47658203914762">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Gull Lake Campground</name>
+    <cmt>description: Well treed setting.&lt;br&gt; Modern washroom and free shower facilities.&lt;br&gt; Free WiFi.&lt;br&gt; Close to downtown services.&lt;br&gt; Picnic tables and firewood available.&lt;br&gt;Details from Google Maps&lt;br&gt;7563 Lake Ave, Gull Lake, SK S0N 1A0&lt;br&gt;https://www.gulllakesk.com/recreation/campground&lt;br&gt;+1 306-672-3447&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 132.0</cmt>
+    <desc>description: Well treed setting.&lt;br&gt; Modern washroom and free shower facilities.&lt;br&gt; Free WiFi.&lt;br&gt; Close to downtown services.&lt;br&gt; Picnic tables and firewood available.&lt;br&gt;Details from Google Maps&lt;br&gt;7563 Lake Ave, Gull Lake, SK S0N 1A0&lt;br&gt;https://www.gulllakesk.com/recreation/campground&lt;br&gt;+1 306-672-3447&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 132.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.544038968160748" lon="-80.937657030299306">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Harrison Park CAMPGROUND</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.17206603102386" lon="-80.390381030738354">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Highpoint Campground</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.598892023786902" lon="-98.874824037775397">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Holland Agricultural Grounds &amp; Campground</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;Park, Holland, MB R0G 0X0&lt;br&gt;+1 204-526-2263&lt;br&gt;https://rmofvictoria.com/p/holland-agriculture-society&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 232.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;Park, Holland, MB R0G 0X0&lt;br&gt;+1 204-526-2263&lt;br&gt;https://rmofvictoria.com/p/holland-agriculture-society&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 232.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.059023004025221" lon="-66.353232013061643">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Inch Arran Park</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;125 Inch Arran Ave, Dalhousie, NB E8C 3C5&lt;br&gt;https://www.heron-bay.ca/incharran&lt;br&gt;https://www.bookyoursite.com/campgrounds/inch-arran-campground#sites&lt;br&gt;+1 506-684-7363&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 320.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;125 Inch Arran Ave, Dalhousie, NB E8C 3C5&lt;br&gt;https://www.heron-bay.ca/incharran&lt;br&gt;https://www.bookyoursite.com/campgrounds/inch-arran-campground#sites&lt;br&gt;+1 506-684-7363&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 320.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.324152983725071" lon="-113.60589296557009">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Irricana Campground</name>
+    <cmt>description: Approved Accommodation #30&lt;br&gt;Details from Google Maps&lt;br&gt;1 St, Irricana, AB T0M 1B0&lt;br&gt;townofirricana.ca&lt;br&gt;+1 403-371-7376&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 30.0</cmt>
+    <desc>description: Approved Accommodation #30&lt;br&gt;Details from Google Maps&lt;br&gt;1 St, Irricana, AB T0M 1B0&lt;br&gt;townofirricana.ca&lt;br&gt;+1 403-371-7376&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 30.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.665007984265685" lon="-64.864260004833341">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Jardine Municipal Park</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.063512986525893" lon="-108.79931397736073">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>John Woodward Campground</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.579692985862494" lon="-80.946421986445785">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Kelso Beach at Nawash Park</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;2nd Avenue West, Owen Sound, ON N4K 2H4&lt;br&gt;https://www.owensoundtourism.ca/en/explore-owen-sound/parks-recreation/camping-and-rv&lt;br&gt;+1 519-371-9734&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 187.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;2nd Avenue West, Owen Sound, ON N4K 2H4&lt;br&gt;https://www.owensoundtourism.ca/en/explore-owen-sound/parks-recreation/camping-and-rv&lt;br&gt;+1 519-371-9734&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 187.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.460181968286633" lon="-109.14463698863983">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Kindersley Regional Park Campground1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1S1 Ditson Dr, Kindersley, SK S0L 1S1&lt;br&gt;https://kindersleyregionalpark.ca/#park-camping&lt;br&gt;+1 306-463-2788&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 67.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1S1 Ditson Dr, Kindersley, SK S0L 1S1&lt;br&gt;https://kindersleyregionalpark.ca/#park-camping&lt;br&gt;+1 306-463-2788&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 67.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="55.113294990733266" lon="-128.02282299846411">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Kitwanga Municipal Campground</name>
+    <cmt>description: Indicates its free&lt;br&gt;https://www.allstays.com/Campgrounds-details/45402.htm&lt;br&gt;Campground Details:&lt;br&gt;free, 8 sites, May-Sep, All ages, Tents, 745 ft elev, tables, grill, toilets, firewood, (C)&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 167.0</cmt>
+    <desc>description: Indicates its free&lt;br&gt;https://www.allstays.com/Campgrounds-details/45402.htm&lt;br&gt;Campground Details:&lt;br&gt;free, 8 sites, May-Sep, All ages, Tents, 745 ft elev, tables, grill, toilets, firewood, (C)&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 167.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.851367987692356" lon="-105.02106299623847">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Lanigan Campground</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;East end of Downing Dr, Lanigan, SK S0K 2M0&lt;br&gt;http://lanigan.ca/recreation/campground/&lt;br&gt;+1 306-365-0000&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 158.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;East end of Downing Dr, Lanigan, SK S0K 2M0&lt;br&gt;http://lanigan.ca/recreation/campground/&lt;br&gt;+1 306-365-0000&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 158.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.988040030002594" lon="-81.251688972115517">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Lion's Head Beach Park Campground</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.38389103487134" lon="-105.52176402881742">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Lorne Calvert Campground</name>
+    <cmt>description: (formerly River Park Campground)&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: (formerly River Park Campground)&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.66175202280283" lon="-98.338051987811923">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Mile 60 Park Campground1</name>
+    <cmt>description: https://www.facebook.com/mile60park/&lt;br&gt;https://letscamp.ca/camps/mile60park&lt;br&gt;https://www.rmofgrey.ca/p/mile-60-park-campground-bookings&lt;br&gt;Details from Google Maps&lt;br&gt;Grey, MB R0G 1Z0&lt;br&gt;www.rmofgrey.ca&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 233.0</cmt>
+    <desc>description: https://www.facebook.com/mile60park/&lt;br&gt;https://letscamp.ca/camps/mile60park&lt;br&gt;https://www.rmofgrey.ca/p/mile-60-park-campground-bookings&lt;br&gt;Details from Google Maps&lt;br&gt;Grey, MB R0G 1Z0&lt;br&gt;www.rmofgrey.ca&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 233.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.260424008592963" lon="-99.82037303969264">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Minnedosa Beach Campground</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.51004896312952" lon="-115.76066996902227">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Mount Baker RV Park</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1501 1st St S, Cranbrook, BC V1C 1B7&lt;br&gt;cranbrooktourism.com&lt;br&gt;+1 778-687-4833&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 55.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1501 1st St S, Cranbrook, BC V1C 1B7&lt;br&gt;cranbrooktourism.com&lt;br&gt;+1 778-687-4833&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 55.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.497638968750834" lon="-117.28666199371219">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Nelson City Campground</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.008431034162641" lon="-88.257367964833975">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Nipigon Marina Campground</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;Nipigon, ON P0T 2J0&lt;br&gt;https://www.nipigon.net/play-explore/facilities/nipigon-marina&lt;br&gt;+1 807-887-3040&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 174.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;Nipigon, ON P0T 2J0&lt;br&gt;https://www.nipigon.net/play-explore/facilities/nipigon-marina&lt;br&gt;+1 807-887-3040&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 174.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.571940014138818" lon="-104.91528999991715">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Ogema Regional Park &amp; Campground</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.644259996712208" lon="-104.66215903870761">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Pangman Campground and RV Park</name>
+    <cmt>description: Confirmed on facebook - does have an outhouse&lt;br&gt;Details from Google Maps&lt;br&gt;309 Mergens St, Pangman, SK S0C 2C0&lt;br&gt;www.tourismsaskatchewan.com&lt;br&gt;+1 403-415-5030&lt;br&gt;Municipal Campground&lt;br&gt;iOverlander has a review for it, so it might not be closed https://www.ioverlander.com/places/278235-pangman-camping&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 223.0</cmt>
+    <desc>description: Confirmed on facebook - does have an outhouse&lt;br&gt;Details from Google Maps&lt;br&gt;309 Mergens St, Pangman, SK S0C 2C0&lt;br&gt;www.tourismsaskatchewan.com&lt;br&gt;+1 403-415-5030&lt;br&gt;Municipal Campground&lt;br&gt;iOverlander has a review for it, so it might not be closed https://www.ioverlander.com/places/278235-pangman-camping&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 223.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.337936975061893" lon="-117.66260703094304">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>PassCreek Campground</name>
+    <cmt>description: (flush toilets, showers, UV treated water) (1090 Parkside Rd, Castlegar, BC V1N 4T7) Approved Accommodation #3&lt;br&gt;Details from Google Maps&lt;br&gt;1090 Parkside Rd, Castlegar, BC V1N 4T7&lt;br&gt;passcreekcampground.weebly.com&lt;br&gt;+1 250-304-4602&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 35.0</cmt>
+    <desc>description: (flush toilets, showers, UV treated water) (1090 Parkside Rd, Castlegar, BC V1N 4T7) Approved Accommodation #3&lt;br&gt;Details from Google Maps&lt;br&gt;1090 Parkside Rd, Castlegar, BC V1N 4T7&lt;br&gt;passcreekcampground.weebly.com&lt;br&gt;+1 250-304-4602&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 35.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.609819008037448" lon="-119.6588639728725">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Peach Orchard Campsite</name>
+    <cmt>description: yes tenting - asked on Google Maps&lt;br&gt;Details from Google Maps&lt;br&gt;6321 Peach Orchard Rd, Summerland, BC V0H 1Z6&lt;br&gt;www.summerland.ca&lt;br&gt;+1 250-494-9649&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 370.0</cmt>
+    <desc>description: yes tenting - asked on Google Maps&lt;br&gt;Details from Google Maps&lt;br&gt;6321 Peach Orchard Rd, Summerland, BC V0H 1Z6&lt;br&gt;www.summerland.ca&lt;br&gt;+1 250-494-9649&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 370.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.716593030840158" lon="-86.363704008981586">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Penn Lake Park And Campground1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;61 Penn Lake Rd, Marathon, ON P0T 2E0&lt;br&gt;https://www.marathon.ca/en/explore-and-play/camping-at-penn-lake-park.aspx&lt;br&gt;+1 807-229-1340&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 122.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;61 Penn Lake Rd, Marathon, ON P0T 2E0&lt;br&gt;https://www.marathon.ca/en/explore-and-play/camping-at-penn-lake-park.aspx&lt;br&gt;+1 807-229-1340&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 122.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.559975014999509" lon="-100.94716200605035">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Pipestone Community Campground</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.617819007486105" lon="-93.359334021806717">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Point Park Tenting Area</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;Agency Indian Reserve No. 1, Rainy Lake, ON P0W 1C0&lt;br&gt;http://www.fortfrances.ca/experience/activities-amenities/pithers-point-park/camping&lt;br&gt;+1 807-274-5323&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 147.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;Agency Indian Reserve No. 1, Rainy Lake, ON P0W 1C0&lt;br&gt;http://www.fortfrances.ca/experience/activities-amenities/pithers-point-park/camping&lt;br&gt;+1 807-274-5323&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 147.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.560940993949771" lon="-107.98068601638079">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Prairie View Park Mobile Home and Campground</name>
+    <cmt>description: Barrier-free, modern washrooms/showers&lt;br&gt; Children’s playground &lt;br&gt; Picnic shelter &lt;br&gt; Picnic tables &lt;br&gt; Fire pits &lt;br&gt; All sites full-service (30 amp/water/sewer) &lt;br&gt; 14 pull-through sites&lt;br&gt; Tenting area &lt;br&gt; Group camping available &lt;br&gt; Seasonal rates available &lt;br&gt; Sewage disposal&lt;br&gt;Details from Google Maps&lt;br&gt;601 Jubilee Ave #603, Rosetown, SK S0L 2V0&lt;br&gt;https://wheatlandregionalcentre.com/campground&lt;br&gt;+1 306-882-4257&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 171.0</cmt>
+    <desc>description: Barrier-free, modern washrooms/showers&lt;br&gt; Children’s playground &lt;br&gt; Picnic shelter &lt;br&gt; Picnic tables &lt;br&gt; Fire pits &lt;br&gt; All sites full-service (30 amp/water/sewer) &lt;br&gt; 14 pull-through sites&lt;br&gt; Tenting area &lt;br&gt; Group camping available &lt;br&gt; Seasonal rates available &lt;br&gt; Sewage disposal&lt;br&gt;Details from Google Maps&lt;br&gt;601 Jubilee Ave #603, Rosetown, SK S0L 2V0&lt;br&gt;https://wheatlandregionalcentre.com/campground&lt;br&gt;+1 306-882-4257&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 171.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.462354006245732" lon="-120.47719999216497">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Princeton Municipal Campground</name>
+    <cmt>description: (water, shower, flush toilets, wifi) Approved Accommodation #24&lt;br&gt;Details from Google Maps&lt;br&gt;365 BC-3, Princeton, BC V0X 1W0&lt;br&gt;discoverprinceton.ca&lt;br&gt;+1 250-295-7355&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 24.0</cmt>
+    <desc>description: (water, shower, flush toilets, wifi) Approved Accommodation #24&lt;br&gt;Details from Google Maps&lt;br&gt;365 BC-3, Princeton, BC V0X 1W0&lt;br&gt;discoverprinceton.ca&lt;br&gt;+1 250-295-7355&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 24.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.076755974441767" lon="-110.79393804073334">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Redcliff Municipal Campground</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.576816018670797" lon="-101.70441197231412">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Redvers Tourism Log Cabin Campground1</name>
+    <cmt>description: Book online or call: During open season (May-Sept) (306)452-3276&lt;br&gt;Details from Google Maps&lt;br&gt;SK-13, Redvers, SK S0C 2H0&lt;br&gt;https://redvers.ca/redvers-tourism-log-cabin/&lt;br&gt;+1 306-452-3276&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 227.0</cmt>
+    <desc>description: Book online or call: During open season (May-Sept) (306)452-3276&lt;br&gt;Details from Google Maps&lt;br&gt;SK-13, Redvers, SK S0C 2H0&lt;br&gt;https://redvers.ca/redvers-tourism-log-cabin/&lt;br&gt;+1 306-452-3276&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 227.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.560337029397488" lon="-101.10035696066916">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Reston Campground1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;301 1st St W, Reston, MB R0M 1X0&lt;br&gt;https://www.rmofpipestone.com/p/accomodations&lt;br&gt;+1 204-851-7326&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 228.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;301 1st St W, Reston, MB R0M 1X0&lt;br&gt;https://www.rmofpipestone.com/p/accomodations&lt;br&gt;+1 204-851-7326&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 228.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.657403994351625" lon="-103.85148298926651">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>River Park Campground1</name>
+    <cmt>description: May long weekend – September 30&lt;br&gt;Details from Google Maps&lt;br&gt;403 Confederation Dr, Weyburn, SK S4H 2G9&lt;br&gt;https://weyburn.ca/river-park-campground/&lt;br&gt;+1 306-897-7877&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 224.0</cmt>
+    <desc>description: May long weekend – September 30&lt;br&gt;Details from Google Maps&lt;br&gt;403 Confederation Dr, Weyburn, SK S4H 2G9&lt;br&gt;https://weyburn.ca/river-park-campground/&lt;br&gt;+1 306-897-7877&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 224.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.228804033249617" lon="-99.454792980104685">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Riverbend Campground (formerly Lions Riverbend Campground)</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;Broadway Ave, Neepawa, MB R0J 1H0&lt;br&gt;https://www.neepawa.ca/campground/&lt;br&gt;+1 204-476-7676&lt;br&gt;more details&lt;br&gt;https://www.campreservations.ca/campground/riverbend-campground--2751&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 152.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;Broadway Ave, Neepawa, MB R0J 1H0&lt;br&gt;https://www.neepawa.ca/campground/&lt;br&gt;+1 204-476-7676&lt;br&gt;more details&lt;br&gt;https://www.campreservations.ca/campground/riverbend-campground--2751&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 152.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="54.784968970343471" lon="-127.14908603578806">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Riverside Municipal Campground</name>
+    <cmt>description: (wifi, pit toilets, $Showers)&lt;br&gt;Details from Google Maps&lt;br&gt;3843 19 Ave, Smithers, BC V0J 2N0&lt;br&gt;www.smithers.ca&lt;br&gt;+1 250-847-1600&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 94.0</cmt>
+    <desc>description: (wifi, pit toilets, $Showers)&lt;br&gt;Details from Google Maps&lt;br&gt;3843 19 Ave, Smithers, BC V0J 2N0&lt;br&gt;www.smithers.ca&lt;br&gt;+1 250-847-1600&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 94.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.829639015719295" lon="-77.135054022073746">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Riverside Park Campground (Pembroke, ON)</name>
+    <cmt>description: Open seasonally from Victoria Day weekend (May)-Thanksgiving weekend (October)&lt;br&gt;Mentioned in video https://www.youtube.com/watch?v=7jruPfK_ejo&lt;br&gt;Details from Google Maps&lt;br&gt;961 Pembroke St W, Pembroke, ON K8A&lt;br&gt;www.pembrokeontario.com&lt;br&gt;+1 613-735-6821 ext. 1504&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 145.0</cmt>
+    <desc>description: Open seasonally from Victoria Day weekend (May)-Thanksgiving weekend (October)&lt;br&gt;Mentioned in video https://www.youtube.com/watch?v=7jruPfK_ejo&lt;br&gt;Details from Google Maps&lt;br&gt;961 Pembroke St W, Pembroke, ON K8A&lt;br&gt;www.pembrokeontario.com&lt;br&gt;+1 613-735-6821 ext. 1504&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 145.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="54.02516596019268" lon="-124.01081498712301">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Riverside Park Campground (Vanderhoof, BC)</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;3100 Burrard Ave, Vanderhoof, BC V0J 3A0&lt;br&gt;https://vanderhoof.ca/visit/camping/+1 250-567-4710&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 88.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;3100 Burrard Ave, Vanderhoof, BC V0J 3A0&lt;br&gt;https://vanderhoof.ca/visit/camping/+1 250-567-4710&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 88.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.64905695989728" lon="-108.40738699771464">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Shawnee Campground and Play Park</name>
+    <cmt>description: https://www.shaunavon.com/page/campground-information/&lt;br&gt;Details from Google Maps&lt;br&gt;Shaunavon, SK S0N 2M0&lt;br&gt;+1 306-297-2605&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 219.0</cmt>
+    <desc>description: https://www.shaunavon.com/page/campground-information/&lt;br&gt;Details from Google Maps&lt;br&gt;Shaunavon, SK S0N 2M0&lt;br&gt;+1 306-297-2605&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 219.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.062774984166026" lon="-113.39544902555645">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Strathmore AG Campground</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;33 Wheatland Trail, Strathmore, AB T1P 1K1&lt;br&gt;https://strathmoreag.com/camping&lt;br&gt;+1 403-325-0794&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 91.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;33 Wheatland Trail, Strathmore, AB T1P 1K1&lt;br&gt;https://strathmoreag.com/camping&lt;br&gt;+1 403-325-0794&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 91.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.065779009833932" lon="-121.96435597725213">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Sunnyside Campground</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.812029991298914" lon="-112.16976902447641">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Taber Municipal Park</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.678184995427728" lon="-103.03405397571623">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>The Stoughton Campground1</name>
+    <cmt>description: open May – September (weather permitting)&lt;br&gt;Details from Google Maps&lt;br&gt;Elizabeth Ave, Stoughton, SK S0G 4T0&lt;br&gt;https://stoughtonsk.ca/stoughton-campground/&lt;br&gt;+1 306-457-2413&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 225.0</cmt>
+    <desc>description: open May – September (weather permitting)&lt;br&gt;Details from Google Maps&lt;br&gt;Elizabeth Ave, Stoughton, SK S0G 4T0&lt;br&gt;https://stoughtonsk.ca/stoughton-campground/&lt;br&gt;+1 306-457-2413&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 225.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.260920036584139" lon="-83.566594021394849">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Thessalon Lakeside Park Campground1</name>
+    <cmt>description: Approved Accommodation #33&lt;br&gt;Details from Google Maps&lt;br&gt;110 Lakeside Dr #100, Thessalon, ON P0R 1L0&lt;br&gt;https://thessalon.ca/explore/accommodations/&lt;br&gt;+1 705-842-2523&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 33.0</cmt>
+    <desc>description: Approved Accommodation #33&lt;br&gt;Details from Google Maps&lt;br&gt;110 Lakeside Dr #100, Thessalon, ON P0R 1L0&lt;br&gt;https://thessalon.ca/explore/accommodations/&lt;br&gt;+1 705-842-2523&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 33.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.922238020226359" lon="-98.949032966047525">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Three Creeks Campground</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.517671968787909" lon="-108.8282179646194">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Town Of Eastend Campground</name>
+    <cmt>description: On site washrooms, shower facilities, and sewage disposal available, along with barbecues, picnic tables, and sheltered cook area. Located next to a well-equipped playground, ball diamonds, Swimming Pool &amp;amp; Splash Park and the Streambank Golf Course.&lt;br&gt;Details from Google Maps&lt;br&gt;Unnamed Road, Eastend, SK S0N 0T0&lt;br&gt;https://townofeastend.com/p/camping---eastend-campground&lt;br&gt;+1 306-295-3322&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 217.0</cmt>
+    <desc>description: On site washrooms, shower facilities, and sewage disposal available, along with barbecues, picnic tables, and sheltered cook area. Located next to a well-equipped playground, ball diamonds, Swimming Pool &amp;amp; Splash Park and the Streambank Golf Course.&lt;br&gt;Details from Google Maps&lt;br&gt;Unnamed Road, Eastend, SK S0N 0T0&lt;br&gt;https://townofeastend.com/p/camping---eastend-campground&lt;br&gt;+1 306-295-3322&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 217.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.413830019533634" lon="-107.03498002141714">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Town Of Morse Campground</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.794401004910469" lon="-112.18672603368759">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Town of Taber Trout Pond Campground</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.490524971857667" lon="-89.186244020238519">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Trowbridge Falls Municipal Campground</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.096379997208714" lon="-122.00683001428843">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Vedder River Campground (open March 28 - Nov 1, 2024)</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;5355 Giesbrecht Rd, Chilliwack, BC V2R 4R1&lt;br&gt;www.fvrd.ca&lt;br&gt;+1 604-823-6012&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 113.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;5355 Giesbrecht Rd, Chilliwack, BC V2R 4R1&lt;br&gt;www.fvrd.ca&lt;br&gt;+1 604-823-6012&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 113.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.613383999094367" lon="-100.26272898539901">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Victoria Park Campground (Souris, MB)</name>
+    <cmt>description: (might be closed 1april2024)&lt;br&gt;It isn't listed on the accommodation page https://sourismanitoba.com/accommodations &lt;br&gt;The link to the camping is broken on the page &lt;br&gt;https://sourismanitoba.com/victoria-park&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: (might be closed 1april2024)&lt;br&gt;It isn't listed on the accommodation page https://sourismanitoba.com/accommodations &lt;br&gt;The link to the camping is broken on the page &lt;br&gt;https://sourismanitoba.com/victoria-park&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="43.957842020317912" lon="-78.164189038798213">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Victoria Park Campgrounds (Cobourg, ON)</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;138 Division St, Cobourg, ON K9A 3P3&lt;br&gt;https://www.cobourg.ca/en/parks-recreation-community/victoria-park-campground.aspx&lt;br&gt;+1 905-373-7321&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 51.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;138 Division St, Cobourg, ON K9A 3P3&lt;br&gt;https://www.cobourg.ca/en/parks-recreation-community/victoria-park-campground.aspx&lt;br&gt;+1 905-373-7321&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 51.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.598915996029973" lon="-99.684134004637599">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Wawanesa Community Park / Camping1</name>
+    <cmt>description: Open from May 13th to Oct 6th&lt;br&gt;Details from Google Maps&lt;br&gt;303 Water St, Wawanesa, MB R0K 2G0&lt;br&gt;www.oakland-wawanesa.ca&lt;br&gt;+1 204-824-2223&lt;br&gt;more details&lt;br&gt;https://www.campreservations.ca/campground/wawanesa-community-park-2578&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 231.0</cmt>
+    <desc>description: Open from May 13th to Oct 6th&lt;br&gt;Details from Google Maps&lt;br&gt;303 Water St, Wawanesa, MB R0K 2G0&lt;br&gt;www.oakland-wawanesa.ca&lt;br&gt;+1 204-824-2223&lt;br&gt;more details&lt;br&gt;https://www.campreservations.ca/campground/wawanesa-community-park-2578&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 231.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.32986300997436" lon="-75.867756027728319">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Wesley Clover Parks Campground</name>
+    <cmt>description: indicates tent camping&lt;br&gt;https://campgrounds.rvlife.com/regions/ontario/ottawa/wesley-clover-parks-campground-5318&lt;br&gt;Details from Google Maps&lt;br&gt;411 Corkstown Rd, Ottawa, ON K2K 0J5&lt;br&gt;wesleycloverparks.com&lt;br&gt;+1 613-828-6632&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: indicates tent camping&lt;br&gt;https://campgrounds.rvlife.com/regions/ontario/ottawa/wesley-clover-parks-campground-5318&lt;br&gt;Details from Google Maps&lt;br&gt;411 Corkstown Rd, Ottawa, ON K2K 0J5&lt;br&gt;wesleycloverparks.com&lt;br&gt;+1 613-828-6632&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="54.062881004065275" lon="-124.84565597958863">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>White Swan Park - Municipal Campground</name>
+    <cmt>description: Yes tents&lt;br&gt;https://www.campendium.com/white-swan-park-campground&lt;br&gt;Details from Google Maps&lt;br&gt;Park Dr, Fraser Lake, BC V0J&lt;br&gt;www.fraserlake.ca&lt;br&gt;+1 250-699-1723&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 293.0</cmt>
+    <desc>description: Yes tents&lt;br&gt;https://www.campendium.com/white-swan-park-campground&lt;br&gt;Details from Google Maps&lt;br&gt;Park Dr, Fraser Lake, BC V0J&lt;br&gt;www.fraserlake.ca&lt;br&gt;+1 250-699-1723&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 293.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.334381982684135" lon="-102.26803796365857">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Whitewood Campground</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;212 Lalonde St, Whitewood, SK S0G 5C0&lt;br&gt;townofwhitewood.ca&lt;br&gt;+1 306-735-2210&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 72.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;212 Lalonde St, Whitewood, SK S0G 5C0&lt;br&gt;townofwhitewood.ca&lt;br&gt;+1 306-735-2210&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 72.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.229401998221874" lon="-98.954349020496011">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Williams Park</name>
+    <cmt>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="55.013814959675074" lon="-127.32534396462142">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Witset RV Park and Campground</name>
+    <cmt>description: (Washrooms, laundry, internet)&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</cmt>
+    <desc>description: (Washrooms, laundry, internet)&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.224205996841192" lon="-102.48376904055476">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Yorkton City Campground</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;320 York Rd W, Yorkton, SK S3N 3N5&lt;br&gt;www.yorkton.ca&lt;br&gt;+1 306-786-1757&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 151.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;320 York Rd W, Yorkton, SK S3N 3N5&lt;br&gt;www.yorkton.ca&lt;br&gt;+1 306-786-1757&lt;br&gt;Type: Municipal Campground&lt;br&gt;ID: 151.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+</gpx>
