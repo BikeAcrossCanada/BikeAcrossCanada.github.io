@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?><gpx creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd http://www.garmin.com/xmlschemas/TripExtensions/v1 http://www.garmin.com/xmlschemas/TripExtensionsv1.xsd http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1 http://www.garmin.com/xmlschemas/TripMetaDataExtensionsv1.xsd http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1 http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensionsv1.xsd http://www.garmin.com/xmlschemas/CreationTimeExtension/v1 http://www.garmin.com/xmlschemas/CreationTimeExtensionsv1.xsd http://www.garmin.com/xmlschemas/AccelerationExtension/v1 http://www.garmin.com/xmlschemas/AccelerationExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.garmin.com/xmlschemas/VideoExtension/v1 http://www.garmin.com/xmlschemas/VideoExtensionv1.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1" xmlns:tmd="http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1" xmlns:vptm="http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1" xmlns:ctx="http://www.garmin.com/xmlschemas/CreationTimeExtension/v1" xmlns:gpxacc="http://www.garmin.com/xmlschemas/AccelerationExtension/v1" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:vidx1="http://www.garmin.com/xmlschemas/VideoExtension/v1">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2026-10-01T17:47:34Z</time>
+    <bounds maxlat="49.130769018083811" maxlon="-65.716398982331157" minlat="44.611999019980431" minlon="-123.9120820350945" />
+  </metadata>
+
+  <wpt lat="44.611999019980431" lon="-65.716398982331157">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Jaggars Point Oceanfront Campground</name>
+    <cmt>description: &lt;br&gt;Type: Privately Owned Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Privately Owned Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.646188983693719" lon="-90.417502010241151">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Kashabowie River Resort</name>
+    <cmt>description: yes tenting &lt;br&gt;https://www.transcanadahighway.com/listing/lake-kashabowie-lodge-campground/&lt;br&gt;Details from Google Maps&lt;br&gt;1 Kash River Rd, Kashabowie, ON P0T 1Y0&lt;br&gt;www.kashabowie.com&lt;br&gt;+1 807-926-2442&lt;br&gt;Type: Privately Owned Campground&lt;br&gt;ID: 301.0</cmt>
+    <desc>description: yes tenting &lt;br&gt;https://www.transcanadahighway.com/listing/lake-kashabowie-lodge-campground/&lt;br&gt;Details from Google Maps&lt;br&gt;1 Kash River Rd, Kashabowie, ON P0T 1Y0&lt;br&gt;www.kashabowie.com&lt;br&gt;+1 807-926-2442&lt;br&gt;Type: Privately Owned Campground&lt;br&gt;ID: 301.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.130769018083811" lon="-123.9120820350945">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Living Forest Oceanside Campground &amp; RV Park</name>
+    <cmt>description: ID#119 &lt;br&gt;Details from Google Maps&lt;br&gt;6 Maki Rd, Nanaimo, BC V9R 6N7&lt;br&gt;livingforest.com&lt;br&gt;+1 250-755-1755&lt;br&gt;Type: Privately Owned Campground&lt;br&gt;ID: 119.0</cmt>
+    <desc>description: ID#119 &lt;br&gt;Details from Google Maps&lt;br&gt;6 Maki Rd, Nanaimo, BC V9R 6N7&lt;br&gt;livingforest.com&lt;br&gt;+1 250-755-1755&lt;br&gt;Type: Privately Owned Campground&lt;br&gt;ID: 119.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+</gpx>

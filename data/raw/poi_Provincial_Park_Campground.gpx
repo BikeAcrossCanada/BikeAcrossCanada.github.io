@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?><gpx creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd http://www.garmin.com/xmlschemas/TripExtensions/v1 http://www.garmin.com/xmlschemas/TripExtensionsv1.xsd http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1 http://www.garmin.com/xmlschemas/TripMetaDataExtensionsv1.xsd http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1 http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensionsv1.xsd http://www.garmin.com/xmlschemas/CreationTimeExtension/v1 http://www.garmin.com/xmlschemas/CreationTimeExtensionsv1.xsd http://www.garmin.com/xmlschemas/AccelerationExtension/v1 http://www.garmin.com/xmlschemas/AccelerationExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.garmin.com/xmlschemas/VideoExtension/v1 http://www.garmin.com/xmlschemas/VideoExtensionv1.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1" xmlns:tmd="http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1" xmlns:vptm="http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1" xmlns:ctx="http://www.garmin.com/xmlschemas/CreationTimeExtension/v1" xmlns:gpxacc="http://www.garmin.com/xmlschemas/AccelerationExtension/v1" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:vidx1="http://www.garmin.com/xmlschemas/VideoExtension/v1">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2026-10-01T17:44:10Z</time>
+    <bounds maxlat="51.221774993464351" maxlon="-61.104466980323195" minlat="44.778349036350846" minlon="-125.29559997841716" />
+  </metadata>
+
+  <wpt lat="48.605698021128774" lon="-123.52916995994747">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Bamberton Campsite (Bamberton Provincial Park)</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;Cowichan Valley F, BC V0R 2P4&lt;br&gt;https://bcparks.ca/bamberton-park/&lt;br&gt;+1 250-474-1336&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;Cowichan Valley F, BC V0R 2P4&lt;br&gt;https://bcparks.ca/bamberton-park/&lt;br&gt;+1 250-474-1336&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.221774993464351" lon="-114.7178690135479">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Ghost Reservoir Provincial Recreation Area</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;Bighorn No. 8, AB T0L 1N0&lt;br&gt;https://albertaparks.ca/parks/kananaskis/ghost-reservoir-pra/&lt;br&gt;+1 403-678-0760&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 295.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;Bighorn No. 8, AB T0L 1N0&lt;br&gt;https://albertaparks.ca/parks/kananaskis/ghost-reservoir-pra/&lt;br&gt;+1 403-678-0760&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 295.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.778349036350846" lon="-76.229776963591576">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Murphys Point Provincial Park - Hogg Bay Campground</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;2243 Elm Grove Rd, Perth, ON K7H 3C7&lt;br&gt;https://www.ontarioparks.ca/park/murphyspoint/camping&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 319.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;2243 Elm Grove Rd, Perth, ON K7H 3C7&lt;br&gt;https://www.ontarioparks.ca/park/murphyspoint/camping&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 319.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.036828024312854" lon="-125.29559997841716">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Quinsam Campground (Elk Falls Provincial Park)</name>
+    <cmt>description: ID#154&lt;br&gt;Details from Google Maps&lt;br&gt;Campbell River Rd, Campbell River, BC V0P 1N0&lt;br&gt;bcparks.ca&lt;br&gt;+1 250-850-7125&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 154.0</cmt>
+    <desc>description: ID#154&lt;br&gt;Details from Google Maps&lt;br&gt;Campbell River Rd, Campbell River, BC V0P 1N0&lt;br&gt;bcparks.ca&lt;br&gt;+1 250-850-7125&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 154.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.292131969705224" lon="-124.92809501476586">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Sproat Lake Provincial Park Campsite</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;BC-4, Kleecoot, BC V0R 1W0&lt;br&gt;+1 250-474-1336&lt;br&gt;https://bcparks.ca/sproat-lake-park/&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 162.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;BC-4, Kleecoot, BC V0R 1W0&lt;br&gt;+1 250-474-1336&lt;br&gt;https://bcparks.ca/sproat-lake-park/&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 162.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.967011032626033" lon="-61.104466980323195">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Whycocomagh Provincial Park1</name>
+    <cmt>description: 2024 Operating Season: June 7 to October 21, 2024&lt;br&gt;89 Provincial Park Road, Whycocomagh, NS B0E 3M0&lt;br&gt;Natural Resources and Renewables Office Whycocomagh&lt;br&gt;Details from Google Maps&lt;br&gt;89 Provincial Park Rd, Whycocomagh, NS B0E 3M0&lt;br&gt;https://parks.novascotia.ca/park/whycocomagh&lt;br&gt;+1 902-756-2339&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 141.0</cmt>
+    <desc>description: 2024 Operating Season: June 7 to October 21, 2024&lt;br&gt;89 Provincial Park Road, Whycocomagh, NS B0E 3M0&lt;br&gt;Natural Resources and Renewables Office Whycocomagh&lt;br&gt;Details from Google Maps&lt;br&gt;89 Provincial Park Rd, Whycocomagh, NS B0E 3M0&lt;br&gt;https://parks.novascotia.ca/park/whycocomagh&lt;br&gt;+1 902-756-2339&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 141.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+</gpx>

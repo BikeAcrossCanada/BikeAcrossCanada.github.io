@@ -1,0 +1,1117 @@
+﻿<?xml version="1.0" encoding="utf-8"?><gpx creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd http://www.garmin.com/xmlschemas/TripExtensions/v1 http://www.garmin.com/xmlschemas/TripExtensionsv1.xsd http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1 http://www.garmin.com/xmlschemas/TripMetaDataExtensionsv1.xsd http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1 http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensionsv1.xsd http://www.garmin.com/xmlschemas/CreationTimeExtension/v1 http://www.garmin.com/xmlschemas/CreationTimeExtensionsv1.xsd http://www.garmin.com/xmlschemas/AccelerationExtension/v1 http://www.garmin.com/xmlschemas/AccelerationExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.garmin.com/xmlschemas/VideoExtension/v1 http://www.garmin.com/xmlschemas/VideoExtensionv1.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1" xmlns:tmd="http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1" xmlns:vptm="http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1" xmlns:ctx="http://www.garmin.com/xmlschemas/CreationTimeExtension/v1" xmlns:gpxacc="http://www.garmin.com/xmlschemas/AccelerationExtension/v1" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:vidx1="http://www.garmin.com/xmlschemas/VideoExtension/v1">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2026-10-01T17:45:42Z</time>
+    <bounds maxlat="52.850495958700776" maxlon="-53.920793998986483" minlat="44.292873982340097" minlon="-125.72204296477139" />
+  </metadata>
+
+  <wpt lat="46.830340018495917" lon="-60.61429101973772">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Big Intervale Campground - Cape Breton Highlands National Park</name>
+    <cmt>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.710069011896849" lon="-60.365923997014761">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Broad Cove Campground</name>
+    <cmt>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.982314016669989" lon="-75.786615014076233">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Burritts Rapids Lockstation</name>
+    <cmt>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/17-burrittsrapids.html&lt;br&gt;Details from Google Maps&lt;br&gt;673 River Rd, Kemptville, ON K0G 1J0&lt;br&gt;https://www.pc.gc.ca/en/lhn-nhs/on/rideau?utm_source=gmb&amp;amp;utm_medium=rideau_lock17&lt;br&gt;+1 613-258-4510&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/17-burrittsrapids.html&lt;br&gt;Details from Google Maps&lt;br&gt;673 River Rd, Kemptville, ON K0G 1J0&lt;br&gt;https://www.pc.gc.ca/en/lhn-nhs/on/rideau?utm_source=gmb&amp;amp;utm_medium=rideau_lock17&lt;br&gt;+1 613-258-4510&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.653763996437192" lon="-60.39952302351594">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Cape Breton Highlands National Park - Ingonish Beach Campground</name>
+    <cmt>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.812541969120502" lon="-60.768416030332446">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Cape Breton Highlands National Park - MacIntosh Brook Campground</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;23606 Cabot Trail, Pleasant Bay, NS B0E 2P0&lt;br&gt;www.pc.gc.ca&lt;br&gt;+1 877-737-3783&lt;br&gt;Type: National Park Campground&lt;br&gt;ID: 245.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;23606 Cabot Trail, Pleasant Bay, NS B0E 2P0&lt;br&gt;www.pc.gc.ca&lt;br&gt;+1 877-737-3783&lt;br&gt;Type: National Park Campground&lt;br&gt;ID: 245.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.650080988183618" lon="-60.954146012663841">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Chéticamp Campground - National Park</name>
+    <cmt>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="52.220071982592344" lon="-117.20456602983177">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Columbia Icefield Campground</name>
+    <cmt>description: Open: June 12 to October 14, 2024&lt;br&gt;&lt;br&gt;"Icefield Tent&lt;br&gt;&lt;br&gt;Down the road from the world-renowned Columbia Icefield, this campground puts you on the doorstep of some of the most spectacular scenery on the planet. Glacier views are had from most campsites and from the windows of the cozy log cookhouses.&lt;br&gt;&lt;br&gt;Tenting only."&lt;br&gt;https://parks.canada.ca/pn-np/ab/jasper/activ/passez-stay/camping?utm_source=gmb&amp;amp;utm_medium=columbia_campground&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: Open: June 12 to October 14, 2024&lt;br&gt;&lt;br&gt;"Icefield Tent&lt;br&gt;&lt;br&gt;Down the road from the world-renowned Columbia Icefield, this campground puts you on the doorstep of some of the most spectacular scenery on the planet. Glacier views are had from most campsites and from the windows of the cozy log cookhouses.&lt;br&gt;&lt;br&gt;Tenting only."&lt;br&gt;https://parks.canada.ca/pn-np/ab/jasper/activ/passez-stay/camping?utm_source=gmb&amp;amp;utm_medium=columbia_campground&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.726095965132117" lon="-60.92567696236074">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Corney Brook Campground</name>
+    <cmt>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.056225987151265" lon="-125.72204296477139">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Green Point Campground (Pacific Rim National Park - Long Beach)</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;Green Point Campground, BC-4, Ucluelet, BC V0R 3A0&lt;br&gt;http://www.pc.gc.ca/eng/pn-np/bc/pacificrim/visit/visit4c.aspx&lt;br&gt;+1 877-737-3783&lt;br&gt;*&lt;br&gt;Long Beach Unit: Green Point Campground&lt;br&gt;&lt;br&gt;12 km north of the Ucluelet-Tofino junction on Hwy.4, midway between Ucluelet and Tofino. &lt;br&gt;&lt;br&gt;Open: May 1 – October 15, 2024&lt;br&gt;Type: National Park Campground&lt;br&gt;ID: 149.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;Green Point Campground, BC-4, Ucluelet, BC V0R 3A0&lt;br&gt;http://www.pc.gc.ca/eng/pn-np/bc/pacificrim/visit/visit4c.aspx&lt;br&gt;+1 877-737-3783&lt;br&gt;*&lt;br&gt;Long Beach Unit: Green Point Campground&lt;br&gt;&lt;br&gt;12 km north of the Ucluelet-Tofino junction on Hwy.4, midway between Ucluelet and Tofino. &lt;br&gt;&lt;br&gt;Open: May 1 – October 15, 2024&lt;br&gt;Type: National Park Campground&lt;br&gt;ID: 149.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.222814014181495" lon="-116.57080203294754">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Hoodoo Creek Campground</name>
+    <cmt>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.266116015613079" lon="-117.49528102576733">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Illecillewaet Campground</name>
+    <cmt>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.244876021519303" lon="-115.84185398183763">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Johnston Canyon Campground</name>
+    <cmt>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.423077965155244" lon="-116.43542499281466">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Kicking Horse Campground</name>
+    <cmt>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.417629979550838" lon="-116.17364499717951">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Lake Louise Soft-Sided Trailer/Tent Campground1</name>
+    <cmt>description: (Showers, hot/cold water, flush toilets)&lt;br&gt;Details from Google Maps&lt;br&gt;Fairview Rd, Lake Louise, AB T0Lhttps://parks.canada.ca/pn-np/ab/banff/activ/camping#lakelouisesoft&lt;br&gt;Type: National Park Campground&lt;br&gt;ID: 47.0</cmt>
+    <desc>description: (Showers, hot/cold water, flush toilets)&lt;br&gt;Details from Google Maps&lt;br&gt;Fairview Rd, Lake Louise, AB T0Lhttps://parks.canada.ca/pn-np/ab/banff/activ/camping#lakelouisesoft&lt;br&gt;Type: National Park Campground&lt;br&gt;ID: 47.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.255214009433985" lon="-117.53736798651516">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Loop Brook Campground</name>
+    <cmt>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.648097962141037" lon="-53.920793998986483">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Malady Head Campground</name>
+    <cmt>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.184286009520292" lon="-116.11745498143137">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Marble Canyon Campground (Kootenay National Park)</name>
+    <cmt>description: (Toilets, water)&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: (Toilets, water)&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.766893969848752" lon="-115.94600399024785">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>McLeod Meadows CG, Kootenay NP</name>
+    <cmt>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.916882030665874" lon="-75.8354870416224">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Merrickville Lockstation</name>
+    <cmt>description: 6) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/21-23-merrickville.html&lt;br&gt;Details from Google Maps&lt;br&gt;Elgin St, Merrickville-Wolford, ON K0G 1N0&lt;br&gt;https://www.pc.gc.ca/en/lhn-nhs/on/rideau?utm_source=gmb&amp;amp;utm_medium=rideau_lock21to23&lt;br&gt;+1 613-269-4787&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: 6) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/21-23-merrickville.html&lt;br&gt;Details from Google Maps&lt;br&gt;Elgin St, Merrickville-Wolford, ON K0G 1N0&lt;br&gt;https://www.pc.gc.ca/en/lhn-nhs/on/rideau?utm_source=gmb&amp;amp;utm_medium=rideau_lock21to23&lt;br&gt;+1 613-269-4787&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.421410972252488" lon="-116.44334396347404">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Monarch Campground</name>
+    <cmt>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="52.633626032620668" lon="-117.8671249654144">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Mount Kerkeslin Campground</name>
+    <cmt>description: Open: May 29 to September 2, 2024&lt;br&gt; Reservable: All sites available on a First Come, First Served basis. No reservations possible.&lt;br&gt; Sites: 42&lt;br&gt;&lt;br&gt; Fees: See full list of camping fees here&lt;br&gt; Site type:&lt;br&gt; Unserviced, with fire pit&lt;br&gt;&lt;br&gt;This shaded campground is an excellent stop-over for tenters and RVers looking for peace and quiet along the Icefields Parkway. Located along the Athabasca River, it is just a short drive from the iconic Athabasca Falls and only 34 km from the town of Jasper.&lt;br&gt;&lt;br&gt;Best suited for tents as well asmotorhomes and trailers under 27 feet.&lt;br&gt;"&lt;br&gt;https://parks.canada.ca/pn-np/ab/jasper/activ/passez-stay/camping#kerkeslin&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: Open: May 29 to September 2, 2024&lt;br&gt; Reservable: All sites available on a First Come, First Served basis. No reservations possible.&lt;br&gt; Sites: 42&lt;br&gt;&lt;br&gt; Fees: See full list of camping fees here&lt;br&gt; Site type:&lt;br&gt; Unserviced, with fire pit&lt;br&gt;&lt;br&gt;This shaded campground is an excellent stop-over for tenters and RVers looking for peace and quiet along the Icefields Parkway. Located along the Athabasca River, it is just a short drive from the iconic Athabasca Falls and only 34 km from the town of Jasper.&lt;br&gt;&lt;br&gt;Best suited for tents as well asmotorhomes and trailers under 27 feet.&lt;br&gt;"&lt;br&gt;https://parks.canada.ca/pn-np/ab/jasper/activ/passez-stay/camping#kerkeslin&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.54316902346909" lon="-53.974366011098027">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Newman Sound Campground</name>
+    <cmt>description: Terra Nova National Park - Newman Sound Campground (Mallorytown)&lt;br&gt;Details from Google Maps&lt;br&gt;Trans-Canada Hwy, Mallorytown, NL A0C 1L0&lt;br&gt;https://parks.canada.ca/pn-np/nl/terranova/activ/camping/ns&lt;br&gt;+1 877-737-3783&lt;br&gt;Type: National Park Campground&lt;br&gt;ID: 184.0</cmt>
+    <desc>description: Terra Nova National Park - Newman Sound Campground (Mallorytown)&lt;br&gt;Details from Google Maps&lt;br&gt;Trans-Canada Hwy, Mallorytown, NL A0C 1L0&lt;br&gt;https://parks.canada.ca/pn-np/nl/terranova/activ/camping/ns&lt;br&gt;+1 877-737-3783&lt;br&gt;Type: National Park Campground&lt;br&gt;ID: 184.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.950377959758043" lon="-75.81759000197053">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Otentik Upper Nicholsons, Parc Canada - lieu historique du Canal Rideau</name>
+    <cmt>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/19-uppernicholsons.html&lt;br&gt;Details from Google Maps&lt;br&gt;121 Andrewsville Rd, Merrickville-Wolford, ON K0G 1N0&lt;br&gt;https://parks.canada.ca/lhn-nhs/on/rideau/activ/camping/otentik&lt;br&gt;+1 877-737-3783&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/19-uppernicholsons.html&lt;br&gt;Details from Google Maps&lt;br&gt;121 Andrewsville Rd, Merrickville-Wolford, ON K0G 1N0&lt;br&gt;https://parks.canada.ca/lhn-nhs/on/rideau/activ/camping/otentik&lt;br&gt;+1 877-737-3783&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.810666985809803" lon="-64.259412987157702">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Petit-Gaspé Campground</name>
+    <cmt>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.327094025909901" lon="-116.03831397369504">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Protection Mountain Campground</name>
+    <cmt>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="52.038830006495118" lon="-116.86640895903111">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Rampart Creek Campground</name>
+    <cmt>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.624983990564942" lon="-116.06212302111089">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Redstreak Campground (Kootenay National Park)</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;Redstreak Campground Rd, East Kootenay G, BC V0A 1M0&lt;br&gt;www.pc.gc.ca&lt;br&gt;+1 877-737-3783&lt;br&gt;Type: National Park Campground&lt;br&gt;ID: 207.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;Redstreak Campground Rd, East Kootenay G, BC V0A 1M0&lt;br&gt;www.pc.gc.ca&lt;br&gt;+1 877-737-3783&lt;br&gt;Type: National Park Campground&lt;br&gt;ID: 207.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.321354037150741" lon="-75.698335971683264">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Rideau Canal, Lock 13 - Black Rapids Lockstation</name>
+    <cmt>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/13-blackrapids.html&lt;br&gt;Details from Google Maps&lt;br&gt;2453 Prince of Wales Dr, Ottawa, ON K2C 3H1&lt;br&gt;https://www.pc.gc.ca/en/lhn-nhs/on/rideau?utm_source=gmb&amp;amp;utm_medium=rideau_lock13&lt;br&gt;+1 613-226-5434&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/13-blackrapids.html&lt;br&gt;Details from Google Maps&lt;br&gt;2453 Prince of Wales Dr, Ottawa, ON K2C 3H1&lt;br&gt;https://www.pc.gc.ca/en/lhn-nhs/on/rideau?utm_source=gmb&amp;amp;utm_medium=rideau_lock13&lt;br&gt;+1 613-226-5434&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.954591961577535" lon="-75.815881015732884">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Rideau Canal, Lock 18 - Lower Nicholsons</name>
+    <cmt>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/18-lowernicholsons.html&lt;br&gt;Details from Google Maps&lt;br&gt;Nicholson Ln, Merrickville-Wolford, ON K0G 1N0&lt;br&gt;https://www.pc.gc.ca/en/lhn-nhs/on/rideau?utm_source=gmb&amp;amp;utm_medium=rideau_lock18&lt;br&gt;+1 613-269-4960&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/18-lowernicholsons.html&lt;br&gt;Details from Google Maps&lt;br&gt;Nicholson Ln, Merrickville-Wolford, ON K0G 1N0&lt;br&gt;https://www.pc.gc.ca/en/lhn-nhs/on/rideau?utm_source=gmb&amp;amp;utm_medium=rideau_lock18&lt;br&gt;+1 613-269-4960&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.946464030072093" lon="-75.822540018707514">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Rideau Canal, Lock 20 - Clowes</name>
+    <cmt>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/20-clowes.html&lt;br&gt;Details from Google Maps&lt;br&gt;495 Heritage Dr, Merrickville, ON K0G 1N0&lt;br&gt;https://www.pc.gc.ca/en/lhn-nhs/on/rideau?utm_source=gmb&amp;amp;utm_medium=rideau_lock20&lt;br&gt;+1 613-269-4426&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/20-clowes.html&lt;br&gt;Details from Google Maps&lt;br&gt;495 Heritage Dr, Merrickville, ON K0G 1N0&lt;br&gt;https://www.pc.gc.ca/en/lhn-nhs/on/rideau?utm_source=gmb&amp;amp;utm_medium=rideau_lock20&lt;br&gt;+1 613-269-4426&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.88410702906549" lon="-75.930995978415012">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Rideau Canal, Lock 24 - Kilmarnock</name>
+    <cmt>description: 6) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/24-kilmarnock.html&lt;br&gt;Details from Google Maps&lt;br&gt;1316 Kilmarnock Rd, Jasper, ON K0G 1G0&lt;br&gt;https://www.pc.gc.ca/en/lhn-nhs/on/rideau?utm_source=gmb&amp;amp;utm_medium=rideau_lock24&lt;br&gt;+1 613-283-3792&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: 6) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/24-kilmarnock.html&lt;br&gt;Details from Google Maps&lt;br&gt;1316 Kilmarnock Rd, Jasper, ON K0G 1G0&lt;br&gt;https://www.pc.gc.ca/en/lhn-nhs/on/rideau?utm_source=gmb&amp;amp;utm_medium=rideau_lock24&lt;br&gt;+1 613-283-3792&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.875192958861589" lon="-76.139413006603718">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Rideau Canal, Lock 33 - Lower Beveridges</name>
+    <cmt>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/33-lowerbeveridges.html&lt;br&gt;Details from Google Maps&lt;br&gt;Beveridge Locks Rd, Perth, ON K7H 3C7&lt;br&gt;+1 613-267-2036&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/33-lowerbeveridges.html&lt;br&gt;Details from Google Maps&lt;br&gt;Beveridge Locks Rd, Perth, ON K7H 3C7&lt;br&gt;+1 613-267-2036&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.70296697691083" lon="-76.295670960098505">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Rideau Canal, Lock 35 - Narrows</name>
+    <cmt>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/35-narrows.html&lt;br&gt;Details from Google Maps&lt;br&gt;Rideau Lakes, Westport, ON K0G 1V0&lt;br&gt;https://www.pc.gc.ca/en/lhn-nhs/on/rideau?utm_source=gmb&amp;amp;utm_medium=rideau_lock35&lt;br&gt;+1 613-539-7537&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/35-narrows.html&lt;br&gt;Details from Google Maps&lt;br&gt;Rideau Lakes, Westport, ON K0G 1V0&lt;br&gt;https://www.pc.gc.ca/en/lhn-nhs/on/rideau?utm_source=gmb&amp;amp;utm_medium=rideau_lock35&lt;br&gt;+1 613-539-7537&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.646028960123658" lon="-76.321018002927303">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Rideau Canal, Lock 36 - Newboro</name>
+    <cmt>description: https://www.rideau-info.com/canal/locks/36-newboro.html&lt;br&gt;5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.pc.gc.ca/en/lhn-nhs/on/rideau?utm_source=gmb&amp;amp;utm_medium=rideau_lock36&lt;br&gt;Details from Google Maps&lt;br&gt;10 Blockhouse Ln, Elgin, ON K0G 1E0&lt;br&gt;www.pc.gc.ca&lt;br&gt;+1 613-507-3183&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: https://www.rideau-info.com/canal/locks/36-newboro.html&lt;br&gt;5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.pc.gc.ca/en/lhn-nhs/on/rideau?utm_source=gmb&amp;amp;utm_medium=rideau_lock36&lt;br&gt;Details from Google Maps&lt;br&gt;10 Blockhouse Ln, Elgin, ON K0G 1E0&lt;br&gt;www.pc.gc.ca&lt;br&gt;+1 613-507-3183&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.579172972589731" lon="-76.319546978920698">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Rideau Canal, Lock 37 - Chaffeys</name>
+    <cmt>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/37-chaffeys.html&lt;br&gt;Details from Google Maps&lt;br&gt;Rideau Lakes, Westport, ON K0G 1E0&lt;br&gt;www.pc.gc.ca&lt;br&gt;+1 613-359-5914&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/37-chaffeys.html&lt;br&gt;Details from Google Maps&lt;br&gt;Rideau Lakes, Westport, ON K0G 1E0&lt;br&gt;www.pc.gc.ca&lt;br&gt;+1 613-359-5914&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.563020039349794" lon="-76.292085014283657">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Rideau Canal, Lock 38 - Davis</name>
+    <cmt>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/38-davis.html&lt;br&gt;Details from Google Maps&lt;br&gt;1822 Davis Lock Rd, Elgin, ON K0G 1E0&lt;br&gt;www.pc.gc.ca&lt;br&gt;+1 613-359-5620&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/38-davis.html&lt;br&gt;Details from Google Maps&lt;br&gt;1822 Davis Lock Rd, Elgin, ON K0G 1E0&lt;br&gt;www.pc.gc.ca&lt;br&gt;+1 613-359-5620&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.389502992853522" lon="-76.325063025578856">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Rideau Canal, Lock 45 - Lower Brewers</name>
+    <cmt>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/45-lowerbrewers.html&lt;br&gt;Details from Google Maps&lt;br&gt;Washburn Rd, Kingston, ON K0H 1Y0&lt;br&gt;www.pc.gc.ca&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/45-lowerbrewers.html&lt;br&gt;Details from Google Maps&lt;br&gt;Washburn Rd, Kingston, ON K0H 1Y0&lt;br&gt;www.pc.gc.ca&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.251166997477412" lon="-75.701857041567564">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Rideau Canal, Locks 14-16 - Long Island</name>
+    <cmt>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/14-16-longisland.html&lt;br&gt;Details from Google Maps&lt;br&gt;390 Nicolls Island Rd, Manotick, ON K4M 1B2&lt;br&gt;https://www.pc.gc.ca/en/lhn-nhs/on/rideau?utm_source=gmb&amp;amp;utm_medium=rideau_lock14to16&lt;br&gt;+1 613-283-5170&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/14-16-longisland.html&lt;br&gt;Details from Google Maps&lt;br&gt;390 Nicolls Island Rd, Manotick, ON K4M 1B2&lt;br&gt;https://www.pc.gc.ca/en/lhn-nhs/on/rideau?utm_source=gmb&amp;amp;utm_medium=rideau_lock14to16&lt;br&gt;+1 613-283-5170&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.545171028003097" lon="-76.238128021359444">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Rideau Canal, Locks 39-42 - Jones Falls</name>
+    <cmt>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/39-42-jonesfalls.html&lt;br&gt;Details from Google Maps&lt;br&gt;Kenneys Rd, Elgin, ON K0G 1E0&lt;br&gt;www.pc.gc.ca&lt;br&gt;+1 613-507-3185&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/39-42-jonesfalls.html&lt;br&gt;Details from Google Maps&lt;br&gt;Kenneys Rd, Elgin, ON K0G 1E0&lt;br&gt;www.pc.gc.ca&lt;br&gt;+1 613-507-3185&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.292873982340097" lon="-76.441998034715652">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Rideau Canal, Locks 46 - 49 - Kingston Mills1</name>
+    <cmt>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/46-49-kingstonmills.html?utm_source=gmb&amp;amp;utm_medium=rideau_lock46to49&lt;br&gt;Details from Google Maps&lt;br&gt;Kingston Mills Rd, Kingston, ON K7L 4V3&lt;br&gt;+1 613-507-3188&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/46-49-kingstonmills.html?utm_source=gmb&amp;amp;utm_medium=rideau_lock46to49&lt;br&gt;Details from Google Maps&lt;br&gt;Kingston Mills Rd, Kingston, ON K7L 4V3&lt;br&gt;+1 613-507-3188&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.828957974910736" lon="-64.2244509793818">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Rosebush Campground - Forillon National Park</name>
+    <cmt>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.674122011289001" lon="-123.42703999020159">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>SMONEĆTEN Campground, Gulf Islands National Park Reserve, Parks Canada (open May 15 to Sept 30)</name>
+    <cmt>https://cartes.app/?allez=Smonećten (McDonald) Campground|w156900831|-123.42652|48.67372#15.54/48.673959/-123.426379 
+&lt;iframe
+     src="https://cartes.app/?allez=Smonećten (McDonald) Campground|w156900831|-123.42686|48.67401#15.38/48.673959/-123.426379"
+     style="
+     width: 20rem;
+     height: 36rem;
+     max-width: 100%;
+     margin: 0 auto;
+     margin-bottom: 5vh;
+     display: block;
+     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+      rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+      background: linear-gradient(white, white) padding-box, linear-gradient(to right, #2988e6, #57bff5) border-box;
+  border: 0.2rem solid transparent;
+  border-radius: 0.5rem;"&gt;&lt;/iframe&gt;
+
+description: Details from Google Maps&lt;br&gt;10740 McDonald Park Rd, North Saanich, BC V8L 5S5&lt;br&gt;https://www.pc.gc.ca/en/pn-np/bc/gulf/activ/camping/campinglavantpays-frontcountrycamping#McDonald&lt;br&gt;+1 866-944-1744&lt;br&gt;Type: National Park Campground&lt;br&gt;ID: 254.0
+</cmt>
+    <desc>https://cartes.app/?allez=Smonećten (McDonald) Campground|w156900831|-123.42652|48.67372#15.54/48.673959/-123.426379 
+&lt;iframe
+     src="https://cartes.app/?allez=Smonećten (McDonald) Campground|w156900831|-123.42686|48.67401#15.38/48.673959/-123.426379"
+     style="
+     width: 20rem;
+     height: 36rem;
+     max-width: 100%;
+     margin: 0 auto;
+     margin-bottom: 5vh;
+     display: block;
+     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+      rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+      background: linear-gradient(white, white) padding-box, linear-gradient(to right, #2988e6, #57bff5) border-box;
+  border: 0.2rem solid transparent;
+  border-radius: 0.5rem;"&gt;&lt;/iframe&gt;
+
+description: Details from Google Maps&lt;br&gt;10740 McDonald Park Rd, North Saanich, BC V8L 5S5&lt;br&gt;https://www.pc.gc.ca/en/pn-np/bc/gulf/activ/camping/campinglavantpays-frontcountrycamping#McDonald&lt;br&gt;+1 866-944-1744&lt;br&gt;Type: National Park Campground&lt;br&gt;ID: 254.0
+</desc>
+    <link href="https://cartes.app/?allez%3DSmone%C4%87ten%20%28McDonald%29%20Campground%7Cw156900831%7C-123.42652%7C48.67372#15.54/48.673959/-123.426379" />
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.228049959987402" lon="-81.528968028724194">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Tamarack Campsites</name>
+    <cmt>description: https://parks.canada.ca/pn-np/on/bruce/activ/camping/cyprus&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: https://parks.canada.ca/pn-np/on/bruce/activ/camping/cyprus&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.590140022337437" lon="-78.990030968561769">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Trent Severn Waterway, Lock 36 - Kirkfield Lift Lock</name>
+    <cmt>description: GPS: 44° 35' 22" N ~ 78° 59' 23" W&lt;br&gt;Mile # 169.4 (272.6 km)&lt;br&gt;Average Lift: 49 ft (14.9 m)&lt;br&gt;Phone # (705) 438-3126&lt;br&gt;&lt;br&gt;Lockstations with camping:&lt;br&gt;&lt;br&gt;Tent camping is allowed at most lockstations on the Trent-Severn Waterway at the discretion of the lockmaster on duty. Sites are typically located in grassy areas around the lockstation and adjacent the waterway's mooring walls and/or paddle docks.&lt;br&gt;https://parks.canada.ca/lhn-nhs/on/trentsevern/activ/camping/tente-tent&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: GPS: 44° 35' 22" N ~ 78° 59' 23" W&lt;br&gt;Mile # 169.4 (272.6 km)&lt;br&gt;Average Lift: 49 ft (14.9 m)&lt;br&gt;Phone # (705) 438-3126&lt;br&gt;&lt;br&gt;Lockstations with camping:&lt;br&gt;&lt;br&gt;Tent camping is allowed at most lockstations on the Trent-Severn Waterway at the discretion of the lockmaster on duty. Sites are typically located in grassy areas around the lockstation and adjacent the waterway's mooring walls and/or paddle docks.&lt;br&gt;https://parks.canada.ca/lhn-nhs/on/trentsevern/activ/camping/tente-tent&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.357040971517563" lon="-78.735033022239804">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Trent-Severn Waterway, Lock 33 - Lindsay</name>
+    <cmt>description: GPS: 44 21' 25" N ~ 78 44' 17" W&lt;br&gt;Mile # 156.4 (251.6 km)&lt;br&gt;Dimensions: 120' (36.6m) Long, 32' (9.7m) Wide&lt;br&gt;Average Lift: 7 ft (2.1 m)&lt;br&gt;Phone # (705) 324-2393&lt;br&gt;&lt;br&gt;Lockstations with camping:&lt;br&gt;&lt;br&gt;Tent camping is allowed at most lockstations on the Trent-Severn Waterway at the discretion of the lockmaster on duty. Sites are typically located in grassy areas around the lockstation and adjacent the waterway's mooring walls and/or paddle docks.&lt;br&gt;https://parks.canada.ca/lhn-nhs/on/trentsevern/activ/camping/tente-tent&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: GPS: 44 21' 25" N ~ 78 44' 17" W&lt;br&gt;Mile # 156.4 (251.6 km)&lt;br&gt;Dimensions: 120' (36.6m) Long, 32' (9.7m) Wide&lt;br&gt;Average Lift: 7 ft (2.1 m)&lt;br&gt;Phone # (705) 324-2393&lt;br&gt;&lt;br&gt;Lockstations with camping:&lt;br&gt;&lt;br&gt;Tent camping is allowed at most lockstations on the Trent-Severn Waterway at the discretion of the lockmaster on duty. Sites are typically located in grassy areas around the lockstation and adjacent the waterway's mooring walls and/or paddle docks.&lt;br&gt;https://parks.canada.ca/lhn-nhs/on/trentsevern/activ/camping/tente-tent&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.188227012753487" lon="-115.54087400436401">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Tunnel Mountain Village II Campground</name>
+    <cmt>description: (Shower building closed 2024)&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: (Shower building closed 2024)&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.412303026765585" lon="-76.313054021447897">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Upper Brewers - Lock 44</name>
+    <cmt>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/43-44-upperbrewers.html&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: 5) Allows tent camping for those arriving by water and also for cyclists and hikers.&lt;br&gt;https://www.rideau-info.com/canal/locks/43-44-upperbrewers.html&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="52.833769032731652" lon="-118.06256999261677">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Wapiti Campground (Jasper National Park)</name>
+    <cmt>description: Open: May 15 to October 21, 2024&lt;br&gt; Reservable: Yes&lt;br&gt; Sites: 363&lt;br&gt;Fees: See full list of camping fees here&lt;br&gt; Site type:&lt;br&gt; Electrical, with fire pit&lt;br&gt; Electrical&lt;br&gt; Unserviced, with fire pit&lt;br&gt;On the shore of the Athabasca River, Wapiti Campground has sites for tenting and electrical hook-up spots for RVs. Offering 363 sites with amenities like hot showers, electricity and fire pits.&lt;br&gt;&lt;br&gt;Can accommodate most sizes of motorhomes and trailers. Electrical campsites only are equipped with 15, 30, and 50 amp service.&lt;br&gt;&lt;br&gt;To ensure the safety of campers, many dead and dying pine trees affected by mountain pine beetle have been removed from Wapiti Campground. This work protects campers and campground infrastructure from falling trees, and helps reduce the risk of wildfire. If you are returning to one of these campgrounds, it will look very different from the last time you visited. View our photo gallery."&lt;br&gt;https://parks.canada.ca/pn-np/ab/jasper/activ/passez-stay/camping?utm_source=gmb&amp;amp;utm_medium=wapiti_campground#wapiti&lt;br&gt;etails from Google Maps&lt;br&gt;RWVJ+GF, AB-93A, Jasper, AB T0E 1E0&lt;br&gt;+1 780-852-6176&lt;br&gt;Type: National Park Campground&lt;br&gt;ID: 146.0</cmt>
+    <desc>description: Open: May 15 to October 21, 2024&lt;br&gt; Reservable: Yes&lt;br&gt; Sites: 363&lt;br&gt;Fees: See full list of camping fees here&lt;br&gt; Site type:&lt;br&gt; Electrical, with fire pit&lt;br&gt; Electrical&lt;br&gt; Unserviced, with fire pit&lt;br&gt;On the shore of the Athabasca River, Wapiti Campground has sites for tenting and electrical hook-up spots for RVs. Offering 363 sites with amenities like hot showers, electricity and fire pits.&lt;br&gt;&lt;br&gt;Can accommodate most sizes of motorhomes and trailers. Electrical campsites only are equipped with 15, 30, and 50 amp service.&lt;br&gt;&lt;br&gt;To ensure the safety of campers, many dead and dying pine trees affected by mountain pine beetle have been removed from Wapiti Campground. This work protects campers and campground infrastructure from falling trees, and helps reduce the risk of wildfire. If you are returning to one of these campgrounds, it will look very different from the last time you visited. View our photo gallery."&lt;br&gt;https://parks.canada.ca/pn-np/ab/jasper/activ/passez-stay/camping?utm_source=gmb&amp;amp;utm_medium=wapiti_campground#wapiti&lt;br&gt;etails from Google Maps&lt;br&gt;RWVJ+GF, AB-93A, Jasper, AB T0E 1E0&lt;br&gt;+1 780-852-6176&lt;br&gt;Type: National Park Campground&lt;br&gt;ID: 146.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.842914000153542" lon="-116.62042901851237">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Waterfowl Lakes Campground (Banff National Park)</name>
+    <cmt>description: (water, toilets, cooking shelter) - no cell service on Icefields pkwy&lt;br&gt;Details from Google Maps&lt;br&gt;Icefields Pkwy, Jasper, AB T0Lhttps://parks.canada.ca/pn-np/ab/banff/activ/camping#waterfowl&lt;br&gt;Type: National Park Campground&lt;br&gt;ID: 166.0</cmt>
+    <desc>description: (water, toilets, cooking shelter) - no cell service on Icefields pkwy&lt;br&gt;Details from Google Maps&lt;br&gt;Icefields Pkwy, Jasper, AB T0Lhttps://parks.canada.ca/pn-np/ab/banff/activ/camping#waterfowl&lt;br&gt;Type: National Park Campground&lt;br&gt;ID: 166.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="52.850495958700776" lon="-118.07744996622205">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Whistlers Campground (Jasper National Park)</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;67 19, Jasper, AB T0E 1E0&lt;br&gt;https://parks.canada.ca/pn-np/ab/jasper/activ/passez-stay/camping/whistlers&lt;br&gt;+1 877-737-3783&lt;br&gt;Type: National Park Campground&lt;br&gt;ID: 125.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;67 19, Jasper, AB T0E 1E0&lt;br&gt;https://parks.canada.ca/pn-np/ab/jasper/activ/passez-stay/camping/whistlers&lt;br&gt;+1 877-737-3783&lt;br&gt;Type: National Park Campground&lt;br&gt;ID: 125.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="52.218786031007767" lon="-117.17683902941644">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Wilcox Creek Campground</name>
+    <cmt>description: Open: June 12 to September 16, 2024&lt;br&gt;https://parks.canada.ca/pn-np/ab/jasper/activ/passez-stay/camping?utm_source=gmb&amp;amp;utm_medium=wilcox#wilcox&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: Open: June 12 to September 16, 2024&lt;br&gt;https://parks.canada.ca/pn-np/ab/jasper/activ/passez-stay/camping?utm_source=gmb&amp;amp;utm_medium=wilcox#wilcox&lt;br&gt;Type: National Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+</gpx>
