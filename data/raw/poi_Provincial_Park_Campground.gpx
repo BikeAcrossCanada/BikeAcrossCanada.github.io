@@ -4,9 +4,93 @@
     <link href="http://www.garmin.com">
       <text>Garmin International</text>
     </link>
-    <time>2026-10-01T17:44:10Z</time>
-    <bounds maxlat="51.221774993464351" maxlon="-61.104466980323195" minlat="44.778349036350846" minlon="-125.29559997841716" />
+    <time>2026-10-02T14:19:01Z</time>
+    <bounds maxlat="55.196727029979229" maxlon="-53.058277973905206" minlat="43.872120967134833" minlon="-130.13291297480464" />
   </metadata>
+
+  <wpt lat="49.757902007550001" lon="-92.653261022642255">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Aaron Provincial Park</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.33494802378118" lon="-84.616208961233497">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Agawa Bay Campground</name>
+    <cmt>description: Approved Accommodation #17&lt;br&gt;Details from Google Maps&lt;br&gt;ON-17, Wawa, ON P0S 1K0&lt;br&gt;https://www.ontarioparks.ca/park/lakesuperior&lt;br&gt;+1 705-882-2026&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 17.0</cmt>
+    <desc>description: Approved Accommodation #17&lt;br&gt;Details from Google Maps&lt;br&gt;ON-17, Wawa, ON P0S 1K0&lt;br&gt;https://www.ontarioparks.ca/park/lakesuperior&lt;br&gt;+1 705-882-2026&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 17.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.959496991708875" lon="-63.879140960052609">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Amherst Shore Provincial Camp Ground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.293613985180855" lon="-78.873536009341478">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Babawasse Campground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
 
   <wpt lat="48.605698021128774" lon="-123.52916995994747">
     <ele>0</ele>
@@ -25,6 +109,636 @@
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.484266959130764" lon="-58.279478028416634">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Barachois Pond Provincial Park - Campground1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;NL-1 Black Duck Siding, Stephenville, NL A0N 2G0&lt;br&gt;https://www.parksnl.ca/parks/barachois-pond-provincial-park/&lt;br&gt;+1 709-649-0048&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 348.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;NL-1 Black Duck Siding, Stephenville, NL A0N 2G0&lt;br&gt;https://www.parksnl.ca/parks/barachois-pond-provincial-park/&lt;br&gt;+1 709-649-0048&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 348.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.650255978107452" lon="-60.865919021889567">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Battery Provincial Park</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;10110 NS-4, St. Peter's, NS B0E 3B0&lt;br&gt;https://parks.novascotia.ca/park/battery&lt;br&gt;+1 902-535-3094&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 253.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;10110 NS-4, St. Peter's, NS B0E 3B0&lt;br&gt;https://parks.novascotia.ca/park/battery&lt;br&gt;+1 902-535-3094&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 253.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="54.061948014423251" lon="-124.61765002459288">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Beaumont Campground</name>
+    <cmt>description: (water, flush toilets)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: (water, flush toilets)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.903414025902748" lon="-93.472692975774407">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Blue Lake Provincial Park</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.058219036087394" lon="-118.69584498926997">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Boundary Creek Provincial Park</name>
+    <cmt>description: (water, flush toilets)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: (water, flush toilets)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.060981005430222" lon="-115.31917702406645">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Bow River Campground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.417300019413233" lon="-120.2583559602499">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Bromley Rock Provincial Park</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.488961985334754" lon="-75.818816022947431">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Brown's Bay Camping Site</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.390177976340055" lon="-53.058277973905206">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Butter Pot Provincial Park</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.057905972003937" lon="-93.913750983774662">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Caliper Lake Provincial Park</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;ON-71, Nestor Falls, ON P0X 1K0&lt;br&gt;https://www.ontarioparks.ca/park/caliperlake&lt;br&gt;+1 807-484-2181&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 179.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;ON-71, Nestor Falls, ON P0X 1K0&lt;br&gt;https://www.ontarioparks.ca/park/caliperlake&lt;br&gt;+1 807-484-2181&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 179.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.440953031182289" lon="-68.395790001377463">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Camping de la republique</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;31 Isidore-Boucher Blvd, Edmundston, NB E7B 1V6&lt;br&gt;https://www.parcsnbparks.info/fr/parks/8/parc-provincial-de-la-republique&lt;br&gt;+1 506-735-2525&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 87.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;31 Isidore-Boucher Blvd, Edmundston, NB E7B 1V6&lt;br&gt;https://www.parcsnbparks.info/fr/parks/8/parc-provincial-de-la-republique&lt;br&gt;+1 506-735-2525&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 87.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.723614981397986" lon="-62.655112026259303">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Caribou/Munroes Island Provincial Park</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.555549021810293" lon="-74.427787978202105">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Champlain Campground</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;East Hawkesbury, ON K0B 1B0&lt;br&gt;https://www.ontarioparks.ca/park/voyageur&lt;br&gt;+1 888-668-7275&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 159.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;East Hawkesbury, ON K0B 1B0&lt;br&gt;https://www.ontarioparks.ca/park/voyageur&lt;br&gt;+1 888-668-7275&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 159.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.667297968640924" lon="-91.134185995906591">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Chippewa Campground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.21819001622498" lon="-82.076939977705479">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Chutes Provincial Park</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.074229979887605" lon="-120.80628901720047">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Coldspring Campground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.190520001575351" lon="-120.55742201395333">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Copper Creek Recreation Site</name>
+    <cmt>description: (toilets)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: (toilets)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.537635026499629" lon="-80.351656973361969">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Craigleith Campground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="43.872120967134833" lon="-78.77846703864634">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Darlington Provincial Park</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.459902970120311" lon="-120.42666801251471">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Dewdney Recreation Site</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.192690003663301" lon="-77.842330997809768">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Driftwood Provincial Park - Brumm Campground</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;301-253 Driftwood Park Rd, Stonecliffe, ON K0J 2K0&lt;br&gt;www.ontarioparks.com&lt;br&gt;+1 613-586-2553&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 186.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;301-253 Driftwood Park Rd, Stonecliffe, ON K0J 2K0&lt;br&gt;www.ontarioparks.com&lt;br&gt;+1 613-586-2553&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 186.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.312889022752643" lon="-125.92796302400529">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Elk Creek Recreation Site</name>
+    <cmt>description: (toilets)&lt;br&gt;"Site Closed.&lt;br&gt;Elk Creek is now closed and gated for the season. The site will open in May 2024."&lt;br&gt;https://www.sitesandtrailsbc.ca/search/search-result.aspx?site=REC0144&amp;amp;type=Site&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: (toilets)&lt;br&gt;"Site Closed.&lt;br&gt;Elk Creek is now closed and gated for the season. The site will open in May 2024."&lt;br&gt;https://www.sitesandtrailsbc.ca/search/search-result.aspx?site=REC0144&amp;amp;type=Site&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.512637965381145" lon="-121.41673003323376">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Emory Creek Provincial Park</name>
+    <cmt>description: ID#265&lt;br&gt;'The park is open May 10, 2024 to October 20, 2024'&lt;br&gt;Details from Google Maps&lt;br&gt;18km north of Hope, BC on, Trans-Canada Hwy #1, Hope, BC V0X 1L0&lt;br&gt;https://bcparks.ca/emory-creek-park/&lt;br&gt;+1 778-548-1096&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 265.0</cmt>
+    <desc>description: ID#265&lt;br&gt;'The park is open May 10, 2024 to October 20, 2024'&lt;br&gt;Details from Google Maps&lt;br&gt;18km north of Hope, BC on, Trans-Canada Hwy #1, Hope, BC V0X 1L0&lt;br&gt;https://bcparks.ca/emory-creek-park/&lt;br&gt;+1 778-548-1096&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 265.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.055215967819095" lon="-121.97084097191691">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Entrance Bay Campground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.683875972405076" lon="-95.327609991654754">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Falcon Lake Beach Campground (Whiteshell Provincial Park)</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;Manitoba R0E 2H0&lt;br&gt;https://www.gov.mb.ca/sd/parks/park-maps-and-locations/eastern/whiteshell.html&lt;br&gt;+1 800-214-6497&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 156.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;Manitoba R0E 2H0&lt;br&gt;https://www.gov.mb.ca/sd/parks/park-maps-and-locations/eastern/whiteshell.html&lt;br&gt;+1 800-214-6497&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 156.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.692249996587634" lon="-95.316189983859658">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Falcon Lake Lakeshore Campground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.986529024317861" lon="-74.994831020012498">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Farran Park Campground &amp; Day-Use</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.480429986491799" lon="-76.218145983293653">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Fitzroy Provincial Park - Pine Grove Campground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.479359030723572" lon="-76.221855981275439">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Fitzroy Provincial Park - Two Rivers Campground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.346992004662752" lon="-89.35409196652472">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Fort William Historical Park</name>
+    <cmt>description: Open for the season:&lt;br&gt;May 17 – October 14, 2024&lt;br&gt;https://fwhp.ca/campground/&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: Open for the season:&lt;br&gt;May 17 – October 14, 2024&lt;br&gt;https://fwhp.ca/campground/&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
@@ -50,12 +764,894 @@
     </extensions>
   </wpt>
 
+  <wpt lat="49.070088984444737" lon="-120.72106199339032">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Hampton Campground - E.C. Manning Provincial Park</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="54.49115602299571" lon="-126.68686900287867">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Helen Lake Recreation Site</name>
+    <cmt>description: (pit toilet, no water)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: (pit toilet, no water)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.628504030406475" lon="-114.6736660413444">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Island Lake Provincial Recreation Area (no water)</name>
+    <cmt>description: https://www.albertaparks.ca/parks/south/island-lake-pra/information-facilities/camping/island-lake/&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: https://www.albertaparks.ca/parks/south/island-lake-pra/information-facilities/camping/island-lake/&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.631867974996567" lon="-59.257363993674517">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>J.T. Cheeseman Provincial Park</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;Cape Ray, NL A0N 1C0&lt;br&gt;https://www.parksnl.ca/parks/j-t-cheeseman-provincial-park/&lt;br&gt;+1 709-695-7222&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 250.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;Cape Ray, NL A0N 1C0&lt;br&gt;https://www.parksnl.ca/parks/j-t-cheeseman-provincial-park/&lt;br&gt;+1 709-695-7222&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 250.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.77892099507153" lon="-121.07937301509082">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Juniper Beach Camp Ground (Juniper Beach Provincial Park)</name>
+    <cmt>description: https://bcparks.ca/juniper-beach-park/#park-camping-details-container&lt;br&gt;Details from Google Maps&lt;br&gt;Thompson-Nicola, BC V0K 2P0&lt;br&gt;bcparks.ca&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 268.0</cmt>
+    <desc>description: https://bcparks.ca/juniper-beach-park/#park-camping-details-container&lt;br&gt;Details from Google Maps&lt;br&gt;Thompson-Nicola, BC V0K 2P0&lt;br&gt;bcparks.ca&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 268.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.403303977102041" lon="-89.628834994509816">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Kakabeka Falls Riverside Campground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.183044038712978" lon="-119.34304802678525">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Kekuli Bay Provincial Park Campground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.112229002639651" lon="-118.98134501650929">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Kettle River Recreation Area</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.278939021751285" lon="-115.22112996317446">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Kikomun Creek Recreation Site</name>
+    <cmt>description: (pit toilets)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: (pit toilets)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.727968974038959" lon="-124.89730702713132">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Kin Beach Provincial Park</name>
+    <cmt>description: https://bcparks.ca/kin-beach-park/#park-camping-details-container&lt;br&gt;Kin Beach Park is a classified as a Class "C" park, whereby the park is managed by a local community board. &lt;br&gt;Community Board, Comox, B.C. &lt;br&gt;Park Caretaker &lt;br&gt;Phone: 250-339-6365&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 264.0</cmt>
+    <desc>description: https://bcparks.ca/kin-beach-park/#park-camping-details-container&lt;br&gt;Kin Beach Park is a classified as a Class "C" park, whereby the park is managed by a local community board. &lt;br&gt;Community Board, Comox, B.C. &lt;br&gt;Park Caretaker &lt;br&gt;Phone: 250-339-6365&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 264.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.78920397348702" lon="-124.99675998464227">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Kitty Coleman Beach Provincial Park</name>
+    <cmt>description: ID#266&lt;br&gt;https://bcparks.ca/kitty-coleman-beach-park/#park-camping-details-container&lt;br&gt;As a Class C park, Kitty Coleman is managed by a local community board&lt;br&gt;https://www.facebook.com/kittycolemanpark&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 266.0</cmt>
+    <desc>description: ID#266&lt;br&gt;https://bcparks.ca/kitty-coleman-beach-park/#park-camping-details-container&lt;br&gt;As a Class C park, Kitty Coleman is managed by a local community board&lt;br&gt;https://www.facebook.com/kittycolemanpark&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 266.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="43.991006026044488" lon="-77.716897996142507">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Lakeside Campground</name>
+    <cmt>description: https://www.ontarioparks.ca/park/presquile/camping&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: https://www.ontarioparks.ca/park/presquile/camping&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="53.523230021819472" lon="-120.67956796847284">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Lasalle Lakes (West) Recreation Site</name>
+    <cmt>description: (toilets)&lt;br&gt;Details from Google Maps&lt;br&gt;Fraser-Fort George H, BC V0J 2E0https://www.sitesandtrailsbc.ca/search/search-result.aspx?site=REC1314&amp;amp;districtCode=RDHW&amp;amp;type=Site&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 204.0</cmt>
+    <desc>description: (toilets)&lt;br&gt;Details from Google Maps&lt;br&gt;Fraser-Fort George H, BC V0J 2E0https://www.sitesandtrailsbc.ca/search/search-result.aspx?site=REC1314&amp;amp;districtCode=RDHW&amp;amp;type=Site&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 204.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.060937035828829" lon="-120.84181403741241">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Lightning Lake Campground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.310342995449901" lon="-124.546710960567">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Little Qualicum Falls Campground - Lower Campground (Main operating season 2024: May 15 to October 15)</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;little falls campground, Qualicum, BC V0R 1M0&lt;br&gt;http://www.env.gov.bc.ca/bcparks/explore/parkpgs/little_qualicum_falls/&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 258.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;little falls campground, Qualicum, BC V0R 1M0&lt;br&gt;http://www.env.gov.bc.ca/bcparks/explore/parkpgs/little_qualicum_falls/&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 258.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.508698973804712" lon="-116.7863099835813">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Lockhart Beach Provincial Park</name>
+    <cmt>description: (Boil water from pump, pit toilets)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: (Boil water from pump, pit toilets)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="52.85020200535655" lon="-118.57556903734803">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Lucerne Campground</name>
+    <cmt>description: "Two sites are walk-in only and ideal for cyclists. The campground has no running water or flush toilets."&lt;br&gt;https://bcparks.ca/mount-robson-park/#park-camping-details-container&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: "Two sites are walk-in only and ideal for cyclists. The campground has no running water or flush toilets."&lt;br&gt;https://bcparks.ca/mount-robson-park/#park-camping-details-container&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.585300013422966" lon="-114.20188299380243">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Lundbreck Falls Provincial Recreation Area (no water, yes power, pit toilets)</name>
+    <cmt>description: https://albertaparks.ca/parks/south/lundbreck-falls-pra/information-facilities/camping/lundbreck-falls/&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: https://albertaparks.ca/parks/south/lundbreck-falls-pra/information-facilities/camping/lundbreck-falls/&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.990243967622519" lon="-74.968849970027804">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>McLaren Campground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.011355970054865" lon="-74.897868996486068">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Mille Roches Campground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.848351962864399" lon="-125.09730996564031">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Miracle Beach Provincial Park</name>
+    <cmt>description: "There are three walk-in or cycle-in campsites at this park."&lt;br&gt;https://bcparks.ca/miracle-beach-park/#park-camping-details-container&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 267.0</cmt>
+    <desc>description: "There are three walk-in or cycle-in campsites at this park."&lt;br&gt;https://bcparks.ca/miracle-beach-park/#park-camping-details-container&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 267.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.487222023308277" lon="-115.09345698170364">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Mount Fernie Provincial Campground</name>
+    <cmt>description: (water, showers)&lt;br&gt;https://bcparks.ca/mount-fernie-park/#park-camping-details-container&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: (water, showers)&lt;br&gt;https://bcparks.ca/mount-fernie-park/#park-camping-details-container&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.370997967198491" lon="-115.8440799638629">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Moyie Lake Provincial Park Campground</name>
+    <cmt>description: (cold water taps, flush toilets, showers)&lt;br&gt;https://bcparks.ca/moyie-lake-park/#park-camping-details-container&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: (cold water taps, flush toilets, showers)&lt;br&gt;https://bcparks.ca/moyie-lake-park/#park-camping-details-container&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.090126007795334" lon="-120.68148599937558">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Mule Deer Campground</name>
+    <cmt>description: Approved Accommodation #12&lt;br&gt;Details from Google Maps&lt;br&gt;516 Crowsnest Hwy, Manning Park, BC V0X 1R0&lt;br&gt;https://bcparks.ca/ec-manning-park/&lt;br&gt;+1 604-668-5953&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 12.0</cmt>
+    <desc>description: Approved Accommodation #12&lt;br&gt;Details from Google Maps&lt;br&gt;516 Crowsnest Hwy, Manning Park, BC V0X 1R0&lt;br&gt;https://bcparks.ca/ec-manning-park/&lt;br&gt;+1 604-668-5953&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 12.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="44.778349036350846" lon="-76.229776963591576">
     <ele>0</ele>
     <time>2026-08-24T14:43:26Z</time>
     <name>Murphys Point Provincial Park - Hogg Bay Campground</name>
     <cmt>description: Details from Google Maps&lt;br&gt;2243 Elm Grove Rd, Perth, ON K7H 3C7&lt;br&gt;https://www.ontarioparks.ca/park/murphyspoint/camping&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 319.0</cmt>
     <desc>description: Details from Google Maps&lt;br&gt;2243 Elm Grove Rd, Perth, ON K7H 3C7&lt;br&gt;https://www.ontarioparks.ca/park/murphyspoint/camping&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 319.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.177553040906787" lon="-63.979563033208251">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Murray Beach Provincial Park Campground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.259308017790318" lon="-117.94112702831626">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Nancy Greene Provincial Park Campground</name>
+    <cmt>description: "A hand pump is available in the park. Interior Health has issued a permanent “boil water” advisory on this source."&lt;br&gt;https://bcparks.ca/nancy-greene-park/#park-camping-details-container (Hand Pump BOIL WATER ADVISIORY, pit toilets)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: "A hand pump is available in the park. Interior Health has issued a permanent “boil water” advisory on this source."&lt;br&gt;https://bcparks.ca/nancy-greene-park/#park-camping-details-container (Hand Pump BOIL WATER ADVISIORY, pit toilets)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.783914968371391" lon="-86.620097039267421">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Neys Provincial Park - Area 1 Campground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.334621034562588" lon="-126.92249997518957">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Nimpkish Recreation Area</name>
+    <cmt>description: location unconfirmed&lt;br&gt;"Wilderness camping&lt;br&gt;&lt;br&gt;There are no designated campsites at this park, however random wilderness camping is allowed. No facilities are provided. Please practice “ Leave No Trace” camping ethics.&lt;br&gt;"&lt;br&gt;https://bcparks.ca/nimpkish-lake-park/#park-facility-container&lt;br&gt;Details from Google Maps&lt;br&gt;83MH+MG, Nimpkish, BC V0N 1A0&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 269.0</cmt>
+    <desc>description: location unconfirmed&lt;br&gt;"Wilderness camping&lt;br&gt;&lt;br&gt;There are no designated campsites at this park, however random wilderness camping is allowed. No facilities are provided. Please practice “ Leave No Trace” camping ethics.&lt;br&gt;"&lt;br&gt;https://bcparks.ca/nimpkish-lake-park/#park-facility-container&lt;br&gt;Details from Google Maps&lt;br&gt;83MH+MG, Nimpkish, BC V0N 1A0&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 269.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.344874005764723" lon="-115.26847497560084">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>North Star Lake Recreation Site</name>
+    <cmt>description: (pit toilets)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: (pit toilets)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.966643989086151" lon="-62.717738002538681">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Northumberland Provincial Park</name>
+    <cmt>description: June – September&lt;br&gt;Details from Google Maps&lt;br&gt;12547 PE-4, Belle River, PE C0A 1B0&lt;br&gt;www.tourismpei.com&lt;br&gt;+1 902-962-7418&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 353.0</cmt>
+    <desc>description: June – September&lt;br&gt;Details from Google Maps&lt;br&gt;12547 PE-4, Belle River, PE C0A 1B0&lt;br&gt;www.tourismpei.com&lt;br&gt;+1 902-962-7418&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 353.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.117801962420344" lon="-55.080222012475133">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Notre Dame Provincial Park1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;Trans-Canada Hwy, Lewisporte, NL A0G 3A0&lt;br&gt;https://www.parksnl.ca/parks/notre-dame-provincial-park/&lt;br&gt;+1 709-535-2379&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 340.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;Trans-Canada Hwy, Lewisporte, NL A0G 3A0&lt;br&gt;https://www.parksnl.ca/parks/notre-dame-provincial-park/&lt;br&gt;+1 709-535-2379&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 340.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.691151967272162" lon="-119.73336501047015">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Okanagan Lake Provincial Park North Campground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.683514963835478" lon="-119.72347000613809">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Okanagan Lake Provincial Park South</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.382401965558529" lon="-120.17774501815438">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Old Hedley Road East Recreation Site</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.38371398486197" lon="-120.19160399213433">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Old Hedley Road West Recreation Site</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.718543021008372" lon="-113.45114903524518">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Oldman River Provincial Recreation Area (no water, pit toilets)</name>
+    <cmt>description: no water / pit toilets &lt;br&gt;"Sewage	&lt;br&gt;&lt;br&gt;The sewage disposal station here is permanently closed. The nearby Town of Fort Macleod operates a public sewage disposal and potable water station (located on the east side of the town next to Mac's Convenience Store).&lt;br&gt;Water&lt;br&gt;&lt;br&gt;You are expected to bring your own water. Government of Alberta regulations require that water from pumps/taps like the one located here NOT be used for drinking, cooking or washing (including brushing teeth and washing dishes). Water from the pump/tap onsite can only be used for purposes like putting out a campfire.&lt;br&gt;"&lt;br&gt;https://albertaparks.ca/parks/south/oldman-river-pra/information-facilities/camping/oldman-river/&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: no water / pit toilets &lt;br&gt;"Sewage	&lt;br&gt;&lt;br&gt;The sewage disposal station here is permanently closed. The nearby Town of Fort Macleod operates a public sewage disposal and potable water station (located on the east side of the town next to Mac's Convenience Store).&lt;br&gt;Water&lt;br&gt;&lt;br&gt;You are expected to bring your own water. Government of Alberta regulations require that water from pumps/taps like the one located here NOT be used for drinking, cooking or washing (including brushing teeth and washing dishes). Water from the pump/tap onsite can only be used for purposes like putting out a campfire.&lt;br&gt;"&lt;br&gt;https://albertaparks.ca/parks/south/oldman-river-pra/information-facilities/camping/oldman-river/&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.969342986121774" lon="-84.687107037752867">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Pancake Bay Provincial Park - no pancakes :(</name>
+    <cmt>description: no pancakes :(&lt;br&gt;Details from Google Maps&lt;br&gt;12729 Hwy 17N, Batchawana Bay, ON P0S 1A0&lt;br&gt;www.ontarioparks.com&lt;br&gt;+1 705-882-2209&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 302.0</cmt>
+    <desc>description: no pancakes :(&lt;br&gt;Details from Google Maps&lt;br&gt;12729 Hwy 17N, Batchawana Bay, ON P0S 1A0&lt;br&gt;www.ontarioparks.com&lt;br&gt;+1 705-882-2209&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 302.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.229871958494186" lon="-64.503634991124272">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Parlee Beach Provincial Park Camping</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.37447302043438" lon="-120.14584098011255">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Pickard Creek Recreation Site</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="54.240578021854162" lon="-130.13291297480464">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Prudhomme Lake Provincial Park</name>
+    <cmt>description: (23km East of Prince Rupert, handpump water and toilets available)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: (23km East of Prince Rupert, handpump water and toilets available)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="53.914746958762407" lon="-121.95679399184883">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Purden Lake Provincial Park</name>
+    <cmt>description: (water, pit/flush toilets)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: (water, pit/flush toilets)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.02830097079277" lon="-116.54358699917793">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Quinn Creek Campground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
     <sym>Campground</sym>
     <type>user</type>
     <extensions>
@@ -92,12 +1688,516 @@
     </extensions>
   </wpt>
 
+  <wpt lat="47.752152979373932" lon="-84.826935036107898">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Rabbit Blanket Campground</name>
+    <cmt>description: "Rabbit Blanket Lake Campground is situated on an inland lake with a small beach area. The forest is mixed allowing for some shaded sites and some more open. The campground is close to Hwy 17. There are 60 sites, 20 of which are electrical. There is a comfort station with flush toilets, showers and laundry and a trailer dump and fill station."&lt;br&gt;https://www.ontarioparks.ca/park/lakesuperior/camping&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: "Rabbit Blanket Lake Campground is situated on an inland lake with a small beach area. The forest is mixed allowing for some shaded sites and some more open. The campground is close to Hwy 17. There are 60 sites, 20 of which are electrical. There is a comfort station with flush toilets, showers and laundry and a trailer dump and fill station."&lt;br&gt;https://www.ontarioparks.ca/park/lakesuperior/camping&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.839156990870833" lon="-87.44426803663373">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Rainbow Falls Provincial Park - Rossport Campground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.319653026759624" lon="-124.27036598324776">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Rathtrevor Beach Campground</name>
+    <cmt>description: Rathtrevor Beach Park offers vehicle-accessible campsites, set in the wooded upland. All sites are within a five-minute walk to the two-kilometre stretch of sandy beach. &lt;br&gt;&lt;br&gt;Facilities include hot showers, flush toilets, an adventure playground, fresh water, and a sani-station. &lt;br&gt;&lt;br&gt;Campsite reservations are accepted and first come, first served sites are available in the shoulder season. &lt;br&gt;&lt;br&gt; The park is very busy during the summer months and reservations are required between the last week of June and Labour Day.&lt;br&gt;https://bcparks.ca/rathtrevor-beach-park/#park-camping-details-container&lt;br&gt;Details from Google Maps&lt;br&gt;1240 Rath Rd, Parksville, BC V9P 2E2&lt;br&gt;http://www.env.gov.bc.ca/bcparks/explore/parkpgs/rathtrevor/&lt;br&gt;+1 250-474-1336&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 257.0</cmt>
+    <desc>description: Rathtrevor Beach Park offers vehicle-accessible campsites, set in the wooded upland. All sites are within a five-minute walk to the two-kilometre stretch of sandy beach. &lt;br&gt;&lt;br&gt;Facilities include hot showers, flush toilets, an adventure playground, fresh water, and a sani-station. &lt;br&gt;&lt;br&gt;Campsite reservations are accepted and first come, first served sites are available in the shoulder season. &lt;br&gt;&lt;br&gt; The park is very busy during the summer months and reservations are required between the last week of June and Labour Day.&lt;br&gt;https://bcparks.ca/rathtrevor-beach-park/#park-camping-details-container&lt;br&gt;Details from Google Maps&lt;br&gt;1240 Rath Rd, Parksville, BC V9P 2E2&lt;br&gt;http://www.env.gov.bc.ca/bcparks/explore/parkpgs/rathtrevor/&lt;br&gt;+1 250-474-1336&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 257.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="53.030708972364664" lon="-119.23682902939618">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Robson Meadows Campground</name>
+    <cmt>description: (pit toilets, water, showers)&lt;br&gt;Details from Google Maps&lt;br&gt;BC-16, Tête Jaune Cache, BC V0E 2Z0&lt;br&gt;https://bcparks.ca/mount-robson-park/#park-camping-details-container&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 205.0</cmt>
+    <desc>description: (pit toilets, water, showers)&lt;br&gt;Details from Google Maps&lt;br&gt;BC-16, Tête Jaune Cache, BC V0E 2Z0&lt;br&gt;https://bcparks.ca/mount-robson-park/#park-camping-details-container&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 205.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="53.032729011029005" lon="-119.24836202524602">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Robson River Campground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.681730037555099" lon="-94.235482960939407">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Rushing River Provincial Park</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="55.196727029979229" lon="-127.68779397010803">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Seeley Lake Provincial Park Campground</name>
+    <cmt>description: (Water, Pit Toilets)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: (Water, Pit Toilets)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.423024021089077" lon="-94.058559006080031">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Sioux Narrows Provincial Park Campground</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;Unnamed Road, Sioux Narrows Nestor Falls, ON P0V&lt;br&gt;https://www.ontarioparks.com/park/siouxnarrows/camping&lt;br&gt;+1 807-226-5223&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 188.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;Unnamed Road, Sioux Narrows Nestor Falls, ON P0V&lt;br&gt;https://www.ontarioparks.com/park/siouxnarrows/camping&lt;br&gt;+1 807-226-5223&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 188.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.34403195977211" lon="-57.171979006379843">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Sir Richard Squires Memorial Provincial Park - Campground</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;Newfoundland and Labrador A0K 3E0&lt;br&gt;https://www.parksnl.ca/parks/sir-richard-squires-memorial-provincial-park/&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 342.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;Newfoundland and Labrador A0K 3E0&lt;br&gt;https://www.parksnl.ca/parks/sir-richard-squires-memorial-provincial-park/&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 342.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.252269003540277" lon="-121.51030400767922">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Skihist Provincial Park Campground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.669304033741355" lon="-109.4571050349623">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Sleepy Hollow-Anant</name>
+    <cmt>description: Exact location unconfirmed https://parks.saskatchewan.ca/camping/cypress-hills-interprovincial-park/r/campgroundDetails.do?contractCode=SKPP&amp;amp;parkId=290125#sr_a&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: Exact location unconfirmed https://parks.saskatchewan.ca/camping/cypress-hills-interprovincial-park/r/campgroundDetails.do?contractCode=SKPP&amp;amp;parkId=290125#sr_a&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="49.292131969705224" lon="-124.92809501476586">
     <ele>0</ele>
     <time>2026-08-24T14:43:26Z</time>
     <name>Sproat Lake Provincial Park Campsite</name>
     <cmt>description: Details from Google Maps&lt;br&gt;BC-4, Kleecoot, BC V0R 1W0&lt;br&gt;+1 250-474-1336&lt;br&gt;https://bcparks.ca/sproat-lake-park/&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 162.0</cmt>
     <desc>description: Details from Google Maps&lt;br&gt;BC-4, Kleecoot, BC V0R 1W0&lt;br&gt;+1 250-474-1336&lt;br&gt;https://bcparks.ca/sproat-lake-park/&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 162.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.757032996043563" lon="-120.86549903266132">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Steelhead Provincial Park Campground</name>
+    <cmt>description: (Pit toilet, showers)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: (Pit toilet, showers)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.370708037167788" lon="-120.13622702099383">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Stemwinder Provincial Park</name>
+    <cmt>description: pit toilets&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: pit toilets&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.982567977160215" lon="-66.68873998336494">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Sugarloaf Provincial Park - Campground</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;Unnamed Road, Campbellton, NB E3N&lt;br&gt;https://www.parcsnbparks.info/en/parks/9/sugarloaf-provincial-park&lt;br&gt;+1 506-789-2366&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 372.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;Unnamed Road, Campbellton, NB E3N&lt;br&gt;https://www.parcsnbparks.info/en/parks/9/sugarloaf-provincial-park&lt;br&gt;+1 506-789-2366&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 372.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.319886965677142" lon="-115.24570201523602">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Suzanne Lake Recreation Site</name>
+    <cmt>description: (pit toilets)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: (pit toilets)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.014579998329282" lon="-119.45750199258327">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>sw̓iw̓s (Haynes Point) Provincial Park</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.041187979280949" lon="-115.26694502681494">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:11Z</time>
+    <name>Three Sisters Campground (Bow Valley Provincial Park)</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;2 Ave, Bighorn No. 8, AB T1W 2W4&lt;br&gt;www.albertaparks.ca&lt;br&gt;+1 403-673-2163&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 294.0</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;2 Ave, Bighorn No. 8, AB T1W 2W4&lt;br&gt;www.albertaparks.ca&lt;br&gt;+1 403-673-2163&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 294.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="54.706741003319621" lon="-127.03825598582625">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Tyhee Lake Provincial Park</name>
+    <cmt>description: (pit toilets, showers, NOTE: reported that pottable water isn't available and not recommended to stay here)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: (pit toilets, showers, NOTE: reported that pottable water isn't available and not recommended to stay here)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.501143993809819" lon="-117.18471801839769">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Waitabit Creek Campground</name>
+    <cmt>description: (toilets)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: (toilets)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.385894034057856" lon="-115.36295101046562">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Wapiti Lake Recreation Site</name>
+    <cmt>description: (pit toilets, mosquitos)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: (pit toilets, mosquitos)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.781464040279388" lon="-115.72907798923552">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Wasa Lake Park Campground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.746008003130555" lon="-95.211899997666478">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>West Hawk Lake Campground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.694517025724053" lon="-85.646394984796643">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>White Lake Provincial Park Campground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.838953981176019" lon="-87.394596040248871">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Whitesand Lake Campground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
     <sym>Campground</sym>
     <type>user</type>
     <extensions>
@@ -130,6 +2230,69 @@
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-06-27T16:35:11Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.082671023905277" lon="-115.05856303498149">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Willow Rock Campground</name>
+    <cmt>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: &lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.186147019267082" lon="-126.62390096113086">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Woss Lake Campground</name>
+    <cmt>description: "Wilderness camping&lt;br&gt;&lt;br&gt;There are no designated campsites at this park, however random wilderness camping is allowed. All sites are on a first come, first serve basis and no facilities are provided. Please practice “Leave No Trace” camping ethics."&lt;br&gt;&lt;br&gt;https://bcparks.ca/woss-lake-park/#park-camping-details-container&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 176.0</cmt>
+    <desc>description: "Wilderness camping&lt;br&gt;&lt;br&gt;There are no designated campsites at this park, however random wilderness camping is allowed. All sites are on a first come, first serve basis and no facilities are provided. Please practice “Leave No Trace” camping ethics."&lt;br&gt;&lt;br&gt;https://bcparks.ca/woss-lake-park/#park-camping-details-container&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID: 176.0</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.081304976716638" lon="-116.09477899968624">
+    <ele>0</ele>
+    <time>2026-08-24T14:43:26Z</time>
+    <name>Yahk Provincial Park Campground</name>
+    <cmt>description: (cold water taps, pit toilets)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</cmt>
+    <desc>description: (cold water taps, pit toilets)&lt;br&gt;Type: Provincial Park Campground&lt;br&gt;ID:</desc>
+    <sym>Campground</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-24T14:43:26Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
