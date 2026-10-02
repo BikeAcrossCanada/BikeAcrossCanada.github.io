@@ -101,28 +101,28 @@
   },
   {
    "key": "Regional_Park_Campground",
-   "emoji": "\u26fa",
+   "emoji": "\u26fa\ud83d\udee1\ufe0f",
    "title": "Regional Park Campgrounds",
    "count": 11,
    "parent": "Campgrounds"
   },
   {
    "key": "Provincial_Park_Campground",
-   "emoji": "\u26fa",
+   "emoji": "\ud83c\udfd5\ufe0f",
    "title": "Provincial Park Campgrounds",
    "count": 102,
    "parent": "Campgrounds"
   },
   {
    "key": "National_Park_Campground",
-   "emoji": "\u26fa",
+   "emoji": "\u26fa\ud83c\udde8\ud83c\udde6",
    "title": "National Park Campgrounds",
    "count": 51,
    "parent": "Campgrounds"
   },
   {
    "key": "Privately_Owned_Campground",
-   "emoji": "\u26fa",
+   "emoji": "\u26fa\ufe0f\ud83c\udfd5",
    "title": "Privately Owned Campgrounds",
    "count": 419,
    "parent": "Campgrounds"
