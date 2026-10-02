@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?><gpx creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd http://www.garmin.com/xmlschemas/TripExtensions/v1 http://www.garmin.com/xmlschemas/TripExtensionsv1.xsd http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1 http://www.garmin.com/xmlschemas/TripMetaDataExtensionsv1.xsd http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1 http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensionsv1.xsd http://www.garmin.com/xmlschemas/CreationTimeExtension/v1 http://www.garmin.com/xmlschemas/CreationTimeExtensionsv1.xsd http://www.garmin.com/xmlschemas/AccelerationExtension/v1 http://www.garmin.com/xmlschemas/AccelerationExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.garmin.com/xmlschemas/VideoExtension/v1 http://www.garmin.com/xmlschemas/VideoExtensionv1.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1" xmlns:tmd="http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1" xmlns:vptm="http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1" xmlns:ctx="http://www.garmin.com/xmlschemas/CreationTimeExtension/v1" xmlns:gpxacc="http://www.garmin.com/xmlschemas/AccelerationExtension/v1" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:vidx1="http://www.garmin.com/xmlschemas/VideoExtension/v1">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2026-10-02T16:40:00Z</time>
+    <bounds maxlat="48.938457984477282" maxlon="-57.93467503041029" minlat="45.40744598954916" minlon="-89.26705302670598" />
+  </metadata>
+
+  <wpt lat="48.400278026238084" lon="-89.26705302670598">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Confederation College Residence - Sibley Hall1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;960 William St, Thunder Bay, ON P7B 6V1&lt;br&gt;confederationresidence.ca&lt;br&gt;+1 807-475-6381&lt;br&gt;Type: Student Residence</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;960 William St, Thunder Bay, ON P7B 6V1&lt;br&gt;confederationresidence.ca&lt;br&gt;+1 807-475-6381&lt;br&gt;Type: Student Residence</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.240068040788174" lon="-63.119851006194949">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Glendenning Hall</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;331 Grafton St, Charlottetown, PE C1A 1L9&lt;br&gt;www.stayathollandcollege.com&lt;br&gt;+1 902-367-7702&lt;br&gt;Type: Student Residence</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;331 Grafton St, Charlottetown, PE C1A 1L9&lt;br&gt;www.stayathollandcollege.com&lt;br&gt;+1 902-367-7702&lt;br&gt;Type: Student Residence</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.938457984477282" lon="-57.93467503041029">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Grenfell Campus Guest Accommodations1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;20 University Dr, Corner Brook, NL A2H 5G4&lt;br&gt;grenfell.mun.ca&lt;br&gt;+1 709-637-6255&lt;br&gt;Type: Student Residence</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;20 University Dr, Corner Brook, NL A2H 5G4&lt;br&gt;grenfell.mun.ca&lt;br&gt;+1 709-637-6255&lt;br&gt;Type: Student Residence</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.418137012049556" lon="-89.264140985906124">
+    <ele>0</ele>
+    <time>2026-08-26T09:02:31Z</time>
+    <name>Lakehead University Residence - Thunder Bay Campus</name>
+    <cmt>description: Summer Guest Accommodations&lt;br&gt;Details from Google Maps&lt;br&gt;955 Oliver Rd, Thunder Bay, ON P7B 5E1&lt;br&gt;www.lakeheadu.ca&lt;br&gt;+1 807-343-8512&lt;br&gt;Type: Student Residence</cmt>
+    <desc>description: Summer Guest Accommodations&lt;br&gt;Details from Google Maps&lt;br&gt;955 Oliver Rd, Thunder Bay, ON P7B 5E1&lt;br&gt;www.lakeheadu.ca&lt;br&gt;+1 807-343-8512&lt;br&gt;Type: Student Residence</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-26T09:02:31Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.40744598954916" lon="-75.675367964431643">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Residence &amp; Conference Centre - Ottawa Downtown1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;150 Hazel St, Ottawa, ON K1S 5T8&lt;br&gt;www.stayrcc.com&lt;br&gt;+1 613-236-3131&lt;br&gt;Type: Student Residence</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;150 Hazel St, Ottawa, ON K1S 5T8&lt;br&gt;www.stayrcc.com&lt;br&gt;+1 613-236-3131&lt;br&gt;Type: Student Residence</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.780496025457978" lon="-71.267348974943161">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Residences Université Laval</name>
+    <cmt>description: This tourist accommodation offers&lt;br&gt;860 units&lt;br&gt;Laundry room&lt;br&gt;Breakfast / Lunch / Dinner&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified tourist accommodation, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;A covered, locked location to store your bicycle at night&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/universite-laval-service-des-residences-2/&lt;br&gt;Type: Student Residence</cmt>
+    <desc>description: This tourist accommodation offers&lt;br&gt;860 units&lt;br&gt;Laundry room&lt;br&gt;Breakfast / Lunch / Dinner&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified tourist accommodation, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;A covered, locked location to store your bicycle at night&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/universite-laval-service-des-residences-2/&lt;br&gt;Type: Student Residence</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.420957030728459" lon="-75.739270001649857">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Résidence maison de ville UQO</name>
+    <cmt>description: *A pump and basic tools for minor repairs, A covered, locked location to store your bicycle at night&lt;br&gt;Information about local bicycle networks and cycling services in the area, Student Residence (University)&lt;br&gt;https://www.routeverte.com/en/hebergements/les-residences-tache-et-les-maisons-de-ville-de-luqo-2/&lt;br&gt;Type: Student Residence</cmt>
+    <desc>description: *A pump and basic tools for minor repairs, A covered, locked location to store your bicycle at night&lt;br&gt;Information about local bicycle networks and cycling services in the area, Student Residence (University)&lt;br&gt;https://www.routeverte.com/en/hebergements/les-residences-tache-et-les-maisons-de-ville-de-luqo-2/&lt;br&gt;Type: Student Residence</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.254159025847912" lon="-63.13839596696198">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>UPEI Summer Accommodations1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;Bill and Denise Andrew Hall, 550 University Ave, Charlottetown, PE C1A 4P3&lt;br&gt;www.upei.ca&lt;br&gt;+1 902-566-0952&lt;br&gt;Type: Student Residence</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;Bill and Denise Andrew Hall, 550 University Ave, Charlottetown, PE C1A 4P3&lt;br&gt;www.upei.ca&lt;br&gt;+1 902-566-0952&lt;br&gt;Type: Student Residence</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+</gpx>
