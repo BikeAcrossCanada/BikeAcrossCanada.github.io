@@ -72,7 +72,7 @@ POI_LAYERS = {  # gpx stem -> (emoji, display name)
     "Tourist_office": ("ℹ️", "Visitor centres"),
     "Library": ("\U0001f4da", "Libraries"),
     "Warning_Caution_Note": ("⚠️", "Warnings & cautions"),
-    "Camera_Stop": ("\U0001f4f7", "Camera stops"),
+    "Camera_Stop": ("\U0001f4f7 🇨🇦", "Historical Fun Facts about Canada"),
     "Ferry_Crossing_Points": ("⛴️", "Ferry crossing points"),
     "Rail_Stops": ("\U0001f686", "Rail stops"),
     "Bus_Coach_Transit_Shuttle": ("\U0001f68c", "Bus & shuttle"),
