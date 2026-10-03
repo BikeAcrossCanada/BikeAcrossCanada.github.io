@@ -4,396 +4,68 @@
     <link href="http://www.garmin.com">
       <text>Garmin International</text>
     </link>
-    <time>2024-09-13T15:28:52Z</time>
-    <bounds maxlat="52.261045156046748" maxlon="-52.697248617187142" minlat="44.744216585531831" minlon="-125.90964236296713" />
+    <time>2026-10-03T15:05:50Z</time>
+    <bounds maxlat="51.640630178153515" maxlon="-52.697248617187142" minlat="44.744216585531831" minlon="-125.90964236296713" />
   </metadata>
 
-  <wpt lat="45.899946000427008" lon="-77.288929000496864">
-    <time>2024-05-23T16:33:43Z</time>
-    <name>Bridge crossing Petawawa River - photo stop</name>
+  <wpt lat="45.423724735155702" lon="-75.698697566986084">
+    <ele>0</ele>
+    <time>2026-06-27T16:54:51Z</time>
+    <name>Centennial Flame (Ottawa, ON)</name>
+    <cmt>&lt;img src="https://www.canada.ca/content/dam/pspc-spac/images/services/infrastructure-buildings/parliamentary-precinct/terrains-grounds3.jpg"&gt;
+
+Centennial Flame
+
+The Centennial Flame is a major feature on the Parliament Hill grounds. You will find it just inside the Queen’s Gate in front of the Peace Tower.
+
+It was originally built as a temporary monument. Prime Minister Lester B. Pearson lit the flame for the first time on December 31, 1966, to open the celebrations of Canada's 100th anniversary of Confederation. Canadians loved the monument so much that it became a permanent feature.
+
+Interesting fact: The water in the Centennial Flame’s fountain never freezes, even in Ottawa's cold winters! The continuous movement of the water keeps it from freezing.
+
+Text &amp; Image Source: https://www.canada.ca/en/public-services-procurement/services/infrastructure-buildings/parliamentary-precinct/discover/grounds.html</cmt>
+    <desc>&lt;img src="https://www.canada.ca/content/dam/pspc-spac/images/services/infrastructure-buildings/parliamentary-precinct/terrains-grounds3.jpg"&gt;
+
+Centennial Flame
+
+The Centennial Flame is a major feature on the Parliament Hill grounds. You will find it just inside the Queen’s Gate in front of the Peace Tower.
+
+It was originally built as a temporary monument. Prime Minister Lester B. Pearson lit the flame for the first time on December 31, 1966, to open the celebrations of Canada's 100th anniversary of Confederation. Canadians loved the monument so much that it became a permanent feature.
+
+Interesting fact: The water in the Centennial Flame’s fountain never freezes, even in Ottawa's cold winters! The continuous movement of the water keeps it from freezing.
+
+Text &amp; Image Source: https://www.canada.ca/en/public-services-procurement/services/infrastructure-buildings/parliamentary-precinct/discover/grounds.html</desc>
+    <link href="https://www.canada.ca/en/public-services-procurement/services/infrastructure-buildings/parliamentary-precinct/discover/grounds.html" />
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
       <gpxx:WaypointExtension>
         <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Address>
+          <gpxx:City>Ottawa</gpxx:City>
+          <gpxx:State>Ontario</gpxx:State>
+          <gpxx:Country>Canada</gpxx:Country>
+        </gpxx:Address>
       </gpxx:WaypointExtension>
       <wptx1:WaypointExtension>
         <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Address>
+          <wptx1:City>Ottawa</wptx1:City>
+          <wptx1:State>Ontario</wptx1:State>
+          <wptx1:Country>Canada</wptx1:Country>
+        </wptx1:Address>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2024-05-23T16:33:43Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="51.474479399621487" lon="-109.62270881049335">
-    <time>2023-06-13T00:06:36Z</time>
-    <name>Buffalo rubbing stone - spot</name>
-    <sym>Scenic Area</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2023-06-13T00:06:36Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="45.423724735155702" lon="-75.698697566986084">
-    <time>2022-08-24T20:07:09Z</time>
-    <name>Centennial Flame</name>
-    <cmt>Centennial Flame</cmt>
-    <desc>Centennial Flame</desc>
-    <sym>Scenic Area</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2022-08-24T20:07:09Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="46.21873140335083" lon="-64.555020332336426">
-    <time>2022-07-25T20:09:10Z</time>
-    <name>Giant Lobster</name>
-    <cmt>Big Lobster</cmt>
-    <desc>Big Lobster</desc>
-    <sym>Scenic Area</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2022-07-25T20:09:10Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="52.261045156046748" lon="-117.28025528602302">
-    <time>2023-06-13T00:13:06Z</time>
-    <name>Glacier Skywalk (Paid Admission)</name>
-    <sym>Scenic Area</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2023-06-13T00:13:06Z</ctx:CreationTime>
+        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
 
   <wpt lat="51.640630178153515" lon="-111.94176726043224">
-    <time>2022-08-12T04:25:35Z</time>
+    <ele>0</ele>
+    <time>2026-06-27T16:54:51Z</time>
     <name>Hanna's Largest Goose</name>
     <cmt>Hanna's Largest Goose</cmt>
     <desc>Hanna's Largest Goose</desc>
-    <sym>Scenic Area</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2022-08-12T04:25:35Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="46.29678787663579" lon="-67.529945271089673">
-    <time>2022-07-24T19:14:49Z</time>
-    <name>Hartland Covered Bridge - World's Longest Covered Bridge</name>
-    <cmt>Hartland Covered Bridge
-
-World's Longest Covered Bridge</cmt>
-    <desc>Hartland Covered Bridge
-
-World's Longest Covered Bridge</desc>
-    <sym>Scenic Area</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2022-07-24T19:14:49Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="48.403216302394867" lon="-89.62502189911902">
-    <time>2022-08-20T03:29:01Z</time>
-    <name>Kakabeka Falls - Camera Stop</name>
-    <cmt>Kakabeka Falls</cmt>
-    <desc>Kakabeka Falls</desc>
-    <sym>Scenic Area</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2022-08-20T03:29:01Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="46.488409331068397" lon="-84.073702516034245">
-    <time>2022-07-21T10:35:57Z</time>
-    <name>Loon Dollar Monument</name>
-    <cmt>area</cmt>
-    <desc>area</desc>
-    <sym>Scenic Area</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2022-07-21T10:35:57Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="50.413519805297256" lon="-105.51013371907175">
-    <time>2022-09-17T13:31:17Z</time>
-    <name>Mac the Moose</name>
-    <cmt>area</cmt>
-    <desc>area</desc>
-    <sym>Scenic Area</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2022-09-17T13:31:17Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="49.78630542755127" lon="-92.83820629119873">
-    <time>2022-07-21T10:33:19Z</time>
-    <name>Max the Moose</name>
-    <cmt>Max the Moose</cmt>
-    <desc>Max the Moose</desc>
-    <sym>Scenic Area</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2022-07-21T10:33:19Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="47.570306668058038" lon="-52.697248617187142">
-    <time>2022-07-21T10:37:27Z</time>
-    <name>Mile 0 St. John's, Newfoundland</name>
-    <cmt>Terry Fox Mile 0 Site</cmt>
-    <desc>Terry Fox Mile 0 Site</desc>
-    <sym>Scenic Area</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2022-07-21T10:37:27Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="48.409087741747499" lon="-123.36899757385254">
-    <time>2021-10-17T01:25:32Z</time>
-    <name>Mile 0 Victoria, BC</name>
-    <cmt>Mile 0</cmt>
-    <desc>Mile 0</desc>
-    <sym>Scenic Area</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2021-10-17T01:25:32Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="51.941365404054523" lon="-116.71739540062845">
-    <time>2023-06-14T19:38:20Z</time>
-    <name>Mistaya Canyon - Banff National Park</name>
-    <sym>Scenic Area</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2023-06-14T19:38:20Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="49.017456835135818" lon="-88.256625160574913">
-    <time>2022-08-20T07:33:43Z</time>
-    <name>Nipigon Lookout - Camera stop</name>
-    <cmt>area</cmt>
-    <desc>area</desc>
-    <sym>Scenic Area</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2022-08-20T07:33:43Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="47.98397202976048" lon="-84.780146917328238">
-    <time>2022-08-20T19:01:28Z</time>
-    <name>Original Giant Wawa Goose</name>
-    <cmt>area</cmt>
-    <desc>area</desc>
-    <sym>Scenic Area</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2022-08-20T19:01:28Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="49.154089568182826" lon="-125.90964236296713">
-    <time>2022-04-14T08:05:02Z</time>
-    <name>Pacific Terminus of Trans-Canada Highway sign</name>
-    <cmt>area</cmt>
-    <desc>area</desc>
-    <sym>Scenic Area</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2022-04-14T08:05:02Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="48.491635825484991" lon="-67.448812304064631">
-    <time>2022-08-25T03:35:07Z</time>
-    <name>Pont couvert Des Anses-Saint-Jean 1931</name>
-    <cmt>Route Verte 1</cmt>
-    <desc>Route Verte 1</desc>
-    <sym>Scenic Area</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2022-08-25T03:35:07Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="49.523769719526172" lon="-108.82537566125393">
-    <time>2023-01-23T18:46:23Z</time>
-    <name>T. rex Discovery Centre</name>
-    <cmt>Hours
-CLOSED
-Reopens May 20, 2023.</cmt>
-    <desc>Hours
-CLOSED
-Reopens May 20, 2023.</desc>
-    <link href="https://royalsaskmuseum.ca/trex" />
-    <sym>Scenic Area</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
-        <gpxx:PhoneNumber>306-295-4009</gpxx:PhoneNumber>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
-        <wptx1:PhoneNumber>306-295-4009</wptx1:PhoneNumber>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2023-01-23T18:46:23Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="48.484877329319715" lon="-89.167983289808035">
-    <time>2023-06-17T00:23:38Z</time>
-    <name>Terry Fox Memorial Monument -</name>
     <sym>Flag, Blue</sym>
     <type>user</type>
     <extensions>
@@ -404,207 +76,602 @@ Reopens May 20, 2023.</desc>
         <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2023-06-17T00:23:38Z</ctx:CreationTime>
+        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.29678787663579" lon="-67.529945271089673">
+    <ele>0</ele>
+    <time>2026-06-27T16:54:51Z</time>
+    <name>Hartland Covered Bridge - World's Longest Covered Bridge</name>
+    <cmt>Hartland Covered Bridge&lt;br&gt;&lt;br&gt;World's Longest Covered Bridge</cmt>
+    <desc>Hartland Covered Bridge&lt;br&gt;&lt;br&gt;World's Longest Covered Bridge</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.403216302394867" lon="-89.62502189911902">
+    <ele>0</ele>
+    <time>2026-06-27T16:54:51Z</time>
+    <name>Kakabeka Falls - Camera Stop</name>
+    <cmt>Kakabeka Falls</cmt>
+    <desc>Kakabeka Falls</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.488409331068397" lon="-84.073702516034245">
+    <ele>0</ele>
+    <time>2026-06-27T16:54:51Z</time>
+    <name>Loon Dollar Monument</name>
+    <cmt>area</cmt>
+    <desc>area</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.413519805297256" lon="-105.51013371907175">
+    <ele>0</ele>
+    <time>2026-06-27T16:54:51Z</time>
+    <name>Mac the Moose</name>
+    <cmt>area</cmt>
+    <desc>area</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.78630542755127" lon="-92.83820629119873">
+    <ele>0</ele>
+    <time>2026-06-27T16:54:51Z</time>
+    <name>Max the Moose</name>
+    <cmt>Max the Moose</cmt>
+    <desc>Max the Moose</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.570306668058038" lon="-52.697248617187142">
+    <ele>0</ele>
+    <time>2026-06-27T16:54:51Z</time>
+    <name>Mile 0 St. John's, Newfoundland</name>
+    <cmt>Terry Fox Mile 0 Site</cmt>
+    <desc>Terry Fox Mile 0 Site</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.409087741747499" lon="-123.36899757385254">
+    <ele>0</ele>
+    <time>2026-06-27T16:54:51Z</time>
+    <name>Mile 0 Victoria, BC</name>
+    <cmt>Mile 0</cmt>
+    <desc>Mile 0</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.017456835135818" lon="-88.256625160574913">
+    <ele>0</ele>
+    <time>2026-06-27T16:54:51Z</time>
+    <name>Nipigon Lookout - Camera stop</name>
+    <cmt>area</cmt>
+    <desc>area</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.98397202976048" lon="-84.780146917328238">
+    <ele>0</ele>
+    <time>2026-06-27T16:54:51Z</time>
+    <name>Original Giant Wawa Goose</name>
+    <cmt>area</cmt>
+    <desc>area</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.154089568182826" lon="-125.90964236296713">
+    <ele>0</ele>
+    <time>2026-06-27T16:54:51Z</time>
+    <name>Pacific Terminus of Trans-Canada Highway sign (Tofino, BC)</name>
+    <cmt>&lt;img scr="https://upload.wikimedia.org/wikipedia/commons/d/d8/Trans_Canada_Highway_Terminus_%286886239392%29.jpg"&gt;
+
+"
+Road across Canada ends in Tofino, locals say
+TOFINO -- The black-and-white sign in Tofino's harbour is a pretty low-key affair, an arched orca adding a decorative flourish at the top, but there's nothing modest about the statement it makes.
+Mike Fuhrmann
+Jul 29, 2012 1:00 AM
+
+TOFINO -- The black-and-white sign in Tofino's harbour is a pretty low-key affair, an arched orca adding a decorative flourish at the top, but there's nothing modest about the statement it makes.
+
+It's literally at the end of the road  beyond it is the water's edge, a wooden wharf and the green mountainous backdrop of Meares Island in Clayoquot Sound.
+
+That road stretches for some 8,000 kilometres to St. John's, N.L., at the other end of Canada.
+
+The sign declares the spot on the west coast of Vancouver Island to be the "Pacific terminus" of the Trans-Canada Highway. Trouble is, it isn't  at least, not officially.
+
+As a Mile Zero sign emphatically states in Victoria at the southern point of the island, the highway ends  or starts, depending on your point of view  in the B.C. capital.
+
+Tofino's sign is "patently wrong," says Calgary-based Mark Ruthenberg, who runs a Trans-Canada Highway website and has researched the cross-country network extensively.
+
+"That's a municipal designation, not a federal or provincial designation. It's like a bakery saying 'we're the world's best bakery.' ... It doesn't really mean anything."
+
+Ruthenberg notes there is no Trans-Canada Highway signage on any of the roads leading up to Tofino, which has a winter population of about 2,000 and a summer crowd of considerably more.
+
+Fifty years ago  on July 30, 1962  the Trans-Canada Highway was formally opened at Rogers Pass in southeastern British Columbia after the federal government, under the Trans-Canada Highway Act of 1949, had provided millions of dollars to the provinces to share construction costs. The project would later be finished in 1970 to become the largest national highway in the world.
+
+Tofino first erected a sign declaring itself the western terminus of the yet-to-be built highway in the late 1930s or early '40s, says Ken Gibson, a former member of community's chamber of commerce and son of a former town mayor. Local boosters of the designation hoped it would stimulate tourism and draw attention to the fabulous beaches nearby.
+
+But the town was later "double-crossed" by government officials who had promised that it would get the terminus status, says Gibson, who has spent all his life in Tofino and adds that he was "hatched about 100 feet from where that sign is."
+
+Asked why the sign has been left up all these years at the foot of First Street, the 77-year-old Gibson replies: "Because we're just a stubborn, determined bunch.
+"
+
+Text Source = https://www.timescolonist.com/life/travel/road-across-canada-ends-in-tofino-locals-say-4562904
+Image source = https://commons.wikimedia.org/wiki/File:Trans_Canada_Highway_Terminus_(6886239392).jpg</cmt>
+    <desc>&lt;img scr="https://upload.wikimedia.org/wikipedia/commons/d/d8/Trans_Canada_Highway_Terminus_%286886239392%29.jpg"&gt;
+
+"
+Road across Canada ends in Tofino, locals say
+TOFINO -- The black-and-white sign in Tofino's harbour is a pretty low-key affair, an arched orca adding a decorative flourish at the top, but there's nothing modest about the statement it makes.
+Mike Fuhrmann
+Jul 29, 2012 1:00 AM
+
+TOFINO -- The black-and-white sign in Tofino's harbour is a pretty low-key affair, an arched orca adding a decorative flourish at the top, but there's nothing modest about the statement it makes.
+
+It's literally at the end of the road  beyond it is the water's edge, a wooden wharf and the green mountainous backdrop of Meares Island in Clayoquot Sound.
+
+That road stretches for some 8,000 kilometres to St. John's, N.L., at the other end of Canada.
+
+The sign declares the spot on the west coast of Vancouver Island to be the "Pacific terminus" of the Trans-Canada Highway. Trouble is, it isn't  at least, not officially.
+
+As a Mile Zero sign emphatically states in Victoria at the southern point of the island, the highway ends  or starts, depending on your point of view  in the B.C. capital.
+
+Tofino's sign is "patently wrong," says Calgary-based Mark Ruthenberg, who runs a Trans-Canada Highway website and has researched the cross-country network extensively.
+
+"That's a municipal designation, not a federal or provincial designation. It's like a bakery saying 'we're the world's best bakery.' ... It doesn't really mean anything."
+
+Ruthenberg notes there is no Trans-Canada Highway signage on any of the roads leading up to Tofino, which has a winter population of about 2,000 and a summer crowd of considerably more.
+
+Fifty years ago  on July 30, 1962  the Trans-Canada Highway was formally opened at Rogers Pass in southeastern British Columbia after the federal government, under the Trans-Canada Highway Act of 1949, had provided millions of dollars to the provinces to share construction costs. The project would later be finished in 1970 to become the largest national highway in the world.
+
+Tofino first erected a sign declaring itself the western terminus of the yet-to-be built highway in the late 1930s or early '40s, says Ken Gibson, a former member of community's chamber of commerce and son of a former town mayor. Local boosters of the designation hoped it would stimulate tourism and draw attention to the fabulous beaches nearby.
+
+But the town was later "double-crossed" by government officials who had promised that it would get the terminus status, says Gibson, who has spent all his life in Tofino and adds that he was "hatched about 100 feet from where that sign is."
+
+Asked why the sign has been left up all these years at the foot of First Street, the 77-year-old Gibson replies: "Because we're just a stubborn, determined bunch.
+"
+
+Text Source = https://www.timescolonist.com/life/travel/road-across-canada-ends-in-tofino-locals-say-4562904
+Image source = https://commons.wikimedia.org/wiki/File:Trans_Canada_Highway_Terminus_(6886239392).jpg</desc>
+    <link href="https://www.timescolonist.com/life/travel/road-across-canada-ends-in-tofino-locals-say-4562904" />
+    <sym>Scenic Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Address>
+          <gpxx:City>Tofino</gpxx:City>
+          <gpxx:State>BC</gpxx:State>
+          <gpxx:Country>Canada</gpxx:Country>
+        </gpxx:Address>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Address>
+          <wptx1:City>Tofino</wptx1:City>
+          <wptx1:State>BC</wptx1:State>
+          <wptx1:Country>Canada</wptx1:Country>
+        </wptx1:Address>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.491635825484991" lon="-67.448812304064631">
+    <ele>0</ele>
+    <time>2026-06-27T16:54:51Z</time>
+    <name>Pont couvert Des Anses-Saint-Jean 1931</name>
+    <cmt>Route Verte 1</cmt>
+    <desc>Route Verte 1</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.523769719526172" lon="-108.82537566125393">
+    <ele>0</ele>
+    <time>2026-06-27T16:54:51Z</time>
+    <name>T. rex Discovery Centre</name>
+    <cmt>Hours&lt;br&gt;CLOSED&lt;br&gt;Reopens May 20, 2023.</cmt>
+    <desc>Hours&lt;br&gt;CLOSED&lt;br&gt;Reopens May 20, 2023.</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
 
   <wpt lat="46.473519802093506" lon="-81.033825874328613">
-    <time>2022-08-23T21:18:06Z</time>
+    <ele>0</ele>
+    <time>2026-06-27T16:54:51Z</time>
     <name>The Big Nickel</name>
     <cmt>The Big Nickel</cmt>
     <desc>The Big Nickel</desc>
-    <sym>Scenic Area</sym>
+    <sym>Flag, Blue</sym>
     <type>user</type>
     <extensions>
       <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
       </gpxx:WaypointExtension>
       <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2022-08-23T21:18:06Z</ctx:CreationTime>
+        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
 
   <wpt lat="47.973496913909912" lon="-84.782931804656982">
-    <time>2022-09-24T12:03:33Z</time>
+    <ele>0</ele>
+    <time>2026-06-27T16:54:51Z</time>
     <name>The Canada Goose</name>
     <cmt>The Canada Goose</cmt>
     <desc>The Canada Goose</desc>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.21873140335083" lon="-64.555020332336426">
+    <ele>0</ele>
+    <time>2026-06-27T16:54:51Z</time>
+    <name>The Giant Lobster (Shediac, NB)</name>
+    <cmt>&lt;img src="https://tourismnewbrunswick.ca/sites/default/files/styles/listing_hero/public/images/wiki/P_TheWorldsLargestLobs_1.jpg"&gt;
+
+The Giant Lobster
+
+Unveiled on June 30, 1990, this impressive sculpture, made of reinforced concrete, is no doubt Shediac’s most emblematic monument. The sculpture measures 10.7 metres in length, five metres in height, and weighs 90 tonnes. It was created and constructed by New Brunswick sculptor Winston Bronnum (1929-1991), known for his large, full-scale animal sculptures. As impressive as the Giant Lobster’s size is, it also reflects the crustacean’s real-life anatomy. The statue was commissioned by the Shediac Rotary Club, whose members were the project’s initiators and masterminds.
+
+The Giant Lobster is, beyond a doubt, one of the Maritimes’ most photographed tourist attractions. It also speaks to Shediac’s long history in the fishing industry, earning the town the title of Lobster Capital of the World around the middle of the 20th century. The sight of this impressive monument lends credence to the title.
+
+Source: https://shediac.ca/en/community-life/recreational-facilities/the-giant-lobster
+Image Source: https://tourismnewbrunswick.ca/listing/worlds-largest-lobster</cmt>
+    <desc>&lt;img src="https://tourismnewbrunswick.ca/sites/default/files/styles/listing_hero/public/images/wiki/P_TheWorldsLargestLobs_1.jpg"&gt;
+
+The Giant Lobster
+
+Unveiled on June 30, 1990, this impressive sculpture, made of reinforced concrete, is no doubt Shediac’s most emblematic monument. The sculpture measures 10.7 metres in length, five metres in height, and weighs 90 tonnes. It was created and constructed by New Brunswick sculptor Winston Bronnum (1929-1991), known for his large, full-scale animal sculptures. As impressive as the Giant Lobster’s size is, it also reflects the crustacean’s real-life anatomy. The statue was commissioned by the Shediac Rotary Club, whose members were the project’s initiators and masterminds.
+
+The Giant Lobster is, beyond a doubt, one of the Maritimes’ most photographed tourist attractions. It also speaks to Shediac’s long history in the fishing industry, earning the town the title of Lobster Capital of the World around the middle of the 20th century. The sight of this impressive monument lends credence to the title.
+
+Source: https://shediac.ca/en/community-life/recreational-facilities/the-giant-lobster
+Image Source: https://tourismnewbrunswick.ca/listing/worlds-largest-lobster</desc>
+    <link href="https://shediac.ca/en/community-life/recreational-facilities/the-giant-lobster" />
     <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
       <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Address>
+          <gpxx:StreetAddress>229 Main St</gpxx:StreetAddress>
+          <gpxx:City>Shediac</gpxx:City>
+          <gpxx:State>New Brunswick</gpxx:State>
+          <gpxx:Country>Canada</gpxx:Country>
+          <gpxx:PostalCode>E4P 2A5</gpxx:PostalCode>
+        </gpxx:Address>
       </gpxx:WaypointExtension>
       <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Address>
+          <wptx1:StreetAddress>229 Main St</wptx1:StreetAddress>
+          <wptx1:City>Shediac</wptx1:City>
+          <wptx1:State>New Brunswick</wptx1:State>
+          <wptx1:Country>Canada</wptx1:Country>
+          <wptx1:PostalCode>E4P 2A5</wptx1:PostalCode>
+        </wptx1:Address>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2022-09-24T12:03:33Z</ctx:CreationTime>
+        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
 
   <wpt lat="50.390042765066028" lon="-105.53502386435866">
-    <time>2022-04-10T08:54:18Z</time>
+    <ele>0</ele>
+    <time>2026-06-27T16:54:51Z</time>
     <name>Tunnels of Moose Jaw</name>
     <cmt>Tunnels of Moose Jaw</cmt>
     <desc>Tunnels of Moose Jaw</desc>
-    <sym>Scenic Area</sym>
+    <sym>Flag, Blue</sym>
     <type>user</type>
     <extensions>
       <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
       </gpxx:WaypointExtension>
       <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2022-04-10T08:54:18Z</ctx:CreationTime>
+        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
 
   <wpt lat="51.227713320404291" lon="-116.05057569220662">
-    <time>2022-05-11T14:21:04Z</time>
+    <ele>0</ele>
+    <time>2026-06-27T16:54:51Z</time>
     <name>Vermillion Pass (1661m) / British Columbia/Alberta Border</name>
     <cmt>British Columbia/Alberta</cmt>
     <desc>British Columbia/Alberta</desc>
-    <sym>Scenic Area</sym>
+    <sym>Flag, Blue</sym>
     <type>user</type>
     <extensions>
       <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
       </gpxx:WaypointExtension>
       <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2022-05-11T14:21:04Z</ctx:CreationTime>
+        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
 
   <wpt lat="51.448065508157015" lon="-112.700280463323">
-    <time>2022-08-12T03:43:23Z</time>
+    <ele>0</ele>
+    <time>2026-06-27T16:54:51Z</time>
     <name>Welcome to Drumheller (sign)</name>
     <cmt>area</cmt>
     <desc>area</desc>
-    <sym>Scenic Area</sym>
+    <sym>Flag, Blue</sym>
     <type>user</type>
     <extensions>
       <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
       </gpxx:WaypointExtension>
       <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2022-08-12T03:43:23Z</ctx:CreationTime>
+        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
 
   <wpt lat="50.053389491513371" lon="-101.43670169636607">
-    <time>2022-04-17T09:43:34Z</time>
+    <ele>0</ele>
+    <time>2026-06-27T16:54:51Z</time>
     <name>Welcome to Manitoba Sign (no toilets)</name>
     <cmt>area</cmt>
     <desc>area</desc>
-    <sym>Scenic Area</sym>
+    <sym>Flag, Blue</sym>
     <type>user</type>
     <extensions>
       <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
       </gpxx:WaypointExtension>
       <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2022-04-17T09:43:34Z</ctx:CreationTime>
+        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
 
   <wpt lat="49.955971660092473" lon="-110.00205782242119">
-    <time>2022-08-27T23:27:49Z</time>
+    <ele>0</ele>
+    <time>2026-06-27T16:54:51Z</time>
     <name>Welcome to Saskatchewan Sign</name>
     <cmt>area</cmt>
     <desc>area</desc>
-    <sym>Scenic Area</sym>
+    <sym>Flag, Blue</sym>
     <type>user</type>
     <extensions>
       <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
       </gpxx:WaypointExtension>
       <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2022-08-27T23:27:49Z</ctx:CreationTime>
+        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
 
   <wpt lat="50.059258583933115" lon="-101.44775826483965">
-    <time>2022-04-17T09:00:33Z</time>
+    <ele>0</ele>
+    <time>2026-06-27T16:54:51Z</time>
     <name>Welcome to Saskatchewan Sign (no washrooms)</name>
     <cmt>area</cmt>
     <desc>area</desc>
-    <sym>Scenic Area</sym>
+    <sym>Flag, Blue</sym>
     <type>user</type>
     <extensions>
       <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
       </gpxx:WaypointExtension>
       <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2022-04-17T09:00:33Z</ctx:CreationTime>
+        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
 
   <wpt lat="44.744216585531831" lon="-81.136715663596988">
-    <time>2022-09-08T11:24:29Z</time>
+    <ele>0</ele>
+    <time>2026-06-27T16:54:51Z</time>
     <name>Wiarton Willie Statue</name>
     <cmt>area</cmt>
     <desc>area</desc>
-    <sym>Scenic Area</sym>
+    <sym>Flag, Blue</sym>
     <type>user</type>
     <extensions>
       <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
       </gpxx:WaypointExtension>
       <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2022-09-08T11:24:29Z</ctx:CreationTime>
+        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
 
   <wpt lat="48.593130111694336" lon="-85.27613639831543">
-    <time>2022-08-20T08:04:16Z</time>
+    <ele>0</ele>
+    <time>2026-06-27T16:54:51Z</time>
     <name>Winnie the Pooh</name>
     <cmt>Winnie the Pooh</cmt>
     <desc>Winnie the Pooh</desc>
-    <sym>Scenic Area</sym>
+    <sym>Flag, Blue</sym>
     <type>user</type>
     <extensions>
       <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
       </gpxx:WaypointExtension>
       <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolOnly</wptx1:DisplayMode>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2022-08-20T08:04:16Z</ctx:CreationTime>
+        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
       </ctx:CreationTimeExtension>
     </extensions>
   </wpt>
