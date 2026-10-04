@@ -4,7 +4,7 @@
     <link href="http://www.garmin.com">
       <text>Garmin International</text>
     </link>
-    <time>2026-10-04T13:44:46Z</time>
+    <time>2026-10-04T14:56:17Z</time>
     <bounds maxlat="50.390042765066028" maxlon="-64.555020332336426" minlat="44.744216585531831" minlon="-125.90964236296713" />
   </metadata>
 
@@ -110,6 +110,43 @@ Image source = https://commons.wikimedia.org/wiki/File:Trans_Canada_Highway_Term
     </extensions>
   </wpt>
 
+  <wpt lat="45.258307456970215" lon="-66.087462902069092">
+    <time>2026-10-04T14:30:46Z</time>
+    <name>Reversing Falls - Stonehammer Geopark (Saint John, NB)</name>
+    <cmt>&lt;img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Reversing_Falls_Bridge_in_2026.jpg/250px-Reversing_Falls_Bridge_in_2026.jpg"&gt;
+Views of the Reversing Falls are available on either side of the Reversing Bridge or at Fallsview Park off of Douglas Avenue. Each view tells a different story and is worth checking out! Our favourite time to visit the falls is at low or high tide in order to catch some spectacular rapids and whirlpools, but it’s also pretty cool to see the waters stand perfectly still and start to reverse direction at slack tide.
+Text: https://tinyurl.com/StoneHammerGeoPark
+Image: https://tinyurl.com/Reversing-Falls</cmt>
+    <desc>&lt;img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Reversing_Falls_Bridge_in_2026.jpg/250px-Reversing_Falls_Bridge_in_2026.jpg"&gt;
+Views of the Reversing Falls are available on either side of the Reversing Bridge or at Fallsview Park off of Douglas Avenue. Each view tells a different story and is worth checking out! Our favourite time to visit the falls is at low or high tide in order to catch some spectacular rapids and whirlpools, but it’s also pretty cool to see the waters stand perfectly still and start to reverse direction at slack tide.
+Text: https://tinyurl.com/StoneHammerGeoPark
+Image: https://tinyurl.com/Reversing-Falls</desc>
+    <link href="https://stonehammergeopark.com/geosite/reversing-falls/" />
+    <sym>Scenic Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Address>
+          <gpxx:City>Saint John West</gpxx:City>
+          <gpxx:State>New Brunswick / Nouveau-Brunswick</gpxx:State>
+          <gpxx:Country>CAN</gpxx:Country>
+        </gpxx:Address>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Address>
+          <wptx1:City>Saint John West</wptx1:City>
+          <wptx1:State>New Brunswick / Nouveau-Brunswick</wptx1:State>
+          <wptx1:Country>CAN</wptx1:Country>
+        </wptx1:Address>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-10-04T14:30:46Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
   <wpt lat="46.21873140335083" lon="-64.555020332336426">
     <ele>0</ele>
     <time>2026-06-27T16:54:51Z</time>
@@ -202,12 +239,12 @@ Image source = https://www.flickr.com/photos/canadarideforclimate/922033219/</de
     <name>Wiarton Willie Statue (Wiarton, ON)</name>
     <cmt>&lt;img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Wiarton_Willie_Park_%2847508970351%29.jpg/960px-Wiarton_Willie_Park_%2847508970351%29.jpg"&gt;
 Every February 2nd, anticipation fills the air as people from all corners of the globe eagerly await the prediction from our famed groundhog. With all eyes on Wiarton Willie, the question lingers: will he cast a shadow, foretelling six more weeks of winter, or will his absence of a shadow herald an early spring?
-Text Source = https://southbrucepeninsula.com/parks-recreation-culture/events-festivals/wiarton-willie/
-Image Source = https://en.wikipedia.org/wiki/Wiarton_Willie#/media/File:Wiarton_Willie_Park_(47508970351).jpg</cmt>
+Text Source: https://tinyurl.com/Wiarton-Willie
+Image Source: https://tinyurl.com/Wiarton-Willie-Photo</cmt>
     <desc>&lt;img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Wiarton_Willie_Park_%2847508970351%29.jpg/960px-Wiarton_Willie_Park_%2847508970351%29.jpg"&gt;
 Every February 2nd, anticipation fills the air as people from all corners of the globe eagerly await the prediction from our famed groundhog. With all eyes on Wiarton Willie, the question lingers: will he cast a shadow, foretelling six more weeks of winter, or will his absence of a shadow herald an early spring?
-Text Source = https://southbrucepeninsula.com/parks-recreation-culture/events-festivals/wiarton-willie/
-Image Source = https://en.wikipedia.org/wiki/Wiarton_Willie#/media/File:Wiarton_Willie_Park_(47508970351).jpg</desc>
+Text Source: https://tinyurl.com/Wiarton-Willie
+Image Source: https://tinyurl.com/Wiarton-Willie-Photo</desc>
     <link href="https://southbrucepeninsula.com/parks-recreation-culture/events-festivals/wiarton-willie/" />
     <sym>Scenic Area</sym>
     <type>user</type>
