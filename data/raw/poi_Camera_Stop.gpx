@@ -4,8 +4,8 @@
     <link href="http://www.garmin.com">
       <text>Garmin International</text>
     </link>
-    <time>2026-10-03T17:15:50Z</time>
-    <bounds maxlat="51.640630178153515" maxlon="-52.697248617187142" minlat="44.744216585531831" minlon="-125.90964236296713" />
+    <time>2026-10-04T13:44:46Z</time>
+    <bounds maxlat="50.390042765066028" maxlon="-64.555020332336426" minlat="44.744216585531831" minlon="-125.90964236296713" />
   </metadata>
 
   <wpt lat="45.423724735155702" lon="-75.698697566986084">
@@ -43,216 +43,6 @@ Text &amp; Image Source: https://www.canada.ca/en/public-services-procurement/se
           <wptx1:State>Ontario</wptx1:State>
           <wptx1:Country>Canada</wptx1:Country>
         </wptx1:Address>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="51.640630178153515" lon="-111.94176726043224">
-    <ele>0</ele>
-    <time>2026-06-27T16:54:51Z</time>
-    <name>Hanna's Largest Goose</name>
-    <cmt>Hanna's Largest Goose</cmt>
-    <desc>Hanna's Largest Goose</desc>
-    <sym>Flag, Blue</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="46.29678787663579" lon="-67.529945271089673">
-    <ele>0</ele>
-    <time>2026-06-27T16:54:51Z</time>
-    <name>Hartland Covered Bridge - World's Longest Covered Bridge</name>
-    <cmt>Hartland Covered Bridge&lt;br&gt;&lt;br&gt;World's Longest Covered Bridge</cmt>
-    <desc>Hartland Covered Bridge&lt;br&gt;&lt;br&gt;World's Longest Covered Bridge</desc>
-    <sym>Flag, Blue</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="48.403216302394867" lon="-89.62502189911902">
-    <ele>0</ele>
-    <time>2026-06-27T16:54:51Z</time>
-    <name>Kakabeka Falls - Camera Stop</name>
-    <cmt>Kakabeka Falls</cmt>
-    <desc>Kakabeka Falls</desc>
-    <sym>Flag, Blue</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="46.488409331068397" lon="-84.073702516034245">
-    <ele>0</ele>
-    <time>2026-06-27T16:54:51Z</time>
-    <name>Loon Dollar Monument</name>
-    <cmt>area</cmt>
-    <desc>area</desc>
-    <sym>Flag, Blue</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="50.413519805297256" lon="-105.51013371907175">
-    <ele>0</ele>
-    <time>2026-06-27T16:54:51Z</time>
-    <name>Mac the Moose</name>
-    <cmt>area</cmt>
-    <desc>area</desc>
-    <sym>Flag, Blue</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="49.78630542755127" lon="-92.83820629119873">
-    <ele>0</ele>
-    <time>2026-06-27T16:54:51Z</time>
-    <name>Max the Moose</name>
-    <cmt>Max the Moose</cmt>
-    <desc>Max the Moose</desc>
-    <sym>Flag, Blue</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="47.570306668058038" lon="-52.697248617187142">
-    <ele>0</ele>
-    <time>2026-06-27T16:54:51Z</time>
-    <name>Mile 0 St. John's, Newfoundland</name>
-    <cmt>Terry Fox Mile 0 Site</cmt>
-    <desc>Terry Fox Mile 0 Site</desc>
-    <sym>Flag, Blue</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="48.409087741747499" lon="-123.36899757385254">
-    <ele>0</ele>
-    <time>2026-06-27T16:54:51Z</time>
-    <name>Mile 0 Victoria, BC</name>
-    <cmt>Mile 0</cmt>
-    <desc>Mile 0</desc>
-    <sym>Flag, Blue</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="49.017456835135818" lon="-88.256625160574913">
-    <ele>0</ele>
-    <time>2026-06-27T16:54:51Z</time>
-    <name>Nipigon Lookout - Camera stop</name>
-    <cmt>area</cmt>
-    <desc>area</desc>
-    <sym>Flag, Blue</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="47.98397202976048" lon="-84.780146917328238">
-    <ele>0</ele>
-    <time>2026-06-27T16:54:51Z</time>
-    <name>Original Giant Wawa Goose</name>
-    <cmt>area</cmt>
-    <desc>area</desc>
-    <sym>Flag, Blue</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
@@ -320,90 +110,6 @@ Image source = https://commons.wikimedia.org/wiki/File:Trans_Canada_Highway_Term
     </extensions>
   </wpt>
 
-  <wpt lat="48.491635825484991" lon="-67.448812304064631">
-    <ele>0</ele>
-    <time>2026-06-27T16:54:51Z</time>
-    <name>Pont couvert Des Anses-Saint-Jean 1931</name>
-    <cmt>Route Verte 1</cmt>
-    <desc>Route Verte 1</desc>
-    <sym>Flag, Blue</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="49.523769719526172" lon="-108.82537566125393">
-    <ele>0</ele>
-    <time>2026-06-27T16:54:51Z</time>
-    <name>T. rex Discovery Centre</name>
-    <cmt>Hours&lt;br&gt;CLOSED&lt;br&gt;Reopens May 20, 2023.</cmt>
-    <desc>Hours&lt;br&gt;CLOSED&lt;br&gt;Reopens May 20, 2023.</desc>
-    <sym>Flag, Blue</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="46.473519802093506" lon="-81.033825874328613">
-    <ele>0</ele>
-    <time>2026-06-27T16:54:51Z</time>
-    <name>The Big Nickel</name>
-    <cmt>The Big Nickel</cmt>
-    <desc>The Big Nickel</desc>
-    <sym>Flag, Blue</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="47.973496913909912" lon="-84.782931804656982">
-    <ele>0</ele>
-    <time>2026-06-27T16:54:51Z</time>
-    <name>The Canada Goose</name>
-    <cmt>The Canada Goose</cmt>
-    <desc>The Canada Goose</desc>
-    <sym>Flag, Blue</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
   <wpt lat="46.21873140335083" lon="-64.555020332336426">
     <ele>0</ele>
     <time>2026-06-27T16:54:51Z</time>
@@ -455,7 +161,7 @@ Image Source: https://tourismnewbrunswick.ca/listing/worlds-largest-lobster</des
   <wpt lat="50.390042765066028" lon="-105.53502386435866">
     <ele>0</ele>
     <time>2026-06-27T16:54:51Z</time>
-    <name>Tunnels of Moose Jaw</name>
+    <name>Tunnels of Moose Jaw (Moose Jaw, SK)</name>
     <cmt>&lt;img src="https://live.staticflickr.com/1411/922033219_21edffe20e_b.jpg"
 Local Folklore: Popular urban legends claim the tunnels were used by early Chinese immigrants hiding from persecution or by American gangsters—most famously Al Capone—during the Prohibition era for bootlegging. While historical proof for these specific legends is sparse, the lore inspired a major commercial tourist attraction launched in 2000.
 Text source = https://en.wikipedia.org/wiki/Moose_Jaw#Museums
@@ -490,146 +196,37 @@ Image source = https://www.flickr.com/photos/canadarideforclimate/922033219/</de
     </extensions>
   </wpt>
 
-  <wpt lat="51.227713320404291" lon="-116.05057569220662">
-    <ele>0</ele>
-    <time>2026-06-27T16:54:51Z</time>
-    <name>Vermillion Pass (1661m) / British Columbia/Alberta Border</name>
-    <cmt>British Columbia/Alberta</cmt>
-    <desc>British Columbia/Alberta</desc>
-    <sym>Flag, Blue</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="51.448065508157015" lon="-112.700280463323">
-    <ele>0</ele>
-    <time>2026-06-27T16:54:51Z</time>
-    <name>Welcome to Drumheller (sign)</name>
-    <cmt>area</cmt>
-    <desc>area</desc>
-    <sym>Flag, Blue</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="50.053389491513371" lon="-101.43670169636607">
-    <ele>0</ele>
-    <time>2026-06-27T16:54:51Z</time>
-    <name>Welcome to Manitoba Sign (no toilets)</name>
-    <cmt>area</cmt>
-    <desc>area</desc>
-    <sym>Flag, Blue</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="49.955971660092473" lon="-110.00205782242119">
-    <ele>0</ele>
-    <time>2026-06-27T16:54:51Z</time>
-    <name>Welcome to Saskatchewan Sign</name>
-    <cmt>area</cmt>
-    <desc>area</desc>
-    <sym>Flag, Blue</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="50.059258583933115" lon="-101.44775826483965">
-    <ele>0</ele>
-    <time>2026-06-27T16:54:51Z</time>
-    <name>Welcome to Saskatchewan Sign (no washrooms)</name>
-    <cmt>area</cmt>
-    <desc>area</desc>
-    <sym>Flag, Blue</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
   <wpt lat="44.744216585531831" lon="-81.136715663596988">
     <ele>0</ele>
     <time>2026-06-27T16:54:51Z</time>
-    <name>Wiarton Willie Statue</name>
-    <cmt>area</cmt>
-    <desc>area</desc>
-    <sym>Flag, Blue</sym>
+    <name>Wiarton Willie Statue (Wiarton, ON)</name>
+    <cmt>&lt;img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Wiarton_Willie_Park_%2847508970351%29.jpg/960px-Wiarton_Willie_Park_%2847508970351%29.jpg"&gt;
+Every February 2nd, anticipation fills the air as people from all corners of the globe eagerly await the prediction from our famed groundhog. With all eyes on Wiarton Willie, the question lingers: will he cast a shadow, foretelling six more weeks of winter, or will his absence of a shadow herald an early spring?
+Text Source = https://southbrucepeninsula.com/parks-recreation-culture/events-festivals/wiarton-willie/
+Image Source = https://en.wikipedia.org/wiki/Wiarton_Willie#/media/File:Wiarton_Willie_Park_(47508970351).jpg</cmt>
+    <desc>&lt;img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Wiarton_Willie_Park_%2847508970351%29.jpg/960px-Wiarton_Willie_Park_%2847508970351%29.jpg"&gt;
+Every February 2nd, anticipation fills the air as people from all corners of the globe eagerly await the prediction from our famed groundhog. With all eyes on Wiarton Willie, the question lingers: will he cast a shadow, foretelling six more weeks of winter, or will his absence of a shadow herald an early spring?
+Text Source = https://southbrucepeninsula.com/parks-recreation-culture/events-festivals/wiarton-willie/
+Image Source = https://en.wikipedia.org/wiki/Wiarton_Willie#/media/File:Wiarton_Willie_Park_(47508970351).jpg</desc>
+    <link href="https://southbrucepeninsula.com/parks-recreation-culture/events-festivals/wiarton-willie/" />
+    <sym>Scenic Area</sym>
     <type>user</type>
     <extensions>
       <gpxx:WaypointExtension>
         <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Address>
+          <gpxx:City>Wiarton</gpxx:City>
+          <gpxx:State>ON</gpxx:State>
+          <gpxx:Country>Canada</gpxx:Country>
+        </gpxx:Address>
       </gpxx:WaypointExtension>
       <wptx1:WaypointExtension>
         <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="48.593130111694336" lon="-85.27613639831543">
-    <ele>0</ele>
-    <time>2026-06-27T16:54:51Z</time>
-    <name>Winnie the Pooh</name>
-    <cmt>Winnie the Pooh</cmt>
-    <desc>Winnie the Pooh</desc>
-    <sym>Flag, Blue</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Address>
+          <wptx1:City>Wiarton</wptx1:City>
+          <wptx1:State>ON</wptx1:State>
+          <wptx1:Country>Canada</wptx1:Country>
+        </wptx1:Address>
       </wptx1:WaypointExtension>
       <ctx:CreationTimeExtension>
         <ctx:CreationTime>2026-06-27T16:54:51Z</ctx:CreationTime>
