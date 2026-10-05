@@ -173,6 +173,34 @@ def fetch(cache, refresh):
     return elems
 
 
+def read_pbf(pbf):
+    """The same records as fetch(), read from a downloaded OpenStreetMap file
+    (e.g. canada-latest.osm.pbf from https://download.geofabrik.de/) instead
+    of asking Overpass. Needs osmium-tool (`brew install osmium-tool`)."""
+    import subprocess
+    import tempfile
+    from shapely.geometry import shape
+    with tempfile.TemporaryDirectory() as tmp:
+        small = pathlib.Path(tmp) / "internet_access.osm.pbf"
+        seq = pathlib.Path(tmp) / "internet_access.geojsonseq"
+        print(f"Reading {pbf} (a few minutes for all of Canada)...")
+        subprocess.run(["osmium", "tags-filter", "-O", "-o", str(small), str(pbf),
+                        "nwr/internet_access"], check=True)
+        subprocess.run(["osmium", "export", "-O", "-f", "geojsonseq", "-a", "type,id",
+                        "-o", str(seq), str(small)], check=True)
+        elems = []
+        for line in seq.open():
+            f = json.loads(line.lstrip("\x1e"))
+            tags = dict(f["properties"])
+            kind, osm_id = tags.pop("@type"), tags.pop("@id")
+            if "internet_access" not in tags:  # untagged way nodes osmium carries along
+                continue
+            # ways/areas become their middle point, like Overpass's "out center"
+            c = shape(f["geometry"]).representative_point()
+            elems.append({"type": kind, "id": osm_id, "lat": c.y, "lon": c.x, "tags": tags})
+    return elems
+
+
 def place_type(tags):
     """Label for a drop-in place, 'lodging' for accommodation, None otherwise."""
     if tags.get("tourism") in LODGING or tags.get("amenity") in {"hotel", "motel"}:
@@ -239,11 +267,14 @@ def main():
                     help="where to keep the raw Overpass answer (default: .osm_cache/, git-ignored)")
     ap.add_argument("--server", help="use only this Overpass server (e.g. when the default one is down)")
     ap.add_argument("--refresh", action="store_true", help="ignore the cache and re-ask Overpass")
+    ap.add_argument("--pbf", type=pathlib.Path,
+                    help="read a downloaded OpenStreetMap file instead of asking Overpass "
+                         "(e.g. canada-latest.osm.pbf from download.geofabrik.de)")
     args = ap.parse_args()
     if args.server:
         ENDPOINTS[:] = [args.server]
 
-    records = fetch(args.cache, args.refresh)
+    records = read_pbf(args.pbf) if args.pbf else fetch(args.cache, args.refresh)
     elems = []
     for e in records:
         if "center" in e:  # ways/relations come back with a centre point

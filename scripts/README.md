@@ -104,6 +104,12 @@ routes change), then commit the new `poi_WiFi.gpx`:
 The raw OpenStreetMap answer is saved in `.osm_cache/` (not committed), so
 re-runs reuse it; add `--refresh` to ask OpenStreetMap again.
 
+If the Overpass servers are down or busy (they were in October 2026), download
+the Canada file from https://download.geofabrik.de/north-america/canada.html
+(about 6.5 GB), install osmium-tool (`brew install osmium-tool` on a Mac), and
+run `python3 scripts/osm_wifi.py --pbf canada-latest.osm.pbf` instead. It takes
+about a minute.
+
 The wifi data is © OpenStreetMap contributors, under the Open Database
 License (ODbL, https://www.openstreetmap.org/copyright), not Sam's CC BY
 licence.
