@@ -71,6 +71,7 @@ POI_LAYERS = {  # gpx stem -> (emoji, display name)
     "Laundromat": ("\U0001f9fa", "Laundromats"),
     "Tourist_office": ("ℹ️", "Visitor centres"),
     "Library": ("\U0001f4da", "Libraries"),
+    "WiFi": ("\U0001f4f6", "WiFi (OpenStreetMap)"),  # built by scripts/osm_wifi.py
     "Warning_Caution_Note": ("⚠️", "Warnings & cautions"),
     "Camera_Stop": ("\U0001f4f7 🇨🇦", "Historical Fun Facts about Canada"),
     "Ferry_Crossing_Points": ("⛴️", "Ferry crossing points"),

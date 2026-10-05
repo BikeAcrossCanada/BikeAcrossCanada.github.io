@@ -34,9 +34,11 @@ it by hand.
 ## What the pieces are
 
 - `data/raw/` — your master files. Seven route-layer KMLs (`C1.kml`, `C2.kml`,
-  `C3.kml`, `CA.kml`, `CL.kml`, `CN.kml`, `CW.kml`), and the twenty
+  `C3.kml`, `CA.kml`, `CL.kml`, `CN.kml`, `CW.kml`), and the
   `poi_*.gpx` files holding the points, one file per category (campgrounds,
   bike shops, and so on). **This folder is the only one you ever touch.**
+  (One exception: `poi_WiFi.gpx` is made by a script, not by hand — see
+  "The WiFi layer" below.)
 - `data/old-unused/` — the old single-file master (`tcbr.kml` and its zip).
   Kept for reference; nothing reads it. The seven layer files above are the
   working copies now.
@@ -79,6 +81,32 @@ it by hand.
    `"Swimming_Holes": ("🏊", "Swimming holes"),`
 3. Commit the change. The map rebuilds itself and the new category appears in
    the sidebar, checkbox and all.
+
+## The WiFi layer
+
+`data/raw/poi_WiFi.gpx` comes from OpenStreetMap, not from the My Maps
+master. `scripts/osm_wifi.py` asks OpenStreetMap (through the Overpass API,
+one province at a time) for every place in Canada tagged with wifi, keeps the
+ones a rider can walk into (cafés, libraries, restaurants, visitor centres,
+community centres, ferry terminals, gas stations, grocery stores and so on;
+no hotels, motels, campgrounds or other lodging), and keeps only those within
+2 km of a route line. Each point's description says what kind of place it is,
+whether the wifi is free or for customers when OpenStreetMap knows, and links
+to the OpenStreetMap record.
+
+It needs the internet, so it doesn't run on GitHub; run it on your own
+computer from the repository root when you want fresher points (or after the
+routes change), then commit the new `poi_WiFi.gpx`:
+
+    pip install shapely pyproj
+    python3 scripts/osm_wifi.py
+
+The raw OpenStreetMap answer is saved in `.osm_cache/` (not committed), so
+re-runs reuse it; add `--refresh` to ask OpenStreetMap again.
+
+The wifi data is © OpenStreetMap contributors, under the Open Database
+License (ODbL, https://www.openstreetmap.org/copyright), not Sam's CC BY
+licence.
 
 ## Campground types
 
