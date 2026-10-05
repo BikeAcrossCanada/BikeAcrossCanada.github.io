@@ -79,11 +79,14 @@
     #sidebar.open { display:block; }
     #toggle-sidebar { display:block; }
     #toggle-sidebar[hidden] { display:none; }
+    /* Floated so it shares the first section's title line instead of
+       taking a row of its own (issue #87). */
     #close-sidebar {
-      display:block; position:sticky; top:0; margin-left:auto; z-index:1;
+      display:block; position:sticky; top:0; float:right; margin-left:8px; z-index:1;
       background:#fff; border:1px solid #bbb; border-radius:4px;
       font-size:18px; line-height:1; padding:4px 9px; cursor:pointer; color:#444;
     }
+    #close-sidebar + details { margin-top:0; border-top:none; padding-top:4px; }
     /* The chart spans the screen here, which put the plugin's ✕ flush against
        the right edge (half a tap target) with the track title running under
        it (issue #57). */
