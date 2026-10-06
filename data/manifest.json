@@ -206,6 +206,12 @@
    "count": 79
   },
   {
+   "key": "WiFi",
+   "emoji": "\ud83d\udcf6",
+   "title": "WiFi (OpenStreetMap)",
+   "count": 3085
+  },
+  {
    "key": "Warning_Caution_Note",
    "emoji": "\u26a0\ufe0f",
    "title": "Warnings & cautions",
