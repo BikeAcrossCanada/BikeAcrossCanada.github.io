@@ -62,6 +62,8 @@
   #sidebar details { margin-top:16px; border-top:1px solid #eee; padding-top:8px; }
   #sidebar details summary { cursor:pointer; font-weight:600; }
   #sidebar details p, #sidebar details li { font-size:12.5px; color:#333; }
+  /* No divider above the first section: nothing above it to divide from (issue #87). */
+  #close-sidebar + details { margin-top:0; border-top:none; padding-top:4px; }
   #toggle-sidebar {
     position:absolute; top:calc(var(--topbar-h, 44px) + 8px); right:8px; z-index:1001; display:none;
     background:#fff; border:1px solid #bbb; border-radius:4px; padding:4px 8px;
@@ -79,8 +81,10 @@
     #sidebar.open { display:block; }
     #toggle-sidebar { display:block; }
     #toggle-sidebar[hidden] { display:none; }
+    /* Floated so it shares the first section's title line instead of
+       taking a row of its own (issue #87). */
     #close-sidebar {
-      display:block; position:sticky; top:0; margin-left:auto; z-index:1;
+      display:block; position:sticky; top:0; float:right; margin-left:8px; z-index:1;
       background:#fff; border:1px solid #bbb; border-radius:4px;
       font-size:18px; line-height:1; padding:4px 9px; cursor:pointer; color:#444;
     }
