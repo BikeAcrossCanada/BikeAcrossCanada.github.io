@@ -1,0 +1,2510 @@
+﻿<?xml version="1.0" encoding="utf-8"?><gpx creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd http://www.garmin.com/xmlschemas/TripExtensions/v1 http://www.garmin.com/xmlschemas/TripExtensionsv1.xsd http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1 http://www.garmin.com/xmlschemas/TripMetaDataExtensionsv1.xsd http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1 http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensionsv1.xsd http://www.garmin.com/xmlschemas/CreationTimeExtension/v1 http://www.garmin.com/xmlschemas/CreationTimeExtensionsv1.xsd http://www.garmin.com/xmlschemas/AccelerationExtension/v1 http://www.garmin.com/xmlschemas/AccelerationExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.garmin.com/xmlschemas/VideoExtension/v1 http://www.garmin.com/xmlschemas/VideoExtensionv1.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1" xmlns:tmd="http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1" xmlns:vptm="http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1" xmlns:ctx="http://www.garmin.com/xmlschemas/CreationTimeExtension/v1" xmlns:gpxacc="http://www.garmin.com/xmlschemas/AccelerationExtension/v1" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:vidx1="http://www.garmin.com/xmlschemas/VideoExtension/v1">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2026-10-11T18:07:53Z</time>
+    <bounds maxlat="54.53262004069984" maxlon="-54.016223978251219" minlat="44.697801964357495" minlon="-130.33069797791541" />
+  </metadata>
+
+  <wpt lat="45.130495000630617" lon="-76.12390598282218">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>7 West Motel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;10470 Hwy 7, Carleton Place, ON K7C 0C4&lt;br&gt;+1 613-257-5666&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;10470 Hwy 7, Carleton Place, ON K7C 0C4&lt;br&gt;+1 613-257-5666&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.963255017995834" lon="-61.077996008098125">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Aberdeen Motel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;10293 Trans-Canada Hwy, Whycocomagh, NS B0E 3M0&lt;br&gt;aberdeenmotel.ca&lt;br&gt;+1 902-756-2331&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;10293 Trans-Canada Hwy, Whycocomagh, NS B0E 3M0&lt;br&gt;aberdeenmotel.ca&lt;br&gt;+1 902-756-2331&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.025915959849954" lon="-110.70115498267114">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Ace Crown Motel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;633 14 St SW, Medicine Hat, AB T1A 4V5&lt;br&gt;+1 403-580-3883&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;633 14 St SW, Medicine Hat, AB T1A 4V5&lt;br&gt;+1 403-580-3883&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.545103015378118" lon="-84.319881023839116">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Adams Motel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;647 Great Northern Rd, Sault Ste. Marie, ON P6B 5A1&lt;br&gt;+1 705-254-4345&lt;br&gt;https://www.facebook.com/p/Adams-Motel-100070127613182/&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;647 Great Northern Rd, Sault Ste. Marie, ON P6B 5A1&lt;br&gt;+1 705-254-4345&lt;br&gt;https://www.facebook.com/p/Adams-Motel-100070127613182/&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.748553982004523" lon="-86.340666012838483">
+    <ele>0</ele>
+    <time>2026-08-26T09:02:31Z</time>
+    <name>Airport Motor Inn Marathon</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;ON-17 &amp;amp; Peninsula Rd, Marathon, ON P0T 2E0&lt;br&gt;www.airportinnmarathon.com&lt;br&gt;+1 807-229-1213&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;ON-17 &amp;amp; Peninsula Rd, Marathon, ON P0T 2E0&lt;br&gt;www.airportinnmarathon.com&lt;br&gt;+1 807-229-1213&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-26T09:02:31Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="54.309486988931894" lon="-130.33069797791541">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Aleeda Motel1</name>
+    <cmt>description: &lt;br&gt;Type: Motel</cmt>
+    <desc>description: &lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.989247012883425" lon="-84.776569018140435">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Algoma Motel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;164 Mission Rd, Wawa, ON P0S 1K0&lt;br&gt;www.algomamotel.com&lt;br&gt;+1 705-856-7010&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;164 Mission Rd, Wawa, ON P0S 1K0&lt;br&gt;www.algomamotel.com&lt;br&gt;+1 705-856-7010&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.038974018767476" lon="-122.3341350350529">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Alpine Motor Inn1</name>
+    <cmt>description: &lt;br&gt;Type: Motel</cmt>
+    <desc>description: &lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.764503978192806" lon="-104.17795300483704">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Arrowhead Motor Inn</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;521 South Service Road, Wynyard, SK S0A 4T0&lt;br&gt;+1 306-554-2507&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;521 South Service Road, Wynyard, SK S0A 4T0&lt;br&gt;+1 306-554-2507&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.099980035796762" lon="-64.951270027086139">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Atlantic Motel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;8 Brown Rd, Berry Mills, NB E1G 3Z3&lt;br&gt;+1 506-387-7448&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;8 Brown Rd, Berry Mills, NB E1G 3Z3&lt;br&gt;+1 506-387-7448&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.368624977767467" lon="-72.506775967776775">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Auberge Motel Le StGeorges1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;130 Rue François Duclos, Trois-Rivières, QC G8T 5E3&lt;br&gt;+1 819-372-1480&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;130 Rue François Duclos, Trois-Rivières, QC G8T 5E3&lt;br&gt;+1 819-372-1480&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.993176963180304" lon="-64.148422004655004">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Avon River Motel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;2116 Nova Scotia Trunk 1, Falmouth, NS B0P 1L0&lt;br&gt;+1 902-790-6955&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;2116 Nova Scotia Trunk 1, Falmouth, NS B0P 1L0&lt;br&gt;+1 902-790-6955&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.471206014975905" lon="-112.72146597504616">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Badlands Motel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;801 N Dinosaur Trail, Drumheller, AB T0J 0Y1&lt;br&gt;+1 403-823-5155&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;801 N Dinosaur Trail, Drumheller, AB T0J 0Y1&lt;br&gt;+1 403-823-5155&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.486668003723025" lon="-104.26669497974217">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Balgonie Motel Motor Inn1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;347 Queen St, Balgonie, SK S0G 0E0&lt;br&gt;www.balgoniemotel.ca&lt;br&gt;+1 306-771-2356&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;347 Queen St, Balgonie, SK S0G 0E0&lt;br&gt;www.balgoniemotel.ca&lt;br&gt;+1 306-771-2356&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.097541991621256" lon="-77.494755014777184">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Bears Den Lounge &amp; Motel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;33177 ON-17, Deep River, ON K0J 1P0&lt;br&gt;bears-den-lounge-motel.business.site&lt;br&gt;+1 613-584-9795&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;33177 ON-17, Deep River, ON K0J 1P0&lt;br&gt;bears-den-lounge-motel.business.site&lt;br&gt;+1 613-584-9795&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.016819978132844" lon="-88.311078026890755">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Beaver Motor Motel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;Trans-Canada Hwy, Nipigon, ON P0T 2J0&lt;br&gt;beavermotel.ca&lt;br&gt;+1 807-887-3132&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;Trans-Canada Hwy, Nipigon, ON P0T 2J0&lt;br&gt;beavermotel.ca&lt;br&gt;+1 807-887-3132&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.377879006788135" lon="-121.4424860291183">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Best Continental Motel1</name>
+    <cmt>description: &lt;br&gt;Type: Motel</cmt>
+    <desc>description: &lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.928779041394591" lon="-84.809014024212956">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Best Northern Motel and Restaurant1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;next to Kinniwabi Pines restaurant, 150 ON-17, Wawa, ON P0S 1K0&lt;br&gt;bestnorthern.ca&lt;br&gt;+1 705-856-7302&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;next to Kinniwabi Pines restaurant, 150 ON-17, Wawa, ON P0S 1K0&lt;br&gt;bestnorthern.ca&lt;br&gt;+1 705-856-7302&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.014454018324614" lon="-88.314888020977378">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Birchville Motel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;386 ON-11, Nipigon, ON P0T 2J0&lt;br&gt;www.birchvillemotel.com&lt;br&gt;+1 807-887-3141&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;386 ON-11, Nipigon, ON P0T 2J0&lt;br&gt;www.birchvillemotel.com&lt;br&gt;+1 807-887-3141&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.995314026251435" lon="-90.395002970471978">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Black Spruce Motel &amp; Old Country Kitchen Ltd.1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;3280 ON-17, Upsala, ON P0T 2Y0&lt;br&gt;www.facebook.com&lt;br&gt;+1 807-986-2115&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;3280 ON-17, Upsala, ON P0T 2Y0&lt;br&gt;www.facebook.com&lt;br&gt;+1 807-986-2115&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.254813963547349" lon="-81.662609009072185">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Blue Bay Motel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;32 Bay St, Tobermory, ON N0H 2R0&lt;br&gt;bluebay-motel.com&lt;br&gt;+1 519-596-2392&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;32 Bay St, Tobermory, ON N0H 2R0&lt;br&gt;bluebay-motel.com&lt;br&gt;+1 519-596-2392&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.299953972920775" lon="-83.792564012110233">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Bobbers Restaurant &amp; Motel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;9161 ON-17, Bruce Mines, ON P0R 1C0&lt;br&gt;www.facebook.com&lt;br&gt;+1 705-785-3485&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;9161 ON-17, Bruce Mines, ON P0R 1C0&lt;br&gt;www.facebook.com&lt;br&gt;+1 705-785-3485&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.030893025919795" lon="-119.47462202981114">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Boundary Motel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;7416 97th St, Osoyoos, BC V0H 1V5&lt;br&gt;www.boundarymotel.com&lt;br&gt;+1 250-495-6050&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;7416 97th St, Osoyoos, BC V0H 1V5&lt;br&gt;www.boundarymotel.com&lt;br&gt;+1 250-495-6050&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.186859037727118" lon="-121.74433596432209">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Bridal Falls Motel1</name>
+    <cmt>description: &lt;br&gt;Type: Motel</cmt>
+    <desc>description: &lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.256378026679158" lon="-81.667446037754416">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Bruce Anchor Motel &amp; Cottage Rentals1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;7468 Hwy 6, Tobermory, ON N0H 2R0&lt;br&gt;motel.bruceanchor.com&lt;br&gt;+1 519-596-2555&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;7468 Hwy 6, Tobermory, ON N0H 2R0&lt;br&gt;motel.bruceanchor.com&lt;br&gt;+1 519-596-2555&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.574553981423378" lon="-82.014411985874176">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Buckhorn Motel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;PO Box 40, 21076 ON-6, South Baymouth, ON P0P 1Z0&lt;br&gt;www.buckhornmotel.com&lt;br&gt;+1 705-859-3635&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;PO Box 40, 21076 ON-6, South Baymouth, ON P0P 1Z0&lt;br&gt;www.buckhornmotel.com&lt;br&gt;+1 705-859-3635&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.455264005810022" lon="-56.17460897192359">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Burnt Berry Motel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;21 Burntberry Road, Springdale, NL A0J 1T0&lt;br&gt;www.burntberryresort.com&lt;br&gt;+1 709-673-3926&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;21 Burntberry Road, Springdale, NL A0J 1T0&lt;br&gt;www.burntberryresort.com&lt;br&gt;+1 709-673-3926&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.475795991718769" lon="-81.022334033623338">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Canadiana Motel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;965 Lorne St, Greater Sudbury, ON P3C 4S1&lt;br&gt;+1 705-674-7585&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;965 Lorne St, Greater Sudbury, ON P3C 4S1&lt;br&gt;+1 705-674-7585&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.913975978270173" lon="-121.44578900188208">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Canyon Alpine Motel1</name>
+    <cmt>description: &lt;br&gt;Type: Motel</cmt>
+    <desc>description: &lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.352464022114873" lon="-70.072634993121028">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Cap Martin Motel1</name>
+    <cmt>description: &lt;br&gt;Type: Motel</cmt>
+    <desc>description: &lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.254761014133692" lon="-63.668792992830276">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Carleton Motel &amp; Coffee Shop</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;23650 Trans-Canada Hwy, Borden-Carleton, PE C0B 1X0&lt;br&gt;www.carletonmotelpei.com&lt;br&gt;+1 902-437-3030&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;23650 Trans-Canada Hwy, Borden-Carleton, PE C0B 1X0&lt;br&gt;www.carletonmotelpei.com&lt;br&gt;+1 902-437-3030&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.533688958734274" lon="-84.320037011057138">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Catalina Motel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;259 Great Northern Rd, Sault Ste. Marie, ON P6B 4Z2&lt;br&gt;www.catalinamotel.com&lt;br&gt;+1 705-945-9260&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;259 Great Northern Rd, Sault Ste. Marie, ON P6B 4Z2&lt;br&gt;www.catalinamotel.com&lt;br&gt;+1 705-945-9260&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.249446025118232" lon="-81.65944199077785">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Cedar Vista Motel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;7370 Hwy 6, Tobermory, ON N0H 2R0&lt;br&gt;cedarvistamotel.com&lt;br&gt;+1 519-596-2395&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;7370 Hwy 6, Tobermory, ON N0H 2R0&lt;br&gt;cedarvistamotel.com&lt;br&gt;+1 519-596-2395&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.457421004772186" lon="-120.51019200123847">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Cedars Motel1</name>
+    <cmt>description: &lt;br&gt;Type: Motel</cmt>
+    <desc>description: &lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.473914962261915" lon="-109.15557696484029">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Centennial Motel1</name>
+    <cmt>description: &lt;br&gt;Type: Motel</cmt>
+    <desc>description: &lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.230189992114902" lon="-70.24712098762393">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Chalets Motels domaine aux cygnes</name>
+    <cmt>description: This tourist accommodation offers&lt;br&gt;10 units&lt;br&gt;Bike washing station&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified tourist accommodation, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;A covered, locked location to store your bicycle at night&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/domaine-aux-cygnes-chalets-motel-2/&lt;br&gt;Type: Motel</cmt>
+    <desc>description: This tourist accommodation offers&lt;br&gt;10 units&lt;br&gt;Bike washing station&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified tourist accommodation, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;A covered, locked location to store your bicycle at night&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/domaine-aux-cygnes-chalets-motel-2/&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.641274027526379" lon="-102.49208799563348">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Chaparral Inn Motel &amp; Campground (motel)</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;508 Main St, Arcola, SK S0C 0G0&lt;br&gt;chaparral-inn.shopsask.ca&lt;br&gt;+1 306-455-2275&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;508 Main St, Arcola, SK S0C 0G0&lt;br&gt;chaparral-inn.shopsask.ca&lt;br&gt;+1 306-455-2275&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.039060017094016" lon="-118.20988303050399">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Christina Lake Motel and RV Park Ltd.</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;19 W Lake Dr, Christina Lake, BC V0H 1E2&lt;br&gt;christinalakemotelandrvpark.com&lt;br&gt;+1 236-350-0013&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;19 W Lake Dr, Christina Lake, BC V0H 1E2&lt;br&gt;christinalakemotelandrvpark.com&lt;br&gt;+1 236-350-0013&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.659413974732161" lon="-103.86314297094941">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Circle 6 Motel LTD</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;140 Sims Ave, Weyburn, SK S4H 2H5&lt;br&gt;+1 306-842-6166&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;140 Sims Ave, Weyburn, SK S4H 2H5&lt;br&gt;+1 306-842-6166&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.110535020008683" lon="-93.92670001834631">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Clarke and Crombie Tourist Camp and Motel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;33 Dock Rd, Nestor Falls, ON P0X 1K0&lt;br&gt;www.clarkeandcrombie.com&lt;br&gt;+1 807-484-2114&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;33 Dock Rd, Nestor Falls, ON P0X 1K0&lt;br&gt;www.clarkeandcrombie.com&lt;br&gt;+1 807-484-2114&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.996888974681497" lon="-106.37426502071321">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Clavet Motor Inn</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;2-10 Main St, Clavet, SK S0K 0Y0&lt;br&gt;www.clavethotel.com&lt;br&gt;+1 306-242-2848&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;2-10 Main St, Clavet, SK S0K 0Y0&lt;br&gt;www.clavethotel.com&lt;br&gt;+1 306-242-2848&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.444474963471293" lon="-54.016223978251219">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Clode Sound Motel and Restaurant</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;8 Main St, Charlottetown, NL A0C 1L0&lt;br&gt;www.clodesound.com&lt;br&gt;+1 709-664-3146&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;8 Main St, Charlottetown, NL A0C 1L0&lt;br&gt;www.clodesound.com&lt;br&gt;+1 709-664-3146&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.446838960051537" lon="-104.59350898861885">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Coachman Inn Motel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;835 Victoria Ave, Regina, SK S4N 0R5&lt;br&gt;+1 306-522-8525&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;835 Victoria Ave, Regina, SK S4N 0R5&lt;br&gt;+1 306-522-8525&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.977096032351255" lon="-105.87912202812731">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Colonsay Motel1</name>
+    <cmt>description: (Unconfirmed if open)&lt;br&gt;Details from Google Maps&lt;br&gt;303 Railway Ave, Colonsay, SK S0K 0Z0&lt;br&gt;+1 639-339-1888&lt;br&gt;Type: Motel</cmt>
+    <desc>description: (Unconfirmed if open)&lt;br&gt;Details from Google Maps&lt;br&gt;303 Railway Ave, Colonsay, SK S0K 0Z0&lt;br&gt;+1 639-339-1888&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.594254963099957" lon="-85.279941027984023">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Continental Motel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;217 ON-17, White River, ON P0M 3G0&lt;br&gt;+1 807-822-2500&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;217 ON-17, White River, ON P0M 3G0&lt;br&gt;+1 807-822-2500&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="54.53262004069984" lon="-128.51883502677083">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Copper River Motel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;4113 BC-16, Thornhill, BC V8G 3N4&lt;br&gt;+1 250-635-6124&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;4113 BC-16, Thornhill, BC V8G 3N4&lt;br&gt;+1 250-635-6124&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.375067967921495" lon="-121.42467599362135">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Coquihalla Motel1</name>
+    <cmt>description: &lt;br&gt;Type: Motel</cmt>
+    <desc>description: &lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.423652986064553" lon="-76.37306802906096">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Country Squire Motel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;111 Staye Ct Dr, Arnprior, ON K7S 3G8&lt;br&gt;www.countrysquiremotel.ca&lt;br&gt;+1 613-623-6556&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;111 Staye Ct Dr, Arnprior, ON K7S 3G8&lt;br&gt;www.countrysquiremotel.ca&lt;br&gt;+1 613-623-6556&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.74339603446424" lon="-95.210078023374081">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Crescent Beach Cottages / Motel</name>
+    <cmt>description: https://crescentbeachcottages.ca/motel-6-rooms&lt;br&gt;Type: Motel</cmt>
+    <desc>description: https://crescentbeachcottages.ca/motel-6-rooms&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.161675980314612" lon="-67.927368013188243">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Daigle's Motel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;68 Rue du Pont, Saint-Léonard, NB E7E 1Y1&lt;br&gt;sites.google.com&lt;br&gt;+1 506-423-6351&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;68 Rue du Pont, Saint-Léonard, NB E7E 1Y1&lt;br&gt;sites.google.com&lt;br&gt;+1 506-423-6351&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.189089965075254" lon="-57.427935004234314">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Deer Lake Motel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;15 Trans-Canada Hwy, Deer Lake, NL A8A 2E5&lt;br&gt;www.deerlakemotel.com&lt;br&gt;+1 709-635-2108&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;15 Trans-Canada Hwy, Deer Lake, NL A8A 2E5&lt;br&gt;www.deerlakemotel.com&lt;br&gt;+1 709-635-2108&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.781981011852622" lon="-87.102735992521048">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Drifters Motel &amp; Restaurant1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;3 Simcoe Plaza, Terrace Bay, ON P0T 2W0&lt;br&gt;driftersofterracebay.ca&lt;br&gt;+1 807-825-3226&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;3 Simcoe Plaza, Terrace Bay, ON P0T 2W0&lt;br&gt;driftersofterracebay.ca&lt;br&gt;+1 807-825-3226&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.415907030925155" lon="-56.085248999297619">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Eddy's Restaurant And Motel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;48 Aspen St, South Brook, NL A0J 1S0&lt;br&gt;+1 709-657-2590&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;48 Aspen St, South Brook, NL A0J 1S0&lt;br&gt;+1 709-657-2590&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.497764026746154" lon="-119.60684697143734">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>El Rancho Motel1</name>
+    <cmt>description: &lt;br&gt;Type: Motel</cmt>
+    <desc>description: &lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.205474993214011" lon="-119.83111996203661">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Elks Motel1</name>
+    <cmt>description: &lt;br&gt;Type: Motel</cmt>
+    <desc>description: &lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.785871999338269" lon="-92.761742966249585">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Evening Star Motel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;15077 ON-17, Dryden, ON P8N 2P6&lt;br&gt;+1 807-937-5268&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;15077 ON-17, Dryden, ON P8N 2P6&lt;br&gt;+1 807-937-5268&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.01603601872921" lon="-55.44097401201725">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Exploits River Motel</name>
+    <cmt>description: Exploits River Motel (Recommended for Cyclists)&lt;br&gt;Details from Google Maps&lt;br&gt;Trans Canada Hwy &amp;amp; 360 Hwy, Bishop's Falls, NL A0H 1C0&lt;br&gt;www.exploitsrivermotel.com&lt;br&gt;+1 709-258-6665&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Exploits River Motel (Recommended for Cyclists)&lt;br&gt;Details from Google Maps&lt;br&gt;Trans Canada Hwy &amp;amp; 360 Hwy, Bishop's Falls, NL A0H 1C0&lt;br&gt;www.exploitsrivermotel.com&lt;br&gt;+1 709-258-6665&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.974919022992253" lon="-61.115609966218472">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Fair Isle Motel/WAM Properties</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;9557 NS-105, Whycocomagh, NS B0E 3M0&lt;br&gt;www.fairislemotel.com&lt;br&gt;+1 902-756-2291&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;9557 NS-105, Whycocomagh, NS B0E 3M0&lt;br&gt;www.fairislemotel.com&lt;br&gt;+1 902-756-2291&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.953497979789972" lon="-66.62252495996654">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Fort Nashwaak Motel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;15 Riverside Dr, Fredericton, NB E3A 3X8&lt;br&gt;www.fortnashwaak.com&lt;br&gt;+1 506-472-4411&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;15 Riverside Dr, Fredericton, NB E3A 3X8&lt;br&gt;www.fortnashwaak.com&lt;br&gt;+1 506-472-4411&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.7494129948318" lon="-67.709881011396646">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Fort Road Motel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;111 Fort Rd, Perth-Andover, NB E7H 2B6&lt;br&gt;+1 506-273-3755&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;111 Fort Rd, Perth-Andover, NB E7H 2B6&lt;br&gt;+1 506-273-3755&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.255051963031292" lon="-99.838323974981904">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Gateway Motel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;240 Main St N, Minnedosa, MB R0J 1E0&lt;br&gt;www.gatewaymotel.ca&lt;br&gt;+1 204-867-2729&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;240 Main St N, Minnedosa, MB R0J 1E0&lt;br&gt;www.gatewaymotel.ca&lt;br&gt;+1 204-867-2729&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.31472397595644" lon="-67.529883999377489">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Ja-Sa-Le Motel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;8293 NB-104, Bubartown, NB E7P 2J7&lt;br&gt;+1 506-375-4419&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;8293 NB-104, Bubartown, NB E7P 2J7&lt;br&gt;+1 506-375-4419&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.772117991000414" lon="-101.28469697199762">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Jolly Lodger Motel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;MB-16, Russell, MB R0J 1W0&lt;br&gt;www.jollylodger.com&lt;br&gt;+1 204-773-2177&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;MB-16, Russell, MB R0J 1W0&lt;br&gt;www.jollylodger.com&lt;br&gt;+1 204-773-2177&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.760077027603984" lon="-94.467262029647827">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Kenora Inn Motel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1429 River Dr, Kenora, ON P9N 1K6&lt;br&gt;www.kenorainnmotel.ca&lt;br&gt;+1 807-468-3071&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1429 River Dr, Kenora, ON P9N 1K6&lt;br&gt;www.kenorainnmotel.ca&lt;br&gt;+1 807-468-3071&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.767733020707965" lon="-81.143252961337566">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Mile Inn Motel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;151 Hwy 6, Wiarton, ON N0H 2T0&lt;br&gt;mileinn.com&lt;br&gt;+1 519-534-9805&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;151 Hwy 6, Wiarton, ON N0H 2T0&lt;br&gt;mileinn.com&lt;br&gt;+1 519-534-9805&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.022974964231253" lon="-74.687234032899141">
+    <ele>0</ele>
+    <time>2026-08-26T09:02:31Z</time>
+    <name>Monte Carlo Motel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1700 Montreal Rd, Cornwall, ON K6H 1G1&lt;br&gt;www.montecarlomotel1700.com&lt;br&gt;+1 877-436-1088&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1700 Montreal Rd, Cornwall, ON K6H 1G1&lt;br&gt;www.montecarlomotel1700.com&lt;br&gt;+1 877-436-1088&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-26T09:02:31Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.79108096845448" lon="-65.720389019697905">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel &amp; Chalet L'Acadien1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;55 Rue Motel Maritime, Petit Rocher, NB E8J 1P2&lt;br&gt;+1 506-783-1755&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;55 Rue Motel Maritime, Petit Rocher, NB E8J 1P2&lt;br&gt;+1 506-783-1755&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.579918017610908" lon="-111.898149009794">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel 6 Brooks1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1119 2 St W, Brooks, AB T1R 0N9&lt;br&gt;www.motel6.com&lt;br&gt;+1 587-270-5150&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1119 2 St W, Brooks, AB T1R 0N9&lt;br&gt;www.motel6.com&lt;br&gt;+1 587-270-5150&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.594085983932018" lon="-123.39939597062767">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel 6 Saanichton, BC - Victoria Airport (formerly Western 66 Motor Inn)</name>
+    <cmt>description: &lt;br&gt;Type: Motel</cmt>
+    <desc>description: &lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.518514025956392" lon="-84.279915019869804">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel 6 Sault Ste. Marie, ON</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;503 Trunk Rd, Sault Ste. Marie, ON P6A 3T1&lt;br&gt;www.motel6.com&lt;br&gt;+1 705-253-2327&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;503 Trunk Rd, Sault Ste. Marie, ON P6A 3T1&lt;br&gt;www.motel6.com&lt;br&gt;+1 705-253-2327&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.668821020051837" lon="-65.687317969277501">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel 7 Inn &amp; Suites</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1275 Rue Principale, Beresford, NB E8K 1A1&lt;br&gt;www.motel7bathurst.com&lt;br&gt;+1 506-546-5726&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1275 Rue Principale, Beresford, NB E8K 1A1&lt;br&gt;www.motel7bathurst.com&lt;br&gt;+1 506-546-5726&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.824315968900919" lon="-69.559075031429529">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel Au Fleuve D'Argent1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;p. 1075, 202 Rue Fraser c, Rivière-du-Loup, QC G5R 4C3&lt;br&gt;www.fleuveargent.com&lt;br&gt;+1 418-862-5315&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;p. 1075, 202 Rue Fraser c, Rivière-du-Loup, QC G5R 4C3&lt;br&gt;www.fleuveargent.com&lt;br&gt;+1 418-862-5315&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.829437982290983" lon="-69.554084027186036">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel Au Vieux Fanal1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;170 Rue Fraser, Rivière-du-Loup, QC G5R 1C8&lt;br&gt;www.lefrasermotel.com&lt;br&gt;+1 418-862-5255&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;170 Rue Fraser, Rivière-du-Loup, QC G5R 1C8&lt;br&gt;www.lefrasermotel.com&lt;br&gt;+1 418-862-5255&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.82691603526473" lon="-69.55566099844873">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel Au Vieux Piloteux1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;185 Rue Fraser, Rivière-du-Loup, QC G5R 1E2&lt;br&gt;motelpiloteux.ca&lt;br&gt;+1 418-867-2635&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;185 Rue Fraser, Rivière-du-Loup, QC G5R 1E2&lt;br&gt;motelpiloteux.ca&lt;br&gt;+1 418-867-2635&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.063856966793537" lon="-73.180748037993908">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel B.R.1</name>
+    <cmt>description: This tourist accommodation offers&lt;br&gt;4 units&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified tourist accommodation, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;A covered, locked location to store your bicycle at night&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/motel-b-r-2/&lt;br&gt;Type: Motel</cmt>
+    <desc>description: This tourist accommodation offers&lt;br&gt;4 units&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified tourist accommodation, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;A covered, locked location to store your bicycle at night&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/motel-b-r-2/&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.479053007438779" lon="-74.292459972202778">
+    <ele>0</ele>
+    <time>2026-08-26T09:02:31Z</time>
+    <name>Motel Belair</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;118 Rue Saint-Jean-Baptiste E, Rigaud, QC J0P 1P0&lt;br&gt;+1 450-451-5368&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;118 Rue Saint-Jean-Baptiste E, Rigaud, QC J0P 1P0&lt;br&gt;+1 450-451-5368&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-26T09:02:31Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.51700197905302" lon="-68.467116979882121">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel Bienvenue</name>
+    <cmt>description: This tourist accommodation offers&lt;br&gt;17 units&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified tourist accommodation, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;A covered, locked location to store your bicycle at night&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/motel-bienvenue-2/&lt;br&gt;Type: Motel</cmt>
+    <desc>description: This tourist accommodation offers&lt;br&gt;17 units&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified tourist accommodation, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;A covered, locked location to store your bicycle at night&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/motel-bienvenue-2/&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.67890696413815" lon="-68.888934999704361">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel Cabano Relais</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;80 Boul Phil-Latulippe, Témiscouata-sur-le-Lac, QC G0L 1E0&lt;br&gt;secure.reservit.com&lt;br&gt;+1 418-854-2439&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;80 Boul Phil-Latulippe, Témiscouata-sur-le-Lac, QC G0L 1E0&lt;br&gt;secure.reservit.com&lt;br&gt;+1 418-854-2439&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.385423988103867" lon="-72.479319032281637">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel Canadien</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1821 Rue Notre Dame E, Trois-Rivières, QC G8T 8B2&lt;br&gt;motelcanadien.ca&lt;br&gt;+1 819-375-5542&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1821 Rue Notre Dame E, Trois-Rivières, QC G8T 8B2&lt;br&gt;motelcanadien.ca&lt;br&gt;+1 819-375-5542&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.420391000807285" lon="-75.750701995566487">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel Châteauguay1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;469 Boul. Alexandre-Taché, Gatineau, QC J9A 1M8&lt;br&gt;www.motelchateauguay.com&lt;br&gt;+1 819-595-1000&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;469 Boul. Alexandre-Taché, Gatineau, QC J9A 1M8&lt;br&gt;www.motelchateauguay.com&lt;br&gt;+1 819-595-1000&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.544323019683361" lon="-68.643862986937165">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel Claude</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1077 Avenue de l'accueil, Dégelis, QC G5T 1P3&lt;br&gt;motelclaude.net&lt;br&gt;+1 418-853-3777&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1077 Avenue de l'accueil, Dégelis, QC G5T 1P3&lt;br&gt;motelclaude.net&lt;br&gt;+1 418-853-3777&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.439388992264867" lon="-68.551324009895325">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel Colonial1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;438 Boulevard St Germain, Rimouski, QC G5L 3N9&lt;br&gt;www.motelcolonial.com&lt;br&gt;+1 418-723-8960&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;438 Boulevard St Germain, Rimouski, QC G5L 3N9&lt;br&gt;www.motelcolonial.com&lt;br&gt;+1 418-723-8960&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.18174404092133" lon="-64.942515967413783">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel de l'Anse</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;551 Rte de l'Anse Mcinnis, Port-Daniel, QC G0C 2N0&lt;br&gt;www.moteldelanse.com&lt;br&gt;+1 418-396-2273&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;551 Rte de l'Anse Mcinnis, Port-Daniel, QC G0C 2N0&lt;br&gt;www.moteldelanse.com&lt;br&gt;+1 418-396-2273&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.216749023646116" lon="-70.268178004771471">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel de la Falaise1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;47 Av. de Gaspé E, Saint-Jean-Port-Joli, QC G0R 3G0&lt;br&gt;www.moteldelafalaise.com&lt;br&gt;+1 418-598-3313&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;47 Av. de Gaspé E, Saint-Jean-Port-Joli, QC G0R 3G0&lt;br&gt;www.moteldelafalaise.com&lt;br&gt;+1 418-598-3313&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.78463900834322" lon="-73.400715999305248">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel Derfal1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1435 Rue Notre-Dame, Repentigny, QC J5Y 3X3&lt;br&gt;www.motelderfal.com&lt;br&gt;+1 450-585-6444&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1435 Rue Notre-Dame, Repentigny, QC J5Y 3X3&lt;br&gt;www.motelderfal.com&lt;br&gt;+1 450-585-6444&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.441942958161235" lon="-67.351447027176619">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel des Cèdres1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;54 Rte 132 E, Lac-au-Saumon, QC G0J 1M0&lt;br&gt;+1 418-778-5815&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;54 Rte 132 E, Lac-au-Saumon, QC G0J 1M0&lt;br&gt;+1 418-778-5815&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.372701983898878" lon="-67.240305002778769">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel du Vallon1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;609 Rte 132 E Ouest, Causapscal, QC G0J 1J0&lt;br&gt;+1 418-756-3433&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;609 Rte 132 E Ouest, Causapscal, QC G0J 1J0&lt;br&gt;+1 418-756-3433&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.221668997779489" lon="-65.044655995443463">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel du Village</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;17 Rue Principale, Petite-Vallée, QC G0E 1Y0&lt;br&gt;secure.reservit.com&lt;br&gt;+1 418-393-2592 ext. 6&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;17 Rue Principale, Petite-Vallée, QC G0E 1Y0&lt;br&gt;secure.reservit.com&lt;br&gt;+1 418-393-2592 ext. 6&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.516754964366555" lon="-64.218762014061213">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel et Boutique Le Macareux - CITQ : 067900</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;262 QC-132, Percé, QC G0C 2L0&lt;br&gt;motel-perce-macareux.com&lt;br&gt;+1 418-782-2414&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;262 QC-132, Percé, QC G0C 2L0&lt;br&gt;motel-perce-macareux.com&lt;br&gt;+1 418-782-2414&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.032516995444894" lon="-66.704675992950797">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel Interprovincial</name>
+    <cmt>description: This tourist accommodation offers&lt;br&gt;59 units&lt;br&gt;Laundry room&lt;br&gt;Breakfast / Lunch / Dinner&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified tourist accommodation, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;A covered, locked location to store your bicycle at night&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/hotel-interprovincial-2/&lt;br&gt;Type: Motel</cmt>
+    <desc>description: This tourist accommodation offers&lt;br&gt;59 units&lt;br&gt;Laundry room&lt;br&gt;Breakfast / Lunch / Dinner&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified tourist accommodation, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;A covered, locked location to store your bicycle at night&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/hotel-interprovincial-2/&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.596630981191993" lon="-68.263259036466479">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel L'Orée de la Mer1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;268 Rte de la Mer, Sainte-Flavie, QC G0J 2L0&lt;br&gt;+1 418-775-8354&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;268 Rte de la Mer, Sainte-Flavie, QC G0J 2L0&lt;br&gt;+1 418-775-8354&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.85277196764946" lon="-67.505856016650796">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel Le Campagnard Matane1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;632 Av. du Phare E, Matane, QC G4W 1B1&lt;br&gt;www.motellecampagnard.com&lt;br&gt;+1 418-562-4030&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;632 Av. du Phare E, Matane, QC G4W 1B1&lt;br&gt;www.motellecampagnard.com&lt;br&gt;+1 418-562-4030&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.355514029040933" lon="-70.064721973612905">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel le Martinet</name>
+    <cmt>description: "- Hearty continental breakfast included"&lt;br&gt;This tourist accommodation offers&lt;br&gt;22 units&lt;br&gt;Bike washing station&lt;br&gt;Breakfast&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified tourist accommodation, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;A covered, locked location to store your bicycle at night&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/motel-le-martinet-2/&lt;br&gt;Type: Motel</cmt>
+    <desc>description: "- Hearty continental breakfast included"&lt;br&gt;This tourist accommodation offers&lt;br&gt;22 units&lt;br&gt;Bike washing station&lt;br&gt;Breakfast&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified tourist accommodation, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;A covered, locked location to store your bicycle at night&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/motel-le-martinet-2/&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.016141977161169" lon="-73.160549998283386">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel Le Verseau</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;7720 QC-132, Sorel-Tracy, QC J3R 1T3&lt;br&gt;mail.motelleverseau.ca&lt;br&gt;+1 450-743-3341&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;7720 QC-132, Sorel-Tracy, QC J3R 1T3&lt;br&gt;mail.motelleverseau.ca&lt;br&gt;+1 450-743-3341&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.222504002973437" lon="-65.813036039471626">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel Les Flots Bleus</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;18 Rue Prudent Cloutier, Mont-Saint-Pierre, QC G0E 1V0&lt;br&gt;+1 418-797-2860&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;18 Rue Prudent Cloutier, Mont-Saint-Pierre, QC G0E 1V0&lt;br&gt;+1 418-797-2860&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.63514699973166" lon="-68.114355029538274">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel Métis- Camping</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;220 QC-132, Price, QC G0J 1Z0&lt;br&gt;motelmetis.com&lt;br&gt;+1 418-775-6473&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;220 QC-132, Price, QC G0J 1Z0&lt;br&gt;motelmetis.com&lt;br&gt;+1 418-775-6473&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.249598013237119" lon="-72.96573000960052">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel Normandie (066636)</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1111 Bd St Laurent O, Louiseville, QC J5V 2L4&lt;br&gt;+1 819-228-5541&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1111 Bd St Laurent O, Louiseville, QC J5V 2L4&lt;br&gt;+1 819-228-5541&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.326849991455674" lon="-72.562589971348643">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel Populaire Enr</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;400 Rue de la Sangamo, Trois-Rivières, QC G9A 6M5&lt;br&gt;www.motelpopulairetro.ca&lt;br&gt;+1 819-697-0101&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;400 Rue de la Sangamo, Trois-Rivières, QC G9A 6M5&lt;br&gt;www.motelpopulairetro.ca&lt;br&gt;+1 819-697-0101&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.68440599553287" lon="-68.875959981232882">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel Royal</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;19 Rue St Louis, Témiscouata-sur-le-Lac, QC G0L 1E0&lt;br&gt;www.motelroyal.net&lt;br&gt;+1 888-854-2307&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;19 Rue St Louis, Témiscouata-sur-le-Lac, QC G0L 1E0&lt;br&gt;www.motelroyal.net&lt;br&gt;+1 888-854-2307&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.383006036281586" lon="-74.011371005326509">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel Seigneurie de Vaudreuil1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;154 Bd Harwood, Vaudreuil-Dorion, QC J7V 1Y2&lt;br&gt;+1 450-455-3368&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;154 Bd Harwood, Vaudreuil-Dorion, QC J7V 1Y2&lt;br&gt;+1 450-455-3368&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.693387012928724" lon="-71.854188982397318">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel sous les Charmilles1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;842 QC-138, Cap-Santé, QC G0A 1L0&lt;br&gt;motelsouslescharmilles.com&lt;br&gt;+1 418-286-3391&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;842 QC-138, Cap-Santé, QC G0A 1L0&lt;br&gt;motelsouslescharmilles.com&lt;br&gt;+1 418-286-3391&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.453493986278772" lon="-73.635084992274642">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel St-Jacques1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1980 Westmore Ave, Montreal, QC H4B 1Z3&lt;br&gt;motelst-jacques.tophotel.com.es&lt;br&gt;+1 514-489-8611&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1980 Westmore Ave, Montreal, QC H4B 1Z3&lt;br&gt;motelst-jacques.tophotel.com.es&lt;br&gt;+1 514-489-8611&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.40905799716711" lon="-74.032493988052011">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel Vaudreuil1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;255 Rue Boisvert, Vaudreuil-Dorion, QC J7V 8G4&lt;br&gt;motel-vaudreuil.quebechotels.info&lt;br&gt;+1 450-424-4414&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;255 Rue Boisvert, Vaudreuil-Dorion, QC J7V 8G4&lt;br&gt;motel-vaudreuil.quebechotels.info&lt;br&gt;+1 450-424-4414&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.016812026500702" lon="-73.185732001438737">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Motel Villa D'Autray</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;671 Grande Côte E, Lanoraie, QC J0K 1E0&lt;br&gt;www.facebook.com&lt;br&gt;+1 450-836-3578&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;671 Grande Côte E, Lanoraie, QC J0K 1E0&lt;br&gt;www.facebook.com&lt;br&gt;+1 450-836-3578&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.449753969907761" lon="-89.196770014241338">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Old Country Motel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;500 Cumberland St N, Thunder Bay, ON P7A 4R8&lt;br&gt;www.oldcountrymotel.ca&lt;br&gt;+1 807-285-3406&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;500 Cumberland St N, Thunder Bay, ON P7A 4R8&lt;br&gt;www.oldcountrymotel.ca&lt;br&gt;+1 807-285-3406&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.748610008507967" lon="-67.717201011255383">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Perth-Andover Motor Inn1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;560 Route 190 Perth-Andover, Carlingford, NB E7H 4H8&lt;br&gt;www.perth-andovermotorinn.com&lt;br&gt;+1 506-273-2224&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;560 Route 190 Perth-Andover, Carlingford, NB E7H 4H8&lt;br&gt;www.perth-andovermotorinn.com&lt;br&gt;+1 506-273-2224&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.335533991456032" lon="-102.26340997964144">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Quest Motel Whitewood</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;913 Service Rd, Whitewood, SK S0G 5C0&lt;br&gt;instagram.com&lt;br&gt;+1 306-735-2627&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;913 Service Rd, Whitewood, SK S0G 5C0&lt;br&gt;instagram.com&lt;br&gt;+1 306-735-2627&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.455500004813075" lon="-120.18108897842467">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Rivermount Motel &amp; Campground3</name>
+    <cmt>description: &lt;br&gt;Type: Motel</cmt>
+    <desc>description: &lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.728703958913684" lon="-91.327006984502077">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Sapawe Motel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;406 ON-623, Atikokan, ON P0T 1C0&lt;br&gt;sapawemotel.com&lt;br&gt;+1 807-929-1547&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;406 ON-623, Atikokan, ON P0T 1C0&lt;br&gt;sapawemotel.com&lt;br&gt;+1 807-929-1547&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.968091987073421" lon="-84.750175997614861">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Sawpit Bay Motel &amp; Cabins1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;13826 ON-17, Batchawana Bay, ON P0S 1A0&lt;br&gt;+1 705-882-1610&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;13826 ON-17, Batchawana Bay, ON P0S 1A0&lt;br&gt;+1 705-882-1610&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.316146984696388" lon="-125.92039500363171">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Sayward Fisherboy RV Park Motel and Resort (motel)</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1546 Sayward Rd, Sayward, BC V0P 1R0&lt;br&gt;saywardvalleyresort.com&lt;br&gt;+1 250-282-3204&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1546 Sayward Rd, Sayward, BC V0P 1R0&lt;br&gt;saywardvalleyresort.com&lt;br&gt;+1 250-282-3204&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.263513997197151" lon="-119.27970003336668">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Schell Motel</name>
+    <cmt>description: &lt;br&gt;Type: Motel</cmt>
+    <desc>description: &lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.448386965319514" lon="-89.198535997420549">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Sea-Vue Motel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;463 Cumberland St N, Thunder Bay, ON P7A 4R4&lt;br&gt;sea-vue.com&lt;br&gt;+1 807-344-9655&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;463 Cumberland St N, Thunder Bay, ON P7A 4R4&lt;br&gt;sea-vue.com&lt;br&gt;+1 807-344-9655&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.221984000876546" lon="-64.519737968221307">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Seely's Motel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;21 Bellevue Heights, Shediac, NB E4P 1G9&lt;br&gt;www.seelysmotel.ca&lt;br&gt;+1 506-532-6193&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;21 Bellevue Heights, Shediac, NB E4P 1G9&lt;br&gt;www.seelysmotel.ca&lt;br&gt;+1 506-532-6193&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.697801964357495" lon="-81.136965025216341">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Shenstone Motor Inn &amp; Restaurant - Burger &amp; More</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;19745 Hwy 6, Georgian Bluffs, ON N0H 2T0&lt;br&gt;shenstoneinn.ca&lt;br&gt;+1 519-534-1831&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;19745 Hwy 6, Georgian Bluffs, ON N0H 2T0&lt;br&gt;shenstoneinn.ca&lt;br&gt;+1 519-534-1831&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.282201018184423" lon="-63.136425968259573">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Sherwood Motor Inn1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;281 Brackley Point Rd, Charlottetown, PE C1E 1Z3&lt;br&gt;www.sherwoodmotel.ca&lt;br&gt;+1 902-892-1622&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;281 Brackley Point Rd, Charlottetown, PE C1E 1Z3&lt;br&gt;www.sherwoodmotel.ca&lt;br&gt;+1 902-892-1622&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.67966497503221" lon="-62.725392021238804">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>The Lionstone Inn Motel and Cottages1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;241 W River Rd, Pictou, NS B0K 1H0&lt;br&gt;www.lionstoneinn.ca&lt;br&gt;+1 866-785-4157&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;241 W River Rd, Pictou, NS B0K 1H0&lt;br&gt;www.lionstoneinn.ca&lt;br&gt;+1 866-785-4157&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.022308029234409" lon="-88.28827396966517">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>The Pine Crest Motel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;536 ON-17, Nipigon, ON P0T&lt;br&gt;+1 807-887-2813&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;536 ON-17, Nipigon, ON P0T&lt;br&gt;+1 807-887-2813&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.928093988448381" lon="-84.80588598176837">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>White Fang Motel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;133 ON-17, Wawa, ON P0S 1K0&lt;br&gt;www.whitefangmotel.com&lt;br&gt;+1 705-856-0344&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;133 ON-17, Wawa, ON P0S 1K0&lt;br&gt;www.whitefangmotel.com&lt;br&gt;+1 705-856-0344&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+</gpx>
