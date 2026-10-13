@@ -1,0 +1,2363 @@
+﻿<?xml version="1.0" encoding="utf-8"?><gpx creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd http://www.garmin.com/xmlschemas/TripExtensions/v1 http://www.garmin.com/xmlschemas/TripExtensionsv1.xsd http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1 http://www.garmin.com/xmlschemas/TripMetaDataExtensionsv1.xsd http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1 http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensionsv1.xsd http://www.garmin.com/xmlschemas/CreationTimeExtension/v1 http://www.garmin.com/xmlschemas/CreationTimeExtensionsv1.xsd http://www.garmin.com/xmlschemas/AccelerationExtension/v1 http://www.garmin.com/xmlschemas/AccelerationExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.garmin.com/xmlschemas/VideoExtension/v1 http://www.garmin.com/xmlschemas/VideoExtensionv1.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1" xmlns:tmd="http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1" xmlns:vptm="http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1" xmlns:ctx="http://www.garmin.com/xmlschemas/CreationTimeExtension/v1" xmlns:gpxacc="http://www.garmin.com/xmlschemas/AccelerationExtension/v1" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:vidx1="http://www.garmin.com/xmlschemas/VideoExtension/v1">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2026-10-13T14:59:30Z</time>
+    <bounds maxlat="54.310183022171259" maxlon="-53.136178040876985" minlat="43.813333986327052" minlon="-130.32222404144704" />
+  </metadata>
+
+  <wpt lat="47.387252021580935" lon="-53.136178040876985">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>A Schooner Inn</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;5 Northside Rd, Holyrood, NL A0A 2R0&lt;br&gt;+1 709-231-3033&lt;br&gt;Type: Inn</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;5 Northside Rd, Holyrood, NL A0A 2R0&lt;br&gt;+1 709-231-3033&lt;br&gt;Type: Inn</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.191649965941906" lon="-123.12069903127849">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Abercorn Hotel, Trademark Collection by Wyndham</name>
+    <cmt>description: &lt;br&gt;Type: Hotel</cmt>
+    <desc>description: &lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.894056037068367" lon="-66.558322012424469">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Airport Inn Inc</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;2251 Lincoln Rd, Lincoln Parish, NB E3B 8N9&lt;br&gt;www.airportinnnb.com&lt;br&gt;+1 506-458-9706&lt;br&gt;Type: Inn</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;2251 Lincoln Rd, Lincoln Parish, NB E3B 8N9&lt;br&gt;www.airportinnnb.com&lt;br&gt;+1 506-458-9706&lt;br&gt;Type: Inn</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.95220497623086" lon="-54.620008002966642">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Albatross Hotel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;114 Trans-Canada Hwy, Gander, NL A1V 1W8&lt;br&gt;www.steelehotels.com&lt;br&gt;+1 709-256-3956&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;114 Trans-Canada Hwy, Gander, NL A1V 1W8&lt;br&gt;www.steelehotels.com&lt;br&gt;+1 709-256-3956&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.506313998252153" lon="-84.323116019368172">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Algonquin Hotel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;864 Queen St E, Sault Ste. Marie, ON P6A 2B4&lt;br&gt;+1 705-253-2311&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;864 Queen St E, Sault Ste. Marie, ON P6A 2B4&lt;br&gt;+1 705-253-2311&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.989493021741509" lon="-84.776133997365832">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Alpha Inn</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;170 Mission Rd, Wawa, ON P0S 1K0&lt;br&gt;alphainn.ca&lt;br&gt;+1 647-917-1799&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;170 Mission Rd, Wawa, ON P0S 1K0&lt;br&gt;alphainn.ca&lt;br&gt;+1 647-917-1799&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.205029997974634" lon="-119.83051202259958">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Alpine Inn</name>
+    <cmt>description: &lt;br&gt;Type: Hotel</cmt>
+    <desc>description: &lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.981203019618988" lon="-81.927170036360621">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Anchor Inn Hotel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1 Water St E, Little Current, ON P0P 1K0&lt;br&gt;www.anchorgrill.com&lt;br&gt;+1 705-368-2023&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1 Water St E, Little Current, ON P0P 1K0&lt;br&gt;www.anchorgrill.com&lt;br&gt;+1 705-368-2023&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.631897011771798" lon="-62.015770962461829">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Antigonish Evergreen Inn1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;399 Hawthorne St, Antigonish, NS B2G 1B9&lt;br&gt;www.antigonishevergreeninn.ca&lt;br&gt;+1 902-863-0830&lt;br&gt;Type: Inn</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;399 Hawthorne St, Antigonish, NS B2G 1B9&lt;br&gt;www.antigonishevergreeninn.ca&lt;br&gt;+1 902-863-0830&lt;br&gt;Type: Inn</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.626003984361887" lon="-116.06713104061782">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Apple Tree Inn1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;4999 BC-93 b 27, Radium Hot Springs, BC V0A 1M0&lt;br&gt;www.appletreeinnbc.com&lt;br&gt;+1 250-347-0011&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;4999 BC-93 b 27, Radium Hot Springs, BC V0A 1M0&lt;br&gt;www.appletreeinnbc.com&lt;br&gt;+1 250-347-0011&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.447973031550646" lon="-119.18372296728194">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Armstrong Inn1</name>
+    <cmt>description: &lt;br&gt;Type: Motel</cmt>
+    <desc>description: &lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.779446970671415" lon="-53.978213975206017">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Arnold's Cove Inn</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;41-59 Main Rd, Arnold's Cove, NL A0B 1A0&lt;br&gt;www.arnoldscoveinn.com&lt;br&gt;+1 709-463-2313&lt;br&gt;Type: Inn</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;41-59 Main Rd, Arnold's Cove, NL A0B 1A0&lt;br&gt;www.arnoldscoveinn.com&lt;br&gt;+1 709-463-2313&lt;br&gt;Type: Inn</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.878848008811474" lon="-97.225979967042804">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Assiniboine Gordon Inn on the Park1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1975 Portage Ave, Winnipeg, MB R3J 0J9&lt;br&gt;gordonhotels.com&lt;br&gt;+1 204-888-4806&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1975 Portage Ave, Winnipeg, MB R3J 0J9&lt;br&gt;gordonhotels.com&lt;br&gt;+1 204-888-4806&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="52.878654040396214" lon="-118.07957503013313">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Astoria Hotel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;404 Connaught Dr, Jasper, AB T0E 1E0&lt;br&gt;www.astoriahotel.com&lt;br&gt;+1 800-661-7343&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;404 Connaught Dr, Jasper, AB T0E 1E0&lt;br&gt;www.astoriahotel.com&lt;br&gt;+1 800-661-7343&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.646695991978049" lon="-63.5907650180161">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Atlantica Hotel Halifax</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1980 Robie St, Halifax, NS B3H 3G5&lt;br&gt;www.atlanticahotelhalifax.com&lt;br&gt;+1 902-423-1161&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1980 Robie St, Halifax, NS B3H 3G5&lt;br&gt;www.atlanticahotelhalifax.com&lt;br&gt;+1 902-423-1161&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.468444978818297" lon="-64.731615968048573">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Auberge Bouctouche Inn &amp; Suites1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;50 Rue Industrielle, Bouctouche, NB E4S 3K3&lt;br&gt;www.aubergebouctoucheinn.ca&lt;br&gt;+1 506-743-5003&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;50 Rue Industrielle, Bouctouche, NB E4S 3K3&lt;br&gt;www.aubergebouctoucheinn.ca&lt;br&gt;+1 506-743-5003&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.992293007671833" lon="-64.938477985560894">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Aurora Inn</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;831 Main St, Kingston, NS B0P 1R0&lt;br&gt;www.aurorainn.net&lt;br&gt;+1 902-765-3306&lt;br&gt;Type: Inn</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;831 Main St, Kingston, NS B0P 1R0&lt;br&gt;www.aurorainn.net&lt;br&gt;+1 902-765-3306&lt;br&gt;Type: Inn</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.299971994012594" lon="-83.790939012542367">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Bavarian Inn</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;9181 ON-17, Bruce Mines, ON P0R 1C0&lt;br&gt;bavarianinn.stay.at&lt;br&gt;+1 705-785-3447&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;9181 ON-17, Bruce Mines, ON P0R 1C0&lt;br&gt;bavarianinn.stay.at&lt;br&gt;+1 705-785-3447&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.225528972223401" lon="-99.494230002164841">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Bay Hill Inns &amp; Suites, Neepawa</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;160 Main St W, Neepawa, MB R0J 1H0&lt;br&gt;www.bayhillinns.com&lt;br&gt;+1 204-476-8888&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;160 Main St W, Neepawa, MB R0J 1H0&lt;br&gt;www.bayhillinns.com&lt;br&gt;+1 204-476-8888&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.634903026744723" lon="-114.49062203988433">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>BCMInns Coleman</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;8514 19 Ave, Coleman, AB T0K 0M0&lt;br&gt;+1 403-563-5600&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;8514 19 Ave, Coleman, AB T0K 0M0&lt;br&gt;+1 403-563-5600&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.578522033989429" lon="-80.936810038983822">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Best Western Inn On The Bay</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1800 2nd Ave E, Owen Sound, ON N4K 5R1&lt;br&gt;www.bestwestern.com&lt;br&gt;+1 519-371-9200&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1800 2nd Ave E, Owen Sound, ON N4K 5R1&lt;br&gt;www.bestwestern.com&lt;br&gt;+1 519-371-9200&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.311070006340742" lon="-116.97286097332835">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Best Western Mountainview Inn1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1024 11 St N, Golden, BC V0A 1H2&lt;br&gt;www.bestwestern.com&lt;br&gt;+1 250-344-2333&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1024 11 St N, Golden, BC V0A 1H2&lt;br&gt;www.bestwestern.com&lt;br&gt;+1 250-344-2333&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="43.900154996663332" lon="-78.676677960902452">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Best Western Plus Bowmanville1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;160 Liberty St S, Bowmanville, ON L1C 2W4&lt;br&gt;www.bestwestern.com&lt;br&gt;+1 905-623-8500&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;160 Liberty St S, Bowmanville, ON L1C 2W4&lt;br&gt;www.bestwestern.com&lt;br&gt;+1 905-623-8500&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.887580024078488" lon="-99.941458012908697">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Best Western Plus Brandon Inn1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;205 Middleton Ave, Brandon, MB R7C 1A8&lt;br&gt;www.bestwestern.com&lt;br&gt;+1 204-727-7997&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;205 Middleton Ave, Brandon, MB R7C 1A8&lt;br&gt;www.bestwestern.com&lt;br&gt;+1 204-727-7997&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.814907006919384" lon="-71.225755959749222">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Best Western Plus City Centre/Centre-Ville</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;330 De La Couronne, Québec, QC G1K 6E6&lt;br&gt;hotelquebec.com&lt;br&gt;+1 418-649-1919&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;330 De La Couronne, Québec, QC G1K 6E6&lt;br&gt;hotelquebec.com&lt;br&gt;+1 418-649-1919&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.058657996356487" lon="-122.49221999198198">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Best Western Plus Country Meadows Inn</name>
+    <cmt>description: &lt;br&gt;Type: Hotel</cmt>
+    <desc>description: &lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.787306981161237" lon="-92.834409037604928">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Best Western Plus Dryden Hotel &amp; Conference Centre1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;349 Government St, Dryden, ON P8N 2P4&lt;br&gt;www.bestwestern.com&lt;br&gt;+1 807-223-3201&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;349 Government St, Dryden, ON P8N 2P4&lt;br&gt;www.bestwestern.com&lt;br&gt;+1 807-223-3201&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.449606999754906" lon="-104.52704996801913">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Best Western Plus Eastgate Inn &amp; Suites</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;3840 Eastgate Dr, Regina, SK S4Z 1A5&lt;br&gt;www.bestwestern.com&lt;br&gt;+1 306-352-7587&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;3840 Eastgate Dr, Regina, SK S4Z 1A5&lt;br&gt;www.bestwestern.com&lt;br&gt;+1 306-352-7587&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.045045988634229" lon="-67.768118977546692">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Best Western Plus Grand-Sault Hotel &amp; Suites1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;187 Rue Ouellette, Grand-Sault, NB E3Z 3E8&lt;br&gt;www.bestwestern.com&lt;br&gt;+1 506-473-6200&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;187 Rue Ouellette, Grand-Sault, NB E3Z 3E8&lt;br&gt;www.bestwestern.com&lt;br&gt;+1 506-473-6200&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.133212007582188" lon="-122.33136096037924">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Best Western Plus Mission City Lodge</name>
+    <cmt>description: &lt;br&gt;Type: Hotel</cmt>
+    <desc>description: &lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.146538000553846" lon="-101.65765696205199">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Best Western Plus Moosomin Hotel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;405 Moose St, Moosomin, SK S0G 3N0&lt;br&gt;www.bestwestern.com&lt;br&gt;+1 306-435-4700&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;405 Moose St, Moosomin, SK S0G 3N0&lt;br&gt;www.bestwestern.com&lt;br&gt;+1 306-435-4700&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.028676012530923" lon="-119.44333196617663">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Best Western Plus Osoyoos Hotel &amp; Suites1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;5506 Main St, Osoyoos, BC V0H 1V0&lt;br&gt;www.bestwestern.com&lt;br&gt;+1 250-495-4000&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;5506 Main St, Osoyoos, BC V0H 1V0&lt;br&gt;www.bestwestern.com&lt;br&gt;+1 250-495-4000&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.172074964269996" lon="-67.605950022116303">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Best Western Plus Woodstock Hotel &amp; Conference Centre1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;123 Gallop Ct, Woodstock, NB E7M 3P7&lt;br&gt;www.bestwestern.com&lt;br&gt;+1 506-328-2378&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;123 Gallop Ct, Woodstock, NB E7M 3P7&lt;br&gt;www.bestwestern.com&lt;br&gt;+1 506-328-2378&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.757733961567283" lon="-71.293269004672766">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Best Western Premier Hotel Aristocrate</name>
+    <cmt>description: This tourist accommodation offers&lt;br&gt;100 units&lt;br&gt;Cycling packages&lt;br&gt;Bike washing station&lt;br&gt;Breakfast / Lunch / Dinner&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified tourist accommodation, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;A covered, locked location to store your bicycle at night&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/hotel-best-western-premier-hotel-aristocrate-2/&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: This tourist accommodation offers&lt;br&gt;100 units&lt;br&gt;Cycling packages&lt;br&gt;Bike washing station&lt;br&gt;Breakfast / Lunch / Dinner&lt;br&gt;&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified tourist accommodation, it offers&lt;br&gt;*A pump and basic tools for minor repairs&lt;br&gt;A covered, locked location to store your bicycle at night&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/hotel-best-western-premier-hotel-aristocrate-2/&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.838448014110327" lon="-118.96901096217334">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Best Western Sicamous Inn1</name>
+    <cmt>description: &lt;br&gt;Type: Hotel</cmt>
+    <desc>description: &lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.360218994319439" lon="-63.290159041061997">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Best Western Truro - Glengarry1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;150 Willow St, Truro, NS B2N 4Z6&lt;br&gt;www.bestwestern.com&lt;br&gt;+1 902-893-4311&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;150 Willow St, Truro, NS B2N 4Z6&lt;br&gt;www.bestwestern.com&lt;br&gt;+1 902-893-4311&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="54.310183022171259" lon="-130.32222404144704">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Black Rooster Inn &amp; Apartments1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;501 6 Ave W, Prince Rupert, BC V8J 1Z7&lt;br&gt;www.blackrooster.ca&lt;br&gt;+1 866-371-5337&lt;br&gt;Type: Inn</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;501 6 Ave W, Prince Rupert, BC V8J 1Z7&lt;br&gt;www.blackrooster.ca&lt;br&gt;+1 866-371-5337&lt;br&gt;Type: Inn</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="53.857755968347192" lon="-122.81413201242685">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Bon Voyage Inn1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;4222 Highway 16 West, Prince George, BC V2N 5N7&lt;br&gt;www.bonvoyageinn.ca&lt;br&gt;+1 250-964-2333&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;4222 Highway 16 West, Prince George, BC V2N 5N7&lt;br&gt;www.bonvoyageinn.ca&lt;br&gt;+1 250-964-2333&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.456307983025908" lon="-64.694132013246417">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Bouctouche Bay Inn1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;206 Rue Acadie, Bouctouche, NB E4S 2T5&lt;br&gt;www.thebayinn.ca&lt;br&gt;+1 506-743-2726&lt;br&gt;Type: Inn</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;206 Rue Acadie, Bouctouche, NB E4S 2T5&lt;br&gt;www.thebayinn.ca&lt;br&gt;+1 506-743-2726&lt;br&gt;Type: Inn</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="43.893627002835274" lon="-78.667536992579699">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Bowmanville Inn &amp; Suites</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;70 Port Darlington Rd, Bowmanville, ON L1C 3K3&lt;br&gt;bowmanvillemarina.com&lt;br&gt;+1 905-623-4925&lt;br&gt;Type: Inn</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;70 Port Darlington Rd, Bowmanville, ON L1C 3K3&lt;br&gt;bowmanvillemarina.com&lt;br&gt;+1 905-623-4925&lt;br&gt;Type: Inn</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.378786958754063" lon="-102.57780795916915">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Broadview Hotel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;504 Front St, Broadview, SK S0G 0K0&lt;br&gt;+1 306-696-2606&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;504 Front St, Broadview, SK S0G 0K0&lt;br&gt;+1 306-696-2606&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.97212702408433" lon="-98.329848032444715">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Canad Inns Destination Centre Portage la Prairie1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;2401 Saskatchewan Ave W, Portage la Prairie, MB R1N 4A6&lt;br&gt;www.canadinns.com&lt;br&gt;+1 204-857-9745&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;2401 Saskatchewan Ave W, Portage la Prairie, MB R1N 4A6&lt;br&gt;www.canadinns.com&lt;br&gt;+1 204-857-9745&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.89476197399199" lon="-97.028358997777104">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Canad Inns Destination Centre Transcona</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;826 Regent Ave W, Winnipeg, MB R2C 3A8&lt;br&gt;www.canadinns.com&lt;br&gt;+1 204-224-1681&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;826 Regent Ave W, Winnipeg, MB R2C 3A8&lt;br&gt;www.canadinns.com&lt;br&gt;+1 204-224-1681&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.807695984840393" lon="-121.32425400428474">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Canadas Best Value Desert Inn &amp; Suites Cache Creek</name>
+    <cmt>description: &lt;br&gt;Type: Hotel</cmt>
+    <desc>description: &lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.297134960070252" lon="-117.65431397594512">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Canadas Best Value Inn &amp; Suites Castlegar1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1935 Columbia Ave, Castlegar, BC V1N 2W8&lt;br&gt;www.sonesta.com&lt;br&gt;+1 250-365-2177&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1935 Columbia Ave, Castlegar, BC V1N 2W8&lt;br&gt;www.sonesta.com&lt;br&gt;+1 250-365-2177&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.634390976279974" lon="-106.00284101441503">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Canalta Hotel Assiniboia</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;601 1 Ave W, Assiniboia, SK S0H 0B0&lt;br&gt;canaltahotels.com&lt;br&gt;+1 306-642-1010&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;601 1 Ave W, Assiniboia, SK S0H 0B0&lt;br&gt;canaltahotels.com&lt;br&gt;+1 306-642-1010&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.586174018681049" lon="-111.89475299790502">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Canalta Hotel Brooks1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;115 15 Ave W, Brooks, AB T1R 0V5&lt;br&gt;canaltahotels.com&lt;br&gt;+1 403-363-0080&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;115 15 Ave W, Brooks, AB T1R 0V5&lt;br&gt;canaltahotels.com&lt;br&gt;+1 403-363-0080&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.476065004244447" lon="-109.19088900089264">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Canalta Hotel Kindersley</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;Box 2590, 1302 15 St W, Kindersley, SK S0L 1S0&lt;br&gt;canaltahotels.com&lt;br&gt;+1 306-463-1570&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;Box 2590, 1302 15 St W, Kindersley, SK S0L 1S0&lt;br&gt;canaltahotels.com&lt;br&gt;+1 306-463-1570&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.387933986261487" lon="-110.48015898093581">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Canalta Hotel Oyen1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;Highway-9 &amp;amp;, AB-41, Oyen, AB T0J 2J0&lt;br&gt;canaltahotels.com&lt;br&gt;+1 403-664-3010&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;Highway-9 &amp;amp;, AB-41, Oyen, AB T0J 2J0&lt;br&gt;canaltahotels.com&lt;br&gt;+1 403-664-3010&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.100325994193554" lon="-115.36007300019264">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Canmore Rocky Mountain Inn1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1719 Bow Valley Trail, Canmore, AB T1W 1L7&lt;br&gt;www.canmorerockymountaininn.com&lt;br&gt;+1 403-678-5221&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1719 Bow Valley Trail, Canmore, AB T1W 1L7&lt;br&gt;www.canmorerockymountaininn.com&lt;br&gt;+1 403-678-5221&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.265802998095751" lon="-83.573933970183134">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Carolyn Beach Inn &amp; Restaurant1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1 Lakeside Dr, Thessalon, ON P0R 1L0&lt;br&gt;www.carolynbeachinn.com&lt;br&gt;+1 705-842-3330&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1 Lakeside Dr, Thessalon, ON P0R 1L0&lt;br&gt;www.carolynbeachinn.com&lt;br&gt;+1 705-842-3330&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.954884011298418" lon="-66.634215032681823">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Carriage House Inn</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;230 University Ave, Fredericton, NB E3B 4H7&lt;br&gt;carriagehouse-inn.net&lt;br&gt;+1 506-452-9924&lt;br&gt;Type: Inn</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;230 University Ave, Fredericton, NB E3B 4H7&lt;br&gt;carriagehouse-inn.net&lt;br&gt;+1 506-452-9924&lt;br&gt;Type: Inn</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.419467041268945" lon="-110.79905795864761">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Cereal Hotel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;210 Main St, Cereal, AB T0J 0N0&lt;br&gt;+1 403-326-2600&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;210 Main St, Cereal, AB T0J 0N0&lt;br&gt;+1 403-326-2600&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.232538996264338" lon="-63.131662029772997">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Charlotte's Rose Inn</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;11 Grafton St, Charlottetown, PE C1A 1K3&lt;br&gt;www.charlottesrose.com&lt;br&gt;+1 888-237-3699&lt;br&gt;Type: Inn</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;11 Grafton St, Charlottetown, PE C1A 1K3&lt;br&gt;www.charlottesrose.com&lt;br&gt;+1 888-237-3699&lt;br&gt;Type: Inn</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.092144967988133" lon="-64.766293996945024">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Chateau Moncton Hotel &amp; Suites</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;100 Main St, Moncton, NB E1C 1B9&lt;br&gt;chateaumoncton.ca&lt;br&gt;+1 506-870-4444&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;100 Main St, Moncton, NB E1C 1B9&lt;br&gt;chateaumoncton.ca&lt;br&gt;+1 506-870-4444&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.824930984526873" lon="-77.090205978602171">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Clarion Hotel &amp; Conference Centre</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;900 Pembroke St E, Pembroke, ON K8A 3M2&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 613-735-6868&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;900 Pembroke St E, Pembroke, ON K8A 3M2&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 613-735-6868&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.761488037183881" lon="-94.488650970160961">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Clarion Lakeside Inn and Conference Centre</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;470 1st Ave S, Kenora, ON P9N 1W5&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 807-468-5521&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;470 1st Ave S, Kenora, ON P9N 1W5&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 807-468-5521&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.23804397881031" lon="-81.745603010058403">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Clear Lake Inn</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;995 ON-6, Espanola, ON P5E 1N9&lt;br&gt;+1 705-869-1748&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;995 ON-6, Espanola, ON P5E 1N9&lt;br&gt;+1 705-869-1748&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.237439032644033" lon="-81.643334990367293">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Coach House Inn1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;Tobermory, ON N0H 2R0&lt;br&gt;coachhouseinntobermory.com&lt;br&gt;+1 519-596-2361&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;Tobermory, ON N0H 2R0&lt;br&gt;coachhouseinntobermory.com&lt;br&gt;+1 519-596-2361&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.166654041036963" lon="-123.93615704029799">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Coast Bastion Hotel</name>
+    <cmt>description: &lt;br&gt;Type: Hotel</cmt>
+    <desc>description: &lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.597952986136079" lon="-61.907581966370344">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Coastal Inn Antigonish</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;4789 NS-4, Antigonish, NS B2G 2L4&lt;br&gt;coastalinns.com&lt;br&gt;+1 800-433-4494&lt;br&gt;Type: Inn</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;4789 NS-4, Antigonish, NS B2G 2L4&lt;br&gt;coastalinns.com&lt;br&gt;+1 800-433-4494&lt;br&gt;Type: Inn</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.887636015191674" lon="-99.949380001053214">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Comfort Inn</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;925 Middleton Ave, Brandon, MB R7C 1A8&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 204-727-6232&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;925 Middleton Ave, Brandon, MB R7C 1A8&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 204-727-6232&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.268440987914801" lon="-114.00459897704422">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Comfort Inn &amp; Suites1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;133 Sierra Springs Dr SE, Airdrie, AB T4B 3G7&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 403-948-3411&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;133 Sierra Springs Dr SE, Airdrie, AB T4B 3G7&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 403-948-3411&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.411968985572457" lon="-105.53863101638854">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Comfort Inn &amp; Suites2</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;155 Thatcher Dr, Moose Jaw, SK S6J 1M1&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 306-692-2100&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;155 Thatcher Dr, Moose Jaw, SK S6J 1M1&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 306-692-2100&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.858909975737333" lon="-100.92977198772132">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Comfort Inn &amp; Suites3</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;380 Frontage Rd, Virden, MB R0M 2C0&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 204-707-6020&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;380 Frontage Rd, Virden, MB R0M 2C0&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 204-707-6020&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.00184397213161" lon="-110.64533201046288">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Comfort Inn &amp; Suites4</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;2317 Trans Canada Way S E, Medicine Hat, AB T1B 4E9&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 866-879-5508&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;2317 Trans Canada Way S E, Medicine Hat, AB T1B 4E9&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 866-879-5508&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.267343005165458" lon="-79.436439983546734">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Comfort Inn Lakeshore1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;676 Lakeshore Dr, North Bay, ON P1A 2G4&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 705-494-9444&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;676 Lakeshore Dr, North Bay, ON P1A 2G4&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 705-494-9444&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.448763025924563" lon="-104.53604903072119">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Comfort Inn Regina</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;3221 E Eastgate Dr, Regina, SK S4Z 1A4&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 306-789-5522&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;3221 E Eastgate Dr, Regina, SK S4Z 1A4&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 306-789-5522&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.438645014539361" lon="-68.55312000028789">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Comfort Inn Rimouski1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;455 Boulevard St Germain, Rimouski, QC G5L 3P2&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 418-724-2500&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;455 Boulevard St Germain, Rimouski, QC G5L 3P2&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 418-724-2500&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.779077963903546" lon="-97.157964007928967">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Comfort Inn South</name>
+    <cmt>description: &lt;br&gt;Type: Hotel</cmt>
+    <desc>description: &lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.785398002713919" lon="-92.821944979950786">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Comfort Inn1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;522 Government St, Dryden, ON P8N 2P7&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 807-223-3893&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;522 Government St, Dryden, ON P8N 2P7&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 807-223-3893&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.368560999631882" lon="-63.316384004428983">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Comfort Inn10</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;12 Meadow Dr, Truro, NS B2N 5V4&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 902-893-0330&lt;br&gt;Type: Inn</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;12 Meadow Dr, Truro, NS B2N 5V4&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 902-893-0330&lt;br&gt;Type: Inn</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.535716960206628" lon="-84.319543987512589">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Comfort Inn2</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;333 Great Northern Rd, Sault Ste. Marie, ON P6B 4Z8&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 705-759-8000&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;333 Great Northern Rd, Sault Ste. Marie, ON P6B 4Z8&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 705-759-8000&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.366939041763544" lon="-79.943006001412868">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Comfort Inn3</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;11 Front St, Sturgeon Falls, ON P2B 3L3&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 705-753-5665&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;11 Front St, Sturgeon Falls, ON P2B 3L3&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 705-753-5665&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.568552011623979" lon="-80.927240001037717">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Comfort Inn4</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;955 9th Ave E, Owen Sound, ON N4K 6N4&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 519-371-5500&lt;br&gt;Type: Inn</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;955 9th Ave E, Owen Sound, ON N4K 6N4&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 519-371-5500&lt;br&gt;Type: Inn</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="43.813333986327052" lon="-79.122262028977275">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Comfort Inn5</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;533 Kingston Rd, Pickering, ON L1V 3N7&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 905-831-6200&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;533 Kingston Rd, Pickering, ON L1V 3N7&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 905-831-6200&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="43.973013013601303" lon="-78.286731038242579">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Comfort Inn6</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;2211 Northumberland County Rd 28 Route, Port Hope, ON L1A 3V6&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 437-293-6485&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;2211 Northumberland County Rd 28 Route, Port Hope, ON L1A 3V6&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 437-293-6485&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.031689964234829" lon="-74.764141011983156">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Comfort Inn7</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1625 Vincent Massey Dr, Cornwall, ON K6H 5R6&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 613-937-0111&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1625 Vincent Massey Dr, Cornwall, ON K6H 5R6&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 613-937-0111&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.328127980232239" lon="-72.594769019633532">
+    <ele>0</ele>
+    <time>2026-08-26T09:02:31Z</time>
+    <name>Comfort Inn8</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;6255 Rue Corbeil, Trois-Rivières, QC G8Z 4P9&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 819-371-3566&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;6255 Rue Corbeil, Trois-Rivières, QC G8Z 4P9&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 819-371-3566&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-26T09:02:31Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.850492987781763" lon="-69.5398910343647">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Comfort Inn9</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;85 Bd Cartier, Rivière-du-Loup, QC G5R 4X4&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 418-867-4162&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;85 Bd Cartier, Rivière-du-Loup, QC G5R 4X4&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 418-867-4162&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.984877970069647" lon="-54.607640001922846">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Country Inn</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;315 Magee Rd, Gander, NL A1V 1W6&lt;br&gt;countryinngander.ca&lt;br&gt;+1 709-256-4005&lt;br&gt;ID#89&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;315 Magee Rd, Gander, NL A1V 1W6&lt;br&gt;countryinngander.ca&lt;br&gt;+1 709-256-4005&lt;br&gt;ID#89&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.54922803863883" lon="-107.99189203418791">
+    <ele>0</ele>
+    <time>2026-08-26T09:02:31Z</time>
+    <name>Country Rose Inn</name>
+    <cmt>description: &lt;br&gt;Type: Inn</cmt>
+    <desc>description: &lt;br&gt;Type: Inn</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-08-26T09:02:31Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.679127037525177" lon="-103.02721199579537">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Cross Roads Inn1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;335 Main St, Stoughton, SK S0G 4T0&lt;br&gt;www.facebook.com&lt;br&gt;+1 306-457-2230&lt;br&gt;Type: Motel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;335 Main St, Stoughton, SK S0G 4T0&lt;br&gt;www.facebook.com&lt;br&gt;+1 306-457-2230&lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.499815963208675" lon="-80.236254008486867">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Days Inn &amp; Suites by Wyndham Collingwood1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;15 Cambridge St, Collingwood, ON L9Y 0A2&lt;br&gt;www.wyndhamhotels.com&lt;br&gt;+1 705-444-1880&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;15 Cambridge St, Collingwood, ON L9Y 0A2&lt;br&gt;www.wyndhamhotels.com&lt;br&gt;+1 705-444-1880&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.109138008207083" lon="-122.66207900829613">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Days Inn &amp; Suites by Wyndham Langley1</name>
+    <cmt>description: &lt;br&gt;Type: Hotel</cmt>
+    <desc>description: &lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.212196992710233" lon="-102.44712403044105">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Days Inn &amp; Suites by Wyndham Yorkton1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;275 Broadway St E No.1, Yorkton, SK S3N 3G7&lt;br&gt;www.wyndhamhotels.com&lt;br&gt;+1 306-994-4325&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;275 Broadway St E No.1, Yorkton, SK S3N 3G7&lt;br&gt;www.wyndhamhotels.com&lt;br&gt;+1 306-994-4325&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.0890659596771" lon="-73.194148018956184">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Days Inn by Wyndham Berthierville1</name>
+    <cmt>description: This tourist accommodation offers&lt;br&gt;58 units&lt;br&gt;Cycling packages&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;Breakfast,&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified tourist accommodation, it offers&lt;br&gt;A pump and basic tools for minor repairs&lt;br&gt;A covered, locked location to store your bicycle at night&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/hotel-days-inn-berthierville-2/&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: This tourist accommodation offers&lt;br&gt;58 units&lt;br&gt;Cycling packages&lt;br&gt;Bike washing station&lt;br&gt;Laundry room&lt;br&gt;Breakfast,&lt;br&gt;In addition, as a Bienvenue cyclistes!-certified tourist accommodation, it offers&lt;br&gt;A pump and basic tools for minor repairs&lt;br&gt;A covered, locked location to store your bicycle at night&lt;br&gt;Information about local bicycle networks and cycling services in the area&lt;br&gt;https://www.routeverte.com/en/hebergements/hotel-days-inn-berthierville-2/&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.59844003431499" lon="-75.70008896291256">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Days Inn by Wyndham Brockville1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;160 Stewart Blvd, Brockville, ON K6V 4W6&lt;br&gt;www.wyndhamhotels.com&lt;br&gt;+1 613-704-1335&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;160 Stewart Blvd, Brockville, ON K6V 4W6&lt;br&gt;www.wyndhamhotels.com&lt;br&gt;+1 613-704-1335&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="47.350315991789103" lon="-68.210353972390294">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Days Inn by Wyndham Edmundston1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;10 Rue Mathieu, Edmundston-Madawaska-Centre, NB E7C 3E1&lt;br&gt;www.wyndhamhotels.com&lt;br&gt;+1 506-263-0000&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;10 Rue Mathieu, Edmundston-Madawaska-Centre, NB E7C 3E1&lt;br&gt;www.wyndhamhotels.com&lt;br&gt;+1 506-263-0000&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.94296402297914" lon="-66.672464003786445">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Days Inn by Wyndham Fredericton</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;958 Prospect St, Fredericton, NB E3B 2T8&lt;br&gt;www.wyndhamhotels.com&lt;br&gt;+1 506-462-4444&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;958 Prospect St, Fredericton, NB E3B 2T8&lt;br&gt;www.wyndhamhotels.com&lt;br&gt;+1 506-462-4444&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.300465976819396" lon="-116.95017401129007">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Days Inn by Wyndham Golden1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1416 Golden View Rd, Golden, BC V0A 1H1&lt;br&gt;www.wyndhamhotels.com&lt;br&gt;+1 250-344-2216&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1416 Golden View Rd, Golden, BC V0A 1H1&lt;br&gt;www.wyndhamhotels.com&lt;br&gt;+1 250-344-2216&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.995918983593583" lon="-65.571762034669518">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Days Inn by Wyndham Miramichi NB1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;457 KG Highway, 201 Edward St, Miramichi, NB E1V 2Y7&lt;br&gt;www.wyndhamhotels.com&lt;br&gt;+1 506-300-7868&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;457 KG Highway, 201 Edward St, Miramichi, NB E1V 2Y7&lt;br&gt;www.wyndhamhotels.com&lt;br&gt;+1 506-300-7868&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.415826002135873" lon="-105.53645499050617">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Days Inn by Wyndham Moose Jaw1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1720 Main St N, Moose Jaw, SK S6J 1L4&lt;br&gt;www.wyndhamhotels.com&lt;br&gt;+1 306-912-5506&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1720 Main St N, Moose Jaw, SK S6J 1L4&lt;br&gt;www.wyndhamhotels.com&lt;br&gt;+1 306-912-5506&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.842043980956078" lon="-66.508847996592522">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Days Inn by Wyndham Oromocto Conference Centre1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;60 Brayson Blvd, Oromocto, NB E2V 4T9&lt;br&gt;www.wyndhamhotels.com&lt;br&gt;+1 506-801-8548&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;60 Brayson Blvd, Oromocto, NB E2V 4T9&lt;br&gt;www.wyndhamhotels.com&lt;br&gt;+1 506-801-8548&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.482736015692353" lon="-76.650169976055622">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Days Inn by Wyndham Renfrew Conference Centre</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;760 Gibbons Rd, Renfrew, ON K7V 0B7&lt;br&gt;www.wyndhamhotels.com&lt;br&gt;+1 613-432-8109&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;760 Gibbons Rd, Renfrew, ON K7V 0B7&lt;br&gt;www.wyndhamhotels.com&lt;br&gt;+1 613-432-8109&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.295663038268685" lon="-107.80130700208247">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Days Inn by Wyndham Swift Current1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;3671 7 St, Gull Lake, SK S0N 1A0&lt;br&gt;+1 306-672-3870&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;3671 7 St, Gull Lake, SK S0N 1A0&lt;br&gt;+1 306-672-3870&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.329399012029171" lon="-72.603287966921926">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Days Inn by Wyndham Trois-Rivieres1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;3155 Bd Saint-Jean, Trois-Rivières, QC G9B 2M4&lt;br&gt;www.wyndhamhotels.com&lt;br&gt;+1 819-377-4444&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;3155 Bd Saint-Jean, Trois-Rivières, QC G9B 2M4&lt;br&gt;www.wyndhamhotels.com&lt;br&gt;+1 819-377-4444&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="51.923607001081109" lon="-107.13528198190033">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Delisle Hotel1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;216 1 St W, Delisle, SK S0L 0P0&lt;br&gt;+1 306-493-2929&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;216 1 St W, Delisle, SK S0L 0P0&lt;br&gt;+1 306-493-2929&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.675988039001822" lon="-120.32870896160603">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Delta Hotels Kamloops</name>
+    <cmt>description: &lt;br&gt;Type: Hotel</cmt>
+    <desc>description: &lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="46.340170009061694" lon="-72.542064031586051">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Delta Hotels Trois Rivieres Conference Centre</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1620 Rue Notre Dame Centre, Trois-Rivières, QC G9A 6E5&lt;br&gt;www.marriott.com&lt;br&gt;+1 819-376-1991&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1620 Rue Notre Dame Centre, Trois-Rivières, QC G9A 6E5&lt;br&gt;www.marriott.com&lt;br&gt;+1 819-376-1991&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.813688039779663" lon="-121.3257309794426">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Destination inn</name>
+    <cmt>description: &lt;br&gt;Type: Motel</cmt>
+    <desc>description: &lt;br&gt;Type: Motel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.679462971165776" lon="-62.722587017342448">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Dolan's Inn &amp; Suites1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;168 W River Rd, Pictou, NS B0K 1H0&lt;br&gt;+1 902-485-1337&lt;br&gt;Type: Inn</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;168 W River Rd, Pictou, NS B0K 1H0&lt;br&gt;+1 902-485-1337&lt;br&gt;Type: Inn</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.673757027834654" lon="-120.33313100226223">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>DoubleTree by Hilton Hotel Kamloops1</name>
+    <cmt>description: &lt;br&gt;Type: Hotel</cmt>
+    <desc>description: &lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.168907012790442" lon="-57.431905008852482">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Driftwood Inn</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;3 Upper Nicholsville Rd, Deer Lake, NL A8A 2E8&lt;br&gt;www.driftwoodinn.ca&lt;br&gt;+1 709-635-5115&lt;br&gt;Type: Inn</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;3 Upper Nicholsville Rd, Deer Lake, NL A8A 2E8&lt;br&gt;www.driftwoodinn.ca&lt;br&gt;+1 709-635-5115&lt;br&gt;Type: Inn</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.325298992916942" lon="-123.1209440343082">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Econo Lodge Inn &amp; Suites</name>
+    <cmt>description: &lt;br&gt;Type: Hotel</cmt>
+    <desc>description: &lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.23934599943459" lon="-66.11813697963953">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Econo Lodge Inn &amp; Suites1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1441 Manawagonish Rd, Saint John, NB E2M 3X8&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 506-635-8700&lt;br&gt;Type: Inn</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1441 Manawagonish Rd, Saint John, NB E2M 3X8&lt;br&gt;www.choicehotels.com&lt;br&gt;+1 506-635-8700&lt;br&gt;Type: Inn</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.633337011560798" lon="-93.830954041332006">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Emo Inn1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;5916 11/71 Hwy, Emo, ON P0W 1E0&lt;br&gt;emoinn.com&lt;br&gt;+1 807-482-2272&lt;br&gt;Type: Inn</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;5916 11/71 Hwy, Emo, ON P0W 1E0&lt;br&gt;emoinn.com&lt;br&gt;+1 807-482-2272&lt;br&gt;Type: Inn</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.229736998677254" lon="-90.964956963434815">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>English River Inn1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;ON-17, English River, ON P0T 1T0&lt;br&gt;+1 807-986-2083&lt;br&gt;Type: Inn</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;ON-17, English River, ON P0T 1T0&lt;br&gt;+1 807-986-2083&lt;br&gt;Type: Inn</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.031782034784555" lon="-110.70811196230352">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Flamingo Hotel</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;722 Redcliff Dr SW, Medicine Hat, AB T1A 5E3&lt;br&gt;thehotelflamingo.com&lt;br&gt;+1 403-527-3700&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;722 Redcliff Dr SW, Medicine Hat, AB T1A 5E3&lt;br&gt;thehotelflamingo.com&lt;br&gt;+1 403-527-3700&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="45.935825994238257" lon="-66.661627041175961">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Fredericton Inn</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;1315 Regent St, Fredericton, NB E3C 1A1&lt;br&gt;www.frederictoninn.nb.ca&lt;br&gt;+1 506-455-1430&lt;br&gt;Type: Inn</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;1315 Regent St, Fredericton, NB E3C 1A1&lt;br&gt;www.frederictoninn.nb.ca&lt;br&gt;+1 506-455-1430&lt;br&gt;Type: Inn</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.659325005486608" lon="-63.6725839599967">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Future Inns Halifax Hotel &amp; Conference Centre1</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;30 Fairfax Dr, Halifax, NS B3S 1P1&lt;br&gt;www.futureinns.com&lt;br&gt;+1 902-443-4333&lt;br&gt;Type: Hotel</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;30 Fairfax Dr, Halifax, NS B3S 1P1&lt;br&gt;www.futureinns.com&lt;br&gt;+1 902-443-4333&lt;br&gt;Type: Hotel</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.959304029121995" lon="-57.929673967882991">
+    <ele>0</ele>
+    <time>2026-06-27T16:35:51Z</time>
+    <name>Garden Hill Inn</name>
+    <cmt>description: Details from Google Maps&lt;br&gt;2 Fords Rd, Corner Brook, NL A2H 1S6&lt;br&gt;+1 888-634-1150&lt;br&gt;Type: Inn</cmt>
+    <desc>description: Details from Google Maps&lt;br&gt;2 Fords Rd, Corner Brook, NL A2H 1S6&lt;br&gt;+1 888-634-1150&lt;br&gt;Type: Inn</desc>
+    <sym>Lodging</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2026-06-27T16:35:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+</gpx>
