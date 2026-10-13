@@ -135,25 +135,25 @@
   },
   {
    "key": "Hostel",
-   "emoji": "\ud83d\udecf\ufe0f",
+   "emoji": "\ud83d\udecf\ufe0f \ud83c\udf10",
    "title": "Hostels",
    "count": 43
   },
   {
    "key": "Student_Residence",
-   "emoji": "\ud83d\udecf\ufe0f",
+   "emoji": "\ud83d\udecf\ufe0f \ud83c\udfeb",
    "title": "Student Residences",
    "count": 8
   },
   {
    "key": "Motel",
-   "emoji": "\ud83d\udecf\ufe0f",
+   "emoji": "\ud83d\udecf\ufe0f \ud83d\udd11",
    "title": "Motels (and Motor Inns)",
    "count": 119
   },
   {
    "key": "Hotel",
-   "emoji": "\ud83d\udecf\ufe0f",
+   "emoji": "\ud83d\udecf\ufe0f \ud83d\udece\ufe0f",
    "title": "Hotels (and Inns)",
    "count": 112
   },
