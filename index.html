@@ -973,14 +973,19 @@ function refreshArrows() {
 // convert.py every ~25 km ("shields" in the route feature properties).
 // They follow the parent route's tickbox, the province and direction
 // dropdowns, and one master "Route shields" checkbox. Not in the GPX export.
-const SHIELD_MIN_ZOOM = 8;  // wider than this and a national route piles hundreds on screen
+const SHIELD_MIN_ZOOM = 7;   // wider than this and a national route piles hundreds on screen
+const SHIELD_FULL_ZOOM = 8;  // below this, every other shield: zooming out one
+                             // level halves on-screen distances, so halving the
+                             // shields keeps zoom 7 as roomy as zoom 8
+const SHIELD_THIN_M = 30000; // "every other": 25 km neighbours fall inside this,
+                             // the next one along (50 km of road) falls outside
 const shieldToggle = document.getElementById('shield-toggle');
 const shieldState = { layer: null };
 
 function shieldSize() {
-  // height in px: 18 at the min zoom growing to 36 by zoom 14
-  const z = Math.max(SHIELD_MIN_ZOOM, Math.min(14, map.getZoom()));
-  return Math.round(18 + 18 * (z - SHIELD_MIN_ZOOM) / (14 - SHIELD_MIN_ZOOM));
+  // height in px: 18 at zoom 8 and wider, growing to 36 by zoom 14
+  const z = Math.max(SHIELD_FULL_ZOOM, Math.min(14, map.getZoom()));
+  return Math.round(18 + 18 * (z - SHIELD_FULL_ZOOM) / (14 - SHIELD_FULL_ZOOM));
 }
 
 function shieldIcon(code, h) {
@@ -995,10 +1000,13 @@ function buildShieldLayer() {
   const minGap = h * 2.5;  // same-route shields closer than this on screen
                            // collapse to one: Sam often drew parallel variant
                            // tracks (a road route + a rail-trail alternate),
-                           // each with its own shields. 25 km neighbours sit
-                           // wider than this at every zoom, so the honest
+                           // each with its own shields. From zoom 8 in, 25 km
+                           // neighbours sit wider than this, so the honest
                            // rhythm is never thinned; zooming in separates
                            // the variants and shows each one's badge again.
+  // Below zoom 8, thin by ground distance rather than pixels: Mercator
+  // stretches the north, so a pixel gap would thin unevenly by latitude.
+  const thin = map.getZoom() < SHIELD_FULL_ZOOM;
   // One shield set per stretch of road: where Sam drew separate EB and WB
   // tracks on the same highway, drawing both sets doubles the density with
   // wobbly phases. The default and eastbound views use EB + two-way tracks;
@@ -1012,10 +1020,12 @@ function buildShieldLayer() {
       const p = f.properties;
       if (!provOk(p) || p.dir === skipDir) continue;
       for (const [lat, lon] of (p.shields || [])) {
-        const px = map.latLngToLayerPoint([lat, lon]);
-        if (kept.some(k => Math.abs(k.x - px.x) < minGap &&
-                           Math.abs(k.y - px.y) < minGap)) continue;
-        kept.push(px);
+        const ll = L.latLng(lat, lon);
+        const px = map.latLngToLayerPoint(ll);
+        if (kept.some(k => (Math.abs(k.px.x - px.x) < minGap &&
+                            Math.abs(k.px.y - px.y) < minGap) ||
+                           (thin && k.ll.distanceTo(ll) < SHIELD_THIN_M))) continue;
+        kept.push({ px, ll });
         L.marker([lat, lon], { icon })
           .bindTooltip(esc(e.meta.title), { direction: 'top' })
           .addTo(group);
