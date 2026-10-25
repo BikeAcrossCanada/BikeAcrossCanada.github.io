@@ -14,6 +14,8 @@
       integrity="sha256-p0ab5p0FrFs9Tz4OZgifAvIP+Rd0VFUEbNYjVXVeh9w=" crossorigin="">
 <link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation@2.6.0/dist/leaflet-elevation.min.css"
       integrity="sha256-Cw03qt3zMjRIGpKLc1iqjUVAvLauJYvyxTBTiISfCmQ=" crossorigin="">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.locatecontrol@0.90.1/dist/L.Control.Locate.min.css"
+      integrity="sha384-71M4mrilXHJO54OLYzaJ+wRg/RuwOXcMW4OaLe/G0WamhbdNCNpCn6SvpVZ6Lf5N" crossorigin="">
 <style>
   html, body { margin:0; height:100%; font-family: system-ui, sans-serif; }
   .elev-summary { padding:6px 12px 0; font-size:12.5px; line-height:1.5; }
@@ -115,6 +117,14 @@
     .compass-control a { display:flex; align-items:center; justify-content:center; cursor:grab; touch-action:none; }
     .compass-control svg { transition: transform .1s; }
     .compass-control.north-up { opacity:.6; }
+    /* Message beside the location button when the browser can't give a location. */
+    .locate-note { position:absolute; left:100%; top:0; margin-left:8px; width:220px;
+      background:#fff; padding:6px 24px 6px 8px; border-radius:4px;
+      box-shadow:0 1px 5px rgba(0,0,0,.4); font-size:12px; line-height:1.4; color:#333; }
+    .locate-note[hidden] { display:none; }
+    .locate-note [data-retry] { border:none; background:none; padding:0; font:inherit;
+      color:#0078a8; cursor:pointer; text-decoration:underline; }
+    .locate-note .otm-sat-close { position:absolute; top:4px; right:4px; }
     /* Attribution wraps instead of spanning the whole bottom edge, so it
        never covers the minimap or its open/close button on phones (issue #53). */
     .leaflet-control-attribution { max-width:55vw; white-space:normal; text-align:right; }
@@ -269,6 +279,8 @@
         integrity="sha256-Hb/f1FMaLV+Qn6KSYbc92GxB2bcKp7/efxNeiduEo3g=" crossorigin=""></script>
 <script src="https://unpkg.com/@raruto/leaflet-elevation@2.6.0/dist/leaflet-elevation.min.js"
         integrity="sha256-dG7l+bdLIhFML5QvOivn1GNMsrmjxrh76vgb+4bkCxk=" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet.locatecontrol@0.90.1/dist/L.Control.Locate.min.js"
+        integrity="sha384-59TTE1BOzlD9d1Eos6CaVvKNnMh2h2pll99VpZqrJpeHqoXYW/RCuit5u39X9XtQ" crossorigin=""></script>
 <script>
 // minZoom/maxZoom set explicitly: otherwise Leaflet derives them from whatever
 // layers are present, and while a base map is being swapped the hillshade
@@ -483,6 +495,42 @@ compassControl.onAdd = () => {
   return bar;
 };
 compassControl.addTo(map);
+// Show my location (issue #103), from the Leaflet.Locate plugin. Nothing
+// happens until the rider taps the button; the browser then asks permission.
+// The location is used in the page only and never sent anywhere. The map keeps
+// centring on the rider as they move until they pan or zoom; tap again to come
+// back. A reading up to 10 minutes old is fine, and a weak phone signal gets
+// 30 seconds per try. The plugin's own error handling is a browser alert, so
+// blocked and not-found get their own messages beside the button instead.
+const locateControl = L.control.locate({
+  position: 'topleft',
+  initialZoomLevel: 14,       // on a tap; later readings just pan
+  keepCurrentZoomLevel: true, // else each GPS update zooms to fit the accuracy circle
+  showPopup: false,
+  strings: { title: 'Show my location' },
+  locateOptions: { maxZoom: Infinity, watch: true, maximumAge: 600000, timeout: 30000 },
+  onLocationError: err => showLocateNote(err && err.code === 1
+    ? 'Location is blocked for this site. Allow location in your browser settings, then tap the button again.'
+    : 'Your browser couldn\'t find your location just now. <button type="button" data-retry>Try again</button>'),
+}).addTo(map);
+// "Try again" presses the button itself: the plugin applies the zoom only on a real tap.
+const locateButton = locateControl.getContainer().querySelector('a');
+const locateNote = L.DomUtil.create('div', 'locate-note', locateControl.getContainer());
+locateNote.hidden = true;
+L.DomEvent.disableClickPropagation(locateNote);
+function showLocateNote(html) {
+  locateNote.innerHTML = '<button type="button" class="otm-sat-close" aria-label="Close">&times;</button>' + html;
+  locateNote.hidden = false;
+}
+locateNote.addEventListener('click', e => {
+  if (e.target.closest('.otm-sat-close')) locateNote.hidden = true;
+  if (e.target.closest('[data-retry]')) { locateNote.hidden = true; locateButton.click(); }
+});
+// Watching never gives up on a timeout; it just keeps trying. Say so once.
+map.on('locationtimeout', e => {
+  if (e.count === 1) showLocateNote('Still looking for your location. A weak signal can take a while.');
+});
+map.on('locationfound', () => { locateNote.hidden = true; });
 map.getContainer().addEventListener('wheel', e => {
   if (!e.shiftKey) return;
   e.preventDefault();
