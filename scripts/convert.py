@@ -68,7 +68,7 @@ POI_LAYERS = {  # gpx stem -> (emoji, display name)
     "Eatery": ("\U0001f37d️", "Eateries"),
     "Food_Stop_Grocer": ("\U0001f6d2", "Food stops & grocers"),
     "Drinking_Water": ("\U0001f4a7", "Drinking water"),
-    "Toilets": ("\U0001f6bb", "Toilets"),
+    "Toilets": ("\U0001f6bb", "Toilets (Public Rest Areas)"),
     "Showers": ("\U0001f6bf", "Showers"),
     "Laundromat": ("\U0001f9fa", "Laundromats"),
     "Tourist_office": ("ℹ️", "Visitor centres"),
