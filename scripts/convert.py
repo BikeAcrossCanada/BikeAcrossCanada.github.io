@@ -38,6 +38,7 @@ ROUTE_LAYERS = {
     "CA": {"color": "#787878", "weight": 2.5, "title": "CA — Access routes"},
     "CL": {"color": "#3d85c8", "weight": 3, "title": "CL — Local connectors"},
     "CW": {"color": "#1a0067", "weight": 3, "title": "CW — Ferry crossings (dashed)", "dash": "6 6"},
+    "C": {"color": "303030", "weight": 4, "title": "C- Network Dedicated Cycling Infrastructure", "ride": False}, 
 }
 
 # Sam's one-way layer: segments (drawn in the direction of travel) that mark
