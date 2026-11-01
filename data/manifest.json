@@ -68,10 +68,10 @@
    "code": "C",
    "color": "303030",
    "weight": 4,
-   "title": "C- Network Dedicated Cycling Infrastructure (approx. 0 km)",
-   "count": 35,
-   "km": 24,
-   "km_west_east": 0
+   "title": "C- Network Dedicated Cycling Infrastructure (approx. 100 km)",
+   "count": 47,
+   "km": 53,
+   "km_west_east": 100
   }
  ],
  "pois": [
