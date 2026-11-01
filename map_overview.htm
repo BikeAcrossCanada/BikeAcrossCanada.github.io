@@ -1,136 +1,32 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Leaflet Webmap with Overview Map</title>
-    <!-- 1. Include Leaflet CSS and JS -->
-    <link rel="stylesheet" href="https://unpkg.com" />
-    <script src="https://unpkg.com"></script>
-        <script type="module" src="https://geogratis.gc.ca/mapml/client/web-map/mapml-viewer.js" crossorigin></script>
- 
-    <!-- 2. Include Leaflet MiniMap Plugin CSS and JS -->
-    <link rel="stylesheet" href="https://cloudflare.com" />
-    <script src="https://cloudflare.com"></script>
-
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Timezones in KML</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/ol/ol.css">
     <style>
-        #map { height: 100vh; width: 100%; }
+      .map {
+        width: 100%;
+        height: 400px;
+      }
+      #map {
+        position: relative;
+      }
+      #info {
+        position: absolute;
+        height: 1px;
+        width: 1px;
+        z-index: 100;
+      }
     </style>
-</head>
-<body>
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>My First web Map</title>
-    </head>
-    <body>
+  </head>
+  <body>
+    <div id="map" class="map">
+      <div id="info"></div>
+    </div>
 
-<details>
-  <summary>
-    <label>
-      <input type="checkbox" id="parent-checkbox">
-      <strong>Main Category</strong>
-    </label>
-  </summary>
-  
-  <ul style="list-style: none; margin-left: 20px; padding-left: 10px;">
-    <li>
-      <label>
-        <input type="checkbox" class="child-checkbox"> Sub-item 1
-      </label>
-    </li>
-    <li>
-      <label>
-        <input type="checkbox" class="child-checkbox"> Sub-item 2
-      </label>
-    </li>
-    <li>
-      <label>
-        <input type="checkbox" class="child-checkbox"> Sub-item 3
-      </label>
-    </li>
-  </ul>
-</details>
-
-<hr>
-
-<details>
-  <summary>
-    <input type="checkbox" id="parent" onclick="toggleChildren(this)">
-    <label for="parent">Parent Category</label>
-  </summary>
-  
-  <div style="margin-left: 20px;">
-    <details>
-      <summary>
-        <input type="checkbox" class="child" onclick="checkParent()">
-        Subcategory 1
-      </summary>
-    </details>
-
-    <details>
-      <summary>
-        <input type="checkbox" class="child" onclick="checkParent()">
-        Subcategory 2
-      </summary>
-    </details>
-  </div>
-</details>
-
-<script>
-  // When parent is checked/unchecked, update all children
-  function toggleChildren(parentCheckbox) {
-    const children = document.querySelectorAll('.child');
-    children.forEach(child => {
-      child.checked = parentCheckbox.checked;
-    });
-  }
-
-  // When a child is changed, update the parent's state
-  function checkParent() {
-    const parent = document.getElementById('parent');
-    const children = Array.from(document.querySelectorAll('.child'));
-    
-    const allChecked = children.every(child => child.checked);
-    const someChecked = children.some(child => child.checked);
-
-    parent.checked = allChecked;
-    // Optional: Visual 'indeterminate' state if only some are checked
-    parent.indeterminate = someChecked && !allChecked;
-  }
-</script>
-
-<hr>
-        <mapml-viewer zoom="3" lat="66.9413186" lon="-83.9229196" width="800" height="auto" projection="CBMTILE" controls> <layer- src="https://geogratis.gc.ca/mapml/en/cbmtile/cbmt" label="Canada Base map" checked ></layer->
-        </mapml-viewer>
-
-<iframe 
-    src="https://atlas.gc.ca/relief/Atlas_Relief_EN.html" 
-    width="100%" 
-    height="650px" 
-    style="border: 1px solid #ccc; border-radius: 4px;" 
-    title="Atlas of Canada - Relief Map of Canada (MCR0101E) - 2024 Update"
-    allowfullscreen>
-</iframe>
-
-    <div id="map"></div>
-
-    <script>
-        // 3. Initialize the main map
-        var map = L.map('map').setView([45.5, -73.6], 5);
-
-        // 4. Add a basemap layer to the main map
-        var mainTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap contributors'
-        }).addTo(map);
-
-        // 5. Create a separate tile layer for the Overview Map
-        var overviewTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
-
-        // 6. Initialize and add the MiniMap control
-        var miniMap = new L.Control.MiniMap(overviewTiles, {
-            toggleDisplay: true, // Allows user to minimize it
-            aimingRectOptions: {color: "#ff7800", weight: 1}, // Styling for the bounds rectangle
-            zoomLevelOffset: -4  // Keeps overview map zoomed out relative to main map
-        }).addTo(map);
-    </script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="main.js"></script>
+  </body>
 </html>
