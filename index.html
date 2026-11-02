@@ -183,10 +183,12 @@
     <option value="W">East to West</option>
   </select>  
   <h2>Routes</h2>
+  <label style="font-weight:600;border-bottom:1px solid #eee;padding-bottom:4px;margin-bottom:2px">
+    <input type="checkbox" id="route-all" checked> Check all / none</label>
   <div id="route-boxes"></div>
   <label style="border-top:1px solid #eee;margin-top:4px;padding-top:5px">
     <input type="checkbox" id="shield-toggle"> Route shields on the map</label>
-  <button id="dl-gpx" style="margin-top:16px;width:100%;padding:7px;font-size:13px;
+  <button class="dl-gpx" style="margin-top:16px;width:100%;padding:7px;font-size:13px;
     background:#0a58a3;color:#fff;border:none;border-radius:5px;cursor:pointer;
     display:flex;align-items:center;justify-content:center;gap:7px">
     <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"
@@ -203,7 +205,7 @@
   <label style="font-weight:600;border-bottom:1px solid #eee;padding-bottom:4px;margin-bottom:2px">
     <input type="checkbox" id="poi-all"> Check all / none</label>
   <div id="poi-boxes"></div>
-  <button id="dl-gpx" style="margin-top:16px;width:100%;padding:7px;font-size:13px;
+  <button class="dl-gpx" style="margin-top:16px;width:100%;padding:7px;font-size:13px;
     background:#0a58a3;color:#fff;border:none;border-radius:5px;cursor:pointer;
     display:flex;align-items:center;justify-content:center;gap:7px">
     <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"
@@ -1240,7 +1242,7 @@ fetch('data/manifest.json').then(r => r.json()).then(manifest => {
 
 // ---- Check all / none for the POI list, and for each POI group ----
 const poiAll = document.getElementById('poi-all');
-function setPoiBoxes(entries, on) {
+function setBoxes(entries, on) {
   for (const e of entries) {
     e.cb.checked = on;
     // loaded layers toggle now; still-loading ones honour the box on arrival
@@ -1250,7 +1252,7 @@ function setPoiBoxes(entries, on) {
 const poiEntries = parent => layerRegistry.filter(e => e.kind === 'poi' && e.cb &&
                                                   (!parent || e.meta.parent === parent));
 poiAll.addEventListener('change', () => {
-  setPoiBoxes(poiEntries(), poiAll.checked);
+  setBoxes(poiEntries(), poiAll.checked);
   syncPoiAll();
   updateDlButton();
 });
@@ -1270,7 +1272,7 @@ function addPoiGroup(container, p) {
   const g = { key: p.key, cb, countEl: lab.querySelector('.count') };
   g.countEl.textContent = p.count;
   poiGroups.push(g);
-  cb.addEventListener('change', () => setPoiBoxes(poiEntries(p.key), cb.checked));
+  cb.addEventListener('change', () => setBoxes(poiEntries(p.key), cb.checked));
   return kids;
 }
 // A group's count is the sum of its rows' shown counts.
@@ -1290,13 +1292,25 @@ function syncPoiAll() {
 }
 document.getElementById('poi-boxes').addEventListener('change', syncPoiAll);
 
+// ---- Check all / none for the route list (issue #110) ----
+// Routes start all ticked, so the box does too. Route rows also drive the
+// POI filter, arrows and shields, so refresh those once after a bulk change.
+const routeAll = document.getElementById('route-all');
+const routeEntries = () => layerRegistry.filter(e => e.kind === 'route' && e.cb);
+routeAll.addEventListener('change', () => {
+  setBoxes(routeEntries(), routeAll.checked);
+  refreshPois(); refreshArrows(); refreshShields();
+});
+document.getElementById('route-boxes').addEventListener('change',
+  () => syncBox(routeAll, routeEntries()));
+
 // ---- GPX export of checked layers ----
-const dlBtn = document.getElementById('dl-gpx');
+// One button under Routes and one under Along the way; both export the same.
+const dlBtns = document.querySelectorAll('.dl-gpx');
 
 function updateDlButton() {
   const any = layerRegistry.some(e => e.cb && e.cb.checked);
-  dlBtn.disabled = !any;
-  dlBtn.style.opacity = any ? 1 : 0.45;
+  for (const b of dlBtns) { b.disabled = !any; b.style.opacity = any ? 1 : 0.45; }
 }
 document.getElementById('sidebar').addEventListener('change', updateDlButton);
 
@@ -1421,8 +1435,8 @@ function saveFile(text, type, filename) {
   URL.revokeObjectURL(a.href);
 }
 
-dlBtn.addEventListener('click', () =>
-  saveFile(buildGpx(), 'application/gpx+xml', 'trans-canada-bike-route-selection.gpx'));
+dlBtns.forEach(b => b.addEventListener('click', () =>
+  saveFile(buildGpx(), 'application/gpx+xml', 'trans-canada-bike-route-selection.gpx')));
 
 // ---- Per-track download (issue #62) ----
 // The GPX / KML links in a track's popup and the elevation panel build one
