@@ -183,6 +183,8 @@
     <option value="W">East to West</option>
   </select>  
   <h2>Routes</h2>
+  <label style="font-weight:600;border-bottom:1px solid #eee;padding-bottom:4px;margin-bottom:2px">
+    <input type="checkbox" id="route-all" checked> Check all / none</label>
   <div id="route-boxes"></div>
   <label style="border-top:1px solid #eee;margin-top:4px;padding-top:5px">
     <input type="checkbox" id="shield-toggle"> Route shields on the map</label>
@@ -1240,7 +1242,7 @@ fetch('data/manifest.json').then(r => r.json()).then(manifest => {
 
 // ---- Check all / none for the POI list, and for each POI group ----
 const poiAll = document.getElementById('poi-all');
-function setPoiBoxes(entries, on) {
+function setBoxes(entries, on) {
   for (const e of entries) {
     e.cb.checked = on;
     // loaded layers toggle now; still-loading ones honour the box on arrival
@@ -1250,7 +1252,7 @@ function setPoiBoxes(entries, on) {
 const poiEntries = parent => layerRegistry.filter(e => e.kind === 'poi' && e.cb &&
                                                   (!parent || e.meta.parent === parent));
 poiAll.addEventListener('change', () => {
-  setPoiBoxes(poiEntries(), poiAll.checked);
+  setBoxes(poiEntries(), poiAll.checked);
   syncPoiAll();
   updateDlButton();
 });
@@ -1270,7 +1272,7 @@ function addPoiGroup(container, p) {
   const g = { key: p.key, cb, countEl: lab.querySelector('.count') };
   g.countEl.textContent = p.count;
   poiGroups.push(g);
-  cb.addEventListener('change', () => setPoiBoxes(poiEntries(p.key), cb.checked));
+  cb.addEventListener('change', () => setBoxes(poiEntries(p.key), cb.checked));
   return kids;
 }
 // A group's count is the sum of its rows' shown counts.
@@ -1289,6 +1291,18 @@ function syncPoiAll() {
   for (const g of poiGroups) syncBox(g.cb, poiEntries(g.key));
 }
 document.getElementById('poi-boxes').addEventListener('change', syncPoiAll);
+
+// ---- Check all / none for the route list (issue #110) ----
+// Routes start all ticked, so the box does too. Route rows also drive the
+// POI filter, arrows and shields, so refresh those once after a bulk change.
+const routeAll = document.getElementById('route-all');
+const routeEntries = () => layerRegistry.filter(e => e.kind === 'route' && e.cb);
+routeAll.addEventListener('change', () => {
+  setBoxes(routeEntries(), routeAll.checked);
+  refreshPois(); refreshArrows(); refreshShields();
+});
+document.getElementById('route-boxes').addEventListener('change',
+  () => syncBox(routeAll, routeEntries()));
 
 // ---- GPX export of checked layers ----
 const dlBtn = document.getElementById('dl-gpx');
