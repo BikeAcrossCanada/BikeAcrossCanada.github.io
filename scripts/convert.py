@@ -31,14 +31,14 @@ OUT = ROOT / "data"
 # west-to-east ride, rounded to the nearest 100 km, as agreed in issue #24.
 # "ride" routes say "West–East"; CN's connectors just get the km.
 ROUTE_LAYERS = {
-    "C1": {"color": "#4e0067", "weight": 4, "title": "C1 — Victoria BC to Cape Spear NL", "ride": True},
-    "C2": {"color": "#674e00", "weight": 4, "title": "C2 — Tofino BC to Halifax NS", "ride": True},
-    "C3": {"color": "#00674e", "weight": 4, "title": "C3 — Victoria BC to Newfoundland", "ride": True},
-    "CN": {"color": "#670019", "weight": 3, "title": "CN — Connector routes", "ride": False},
-    "CA": {"color": "#787878", "weight": 2.5, "title": "CA — Access routes"},
-    "CL": {"color": "#3d85c8", "weight": 3, "title": "CL — Local connectors"},
-    "CW": {"color": "#1a0067", "weight": 3, "title": "CW — Ferry crossings (dashed)", "dash": "6 6"},
-    "C": {"color": "#303030", "weight": 4, "title": "C- Network Dedicated Cycling Infrastructure", "ride": False}, 
+    "C1": {"color": "#4e0067", "weight": 4, "title": "[C1] — Victoria BC to Cape Spear NL", "ride": True},
+    "C2": {"color": "#674e00", "weight": 4, "title": "[C2] — Tofino BC to Halifax NS", "ride": True},
+    "C3": {"color": "#00674e", "weight": 4, "title": "[C3] — Victoria BC to Newfoundland", "ride": True},
+    "CN": {"color": "#670019", "weight": 3, "title": "[CN] — Connector routes", "ride": False},
+    "CA": {"color": "#787878", "weight": 2.5, "title": "[CA] — Access routes"},
+    "CL": {"color": "#3d85c8", "weight": 3, "title": "[CL] — Local connectors"},
+    "CW": {"color": "#1a0067", "weight": 3, "title": "[CW] — Ferry crossings (dashed)", "dash": "6 6"},
+    "C": {"color": "#303030", "weight": 4, "title": "[C]- Network Dedicated Cycling Infrastructure", "ride": False}, 
 }
 
 # Sam's one-way layer: segments (drawn in the direction of travel) that mark
