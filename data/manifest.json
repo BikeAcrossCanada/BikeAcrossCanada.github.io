@@ -4,7 +4,7 @@
    "code": "C1",
    "color": "#4e0067",
    "weight": 4,
-   "title": "C1 \u2014 Victoria BC to Cape Spear NL (approx. 6,700 km West\u2013East)",
+   "title": "[C1] \u2014 Victoria BC to Cape Spear NL (approx. 6,700 km West\u2013East)",
    "count": 397,
    "km": 8647,
    "km_west_east": 6700
@@ -13,7 +13,7 @@
    "code": "C2",
    "color": "#674e00",
    "weight": 4,
-   "title": "C2 \u2014 Tofino BC to Halifax NS (approx. 6,700 km West\u2013East)",
+   "title": "[C2] \u2014 Tofino BC to Halifax NS (approx. 6,700 km West\u2013East)",
    "count": 299,
    "km": 7294,
    "km_west_east": 6700
@@ -22,7 +22,7 @@
    "code": "C3",
    "color": "#00674e",
    "weight": 4,
-   "title": "C3 \u2014 Victoria BC to Newfoundland (approx. 9,500 km West\u2013East)",
+   "title": "[C3] \u2014 Victoria BC to Newfoundland (approx. 9,500 km West\u2013East)",
    "count": 416,
    "km": 10035,
    "km_west_east": 9500
@@ -31,7 +31,7 @@
    "code": "CN",
    "color": "#670019",
    "weight": 3,
-   "title": "CN \u2014 Connector routes (approx. 2,400 km)",
+   "title": "[CN] \u2014 Connector routes (approx. 2,400 km)",
    "count": 271,
    "km": 2441,
    "km_west_east": 2400
@@ -40,7 +40,7 @@
    "code": "CA",
    "color": "#787878",
    "weight": 2.5,
-   "title": "CA \u2014 Access routes",
+   "title": "[CA] \u2014 Access routes",
    "count": 342,
    "km": 359,
    "km_west_east": 400
@@ -49,7 +49,7 @@
    "code": "CL",
    "color": "#3d85c8",
    "weight": 3,
-   "title": "CL \u2014 Local connectors",
+   "title": "[CL] \u2014 Local connectors",
    "count": 117,
    "km": 767,
    "km_west_east": 700
@@ -58,7 +58,7 @@
    "code": "CW",
    "color": "#1a0067",
    "weight": 3,
-   "title": "CW \u2014 Ferry crossings (dashed)",
+   "title": "[CW] \u2014 Ferry crossings (dashed)",
    "dash": "6 6",
    "count": 30,
    "km": 1510,
@@ -68,7 +68,7 @@
    "code": "C",
    "color": "#303030",
    "weight": 4,
-   "title": "C- Network Dedicated Cycling Infrastructure (approx. 100 km)",
+   "title": "[C]- Network Dedicated Cycling Infrastructure (approx. 100 km)",
    "count": 50,
    "km": 88,
    "km_west_east": 100
