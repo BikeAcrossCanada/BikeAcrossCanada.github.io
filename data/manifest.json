@@ -24,7 +24,7 @@
    "weight": 4,
    "title": "[C3] \u2014 Victoria BC to Newfoundland (approx. 9,500 km West\u2013East)",
    "count": 416,
-   "km": 10035,
+   "km": 10036,
    "km_west_east": 9500
   },
   {
@@ -69,8 +69,8 @@
    "color": "#303030",
    "weight": 4,
    "title": "[C]- Network Dedicated Cycling Infrastructure (approx. 100 km)",
-   "count": 53,
-   "km": 91,
+   "count": 54,
+   "km": 94,
    "km_west_east": 100
   }
  ],
