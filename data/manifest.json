@@ -14,8 +14,8 @@
    "color": "#674e00",
    "weight": 4,
    "title": "[C2] \u2014 Tofino BC to Halifax NS (approx. 6,700 km West\u2013East)",
-   "count": 299,
-   "km": 7294,
+   "count": 300,
+   "km": 7295,
    "km_west_east": 6700
   },
   {
@@ -50,8 +50,8 @@
    "color": "#3d85c8",
    "weight": 3,
    "title": "[CL] \u2014 Local connectors",
-   "count": 117,
-   "km": 767,
+   "count": 119,
+   "km": 768,
    "km_west_east": 700
   },
   {
@@ -69,7 +69,7 @@
    "color": "#303030",
    "weight": 4,
    "title": "[C]- Network Dedicated Cycling Infrastructure (approx. 100 km)",
-   "count": 79,
+   "count": 83,
    "km": 135,
    "km_west_east": 100
   }
