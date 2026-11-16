@@ -50,8 +50,8 @@
    "color": "#3d85c8",
    "weight": 3,
    "title": "[CL] \u2014 Local connectors",
-   "count": 119,
-   "km": 768,
+   "count": 121,
+   "km": 772,
    "km_west_east": 700
   },
   {
@@ -69,8 +69,8 @@
    "color": "#303030",
    "weight": 4,
    "title": "[C]- Network Dedicated Cycling Infrastructure (approx. 100 km)",
-   "count": 83,
-   "km": 135,
+   "count": 85,
+   "km": 137,
    "km_west_east": 100
   }
  ],
