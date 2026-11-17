@@ -101,6 +101,9 @@
   .leaflet-popup-content img.popup-img { max-width:100%; height:auto; display:block; margin:4px 0; }
     /* blend on the pane, not the tiles: each pane is its own stacking context */
     .leaflet-hillshade-pane { mix-blend-mode: multiply; opacity: .7; }
+    /* lat/long grid labels (issue #115): small grey text with a white halo */
+    .grid-label { font-size:10px; color:#555; white-space:nowrap; background:none; border:none;
+      text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 3px #fff; }
     /* OpenTopoMap arrives fully saturated and camouflages the route colours,
        so its pane is toned down; the slider below the layers control sets
        --otm-sat on the pane. */
@@ -366,6 +369,8 @@ function parseViewHash() {
       out.base = decodeURIComponent(v || '');
     } else if (k === 'hillshade') {
       out.hillshade = v === '1';
+    } else if (k === 'grid') {
+      out.grid = v !== '0';   // grid is on by default, so links only say grid=0
     }
   }
   return out.view ? out : {};   // no map= part, no override
@@ -430,18 +435,110 @@ const hillshade = new HillshadeLayer('', {
   pane: 'hillshade', tileSize: 512, zoomOffset: -1, minZoom: 9, maxZoom: 19, maxNativeZoom: 16,
   bounds: [[41, -141.1], [84, -52]], attribution: NRCAN_ATTR
 });
+// Lat/long grid (issue #115): light lines every 10° down to every 0.01°,
+// spaced so about 3-8 lines cross the screen, with decimal-degree labels
+// where each line meets the top or left edge of the map. Our own code
+// rather than Leaflet.Graticule, which is no longer maintained. Lines sit
+// above the hillshade and below the routes, ignore the mouse, and are
+// worked out from the screen corners so they stay right when the map is
+// rotated. Redrawn after each pan, zoom, or turn.
+map.createPane('grid', rotatingPane).style.zIndex = 350;
+map.getPane('grid').style.pointerEvents = 'none';
+// Labels go in a pane that doesn't turn with the map: leaflet-rotate
+// positions markers for the unrotated pane and keeps their text upright.
+map.createPane('gridLabels', map.getPane('norotatePane') || map.getPane('mapPane')).style.zIndex = 350;
+map.getPane('gridLabels').style.pointerEvents = 'none';
+const gridRenderer = L.svg({ pane: 'grid' });
+const latLongGrid = L.layerGroup();
+const GRID_STEPS = [10, 5, 2, 1, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01];
+const GRID_LINE = { renderer: gridRenderer, color: '#333', weight: 1, opacity: 0.45, interactive: false };
+function gridLabel(v, step, pos, neg) {
+  const d = step < 0.1 ? 2 : step < 1 ? 1 : 0;
+  return Math.abs(v).toFixed(d) + '°' + (v < 0 ? neg : v > 0 ? pos : '');
+}
+function drawGrid() {
+  latLongGrid.clearLayers();
+  const size = map.getSize();
+  const corners = [[0, 0], [size.x, 0], [0, size.y], [size.x, size.y]]
+    .map(p => map.containerPointToLatLng(p));
+  const lats = corners.map(c => c.lat), lngs = corners.map(c => c.lng);
+  const latMin = Math.max(-85, Math.min(...lats)), latMax = Math.min(85, Math.max(...lats));
+  const lngMin = Math.min(...lngs), lngMax = Math.max(...lngs);
+  const span = Math.max(lngMax - lngMin, latMax - latMin);
+  const step = GRID_STEPS.find(s => span / s <= 8 && span / s >= 3) ||
+               (span / GRID_STEPS[0] > 8 ? GRID_STEPS[0] : GRID_STEPS[GRID_STEPS.length - 1]);
+  const snap = v => Math.round(v / step) * step;   // kills float drift (0.30000000004)
+  for (let x = snap(Math.floor(lngMin / step) * step); x <= lngMax + step; x = snap(x + step))
+    L.polyline([[latMin, x], [latMax, x]], GRID_LINE).addTo(latLongGrid);
+  for (let y = snap(Math.floor(latMin / step) * step); y <= latMax + step; y = snap(y + step))
+    if (y >= -85 && y <= 85) L.polyline([[y, lngMin - step], [y, lngMax + step]], GRID_LINE).addTo(latLongGrid);
+  // Labels: walk the top and left screen edges and mark each place a grid
+  // line crosses them, so it works whatever way the map is turned. Skip
+  // spots under a map button or the mini map, and any label crowding the
+  // one before it on the same edge.
+  const mapBox = map.getContainer().getBoundingClientRect();
+  const covered = [...map.getContainer().querySelectorAll('.leaflet-control'),
+                   document.getElementById('toggle-sidebar')]
+    .filter(el => el && el.offsetParent)
+    .map(el => el.getBoundingClientRect())
+    .map(r => [r.left - mapBox.left - 8, r.top - mapBox.top - 8,
+               r.right - mapBox.left + 8, r.bottom - mapBox.top + 8]);
+  const isCovered = ([x, y]) => covered.some(([l, t, r, b]) => x >= l && x <= r && y >= t && y <= b);
+  const edges = [[[0, 0], [size.x, 0]], [[0, 0], [0, size.y]]];
+  const seen = new Set();
+  for (const [a, b] of edges) {
+    const top = a[1] === b[1], n = 200;
+    let prev = null, lastAt = -Infinity;
+    for (let i = 0; i <= n; i++) {
+      const pt = [a[0] + (b[0] - a[0]) * i / n, a[1] + (b[1] - a[1]) * i / n];
+      const ll = map.containerPointToLatLng(pt);
+      if (prev) {
+        for (const [key, pos, neg] of [['lng', 'E', 'W'], ['lat', 'N', 'S']]) {
+          const c0 = Math.floor(prev[key] / step), c1 = Math.floor(ll[key] / step);
+          if (c0 === c1) continue;
+          const v = snap(Math.max(c0, c1) * step), id = key + v;
+          const along = top ? pt[0] : pt[1];
+          // the label sits a few px in from the edge, beside its line
+          const at = top ? [pt[0] + 3, 4] : [4, pt[1] - 14];
+          if (seen.has(id) || along - lastAt < 50 || isCovered(at) ||
+              isCovered([at[0] + 40, at[1] + 10])) continue;
+          seen.add(id); lastAt = along;
+          L.marker(map.containerPointToLatLng(at), {
+            pane: 'gridLabels', interactive: false, keyboard: false,
+            icon: L.divIcon({ className: 'grid-label', html: gridLabel(v, step, pos, neg),
+                              iconSize: null, iconAnchor: [0, 0] })
+          }).addTo(latLongGrid);
+        }
+      }
+      prev = ll;
+    }
+  }
+}
+let gridFrame = 0;
+const redrawGrid = () => {
+  if (!map.hasLayer(latLongGrid)) return;
+  cancelAnimationFrame(gridFrame);
+  gridFrame = requestAnimationFrame(drawGrid);
+};
+map.on('moveend zoomend rotate resize', redrawGrid);
+latLongGrid.on('add', redrawGrid);
 // Remember the rider's picks (plain display preferences, like a language
-// choice — no personal data). Default OSM, no hillshade; storage may be unavailable.
-const BASE_KEY = 'tcbr-basemap', HILL_KEY = 'tcbr-hillshade';
-let savedBase = null, savedHill = null;
-try { savedBase = localStorage.getItem(BASE_KEY); savedHill = localStorage.getItem(HILL_KEY); } catch (e) {}
+// choice — no personal data). Default OSM, no hillshade, grid on; storage may be unavailable.
+const BASE_KEY = 'tcbr-basemap', HILL_KEY = 'tcbr-hillshade', GRID_KEY = 'tcbr-grid';
+let savedBase = null, savedHill = null, savedGrid = null;
+try {
+  savedBase = localStorage.getItem(BASE_KEY); savedHill = localStorage.getItem(HILL_KEY);
+  savedGrid = localStorage.getItem(GRID_KEY);
+} catch (e) {}
 const startBase = linkView.view
   ? (baseMaps[linkView.base] ? linkView.base : 'OpenStreetMap')
   : (baseMaps[savedBase] ? savedBase : 'OpenStreetMap');
 let currentBase = startBase;   // for the URL fragment; Leaflet doesn't expose it
 baseMaps[startBase].addTo(map);
 if (linkView.view ? linkView.hillshade : savedHill === 'on') hillshade.addTo(map);
-L.control.layers(baseMaps, { 'Hillshade': hillshade }, { position: 'topleft' }).addTo(map);
+if (linkView.view ? linkView.grid !== false : savedGrid !== 'off') latLongGrid.addTo(map);
+L.control.layers(baseMaps, { 'Hillshade': hillshade, 'Lat/long grid': latLongGrid },
+                 { position: 'topleft' }).addTo(map);
 // On phones the map credits collapse to a small (i) button (issue #53) —
 // tap to read them, tap the box (anywhere but a link) to tuck them away.
 // Desktop keeps them always visible. Rotating / resizing re-applies the
@@ -615,11 +712,17 @@ function updateViewHash() {
     'map=' + map.getZoom() + '/' + c.lat.toFixed(4) + '/' + c.lng.toFixed(4)];
   if (currentBase !== 'OpenStreetMap') parts.push('base=' + encodeURIComponent(currentBase));
   if (map.hasLayer(hillshade)) parts.push('hillshade=1');
+  if (!map.hasLayer(latLongGrid)) parts.push('grid=0');
   history.replaceState(null, '', '#' + parts.join('&'));
 }
 map.on('moveend zoomend', updateViewHash);
 map.on('baselayerchange', e => { currentBase = e.name; updateViewHash(); });
-map.on('overlayadd overlayremove', e => { if (e.layer === hillshade) updateViewHash(); });
+map.on('overlayadd overlayremove', e => {
+  if (e.layer === hillshade || e.layer === latLongGrid) updateViewHash();
+  if (e.layer === latLongGrid) {
+    try { localStorage.setItem(GRID_KEY, e.type === 'overlayadd' ? 'on' : 'off'); } catch (err) {}
+  }
+});
 updateViewHash();
 // Overview minimap (issue #37): a fixed frame of the whole network in the
 // bottom-left corner, with a red rectangle marking the current view (click
