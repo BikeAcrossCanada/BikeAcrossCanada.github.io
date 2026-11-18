@@ -50,8 +50,8 @@
    "color": "#3d85c8",
    "weight": 3,
    "title": "[CL] \u2014 Local connectors",
-   "count": 121,
-   "km": 772,
+   "count": 122,
+   "km": 775,
    "km_west_east": 700
   },
   {
@@ -69,8 +69,8 @@
    "color": "#303030",
    "weight": 4,
    "title": "[C]- Network Dedicated Cycling Infrastructure (approx. 100 km)",
-   "count": 85,
-   "km": 137,
+   "count": 87,
+   "km": 138,
    "km_west_east": 100
   }
  ],
@@ -325,6 +325,6 @@
  ],
  "arrows": {
   "file": "routes_One-way_Direction_Arrows.geojson",
-  "count": 22
+  "count": 23
  }
 }
