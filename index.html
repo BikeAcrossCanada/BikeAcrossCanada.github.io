@@ -402,7 +402,7 @@ const baseMaps = {
     maxZoom: 19,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }),
-  'Atlas of Canada (topo)': L.tileLayer.wms('https://maps.geogratis.gc.ca/wms/toporama_en', {
+  'Atlas of Canada (Toporama)': L.tileLayer.wms('https://maps.geogratis.gc.ca/wms/toporama_en', {
     layers: 'WMS-Toporama', format: 'image/png', version: '1.3.0',
     maxZoom: 19,  // same ceiling as OSM so switching never clamps the zoom
     attribution: '<a href="https://natural-resources.canada.ca/maps-tools-publications/maps/atlas-canada" target="_blank" rel="noopener">Toporama</a> &copy; Natural Resources Canada'
