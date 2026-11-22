@@ -1256,11 +1256,12 @@ def build_layer(code, tracks, provinces):
             continue
         part_lines = [[LineString(projected(new_coords_all[ti][i:j + 1]))
                        for i, j in f["ranges"]] for f in feats]
-        for lat, lon in track_shields[ti]:
+        for lat, lon, z in track_shields[ti]:
             pt = Point(*TO_M.transform(lon, lat))
-            k = min(range(len(feats)),
-                    key=lambda fi: min(pl.distance(pt) for pl in part_lines[fi]))
-            feats[k].setdefault("shields", []).append([lat, lon])
+            k = (0 if len(feats) == 1 else
+                 min(range(len(feats)),
+                     key=lambda fi: min(pl.distance(pt) for pl in part_lines[fi])))
+            feats[k].setdefault("shields", []).append([lat, lon, z])
 
     # --- §8.4/§8.5 validation ---
     for ti, rec in enumerate(store_tracks):
@@ -1394,7 +1395,16 @@ def route_title(code, we_km):
 ARROW_OPPOSITE = {"EB": "WB", "WB": "EB", "NB": "SB", "SB": "NB"}
 ARROW_PAIR_KM = 5  # a couplet's two one-way halves sit within this of each other
 ARROW_EVERY_KM = 3  # arrowhead spacing along long segments; short ones get one
-SHIELD_EVERY_KM = 25  # route-shield spacing; tracks shorter than half this get none
+# Route shields come in levels, like the marks on a ruler. One every
+# SHIELD_STEP_KM along a route; every 2nd of those also shows one zoom level
+# further out, every 4th two levels out, and so on. Zooming out one level
+# halves distances on screen, so halving the shields keeps the spacing on
+# screen about the same at every zoom. Each shield is stored as
+# [lat, lon, zoom it first shows at]; index.html just compares that to the
+# map's zoom.
+SHIELD_STEP_KM = 3.125   # spacing at SHIELD_FINE_ZOOM and closer
+SHIELD_FINE_ZOOM = 11    # 3.125 km here, 6.25 at 10, 12.5 at 9, 25 at 8,
+SHIELD_LEVELS = 7        # 50 at 7, 100 at 6, 200 at 5 (seven levels)
 
 
 def end_to_end_bearing(coords):
@@ -1442,33 +1452,51 @@ def arrow_points(coords):
     return points_at(m, [total * (k + 0.5) / n for k in range(n)])
 
 
-def shield_points(coords, carry):
+def shield_zoom(n):
+    """Zoom where the n-th shield along a chain (n = 1, 2, 3, ...) first
+    shows. Every shield shows at SHIELD_FINE_ZOOM; each time n halves evenly
+    it shows one zoom level further out. Counting from 1, not 0, keeps the
+    first shield on a short track from being an every-200-km one."""
+    z = SHIELD_FINE_ZOOM
+    while n % 2 == 0 and z > SHIELD_FINE_ZOOM - SHIELD_LEVELS + 1:
+        n //= 2
+        z -= 1
+    return z
+
+
+def shield_points(coords, carry, count):
     """Route-shield positions: first one `carry` metres in, then strictly
-    every SHIELD_EVERY_KM. Returns (points, leftover) where leftover is the
-    distance past the line's end to the next shield, so a track that starts
-    where this one ended can continue the rhythm instead of restarting
-    (Sam's routes are chains of day-ride tracks; per-track restarts made
-    spacing wobble at every joint). No bearing kept — shields draw upright."""
+    every SHIELD_STEP_KM. `count` is how many shields came before on this
+    chain, so each one gets the right zoom level. Returns (points, leftover,
+    count): leftover is the distance past the line's end to the next shield,
+    so a track that starts where this one ended can continue the rhythm
+    instead of restarting (Sam's routes are chains of day-ride tracks;
+    per-track restarts made spacing wobble at every joint). No bearing kept;
+    shields draw upright."""
     m = measure_line(coords)
     total = m[3][-1]
-    step = SHIELD_EVERY_KM * 1000
+    step = SHIELD_STEP_KM * 1000
     targets = []
     d = carry
     while d < total:
         targets.append(d)
         d += step
-    return ([[lat, lon] for lat, lon, _ in points_at(m, targets)], d - total)
+    pts = []
+    for lat, lon, _ in points_at(m, targets):
+        count += 1
+        pts.append([lat, lon, shield_zoom(count)])
+    return pts, d - total, count
 
 
 def chain_shields(tracks):
-    """Shield positions for every track of a layer, with the 25 km rhythm
+    """Shield positions for every track of a layer, with the shield rhythm
     carried through chains of tip-to-tail tracks. Sam's KML stores tracks
     alphabetically, not in riding order, so the linking can't rely on file
     order: first link each track's end to the track that starts within 1 km
     of it (in the Lambert plane), then walk every chain from its head. A
     track no chain reaches starts fresh, first shield half the spacing in.
     tracks: [(fname, dir, simp, line_m), ...] -> list of shield lists."""
-    step = SHIELD_EVERY_KM * 1000
+    step = SHIELD_STEP_KM * 1000
     n = len(tracks)
     starts = [t[3].coords[0] for t in tracks]
     ends = [t[3].coords[-1] for t in tracks]
@@ -1490,11 +1518,12 @@ def chain_shields(tracks):
     visited = set()
     # chain heads first; the trailing full range catches any cycle members
     for h in [i for i in range(n) if i not in pred] + list(range(n)):
-        carry = step / 2
+        carry, count = step / 2, 0
         i = h
         while i is not None and i not in visited:
             visited.add(i)
-            shields[i], carry = shield_points(rounded(tracks[i][2].coords), carry)
+            shields[i], carry, count = shield_points(
+                rounded(tracks[i][2].coords), carry, count)
             i = succ.get(i)
     return shields
 
